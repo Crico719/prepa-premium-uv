@@ -31,11 +31,11 @@ export const Route = createFileRoute("/")({
         content:
           "Plataforma peruana de preparación preuniversitaria: cursos, simulacros, hábitos de estudio y orientación universitaria en un solo lugar.",
       },
-      { property: "og:title", content: "Rumbo · Preparación preuniversitaria" },
+      { property: "og:title", content: "Rumbo · Prepárate para tu examen de admisión" },
       {
         property: "og:description",
         content:
-          "Estudia con plan diario, simulacros cronometrados y seguimiento de progreso para ingresar a la universidad.",
+          "Plataforma peruana de preparación preuniversitaria: cursos, simulacros, hábitos de estudio y orientación universitaria en un solo lugar.",
       },
     ],
   }),

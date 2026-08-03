@@ -80,20 +80,24 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Rumbo · Preparación preuniversitaria en Perú" },
+      { title: "Rumbo · Prepárate para tu examen de admisión" },
       {
         name: "description",
         content:
-          "Cursos, simulacros, hábitos de estudio y orientación universitaria para ingresar a la universidad en Perú.",
+          "Plataforma peruana de preparación preuniversitaria: cursos, simulacros, hábitos de estudio y orientación universitaria en un solo lugar.",
       },
       { name: "author", content: "Rumbo" },
-      { property: "og:title", content: "Rumbo · Preparación preuniversitaria" },
+      { property: "og:title", content: "Rumbo · Prepárate para tu examen de admisión" },
       {
         property: "og:description",
-        content: "La plataforma para prepararte y aprobar tu examen de admisión.",
+        content: "Plataforma peruana de preparación preuniversitaria: cursos, simulacros, hábitos de estudio y orientación universitaria en un solo lugar.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Rumbo · Prepárate para tu examen de admisión" },
+      { name: "twitter:description", content: "Plataforma peruana de preparación preuniversitaria: cursos, simulacros, hábitos de estudio y orientación universitaria en un solo lugar." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/6a079a3c-52db-45ee-82de-dcc0ff8d025b/id-preview-158aa0a0--36a5b1bb-29a4-4cf3-84ad-3ab00e0dd488.lovable.app-1785799685121.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/6a079a3c-52db-45ee-82de-dcc0ff8d025b/id-preview-158aa0a0--36a5b1bb-29a4-4cf3-84ad-3ab00e0dd488.lovable.app-1785799685121.png" },
     ],
     links: [
       {
