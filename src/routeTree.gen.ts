@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as EstrategiasRouteImport } from './routes/estrategias'
 import { Route as SimulacrosRouteImport } from './routes/simulacros'
+import { Route as UniversidadesRouteImport } from './routes/universidades'
 import { Route as CursosIndexRouteImport } from './routes/cursos/index'
 import { Route as CursosSlugRouteImport } from './routes/cursos/$slug'
 
@@ -30,6 +31,11 @@ const SimulacrosRoute = SimulacrosRouteImport.update({
   path: '/simulacros',
   getParentRoute: () => rootRouteImport,
 } as any)
+const UniversidadesRoute = UniversidadesRouteImport.update({
+  id: '/universidades',
+  path: '/universidades',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CursosIndexRoute = CursosIndexRouteImport.update({
   id: '/cursos/',
   path: '/cursos/',
@@ -45,6 +51,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/estrategias': typeof EstrategiasRoute
   '/simulacros': typeof SimulacrosRoute
+  '/universidades': typeof UniversidadesRoute
   '/cursos/$slug': typeof CursosSlugRoute
   '/cursos/': typeof CursosIndexRoute
 }
@@ -52,6 +59,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/estrategias': typeof EstrategiasRoute
   '/simulacros': typeof SimulacrosRoute
+  '/universidades': typeof UniversidadesRoute
   '/cursos/$slug': typeof CursosSlugRoute
   '/cursos': typeof CursosIndexRoute
 }
@@ -60,19 +68,33 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/estrategias': typeof EstrategiasRoute
   '/simulacros': typeof SimulacrosRoute
+  '/universidades': typeof UniversidadesRoute
   '/cursos/$slug': typeof CursosSlugRoute
   '/cursos/': typeof CursosIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/estrategias' | '/simulacros' | '/cursos/$slug' | '/cursos/'
+  fullPaths:
+    | '/'
+    | '/estrategias'
+    | '/simulacros'
+    | '/universidades'
+    | '/cursos/$slug'
+    | '/cursos/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/estrategias' | '/simulacros' | '/cursos/$slug' | '/cursos'
+  to:
+    | '/'
+    | '/estrategias'
+    | '/simulacros'
+    | '/universidades'
+    | '/cursos/$slug'
+    | '/cursos'
   id:
     | '__root__'
     | '/'
     | '/estrategias'
     | '/simulacros'
+    | '/universidades'
     | '/cursos/$slug'
     | '/cursos/'
   fileRoutesById: FileRoutesById
@@ -81,6 +103,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   EstrategiasRoute: typeof EstrategiasRoute
   SimulacrosRoute: typeof SimulacrosRoute
+  UniversidadesRoute: typeof UniversidadesRoute
   CursosSlugRoute: typeof CursosSlugRoute
   CursosIndexRoute: typeof CursosIndexRoute
 }
@@ -108,6 +131,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SimulacrosRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/universidades': {
+      id: '/universidades'
+      path: '/universidades'
+      fullPath: '/universidades'
+      preLoaderRoute: typeof UniversidadesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/cursos/': {
       id: '/cursos/'
       path: '/cursos'
@@ -129,6 +159,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   EstrategiasRoute: EstrategiasRoute,
   SimulacrosRoute: SimulacrosRoute,
+  UniversidadesRoute: UniversidadesRoute,
   CursosSlugRoute: CursosSlugRoute,
   CursosIndexRoute: CursosIndexRoute,
 }
