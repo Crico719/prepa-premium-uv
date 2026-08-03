@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as EstrategiasRouteImport } from './routes/estrategias'
 import { Route as SimulacrosRouteImport } from './routes/simulacros'
 import { Route as CursosIndexRouteImport } from './routes/cursos/index'
 import { Route as CursosSlugRouteImport } from './routes/cursos/$slug'
@@ -17,6 +18,11 @@ import { Route as CursosSlugRouteImport } from './routes/cursos/$slug'
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EstrategiasRoute = EstrategiasRouteImport.update({
+  id: '/estrategias',
+  path: '/estrategias',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SimulacrosRoute = SimulacrosRouteImport.update({
@@ -37,12 +43,14 @@ const CursosSlugRoute = CursosSlugRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/estrategias': typeof EstrategiasRoute
   '/simulacros': typeof SimulacrosRoute
   '/cursos/$slug': typeof CursosSlugRoute
   '/cursos/': typeof CursosIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/estrategias': typeof EstrategiasRoute
   '/simulacros': typeof SimulacrosRoute
   '/cursos/$slug': typeof CursosSlugRoute
   '/cursos': typeof CursosIndexRoute
@@ -50,20 +58,28 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/estrategias': typeof EstrategiasRoute
   '/simulacros': typeof SimulacrosRoute
   '/cursos/$slug': typeof CursosSlugRoute
   '/cursos/': typeof CursosIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/simulacros' | '/cursos/$slug' | '/cursos/'
+  fullPaths: '/' | '/estrategias' | '/simulacros' | '/cursos/$slug' | '/cursos/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/simulacros' | '/cursos/$slug' | '/cursos'
-  id: '__root__' | '/' | '/simulacros' | '/cursos/$slug' | '/cursos/'
+  to: '/' | '/estrategias' | '/simulacros' | '/cursos/$slug' | '/cursos'
+  id:
+    | '__root__'
+    | '/'
+    | '/estrategias'
+    | '/simulacros'
+    | '/cursos/$slug'
+    | '/cursos/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  EstrategiasRoute: typeof EstrategiasRoute
   SimulacrosRoute: typeof SimulacrosRoute
   CursosSlugRoute: typeof CursosSlugRoute
   CursosIndexRoute: typeof CursosIndexRoute
@@ -76,6 +92,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/estrategias': {
+      id: '/estrategias'
+      path: '/estrategias'
+      fullPath: '/estrategias'
+      preLoaderRoute: typeof EstrategiasRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/simulacros': {
@@ -104,6 +127,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  EstrategiasRoute: EstrategiasRoute,
   SimulacrosRoute: SimulacrosRoute,
   CursosSlugRoute: CursosSlugRoute,
   CursosIndexRoute: CursosIndexRoute,

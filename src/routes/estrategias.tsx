@@ -22,7 +22,13 @@ export const Route = createFileRoute("/estrategias")({
   component: Estrategias,
 });
 
-const tones = ["primary", "success", "warning", "deep"] as const;
+const tones: Array<"primary" | "success" | "warning" | "deep"> = [
+  "primary",
+  "success",
+  "warning",
+  "deep",
+];
+const icons = [Clock, Brain, Sparkles, HeartPulse];
 
 function Estrategias() {
   return (
@@ -55,13 +61,13 @@ function Estrategias() {
         {strategies.map((s, i) => (
           <Surface key={s.title} className="hover-lift flex h-full flex-col gap-3">
             <IconTile
-              icon={[Clock, Brain, Sparkles, HeartPulse][i % 4]}
-              tone={tones[i % 4]}
+              icon={icons[i % 4]!}
+              tone={tones[i % 4]!}
             />
             <h3 className="font-semibold">{s.title}</h3>
             <p className="text-sm text-muted-foreground">{s.detail}</p>
             <div className="mt-auto pt-2">
-              <Pill tone={tones[i % 4]}>{s.tag}</Pill>
+              <Pill tone={tones[i % 4]!}>{s.tag}</Pill>
             </div>
           </Surface>
         ))}
