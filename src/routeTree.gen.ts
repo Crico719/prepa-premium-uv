@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ComunidadRouteImport } from './routes/comunidad'
 import { Route as EstrategiasRouteImport } from './routes/estrategias'
 import { Route as SimulacrosRouteImport } from './routes/simulacros'
 import { Route as UniversidadesRouteImport } from './routes/universidades'
@@ -19,6 +20,11 @@ import { Route as CursosSlugRouteImport } from './routes/cursos/$slug'
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ComunidadRoute = ComunidadRouteImport.update({
+  id: '/comunidad',
+  path: '/comunidad',
   getParentRoute: () => rootRouteImport,
 } as any)
 const EstrategiasRoute = EstrategiasRouteImport.update({
@@ -49,6 +55,7 @@ const CursosSlugRoute = CursosSlugRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/comunidad': typeof ComunidadRoute
   '/estrategias': typeof EstrategiasRoute
   '/simulacros': typeof SimulacrosRoute
   '/universidades': typeof UniversidadesRoute
@@ -57,6 +64,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/comunidad': typeof ComunidadRoute
   '/estrategias': typeof EstrategiasRoute
   '/simulacros': typeof SimulacrosRoute
   '/universidades': typeof UniversidadesRoute
@@ -66,6 +74,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/comunidad': typeof ComunidadRoute
   '/estrategias': typeof EstrategiasRoute
   '/simulacros': typeof SimulacrosRoute
   '/universidades': typeof UniversidadesRoute
@@ -76,6 +85,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/comunidad'
     | '/estrategias'
     | '/simulacros'
     | '/universidades'
@@ -84,6 +94,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/comunidad'
     | '/estrategias'
     | '/simulacros'
     | '/universidades'
@@ -92,6 +103,7 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/comunidad'
     | '/estrategias'
     | '/simulacros'
     | '/universidades'
@@ -101,6 +113,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ComunidadRoute: typeof ComunidadRoute
   EstrategiasRoute: typeof EstrategiasRoute
   SimulacrosRoute: typeof SimulacrosRoute
   UniversidadesRoute: typeof UniversidadesRoute
@@ -115,6 +128,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/comunidad': {
+      id: '/comunidad'
+      path: '/comunidad'
+      fullPath: '/comunidad'
+      preLoaderRoute: typeof ComunidadRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/estrategias': {
@@ -157,6 +177,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ComunidadRoute: ComunidadRoute,
   EstrategiasRoute: EstrategiasRoute,
   SimulacrosRoute: SimulacrosRoute,
   UniversidadesRoute: UniversidadesRoute,
