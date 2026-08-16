@@ -2,6 +2,9 @@ import { useState, useRef, useEffect } from "react";
 import { Send, Bot, User, Sparkles, BookOpen, Brain, Calculator, Settings, X, Volume2, VolumeX, Loader2 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
+const SUPABASE_URL = "https://jvyrgsxbzlzokotyzepw.supabase.co";
+const SUPABASE_KEY = "sb_publishable_i80Lpj4bEIGTUX1_j5vlGQ_4cTESJ2D";
+
 type Message = {
   id: string;
   role: "user" | "assistant";
@@ -34,9 +37,13 @@ function setVoiceEnabled(enabled: boolean) {
 }
 
 async function callChatAPI(userMessage: string, history: Message[]): Promise<string> {
-  const response = await fetch("/api/chat", {
+  const response = await fetch(`${SUPABASE_URL}/functions/v1/hyper-api`, {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
+    headers: {
+      "Content-Type": "application/json",
+      "Authorization": `Bearer ${SUPABASE_KEY}`,
+      "apikey": SUPABASE_KEY,
+    },
     body: JSON.stringify({
       message: userMessage,
       history: history.map((m) => ({ role: m.role, content: m.content })),
@@ -44,18 +51,18 @@ async function callChatAPI(userMessage: string, history: Message[]): Promise<str
   });
 
   const data = await response.json();
-
-  if (!response.ok) {
-    throw new Error(data.error || "Error al conectar con el servidor");
-  }
-
+  if (!response.ok) throw new Error(data.error || "Error al conectar con el servidor");
   return data.text;
 }
 
 async function callSpeakAPI(text: string): Promise<ArrayBuffer> {
-  const response = await fetch("/api/speak", {
+  const response = await fetch(`${SUPABASE_URL}/functions/v1/speak-ts`, {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
+    headers: {
+      "Content-Type": "application/json",
+      "Authorization": `Bearer ${SUPABASE_KEY}`,
+      "apikey": SUPABASE_KEY,
+    },
     body: JSON.stringify({ text }),
   });
 
@@ -69,9 +76,9 @@ async function callSpeakAPI(text: string): Promise<ArrayBuffer> {
 
 async function playAudio(audioBuffer: ArrayBuffer) {
   const audioContext = new AudioContext();
-  const audioBufferDecoded = await audioContext.decodeAudioData(audioBuffer);
+  const decoded = await audioContext.decodeAudioData(audioBuffer);
   const source = audioContext.createBufferSource();
-  source.buffer = audioBufferDecoded;
+  source.buffer = decoded;
   source.connect(audioContext.destination);
   source.start();
   return new Promise<void>((resolve) => {
@@ -106,7 +113,7 @@ export function Chat() {
       const audioBuffer = await callSpeakAPI(text);
       await playAudio(audioBuffer);
     } catch (err) {
-      console.error("Error al reproducir audio:", err);
+      console.error("Error audio:", err);
     } finally {
       setSpeakingId(null);
     }
@@ -166,7 +173,6 @@ export function Chat() {
 
   return (
     <div className="flex h-[calc(100dvh-14rem)] flex-col">
-      {/* Header */}
       <div className="flex items-center gap-3 border-b border-border px-4 py-3">
         <div className="grid size-10 place-items-center rounded-full bg-primary/10">
           <Bot className="size-5 text-primary" />
@@ -193,7 +199,6 @@ export function Chat() {
         </div>
       </div>
 
-      {/* Messages */}
       <div className="flex-1 overflow-y-auto px-4 py-4">
         {messages.length === 0 ? (
           <div className="flex h-full flex-col items-center justify-center text-center">
@@ -298,11 +303,7 @@ export function Chat() {
         )}
       </div>
 
-      {/* Input */}
-      <form
-        onSubmit={handleSubmit}
-        className="border-t border-border bg-card px-4 py-3"
-      >
+      <form onSubmit={handleSubmit} className="border-t border-border bg-card px-4 py-3">
         <div className="flex items-end gap-2">
           <textarea
             ref={inputRef}
