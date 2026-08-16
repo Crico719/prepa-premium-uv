@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import { Send, Bot, User, Sparkles, BookOpen, Brain, Calculator, Settings, X, Key } from "lucide-react";
+import { Send, Bot, User, Sparkles, BookOpen, Brain, Calculator, Settings, X, Key, Volume2, VolumeX, Loader2 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 type Message = {
@@ -45,15 +45,37 @@ Materias que dominas:
 
 Si te preguntan algo que no es de estudio, redirige amablemente al tema académico.`;
 
-function getApiKey(): string | null {
+function getGeminiKey(): string | null {
   if (typeof window !== "undefined") {
-    return localStorage.getItem("machat_api_key");
+    return localStorage.getItem("machat_gemini_key");
   }
   return null;
 }
 
-function setApiKey(key: string) {
-  localStorage.setItem("machat_api_key", key);
+function setGeminiKey(key: string) {
+  localStorage.setItem("machat_gemini_key", key);
+}
+
+function getElevenLabsKey(): string | null {
+  if (typeof window !== "undefined") {
+    return localStorage.getItem("machat_elevenlabs_key");
+  }
+  return null;
+}
+
+function setElevenLabsKey(key: string) {
+  localStorage.setItem("machat_elevenlabs_key", key);
+}
+
+function getVoiceEnabled(): boolean {
+  if (typeof window !== "undefined") {
+    return localStorage.getItem("machat_voice_enabled") !== "false";
+  }
+  return true;
+}
+
+function setVoiceEnabled(enabled: boolean) {
+  localStorage.setItem("machat_voice_enabled", String(enabled));
 }
 
 async function callGemini(userMessage: string, history: Message[], apiKey: string): Promise<string> {
@@ -104,64 +126,159 @@ async function callGemini(userMessage: string, history: Message[], apiKey: strin
   return text;
 }
 
+function cleanTextForSpeech(text: string): string {
+  return text
+    .replace(/#{1,6}\s/g, "")
+    .replace(/\*\*(.*?)\*\*/g, "$1")
+    .replace(/\*(.*?)\*/g, "$1")
+    .replace(/`{1,3}[^`]*`{1,3}/g, "")
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")
+    .replace(/[📌📐🎯💡📚✏️🧠🔄💪🎉🎓]/g, "")
+    .replace(/\n{2,}/g, ". ")
+    .replace(/\n/g, " ")
+    .trim();
+}
+
+async function textToSpeech(text: string, apiKey: string): Promise<ArrayBuffer> {
+  const cleanText = cleanTextForSpeech(text);
+  const truncatedText = cleanText.substring(0, 5000);
+
+  const response = await fetch(
+    "https://api.elevenlabs.io/v1/text-to-speech/21m00Tcm4TlvDq8ikWAM/stream",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "xi-api-key": apiKey,
+      },
+      body: JSON.stringify({
+        text: truncatedText,
+        model_id: "eleven_multilingual_v2",
+        voice_settings: {
+          stability: 0.5,
+          similarity_boost: 0.75,
+          style: 0.5,
+          use_speaker_boost: true,
+        },
+      }),
+    }
+  );
+
+  if (!response.ok) {
+    throw new Error("Error al generar audio con ElevenLabs");
+  }
+
+  return response.arrayBuffer();
+}
+
+async function playAudio(audioBuffer: ArrayBuffer) {
+  const audioContext = new AudioContext();
+  const audioBufferDecoded = await audioContext.decodeAudioData(audioBuffer);
+  const source = audioContext.createBufferSource();
+  source.buffer = audioBufferDecoded;
+  source.connect(audioContext.destination);
+  source.start();
+  return new Promise<void>((resolve) => {
+    source.onended = () => resolve();
+  });
+}
+
 function SettingsModal({ open, onClose }: { open: boolean; onClose: () => void }) {
-  const [key, setKey] = useState(getApiKey() || "");
+  const [geminiKey, setGeminiKeyState] = useState(getGeminiKey() || "");
+  const [elevenKey, setElevenKeyState] = useState(getElevenLabsKey() || "");
   const [saved, setSaved] = useState(false);
 
   if (!open) return null;
 
   const handleSave = () => {
-    setApiKey(key.trim());
+    if (geminiKey.trim()) setGeminiKey(geminiKey.trim());
+    if (elevenKey.trim()) setElevenLabsKey(elevenKey.trim());
     setSaved(true);
     setTimeout(() => setSaved(false), 2000);
   };
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
-      <div className="w-full max-w-md rounded-[24px] bg-card p-6 shadow-lg">
+      <div className="w-full max-w-md max-h-[90vh] overflow-y-auto rounded-[24px] bg-card p-6 shadow-lg">
         <div className="mb-4 flex items-center justify-between">
-          <h2 className="text-lg font-semibold">Configurar API Key</h2>
+          <h2 className="text-lg font-semibold">Configurar MaChat</h2>
           <button onClick={onClose} className="press grid size-8 place-items-center rounded-full hover:bg-muted">
             <X className="size-4" />
           </button>
         </div>
 
-        <div className="space-y-4">
-          <div className="rounded-[16px] bg-muted/50 p-4 text-sm">
-            <p className="font-semibold">Obtén tu API Key gratis de Google:</p>
-            <ol className="mt-2 list-inside list-decimal space-y-1 text-muted-foreground">
-              <li>Ve a <a href="https://aistudio.google.com/apikey" target="_blank" className="text-primary underline">aistudio.google.com/apikey</a></li>
-              <li>Inicia sesión con tu cuenta de Google</li>
-              <li>Haz clic en "Create API Key"</li>
-              <li>Copia la key y pégala aquí</li>
-            </ol>
-          </div>
-
+        <div className="space-y-6">
+          {/* Gemini Key */}
           <div>
-            <label className="mb-2 block text-sm font-medium">API Key de Gemini</label>
-            <div className="flex gap-2">
+            <div className="mb-2 flex items-center gap-2">
+              <div className="grid size-6 place-items-center rounded bg-primary/10">
+                <Bot className="size-3 text-primary" />
+              </div>
+              <span className="text-sm font-semibold">Gemini (IA)</span>
+            </div>
+            <div className="rounded-[16px] bg-muted/50 p-3 text-xs">
+              <p className="font-medium">Obtén tu API Key gratis:</p>
+              <ol className="mt-1 list-inside list-decimal space-y-0.5 text-muted-foreground">
+                <li>Ve a <a href="https://aistudio.google.com/apikey" target="_blank" className="text-primary underline">aistudio.google.com/apikey</a></li>
+                <li>Inicia sesión con Google</li>
+                <li>Haz clic en "Create API Key"</li>
+              </ol>
+            </div>
+            <div className="mt-2 flex gap-2">
               <div className="relative flex-1">
                 <Key className="absolute left-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
                 <input
                   type="password"
-                  value={key}
-                  onChange={(e) => setKey(e.target.value)}
+                  value={geminiKey}
+                  onChange={(e) => setGeminiKeyState(e.target.value)}
                   placeholder="AIza..."
                   className="w-full rounded-[16px] border border-border bg-background py-2.5 pl-10 pr-4 text-sm outline-none focus:ring-2 focus:ring-primary/50"
                 />
               </div>
-              <button
-                onClick={handleSave}
-                disabled={!key.trim()}
-                className="press rounded-[16px] bg-primary px-4 py-2.5 text-sm font-medium text-primary-foreground disabled:opacity-50"
-              >
-                {saved ? "Guardado ✓" : "Guardar"}
-              </button>
             </div>
           </div>
 
-          <p className="text-xs text-muted-foreground">
-            Tu API key se guarda localmente en tu navegador. Nunca se envía a nuestros servidores.
+          {/* ElevenLabs Key */}
+          <div>
+            <div className="mb-2 flex items-center gap-2">
+              <div className="grid size-6 place-items-center rounded bg-success/10">
+                <Volume2 className="size-3 text-success" />
+              </div>
+              <span className="text-sm font-semibold">ElevenLabs (Voz)</span>
+              <span className="rounded-full bg-success/10 px-2 py-0.5 text-[10px] font-medium text-success">Opcional</span>
+            </div>
+            <div className="rounded-[16px] bg-muted/50 p-3 text-xs">
+              <p className="font-medium">Para que MaChat hable en voz alta:</p>
+              <ol className="mt-1 list-inside list-decimal space-y-0.5 text-muted-foreground">
+                <li>Ve a <a href="https://elevenlabs.io" target="_blank" className="text-primary underline">elevenlabs.io</a></li>
+                <li>Crea cuenta (tier gratis incluido)</li>
+                <li>Ve a Profile → API Keys</li>
+                <li>Copia tu API Key</li>
+              </ol>
+            </div>
+            <div className="mt-2 flex gap-2">
+              <div className="relative flex-1">
+                <Key className="absolute left-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
+                <input
+                  type="password"
+                  value={elevenKey}
+                  onChange={(e) => setElevenKeyState(e.target.value)}
+                  placeholder="sk_..."
+                  className="w-full rounded-[16px] border border-border bg-background py-2.5 pl-10 pr-4 text-sm outline-none focus:ring-2 focus:ring-primary/50"
+                />
+              </div>
+            </div>
+          </div>
+
+          <button
+            onClick={handleSave}
+            className="press w-full rounded-[16px] bg-primary py-3 text-sm font-semibold text-primary-foreground"
+          >
+            {saved ? "Guardado ✓" : "Guardar configuración"}
+          </button>
+
+          <p className="text-center text-xs text-muted-foreground">
+            Las keys se guardan solo en tu navegador. Nunca se envían a servidores externos.
           </p>
         </div>
       </div>
@@ -173,13 +290,16 @@ export function Chat() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
   const [isTyping, setIsTyping] = useState(false);
-  const [apiKey, setApiKeyState] = useState<string | null>(null);
+  const [geminiKey, setGeminiKeyState] = useState<string | null>(null);
   const [showSettings, setShowSettings] = useState(false);
+  const [voiceEnabled, setVoiceEnabledState] = useState(true);
+  const [speakingId, setSpeakingId] = useState<string | null>(null);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
 
   useEffect(() => {
-    setApiKeyState(getApiKey());
+    setGeminiKeyState(getGeminiKey());
+    setVoiceEnabledState(getVoiceEnabled());
   }, []);
 
   const scrollToBottom = () => {
@@ -190,11 +310,35 @@ export function Chat() {
     scrollToBottom();
   }, [messages]);
 
+  const handleSpeak = async (text: string, messageId: string) => {
+    const elevenKey = getElevenLabsKey();
+    if (!elevenKey) {
+      setShowSettings(true);
+      return;
+    }
+
+    setSpeakingId(messageId);
+    try {
+      const audioBuffer = await textToSpeech(text, elevenKey);
+      await playAudio(audioBuffer);
+    } catch (err) {
+      console.error("Error al reproducir audio:", err);
+    } finally {
+      setSpeakingId(null);
+    }
+  };
+
+  const handleToggleVoice = () => {
+    const newValue = !voiceEnabled;
+    setVoiceEnabledState(newValue);
+    setVoiceEnabled(newValue);
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!input.trim() || isTyping) return;
 
-    const currentKey = getApiKey();
+    const currentKey = getGeminiKey();
     if (!currentKey) {
       setShowSettings(true);
       return;
@@ -220,6 +364,10 @@ export function Chat() {
         timestamp: new Date(),
       };
       setMessages((prev) => [...prev, assistantMessage]);
+
+      if (voiceEnabled && getElevenLabsKey()) {
+        setTimeout(() => handleSpeak(response, assistantMessage.id), 500);
+      }
     } catch (err) {
       const errorMessage: Message = {
         id: (Date.now() + 1).toString(),
@@ -240,7 +388,7 @@ export function Chat() {
 
   return (
     <div className="flex h-[calc(100dvh-14rem)] flex-col">
-      <SettingsModal open={showSettings} onClose={() => { setShowSettings(false); setApiKeyState(getApiKey()); }} />
+      <SettingsModal open={showSettings} onClose={() => { setShowSettings(false); setGeminiKeyState(getGeminiKey()); }} />
 
       {/* Header */}
       <div className="flex items-center gap-3 border-b border-border px-4 py-3">
@@ -250,16 +398,26 @@ export function Chat() {
         <div>
           <h1 className="font-semibold">MaChat</h1>
           <p className="text-xs text-muted-foreground">
-            {apiKey ? "Powered by Gemini · En línea" : "Configura tu API key para comenzar"}
+            {geminiKey ? "Gemini + ElevenLabs · En línea" : "Configura tu API key para comenzar"}
           </p>
         </div>
         <div className="ml-auto flex items-center gap-2">
-          {apiKey && (
+          {geminiKey && (
             <span className="flex items-center gap-1">
               <span className="size-2 rounded-full bg-success animate-pulse" />
               <span className="text-xs text-muted-foreground">En línea</span>
             </span>
           )}
+          <button
+            onClick={handleToggleVoice}
+            className={cn(
+              "press grid size-9 place-items-center rounded-[12px] border transition-colors",
+              voiceEnabled ? "border-success bg-success/10 text-success" : "border-border hover:bg-muted"
+            )}
+            title={voiceEnabled ? "Voz activada" : "Voz desactivada"}
+          >
+            {voiceEnabled ? <Volume2 className="size-4" /> : <VolumeX className="size-4" />}
+          </button>
           <button
             onClick={() => setShowSettings(true)}
             className="press grid size-9 place-items-center rounded-[12px] border border-border hover:bg-muted"
@@ -282,7 +440,7 @@ export function Chat() {
               Pregúntame sobre cualquier materia, pide ejercicios o solicita explicaciones.
             </p>
 
-            {!apiKey && (
+            {!geminiKey && (
               <button
                 onClick={() => setShowSettings(true)}
                 className="press mt-6 inline-flex items-center gap-2 rounded-[16px] bg-primary px-6 py-3 text-sm font-medium text-primary-foreground"
@@ -332,17 +490,32 @@ export function Chat() {
                   <div className="prose prose-sm dark:prose-invert max-w-none whitespace-pre-wrap">
                     {message.content}
                   </div>
-                  <p
-                    className={cn(
-                      "mt-2 text-xs opacity-70",
-                      message.role === "user" ? "text-primary-foreground" : "text-muted-foreground"
+                  <div className="mt-2 flex items-center justify-between">
+                    <p
+                      className={cn(
+                        "text-xs opacity-70",
+                        message.role === "user" ? "text-primary-foreground" : "text-muted-foreground"
+                      )}
+                    >
+                      {message.timestamp.toLocaleTimeString("es-PE", {
+                        hour: "2-digit",
+                        minute: "2-digit",
+                      })}
+                    </p>
+                    {message.role === "assistant" && voiceEnabled && getElevenLabsKey() && (
+                      <button
+                        onClick={() => handleSpeak(message.content, message.id)}
+                        disabled={speakingId === message.id}
+                        className="press ml-2 grid size-6 place-items-center rounded-full hover:bg-muted"
+                      >
+                        {speakingId === message.id ? (
+                          <Loader2 className="size-3 animate-spin text-primary" />
+                        ) : (
+                          <Volume2 className="size-3 text-muted-foreground hover:text-primary" />
+                        )}
+                      </button>
                     )}
-                  >
-                    {message.timestamp.toLocaleTimeString("es-PE", {
-                      hour: "2-digit",
-                      minute: "2-digit",
-                    })}
-                  </p>
+                  </div>
                 </div>
                 {message.role === "user" && (
                   <div className="grid size-8 shrink-0 place-items-center rounded-full bg-muted">
@@ -386,7 +559,7 @@ export function Chat() {
                 handleSubmit(e);
               }
             }}
-            placeholder={apiKey ? "Escribe tu pregunta..." : "Primero configura tu API key..."}
+            placeholder={geminiKey ? "Escribe tu pregunta..." : "Primero configura tu API key..."}
             rows={1}
             className="min-h-11 flex-1 resize-none rounded-[16px] border border-border bg-background px-4 py-2.5 text-sm outline-none focus:ring-2 focus:ring-primary/50"
           />
@@ -399,7 +572,7 @@ export function Chat() {
           </button>
         </div>
         <p className="mt-2 text-center text-xs text-muted-foreground">
-          {apiKey ? "Presiona Enter para enviar · Shift+Enter para nueva línea" : "Haz clic en ⚙️ para configurar tu API key"}
+          {geminiKey ? "Presiona Enter para enviar · Shift+Enter para nueva línea" : "Haz clic en ⚙️ para configurar tu API key"}
         </p>
       </form>
     </div>
