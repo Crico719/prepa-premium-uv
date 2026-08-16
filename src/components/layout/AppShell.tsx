@@ -2,6 +2,7 @@ import { Link, useRouterState } from "@tanstack/react-router";
 import {
   Bell,
   BookOpen,
+  Bot,
   GraduationCap,
   Home,
   Moon,
@@ -20,12 +21,13 @@ const nav = [
   { to: "/cursos", label: "Cursos", icon: BookOpen },
   { to: "/simulacros", label: "Simulacros", icon: Target },
   { to: "/estrategias", label: "Hábitos", icon: Timer },
+  { to: "/asistente", label: "MaChat", icon: Bot },
   { to: "/universidades", label: "Universidades", icon: GraduationCap },
   { to: "/comunidad", label: "Comunidad", icon: Users },
   { to: "/perfil", label: "Perfil", icon: User },
 ] as const;
 
-const mobileNav = [nav[0], nav[1], nav[2], nav[5], nav[6]];
+const mobileNav = [nav[0], nav[1], nav[2], nav[4], nav[5]];
 
 function useTheme() {
   const [dark, setDark] = useState(false);
