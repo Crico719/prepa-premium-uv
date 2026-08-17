@@ -101,7 +101,7 @@ function PandaSvg() {
     <svg viewBox="0 0 100 100" className="size-full">
       <circle cx="50" cy="50" r="48" fill="white" />
       <circle cx="25" cy="30" r="12" fill="#1e1b4b" />
-      <circle cx="75" cy="30" r="12" fill="1e1b4b" />
+      <circle cx="75" cy="30" r="12" fill="#1e1b4b" />
       <ellipse cx="35" cy="45" rx="12" ry="10" fill="#1e1b4b" />
       <ellipse cx="65" cy="45" rx="12" ry="10" fill="#1e1b4b" />
       <circle cx="35" cy="44" r="4" fill="white" />
@@ -227,5 +227,5 @@ export const avatars: AvatarDef[] = [
 ];
 
 export function getAvatarById(id: AvatarId): AvatarDef {
-  return avatars.find((a) => a.id === id) ?? avatars[0];
+  return avatars.find((a) => a.id === id) ?? avatars[0]!;
 }

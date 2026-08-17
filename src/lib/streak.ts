@@ -60,7 +60,7 @@ export function getLast7Days(): { day: string; active: boolean }[] {
     d.setDate(d.getDate() - i);
     const dateStr = d.toISOString().slice(0, 10);
     days.push({
-      day: dayNames[d.getDay()],
+      day: dayNames[d.getDay()]!,
       active: streak.lastDate === dateStr,
     });
   }
