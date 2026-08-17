@@ -21,7 +21,7 @@ const nav = [
   { to: "/cursos", label: "Cursos", icon: BookOpen },
   { to: "/simulacros", label: "Simulacros", icon: Target },
   { to: "/estrategias", label: "Hábitos", icon: Timer },
-  { to: "/asistente", label: "MaChat", icon: Bot },
+  { to: "/asistente", label: "PrepaBot", icon: Bot },
   { to: "/universidades", label: "Universidades", icon: GraduationCap },
   { to: "/comunidad", label: "Comunidad", icon: Users },
   { to: "/perfil", label: "Perfil", icon: User },

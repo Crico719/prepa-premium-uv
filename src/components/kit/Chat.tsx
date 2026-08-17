@@ -196,7 +196,7 @@ export function Chat() {
           <Bot className="size-5 text-primary" />
         </div>
         <div>
-          <h1 className="font-semibold">MaChat</h1>
+          <h1 className="font-semibold">PrepaBot</h1>
           <p className="text-xs text-muted-foreground">Gemini + ElevenLabs · En línea</p>
         </div>
         <div className="ml-auto flex items-center gap-2">
@@ -223,7 +223,7 @@ export function Chat() {
             <div className="mb-4 grid size-16 place-items-center rounded-full bg-primary/10">
               <Sparkles className="size-8 text-primary" />
             </div>
-            <h2 className="text-lg font-semibold">¡Hola! Soy MaChat 🎓</h2>
+            <h2 className="text-lg font-semibold">¡Hola! Soy PrepaBot 🎓</h2>
             <p className="mt-2 max-w-md text-sm text-muted-foreground">
               Tu tutor IA para el examen de admisión.
               Pregúntame sobre cualquier materia, pide ejercicios o solicita explicaciones.
