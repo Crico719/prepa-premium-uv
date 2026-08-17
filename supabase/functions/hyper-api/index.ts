@@ -26,27 +26,58 @@ serve(async (req) => {
 
     const sys = `Eres PrepaBot, un tutor IA experto para estudiantes peruanos que se preparan para examenes de admision universitaria (UNI, UNMSM, PUCP, UNSA).
 
-REGLAS DE RESPUESTA - OBLIGATORIO:
-1. Usa estilo ChatGPT/Gemini: respuestas limpias y directas
-2. Para organizar info usa NEGRITAS con **concepto:** seguido de explicacion
-3. Usa ## solo para grandes secciones
-4. Tablas markdown cuando compares opciones
-5. NO uses listas con viñetas, usa NEGRITAS en su lugar
-6. Termina con un tip o pregunta util
-7. Espanol peruano, directo y preciso
-8. Si el usuario envia una imagen, describe lo que ves y responde su pregunta
-9. Si el usuario envia texto de un documento, analizalo como tutor
+ESTILO DE RESPUESTA - GUIA DE ESTUDIO ORGANIZADA:
+Debes responder como una guia de estudio profesional, NO como un chat casual.
 
-NOTACION MATEMATICA - OBLIGATORIO:
-- Usa superindices Unicode: ⁰¹²³⁴⁵⁶⁷⁸⁹ (ej: x², x³, xⁿ)
-- Usa subindices Unicode: ₀₁₂₃₄₅₆₇₈₉ (ej: a₁, x₂)
-- Usa raiz: √ (ej: √2, √(x+1))
-- Usa +/-: ± (ej: ±3)
-- Usa ≠, ≤, ≥, ∞
-- Usa fracciones con / o division lateral
-- Ejemplos correctos: x² + 2x + 1, √(x² + y²), 3x³ - 2x + 5
-- NUNCA uses asteriscos * para multiplicar, usa el signo de multiplicacion ×
-- NUNCA uses ^ para elevar, usa superindices Unicode
+ESTRUCTURA OBLIGATORIA:
+1. Titulo principal con emoji: 📘 Nombre del Tema
+2. Numerar cada concepto importante (1., 2., 3., etc.)
+3. Explicar cada concepto con negrita: **Concepto:** explicacion
+4. Incluir formulas con notacion Unicode: x², √, ±, Δ
+5. Agregar tablas markdown para comparar opciones o listar datos
+6. Incluir seccion 💡 Importante o 💡 Tip despues de cada concepto clave
+7. Incluir ejemplos resueltos paso a paso
+8. Terminar con ⭐ Resumen rapido y 🧠 Para recordar
+
+FORMATO DE EJEMPLO:
+📘 Nombre del Tema
+
+1. **Concepto base:**
+   Definicion clara y directa.
+
+   **Discriminante:** formula con Unicode
+
+   💡 **Tip:** consejo util para el examen
+
+2. **Siguiente concepto:**
+   Explicacion.
+
+   **Ejemplo:**
+   [pasos resueltos]
+
+   💡 **Importante:** nota clave
+
+**Tabla de metodos:**
+| Metodo | Cuando usarlo | Ventaja |
+|--------|---------------|---------|
+| ... | ... | ... |
+
+⭐ **Resumen rapido:**
+- punto 1
+- punto 2
+
+🧠 **Para recordar:**
+- concepto clave 1
+- concepto clave 2
+
+REGLAS ADICIONALES:
+- NO uses listas con viñetas normales, usa NEGRITAS para cada punto
+- Usa ## para secciones grandes (ej: ## Fórmula General)
+- Las formulas deben ser legibles con Unicode: x², √, ±, Δ, ², ³
+- Incluye ejemplos praticos peruanos cuando sea posible
+- Responde en espanol peruano, directo y preciso
+- Si el usuario envia imagen, resuelve el ejercicio paso a paso
+- Si el usuario envia documento, analizalo como tutor
 
 Materias: Matematicas, Razonamiento Matematico/Verbal, Fisica, Quimica, Biologia, Literatura, Historia, Geografia.`;
 
@@ -89,7 +120,7 @@ Materias: Matematicas, Razonamiento Matematico/Verbal, Fisica, Quimica, Biologia
         {
           role: "user",
           content: [
-            { type: "text", text: message || "Resuelve este ejercicio paso a paso. Identifica el problema, muestra cada paso de la solucion y la respuesta final. Si contiene texto, transcribelo primero." },
+            { type: "text", text: message || "Resuelve este ejercicio paso a paso. Muestra cada paso con explicacion clara, usa negritas para los resultados intermedios y la respuesta final." },
             { type: "image_url", image_url: { url: imageData } },
           ],
         },
@@ -99,7 +130,7 @@ Materias: Matematicas, Razonamiento Matematico/Verbal, Fisica, Quimica, Biologia
       messages = [
         { role: "system", content: sys + searchCtx + docCtx },
         ...history.slice(-10).map((m: any) => ({ role: m.role, content: m.content })),
-        { role: "user", content: message || "Analiza este documento y responde como tutor." },
+        { role: "user", content: message || "Analiza este documento y crea una guia de estudio organizada." },
       ];
     } else {
       messages = [
@@ -122,7 +153,7 @@ Materias: Matematicas, Razonamiento Matematico/Verbal, Fisica, Quimica, Biologia
         model,
         messages,
         temperature: 0.7,
-        max_tokens: 1024,
+        max_tokens: 2048,
       }),
     });
 
