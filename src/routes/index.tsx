@@ -1,9 +1,12 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowRight,
+  AlertCircle,
   BookOpen,
+  Bot,
   CalendarDays,
   Flame,
+  Landmark,
   Medal,
   Newspaper,
   Rocket,
@@ -20,30 +23,55 @@ import {
   StatCard,
   Surface,
 } from "@/components/kit";
-import { courses, student, upcoming } from "@/lib/data";
+import { courses, student, upcoming, weeklyStudy, universities } from "@/lib/data";
 
-export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "Rumbo · Prepárate para tu examen de admisión" },
-      {
-        name: "description",
-        content:
-          "Plataforma peruana de preparación preuniversitaria: cursos, simulacros, hábitos de estudio y orientación universitaria en un solo lugar.",
-      },
-      { property: "og:title", content: "Rumbo · Prepárate para tu examen de admisión" },
-      {
-        property: "og:description",
-        content:
-          "Plataforma peruana de preparación preuniversitaria: cursos, simulacros, hábitos de estudio y orientación universitaria en un solo lugar.",
-      },
-    ],
-  }),
-  component: Home,
-});
+const dailyTips = [
+  "No estudies más de 2 horas seguidas. Tu cerebro necesita descansar para consolidar la memoria.",
+  "Explica en voz alta lo que estudiaste. Si puedes enseñarlo, es que lo entendiste.",
+  "Empieza por lo más difícil cuando tengas más energía, generalmente en la mañana.",
+  "Usa la técnica Pomodoro: 25 min de estudio + 5 min de descanso.",
+  "Resuelve simulacros sin ver la hora. La presión del tiempo es parte de la práctica.",
+  "Duerme al menos 7 horas. La memoria se consolida durante el sueño.",
+  "Haz resúmenes a mano. Escribir a mano mejora la retención un 30%.",
+  "Estudia en un lugar libre de distracciones. El teléfono en modo avión es tu mejor aliado.",
+  "Revisa lo que fallaste en el último simulacro. Tus errores son tu mejor guía.",
+  "No compares tu progreso con el de otros. Cada uno tiene su ritmo.",
+  "Hidrátate bien. El cerebro necesita agua para funcionar óptimamente.",
+  "Antes de dormir, repasa los temas clave del día. Es el mejor momento para memorizar.",
+];
+
+function getDailyTip(): string {
+  const dayOfYear = Math.floor(
+    (Date.now() - new Date(new Date().getFullYear(), 0, 0).getTime()) / 86400000
+  );
+  return dailyTips[dayOfYear % dailyTips.length];
+}
 
 function Home() {
   const recent = courses.slice(0, 3);
+  const weakCourses = courses
+    .filter((c) => c.progress < 50)
+    .sort((a, b) => a.progress - b.progress)
+    .slice(0, 3);
+  const tip = getDailyTip();
+
+  const today = new Date();
+  const monthMap: Record<string, number> = {
+    Ene: 0, Feb: 1, Mar: 2, Abr: 3, May: 4, Jun: 5,
+    Jul: 6, Ago: 7, Sep: 8, Oct: 9, Nov: 10, Dic: 11,
+  };
+  const examDates = universities
+    .map((u) => {
+      const [day, month] = u.date.split(" ");
+      const examDate = new Date(today.getFullYear(), monthMap[month] ?? 0, parseInt(day));
+      if (examDate < today) examDate.setFullYear(today.getFullYear() + 1);
+      const daysLeft = Math.ceil((examDate.getTime() - today.getTime()) / 86400000);
+      return { ...u, daysLeft };
+    })
+    .filter((u) => u.daysLeft > 0)
+    .sort((a, b) => a.daysLeft - b.daysLeft);
+
+  const maxHours = Math.max(...weeklyStudy.map((d) => d.horas));
 
   return (
     <div className="space-y-8">
@@ -88,74 +116,88 @@ function Home() {
 
       <section className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
         <StatCard icon={Timer} label="Tiempo estudiado" value="23 h" hint="Esta semana" />
-        <StatCard
-          icon={Target}
-          label="Puntaje promedio"
-          value="86 / 100"
-          tone="success"
-          hint="Últimos 4 simulacros"
-        />
-        <StatCard
-          icon={Trophy}
-          label="Ranking"
-          value="#2"
-          tone="warning"
-          hint="Entre 1 240 estudiantes"
-        />
+        <StatCard icon={Target} label="Puntaje promedio" value="86 / 100" tone="success" hint="Últimos 4 simulacros" />
+        <StatCard icon={Trophy} label="Ranking" value="#2" tone="warning" hint="Entre 1 240 estudiantes" />
         <StatCard icon={Medal} label="Nivel" value={`Nivel ${student.level}`} tone="deep" hint={`${student.xp} / ${student.xpGoal} XP`} />
       </section>
 
       <div className="grid gap-8 lg:grid-cols-[minmax(0,1.6fr)_minmax(0,1fr)]">
-        <section>
-          <SectionHeader
-            title="Continúa aprendiendo"
-            subtitle="Retoma donde lo dejaste"
-            action={
-              <Link
-                to="/cursos"
-                className="text-sm font-semibold text-primary hover:underline"
-              >
-                Ver todo
-              </Link>
-            }
-          />
-          <ul className="space-y-3">
-            {recent.map((course) => (
-              <li key={course.slug}>
-                <Link
-                  to="/cursos/$slug"
-                  params={{ slug: course.slug }}
-                  className="surface hover-lift press flex items-center gap-4 p-4"
-                >
-                  <IconTile icon={course.icon} tone={course.tone} />
-                  <span className="min-w-0 flex-1">
-                    <span className="block truncate font-semibold">{course.name}</span>
-                    <span className="block truncate text-sm text-muted-foreground">
-                      {course.description}
-                    </span>
-                    <span className="mt-2 flex items-center gap-3">
-                      <ProgressBar value={course.progress} tone={course.tone} />
-                      <span className="shrink-0 text-xs font-semibold text-muted-foreground">
-                        {course.progress}%
+        <section className="space-y-8">
+          <div>
+            <SectionHeader
+              title="Continúa aprendiendo"
+              subtitle="Retoma donde lo dejaste"
+              action={<Link to="/cursos" className="text-sm font-semibold text-primary hover:underline">Ver todo</Link>}
+            />
+            <ul className="space-y-3">
+              {recent.map((course) => (
+                <li key={course.slug}>
+                  <Link to="/cursos/$slug" params={{ slug: course.slug }} className="surface hover-lift press flex items-center gap-4 p-4">
+                    <IconTile icon={course.icon} tone={course.tone} />
+                    <span className="min-w-0 flex-1">
+                      <span className="block truncate font-semibold">{course.name}</span>
+                      <span className="block truncate text-sm text-muted-foreground">{course.description}</span>
+                      <span className="mt-2 flex items-center gap-3">
+                        <ProgressBar value={course.progress} tone={course.tone} />
+                        <span className="shrink-0 text-xs font-semibold text-muted-foreground">{course.progress}%</span>
                       </span>
                     </span>
-                  </span>
-                  <ArrowRight className="size-5 shrink-0 text-muted-foreground" />
-                </Link>
-              </li>
-            ))}
-          </ul>
+                    <ArrowRight className="size-5 shrink-0 text-muted-foreground" />
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
 
-          <div className="mt-8">
-            <SectionHeader
-              title="Próximas actividades"
-              subtitle="Tu calendario de la semana"
-              action={
-                <Link to="/simulacros" className="text-sm font-semibold text-primary hover:underline">
-                  Ver calendario
-                </Link>
-              }
-            />
+          {weakCourses.length > 0 && (
+            <div>
+              <SectionHeader
+                title="Materias por reforzar"
+                subtitle="Estas materias necesitan más atención"
+                action={<AlertCircle className="size-4 text-destructive" />}
+              />
+              <div className="grid gap-3 sm:grid-cols-3">
+                {weakCourses.map((course) => (
+                  <Link key={course.slug} to="/cursos/$slug" params={{ slug: course.slug }} className="surface hover-lift press p-4">
+                    <div className="mb-3 flex items-center gap-2">
+                      <IconTile icon={course.icon} tone={course.tone} className="size-8" />
+                      <span className="text-sm font-semibold">{course.name}</span>
+                    </div>
+                    <div className="mb-2 flex items-center justify-between text-xs text-muted-foreground">
+                      <span>{course.completedLessons}/{course.lessons} lecciones</span>
+                      <span className="font-semibold text-destructive">{course.progress}%</span>
+                    </div>
+                    <div className="h-2 w-full overflow-hidden rounded-full bg-muted">
+                      <span className="block h-full rounded-full bg-destructive transition-all duration-500" style={{ width: `${course.progress}%` }} />
+                    </div>
+                    <p className="mt-2 text-xs text-muted-foreground">Te quedan {course.hoursLeft}h de contenido</p>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
+
+          <div>
+            <SectionHeader title="Tu semana de estudio" subtitle="Horas invertidas en aprender" />
+            <Surface className="p-4">
+              <div className="flex items-end gap-2 h-32">
+                {weeklyStudy.map((d) => (
+                  <div key={d.day} className="flex flex-1 flex-col items-center gap-1">
+                    <span className="text-[10px] font-semibold text-muted-foreground">{d.horas}h</span>
+                    <div className="w-full rounded-t-lg bg-primary/80 transition-all duration-500" style={{ height: `${(d.horas / maxHours) * 100}%`, minHeight: "4px" }} />
+                    <span className="text-xs font-medium text-muted-foreground">{d.day}</span>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-3 flex items-center justify-center gap-4 text-xs text-muted-foreground">
+                <span>Total: {weeklyStudy.reduce((s, d) => s + d.horas, 0).toFixed(1)}h</span>
+                <span>Promedio: {(weeklyStudy.reduce((s, d) => s + d.horas, 0) / 7).toFixed(1)}h/día</span>
+              </div>
+            </Surface>
+          </div>
+
+          <div>
+            <SectionHeader title="Próximas actividades" subtitle="Tu calendario de la semana" action={<Link to="/simulacros" className="text-sm font-semibold text-primary hover:underline">Ver calendario</Link>} />
             <Surface className="divide-y divide-border p-0">
               {upcoming.map((item) => (
                 <div key={item.title} className="flex items-center gap-4 p-4">
@@ -172,11 +214,55 @@ function Home() {
         </section>
 
         <aside className="space-y-6">
+          <Surface className="overflow-hidden border-none bg-gradient-to-br from-primary/10 via-primary/5 to-transparent p-0">
+            <div className="p-5">
+              <div className="mb-3 flex items-center gap-3">
+                <div className="grid size-10 place-items-center rounded-full bg-primary/15">
+                  <Bot className="size-5 text-primary" />
+                </div>
+                <div>
+                  <p className="text-sm font-semibold">PrepaBot</p>
+                  <p className="text-xs text-muted-foreground">Tu tutor IA</p>
+                </div>
+              </div>
+              <p className="text-sm text-muted-foreground">¿Tienes dudas? Pregúntale a PrepaBot sobre cualquier materia.</p>
+              <Link to="/asistente" className="press mt-4 inline-flex min-h-10 items-center gap-2 rounded-[14px] bg-primary px-4 text-sm font-semibold text-primary-foreground">
+                Hablar con PrepaBot <ArrowRight className="size-4" />
+              </Link>
+            </div>
+          </Surface>
+
           <Surface className="flex flex-col items-center gap-4 text-center">
             <ProgressRing value={student.overall} caption="general" />
-            <p className="text-sm text-muted-foreground">
-              Has completado 148 de 205 lecciones de tu plan.
-            </p>
+            <p className="text-sm text-muted-foreground">Has completado {student.xp} de {student.xpGoal} XP de tu plan.</p>
+          </Surface>
+
+          {examDates.length > 0 && (
+            <Surface>
+              <SectionHeader title="Cuenta regresiva" subtitle="Próximos exámenes" />
+              <div className="space-y-3">
+                {examDates.slice(0, 3).map((u) => (
+                  <div key={u.name} className="flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                      <Landmark className="size-4 text-primary" />
+                      <div>
+                        <p className="text-sm font-semibold">{u.name}</p>
+                        <p className="text-xs text-muted-foreground">{u.date}</p>
+                      </div>
+                    </div>
+                    <div className="text-right">
+                      <p className="text-lg font-bold text-primary">{u.daysLeft}</p>
+                      <p className="text-[10px] text-muted-foreground">días</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </Surface>
+          )}
+
+          <Surface className="border-l-4 border-l-primary">
+            <SectionHeader title="Consejo del día" />
+            <p className="text-sm leading-relaxed text-muted-foreground">{tip}</p>
           </Surface>
 
           <Surface>
@@ -188,11 +274,7 @@ function Home() {
                 { to: "/cursos", label: "Cursos", icon: BookOpen },
                 { to: "/comunidad", label: "Foro", icon: Newspaper },
               ].map((q) => (
-                <Link
-                  key={q.label}
-                  to={q.to}
-                  className="press flex min-h-20 flex-col items-center justify-center gap-2 rounded-[18px] border border-border text-sm font-medium hover:bg-muted"
-                >
+                <Link key={q.label} to={q.to} className="press flex min-h-20 flex-col items-center justify-center gap-2 rounded-[18px] border border-border text-sm font-medium hover:bg-muted">
                   <q.icon className="size-5 text-primary" />
                   {q.label}
                 </Link>
