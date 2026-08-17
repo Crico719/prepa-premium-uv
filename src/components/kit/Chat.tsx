@@ -49,6 +49,8 @@ function cleanForSpeech(text: string): string {
 
   t = t.replace(/(\d)([a-zA-Z])/g, "$1 por $2");
   t = t.replace(/([a-zA-Z])(\d)/g, "$1 por $2");
+  t = t.replace(/(?<![a-zA-Z])([abcxyzABCXYZ])([abcxyzABCXYZ])(?![a-zA-Z])/g, "$1 por $2");
+  t = t.replace(/([abcxyzABCXYZ])\^(\d+)/g, "$1 elevado a $2");
   t = t.replace(/\+/g, " más ");
   t = t.replace(/-(?!\d)/g, " menos ");
   t = t.replace(/=/g, " igual ");
