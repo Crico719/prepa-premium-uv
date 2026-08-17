@@ -148,7 +148,8 @@ serve(async (req: Request): Promise<Response> => {
         model: model,
         messages: messages,
         temperature: 0.7,
-        max_tokens: 1024
+        max_tokens: 1024,
+        tool_choice: "none"
       })
     });
 
