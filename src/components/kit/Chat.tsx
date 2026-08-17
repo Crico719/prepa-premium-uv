@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { Send, Bot, User, Sparkles, BookOpen, Brain, Calculator, Volume2, VolumeX, Paperclip, X, FileText } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { PrepaBotMascot } from "./PrepaBotMascot";
 
 const SUPABASE_URL = "https://jvyrgsxbzlzokotyzepw.supabase.co";
 const SUPABASE_KEY = "sb_publishable_i80Lpj4bEIGTUX1_j5vlGQ_4cTESJ2D";
@@ -138,6 +139,7 @@ export function Chat() {
   const [voiceEnabled, setVoiceEnabledState] = useState(true);
   const [speakingId, setSpeakingId] = useState<string | null>(null);
   const [pendingFile, setPendingFile] = useState<{ file: File; preview: string; type: "image" | "pdf" } | null>(null);
+  const [mascotState, setMascotState] = useState<"idle" | "thinking" | "happy" | "confused" | "waving" | "explaining">("waving");
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -147,6 +149,8 @@ export function Chat() {
     if ("speechSynthesis" in window) {
       window.speechSynthesis.getVoices();
     }
+    const timer = setTimeout(() => setMascotState("idle"), 3000);
+    return () => clearTimeout(timer);
   }, []);
 
   const scrollToBottom = () => {
@@ -230,6 +234,7 @@ export function Chat() {
     setMessages((prev) => [...prev, userMessage]);
     setInput("");
     setIsTyping(true);
+    setMascotState("thinking");
 
     try {
       const response = await callChatAPI(displayContent, messages, imageData, fileText);
@@ -240,6 +245,8 @@ export function Chat() {
         timestamp: new Date(),
       };
       setMessages((prev) => [...prev, assistantMessage]);
+      setMascotState("happy");
+      setTimeout(() => setMascotState("idle"), 3000);
 
       if (voiceEnabled) {
         setTimeout(() => handleSpeak(response, assistantMessage.id), 300);
@@ -252,6 +259,8 @@ export function Chat() {
         timestamp: new Date(),
       };
       setMessages((prev) => [...prev, errorMessage]);
+      setMascotState("confused");
+      setTimeout(() => setMascotState("idle"), 3000);
     } finally {
       setIsTyping(false);
     }
@@ -265,9 +274,7 @@ export function Chat() {
   return (
     <div className="flex h-[calc(100dvh-14rem)] flex-col">
       <div className="flex items-center gap-3 border-b border-border px-4 py-3">
-        <div className="grid size-10 place-items-center rounded-full bg-primary/10">
-          <Bot className="size-5 text-primary" />
-        </div>
+        <PrepaBotMascot state={mascotState} size={36} />
         <div>
           <h1 className="font-semibold">PrepaBot</h1>
           <p className="text-xs text-muted-foreground">Vision + Busqueda web</p>
@@ -293,9 +300,7 @@ export function Chat() {
       <div className="flex-1 overflow-y-auto px-4 py-4">
         {messages.length === 0 ? (
           <div className="flex h-full flex-col items-center justify-center text-center">
-            <div className="mb-4 grid size-16 place-items-center rounded-full bg-primary/10">
-              <Sparkles className="size-8 text-primary" />
-            </div>
+            <PrepaBotMascot state={mascotState} size={100} className="mb-4" />
             <h2 className="text-lg font-semibold">Hola! Soy PrepaBot</h2>
             <p className="mt-2 max-w-md text-sm text-muted-foreground">
               Tu tutor IA para el examen de admision.
@@ -326,9 +331,7 @@ export function Chat() {
                 )}
               >
                 {message.role === "assistant" && (
-                  <div className="grid size-8 shrink-0 place-items-center rounded-full bg-primary/10">
-                    <Bot className="size-4 text-primary" />
-                  </div>
+                  <PrepaBotMascot state="idle" size={28} className="shrink-0" />
                 )}
                 <div
                   className={cn(
@@ -384,9 +387,7 @@ export function Chat() {
             ))}
             {isTyping && (
               <div className="flex gap-3">
-                <div className="grid size-8 shrink-0 place-items-center rounded-full bg-primary/10">
-                  <Bot className="size-4 text-primary" />
-                </div>
+                <PrepaBotMascot state="thinking" size={32} className="shrink-0" />
                 <div className="rounded-[16px] border border-border bg-card px-4 py-3">
                   <div className="flex gap-1">
                     <span className="size-2 animate-bounce rounded-full bg-muted-foreground/50 [animation-delay:-0.3s]" />

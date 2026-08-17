@@ -2,6 +2,8 @@ import { cn } from "@/lib/utils";
 import type { LucideIcon } from "lucide-react";
 import type { ReactNode } from "react";
 
+export { PrepaBotMascot } from "./PrepaBotMascot";
+
 export const toneClasses: Record<string, string> = {
   primary: "bg-primary/10 text-primary",
   success: "bg-success/12 text-success",
