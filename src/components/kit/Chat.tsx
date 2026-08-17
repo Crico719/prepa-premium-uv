@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import { Send, Bot, User, Sparkles, BookOpen, Brain, Calculator, Settings, X, Volume2, VolumeX, Loader2 } from "lucide-react";
+import { Send, Bot, User, Sparkles, BookOpen, Brain, Calculator, Volume2, VolumeX } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const SUPABASE_URL = "https://jvyrgsxbzlzokotyzepw.supabase.co";
@@ -36,85 +36,55 @@ function setVoiceEnabled(enabled: boolean) {
   localStorage.setItem("machat_voice_enabled", String(enabled));
 }
 
-const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
+function cleanForSpeech(text: string): string {
+  return text
+    .replace(/#{1,6}\s/g, "")
+    .replace(/\*\*(.*?)\*\*/g, "$1")
+    .replace(/\*(.*?)\*/g, "$1")
+    .replace(/`{1,3}[^`]*`{1,3}/g, "")
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")
+    .replace(/\n{2,}/g, ". ")
+    .replace(/\n/g, " ")
+    .trim();
+}
 
-function isTransient(status: number, msg: string) {
-  return (
-    status === 429 ||
-    status === 503 ||
-    status >= 500 ||
-    /high demand|overload|rate limit|try again/i.test(msg)
-  );
+function speak(text: string): Promise<void> {
+  return new Promise((resolve) => {
+    if (!("speechSynthesis" in window)) {
+      resolve();
+      return;
+    }
+    window.speechSynthesis.cancel();
+    const utterance = new SpeechSynthesisUtterance(cleanForSpeech(text));
+    utterance.lang = "es-PE";
+    utterance.rate = 1;
+    utterance.pitch = 1;
+    const voices = window.speechSynthesis.getVoices();
+    const esVoice = voices.find((v) => v.lang.startsWith("es")) || voices[0];
+    if (esVoice) utterance.voice = esVoice;
+    utterance.onend = () => resolve();
+    utterance.onerror = () => resolve();
+    window.speechSynthesis.speak(utterance);
+  });
 }
 
 async function callChatAPI(userMessage: string, history: Message[]): Promise<string> {
-  const maxAttempts = 3;
-  let lastError = "El servicio de IA está saturado. Intenta de nuevo en unos segundos.";
-
-  for (let attempt = 0; attempt < maxAttempts; attempt++) {
-    try {
-      const response = await fetch(`${SUPABASE_URL}/functions/v1/hyper-api`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "Authorization": `Bearer ${SUPABASE_KEY}`,
-          "apikey": SUPABASE_KEY,
-        },
-        body: JSON.stringify({
-          message: userMessage,
-          history: history.map((m) => ({ role: m.role, content: m.content })),
-        }),
-      });
-
-      const data = await response.json().catch(() => ({}) as { text?: string; error?: string });
-
-      if (response.ok && data.text) return data.text;
-
-      const msg = data.error || `Error ${response.status}`;
-      if (!isTransient(response.status, msg)) throw new Error(msg);
-      lastError = msg;
-    } catch (err) {
-      const msg = err instanceof Error ? err.message : "Error desconocido";
-      if (!isTransient(0, msg)) throw err;
-      lastError = msg;
-    }
-
-    if (attempt < maxAttempts - 1) await sleep(1200 * 2 ** attempt);
-  }
-
-  throw new Error(lastError);
-}
-
-
-async function callSpeakAPI(text: string): Promise<ArrayBuffer> {
-  const response = await fetch(`${SUPABASE_URL}/functions/v1/speak-ts`, {
+  const response = await fetch(`${SUPABASE_URL}/functions/v1/hyper-api`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      "Authorization": `Bearer ${SUPABASE_KEY}`,
-      "apikey": SUPABASE_KEY,
+      Authorization: `Bearer ${SUPABASE_KEY}`,
+      apikey: SUPABASE_KEY,
     },
-    body: JSON.stringify({ text }),
+    body: JSON.stringify({
+      message: userMessage,
+      history: history.map((m) => ({ role: m.role, content: m.content })),
+    }),
   });
 
-  if (!response.ok) {
-    const data = await response.json().catch(() => ({}));
-    throw new Error(data.error || "Error al generar audio");
-  }
-
-  return response.arrayBuffer();
-}
-
-async function playAudio(audioBuffer: ArrayBuffer) {
-  const audioContext = new AudioContext();
-  const decoded = await audioContext.decodeAudioData(audioBuffer);
-  const source = audioContext.createBufferSource();
-  source.buffer = decoded;
-  source.connect(audioContext.destination);
-  source.start();
-  return new Promise<void>((resolve) => {
-    source.onended = () => resolve();
-  });
+  const data = await response.json();
+  if (!response.ok) throw new Error(data.error || "Error al conectar con el servidor");
+  return data.text;
 }
 
 export function Chat() {
@@ -128,6 +98,9 @@ export function Chat() {
 
   useEffect(() => {
     setVoiceEnabledState(getVoiceEnabled());
+    if ("speechSynthesis" in window) {
+      window.speechSynthesis.getVoices();
+    }
   }, []);
 
   const scrollToBottom = () => {
@@ -140,20 +113,17 @@ export function Chat() {
 
   const handleSpeak = async (text: string, messageId: string) => {
     setSpeakingId(messageId);
-    try {
-      const audioBuffer = await callSpeakAPI(text);
-      await playAudio(audioBuffer);
-    } catch (err) {
-      console.error("Error audio:", err);
-    } finally {
-      setSpeakingId(null);
-    }
+    await speak(text);
+    setSpeakingId(null);
   };
 
   const handleToggleVoice = () => {
     const newValue = !voiceEnabled;
     setVoiceEnabledState(newValue);
     setVoiceEnabled(newValue);
+    if (!newValue && "speechSynthesis" in window) {
+      window.speechSynthesis.cancel();
+    }
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -182,7 +152,7 @@ export function Chat() {
       setMessages((prev) => [...prev, assistantMessage]);
 
       if (voiceEnabled) {
-        setTimeout(() => handleSpeak(response, assistantMessage.id), 500);
+        setTimeout(() => handleSpeak(response, assistantMessage.id), 300);
       }
     } catch (err) {
       const errorMessage: Message = {
@@ -300,7 +270,7 @@ export function Chat() {
                         className="press ml-2 grid size-6 place-items-center rounded-full hover:bg-muted"
                       >
                         {speakingId === message.id ? (
-                          <Loader2 className="size-3 animate-spin text-primary" />
+                          <span className="size-3 animate-pulse rounded-full bg-primary" />
                         ) : (
                           <Volume2 className="size-3 text-muted-foreground hover:text-primary" />
                         )}
