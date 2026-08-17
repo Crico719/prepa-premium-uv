@@ -27,6 +27,8 @@ serve(async (req: Request): Promise<Response> => {
     const sys = [
       "Eres PrepaBot, un tutor IA experto para estudiantes de secundaria peruanos.",
       "",
+      "IMPORTANTE: Tu conocimiento puede estar desactualizado. SIEMPRE confia en la informacion de busqueda web cuando esta disponible.",
+      "",
       "RESPONDE COMO CHATGPT PERO PARA ESTUDIANTES DE SECUNDARIA:",
       "- Estilo profesional, claro y preciso",
       "- Usa markdown limpio: **negrita** para conceptos, ## para secciones",
@@ -44,10 +46,12 @@ serve(async (req: Request): Promise<Response> => {
       "- Usa notacion simple: x², x³, √, ±, Δ",
       "- Explica cada formula con palabras ANTES de mostrarla",
       "",
-      "REGLAS IMPORTANTES:",
-      "- SI ves [Info actualizada] en el mensaje, ESA ES LA RESPUESTA CORRECTA - usala tal cual",
-      "- SI la busqueda dice Keiko Fujimori, responde Keiko Fujimori - NUNCA digas otro nombre",
-      "- SI la busqueda dice Dina Boluarte, responde Dina Boluarte - NUNCA digas otro nombre",
+      "REGLAS CRITICAS - SIEMPRE SIGUE ESTAS REGLAS:",
+      "- SI ves [Info actualizada] en el mensaje, ESA ES LA VERDAD - ignorar cualquier otro conocimiento",
+      "- La informacion de busqueda web es MAS RECIENTE que tu entrenamiento",
+      "- SI la busqueda dice Keiko Fujimori, la presidenta ES Keiko Fujimori",
+      "- SI la busqueda dice Dina Boluarte, la presidenta ES Dina Boluarte",
+      "- NUNCA contradigas la informacion de busqueda web",
       "- NUNCA inventes informacion - si no sabes algo, di 'no tengo esa informacion'",
       "- Responde DIRECTAMENTE lo que el usuario pregunta",
       "- NO preguntes 'de qué tema hablas' si ya te dio contexto",
@@ -99,9 +103,9 @@ serve(async (req: Request): Promise<Response> => {
     let messages: any[] = [];
 
     if (imageData) {
-      const visionText = message || "Describe detalladamente lo que ves en esta imagen. Si contiene texto, transcribelo. Si es un problema, resuelvelo paso a paso.";
+      const visionText = (message || "Describe detalladamente lo que ves en esta imagen. Si contiene texto, transcribelo. Si es un problema, resuelvelo paso a paso.") + (searchCtx ? "\n\n---\n[INFORMACION DE BUSQUEDA WEB - USA ESTA INFORMACION COMO RESPUESTA]: " + searchCtx : "");
       messages = [
-        { role: "system", content: sys + searchCtx },
+        { role: "system", content: sys },
         ...history.slice(-10).map((m: any) => ({ role: m.role, content: m.content })),
         {
           role: "user",
@@ -113,16 +117,20 @@ serve(async (req: Request): Promise<Response> => {
       ];
     } else if (fileText) {
       const docCtx = "\n[Contenido del documento]:\n" + fileText;
+      const fileMsg = (message || "Analiza este documento y responde como tutor.") + (searchCtx ? "\n\n---\n[INFORMACION DE BUSQUEDA WEB - USA ESTA INFORMACION COMO RESPUESTA]: " + searchCtx : "");
       messages = [
-        { role: "system", content: sys + searchCtx + docCtx },
+        { role: "system", content: sys + docCtx },
         ...history.slice(-10).map((m: any) => ({ role: m.role, content: m.content })),
-        { role: "user", content: message || "Analiza este documento y responde como tutor." }
+        { role: "user", content: fileMsg }
       ];
     } else {
+      const userMsg = searchCtx
+        ? message + "\n\n---\n[INFORMACION DE BUSQUEDA WEB - USA ESTA INFORMACION COMO RESPUESTA]: " + searchCtx
+        : message;
       messages = [
-        { role: "system", content: sys + searchCtx },
+        { role: "system", content: sys },
         ...history.slice(-10).map((m: any) => ({ role: m.role, content: m.content })),
-        { role: "user", content: message }
+        { role: "user", content: userMsg }
       ];
     }
 
