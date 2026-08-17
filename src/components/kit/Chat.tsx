@@ -362,7 +362,7 @@ export function Chat() {
           Presiona Enter para enviar · Shift+Enter para nueva línea
         </p>
         <p className="text-center text-[10px] text-muted-foreground/50">
-          Límite: 30 mensajes por minuto · 1,000 al día
+          Límite: ~700 mensajes/día · Búsqueda web incluida
         </p>
       </form>
     </div>
