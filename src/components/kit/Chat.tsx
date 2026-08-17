@@ -37,15 +37,30 @@ function setVoiceEnabled(enabled: boolean) {
 }
 
 function cleanForSpeech(text: string): string {
-  return text
+  let t = text
+    .replace(/[\u{1F600}-\u{1F64F}\u{1F300}-\u{1F5FF}\u{1F680}-\u{1F6FF}\u{1F1E0}-\u{1F1FF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}\u{FE00}-\u{FE0F}\u{1F900}-\u{1F9FF}\u{1FA00}-\u{1FA6F}\u{1FA70}-\u{1FAFF}\u{200D}\u{20E3}\u{2702}-\u{27B0}\u{2934}-\u{2935}\u{25AA}-\u{25FE}\u{2B05}-\u{2B55}\u{231A}-\u{23FA}\u{2328}\u{23CF}\u{23E9}-\u{23F3}\u{23F8}-\u{23FA}\u{25FB}-\u{25FE}]/gu, "")
     .replace(/#{1,6}\s/g, "")
     .replace(/\*\*(.*?)\*\*/g, "$1")
     .replace(/\*(.*?)\*/g, "$1")
     .replace(/`{1,3}[^`]*`{1,3}/g, "")
     .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")
     .replace(/\n{2,}/g, ". ")
-    .replace(/\n/g, " ")
-    .trim();
+    .replace(/\n/g, " ");
+
+  t = t.replace(/(\d)([a-zA-Z])/g, "$1 por $2");
+  t = t.replace(/([a-zA-Z])(\d)/g, "$1 por $2");
+  t = t.replace(/\+/g, " más ");
+  t = t.replace(/-(?!\d)/g, " menos ");
+  t = t.replace(/=/g, " igual ");
+  t = t.replace(/\*/g, " por ");
+  t = t.replace(/\//g, " entre ");
+  t = t.replace(/>=/g, " mayor o igual que ");
+  t = t.replace(/<=/g, " menor o igual que ");
+  t = t.replace(/(?<!\d)>(?!\d)/g, " mayor que ");
+  t = t.replace(/(?<!\d)<(?!\d)/g, " menor que ");
+  t = t.replace(/\^/g, " elevado a ");
+
+  return t.trim();
 }
 
 function speak(text: string): Promise<void> {
