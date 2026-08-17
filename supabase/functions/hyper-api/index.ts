@@ -107,7 +107,7 @@ serve(async (req: Request): Promise<Response> => {
       const visionText = (message || "Describe detalladamente lo que ves en esta imagen. Si contiene texto, transcribelo. Si es un problema, resuelvelo paso a paso.") + (searchCtx ? "\n\n---\n[INFORMACION DE BUSQUEDA WEB - USA ESTA INFORMACION COMO RESPUESTA]: " + searchCtx : "");
       messages = [
         { role: "system", content: sys },
-        ...history.slice(-10).map((m: any) => ({ role: m.role, content: m.content })),
+        ...history.slice(-3).map((m: any) => ({ role: m.role, content: m.content })),
         {
           role: "user",
           content: [
