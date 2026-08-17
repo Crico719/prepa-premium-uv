@@ -4,7 +4,7 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"
 };
 
-const SEARCH_KEYWORDS = ["quién es", "presidente", "actual", "noticias", "último", "reciente", "2025", "2026", "2027", "hoy", "ayer", "semana", "mes", "elecciones", "gobierno", "ministro", "precio", "dólar", "clima", "terremoto", "copa", "fútbol", "liga", "perú", "capital", "moneda", "gobernador", "alcalde", "congreso", "ley", "constitución", "economía", "inflación", "pbi", "crecimiento", "población", "pobreza", "educación", "salud"];
+const SEARCH_KEYWORDS = ["quién es", "quien es", "presidente", "actual", "noticias", "último", "reciente", "2025", "2026", "2027", "hoy", "ayer", "semana", "mes", "elecciones", "gobierno", "ministro", "precio", "dólar", "clima", "terremoto", "copa", "fútbol", "liga", "perú", "capital", "moneda", "gobernador", "alcalde", "congreso", "ley", "constitución", "economía", "inflación", "pbi", "crecimiento", "población", "pobreza", "educación", "salud", "caso", "escándalo", "corrupción", "keiko", "dina", "boluarte", "fujimori", "castillo", "gobierno", "país", "mundial", "deporte", "fútbol", "liga", "champions", "copa", "clima", "temperatura", "lluvia", "terremoto", "sismo", "tsunami"];
 
 function needsSearch(query: string): boolean {
   const q = query.toLowerCase();
@@ -70,7 +70,7 @@ serve(async (req: Request): Promise<Response> => {
     ].join("\n");
 
     let searchCtx = "";
-    if (TAVILY_KEY) {
+    if (TAVILY_KEY && needsSearch(message)) {
       const cacheKey = message.toLowerCase().trim();
       const cached = cache.get(cacheKey);
       if (cached && Date.now() - cached.time < CACHE_TTL) {
