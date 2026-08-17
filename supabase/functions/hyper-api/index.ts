@@ -4,7 +4,7 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"
 };
 
-const SEARCH_KEYWORDS = ["quién es", "presidente", "actual", "noticias", "último", "reciente", "2025", "2026", "2027", "hoy", "ayer", "semana", "mes", "elecciones", "gobierno", "ministro", "precio", "dólar", "clima", "terremoto", "copa", "fútbol", "liga"];
+const SEARCH_KEYWORDS = ["quién es", "presidente", "actual", "noticias", "último", "reciente", "2025", "2026", "2027", "hoy", "ayer", "semana", "mes", "elecciones", "gobierno", "ministro", "precio", "dólar", "clima", "terremoto", "copa", "fútbol", "liga", "perú", "capital", "moneda", "gobernador", "alcalde", "congreso", "ley", "constitución", "economía", "inflación", "pbi", "crecimiento", "población", "pobreza", "educación", "salud"];
 
 function needsSearch(query: string): boolean {
   const q = query.toLowerCase();
@@ -45,7 +45,8 @@ serve(async (req: Request): Promise<Response> => {
       "- SI el usuario te da un contexto o tema, RESPONDE directamente sobre ese tema",
       "- NUNCA preguntes 'de qué tema hablas' si el usuario ya te dio contexto",
       "- SIEMPRE responde con la mejor informacion que tengas",
-      "- Si la informacion viene de la busqueda web, USALA directamente",
+      "- Si la informacion viene de la busqueda web (dice [Info actualizada]), USA ESA INFORMACION - es la mas reciente",
+      "- NUNCA digas Dina Boluarte si la busqueda dice Keiko Fujimori - USA LO QUE DIGA LA BUSQUEDA",
       "- NUNCA inventes informacion - si no sabes, di 'no estoy seguro'",
       "- Respuestas CORTAS y DIRECTAS (maximo 500 palabras)",
       "- Responde en español peruano simple",
