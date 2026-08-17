@@ -1,6 +1,9 @@
 import { useState, useRef, useEffect } from "react";
-import { Send, Bot, User, Sparkles, BookOpen, Brain, Calculator, Volume2, VolumeX } from "lucide-react";
+import { Send, Bot, User, Sparkles, BookOpen, Brain, Calculator, Volume2, VolumeX, Paperclip, X, FileText, Image } from "lucide-react";
 import { cn } from "@/lib/utils";
+import * as pdfjsLib from "pdfjs-dist";
+
+pdfjsLib.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjsLib.version}/build/pdf.worker.min.mjs`;
 
 const SUPABASE_URL = "https://jvyrgsxbzlzokotyzepw.supabase.co";
 const SUPABASE_KEY = "sb_publishable_i80Lpj4bEIGTUX1_j5vlGQ_4cTESJ2D";
@@ -10,6 +13,7 @@ type Message = {
   role: "user" | "assistant";
   content: string;
   timestamp: Date;
+  imagePreview?: string;
 };
 
 type Suggestion = {
@@ -85,7 +89,29 @@ function speak(text: string): Promise<void> {
   });
 }
 
-async function callChatAPI(userMessage: string, history: Message[]): Promise<string> {
+function fileToBase64(file: File): Promise<string> {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => resolve(reader.result as string);
+    reader.onerror = reject;
+    reader.readAsDataURL(file);
+  });
+}
+
+async function extractPdfText(file: File): Promise<string> {
+  const arrayBuffer = await file.arrayBuffer();
+  const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
+  const pages: string[] = [];
+  for (let i = 1; i <= pdf.numPages; i++) {
+    const page = await pdf.getPage(i);
+    const content = await page.getTextContent();
+    const text = content.items.map((item: any) => item.str).join(" ");
+    pages.push(`--- Pagina ${i} ---\n${text}`);
+  }
+  return pages.join("\n\n");
+}
+
+async function callChatAPI(userMessage: string, history: Message[], imageData?: string, fileText?: string): Promise<string> {
   const response = await fetch(`${SUPABASE_URL}/functions/v1/hyper-api`, {
     method: "POST",
     headers: {
@@ -96,6 +122,8 @@ async function callChatAPI(userMessage: string, history: Message[]): Promise<str
     body: JSON.stringify({
       message: userMessage,
       history: history.map((m) => ({ role: m.role, content: m.content })),
+      imageData,
+      fileText,
     }),
   });
 
@@ -110,8 +138,10 @@ export function Chat() {
   const [isTyping, setIsTyping] = useState(false);
   const [voiceEnabled, setVoiceEnabledState] = useState(true);
   const [speakingId, setSpeakingId] = useState<string | null>(null);
+  const [pendingFile, setPendingFile] = useState<{ file: File; preview: string; type: "image" | "pdf" } | null>(null);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     setVoiceEnabledState(getVoiceEnabled());
@@ -143,15 +173,55 @@ export function Chat() {
     }
   };
 
+  const handleFileSelect = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    const isImage = file.type.startsWith("image/");
+    const isPdf = file.type === "application/pdf";
+
+    if (!isImage && !isPdf) {
+      alert("Solo se admiten imagenes (JPG, PNG, GIF, WEBP) y documentos PDF.");
+      return;
+    }
+
+    if (isImage) {
+      const base64 = await fileToBase64(file);
+      setPendingFile({ file, preview: base64, type: "image" });
+    } else if (isPdf) {
+      setPendingFile({ file, preview: "", type: "pdf" });
+    }
+
+    e.target.value = "";
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!input.trim() || isTyping) return;
+    if ((!input.trim() && !pendingFile) || isTyping) return;
+
+    let imageData: string | undefined;
+    let fileText: string | undefined;
+    let displayContent = input.trim();
+    let imagePreview: string | undefined;
+
+    if (pendingFile) {
+      if (pendingFile.type === "image") {
+        imageData = pendingFile.preview;
+        imagePreview = pendingFile.preview;
+        if (!displayContent) displayContent = "Que puedes ver en esta imagen?";
+      } else if (pendingFile.type === "pdf") {
+        fileText = await extractPdfText(pendingFile.file);
+        if (!displayContent) displayContent = "Analiza este documento PDF";
+      }
+      setPendingFile(null);
+    }
 
     const userMessage: Message = {
       id: Date.now().toString(),
       role: "user",
-      content: input.trim(),
+      content: displayContent || "Adjunto",
       timestamp: new Date(),
+      imagePreview,
     };
 
     setMessages((prev) => [...prev, userMessage]);
@@ -159,7 +229,7 @@ export function Chat() {
     setIsTyping(true);
 
     try {
-      const response = await callChatAPI(userMessage.content, messages);
+      const response = await callChatAPI(displayContent, messages, imageData, fileText);
       const assistantMessage: Message = {
         id: (Date.now() + 1).toString(),
         role: "assistant",
@@ -175,7 +245,7 @@ export function Chat() {
       const errorMessage: Message = {
         id: (Date.now() + 1).toString(),
         role: "assistant",
-        content: `Lo siento, hubo un error: ${err instanceof Error ? err.message : "Error desconocido"}. Intenta de nuevo. 🔄`,
+        content: `Lo siento, hubo un error: ${err instanceof Error ? err.message : "Error desconocido"}. Intenta de nuevo.`,
         timestamp: new Date(),
       };
       setMessages((prev) => [...prev, errorMessage]);
@@ -197,12 +267,12 @@ export function Chat() {
         </div>
         <div>
           <h1 className="font-semibold">PrepaBot</h1>
-          <p className="text-xs text-muted-foreground">Gemini + ElevenLabs · En línea</p>
+          <p className="text-xs text-muted-foreground">Vision + Busqueda web</p>
         </div>
         <div className="ml-auto flex items-center gap-2">
           <span className="flex items-center gap-1">
             <span className="size-2 rounded-full bg-success animate-pulse" />
-            <span className="text-xs text-muted-foreground">En línea</span>
+            <span className="text-xs text-muted-foreground">En linea</span>
           </span>
           <button
             onClick={handleToggleVoice}
@@ -223,10 +293,10 @@ export function Chat() {
             <div className="mb-4 grid size-16 place-items-center rounded-full bg-primary/10">
               <Sparkles className="size-8 text-primary" />
             </div>
-            <h2 className="text-lg font-semibold">¡Hola! Soy PrepaBot 🎓</h2>
+            <h2 className="text-lg font-semibold">Hola! Soy PrepaBot</h2>
             <p className="mt-2 max-w-md text-sm text-muted-foreground">
-              Tu tutor IA para el examen de admisión.
-              Pregúntame sobre cualquier materia, pide ejercicios o solicita explicaciones.
+              Tu tutor IA para el examen de admision.
+              Preguntame sobre cualquier materia, pide ejercicios o adjunta una imagen/PDF.
             </p>
 
             <div className="mt-8 grid w-full max-w-lg gap-3 sm:grid-cols-2">
@@ -265,6 +335,13 @@ export function Chat() {
                       : "bg-card border border-border"
                   )}
                 >
+                  {message.imagePreview && (
+                    <img
+                      src={message.imagePreview}
+                      alt="Imagen adjunta"
+                      className="mb-2 max-h-48 rounded-lg object-cover"
+                    />
+                  )}
                   <div className="prose prose-sm dark:prose-invert max-w-none whitespace-pre-wrap">
                     {message.content}
                   </div>
@@ -321,8 +398,50 @@ export function Chat() {
         )}
       </div>
 
+      {pendingFile && (
+        <div className="border-t border-border bg-card px-4 py-2">
+          <div className="flex items-center gap-2">
+            {pendingFile.type === "image" ? (
+              <img src={pendingFile.preview} alt="Preview" className="size-10 rounded-lg object-cover" />
+            ) : (
+              <div className="grid size-10 place-items-center rounded-lg bg-destructive/10">
+                <FileText className="size-5 text-destructive" />
+              </div>
+            )}
+            <div className="flex-1 truncate text-sm">
+              {pendingFile.file.name}
+              <span className="ml-1 text-muted-foreground">
+                ({pendingFile.type === "pdf" ? "PDF" : "Imagen"})
+              </span>
+            </div>
+            <button
+              onClick={() => setPendingFile(null)}
+              className="press grid size-7 place-items-center rounded-full hover:bg-muted"
+            >
+              <X className="size-4" />
+            </button>
+          </div>
+        </div>
+      )}
+
       <form onSubmit={handleSubmit} className="border-t border-border bg-card px-4 py-3">
         <div className="flex items-end gap-2">
+          <input
+            ref={fileInputRef}
+            type="file"
+            accept="image/*,.pdf"
+            onChange={handleFileSelect}
+            className="hidden"
+          />
+          <button
+            type="button"
+            onClick={() => fileInputRef.current?.click()}
+            disabled={isTyping}
+            className="press grid size-11 shrink-0 place-items-center rounded-[16px] border border-border text-muted-foreground transition-colors hover:bg-muted hover:text-primary disabled:opacity-50"
+            title="Adjuntar imagen o PDF"
+          >
+            <Paperclip className="size-5" />
+          </button>
           <textarea
             ref={inputRef}
             value={input}
@@ -333,23 +452,23 @@ export function Chat() {
                 handleSubmit(e);
               }
             }}
-            placeholder="Escribe tu pregunta..."
+            placeholder={pendingFile ? "Escribe un mensaje sobre el archivo..." : "Escribe tu pregunta..."}
             rows={1}
             className="min-h-11 flex-1 resize-none rounded-[16px] border border-border bg-background px-4 py-2.5 text-sm outline-none focus:ring-2 focus:ring-primary/50"
           />
           <button
             type="submit"
-            disabled={!input.trim() || isTyping}
+            disabled={(!input.trim() && !pendingFile) || isTyping}
             className="press grid size-11 place-items-center rounded-[16px] bg-primary text-primary-foreground transition-opacity hover:opacity-90 disabled:opacity-50"
           >
             <Send className="size-5" />
           </button>
         </div>
         <p className="mt-2 text-center text-xs text-muted-foreground">
-          Presiona Enter para enviar · Shift+Enter para nueva línea
+          Adjunta imagenes (JPG, PNG) o PDFs + escribe tu pregunta
         </p>
         <p className="text-center text-[10px] text-muted-foreground/50">
-          Límite: ~700 mensajes/día · Búsqueda web incluida
+          Vision: Llama 4 Scout · Texto: GPT-OSS 20B · Busqueda web incluida
         </p>
       </form>
     </div>
