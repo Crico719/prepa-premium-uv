@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 import { IconTile, Pill, ProgressBar, SectionHeader, Surface } from "@/components/kit";
 import { ranking } from "@/lib/data";
-import { supabase } from "@/lib/supabase";
+import { sbInsert, sbSelect, sbRpc, sbDelete } from "@/lib/supabase";
 
 export const Route = createFileRoute("/comunidad")({
   head: () => ({
@@ -51,12 +51,13 @@ type Comment = {
   created_at: string;
 };
 
-const ALL_TAGS = ["Matemáticas", "Física", "Verbal", "Química", "Biología", "Historia", "Simulacro UNI", "Simulacro San Marcos", "Apuntes", "Racha", "General"];
+const ALL_TAGS = [
+  "Matemáticas", "Física", "Verbal", "Química", "Biología",
+  "Historia", "Simulacro UNI", "Simulacro San Marcos", "Apuntes", "Racha", "General",
+];
 
 function timeAgo(dateStr: string): string {
-  const now = Date.now();
-  const then = new Date(dateStr).getTime();
-  const diff = Math.floor((now - then) / 1000);
+  const diff = Math.floor((Date.now() - new Date(dateStr).getTime()) / 1000);
   if (diff < 60) return "ahora mismo";
   if (diff < 3600) return `hace ${Math.floor(diff / 60)} min`;
   if (diff < 86400) return `hace ${Math.floor(diff / 3600)} h`;
@@ -67,11 +68,11 @@ function timeAgo(dateStr: string): string {
 function PostCard({
   post,
   onLike,
-  onComment,
+  onCommentAdded,
 }: {
   post: Post;
   onLike: (id: string) => void;
-  onComment: (id: string, text: string) => void;
+  onCommentAdded: (id: string) => void;
 }) {
   const [showComments, setShowComments] = useState(false);
   const [comments, setComments] = useState<Comment[]>([]);
@@ -85,12 +86,12 @@ function PostCard({
     }
     setShowComments(true);
     setLoadingComments(true);
-    const { data } = await supabase
-      .from("comments")
-      .select("*")
-      .eq("post_id", post.id)
-      .order("created_at", { ascending: true });
-    setComments(data ?? []);
+    try {
+      const data = await sbSelect("comments", `post_id=eq.${post.id}&order=created_at.asc`);
+      setComments(data ?? []);
+    } catch {
+      setComments([]);
+    }
     setLoadingComments(false);
   }, [showComments, post.id]);
 
@@ -98,14 +99,19 @@ function PostCard({
     if (!newComment.trim()) return;
     const text = newComment.trim();
     setNewComment("");
-    const { data } = await supabase
-      .from("comments")
-      .insert({ post_id: post.id, author: "Daniel", content: text })
-      .select()
-      .single();
-    if (data) setComments((prev) => [...prev, data]);
-    onComment(post.id, text);
-  }, [newComment, post.id, onComment]);
+    try {
+      const [data] = await sbInsert("comments", {
+        post_id: post.id,
+        author: "Daniel",
+        content: text,
+      });
+      if (data) setComments((prev) => [...prev, data]);
+      await sbRpc("increment_comments", { pid: post.id });
+      onCommentAdded(post.id);
+    } catch (e) {
+      console.error("Comment error:", e);
+    }
+  }, [newComment, post.id, onCommentAdded]);
 
   return (
     <li>
@@ -140,10 +146,7 @@ function PostCard({
               post.user_has_liked ? "text-destructive" : "hover:text-destructive"
             }`}
           >
-            <Heart
-              className="size-4"
-              fill={post.user_has_liked ? "currentColor" : "none"}
-            />{" "}
+            <Heart className="size-4" fill={post.user_has_liked ? "currentColor" : "none"} />{" "}
             {post.likes_count}
           </button>
           <button
@@ -203,6 +206,7 @@ function PostCard({
 function Comunidad() {
   const [posts, setPosts] = useState<Post[]>([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
   const [search, setSearch] = useState("");
   const [activeTag, setActiveTag] = useState<string | null>(null);
   const [newPost, setNewPost] = useState("");
@@ -211,27 +215,32 @@ function Comunidad() {
   const textareaRef = useRef<HTMLTextAreaElement>(null);
 
   const fetchPosts = useCallback(async () => {
-    const { data: postsData } = await supabase
-      .from("community_posts")
-      .select("*")
-      .order("created_at", { ascending: false });
+    try {
+      setLoading(true);
+      setError(null);
 
-    if (!postsData) {
-      setPosts([]);
-      return;
+      const postsData = await sbSelect("community_posts", "order=created_at.desc");
+
+      let likedPostIds = new Set<string>();
+      try {
+        const likesData = await sbSelect("likes");
+        likedPostIds = new Set(likesData?.map((l: { post_id: string }) => l.post_id) ?? []);
+      } catch {
+        // likes table might not exist yet
+      }
+
+      const enriched = (postsData ?? []).map((p: Post) => ({
+        ...p,
+        user_has_liked: likedPostIds.has(p.id),
+      }));
+
+      setPosts(enriched);
+    } catch (e) {
+      console.error("Fetch posts error:", e);
+      setError(String(e));
+    } finally {
+      setLoading(false);
     }
-
-    const { data: likesData } = await supabase.from("likes").select("post_id");
-
-    const likedPostIds = new Set(likesData?.map((l) => l.post_id) ?? []);
-
-    const enriched = postsData.map((p) => ({
-      ...p,
-      user_has_liked: likedPostIds.has(p.id),
-    }));
-
-    setPosts(enriched);
-    setLoading(false);
   }, []);
 
   useEffect(() => {
@@ -257,48 +266,59 @@ function Comunidad() {
         )
       );
 
-      if (alreadyLiked) {
-        await supabase.from("likes").delete().eq("post_id", postId);
-        await supabase.rpc("decrement_likes", { pid: postId });
-      } else {
-        await supabase.from("likes").insert({ post_id: postId });
-        await supabase.rpc("increment_likes", { pid: postId });
+      try {
+        if (alreadyLiked) {
+          await sbDelete("likes", `post_id=eq.${postId}`);
+          await sbRpc("decrement_likes", { pid: postId });
+        } else {
+          await sbInsert("likes", { post_id: postId });
+          await sbRpc("increment_likes", { pid: postId });
+        }
+      } catch (e) {
+        console.error("Like error:", e);
+        setPosts((prev) =>
+          prev.map((p) =>
+            p.id === postId
+              ? {
+                  ...p,
+                  user_has_liked: alreadyLiked,
+                  likes_count: p.likes_count + (alreadyLiked ? 1 : -1),
+                }
+              : p
+          )
+        );
       }
     },
     [posts]
   );
 
-  const handleComment = useCallback((_postId: string, _text: string) => {
+  const handleCommentAdded = useCallback((postId: string) => {
     setPosts((prev) =>
-      prev.map((p) =>
-        p.id === _postId ? { ...p, comments_count: p.comments_count + 1 } : p
-      )
+      prev.map((p) => (p.id === postId ? { ...p, comments_count: p.comments_count + 1 } : p))
     );
   }, []);
 
   const handlePublish = useCallback(async () => {
     if (!newPost.trim()) return;
     setPosting(true);
-    const { data } = await supabase
-      .from("community_posts")
-      .insert({
+    try {
+      const [data] = await sbInsert("community_posts", {
         author: "Daniel",
         content: newPost.trim(),
         tags: newTags,
-      })
-      .select()
-      .single();
-    if (data) setPosts((prev) [{ ...data, user_has_liked: false }, ...prev]);
-    setNewPost("");
-    setNewTags([]);
+      });
+      if (data) setPosts((prev) [{ ...data, user_has_liked: false }, ...prev]);
+      setNewPost("");
+      setNewTags([]);
+      if (textareaRef.current) textareaRef.current.style.height = "auto";
+    } catch (e) {
+      console.error("Publish error:", e);
+    }
     setPosting(false);
-    if (textareaRef.current) textareaRef.current.style.height = "auto";
   }, [newPost, newTags]);
 
   const toggleTag = useCallback((tag: string) => {
-    setNewTags((prev) =>
-      prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag]
-    );
+    setNewTags((prev) => (prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag]));
   }, []);
 
   const filtered = posts.filter((p) => {
@@ -313,6 +333,19 @@ function Comunidad() {
   return (
     <div className="space-y-8">
       <SectionHeader title="Comunidad" subtitle="Nadie ingresa solo" />
+
+      {error && (
+        <Surface className="border-l-4 border-l-destructive">
+          <p className="text-sm text-destructive">Error conectando con la base de datos: {error}</p>
+          <button
+            type="button"
+            onClick={fetchPosts}
+            className="press mt-2 text-sm font-semibold text-primary hover:underline"
+          >
+            Reintentar
+          </button>
+        </Surface>
+      )}
 
       <div className="grid gap-6 lg:grid-cols-[minmax(0,1.6fr)_minmax(0,1fr)]">
         <div className="space-y-4">
@@ -351,7 +384,7 @@ function Comunidad() {
                 ))}
               </div>
             )}
-            <div className="flex items-center justify-between pl-13">
+            <div className="flex items-center justify-between gap-2 pl-13">
               <div className="flex flex-wrap gap-1.5">
                 {ALL_TAGS.slice(0, 5).map((t) => (
                   <button
@@ -372,9 +405,9 @@ function Comunidad() {
                 type="button"
                 onClick={handlePublish}
                 disabled={!newPost.trim() || posting}
-                className="press min-h-10 rounded-[14px] bg-primary px-4 text-sm font-semibold text-primary-foreground disabled:opacity-40"
+                className="press min-h-10 shrink-0 rounded-[14px] bg-primary px-4 text-sm font-semibold text-primary-foreground disabled:opacity-40"
               >
-                {posting ? "Publicando..." : "Publicar"}
+                {posting ? "..." : "Publicar"}
               </button>
             </div>
           </Surface>
@@ -467,7 +500,7 @@ function Comunidad() {
                 key={post.id}
                 post={post}
                 onLike={handleLike}
-                onComment={handleComment}
+                onCommentAdded={handleCommentAdded}
               />
             ))}
           </ul>
