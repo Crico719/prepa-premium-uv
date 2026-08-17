@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useRef, useState } from "react";
 import {
   Flame,
   Heart,
@@ -10,8 +10,7 @@ import {
   X,
 } from "lucide-react";
 import { IconTile, Pill, ProgressBar, SectionHeader, Surface } from "@/components/kit";
-import { ranking } from "@/lib/data";
-import { sbInsert, sbSelect, sbRpc, sbDelete } from "@/lib/supabase";
+import { communityPosts as initialPosts, ranking } from "@/lib/data";
 
 export const Route = createFileRoute("/comunidad")({
   head: () => ({
@@ -37,81 +36,36 @@ type Post = {
   author: string;
   content: string;
   tags: string[];
-  likes_count: number;
-  comments_count: number;
-  created_at: string;
-  user_has_liked?: boolean;
-};
-
-type Comment = {
-  id: string;
-  post_id: string;
-  author: string;
-  content: string;
-  created_at: string;
+  likes: number;
+  comments: number;
+  liked: boolean;
+  commentList: { author: string; text: string }[];
 };
 
 const ALL_TAGS = [
   "Matemáticas", "Física", "Verbal", "Química", "Biología",
-  "Historia", "Simulacro UNI", "Simulacro San Marcos", "Apuntes", "Racha", "General",
+  "Historia", "Simulacro UNI", "San Marcos", "Apuntes", "Racha", "General",
 ];
 
-function timeAgo(dateStr: string): string {
-  const diff = Math.floor((Date.now() - new Date(dateStr).getTime()) / 1000);
-  if (diff < 60) return "ahora mismo";
-  if (diff < 3600) return `hace ${Math.floor(diff / 60)} min`;
-  if (diff < 86400) return `hace ${Math.floor(diff / 3600)} h`;
-  if (diff < 604800) return `hace ${Math.floor(diff / 86400)} días`;
-  return `hace ${Math.floor(diff / 604800)} sem`;
-}
+let nextId = 100;
 
 function PostCard({
   post,
   onLike,
-  onCommentAdded,
+  onComment,
 }: {
   post: Post;
   onLike: (id: string) => void;
-  onCommentAdded: (id: string) => void;
+  onComment: (id: string, text: string) => void;
 }) {
   const [showComments, setShowComments] = useState(false);
-  const [comments, setComments] = useState<Comment[]>([]);
   const [newComment, setNewComment] = useState("");
-  const [loadingComments, setLoadingComments] = useState(false);
 
-  const toggleComments = useCallback(async () => {
-    if (showComments) {
-      setShowComments(false);
-      return;
-    }
-    setShowComments(true);
-    setLoadingComments(true);
-    try {
-      const data = await sbSelect("comments", `post_id=eq.${post.id}&order=created_at.asc`);
-      setComments(data ?? []);
-    } catch {
-      setComments([]);
-    }
-    setLoadingComments(false);
-  }, [showComments, post.id]);
-
-  const submitComment = useCallback(async () => {
+  const submitComment = () => {
     if (!newComment.trim()) return;
-    const text = newComment.trim();
+    onComment(post.id, newComment.trim());
     setNewComment("");
-    try {
-      const [data] = await sbInsert("comments", {
-        post_id: post.id,
-        author: "Daniel",
-        content: text,
-      });
-      if (data) setComments((prev) => [...prev, data]);
-      await sbRpc("increment_comments", { pid: post.id });
-      onCommentAdded(post.id);
-    } catch (e) {
-      console.error("Comment error:", e);
-    }
-  }, [newComment, post.id, onCommentAdded]);
+  };
 
   return (
     <li>
@@ -122,7 +76,6 @@ function PostCard({
           </span>
           <div className="min-w-0">
             <p className="truncate text-sm font-semibold">{post.author}</p>
-            <p className="text-xs text-muted-foreground">{timeAgo(post.created_at)}</p>
           </div>
         </div>
 
@@ -131,9 +84,7 @@ function PostCard({
         {post.tags.length > 0 && (
           <div className="flex flex-wrap gap-2">
             {post.tags.map((t) => (
-              <Pill key={t} tone="primary">
-                {t}
-              </Pill>
+              <Pill key={t} tone="primary">{t}</Pill>
             ))}
           </div>
         )}
@@ -143,37 +94,34 @@ function PostCard({
             type="button"
             onClick={() => onLike(post.id)}
             className={`press flex min-h-11 items-center gap-1.5 transition-colors ${
-              post.user_has_liked ? "text-destructive" : "hover:text-destructive"
+              post.liked ? "text-destructive" : "hover:text-destructive"
             }`}
           >
-            <Heart className="size-4" fill={post.user_has_liked ? "currentColor" : "none"} />{" "}
-            {post.likes_count}
+            <Heart className="size-4" fill={post.liked ? "currentColor" : "none"} />{" "}
+            {post.likes}
           </button>
           <button
             type="button"
-            onClick={toggleComments}
+            onClick={() => setShowComments(!showComments)}
             className="press flex min-h-11 items-center gap-1.5 hover:text-primary"
           >
-            <MessageCircle className="size-4" /> {post.comments_count}
+            <MessageCircle className="size-4" /> {post.comments}
           </button>
         </div>
 
         {showComments && (
           <div className="space-y-3 border-t border-border pt-3">
-            {loadingComments && (
-              <p className="text-xs text-muted-foreground">Cargando comentarios...</p>
-            )}
-            {!loadingComments && comments.length === 0 && (
+            {post.commentList.length === 0 && (
               <p className="text-xs text-muted-foreground">Sé el primero en comentar</p>
             )}
-            {comments.map((c) => (
-              <div key={c.id} className="flex gap-2">
+            {post.commentList.map((c, i) => (
+              <div key={i} className="flex gap-2">
                 <span className="grid size-7 shrink-0 place-items-center rounded-full bg-muted text-[10px] font-bold text-muted-foreground">
                   {c.author.charAt(0)}
                 </span>
                 <div className="min-w-0">
                   <p className="text-xs font-semibold">{c.author}</p>
-                  <p className="text-xs text-muted-foreground">{c.content}</p>
+                  <p className="text-xs text-muted-foreground">{c.text}</p>
                 </div>
               </div>
             ))}
@@ -204,117 +152,64 @@ function PostCard({
 }
 
 function Comunidad() {
-  const [posts, setPosts] = useState<Post[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+  const [posts, setPosts] = useState<Post[]>(() =>
+    initialPosts.map((p, i) => ({
+      id: String(i),
+      author: p.author,
+      content: p.text,
+      tags: p.tags,
+      likes: p.likes,
+      comments: p.comments,
+      liked: false,
+      commentList: [],
+    }))
+  );
   const [search, setSearch] = useState("");
   const [activeTag, setActiveTag] = useState<string | null>(null);
   const [newPost, setNewPost] = useState("");
   const [newTags, setNewTags] = useState<string[]>([]);
-  const [posting, setPosting] = useState(false);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
 
-  const fetchPosts = useCallback(async () => {
-    try {
-      setLoading(true);
-      setError(null);
-
-      const postsData = await sbSelect("community_posts", "order=created_at.desc");
-
-      let likedPostIds = new Set<string>();
-      try {
-        const likesData = await sbSelect("likes");
-        likedPostIds = new Set(likesData?.map((l: { post_id: string }) => l.post_id) ?? []);
-      } catch {
-        // likes table might not exist yet
-      }
-
-      const enriched = (postsData ?? []).map((p: Post) => ({
-        ...p,
-        user_has_liked: likedPostIds.has(p.id),
-      }));
-
-      setPosts(enriched);
-    } catch (e) {
-      console.error("Fetch posts error:", e);
-      setError(String(e));
-    } finally {
-      setLoading(false);
-    }
-  }, []);
-
-  useEffect(() => {
-    fetchPosts();
-  }, [fetchPosts]);
-
-  const handleLike = useCallback(
-    async (postId: string) => {
-      const post = posts.find((p) => p.id === postId);
-      if (!post) return;
-
-      const alreadyLiked = post.user_has_liked;
-
-      setPosts((prev) =>
-        prev.map((p) =>
-          p.id === postId
-            ? {
-                ...p,
-                user_has_liked: !alreadyLiked,
-                likes_count: p.likes_count + (alreadyLiked ? -1 : 1),
-              }
-            : p
-        )
-      );
-
-      try {
-        if (alreadyLiked) {
-          await sbDelete("likes", `post_id=eq.${postId}`);
-          await sbRpc("decrement_likes", { pid: postId });
-        } else {
-          await sbInsert("likes", { post_id: postId });
-          await sbRpc("increment_likes", { pid: postId });
-        }
-      } catch (e) {
-        console.error("Like error:", e);
-        setPosts((prev) =>
-          prev.map((p) =>
-            p.id === postId
-              ? {
-                  ...p,
-                  user_has_liked: alreadyLiked,
-                  likes_count: p.likes_count + (alreadyLiked ? 1 : -1),
-                }
-              : p
-          )
-        );
-      }
-    },
-    [posts]
-  );
-
-  const handleCommentAdded = useCallback((postId: string) => {
+  const handleLike = useCallback((id: string) => {
     setPosts((prev) =>
-      prev.map((p) => (p.id === postId ? { ...p, comments_count: p.comments_count + 1 } : p))
+      prev.map((p) =>
+        p.id === id
+          ? { ...p, liked: !p.liked, likes: p.likes + (p.liked ? -1 : 1) }
+          : p
+      )
     );
   }, []);
 
-  const handlePublish = useCallback(async () => {
+  const handleComment = useCallback((id: string, text: string) => {
+    setPosts((prev) =>
+      prev.map((p) =>
+        p.id === id
+          ? {
+              ...p,
+              comments: p.comments + 1,
+              commentList: [...p.commentList, { author: "Daniel", text }],
+            }
+          : p
+      )
+    );
+  }, []);
+
+  const handlePublish = useCallback(() => {
     if (!newPost.trim()) return;
-    setPosting(true);
-    try {
-      const [data] = await sbInsert("community_posts", {
-        author: "Daniel",
-        content: newPost.trim(),
-        tags: newTags,
-      });
-      if (data) setPosts((prev) [{ ...data, user_has_liked: false }, ...prev]);
-      setNewPost("");
-      setNewTags([]);
-      if (textareaRef.current) textareaRef.current.style.height = "auto";
-    } catch (e) {
-      console.error("Publish error:", e);
-    }
-    setPosting(false);
+    const post: Post = {
+      id: String(nextId++),
+      author: "Daniel",
+      content: newPost.trim(),
+      tags: newTags,
+      likes: 0,
+      comments: 0,
+      liked: false,
+      commentList: [],
+    };
+    setPosts((prev) => [post, ...prev]);
+    setNewPost("");
+    setNewTags([]);
+    if (textareaRef.current) textareaRef.current.style.height = "auto";
   }, [newPost, newTags]);
 
   const toggleTag = useCallback((tag: string) => {
@@ -333,19 +228,6 @@ function Comunidad() {
   return (
     <div className="space-y-8">
       <SectionHeader title="Comunidad" subtitle="Nadie ingresa solo" />
-
-      {error && (
-        <Surface className="border-l-4 border-l-destructive">
-          <p className="text-sm text-destructive">Error conectando con la base de datos: {error}</p>
-          <button
-            type="button"
-            onClick={fetchPosts}
-            className="press mt-2 text-sm font-semibold text-primary hover:underline"
-          >
-            Reintentar
-          </button>
-        </Surface>
-      )}
 
       <div className="grid gap-6 lg:grid-cols-[minmax(0,1.6fr)_minmax(0,1fr)]">
         <div className="space-y-4">
@@ -373,11 +255,7 @@ function Comunidad() {
                 {newTags.map((t) => (
                   <Pill key={t} tone="primary">
                     {t}{" "}
-                    <button
-                      type="button"
-                      onClick={() => toggleTag(t)}
-                      className="ml-1 opacity-60 hover:opacity-100"
-                    >
+                    <button type="button" onClick={() => toggleTag(t)} className="ml-1 opacity-60 hover:opacity-100">
                       <X className="size-3" />
                     </button>
                   </Pill>
@@ -404,10 +282,10 @@ function Comunidad() {
               <button
                 type="button"
                 onClick={handlePublish}
-                disabled={!newPost.trim() || posting}
+                disabled={!newPost.trim()}
                 className="press min-h-10 shrink-0 rounded-[14px] bg-primary px-4 text-sm font-semibold text-primary-foreground disabled:opacity-40"
               >
-                {posting ? "..." : "Publicar"}
+                Publicar
               </button>
             </div>
           </Surface>
@@ -464,46 +342,24 @@ function Comunidad() {
           </div>
 
           {/* Lista de posts */}
-          {loading && (
-            <div className="space-y-4">
-              {[1, 2, 3].map((i) => (
-                <Surface key={i} className="animate-pulse space-y-3">
-                  <div className="flex items-center gap-3">
-                    <div className="size-10 rounded-full bg-muted" />
-                    <div className="space-y-1.5">
-                      <div className="h-3 w-24 rounded bg-muted" />
-                      <div className="h-2.5 w-16 rounded bg-muted" />
-                    </div>
-                  </div>
-                  <div className="space-y-1.5">
-                    <div className="h-3 w-full rounded bg-muted" />
-                    <div className="h-3 w-3/4 rounded bg-muted" />
-                  </div>
-                </Surface>
-              ))}
-            </div>
-          )}
-
-          {!loading && filtered.length === 0 && (
-            <Surface className="py-12 text-center">
-              <p className="text-sm text-muted-foreground">
-                {posts.length === 0
-                  ? "Aún no hay publicaciones. ¡Sé el primero!"
-                  : "No se encontraron publicaciones con esos filtros."}
-              </p>
-            </Surface>
-          )}
-
           <ul className="space-y-4">
             {filtered.map((post) => (
               <PostCard
                 key={post.id}
                 post={post}
                 onLike={handleLike}
-                onCommentAdded={handleCommentAdded}
+                onComment={handleComment}
               />
             ))}
           </ul>
+
+          {filtered.length === 0 && (
+            <Surface className="py-12 text-center">
+              <p className="text-sm text-muted-foreground">
+                No se encontraron publicaciones con esos filtros.
+              </p>
+            </Surface>
+          )}
         </div>
 
         <aside className="space-y-6">
