@@ -136,7 +136,7 @@ serve(async (req: Request): Promise<Response> => {
     }
 
     const isVision = !!imageData;
-    const model = isVision ? "meta-llama/llama-4-scout-17b-16e-instruct" : "openai/gpt-oss-20b";
+    const model = isVision ? "qwen/qwen3.6-27b" : "openai/gpt-oss-20b";
 
     const groqResponse = await fetch("https://api.groq.com/openai/v1/chat/completions", {
       method: "POST",
