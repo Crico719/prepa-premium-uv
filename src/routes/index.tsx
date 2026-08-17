@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import {
   ArrowRight,
   BookOpen,
@@ -24,8 +24,11 @@ import {
   StatCard,
   Surface,
 } from "@/components/kit";
+import { AvatarSelector } from "@/components/kit/AvatarSelector";
 import { courses, student, upcoming, weeklyStudy, universities } from "@/lib/data";
 import { checkIn, getLast7Days } from "@/lib/streak";
+import { getAvatarById, type AvatarId } from "@/lib/avatars";
+import { getSelectedAvatar, setSelectedAvatar } from "@/lib/avatar-store";
 
 const dailyTips = [
   "No estudies más de 2 horas seguidas. Tu cerebro necesita descansar para consolidar la memoria.",
@@ -70,12 +73,22 @@ export const Route = createFileRoute("/")({
 function Home() {
   const [streakCount, setStreakCount] = useState(0);
   const [streakDays, setStreakDays] = useState<{ day: string; active: boolean }[]>([]);
+  const [currentAvatar, setCurrentAvatar] = useState<AvatarId>(getSelectedAvatar);
+  const [showAvatarSelector, setShowAvatarSelector] = useState(false);
 
   useEffect(() => {
     const streak = checkIn();
     setStreakCount(streak.count);
     setStreakDays(getLast7Days());
   }, []);
+
+  const handleAvatarChange = useCallback((id: AvatarId) => {
+    setCurrentAvatar(id);
+    setSelectedAvatar(id);
+    setShowAvatarSelector(false);
+  }, []);
+
+  const avatar = getAvatarById(currentAvatar);
 
   const recent = courses.slice(0, 3);
   const weakCourses = courses
@@ -104,7 +117,15 @@ function Home() {
 
   return (
     <div className="space-y-8">
-      <header className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 sm:flex sm:justify-between">
+      <header className="grid grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-4">
+        <button
+          type="button"
+          onClick={() => setShowAvatarSelector(!showAvatarSelector)}
+          className="relative size-14 shrink-0 rounded-full transition-transform hover:scale-110"
+          title="Cambiar avatar"
+        >
+          {avatar.svg}
+        </button>
         <div className="min-w-0">
           <h1 className="truncate text-2xl font-bold tracking-tight sm:text-3xl">
             ¡Hola, {student.name}! 👋
@@ -117,6 +138,25 @@ function Home() {
           <Flame className="mr-1 size-4" /> {streakCount} días de racha
         </Pill>
       </header>
+
+      {showAvatarSelector && (
+        <Surface>
+          <SectionHeader
+            title="Elige tu avatar"
+            subtitle="Selecciona un personaje"
+            action={
+              <button
+                type="button"
+                onClick={() => setShowAvatarSelector(false)}
+                className="text-sm font-semibold text-muted-foreground hover:text-foreground"
+              >
+                Cerrar
+              </button>
+            }
+          />
+          <AvatarSelector onSelect={handleAvatarChange} />
+        </Surface>
+      )}
 
       {/* Streak calendar */}
       {streakDays.length > 0 && (
