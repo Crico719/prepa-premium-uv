@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { useEffect, useState } from "react";
 import {
   ArrowRight,
   BookOpen,
@@ -24,6 +25,7 @@ import {
   Surface,
 } from "@/components/kit";
 import { courses, student, upcoming, weeklyStudy, universities } from "@/lib/data";
+import { checkIn, getLast7Days } from "@/lib/streak";
 
 const dailyTips = [
   "No estudies más de 2 horas seguidas. Tu cerebro necesita descansar para consolidar la memoria.",
@@ -66,6 +68,15 @@ export const Route = createFileRoute("/")({
 });
 
 function Home() {
+  const [streakCount, setStreakCount] = useState(0);
+  const [streakDays, setStreakDays] = useState<{ day: string; active: boolean }[]>([]);
+
+  useEffect(() => {
+    const streak = checkIn();
+    setStreakCount(streak.count);
+    setStreakDays(getLast7Days());
+  }, []);
+
   const recent = courses.slice(0, 3);
   const weakCourses = courses
     .filter((c) => c.progress < 50)
@@ -103,9 +114,38 @@ function Home() {
           </p>
         </div>
         <Pill tone="warning">
-          <Flame className="mr-1 size-4" /> {student.streak} días de racha
+          <Flame className="mr-1 size-4" /> {streakCount} días de racha
         </Pill>
       </header>
+
+      {/* Streak calendar */}
+      {streakDays.length > 0 && (
+        <Surface className="p-4">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <Flame className="size-5 text-warning" />
+              <span className="text-sm font-semibold">Tu racha: {streakCount} días</span>
+            </div>
+            <span className="text-xs text-muted-foreground">Últimos 7 días</span>
+          </div>
+          <div className="mt-3 flex gap-2">
+            {streakDays.map((d, i) => (
+              <div key={i} className="flex flex-1 flex-col items-center gap-1">
+                <div
+                  className={`size-8 rounded-full flex items-center justify-center text-xs font-bold transition-colors ${
+                    d.active
+                      ? "bg-warning text-warning-foreground"
+                      : "bg-muted text-muted-foreground"
+                  }`}
+                >
+                  {d.active ? "🔥" : "·"}
+                </div>
+                <span className="text-[10px] text-muted-foreground">{d.day}</span>
+              </div>
+            ))}
+          </div>
+        </Surface>
+      )}
 
       <Surface className="overflow-hidden border-none bg-primary p-0 text-primary-foreground">
         <div className="grid gap-6 p-6 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-center sm:p-8">
