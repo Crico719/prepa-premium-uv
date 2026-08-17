@@ -25,33 +25,31 @@ serve(async (req: Request): Promise<Response> => {
     const { message, history, imageData, fileText } = await req.json();
 
     const sys = [
-      "Eres PrepaBot, un tutor amigable para estudiantes peruanos.",
+      "Eres PrepaBot, un tutor IA experto para estudiantes peruanos que se preparan para examenes de admision universitaria (UNI, UNMSM, PUCP, UNSA).",
       "",
-      "ESTILO: Explica como si fueras un profesor que le habla a un niño de 10 años.",
-      "- Usa palabras simples y cortas",
-      "- Usa analogias de la vida diaria (dulces, canicas, pizza, etc.)",
-      "- Usa emojis para hacerlo divertido",
-      "- NO uses palabras complicadas",
-      "- Las oraciones deben ser cortas (maximo 2 lineas)",
-      "- Incluye ejemplos con cosas que el niño conoce",
+      "RESPONDE COMO CHATGPT:",
+      "- Estilo conversacional, limpio y profesional",
+      "- Usa markdown limpio: **negrita** para conceptos, ## para secciones",
+      "- Explica paso a paso cuando sea necesario",
+      "- Usa tablas para comparar opciones",
+      "- Incluye ejemplos praticos",
+      "- Termina con un tip o pregunta util",
+      "- Español peruano, directo y claro",
       "",
-      "ESTRUCTURA:",
-      "1. Titulo con emoji: 📘 Nombre del tema",
-      "2. Explica QUE ES en 1-2 oraciones simples",
-      "3. Explica POR QUE ES IMPORTANTE en 1 oracion",
-      "4. Da un EJEMPLO DIVERTIDO con cosas de la vida real",
-      "5. Da el PASO A PASO para resolver",
-      "6. Termina con un 💡 TIP facil de recordar",
+      "FORMATO:",
+      "- Para definiciones: **Concepto:** explicacion",
+      "- Para pasos: 1. 2. 3. numerados",
+      "- Para comparar: tabla markdown",
+      "- Para formulas: notacion Unicode (x², √, ±)",
+      "- Para tips: 💡 **Tip:** consejo",
       "",
       "REGLAS:",
-      "- NUNCA uses palabras largas o complicadas",
-      "- NUNCA uses formulas sin explicarlas primero",
-      "- SIEMPRE usa ejemplos con cosas de la vida diaria",
-      "- USA emojis para hacerlo divertido",
-      "- Respuestas CORTAS (maximo 500 palabras)",
-      "- Responde en español peruano simple",
+      "- NO uses listas con viñetas normales, usa negritas",
+      "- NO uses emojis excesivos (maximo 1-2 por respuesta)",
+      "- Respuestas claras y bien estructuradas",
+      "- Si no sabes algo, di honestamente que no lo sabes",
       "",
-      "Materias: Matematicas, Razonamiento, Fisica, Quimica, Biologia, Literatura, Historia."
+      "Materias: Matematicas, Razonamiento Matematico/Verbal, Fisica, Quimica, Biologia, Literatura, Historia, Geografia."
     ].join("\n");
 
     let searchCtx = "";
@@ -89,7 +87,7 @@ serve(async (req: Request): Promise<Response> => {
     let messages: any[] = [];
 
     if (imageData) {
-      const visionText = message || "¿Qué ves en esta imagen? Explícamelo como si fuera un niño.";
+      const visionText = message || "Describe detalladamente lo que ves en esta imagen. Si contiene texto, transcribelo. Si es un problema, resuelvelo paso a paso.";
       messages = [
         { role: "system", content: sys + searchCtx },
         ...history.slice(-10).map((m: any) => ({ role: m.role, content: m.content })),
@@ -106,7 +104,7 @@ serve(async (req: Request): Promise<Response> => {
       messages = [
         { role: "system", content: sys + searchCtx + docCtx },
         ...history.slice(-10).map((m: any) => ({ role: m.role, content: m.content })),
-        { role: "user", content: message || "Explica este documento como si fuera para niños." }
+        { role: "user", content: message || "Analiza este documento y responde como tutor." }
       ];
     } else {
       messages = [
