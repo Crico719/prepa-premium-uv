@@ -361,6 +361,9 @@ export function Chat() {
         <p className="mt-2 text-center text-xs text-muted-foreground">
           Presiona Enter para enviar · Shift+Enter para nueva línea
         </p>
+        <p className="text-center text-[10px] text-muted-foreground/50">
+          Límite: 10 mensajes por minuto · Tier gratis
+        </p>
       </form>
     </div>
   );
