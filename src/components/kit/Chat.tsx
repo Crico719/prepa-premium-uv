@@ -207,7 +207,7 @@ export function Chat() {
       if (pendingFile.type === "image") {
         imageData = pendingFile.preview;
         imagePreview = pendingFile.preview;
-        if (!displayContent) displayContent = "Que puedes ver en esta imagen?";
+        if (!displayContent) displayContent = "Resuelve este ejercicio paso a paso. Explica cada paso con detalle.";
       } else if (pendingFile.type === "pdf") {
         try {
           fileText = await extractPdfText(pendingFile.file);

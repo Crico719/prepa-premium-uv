@@ -89,7 +89,7 @@ Materias: Matematicas, Razonamiento Matematico/Verbal, Fisica, Quimica, Biologia
         {
           role: "user",
           content: [
-            { type: "text", text: message || "Describe detalladamente lo que ves en esta imagen. Si contiene texto, transcribelo. Si es un problema de matematicas, resuelvelo paso a paso." },
+            { type: "text", text: message || "Resuelve este ejercicio paso a paso. Identifica el problema, muestra cada paso de la solucion y la respuesta final. Si contiene texto, transcribelo primero." },
             { type: "image_url", image_url: { url: imageData } },
           ],
         },
