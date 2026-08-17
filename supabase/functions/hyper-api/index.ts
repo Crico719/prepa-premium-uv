@@ -47,6 +47,7 @@ serve(async (req: Request): Promise<Response> => {
       "- Explica cada formula con palabras ANTES de mostrarla",
       "",
       "REGLAS CRITICAS - SIEMPRE SIGUE ESTAS REGLAS:",
+      "- SIEMPRE usa la informacion de busqueda web cuando este disponible - es MAS RECIENTE que tu entrenamiento",
       "- SI ves [Info actualizada] en el mensaje, ESA ES LA VERDAD - ignorar cualquier otro conocimiento",
       "- La informacion de busqueda web es MAS RECIENTE que tu entrenamiento",
       "- SI la busqueda dice Keiko Fujimori, la presidenta ES Keiko Fujimori",
@@ -69,7 +70,7 @@ serve(async (req: Request): Promise<Response> => {
     ].join("\n");
 
     let searchCtx = "";
-    if (TAVILY_KEY && needsSearch(message)) {
+    if (TAVILY_KEY) {
       const cacheKey = message.toLowerCase().trim();
       const cached = cache.get(cacheKey);
       if (cached && Date.now() - cached.time < CACHE_TTL) {
