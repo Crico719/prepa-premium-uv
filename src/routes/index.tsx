@@ -172,6 +172,24 @@ function Home() {
         </section>
 
         <aside className="space-y-6">
+          <Surface className="overflow-hidden border-none bg-gradient-to-br from-primary/10 via-primary/5 to-transparent p-0">
+            <div className="p-5">
+              <div className="mb-3 flex items-center gap-3">
+                <div className="grid size-10 place-items-center rounded-full bg-primary/15">
+                  <Bot className="size-5 text-primary" />
+                </div>
+                <div>
+                  <p className="text-sm font-semibold">PrepaBot</p>
+                  <p className="text-xs text-muted-foreground">Tu tutor IA</p>
+                </div>
+              </div>
+              <p className="text-sm text-muted-foreground">¿Tienes dudas? Pregúntale a PrepaBot sobre cualquier materia.</p>
+              <Link to="/asistente" className="press mt-4 inline-flex min-h-10 items-center gap-2 rounded-[14px] bg-primary px-4 text-sm font-semibold text-primary-foreground">
+                Hablar con PrepaBot <ArrowRight className="size-4" />
+              </Link>
+            </div>
+          </Surface>
+
           <Surface className="flex flex-col items-center gap-4 text-center">
             <ProgressRing value={student.overall} caption="general" />
             <p className="text-sm text-muted-foreground">
