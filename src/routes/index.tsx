@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowRight,
   BookOpen,
+  Bot,
   CalendarDays,
   Flame,
   Medal,
