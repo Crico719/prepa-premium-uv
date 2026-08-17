@@ -1,7 +1,7 @@
 import { serve } from "https://deno.land/std@0.177.0/http/server.ts";
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"
 };
 
 const SEARCH_KEYWORDS = ["quién es", "presidente", "actual", "noticias", "último", "reciente", "2025", "2026", "2027", "hoy", "ayer", "semana", "mes", "elecciones", "gobierno", "ministro", "precio", "dólar", "clima", "terremoto", "copa", "fútbol", "liga"];
@@ -14,7 +14,7 @@ function needsSearch(query: string): boolean {
 const cache = new Map<string, { answer: string; time: number }>();
 const CACHE_TTL = 10 * 60 * 1000;
 
-serve(async (req) => {
+serve(async (req: Request): Promise<Response> => {
   if (req.method === "OPTIONS") {
     return new Response("ok", { headers: corsHeaders });
   }
@@ -24,53 +24,35 @@ serve(async (req) => {
     const TAVILY_KEY = Deno.env.get("TAVILY_API_KEY");
     const { message, history, imageData, fileText } = await req.json();
 
-    const sys = `Eres PrepaBot, un tutor amigable para estudiantes peruanos.
-
-ESTILO: Explica como si fueras un profesor que le habla a un niño de 10 años.
-- Usa palabras simples y cortas
-- Usa analogias de la vida diaria (dulces, canicas, pizza, etc.)
-- Usa emojis para hacerlo divertido 😊
-- NO uses palabras complicadas
-- Las oraciones deben ser cortas (maximo 2 lineas)
-- Incluye ejemplos con cosas que el niño conoce
-
-ESTRUCTURA:
-1. Titulo con emoji: 📘 Nombre del tema
-2. Explica QUE ES en 1-2 oraciones simples
-3. Explica POR QUE ES IMPORTANTE en 1 oracion
-4. Da un EJEMPLO DIVERTIDO con cosas de la vida real
-5. Da el PASO A PASO para resolver
-6. Termina con un 💡 TIP facil de recordar
-
-EJEMPLO DE COMO DEBE RESPONDER:
-📘 Ecuaciones Cuadráticas
-
-**¿Qué es?**
-Es como una balances que tiene dos lados. Queremos que los dos lados sean iguales.
-
-**¿Para qué sirve?**
-Sirve para encontrar números secretos que hacen que todo cuadre.
-
-**Ejemplo divertido:** 🍕
-Imagina que tienes una pizza y quieres cortarla en partes iguales. La ecuación te dice cuántos trozos necesitas.
-
-**Paso a paso:**
-1. **Identifica** los números de la ecuación
-2. **Usa la fórmula** como una receta de cocina
-3. **Sustituye** los números
-4. **Resuelve** paso a paso
-
-💡 **TIP:** Piensa en la ecuación como una receta: primero juntas los ingredientes, luego los mezclas.
-
-REGLAS:
-- NUNCA uses palabras largas o complicadas
-- NUNCA uses fórmulas sin explicarlas primero
-- SIEMPRE usa ejemplos con cosas de la vida diaria
-- USA emojis para hacerlo divertido
-- Respuestas CORTAS (maximo 500 palabras)
-- Responde en español peruano simple
-
-Materias: Matematicas, Razonamiento, Fisica, Quimica, Biologia, Literatura, Historia.`;
+    const sys = [
+      "Eres PrepaBot, un tutor amigable para estudiantes peruanos.",
+      "",
+      "ESTILO: Explica como si fueras un profesor que le habla a un niño de 10 años.",
+      "- Usa palabras simples y cortas",
+      "- Usa analogias de la vida diaria (dulces, canicas, pizza, etc.)",
+      "- Usa emojis para hacerlo divertido",
+      "- NO uses palabras complicadas",
+      "- Las oraciones deben ser cortas (maximo 2 lineas)",
+      "- Incluye ejemplos con cosas que el niño conoce",
+      "",
+      "ESTRUCTURA:",
+      "1. Titulo con emoji: 📘 Nombre del tema",
+      "2. Explica QUE ES en 1-2 oraciones simples",
+      "3. Explica POR QUE ES IMPORTANTE en 1 oracion",
+      "4. Da un EJEMPLO DIVERTIDO con cosas de la vida real",
+      "5. Da el PASO A PASO para resolver",
+      "6. Termina con un 💡 TIP facil de recordar",
+      "",
+      "REGLAS:",
+      "- NUNCA uses palabras largas o complicadas",
+      "- NUNCA uses formulas sin explicarlas primero",
+      "- SIEMPRE usa ejemplos con cosas de la vida diaria",
+      "- USA emojis para hacerlo divertido",
+      "- Respuestas CORTAS (maximo 500 palabras)",
+      "- Responde en español peruano simple",
+      "",
+      "Materias: Matematicas, Razonamiento, Fisica, Quimica, Biologia, Literatura, Historia."
+    ].join("\n");
 
     let searchCtx = "";
     if (TAVILY_KEY && needsSearch(message)) {
@@ -88,8 +70,8 @@ Materias: Matematicas, Razonamiento, Fisica, Quimica, Biologia, Literatura, Hist
               query: message,
               search_depth: "basic",
               max_results: 3,
-              include_answer: true,
-            }),
+              include_answer: true
+            })
           });
           if (sr.ok) {
             const sd = await sr.json();
@@ -98,72 +80,75 @@ Materias: Matematicas, Razonamiento, Fisica, Quimica, Biologia, Literatura, Hist
               cache.set(cacheKey, { answer: sd.answer, time: Date.now() });
             }
           }
-        } catch (_) {}
+        } catch (_e) {
+          // ignore search errors
+        }
       }
     }
 
-    let messages: any[];
+    let messages: any[] = [];
 
     if (imageData) {
+      const visionText = message || "¿Qué ves en esta imagen? Explícamelo como si fuera un niño.";
       messages = [
         { role: "system", content: sys + searchCtx },
         ...history.slice(-10).map((m: any) => ({ role: m.role, content: m.content })),
         {
           role: "user",
           content: [
-            { type: "text", text: message || "¿Qué ves en esta imagen? Explícamelo como si fuera un niño." },
-            { type: "image_url", image_url: { url: imageData } },
-          ],
-        },
+            { type: "text", text: visionText },
+            { type: "image_url", image_url: { url: imageData } }
+          ]
+        }
       ];
     } else if (fileText) {
       const docCtx = "\n[Contenido del documento]:\n" + fileText;
       messages = [
         { role: "system", content: sys + searchCtx + docCtx },
         ...history.slice(-10).map((m: any) => ({ role: m.role, content: m.content })),
-        { role: "user", content: message || "Explica este documento como si fuera para niños." },
+        { role: "user", content: message || "Explica este documento como si fuera para niños." }
       ];
     } else {
       messages = [
         { role: "system", content: sys + searchCtx },
         ...history.slice(-10).map((m: any) => ({ role: m.role, content: m.content })),
-        { role: "user", content: message },
+        { role: "user", content: message }
       ];
     }
 
     const isVision = !!imageData;
     const model = isVision ? "meta-llama/llama-4-scout-17b-16e-instruct" : "openai/gpt-oss-20b";
 
-    const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
+    const groqResponse = await fetch("https://api.groq.com/openai/v1/chat/completions", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${GROQ_KEY}`,
+        "Authorization": "Bearer " + GROQ_KEY
       },
       body: JSON.stringify({
-        model,
-        messages,
+        model: model,
+        messages: messages,
         temperature: 0.7,
-        max_tokens: 1024,
-      }),
+        max_tokens: 1024
+      })
     });
 
-    if (!response.ok) {
-      const e = await response.json().catch(() => ({}));
-      throw new Error(e?.error?.message || "Error");
+    if (!groqResponse.ok) {
+      const e = await groqResponse.json().catch(() => ({}));
+      throw new Error((e && e.error && e.error.message) || "Error");
     }
 
-    const data = await response.json();
-    const text = data?.choices?.[0]?.message?.content;
+    const data = await groqResponse.json();
+    const text = data && data.choices && data.choices[0] && data.choices[0].message && data.choices[0].message.content;
     if (!text) throw new Error("Sin respuesta");
 
-    return new Response(JSON.stringify({ text }), {
-      headers: { ...corsHeaders, "Content-Type": "application/json" },
+    return new Response(JSON.stringify({ text: text }), {
+      headers: { ...corsHeaders, "Content-Type": "application/json" }
     });
-  } catch (err) {
+  } catch (err: any) {
     return new Response(JSON.stringify({ error: err.message }), {
       status: 500,
-      headers: { ...corsHeaders, "Content-Type": "application/json" },
+      headers: { ...corsHeaders, "Content-Type": "application/json" }
     });
   }
 });
