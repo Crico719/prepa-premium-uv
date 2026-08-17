@@ -36,24 +36,55 @@ function setVoiceEnabled(enabled: boolean) {
   localStorage.setItem("machat_voice_enabled", String(enabled));
 }
 
-async function callChatAPI(userMessage: string, history: Message[]): Promise<string> {
-  const response = await fetch(`${SUPABASE_URL}/functions/v1/hyper-api`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      "Authorization": `Bearer ${SUPABASE_KEY}`,
-      "apikey": SUPABASE_KEY,
-    },
-    body: JSON.stringify({
-      message: userMessage,
-      history: history.map((m) => ({ role: m.role, content: m.content })),
-    }),
-  });
+const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
-  const data = await response.json();
-  if (!response.ok) throw new Error(data.error || "Error al conectar con el servidor");
-  return data.text;
+function isTransient(status: number, msg: string) {
+  return (
+    status === 429 ||
+    status === 503 ||
+    status >= 500 ||
+    /high demand|overload|rate limit|try again/i.test(msg)
+  );
 }
+
+async function callChatAPI(userMessage: string, history: Message[]): Promise<string> {
+  const maxAttempts = 3;
+  let lastError = "El servicio de IA está saturado. Intenta de nuevo en unos segundos.";
+
+  for (let attempt = 0; attempt < maxAttempts; attempt++) {
+    try {
+      const response = await fetch(`${SUPABASE_URL}/functions/v1/hyper-api`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": `Bearer ${SUPABASE_KEY}`,
+          "apikey": SUPABASE_KEY,
+        },
+        body: JSON.stringify({
+          message: userMessage,
+          history: history.map((m) => ({ role: m.role, content: m.content })),
+        }),
+      });
+
+      const data = await response.json().catch(() => ({}) as { text?: string; error?: string });
+
+      if (response.ok && data.text) return data.text;
+
+      const msg = data.error || `Error ${response.status}`;
+      if (!isTransient(response.status, msg)) throw new Error(msg);
+      lastError = msg;
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : "Error desconocido";
+      if (!isTransient(0, msg)) throw err;
+      lastError = msg;
+    }
+
+    if (attempt < maxAttempts - 1) await sleep(1200 * 2 ** attempt);
+  }
+
+  throw new Error(lastError);
+}
+
 
 async function callSpeakAPI(text: string): Promise<ArrayBuffer> {
   const response = await fetch(`${SUPABASE_URL}/functions/v1/speak-ts`, {
