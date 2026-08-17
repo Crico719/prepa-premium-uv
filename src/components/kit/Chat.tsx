@@ -1,9 +1,6 @@
 import { useState, useRef, useEffect } from "react";
-import { Send, Bot, User, Sparkles, BookOpen, Brain, Calculator, Volume2, VolumeX, Paperclip, X, FileText, Image } from "lucide-react";
+import { Send, Bot, User, Sparkles, BookOpen, Brain, Calculator, Volume2, VolumeX, Paperclip, X, FileText } from "lucide-react";
 import { cn } from "@/lib/utils";
-import * as pdfjsLib from "pdfjs-dist";
-
-pdfjsLib.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjsLib.version}/build/pdf.worker.min.mjs`;
 
 const SUPABASE_URL = "https://jvyrgsxbzlzokotyzepw.supabase.co";
 const SUPABASE_KEY = "sb_publishable_i80Lpj4bEIGTUX1_j5vlGQ_4cTESJ2D";
@@ -99,6 +96,8 @@ function fileToBase64(file: File): Promise<string> {
 }
 
 async function extractPdfText(file: File): Promise<string> {
+  const pdfjsLib = await import("pdfjs-dist");
+  pdfjsLib.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjsLib.version}/build/pdf.worker.min.mjs`;
   const arrayBuffer = await file.arrayBuffer();
   const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
   const pages: string[] = [];
@@ -210,7 +209,11 @@ export function Chat() {
         imagePreview = pendingFile.preview;
         if (!displayContent) displayContent = "Que puedes ver en esta imagen?";
       } else if (pendingFile.type === "pdf") {
-        fileText = await extractPdfText(pendingFile.file);
+        try {
+          fileText = await extractPdfText(pendingFile.file);
+        } catch {
+          fileText = "[No se pudo extraer el texto del PDF]";
+        }
         if (!displayContent) displayContent = "Analiza este documento PDF";
       }
       setPendingFile(null);

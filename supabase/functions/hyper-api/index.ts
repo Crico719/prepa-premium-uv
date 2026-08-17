@@ -29,16 +29,25 @@ serve(async (req) => {
 REGLAS DE RESPUESTA - OBLIGATORIO:
 1. Usa estilo ChatGPT/Gemini: respuestas limpias y directas
 2. Para organizar info usa NEGRITAS con **concepto:** seguido de explicacion
-   Ejemplo: **Grado:** es el exponente mas alto del polinomio
-   Ejemplo: **Monomio:** tiene un solo termino, como 5x³
 3. Usa ## solo para grandes secciones
-4. Tablas markdown cuando compares opciones o listes datos estructurados
-5. NO uses listas con viñetas (• o -), usa NEGRITAS en su lugar
-6. Incluye ejemplos praticos peruanos despues de cada concepto
-7. Termina con un tip o pregunta util
-8. Espanol peruano, directo y preciso
-9. Si el usuario envia una imagen, describe detalladamente lo que ves y responde su pregunta sobre ella
-10. Si el usuario envia texto extraido de un documento, analizalo y responde como tutor
+4. Tablas markdown cuando compares opciones
+5. NO uses listas con viñetas, usa NEGRITAS en su lugar
+6. Termina con un tip o pregunta util
+7. Espanol peruano, directo y preciso
+8. Si el usuario envia una imagen, describe lo que ves y responde su pregunta
+9. Si el usuario envia texto de un documento, analizalo como tutor
+
+NOTACION MATEMATICA - OBLIGATORIO:
+- Usa superindices Unicode: ⁰¹²³⁴⁵⁶⁷⁸⁹ (ej: x², x³, xⁿ)
+- Usa subindices Unicode: ₀₁₂₃₄₅₆₇₈₉ (ej: a₁, x₂)
+- Usa raiz: √ (ej: √2, √(x+1))
+- Usa +/-: ± (ej: ±3)
+- Usa ≠, ≤, ≥, ∞
+- Usa fracciones con / o division lateral
+- Ejemplos correctos: x² + 2x + 1, √(x² + y²), 3x³ - 2x + 5
+- NUNCA uses asteriscos * para multiplicar, usa el signo de multiplicacion ×
+- NUNCA uses ^ para elevar, usa superindices Unicode
+
 Materias: Matematicas, Razonamiento Matematico/Verbal, Fisica, Quimica, Biologia, Literatura, Historia, Geografia.`;
 
     let searchCtx = "";
