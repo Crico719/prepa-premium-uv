@@ -4449,25 +4449,25 @@ const historiaModulesPart1: CourseModule[] = [
       }
     ],
     illustrations: [
-      '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">',
-      '  <rect width="300" height="200" fill="#f8fafc" rx="12"/>',
-      '  <text x="150" y="22" text-anchor="middle" fill="#2563eb" font-size="12" font-weight="bold" font-family="sans-serif">Civilizaciones Preincaicas</text>',
-      '  <rect x="20" y="40" width="80" height="30" fill="#dbeafe" rx="6"/>',
-      '  <text x="60" y="60" text-anchor="middle" fill="#1e40af" font-size="9" font-family="sans-serif">Chav\u00edn</text>',
-      '  <rect x="110" y="40" width="80" height="30" fill="#dbeafe" rx="6"/>',
-      '  <text x="150" y="60" text-anchor="middle" fill="#1e40af" font-size="9" font-family="sans-serif">Paracas</text>',
-      '  <rect x="200" y="40" width="80" height="30" fill="#dbeafe" rx="6"/>',
-      '  <text x="240" y="60" text-anchor="middle" fill="#1e40af" font-size="9" font-family="sans-serif">Nazca</text>',
-      '  <rect x="20" y="80" width="80" height="30" fill="#fef3c7" rx="6"/>',
-      '  <text x="60" y="100" text-anchor="middle" fill="#92400e" font-size="9" font-family="sans-serif">Moche</text>',
-      '  <rect x="110" y="80" width="80" height="30" fill="#fef3c7" rx="6"/>',
-      '  <text x="150" y="100" text-anchor="middle" fill="#92400e" font-size="9" font-family="sans-serif">Wari</text>',
-      '  <rect x="200" y="80" width="80" height="30" fill="#fef3c7" rx="6"/>',
-      '  <text x="240" y="100" text-anchor="middle" fill="#92400e" font-size="9" font-family="sans-serif">Chim\u00fa</text>',
-      '  <text x="150" y="140" text-anchor="middle" fill="#475569" font-size="9" font-family="sans-serif">Per\u00edodo: 1200 a.C. - 1470 d.C.</text>',
-      '  <text x="150" y="160" text-anchor="middle" fill="#475569" font-size="9" font-family="sans-serif">Ubicaci\u00f3n: Costa y Sierra del Per\u00fa</text>',
-      '  <text x="150" y="185" text-anchor="middle" fill="#64748b" font-size="8" font-family="sans-serif">Todas fueron integradas al Tahuantinsuyo</text>',
-      '</svg>'
+      `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="200" fill="#f8fafc" rx="12"/>
+  <text x="150" y="22" text-anchor="middle" fill="#2563eb" font-size="12" font-weight="bold" font-family="sans-serif">Civilizaciones Preincaicas</text>
+  <rect x="20" y="40" width="80" height="30" fill="#dbeafe" rx="6"/>
+  <text x="60" y="60" text-anchor="middle" fill="#1e40af" font-size="9" font-family="sans-serif">Chav\u00edn</text>
+  <rect x="110" y="40" width="80" height="30" fill="#dbeafe" rx="6"/>
+  <text x="150" y="60" text-anchor="middle" fill="#1e40af" font-size="9" font-family="sans-serif">Paracas</text>
+  <rect x="200" y="40" width="80" height="30" fill="#dbeafe" rx="6"/>
+  <text x="240" y="60" text-anchor="middle" fill="#1e40af" font-size="9" font-family="sans-serif">Nazca</text>
+  <rect x="20" y="80" width="80" height="30" fill="#fef3c7" rx="6"/>
+  <text x="60" y="100" text-anchor="middle" fill="#92400e" font-size="9" font-family="sans-serif">Moche</text>
+  <rect x="110" y="80" width="80" height="30" fill="#fef3c7" rx="6"/>
+  <text x="150" y="100" text-anchor="middle" fill="#92400e" font-size="9" font-family="sans-serif">Wari</text>
+  <rect x="200" y="80" width="80" height="30" fill="#fef3c7" rx="6"/>
+  <text x="240" y="100" text-anchor="middle" fill="#92400e" font-size="9" font-family="sans-serif">Chim\u00fa</text>
+  <text x="150" y="140" text-anchor="middle" fill="#475569" font-size="9" font-family="sans-serif">Per\u00edodo: 1200 a.C. - 1470 d.C.</text>
+  <text x="150" y="160" text-anchor="middle" fill="#475569" font-size="9" font-family="sans-serif">Ubicaci\u00f3n: Costa y Sierra del Per\u00fa</text>
+  <text x="150" y="185" text-anchor="middle" fill="#64748b" font-size="8" font-family="sans-serif">Todas fueron integradas al Tahuantinsuyo</text>
+</svg>`
     ],
     exercises: [
       { id: 3001, question: "\u00bfQu\u00e9 civilizaci\u00f3n preincaica construy\u00f3 las famosas L\u00edneas de Nazca en la costa sur del Per\u00fa?", options: ["Chav\u00edn", "Moche", "Nazca", "Chim\u00fa"], correctIndex: 2, explanation: "Las L\u00edneas de Nazca fueron construidas por la cultura Nazca (100 a.C.-800 d.C.) en la meseta de Nazca, Ica. Representan animales, plantas y figuras geom\u00e9tricas.", difficulty: "basico" },
@@ -4517,20 +4517,20 @@ const historiaModulesPart1: CourseModule[] = [
       }
     ],
     illustrations: [
-      '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">',
-      '  <rect width="300" height="200" fill="#f8fafc" rx="12"/>',
-      '  <text x="150" y="22" text-anchor="middle" fill="#2563eb" font-size="12" font-weight="bold" font-family="sans-serif">Estructura del Tahuantinsuyo</text>',
-      '  <polygon points="150,35 185,65 115,65" fill="#fbbf24" stroke="#d97706" stroke-width="1"/>',
-      '  <text x="150" y="58" text-anchor="middle" fill="#78350f" font-size="8" font-weight="bold" font-family="sans-serif">Sapa Inca</text>',
-      '  <rect x="110" y="70" width="80" height="20" fill="#fde68a" rx="4"/>',
-      '  <text x="150" y="84" text-anchor="middle" fill="#92400e" font-size="8" font-family="sans-serif">Curacas</text>',
-      '  <rect x="95" y="95" width="110" height="20" fill="#fef3c7" rx="4"/>',
-      '  <text x="150" y="109" text-anchor="middle" fill="#92400e" font-size="8" font-family="sans-serif">Hatun Runa (Pueblo)</text>',
-      '  <rect x="80" y="120" width="140" height="20" fill="#fffbeb" rx="4"/>',
-      '  <text x="150" y="134" text-anchor="middle" fill="#92400e" font-size="8" font-family="sans-serif">Yanakuna / Mitimaes</text>',
-      '  <text x="150" y="162" text-anchor="middle" fill="#475569" font-size="9" font-family="sans-serif">4 Suyus: Chinchay, Anti, Cunti, Colla</text>',
-      '  <text x="150" y="182" text-anchor="middle" fill="#64748b" font-size="8" font-family="sans-serif">Capital: Cusco (Qosqo)</text>',
-      '</svg>'
+      `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="200" fill="#f8fafc" rx="12"/>
+  <text x="150" y="22" text-anchor="middle" fill="#2563eb" font-size="12" font-weight="bold" font-family="sans-serif">Estructura del Tahuantinsuyo</text>
+  <polygon points="150,35 185,65 115,65" fill="#fbbf24" stroke="#d97706" stroke-width="1"/>
+  <text x="150" y="58" text-anchor="middle" fill="#78350f" font-size="8" font-weight="bold" font-family="sans-serif">Sapa Inca</text>
+  <rect x="110" y="70" width="80" height="20" fill="#fde68a" rx="4"/>
+  <text x="150" y="84" text-anchor="middle" fill="#92400e" font-size="8" font-family="sans-serif">Curacas</text>
+  <rect x="95" y="95" width="110" height="20" fill="#fef3c7" rx="4"/>
+  <text x="150" y="109" text-anchor="middle" fill="#92400e" font-size="8" font-family="sans-serif">Hatun Runa (Pueblo)</text>
+  <rect x="80" y="120" width="140" height="20" fill="#fffbeb" rx="4"/>
+  <text x="150" y="134" text-anchor="middle" fill="#92400e" font-size="8" font-family="sans-serif">Yanakuna / Mitimaes</text>
+  <text x="150" y="162" text-anchor="middle" fill="#475569" font-size="9" font-family="sans-serif">4 Suyus: Chinchay, Anti, Cunti, Colla</text>
+  <text x="150" y="182" text-anchor="middle" fill="#64748b" font-size="8" font-family="sans-serif">Capital: Cusco (Qosqo)</text>
+</svg>`
     ],
     exercises: [
       { id: 3010, question: "\u00bfQui\u00e9n es considerado el fundador del Tahuantinsuyo tras la derrota de los chancas?", options: ["T\u00fapac Inca Yupanqui", "Pachac\u00fatec", "Huayna C\u00e1pac", "Atahualpa"], correctIndex: 1, explanation: "Pachac\u00fatec (1438-1471) derrot\u00f3 a los chancas y transform\u00f3 el Curacazgo del Cusco en un vasto imperio, siendo reconocido como el verdadero fundador del Tahuantinsuyo.", difficulty: "basico" },
@@ -4580,30 +4580,30 @@ const historiaModulesPart1: CourseModule[] = [
       }
     ],
     illustrations: [
-      '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">',
-      '  <rect width="300" height="200" fill="#f8fafc" rx="12"/>',
-      '  <text x="150" y="22" text-anchor="middle" fill="#dc2626" font-size="12" font-weight="bold" font-family="sans-serif">Conquista Espa\u00f1ola del Per\u00fa</text>',
-      '  <line x1="50" y1="50" x2="250" y2="50" stroke="#e2e8f0" stroke-width="2"/>',
-      '  <circle cx="80" cy="50" r="6" fill="#2563eb"/>',
-      '  <text x="80" y="73" text-anchor="middle" fill="#1e293b" font-size="7" font-family="sans-serif">1532</text>',
-      '  <text x="80" y="83" text-anchor="middle" fill="#475569" font-size="7" font-family="sans-serif">Cajamarca</text>',
-      '  <circle cx="135" cy="50" r="6" fill="#dc2626"/>',
-      '  <text x="135" y="73" text-anchor="middle" fill="#1e293b" font-size="7" font-family="sans-serif">1533</text>',
-      '  <text x="135" y="83" text-anchor="middle" fill="#475569" font-size="7" font-family="sans-serif">Ejecuci\u00f3n</text>',
-      '  <circle cx="190" cy="50" r="6" fill="#f59e0b"/>',
-      '  <text x="190" y="73" text-anchor="middle" fill="#1e293b" font-size="7" font-family="sans-serif">1535</text>',
-      '  <text x="190" y="83" text-anchor="middle" fill="#475569" font-size="7" font-family="sans-serif">Lima</text>',
-      '  <circle cx="240" cy="50" r="6" fill="#16a34a"/>',
-      '  <text x="240" y="73" text-anchor="middle" fill="#1e293b" font-size="7" font-family="sans-serif">1572</text>',
-      '  <text x="240" y="83" text-anchor="middle" fill="#475569" font-size="7" font-family="sans-serif">Vilcabamba</text>',
-      '  <text x="150" y="115" text-anchor="middle" fill="#1e293b" font-size="9" font-weight="bold" font-family="sans-serif">Impacto Demogr\u00e1fico</text>',
-      '  <rect x="40" y="125" width="100" height="16" fill="#dcfce7" rx="4"/>',
-      '  <text x="90" y="137" text-anchor="middle" fill="#166534" font-size="7" font-family="sans-serif">1530: ~9-12 millones</text>',
-      '  <rect x="160" y="125" width="100" height="16" fill="#fee2e2" rx="4"/>',
-      '  <text x="210" y="137" text-anchor="middle" fill="#991b1b" font-size="7" font-family="sans-serif">1620: ~1 mill\u00f3n</text>',
-      '  <text x="150" y="165" text-anchor="middle" fill="#475569" font-size="8" font-family="sans-serif">Mortalidad estimada: 80-90%</text>',
-      '  <text x="150" y="188" text-anchor="middle" fill="#64748b" font-size="7" font-family="sans-serif">Resistencia: Vilcabamba (1536-1572)</text>',
-      '</svg>'
+      `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="200" fill="#f8fafc" rx="12"/>
+  <text x="150" y="22" text-anchor="middle" fill="#dc2626" font-size="12" font-weight="bold" font-family="sans-serif">Conquista Espa\u00f1ola del Per\u00fa</text>
+  <line x1="50" y1="50" x2="250" y2="50" stroke="#e2e8f0" stroke-width="2"/>
+  <circle cx="80" cy="50" r="6" fill="#2563eb"/>
+  <text x="80" y="73" text-anchor="middle" fill="#1e293b" font-size="7" font-family="sans-serif">1532</text>
+  <text x="80" y="83" text-anchor="middle" fill="#475569" font-size="7" font-family="sans-serif">Cajamarca</text>
+  <circle cx="135" cy="50" r="6" fill="#dc2626"/>
+  <text x="135" y="73" text-anchor="middle" fill="#1e293b" font-size="7" font-family="sans-serif">1533</text>
+  <text x="135" y="83" text-anchor="middle" fill="#475569" font-size="7" font-family="sans-serif">Ejecuci\u00f3n</text>
+  <circle cx="190" cy="50" r="6" fill="#f59e0b"/>
+  <text x="190" y="73" text-anchor="middle" fill="#1e293b" font-size="7" font-family="sans-serif">1535</text>
+  <text x="190" y="83" text-anchor="middle" fill="#475569" font-size="7" font-family="sans-serif">Lima</text>
+  <circle cx="240" cy="50" r="6" fill="#16a34a"/>
+  <text x="240" y="73" text-anchor="middle" fill="#1e293b" font-size="7" font-family="sans-serif">1572</text>
+  <text x="240" y="83" text-anchor="middle" fill="#475569" font-size="7" font-family="sans-serif">Vilcabamba</text>
+  <text x="150" y="115" text-anchor="middle" fill="#1e293b" font-size="9" font-weight="bold" font-family="sans-serif">Impacto Demogr\u00e1fico</text>
+  <rect x="40" y="125" width="100" height="16" fill="#dcfce7" rx="4"/>
+  <text x="90" y="137" text-anchor="middle" fill="#166534" font-size="7" font-family="sans-serif">1530: ~9-12 millones</text>
+  <rect x="160" y="125" width="100" height="16" fill="#fee2e2" rx="4"/>
+  <text x="210" y="137" text-anchor="middle" fill="#991b1b" font-size="7" font-family="sans-serif">1620: ~1 mill\u00f3n</text>
+  <text x="150" y="165" text-anchor="middle" fill="#475569" font-size="8" font-family="sans-serif">Mortalidad estimada: 80-90%</text>
+  <text x="150" y="188" text-anchor="middle" fill="#64748b" font-size="7" font-family="sans-serif">Resistencia: Vilcabamba (1536-1572)</text>
+</svg>`
     ],
     exercises: [
       { id: 3020, question: "\u00bfEn qu\u00e9 fecha Pizarro captur\u00f3 al Sapa Inca Atahualpa en Cajamarca?", options: ["16 de noviembre de 1532", "26 de julio de 1533", "18 de enero de 1535", "15 de noviembre de 1533"], correctIndex: 0, explanation: "El 16 de noviembre de 1532, Pizarro embosc\u00f3 a Atahualpa en la Plaza de Cajamarca, captur\u00e1ndolo con solo 168 soldados frente a un ej\u00e9rcito de miles.", difficulty: "basico" },
@@ -4653,31 +4653,31 @@ const historiaModulesPart1: CourseModule[] = [
       }
     ],
     illustrations: [
-      '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">',
-      '  <rect width="300" height="200" fill="#f8fafc" rx="12"/>',
-      '  <text x="150" y="22" text-anchor="middle" fill="#7c3aed" font-size="12" font-weight="bold" font-family="sans-serif">Virreinato del Per\u00fa</text>',
-      '  <rect x="25" y="38" width="120" height="60" fill="#ede9fe" rx="6"/>',
-      '  <text x="85" y="53" text-anchor="middle" fill="#5b21b6" font-size="9" font-weight="bold" font-family="sans-serif">Estructura</text>',
-      '  <text x="85" y="66" text-anchor="middle" fill="#1e293b" font-size="7" font-family="sans-serif">Rey \u2192 Virrey \u2192 Gobernador</text>',
-      '  <text x="85" y="78" text-anchor="middle" fill="#1e293b" font-size="7" font-family="sans-serif">\u2192 Corregidor \u2192 Encomendero</text>',
-      '  <text x="85" y="90" text-anchor="middle" fill="#1e293b" font-size="7" font-family="sans-serif">\u2192 Curaca \u2192 Ind\u00edgena</text>',
-      '  <rect x="155" y="38" width="120" height="60" fill="#fef3c7" rx="6"/>',
-      '  <text x="215" y="53" text-anchor="middle" fill="#92400e" font-size="9" font-weight="bold" font-family="sans-serif">Econom\u00eda</text>',
-      '  <text x="215" y="66" text-anchor="middle" fill="#1e293b" font-size="7" font-family="sans-serif">Mita minera (Potos\u00ed)</text>',
-      '  <text x="215" y="78" text-anchor="middle" fill="#1e293b" font-size="7" font-family="sans-serif">Monopolio comercial</text>',
-      '  <text x="215" y="90" text-anchor="middle" fill="#1e293b" font-size="7" font-family="sans-serif">Flotas de Sevilla</text>',
-      '  <text x="150" y="120" text-anchor="middle" fill="#1e293b" font-size="9" font-weight="bold" font-family="sans-serif">Reformas Borb\u00f3nicas (s. XVIII)</text>',
-      '  <rect x="30" y="130" width="70" height="35" fill="#dbeafe" rx="4"/>',
-      '  <text x="65" y="143" text-anchor="middle" fill="#1e40af" font-size="7" font-family="sans-serif">Expulsi\u00f3n</text>',
-      '  <text x="65" y="155" text-anchor="middle" fill="#1e40af" font-size="7" font-family="sans-serif">Jesuitas 1767</text>',
-      '  <rect x="115" y="130" width="70" height="35" fill="#fee2e2" rx="4"/>',
-      '  <text x="150" y="143" text-anchor="middle" fill="#991b1b" font-size="7" font-family="sans-serif">T\u00fapac Amaru</text>',
-      '  <text x="150" y="155" text-anchor="middle" fill="#991b1b" font-size="7" font-family="sans-serif">1780-1783</text>',
-      '  <rect x="200" y="130" width="70" height="35" fill="#dcfce7" rx="4"/>',
-      '  <text x="235" y="143" text-anchor="middle" fill="#166534" font-size="7" font-family="sans-serif">Nuevo Virreinato</text>',
-      '  <text x="235" y="155" text-anchor="middle" fill="#166534" font-size="7" font-family="sans-serif">R\u00edo Plata 1776</text>',
-      '  <text x="150" y="190" text-anchor="middle" fill="#64748b" font-size="7" font-family="sans-serif">1542-1824: 282 a\u00f1os de dominio espa\u00f1ol</text>',
-      '</svg>'
+      `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="200" fill="#f8fafc" rx="12"/>
+  <text x="150" y="22" text-anchor="middle" fill="#7c3aed" font-size="12" font-weight="bold" font-family="sans-serif">Virreinato del Per\u00fa</text>
+  <rect x="25" y="38" width="120" height="60" fill="#ede9fe" rx="6"/>
+  <text x="85" y="53" text-anchor="middle" fill="#5b21b6" font-size="9" font-weight="bold" font-family="sans-serif">Estructura</text>
+  <text x="85" y="66" text-anchor="middle" fill="#1e293b" font-size="7" font-family="sans-serif">Rey \u2192 Virrey \u2192 Gobernador</text>
+  <text x="85" y="78" text-anchor="middle" fill="#1e293b" font-size="7" font-family="sans-serif">\u2192 Corregidor \u2192 Encomendero</text>
+  <text x="85" y="90" text-anchor="middle" fill="#1e293b" font-size="7" font-family="sans-serif">\u2192 Curaca \u2192 Ind\u00edgena</text>
+  <rect x="155" y="38" width="120" height="60" fill="#fef3c7" rx="6"/>
+  <text x="215" y="53" text-anchor="middle" fill="#92400e" font-size="9" font-weight="bold" font-family="sans-serif">Econom\u00eda</text>
+  <text x="215" y="66" text-anchor="middle" fill="#1e293b" font-size="7" font-family="sans-serif">Mita minera (Potos\u00ed)</text>
+  <text x="215" y="78" text-anchor="middle" fill="#1e293b" font-size="7" font-family="sans-serif">Monopolio comercial</text>
+  <text x="215" y="90" text-anchor="middle" fill="#1e293b" font-size="7" font-family="sans-serif">Flotas de Sevilla</text>
+  <text x="150" y="120" text-anchor="middle" fill="#1e293b" font-size="9" font-weight="bold" font-family="sans-serif">Reformas Borb\u00f3nicas (s. XVIII)</text>
+  <rect x="30" y="130" width="70" height="35" fill="#dbeafe" rx="4"/>
+  <text x="65" y="143" text-anchor="middle" fill="#1e40af" font-size="7" font-family="sans-serif">Expulsi\u00f3n</text>
+  <text x="65" y="155" text-anchor="middle" fill="#1e40af" font-size="7" font-family="sans-serif">Jesuitas 1767</text>
+  <rect x="115" y="130" width="70" height="35" fill="#fee2e2" rx="4"/>
+  <text x="150" y="143" text-anchor="middle" fill="#991b1b" font-size="7" font-family="sans-serif">T\u00fapac Amaru</text>
+  <text x="150" y="155" text-anchor="middle" fill="#991b1b" font-size="7" font-family="sans-serif">1780-1783</text>
+  <rect x="200" y="130" width="70" height="35" fill="#dcfce7" rx="4"/>
+  <text x="235" y="143" text-anchor="middle" fill="#166534" font-size="7" font-family="sans-serif">Nuevo Virreinato</text>
+  <text x="235" y="155" text-anchor="middle" fill="#166534" font-size="7" font-family="sans-serif">R\u00edo Plata 1776</text>
+  <text x="150" y="190" text-anchor="middle" fill="#64748b" font-size="7" font-family="sans-serif">1542-1824: 282 a\u00f1os de dominio espa\u00f1ol</text>
+</svg>`
     ],
     exercises: [
       { id: 3030, question: "\u00bfEn qu\u00e9 a\u00f1o fue creado el Virreinato del Per\u00fa y por qui\u00e9n?", options: ["1532 por Francisco Pizarro", "1542 por Carlos V", "1560 por Felipe II", "1776 por Carlos III"], correctIndex: 1, explanation: "El Virreinato del Per\u00fa fue creado en 1542 por Real Cédula de Carlos V, como parte de las Reformas de Nueva Cástilla, con capital en la Ciudad de los Reyes (Lima).", difficulty: "basico" },
@@ -4727,28 +4727,28 @@ const historiaModulesPart1: CourseModule[] = [
       }
     ],
     illustrations: [
-      '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">',
-      '  <rect width="300" height="200" fill="#f8fafc" rx="12"/>',
-      '  <text x="150" y="22" text-anchor="middle" fill="#16a34a" font-size="12" font-weight="bold" font-family="sans-serif">Independencia del Per\u00fa</text>',
-      '  <line x1="30" y1="50" x2="270" y2="50" stroke="#e2e8f0" stroke-width="2"/>',
-      '  <circle cx="60" cy="50" r="5" fill="#2563eb"/>',
-      '  <text x="60" y="72" text-anchor="middle" fill="#1e293b" font-size="7" font-family="sans-serif">1820</text>',
-      '  <text x="60" y="82" text-anchor="middle" fill="#475569" font-size="6" font-family="sans-serif">Llegada San Mart\u00edn</text>',
-      '  <circle cx="120" cy="50" r="5" fill="#16a34a"/>',
-      '  <text x="120" y="72" text-anchor="middle" fill="#1e293b" font-size="7" font-family="sans-serif">1821</text>',
-      '  <text x="120" y="82" text-anchor="middle" fill="#475569" font-size="6" font-family="sans-serif">Proclamac.Independencia</text>',
-      '  <circle cx="180" cy="50" r="5" fill="#f59e0b"/>',
-      '  <text x="180" y="72" text-anchor="middle" fill="#1e293b" font-size="7" font-family="sans-serif">1822</text>',
-      '  <text x="180" y="82" text-anchor="middle" fill="#475569" font-size="6" font-family="sans-serif">Guayaquil</text>',
-      '  <circle cx="240" cy="50" r="5" fill="#dc2626"/>',
-      '  <text x="240" y="72" text-anchor="middle" fill="#1e293b" font-size="7" font-family="sans-serif">1824</text>',
-      '  <text x="240" y="82" text-anchor="middle" fill="#475569" font-size="6" font-family="sans-serif">Ayacucho</text>',
-      '  <text x="150" y="110" text-anchor="middle" fill="#1e293b" font-size="9" font-weight="bold" font-family="sans-serif">Batalla de Ayacucho (1824)</text>',
-      '  <text x="150" y="128" text-anchor="middle" fill="#475569" font-size="8" font-family="sans-serif">Ej\u00e9rcito Unido Libertador: 5,780</text>',
-      '  <text x="150" y="143" text-anchor="middle" fill="#475569" font-size="8" font-family="sans-serif">Realistas: 9,310 (rindi\u00f3n)</text>',
-      '  <text x="150" y="168" text-anchor="middle" fill="#64748b" font-size="7" font-family="sans-serif">\u00daltima gran batalla de Am\u00e9rica del Sur</text>',
-      '  <text x="150" y="188" text-anchor="middle" fill="#64748b" font-size="7" font-family="sans-serif">Comandante: Antonio Jos\u00e9 de Sucre</text>',
-      '</svg>'
+      `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="200" fill="#f8fafc" rx="12"/>
+  <text x="150" y="22" text-anchor="middle" fill="#16a34a" font-size="12" font-weight="bold" font-family="sans-serif">Independencia del Per\u00fa</text>
+  <line x1="30" y1="50" x2="270" y2="50" stroke="#e2e8f0" stroke-width="2"/>
+  <circle cx="60" cy="50" r="5" fill="#2563eb"/>
+  <text x="60" y="72" text-anchor="middle" fill="#1e293b" font-size="7" font-family="sans-serif">1820</text>
+  <text x="60" y="82" text-anchor="middle" fill="#475569" font-size="6" font-family="sans-serif">Llegada San Mart\u00edn</text>
+  <circle cx="120" cy="50" r="5" fill="#16a34a"/>
+  <text x="120" y="72" text-anchor="middle" fill="#1e293b" font-size="7" font-family="sans-serif">1821</text>
+  <text x="120" y="82" text-anchor="middle" fill="#475569" font-size="6" font-family="sans-serif">Proclamac.Independencia</text>
+  <circle cx="180" cy="50" r="5" fill="#f59e0b"/>
+  <text x="180" y="72" text-anchor="middle" fill="#1e293b" font-size="7" font-family="sans-serif">1822</text>
+  <text x="180" y="82" text-anchor="middle" fill="#475569" font-size="6" font-family="sans-serif">Guayaquil</text>
+  <circle cx="240" cy="50" r="5" fill="#dc2626"/>
+  <text x="240" y="72" text-anchor="middle" fill="#1e293b" font-size="7" font-family="sans-serif">1824</text>
+  <text x="240" y="82" text-anchor="middle" fill="#475569" font-size="6" font-family="sans-serif">Ayacucho</text>
+  <text x="150" y="110" text-anchor="middle" fill="#1e293b" font-size="9" font-weight="bold" font-family="sans-serif">Batalla de Ayacucho (1824)</text>
+  <text x="150" y="128" text-anchor="middle" fill="#475569" font-size="8" font-family="sans-serif">Ej\u00e9rcito Unido Libertador: 5,780</text>
+  <text x="150" y="143" text-anchor="middle" fill="#475569" font-size="8" font-family="sans-serif">Realistas: 9,310 (rindi\u00f3n)</text>
+  <text x="150" y="168" text-anchor="middle" fill="#64748b" font-size="7" font-family="sans-serif">\u00daltima gran batalla de Am\u00e9rica del Sur</text>
+  <text x="150" y="188" text-anchor="middle" fill="#64748b" font-size="7" font-family="sans-serif">Comandante: Antonio Jos\u00e9 de Sucre</text>
+</svg>`
     ],
     exercises: [
       { id: 3040, question: "\u00bfEn qu\u00e9 fecha se proclam\u00f3 la independencia del Per\u00fa y qui\u00e9n lo hizo?", options: ["9 de diciembre de 1824, Sim\u00f3n Bol\u00edvar", "28 de julio de 1821, Jos\u00e9 de San Mart\u00edn", "26 de julio de 1822, Antonio Sucre", "7 de abril de 1825, Andrés de Santa Cruz"], correctIndex: 1, explanation: "El 28 de julio de 1821, José de San Martín proclamó la independencia del Perú en la Plaza de Armas de Lima, estableciendo un gobierno provisional.", difficulty: "basico" },
@@ -4798,31 +4798,31 @@ const historiaModulesPart1: CourseModule[] = [
       }
     ],
     illustrations: [
-      '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">',
-      '  <rect width="300" height="200" fill="#f8fafc" rx="12"/>',
-      '  <text x="150" y="22" text-anchor="middle" fill="#d97706" font-size="12" font-weight="bold" font-family="sans-serif">Rep\u00fablica Temprana (1826-1872)</text>',
-      '  <line x1="30" y1="50" x2="270" y2="50" stroke="#e2e8f0" stroke-width="2"/>',
-      '  <circle cx="60" cy="50" r="5" fill="#2563eb"/>',
-      '  <text x="60" y="70" text-anchor="middle" fill="#1e293b" font-size="6" font-family="sans-serif">1829</text>',
-      '  <text x="60" y="79" text-anchor="middle" fill="#475569" font-size="6" font-family="sans-serif">Colombia</text>',
-      '  <circle cx="120" cy="50" r="5" fill="#dc2626"/>',
-      '  <text x="120" y="70" text-anchor="middle" fill="#1e293b" font-size="6" font-family="sans-serif">1839</text>',
-      '  <text x="120" y="79" text-anchor="middle" fill="#475569" font-size="6" font-family="sans-serif">Yungay</text>',
-      '  <circle cx="180" cy="50" r="5" fill="#f59e0b"/>',
-      '  <text x="180" y="70" text-anchor="middle" fill="#1e293b" font-size="6" font-family="sans-serif">1866</text>',
-      '  <text x="180" y="79" text-anchor="middle" fill="#475569" font-size="6" font-family="sans-serif">Callao</text>',
-      '  <circle cx="240" cy="50" r="5" fill="#dc2626"/>',
-      '  <text x="240" y="70" text-anchor="middle" fill="#1e293b" font-size="6" font-family="sans-serif">1879</text>',
-      '  <text x="240" y="79" text-anchor="middle" fill="#475569" font-size="6" font-family="sans-serif">Pac\u00edfico</text>',
-      '  <text x="150" y="105" text-anchor="middle" fill="#1e293b" font-size="9" font-weight="bold" font-family="sans-serif">Guano y Salitre</text>',
-      '  <rect x="40" y="115" width="100" height="30" fill="#fef3c7" rx="4"/>',
-      '  <text x="90" y="130" text-anchor="middle" fill="#92400e" font-size="8" font-family="sans-serif">Guano: 1840-1880</text>',
-      '  <text x="90" y="140" text-anchor="middle" fill="#92400e" font-size="7" font-family="sans-serif">Islas de Chincha</text>',
-      '  <rect x="160" y="115" width="100" height="30" fill="#fef3c7" rx="4"/>',
-      '  <text x="210" y="130" text-anchor="middle" fill="#92400e" font-size="8" font-family="sans-serif">Salitre: 1879-1883</text>',
-      '  <text x="210" y="140" text-anchor="middle" fill="#92400e" font-size="7" font-family="sans-serif">Tarapac\u00e1</text>',
-      '  <text x="150" y="170" text-anchor="middle" fill="#64748b" font-size="7" font-family="sans-serif">Caudillos: Gamarra, Santa Cruz, Castilla</text>',
-      '</svg>'
+      `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="200" fill="#f8fafc" rx="12"/>
+  <text x="150" y="22" text-anchor="middle" fill="#d97706" font-size="12" font-weight="bold" font-family="sans-serif">Rep\u00fablica Temprana (1826-1872)</text>
+  <line x1="30" y1="50" x2="270" y2="50" stroke="#e2e8f0" stroke-width="2"/>
+  <circle cx="60" cy="50" r="5" fill="#2563eb"/>
+  <text x="60" y="70" text-anchor="middle" fill="#1e293b" font-size="6" font-family="sans-serif">1829</text>
+  <text x="60" y="79" text-anchor="middle" fill="#475569" font-size="6" font-family="sans-serif">Colombia</text>
+  <circle cx="120" cy="50" r="5" fill="#dc2626"/>
+  <text x="120" y="70" text-anchor="middle" fill="#1e293b" font-size="6" font-family="sans-serif">1839</text>
+  <text x="120" y="79" text-anchor="middle" fill="#475569" font-size="6" font-family="sans-serif">Yungay</text>
+  <circle cx="180" cy="50" r="5" fill="#f59e0b"/>
+  <text x="180" y="70" text-anchor="middle" fill="#1e293b" font-size="6" font-family="sans-serif">1866</text>
+  <text x="180" y="79" text-anchor="middle" fill="#475569" font-size="6" font-family="sans-serif">Callao</text>
+  <circle cx="240" cy="50" r="5" fill="#dc2626"/>
+  <text x="240" y="70" text-anchor="middle" fill="#1e293b" font-size="6" font-family="sans-serif">1879</text>
+  <text x="240" y="79" text-anchor="middle" fill="#475569" font-size="6" font-family="sans-serif">Pac\u00edfico</text>
+  <text x="150" y="105" text-anchor="middle" fill="#1e293b" font-size="9" font-weight="bold" font-family="sans-serif">Guano y Salitre</text>
+  <rect x="40" y="115" width="100" height="30" fill="#fef3c7" rx="4"/>
+  <text x="90" y="130" text-anchor="middle" fill="#92400e" font-size="8" font-family="sans-serif">Guano: 1840-1880</text>
+  <text x="90" y="140" text-anchor="middle" fill="#92400e" font-size="7" font-family="sans-serif">Islas de Chincha</text>
+  <rect x="160" y="115" width="100" height="30" fill="#fef3c7" rx="4"/>
+  <text x="210" y="130" text-anchor="middle" fill="#92400e" font-size="8" font-family="sans-serif">Salitre: 1879-1883</text>
+  <text x="210" y="140" text-anchor="middle" fill="#92400e" font-size="7" font-family="sans-serif">Tarapac\u00e1</text>
+  <text x="150" y="170" text-anchor="middle" fill="#64748b" font-size="7" font-family="sans-serif">Caudillos: Gamarra, Santa Cruz, Castilla</text>
+</svg>`
     ],
     exercises: [
       { id: 3050, question: "\u00bfQué acontecimiento militar puso fin a la Confederación Perú-Bolivia en 1839?", options: ["La batalla de Junín", "La batalla de Yungay", "La batalla de Ayacucho", "La batalla de Portete de Tarqui"], correctIndex: 1, explanation: "La batalla de Yungay (20 de enero de 1839) fue decisiva para la derrota de la Confederación Perú-Bolivia, liderada por Santa Cruz, por las fuerzas chilenas y peruanas opositoras.", difficulty: "basico" },
@@ -4872,33 +4872,33 @@ const historiaModulesPart1: CourseModule[] = [
       }
     ],
     illustrations: [
-      '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">',
-      '  <rect width="300" height="200" fill="#f8fafc" rx="12"/>',
-      '  <text x="150" y="22" text-anchor="middle" fill="#dc2626" font-size="12" font-weight="bold" font-family="sans-serif">Guerra del Pac\u00edfico</text>',
-      '  <line x1="30" y1="50" x2="270" y2="50" stroke="#e2e8f0" stroke-width="2"/>',
-      '  <circle cx="60" cy="50" r="5" fill="#2563eb"/>',
-      '  <text x="60" y="70" text-anchor="middle" fill="#1e293b" font-size="7" font-family="sans-serif">1879</text>',
-      '  <text x="60" y="80" text-anchor="middle" fill="#475569" font-size="6" font-family="sans-serif">Invasi\u00f3n</text>',
-      '  <circle cx="120" cy="50" r="5" fill="#f59e0b"/>',
-      '  <text x="120" y="70" text-anchor="middle" fill="#1e293b" font-size="7" font-family="sans-serif">1879</text>',
-      '  <text x="120" y="80" text-anchor="middle" fill="#475569" font-size="6" font-family="sans-serif">Angamos</text>',
-      '  <circle cx="180" cy="50" r="5" fill="#dc2626"/>',
-      '  <text x="180" y="70" text-anchor="middle" fill="#1e293b" font-size="7" font-family="sans-serif">1881</text>',
-      '  <text x="180" y="80" text-anchor="middle" fill="#475569" font-size="6" font-family="sans-serif">Caida Lima</text>',
-      '  <circle cx="240" cy="50" r="5" fill="#16a34a"/>',
-      '  <text x="240" y="70" text-anchor="middle" fill="#1e293b" font-size="7" font-family="sans-serif">1883</text>',
-      '  <text x="240" y="80" text-anchor="middle" fill="#475569" font-size="6" font-family="sans-serif">Anc\u00f3n</text>',
-      '  <text x="150" y="108" text-anchor="middle" fill="#1e293b" font-size="9" font-weight="bold" font-family="sans-serif">Territorio Perdido</text>',
-      '  <rect x="40" y="118" width="100" height="28" fill="#fee2e2" rx="4"/>',
-      '  <text x="90" y="132" text-anchor="middle" fill="#991b1b" font-size="8" font-family="sans-serif">Tarapac\u00e1 (1883)</text>',
-      '  <text x="90" y="142" text-anchor="middle" fill="#991b1b" font-size="7" font-family="sans-serif">Propiedad absoluta</text>',
-      '  <rect x="160" y="118" width="100" height="28" fill="#fee2e2" rx="4"/>',
-      '  <text x="210" y="132" text-anchor="middle" fill="#991b1b" font-size="8" font-family="sans-serif">Arica (1929)</text>',
-      '  <text x="210" y="142" text-anchor="middle" fill="#991b1b" font-size="7" font-family="sans-serif">Definitivo Chile</text>',
-      '  <rect x="100" y="155" width="100" height="20" fill="#fef3c7" rx="4"/>',
-      '  <text x="150" y="169" text-anchor="middle" fill="#92400e" font-size="8" font-family="sans-serif">Tacna (1929)</text>',
-      '  <text x="150" y="192" text-anchor="middle" fill="#64748b" font-size="7" font-family="sans-serif">P\u00e9rdida: ~180,000 km\u00b2 de territorio</text>',
-      '</svg>'
+      `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="200" fill="#f8fafc" rx="12"/>
+  <text x="150" y="22" text-anchor="middle" fill="#dc2626" font-size="12" font-weight="bold" font-family="sans-serif">Guerra del Pac\u00edfico</text>
+  <line x1="30" y1="50" x2="270" y2="50" stroke="#e2e8f0" stroke-width="2"/>
+  <circle cx="60" cy="50" r="5" fill="#2563eb"/>
+  <text x="60" y="70" text-anchor="middle" fill="#1e293b" font-size="7" font-family="sans-serif">1879</text>
+  <text x="60" y="80" text-anchor="middle" fill="#475569" font-size="6" font-family="sans-serif">Invasi\u00f3n</text>
+  <circle cx="120" cy="50" r="5" fill="#f59e0b"/>
+  <text x="120" y="70" text-anchor="middle" fill="#1e293b" font-size="7" font-family="sans-serif">1879</text>
+  <text x="120" y="80" text-anchor="middle" fill="#475569" font-size="6" font-family="sans-serif">Angamos</text>
+  <circle cx="180" cy="50" r="5" fill="#dc2626"/>
+  <text x="180" y="70" text-anchor="middle" fill="#1e293b" font-size="7" font-family="sans-serif">1881</text>
+  <text x="180" y="80" text-anchor="middle" fill="#475569" font-size="6" font-family="sans-serif">Caida Lima</text>
+  <circle cx="240" cy="50" r="5" fill="#16a34a"/>
+  <text x="240" y="70" text-anchor="middle" fill="#1e293b" font-size="7" font-family="sans-serif">1883</text>
+  <text x="240" y="80" text-anchor="middle" fill="#475569" font-size="6" font-family="sans-serif">Anc\u00f3n</text>
+  <text x="150" y="108" text-anchor="middle" fill="#1e293b" font-size="9" font-weight="bold" font-family="sans-serif">Territorio Perdido</text>
+  <rect x="40" y="118" width="100" height="28" fill="#fee2e2" rx="4"/>
+  <text x="90" y="132" text-anchor="middle" fill="#991b1b" font-size="8" font-family="sans-serif">Tarapac\u00e1 (1883)</text>
+  <text x="90" y="142" text-anchor="middle" fill="#991b1b" font-size="7" font-family="sans-serif">Propiedad absoluta</text>
+  <rect x="160" y="118" width="100" height="28" fill="#fee2e2" rx="4"/>
+  <text x="210" y="132" text-anchor="middle" fill="#991b1b" font-size="8" font-family="sans-serif">Arica (1929)</text>
+  <text x="210" y="142" text-anchor="middle" fill="#991b1b" font-size="7" font-family="sans-serif">Definitivo Chile</text>
+  <rect x="100" y="155" width="100" height="20" fill="#fef3c7" rx="4"/>
+  <text x="150" y="169" text-anchor="middle" fill="#92400e" font-size="8" font-family="sans-serif">Tacna (1929)</text>
+  <text x="150" y="192" text-anchor="middle" fill="#64748b" font-size="7" font-family="sans-serif">P\u00e9rdida: ~180,000 km\u00b2 de territorio</text>
+</svg>`
     ],
     exercises: [
       { id: 3060, question: "\u00bfQué recurso natural generó las principales fortunas del Perú entre 1840 y 1880?", options: ["El caucho", "El guano", "La plata de Cerro de Pasco", "El cobre de Cerro Verde"], correctIndex: 1, explanation: "El guano, excremento de aves marinas acumulado en islas costeñas, fue la principal fuente de riqueza del Perú en la segunda mitad del siglo XIX, vendiéndose como fertilizante en Europa.", difficulty: "basico" },
@@ -4948,28 +4948,28 @@ const historiaModulesPart1: CourseModule[] = [
       }
     ],
     illustrations: [
-      '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">',
-      '  <rect width="300" height="200" fill="#f8fafc" rx="12"/>',
-      '  <text x="150" y="22" text-anchor="middle" fill="#7c3aed" font-size="12" font-weight="bold" font-family="sans-serif">Oncenio de Legu\u00eda</text>',
-      '  <rect x="30" y="38" width="240" height="25" fill="#ede9fe" rx="6"/>',
-      '  <text x="150" y="55" text-anchor="middle" fill="#5b21b6" font-size="9" font-weight="bold" font-family="sans-serif">1919-1930: 11 a\u00f1os de gobierno</text>',
-      '  <rect x="30" y="70" width="110" height="55" fill="#dcfce7" rx="6"/>',
-      '  <text x="85" y="85" text-anchor="middle" fill="#166534" font-size="8" font-weight="bold" font-family="sans-serif">Modernizaci\u00f3n</text>',
-      '  <text x="85" y="97" text-anchor="middle" fill="#1e293b" font-size="7" font-family="sans-serif">Palacio de Gobierno</text>',
-      '  <text x="85" y="107" text-anchor="middle" fill="#1e293b" font-size="7" font-family="sans-serif">Edificio Giuffre</text>',
-      '  <text x="85" y="117" text-anchor="middle" fill="#1e293b" font-size="7" font-family="sans-serif">Obras p\u00fablicas</text>',
-      '  <rect x="160" y="70" width="110" height="55" fill="#fee2e2" rx="6"/>',
-      '  <text x="215" y="85" text-anchor="middle" fill="#991b1b" font-size="8" font-weight="bold" font-family="sans-serif">Autoritarismo</text>',
-      '  <text x="215" y="97" text-anchor="middle" fill="#1e293b" font-size="7" font-family="sans-serif">Cierre del Congreso</text>',
-      '  <text x="215" y="107" text-anchor="middle" fill="#1e293b" font-size="7" font-family="sans-serif">Censura de prensa</text>',
-      '  <text x="215" y="117" text-anchor="middle" fill="#1e293b" font-size="7" font-family="sans-serif">Persecuci\u00f3n pol\u00edtica</text>',
-      '  <text x="150" y="148" text-anchor="middle" fill="#1e293b" font-size="9" font-weight="bold" font-family="sans-serif">Crisis y Ca\u00edda</text>',
-      '  <rect x="50" y="155" width="90" height="22" fill="#fef3c7" rx="4"/>',
-      '  <text x="95" y="170" text-anchor="middle" fill="#92400e" font-size="7" font-family="sans-serif">Gran Depresi\u00f3n 1929</text>',
-      '  <rect x="160" y="155" width="90" height="22" fill="#fee2e2" rx="4"/>',
-      '  <text x="205" y="170" text-anchor="middle" fill="#991b1b" font-size="7" font-family="sans-serif">Golpe S\u00e1nchez Cerro</text>',
-      '  <text x="150" y="195" text-anchor="middle" fill="#64748b" font-size="7" font-family="sans-serif">APRA: primer partido de masas (1924)</text>',
-      '</svg>'
+      `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="200" fill="#f8fafc" rx="12"/>
+  <text x="150" y="22" text-anchor="middle" fill="#7c3aed" font-size="12" font-weight="bold" font-family="sans-serif">Oncenio de Legu\u00eda</text>
+  <rect x="30" y="38" width="240" height="25" fill="#ede9fe" rx="6"/>
+  <text x="150" y="55" text-anchor="middle" fill="#5b21b6" font-size="9" font-weight="bold" font-family="sans-serif">1919-1930: 11 a\u00f1os de gobierno</text>
+  <rect x="30" y="70" width="110" height="55" fill="#dcfce7" rx="6"/>
+  <text x="85" y="85" text-anchor="middle" fill="#166534" font-size="8" font-weight="bold" font-family="sans-serif">Modernizaci\u00f3n</text>
+  <text x="85" y="97" text-anchor="middle" fill="#1e293b" font-size="7" font-family="sans-serif">Palacio de Gobierno</text>
+  <text x="85" y="107" text-anchor="middle" fill="#1e293b" font-size="7" font-family="sans-serif">Edificio Giuffre</text>
+  <text x="85" y="117" text-anchor="middle" fill="#1e293b" font-size="7" font-family="sans-serif">Obras p\u00fablicas</text>
+  <rect x="160" y="70" width="110" height="55" fill="#fee2e2" rx="6"/>
+  <text x="215" y="85" text-anchor="middle" fill="#991b1b" font-size="8" font-weight="bold" font-family="sans-serif">Autoritarismo</text>
+  <text x="215" y="97" text-anchor="middle" fill="#1e293b" font-size="7" font-family="sans-serif">Cierre del Congreso</text>
+  <text x="215" y="107" text-anchor="middle" fill="#1e293b" font-size="7" font-family="sans-serif">Censura de prensa</text>
+  <text x="215" y="117" text-anchor="middle" fill="#1e293b" font-size="7" font-family="sans-serif">Persecuci\u00f3n pol\u00edtica</text>
+  <text x="150" y="148" text-anchor="middle" fill="#1e293b" font-size="9" font-weight="bold" font-family="sans-serif">Crisis y Ca\u00edda</text>
+  <rect x="50" y="155" width="90" height="22" fill="#fef3c7" rx="4"/>
+  <text x="95" y="170" text-anchor="middle" fill="#92400e" font-size="7" font-family="sans-serif">Gran Depresi\u00f3n 1929</text>
+  <rect x="160" y="155" width="90" height="22" fill="#fee2e2" rx="4"/>
+  <text x="205" y="170" text-anchor="middle" fill="#991b1b" font-size="7" font-family="sans-serif">Golpe S\u00e1nchez Cerro</text>
+  <text x="150" y="195" text-anchor="middle" fill="#64748b" font-size="7" font-family="sans-serif">APRA: primer partido de masas (1924)</text>
+</svg>`
     ],
     exercises: [
       { id: 3070, question: "\u00bfCuánto duró el gobierno de Augusto B. Leguía durante su Oncenio?", options: ["6 años", "8 años", "11 años", "15 años"], correctIndex: 2, explanation: "El Oncenio de Leguía duró 11 años (1919-1930), siendo el período de gobierno más largo del siglo XX en el Perú.", difficulty: "basico" },
@@ -5022,21 +5022,21 @@ const historiaModulesPart2: CourseModule[] = [
       }
     ],
     illustrations: [
-      '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">',
-      '  <rect width="300" height="200" fill="#f8fafc" rx="12"/>',
-      '  <text x="150" y="25" text-anchor="middle" fill="#2563eb" font-size="12" font-weight="bold" font-family="sans-serif">APRA y Guerra con Ecuador (1930-1941)</text>',
-      '  <rect x="20" y="45" width="120" height="30" fill="#dbeafe" rx="6"/>',
-      '  <text x="80" y="65" text-anchor="middle" fill="#1e40af" font-size="10" font-weight="bold" font-family="sans-serif">APRA (1924)</text>',
-      '  <line x1="80" y1="75" x2="80" y2="100" stroke="#93c5fd" stroke-width="2"/>',
-      '  <rect x="20" y="100" width="120" height="30" fill="#fef3c7" rx="6"/>',
-      '  <text x="80" y="120" text-anchor="middle" fill="#92400e" font-size="10" font-weight="bold" font-family="sans-serif">Golpe Sánchez Cerro (1930)</text>',
-      '  <line x1="140" y1="60" x2="180" y2="60" stroke="#93c5fd" stroke-width="2" marker-end="url(#arrow)"/>',
-      '  <rect x="180" y="45" width="100" height="30" fill="#fecaca" rx="6"/>',
-      '  <text x="230" y="65" text-anchor="middle" fill="#991b1b" font-size="10" font-weight="bold" font-family="sans-serif">Guerra 1941</text>',
-      '  <text x="230" y="110" text-anchor="middle" fill="#1e293b" font-size="9" font-family="sans-serif">Protocolo de Río</text>',
-      '  <text x="230" y="125" text-anchor="middle" fill="#1e293b" font-size="9" font-family="sans-serif">(1942)</text>',
-      '  <defs><marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#2563eb"/></marker></defs>',
-      '</svg>'
+      `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="200" fill="#f8fafc" rx="12"/>
+  <text x="150" y="25" text-anchor="middle" fill="#2563eb" font-size="12" font-weight="bold" font-family="sans-serif">APRA y Guerra con Ecuador (1930-1941)</text>
+  <rect x="20" y="45" width="120" height="30" fill="#dbeafe" rx="6"/>
+  <text x="80" y="65" text-anchor="middle" fill="#1e40af" font-size="10" font-weight="bold" font-family="sans-serif">APRA (1924)</text>
+  <line x1="80" y1="75" x2="80" y2="100" stroke="#93c5fd" stroke-width="2"/>
+  <rect x="20" y="100" width="120" height="30" fill="#fef3c7" rx="6"/>
+  <text x="80" y="120" text-anchor="middle" fill="#92400e" font-size="10" font-weight="bold" font-family="sans-serif">Golpe Sánchez Cerro (1930)</text>
+  <line x1="140" y1="60" x2="180" y2="60" stroke="#93c5fd" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="180" y="45" width="100" height="30" fill="#fecaca" rx="6"/>
+  <text x="230" y="65" text-anchor="middle" fill="#991b1b" font-size="10" font-weight="bold" font-family="sans-serif">Guerra 1941</text>
+  <text x="230" y="110" text-anchor="middle" fill="#1e293b" font-size="9" font-family="sans-serif">Protocolo de Río</text>
+  <text x="230" y="125" text-anchor="middle" fill="#1e293b" font-size="9" font-family="sans-serif">(1942)</text>
+  <defs><marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#2563eb"/></marker></defs>
+</svg>`
     ],
     exercises: [
       { id: 4001, question: "¿Quién fundó el APRA en 1924?", options: ["Víctor Raúl Haya de la Torre", "Luis Sánchez Cerro", "Augusto B. Leguía", "Alan García"], correctIndex: 0, explanation: "Haya de la Torre fundó el APRA en México en 1924 como movimiento antiimperialista continental.", difficulty: "basico" },
@@ -5086,24 +5086,24 @@ const historiaModulesPart2: CourseModule[] = [
       }
     ],
     illustrations: [
-      '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">',
-      '  <rect width="300" height="200" fill="#f8fafc" rx="12"/>',
-      '  <text x="150" y="25" text-anchor="middle" fill="#7c3aed" font-size="12" font-weight="bold" font-family="sans-serif">Segundo Militarismo: Odría (1948-1956)</text>',
-      '  <rect x="20" y="50" width="80" height="25" fill="#ede9fe" rx="6"/>',
-      '  <text x="60" y="67" text-anchor="middle" fill="#5b21b6" font-size="9" font-weight="bold" font-family="sans-serif">Golpe 1948</text>',
-      '  <line x1="100" y1="62" x2="130" y2="62" stroke="#8b5cf6" stroke-width="2" marker-end="url(#arrow2)"/>',
-      '  <rect x="130" y="50" width="80" height="25" fill="#fce7f3" rx="6"/>',
-      '  <text x="170" y="67" text-anchor="middle" fill="#9d174d" font-size="9" font-weight="bold" font-family="sans-serif">Manuelita 1950</text>',
-      '  <line x1="210" y1="62" x2="240" y2="62" stroke="#8b5cf6" stroke-width="2" marker-end="url(#arrow2)"/>',
-      '  <rect x="240" y="50" width="50" height="25" fill="#fee2e2" rx="6"/>',
-      '  <text x="265" y="67" text-anchor="middle" fill="#991b1b" font-size="9" font-weight="bold" font-family="sans-serif">Caída 1955</text>',
-      '  <rect x="20" y="100" width="260" height="80" fill="#f1f5f9" rx="8"/>',
-      '  <text x="150" y="120" text-anchor="middle" fill="#1e293b" font-size="10" font-weight="bold" font-family="sans-serif">Características del Ochenio</text>',
-      '  <text x="30" y="138" fill="#475569" font-size="9" font-family="sans-serif">• Represión de opositores</text>',
-      '  <text x="30" y="153" fill="#475569" font-size="9" font-family="sans-serif">• Censura de prensa</text>',
-      '  <text x="30" y="168" fill="#475569" font-size="9" font-family="sans-serif">• Desarrollo económico</text>',
-      '  <defs><marker id="arrow2" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#7c3aed"/></marker></defs>',
-      '</svg>'
+      `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="200" fill="#f8fafc" rx="12"/>
+  <text x="150" y="25" text-anchor="middle" fill="#7c3aed" font-size="12" font-weight="bold" font-family="sans-serif">Segundo Militarismo: Odría (1948-1956)</text>
+  <rect x="20" y="50" width="80" height="25" fill="#ede9fe" rx="6"/>
+  <text x="60" y="67" text-anchor="middle" fill="#5b21b6" font-size="9" font-weight="bold" font-family="sans-serif">Golpe 1948</text>
+  <line x1="100" y1="62" x2="130" y2="62" stroke="#8b5cf6" stroke-width="2" marker-end="url(#arrow2)"/>
+  <rect x="130" y="50" width="80" height="25" fill="#fce7f3" rx="6"/>
+  <text x="170" y="67" text-anchor="middle" fill="#9d174d" font-size="9" font-weight="bold" font-family="sans-serif">Manuelita 1950</text>
+  <line x1="210" y1="62" x2="240" y2="62" stroke="#8b5cf6" stroke-width="2" marker-end="url(#arrow2)"/>
+  <rect x="240" y="50" width="50" height="25" fill="#fee2e2" rx="6"/>
+  <text x="265" y="67" text-anchor="middle" fill="#991b1b" font-size="9" font-weight="bold" font-family="sans-serif">Caída 1955</text>
+  <rect x="20" y="100" width="260" height="80" fill="#f1f5f9" rx="8"/>
+  <text x="150" y="120" text-anchor="middle" fill="#1e293b" font-size="10" font-weight="bold" font-family="sans-serif">Características del Ochenio</text>
+  <text x="30" y="138" fill="#475569" font-size="9" font-family="sans-serif">• Represión de opositores</text>
+  <text x="30" y="153" fill="#475569" font-size="9" font-family="sans-serif">• Censura de prensa</text>
+  <text x="30" y="168" fill="#475569" font-size="9" font-family="sans-serif">• Desarrollo económico</text>
+  <defs><marker id="arrow2" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#7c3aed"/></marker></defs>
+</svg>`
     ],
     exercises: [
       { id: 4010, question: "¿En qué año dio su golpe de estado Manuel A. Odría?", options: ["1946", "1948", "1950", "1952"], correctIndex: 1, explanation: "Odría dio su golpe de estado el 27 de octubre de 1948, derrocando al gobierno de Bustamante y Rivero.", difficulty: "basico" },
@@ -5154,24 +5154,24 @@ const historiaModulesPart2: CourseModule[] = [
       }
     ],
     illustrations: [
-      '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">',
-      '  <rect width="300" height="200" fill="#f8fafc" rx="12"/>',
-      '  <text x="150" y="25" text-anchor="middle" fill="#059669" font-size="12" font-weight="bold" font-family="sans-serif">Primer Gobierno de Belaúnde (1963-1968)</text>',
-      '  <rect x="20" y="50" width="80" height="30" fill="#d1fae5" rx="6"/>',
-      '  <text x="60" y="70" text-anchor="middle" fill="#065f46" font-size="9" font-weight="bold" font-family="sans-serif">Elección 1963</text>',
-      '  <line x1="100" y1="65" x2="130" y2="65" stroke="#059669" stroke-width="2" marker-end="url(#arrow3)"/>',
-      '  <rect x="130" y="50" width="80" height="30" fill="#ecfdf5" rx="6"/>',
-      '  <text x="170" y="70" text-anchor="middle" fill="#065f46" font-size="9" font-weight="bold" font-family="sans-serif">Gobierno</text>',
-      '  <line x1="210" y1="65" x2="240" y2="65" stroke="#059669" stroke-width="2" marker-end="url(#arrow3)"/>',
-      '  <rect x="240" y="50" width="50" height="30" fill="#fee2e2" rx="6"/>',
-      '  <text x="265" y="70" text-anchor="middle" fill="#991b1b" font-size="9" font-weight="bold" font-family="sans-serif">Golpe 1968</text>',
-      '  <rect x="20" y="100" width="260" height="80" fill="#f1f5f9" rx="8"/>',
-      '  <text x="150" y="118" text-anchor="middle" fill="#1e293b" font-size="10" font-weight="bold" font-family="sans-serif">Tensiones del gobierno</text>',
-      '  <text x="30" y="136" fill="#475569" font-size="9" font-family="sans-serif">• Reforma agraria insuficiente</text>',
-      '  <text x="30" y="151" fill="#475569" font-size="9" font-family="sans-serif">• Oposición del APRA</text>',
-      '  <text x="30" y="166" fill="#475569" font-size="9" font-family="sans-serif">• Crisis económica y golpe militar</text>',
-      '  <defs><marker id="arrow3" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#059669"/></marker></defs>',
-      '</svg>'
+      `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="200" fill="#f8fafc" rx="12"/>
+  <text x="150" y="25" text-anchor="middle" fill="#059669" font-size="12" font-weight="bold" font-family="sans-serif">Primer Gobierno de Belaúnde (1963-1968)</text>
+  <rect x="20" y="50" width="80" height="30" fill="#d1fae5" rx="6"/>
+  <text x="60" y="70" text-anchor="middle" fill="#065f46" font-size="9" font-weight="bold" font-family="sans-serif">Elección 1963</text>
+  <line x1="100" y1="65" x2="130" y2="65" stroke="#059669" stroke-width="2" marker-end="url(#arrow3)"/>
+  <rect x="130" y="50" width="80" height="30" fill="#ecfdf5" rx="6"/>
+  <text x="170" y="70" text-anchor="middle" fill="#065f46" font-size="9" font-weight="bold" font-family="sans-serif">Gobierno</text>
+  <line x1="210" y1="65" x2="240" y2="65" stroke="#059669" stroke-width="2" marker-end="url(#arrow3)"/>
+  <rect x="240" y="50" width="50" height="30" fill="#fee2e2" rx="6"/>
+  <text x="265" y="70" text-anchor="middle" fill="#991b1b" font-size="9" font-weight="bold" font-family="sans-serif">Golpe 1968</text>
+  <rect x="20" y="100" width="260" height="80" fill="#f1f5f9" rx="8"/>
+  <text x="150" y="118" text-anchor="middle" fill="#1e293b" font-size="10" font-weight="bold" font-family="sans-serif">Tensiones del gobierno</text>
+  <text x="30" y="136" fill="#475569" font-size="9" font-family="sans-serif">• Reforma agraria insuficiente</text>
+  <text x="30" y="151" fill="#475569" font-size="9" font-family="sans-serif">• Oposición del APRA</text>
+  <text x="30" y="166" fill="#475569" font-size="9" font-family="sans-serif">• Crisis económica y golpe militar</text>
+  <defs><marker id="arrow3" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#059669"/></marker></defs>
+</svg>`
     ],
     exercises: [
       { id: 4020, question: "¿En qué año fue elegido Fernando Belaúnde Terry como presidente del Perú?", options: ["1960", "1963", "1966", "1968"], correctIndex: 1, explanation: "Belaúnde fue elegido en 1963 con el apoyo de la coalición Acción Popular-MDP.", difficulty: "basico" },
@@ -5221,22 +5221,22 @@ const historiaModulesPart2: CourseModule[] = [
       }
     ],
     illustrations: [
-      '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">',
-      '  <rect width="300" height="200" fill="#f8fafc" rx="12"/>',
-      '  <text x="150" y="25" text-anchor="middle" fill="#ea580c" font-size="12" font-weight="bold" font-family="sans-serif">Reforma Agraria: Velasco (1968-1975)</text>',
-      '  <rect x="20" y="45" width="100" height="30" fill="#fed7aa" rx="6"/>',
-      '  <text x="70" y="65" text-anchor="middle" fill="#9a3412" font-size="9" font-weight="bold" font-family="sans-serif">Golpe 1968</text>',
-      '  <line x1="120" y1="60" x2="150" y2="60" stroke="#ea580c" stroke-width="2" marker-end="url(#arrow4)"/>',
-      '  <rect x="150" y="45" width="100" height="30" fill="#fef3c7" rx="6"/>',
-      '  <text x="200" y="65" text-anchor="middle" fill="#92400e" font-size="9" font-weight="bold" font-family="sans-serif">Reforma 1969</text>',
-      '  <line x1="250" y1="60" x2="275" y2="60" stroke="#ea580c" stroke-width="2" marker-end="url(#arrow4)"/>',
-      '  <rect x="20" y="95" width="260" height="85" fill="#f1f5f9" rx="8"/>',
-      '  <text x="150" y="115" text-anchor="middle" fill="#1e293b" font-size="10" font-weight="bold" font-family="sans-serif">Transformación Agraria</text>',
-      '  <text x="30" y="133" fill="#475569" font-size="9" font-family="sans-serif">Latifundio → Minifundio + Cooperativas</text>',
-      '  <text x="30" y="148" fill="#475569" font-size="9" font-family="sans-serif">Nacionalización de empresas extranjeras</text>',
-      '  <text x="30" y="163" fill="#475569" font-size="9" font-family="sans-serif">Migración rural-urbana masiva</text>',
-      '  <defs><marker id="arrow4" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#ea580c"/></marker></defs>',
-      '</svg>'
+      `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="200" fill="#f8fafc" rx="12"/>
+  <text x="150" y="25" text-anchor="middle" fill="#ea580c" font-size="12" font-weight="bold" font-family="sans-serif">Reforma Agraria: Velasco (1968-1975)</text>
+  <rect x="20" y="45" width="100" height="30" fill="#fed7aa" rx="6"/>
+  <text x="70" y="65" text-anchor="middle" fill="#9a3412" font-size="9" font-weight="bold" font-family="sans-serif">Golpe 1968</text>
+  <line x1="120" y1="60" x2="150" y2="60" stroke="#ea580c" stroke-width="2" marker-end="url(#arrow4)"/>
+  <rect x="150" y="45" width="100" height="30" fill="#fef3c7" rx="6"/>
+  <text x="200" y="65" text-anchor="middle" fill="#92400e" font-size="9" font-weight="bold" font-family="sans-serif">Reforma 1969</text>
+  <line x1="250" y1="60" x2="275" y2="60" stroke="#ea580c" stroke-width="2" marker-end="url(#arrow4)"/>
+  <rect x="20" y="95" width="260" height="85" fill="#f1f5f9" rx="8"/>
+  <text x="150" y="115" text-anchor="middle" fill="#1e293b" font-size="10" font-weight="bold" font-family="sans-serif">Transformación Agraria</text>
+  <text x="30" y="133" fill="#475569" font-size="9" font-family="sans-serif">Latifundio → Minifundio + Cooperativas</text>
+  <text x="30" y="148" fill="#475569" font-size="9" font-family="sans-serif">Nacionalización de empresas extranjeras</text>
+  <text x="30" y="163" fill="#475569" font-size="9" font-family="sans-serif">Migración rural-urbana masiva</text>
+  <defs><marker id="arrow4" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#ea580c"/></marker></defs>
+</svg>`
     ],
     exercises: [
       { id: 4030, question: "¿En qué año se implementó la Reforma Agraria en el Perú?", options: ["1968", "1969", "1970", "1975"], correctIndex: 1, explanation: "La Reforma Agraria se implementó en 1969 bajo el gobierno de Velasco Alvarado.", difficulty: "basico" },
@@ -5287,20 +5287,20 @@ const historiaModulesPart2: CourseModule[] = [
       }
     ],
     illustrations: [
-      '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">',
-      '  <rect width="300" height="200" fill="#f8fafc" rx="12"/>',
-      '  <text x="150" y="25" text-anchor="middle" fill="#dc2626" font-size="12" font-weight="bold" font-family="sans-serif">Terrorismo y Dictadura (1980-2000)</text>',
-      '  <rect x="20" y="45" width="120" height="30" fill="#fee2e2" rx="6"/>',
-      '  <text x="80" y="65" text-anchor="middle" fill="#991b1b" font-size="9" font-weight="bold" font-family="sans-serif">Sendero Luminoso</text>',
-      '  <rect x="160" y="45" width="120" height="30" fill="#fef3c7" rx="6"/>',
-      '  <text x="220" y="65" text-anchor="middle" fill="#92400e" font-size="9" font-weight="bold" font-family="sans-serif">MRTA</text>',
-      '  <rect x="20" y="95" width="260" height="90" fill="#f1f5f9" rx="8"/>',
-      '  <text x="150" y="115" text-anchor="middle" fill="#1e293b" font-size="10" font-weight="bold" font-family="sans-serif">Impacto del Conflicto</text>',
-      '  <text x="30" y="133" fill="#475569" font-size="9" font-family="sans-serif">• 69,000+ víctimas mortales</text>',
-      '  <text x="30" y="148" fill="#475569" font-size="9" font-family="sans-serif">• Autogolpe de Fujimori (1992)</text>',
-      '  <text x="30" y="163" fill="#475569" font-size="9" font-family="sans-serif">• Captura de Guzmán (1992)</text>',
-      '  <text x="30" y="178" fill="#475569" font-size="9" font-family="sans-serif">• Violaciones de derechos humanos</text>',
-      '</svg>'
+      `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="200" fill="#f8fafc" rx="12"/>
+  <text x="150" y="25" text-anchor="middle" fill="#dc2626" font-size="12" font-weight="bold" font-family="sans-serif">Terrorismo y Dictadura (1980-2000)</text>
+  <rect x="20" y="45" width="120" height="30" fill="#fee2e2" rx="6"/>
+  <text x="80" y="65" text-anchor="middle" fill="#991b1b" font-size="9" font-weight="bold" font-family="sans-serif">Sendero Luminoso</text>
+  <rect x="160" y="45" width="120" height="30" fill="#fef3c7" rx="6"/>
+  <text x="220" y="65" text-anchor="middle" fill="#92400e" font-size="9" font-weight="bold" font-family="sans-serif">MRTA</text>
+  <rect x="20" y="95" width="260" height="90" fill="#f1f5f9" rx="8"/>
+  <text x="150" y="115" text-anchor="middle" fill="#1e293b" font-size="10" font-weight="bold" font-family="sans-serif">Impacto del Conflicto</text>
+  <text x="30" y="133" fill="#475569" font-size="9" font-family="sans-serif">• 69,000+ víctimas mortales</text>
+  <text x="30" y="148" fill="#475569" font-size="9" font-family="sans-serif">• Autogolpe de Fujimori (1992)</text>
+  <text x="30" y="163" fill="#475569" font-size="9" font-family="sans-serif">• Captura de Guzmán (1992)</text>
+  <text x="30" y="178" fill="#475569" font-size="9" font-family="sans-serif">• Violaciones de derechos humanos</text>
+</svg>`
     ],
     exercises: [
       { id: 4040, question: "¿Quién fue el líder del Sendero Luminoso?", options: ["Abimael Guzmán", "Vladimiro Montesinos", "Alberto Fujimori", "Oscar Ramírez"], correctIndex: 0, explanation: "Abimael Guzmán fue el líder fundador del Sendero Luminoso, capturado en 1992.", difficulty: "basico" },
@@ -5351,25 +5351,25 @@ const historiaModulesPart2: CourseModule[] = [
       }
     ],
     illustrations: [
-      '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">',
-      '  <rect width="300" height="200" fill="#f8fafc" rx="12"/>',
-      '  <text x="150" y="25" text-anchor="middle" fill="#0891b2" font-size="12" font-weight="bold" font-family="sans-serif">Transición Democrática (2001-2016)</text>',
-      '  <rect x="15" y="45" width="80" height="25" fill="#cffafe" rx="6"/>',
-      '  <text x="55" y="62" text-anchor="middle" fill="#155e75" font-size="8" font-weight="bold" font-family="sans-serif">Paniagua</text>',
-      '  <line x1="95" y1="57" x2="110" y2="57" stroke="#0891b2" stroke-width="2" marker-end="url(#arrow5)"/>',
-      '  <rect x="110" y="45" width="80" height="25" fill="#cffafe" rx="6"/>',
-      '  <text x="150" y="62" text-anchor="middle" fill="#155e75" font-size="8" font-weight="bold" font-family="sans-serif">Toledo</text>',
-      '  <line x1="190" y1="57" x2="205" y2="57" stroke="#0891b2" stroke-width="2" marker-end="url(#arrow5)"/>',
-      '  <rect x="205" y="45" width="80" height="25" fill="#cffafe" rx="6"/>',
-      '  <text x="245" y="62" text-anchor="middle" fill="#155e75" font-size="8" font-weight="bold" font-family="sans-serif">Humala</text>',
-      '  <rect x="20" y="90" width="260" height="95" fill="#f1f5f9" rx="8"/>',
-      '  <text x="150" y="110" text-anchor="middle" fill="#1e293b" font-size="10" font-weight="bold" font-family="sans-serif">Balance de la Transición</text>',
-      '  <text x="30" y="128" fill="#16a34a" font-size="9" font-family="sans-serif">+ Crecimiento económico sostenido</text>',
-      '  <text x="30" y="143" fill="#16a34a" font-size="9" font-family="sans-serif">+ Reducción de pobreza</text>',
-      '  <text x="30" y="158" fill="#dc2626" font-size="9" font-family="sans-serif">- Corrupción generalizada</text>',
-      '  <text x="30" y="173" fill="#dc2626" font-size="9" font-family="sans-serif">- Debilidad institucional</text>',
-      '  <defs><marker id="arrow5" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#0891b2"/></marker></defs>',
-      '</svg>'
+      `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="200" fill="#f8fafc" rx="12"/>
+  <text x="150" y="25" text-anchor="middle" fill="#0891b2" font-size="12" font-weight="bold" font-family="sans-serif">Transición Democrática (2001-2016)</text>
+  <rect x="15" y="45" width="80" height="25" fill="#cffafe" rx="6"/>
+  <text x="55" y="62" text-anchor="middle" fill="#155e75" font-size="8" font-weight="bold" font-family="sans-serif">Paniagua</text>
+  <line x1="95" y1="57" x2="110" y2="57" stroke="#0891b2" stroke-width="2" marker-end="url(#arrow5)"/>
+  <rect x="110" y="45" width="80" height="25" fill="#cffafe" rx="6"/>
+  <text x="150" y="62" text-anchor="middle" fill="#155e75" font-size="8" font-weight="bold" font-family="sans-serif">Toledo</text>
+  <line x1="190" y1="57" x2="205" y2="57" stroke="#0891b2" stroke-width="2" marker-end="url(#arrow5)"/>
+  <rect x="205" y="45" width="80" height="25" fill="#cffafe" rx="6"/>
+  <text x="245" y="62" text-anchor="middle" fill="#155e75" font-size="8" font-weight="bold" font-family="sans-serif">Humala</text>
+  <rect x="20" y="90" width="260" height="95" fill="#f1f5f9" rx="8"/>
+  <text x="150" y="110" text-anchor="middle" fill="#1e293b" font-size="10" font-weight="bold" font-family="sans-serif">Balance de la Transición</text>
+  <text x="30" y="128" fill="#16a34a" font-size="9" font-family="sans-serif">+ Crecimiento económico sostenido</text>
+  <text x="30" y="143" fill="#16a34a" font-size="9" font-family="sans-serif">+ Reducción de pobreza</text>
+  <text x="30" y="158" fill="#dc2626" font-size="9" font-family="sans-serif">- Corrupción generalizada</text>
+  <text x="30" y="173" fill="#dc2626" font-size="9" font-family="sans-serif">- Debilidad institucional</text>
+  <defs><marker id="arrow5" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#0891b2"/></marker></defs>
+</svg>`
     ],
     exercises: [
       { id: 4050, question: "¿Quién asumió la presidencia tras la caída de Fujimori en 2001?", options: ["Valentín Paniagua", "Alejandro Toledo", "Alan García", "Ollanta Humala"], correctIndex: 0, explanation: "Valentín Paniagua asumió la presidencia como presidente del Congreso tras la renuncia de Fujimori.", difficulty: "basico" },
@@ -5420,28 +5420,28 @@ const historiaModulesPart2: CourseModule[] = [
       }
     ],
     illustrations: [
-      '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">',
-      '  <rect width="300" height="200" fill="#f8fafc" rx="12"/>',
-      '  <text x="150" y="25" text-anchor="middle" fill="#9333ea" font-size="12" font-weight="bold" font-family="sans-serif">Perú Contemporáneo (2016-2025)</text>',
-      '  <rect x="10" y="45" width="60" height="25" fill="#f3e8ff" rx="6"/>',
-      '  <text x="40" y="62" text-anchor="middle" fill="#6b21a8" font-size="7" font-weight="bold" font-family="sans-serif">Kuczynski</text>',
-      '  <line x1="70" y1="57" x2="82" y2="57" stroke="#9333ea" stroke-width="2" marker-end="url(#arrow6)"/>',
-      '  <rect x="82" y="45" width="60" height="25" fill="#fce7f3" rx="6"/>',
-      '  <text x="112" y="62" text-anchor="middle" fill="#9d174d" font-size="7" font-weight="bold" font-family="sans-serif">Vizcarra</text>',
-      '  <line x1="142" y1="57" x2="154" y2="57" stroke="#9333ea" stroke-width="2" marker-end="url(#arrow6)"/>',
-      '  <rect x="154" y="45" width="60" height="25" fill="#fee2e2" rx="6"/>',
-      '  <text x="184" y="62" text-anchor="middle" fill="#991b1b" font-size="7" font-weight="bold" font-family="sans-serif">Castillo</text>',
-      '  <line x1="214" y1="57" x2="226" y2="57" stroke="#9333ea" stroke-width="2" marker-end="url(#arrow6)"/>',
-      '  <rect x="226" y="45" width="65" height="25" fill="#fef3c7" rx="6"/>',
-      '  <text x="258" y="62" text-anchor="middle" fill="#92400e" font-size="7" font-weight="bold" font-family="sans-serif">Boluarte</text>',
-      '  <rect x="20" y="90" width="260" height="95" fill="#f1f5f9" rx="8"/>',
-      '  <text x="150" y="110" text-anchor="middle" fill="#1e293b" font-size="10" font-weight="bold" font-family="sans-serif">Crisis Institucional</text>',
-      '  <text x="30" y="128" fill="#475569" font-size="9" font-family="sans-serif">• Vacancias presidenciales (2020, 2022)</text>',
-      '  <text x="30" y="143" fill="#475569" font-size="9" font-family="sans-serif">• Protestas sociales masivas</text>',
-      '  <text x="30" y="158" fill="#475569" font-size="9" font-family="sans-serif">• Debate constitucional</text>',
-      '  <text x="30" y="173" fill="#475569" font-size="9" font-family="sans-serif">• Polarización política extrema</text>',
-      '  <defs><marker id="arrow6" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#9333ea"/></marker></defs>',
-      '</svg>'
+      `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="200" fill="#f8fafc" rx="12"/>
+  <text x="150" y="25" text-anchor="middle" fill="#9333ea" font-size="12" font-weight="bold" font-family="sans-serif">Perú Contemporáneo (2016-2025)</text>
+  <rect x="10" y="45" width="60" height="25" fill="#f3e8ff" rx="6"/>
+  <text x="40" y="62" text-anchor="middle" fill="#6b21a8" font-size="7" font-weight="bold" font-family="sans-serif">Kuczynski</text>
+  <line x1="70" y1="57" x2="82" y2="57" stroke="#9333ea" stroke-width="2" marker-end="url(#arrow6)"/>
+  <rect x="82" y="45" width="60" height="25" fill="#fce7f3" rx="6"/>
+  <text x="112" y="62" text-anchor="middle" fill="#9d174d" font-size="7" font-weight="bold" font-family="sans-serif">Vizcarra</text>
+  <line x1="142" y1="57" x2="154" y2="57" stroke="#9333ea" stroke-width="2" marker-end="url(#arrow6)"/>
+  <rect x="154" y="45" width="60" height="25" fill="#fee2e2" rx="6"/>
+  <text x="184" y="62" text-anchor="middle" fill="#991b1b" font-size="7" font-weight="bold" font-family="sans-serif">Castillo</text>
+  <line x1="214" y1="57" x2="226" y2="57" stroke="#9333ea" stroke-width="2" marker-end="url(#arrow6)"/>
+  <rect x="226" y="45" width="65" height="25" fill="#fef3c7" rx="6"/>
+  <text x="258" y="62" text-anchor="middle" fill="#92400e" font-size="7" font-weight="bold" font-family="sans-serif">Boluarte</text>
+  <rect x="20" y="90" width="260" height="95" fill="#f1f5f9" rx="8"/>
+  <text x="150" y="110" text-anchor="middle" fill="#1e293b" font-size="10" font-weight="bold" font-family="sans-serif">Crisis Institucional</text>
+  <text x="30" y="128" fill="#475569" font-size="9" font-family="sans-serif">• Vacancias presidenciales (2020, 2022)</text>
+  <text x="30" y="143" fill="#475569" font-size="9" font-family="sans-serif">• Protestas sociales masivas</text>
+  <text x="30" y="158" fill="#475569" font-size="9" font-family="sans-serif">• Debate constitucional</text>
+  <text x="30" y="173" fill="#475569" font-size="9" font-family="sans-serif">• Polarización política extrema</text>
+  <defs><marker id="arrow6" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#9333ea"/></marker></defs>
+</svg>`
     ],
     exercises: [
       { id: 4060, question: "¿Por qué renunció Pedro Pablo Kuczynski en 2018?", options: ["Ante la amenaza de vacancia por corrupción", "Por razones de salud", "Tras perder las elecciones", "Por conflictos con el Congreso"], correctIndex: 0, explanation: "Kuczynski renunció en marzo de 2018 antes de que el Congreso votara su vacancia por presuntos pagos ilegales de Odebrecht.", difficulty: "basico" },
@@ -5492,20 +5492,20 @@ const historiaModulesPart2: CourseModule[] = [
       }
     ],
     illustrations: [
-      '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">',
-      '  <rect width="300" height="200" fill="#f8fafc" rx="12"/>',
-      '  <text x="150" y="25" text-anchor="middle" fill="#b91c1c" font-size="12" font-weight="bold" font-family="sans-serif">Derechos Humanos y Comisión de la Verdad</text>',
-      '  <rect x="20" y="45" width="260" height="30" fill="#fef2f2" rx="6"/>',
-      '  <text x="150" y="65" text-anchor="middle" fill="#991b1b" font-size="10" font-weight="bold" font-family="sans-serif">69,280 víctimas documentadas (1980-2000)</text>',
-      '  <rect x="20" y="90" width="120" height="45" fill="#f1f5f9" rx="6"/>',
-      '  <text x="80" y="108" text-anchor="middle" fill="#1e293b" font-size="9" font-weight="bold" font-family="sans-serif">CVR (2001-2003)</text>',
-      '  <text x="80" y="125" text-anchor="middle" fill="#475569" font-size="8" font-family="sans-serif">Verdad y Reconciliación</text>',
-      '  <rect x="160" y="90" width="120" height="45" fill="#f1f5f9" rx="6"/>',
-      '  <text x="220" y="108" text-anchor="middle" fill="#1e293b" font-size="9" font-weight="bold" font-family="sans-serif">Casos Emblemáticos</text>',
-      '  <text x="220" y="125" text-anchor="middle" fill="#475569" font-size="8" font-family="sans-serif">Barrios Altos, Penales</text>',
-      '  <rect x="20" y="150" width="260" height="35" fill="#ecfdf5" rx="6"/>',
-      '  <text x="150" y="172" text-anchor="middle" fill="#065f46" font-size="9" font-weight="bold" font-family="sans-serif">Justicia Transicional + Reparaciones + Memoria</text>',
-      '</svg>'
+      `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="200" fill="#f8fafc" rx="12"/>
+  <text x="150" y="25" text-anchor="middle" fill="#b91c1c" font-size="12" font-weight="bold" font-family="sans-serif">Derechos Humanos y Comisión de la Verdad</text>
+  <rect x="20" y="45" width="260" height="30" fill="#fef2f2" rx="6"/>
+  <text x="150" y="65" text-anchor="middle" fill="#991b1b" font-size="10" font-weight="bold" font-family="sans-serif">69,280 víctimas documentadas (1980-2000)</text>
+  <rect x="20" y="90" width="120" height="45" fill="#f1f5f9" rx="6"/>
+  <text x="80" y="108" text-anchor="middle" fill="#1e293b" font-size="9" font-weight="bold" font-family="sans-serif">CVR (2001-2003)</text>
+  <text x="80" y="125" text-anchor="middle" fill="#475569" font-size="8" font-family="sans-serif">Verdad y Reconciliación</text>
+  <rect x="160" y="90" width="120" height="45" fill="#f1f5f9" rx="6"/>
+  <text x="220" y="108" text-anchor="middle" fill="#1e293b" font-size="9" font-weight="bold" font-family="sans-serif">Casos Emblemáticos</text>
+  <text x="220" y="125" text-anchor="middle" fill="#475569" font-size="8" font-family="sans-serif">Barrios Altos, Penales</text>
+  <rect x="20" y="150" width="260" height="35" fill="#ecfdf5" rx="6"/>
+  <text x="150" y="172" text-anchor="middle" fill="#065f46" font-size="9" font-weight="bold" font-family="sans-serif">Justicia Transicional + Reparaciones + Memoria</text>
+</svg>`
     ],
     exercises: [
       { id: 4070, question: "¿Cuántas víctimas documentó la Comisión de la Verdad y Reconciliación?", options: ["69,280", "50,000", "100,000", "30,000"], correctIndex: 0, explanation: "La CVR documentó 69,280 víctimas mortales y desaparecidos durante el conflicto armado interno (1980-2000).", difficulty: "basico" },
@@ -5558,25 +5558,25 @@ const historiaModulesPart3: CourseModule[] = [
       }
     ],
     illustrations: [
-      '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">',
-      '  <rect width="300" height="200" fill="#f8fafc" rx="12"/>',
-      '  <text x="150" y="25" text-anchor="middle" fill="#2563eb" font-size="12" font-weight="bold" font-family="sans-serif">La Revolución Francesa (1789)</text>',
-      '  <rect x="30" y="45" width="70" height="110" fill="#fecaca" rx="6"/>',
-      '  <text x="65" y="75" text-anchor="middle" fill="#991b1b" font-size="9" font-weight="bold" font-family="sans-serif">CLERO</text>',
-      '  <text x="65" y="90" text-anchor="middle" fill="#991b1b" font-size="8" font-family="sans-serif">Privilegios</text>',
-      '  <text x="65" y="102" text-anchor="middle" fill="#991b1b" font-size="8" font-family="sans-serif">fiscales</text>',
-      '  <rect x="115" y="45" width="70" height="110" fill="#fed7aa" rx="6"/>',
-      '  <text x="150" y="75" text-anchor="middle" fill="#9a3412" font-size="9" font-weight="bold" font-family="sans-serif">NOBLEZA</text>',
-      '  <text x="150" y="90" text-anchor="middle" fill="#9a3412" font-size="8" font-family="sans-serif">Monopolio</text>',
-      '  <text x="150" y="102" text-anchor="middle" fill="#9a3412" font-size="8" font-family="sans-serif">territorial</text>',
-      '  <rect x="200" y="45" width="70" height="110" fill="#bbf7d0" rx="6"/>',
-      '  <text x="235" y="75" text-anchor="middle" fill="#166534" font-size="9" font-weight="bold" font-family="sans-serif">PUEBLO</text>',
-      '  <text x="235" y="90" text-anchor="middle" fill="#166534" font-size="8" font-family="sans-serif">97%</text>',
-      '  <text x="235" y="102" text-anchor="middle" fill="#166534" font-size="8" font-family="sans-serif">Sin derechos</text>',
-      '  <line x1="150" y1="165" x2="150" y2="180" stroke="#dc2626" stroke-width="2"/>',
-      '  <polygon points="145,180 155,180 150,190" fill="#dc2626"/>',
-      '  <text x="150" y="198" text-anchor="middle" fill="#dc2626" font-size="8" font-family="sans-serif">14 jul 1789: Toma de la Bastilla</text>',
-      '</svg>'
+      `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="200" fill="#f8fafc" rx="12"/>
+  <text x="150" y="25" text-anchor="middle" fill="#2563eb" font-size="12" font-weight="bold" font-family="sans-serif">La Revolución Francesa (1789)</text>
+  <rect x="30" y="45" width="70" height="110" fill="#fecaca" rx="6"/>
+  <text x="65" y="75" text-anchor="middle" fill="#991b1b" font-size="9" font-weight="bold" font-family="sans-serif">CLERO</text>
+  <text x="65" y="90" text-anchor="middle" fill="#991b1b" font-size="8" font-family="sans-serif">Privilegios</text>
+  <text x="65" y="102" text-anchor="middle" fill="#991b1b" font-size="8" font-family="sans-serif">fiscales</text>
+  <rect x="115" y="45" width="70" height="110" fill="#fed7aa" rx="6"/>
+  <text x="150" y="75" text-anchor="middle" fill="#9a3412" font-size="9" font-weight="bold" font-family="sans-serif">NOBLEZA</text>
+  <text x="150" y="90" text-anchor="middle" fill="#9a3412" font-size="8" font-family="sans-serif">Monopolio</text>
+  <text x="150" y="102" text-anchor="middle" fill="#9a3412" font-size="8" font-family="sans-serif">territorial</text>
+  <rect x="200" y="45" width="70" height="110" fill="#bbf7d0" rx="6"/>
+  <text x="235" y="75" text-anchor="middle" fill="#166534" font-size="9" font-weight="bold" font-family="sans-serif">PUEBLO</text>
+  <text x="235" y="90" text-anchor="middle" fill="#166534" font-size="8" font-family="sans-serif">97%</text>
+  <text x="235" y="102" text-anchor="middle" fill="#166534" font-size="8" font-family="sans-serif">Sin derechos</text>
+  <line x1="150" y1="165" x2="150" y2="180" stroke="#dc2626" stroke-width="2"/>
+  <polygon points="145,180 155,180 150,190" fill="#dc2626"/>
+  <text x="150" y="198" text-anchor="middle" fill="#dc2626" font-size="8" font-family="sans-serif">14 jul 1789: Toma de la Bastilla</text>
+</svg>`
     ],
     exercises: [
       {
@@ -5662,29 +5662,29 @@ const historiaModulesPart3: CourseModule[] = [
       }
     ],
     illustrations: [
-      '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">',
-      '  <rect width="300" height="200" fill="#f8fafc" rx="12"/>',
-      '  <text x="150" y="25" text-anchor="middle" fill="#2563eb" font-size="12" font-weight="bold" font-family="sans-serif">Revolution Industrial (1760-1840)</text>',
-      '  <rect x="20" y="45" width="80" height="50" fill="#e0e7ff" rx="6"/>',
-      '  <text x="60" y="65" text-anchor="middle" fill="#3730a3" font-size="9" font-weight="bold" font-family="sans-serif">Máquina</text>',
-      '  <text x="60" y="78" text-anchor="middle" fill="#3730a3" font-size="9" font-family="sans-serif">de Vapor</text>',
-      '  <text x="60" y="89" text-anchor="middle" fill="#6366f1" font-size="8" font-family="sans-serif">Watt (1769)</text>',
-      '  <rect x="110" y="45" width="80" height="50" fill="#fef3c7" rx="6"/>',
-      '  <text x="150" y="65" text-anchor="middle" fill="#92400e" font-size="9" font-weight="bold" font-family="sans-serif">Hiladora</text>',
-      '  <text x="150" y="78" text-anchor="middle" fill="#92400e" font-size="9" font-family="sans-serif">Mecánica</text>',
-      '  <text x="150" y="89" text-anchor="middle" fill="#d97706" font-size="8" font-family="sans-serif">Arkwright (1769)</text>',
-      '  <rect x="200" y="45" width="80" height="50" fill="#dcfce7" rx="6"/>',
-      '  <text x="240" y="65" text-anchor="middle" fill="#166534" font-size="9" font-weight="bold" font-family="sans-serif">Ferrocarril</text>',
-      '  <text x="240" y="78" text-anchor="middle" fill="#166534" font-size="9" font-family="sans-serif">a Vapor</text>',
-      '  <text x="240" y="89" text-anchor="middle" fill="#22c55e" font-size="8" font-family="sans-serif">Stephenson (1825)</text>',
-      '  <line x1="60" y1="105" x2="60" y2="130" stroke="#6366f1" stroke-width="1.5"/>',
-      '  <line x1="150" y1="105" x2="150" y2="130" stroke="#d97706" stroke-width="1.5"/>',
-      '  <line x1="240" y1="105" x2="240" y2="130" stroke="#22c55e" stroke-width="1.5"/>',
-      '  <rect x="30" y="130" width="240" height="35" fill="#f1f5f9" rx="4" stroke="#cbd5e1"/>',
-      '  <text x="150" y="148" text-anchor="middle" fill="#1e293b" font-size="9" font-weight="bold" font-family="sans-serif">INGLATERRA: Carbón + Hierro + Capital + Colonias</text>',
-      '  <text x="150" y="160" text-anchor="middle" fill="#475569" font-size="8" font-family="sans-serif">→ Fábricas → Ciudad → Proletariado → Burguesía</text>',
-      '  <text x="150" y="190" text-anchor="middle" fill="#64748b" font-size="8" font-family="sans-serif">Origen: Inglaterra (1760) → Expansión global</text>',
-      '</svg>'
+      `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="200" fill="#f8fafc" rx="12"/>
+  <text x="150" y="25" text-anchor="middle" fill="#2563eb" font-size="12" font-weight="bold" font-family="sans-serif">Revolution Industrial (1760-1840)</text>
+  <rect x="20" y="45" width="80" height="50" fill="#e0e7ff" rx="6"/>
+  <text x="60" y="65" text-anchor="middle" fill="#3730a3" font-size="9" font-weight="bold" font-family="sans-serif">Máquina</text>
+  <text x="60" y="78" text-anchor="middle" fill="#3730a3" font-size="9" font-family="sans-serif">de Vapor</text>
+  <text x="60" y="89" text-anchor="middle" fill="#6366f1" font-size="8" font-family="sans-serif">Watt (1769)</text>
+  <rect x="110" y="45" width="80" height="50" fill="#fef3c7" rx="6"/>
+  <text x="150" y="65" text-anchor="middle" fill="#92400e" font-size="9" font-weight="bold" font-family="sans-serif">Hiladora</text>
+  <text x="150" y="78" text-anchor="middle" fill="#92400e" font-size="9" font-family="sans-serif">Mecánica</text>
+  <text x="150" y="89" text-anchor="middle" fill="#d97706" font-size="8" font-family="sans-serif">Arkwright (1769)</text>
+  <rect x="200" y="45" width="80" height="50" fill="#dcfce7" rx="6"/>
+  <text x="240" y="65" text-anchor="middle" fill="#166534" font-size="9" font-weight="bold" font-family="sans-serif">Ferrocarril</text>
+  <text x="240" y="78" text-anchor="middle" fill="#166534" font-size="9" font-family="sans-serif">a Vapor</text>
+  <text x="240" y="89" text-anchor="middle" fill="#22c55e" font-size="8" font-family="sans-serif">Stephenson (1825)</text>
+  <line x1="60" y1="105" x2="60" y2="130" stroke="#6366f1" stroke-width="1.5"/>
+  <line x1="150" y1="105" x2="150" y2="130" stroke="#d97706" stroke-width="1.5"/>
+  <line x1="240" y1="105" x2="240" y2="130" stroke="#22c55e" stroke-width="1.5"/>
+  <rect x="30" y="130" width="240" height="35" fill="#f1f5f9" rx="4" stroke="#cbd5e1"/>
+  <text x="150" y="148" text-anchor="middle" fill="#1e293b" font-size="9" font-weight="bold" font-family="sans-serif">INGLATERRA: Carbón + Hierro + Capital + Colonias</text>
+  <text x="150" y="160" text-anchor="middle" fill="#475569" font-size="8" font-family="sans-serif">→ Fábricas → Ciudad → Proletariado → Burguesía</text>
+  <text x="150" y="190" text-anchor="middle" fill="#64748b" font-size="8" font-family="sans-serif">Origen: Inglaterra (1760) → Expansión global</text>
+</svg>`
     ],
     exercises: [
       {
@@ -5770,27 +5770,27 @@ const historiaModulesPart3: CourseModule[] = [
       }
     ],
     illustrations: [
-      '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">',
-      '  <rect width="300" height="200" fill="#f8fafc" rx="12"/>',
-      '  <text x="150" y="25" text-anchor="middle" fill="#2563eb" font-size="12" font-weight="bold" font-family="sans-serif">Imperialismo y Colonialismo (1870-1914)</text>',
-      '  <ellipse cx="80" cy="105" rx="55" ry="60" fill="#fef3c7" stroke="#d97706" stroke-width="1"/>',
-      '  <text x="80" y="95" text-anchor="middle" fill="#92400e" font-size="9" font-weight="bold" font-family="sans-serif">ÁFRICA</text>',
-      '  <text x="80" y="108" text-anchor="middle" fill="#92400e" font-size="8" font-family="sans-serif">90% colonizada</text>',
-      '  <text x="80" y="120" text-anchor="middle" fill="#b45309" font-size="7" font-family="sans-serif">Berlín 1884</text>',
-      '  <ellipse cx="220" cy="105" rx="55" ry="60" fill="#dbeafe" stroke="#2563eb" stroke-width="1"/>',
-      '  <text x="220" y="95" text-anchor="middle" fill="#1e40af" font-size="9" font-weight="bold" font-family="sans-serif">ASIA</text>',
-      '  <text x="220" y="108" text-anchor="middle" fill="#1e40af" font-size="8" font-family="sans-serif">India, Indochina</text>',
-      '  <text x="220" y="120" text-anchor="middle" fill="#2563eb" font-size="7" font-family="sans-serif">Esferas de influencia</text>',
-      '  <line x1="135" y1="105" x2="165" y2="105" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="4,2"/>',
-      '  <rect x="25" y="170" width="60" height="18" fill="#fecaca" rx="3"/>',
-      '  <text x="55" y="182" text-anchor="middle" fill="#991b1b" font-size="7" font-weight="bold" font-family="sans-serif">GB: India</text>',
-      '  <rect x="95" y="170" width="60" height="18" fill="#bfdbfe" rx="3"/>',
-      '  <text x="125" y="182" text-anchor="middle" fill="#1e40af" font-size="7" font-weight="bold" font-family="sans-serif">Fr: Indochina</text>',
-      '  <rect x="165" y="170" width="60" height="18" fill="#bbf7d0" rx="3"/>',
-      '  <text x="195" y="182" text-anchor="middle" fill="#166534" font-size="7" font-weight="bold" font-family="sans-serif">Hol: Indonesia</text>',
-      '  <rect x="235" y="170" width="50" height="18" fill="#e9d5ff" rx="3"/>',
-      '  <text x="260" y="182" text-anchor="middle" fill="#6b21a8" font-size="7" font-weight="bold" font-family="sans-serif">Bel: Congo</text>',
-      '</svg>'
+      `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="200" fill="#f8fafc" rx="12"/>
+  <text x="150" y="25" text-anchor="middle" fill="#2563eb" font-size="12" font-weight="bold" font-family="sans-serif">Imperialismo y Colonialismo (1870-1914)</text>
+  <ellipse cx="80" cy="105" rx="55" ry="60" fill="#fef3c7" stroke="#d97706" stroke-width="1"/>
+  <text x="80" y="95" text-anchor="middle" fill="#92400e" font-size="9" font-weight="bold" font-family="sans-serif">ÁFRICA</text>
+  <text x="80" y="108" text-anchor="middle" fill="#92400e" font-size="8" font-family="sans-serif">90% colonizada</text>
+  <text x="80" y="120" text-anchor="middle" fill="#b45309" font-size="7" font-family="sans-serif">Berlín 1884</text>
+  <ellipse cx="220" cy="105" rx="55" ry="60" fill="#dbeafe" stroke="#2563eb" stroke-width="1"/>
+  <text x="220" y="95" text-anchor="middle" fill="#1e40af" font-size="9" font-weight="bold" font-family="sans-serif">ASIA</text>
+  <text x="220" y="108" text-anchor="middle" fill="#1e40af" font-size="8" font-family="sans-serif">India, Indochina</text>
+  <text x="220" y="120" text-anchor="middle" fill="#2563eb" font-size="7" font-family="sans-serif">Esferas de influencia</text>
+  <line x1="135" y1="105" x2="165" y2="105" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <rect x="25" y="170" width="60" height="18" fill="#fecaca" rx="3"/>
+  <text x="55" y="182" text-anchor="middle" fill="#991b1b" font-size="7" font-weight="bold" font-family="sans-serif">GB: India</text>
+  <rect x="95" y="170" width="60" height="18" fill="#bfdbfe" rx="3"/>
+  <text x="125" y="182" text-anchor="middle" fill="#1e40af" font-size="7" font-weight="bold" font-family="sans-serif">Fr: Indochina</text>
+  <rect x="165" y="170" width="60" height="18" fill="#bbf7d0" rx="3"/>
+  <text x="195" y="182" text-anchor="middle" fill="#166534" font-size="7" font-weight="bold" font-family="sans-serif">Hol: Indonesia</text>
+  <rect x="235" y="170" width="50" height="18" fill="#e9d5ff" rx="3"/>
+  <text x="260" y="182" text-anchor="middle" fill="#6b21a8" font-size="7" font-weight="bold" font-family="sans-serif">Bel: Congo</text>
+</svg>`
     ],
     exercises: [
       {
@@ -5876,25 +5876,25 @@ const historiaModulesPart3: CourseModule[] = [
       }
     ],
     illustrations: [
-      '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">',
-      '  <rect width="300" height="200" fill="#f8fafc" rx="12"/>',
-      '  <text x="150" y="22" text-anchor="middle" fill="#2563eb" font-size="12" font-weight="bold" font-family="sans-serif">Primera Guerra Mundial (1914-1918)</text>',
-      '  <rect x="15" y="40" width="120" height="55" fill="#dcfce7" rx="6"/>',
-      '  <text x="75" y="55" text-anchor="middle" fill="#166534" font-size="9" font-weight="bold" font-family="sans-serif">TRIPLE ENTENTE</text>',
-      '  <text x="75" y="68" text-anchor="middle" fill="#166534" font-size="8" font-family="sans-serif">Francia - GB - Rusia</text>',
-      '  <text x="75" y="80" text-anchor="middle" fill="#22c55e" font-size="8" font-family="sans-serif">+ Italia (1915) + EE.UU. (1917)</text>',
-      '  <rect x="165" y="40" width="120" height="55" fill="#fecaca" rx="6"/>',
-      '  <text x="225" y="55" text-anchor="middle" fill="#991b1b" font-size="9" font-weight="bold" font-family="sans-serif">POTENCIAS CENTRALES</text>',
-      '  <text x="225" y="68" text-anchor="middle" fill="#991b1b" font-size="8" font-family="sans-serif">Alemania - Austria-Hungría</text>',
-      '  <text x="225" y="80" text-anchor="middle" fill="#ef4444" font-size="8" font-family="sans-serif">+ Imperio Otomano</text>',
-      '  <line x1="135" y1="67" x2="165" y2="67" stroke="#dc2626" stroke-width="2"/>',
-      '  <text x="150" y="63" text-anchor="middle" fill="#dc2626" font-size="8" font-weight="bold" font-family="sans-serif">VS</text>',
-      '  <rect x="25" y="110" width="250" height="42" fill="#f1f5f9" rx="4" stroke="#cbd5e1"/>',
-      '  <text x="150" y="125" text-anchor="middle" fill="#1e293b" font-size="9" font-weight="bold" font-family="sans-serif">Batallas clave: Marne (1914) - Verdún (1916)</text>',
-      '  <text x="150" y="138" text-anchor="middle" fill="#475569" font-size="8" font-family="sans-serif">Somme (1916) - Nuevas armas: ametralladoras, gas, tanques</text>',
-      '  <rect x="25" y="160" width="250" height="28" fill="#e0e7ff" rx="4" stroke="#818cf8"/>',
-      '  <text x="150" y="178" text-anchor="middle" fill="#3730a3" font-size="9" font-weight="bold" font-family="sans-serif">Tratado de Versalles (1919) → Sociedad de Naciones</text>',
-      '</svg>'
+      `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="200" fill="#f8fafc" rx="12"/>
+  <text x="150" y="22" text-anchor="middle" fill="#2563eb" font-size="12" font-weight="bold" font-family="sans-serif">Primera Guerra Mundial (1914-1918)</text>
+  <rect x="15" y="40" width="120" height="55" fill="#dcfce7" rx="6"/>
+  <text x="75" y="55" text-anchor="middle" fill="#166534" font-size="9" font-weight="bold" font-family="sans-serif">TRIPLE ENTENTE</text>
+  <text x="75" y="68" text-anchor="middle" fill="#166534" font-size="8" font-family="sans-serif">Francia - GB - Rusia</text>
+  <text x="75" y="80" text-anchor="middle" fill="#22c55e" font-size="8" font-family="sans-serif">+ Italia (1915) + EE.UU. (1917)</text>
+  <rect x="165" y="40" width="120" height="55" fill="#fecaca" rx="6"/>
+  <text x="225" y="55" text-anchor="middle" fill="#991b1b" font-size="9" font-weight="bold" font-family="sans-serif">POTENCIAS CENTRALES</text>
+  <text x="225" y="68" text-anchor="middle" fill="#991b1b" font-size="8" font-family="sans-serif">Alemania - Austria-Hungría</text>
+  <text x="225" y="80" text-anchor="middle" fill="#ef4444" font-size="8" font-family="sans-serif">+ Imperio Otomano</text>
+  <line x1="135" y1="67" x2="165" y2="67" stroke="#dc2626" stroke-width="2"/>
+  <text x="150" y="63" text-anchor="middle" fill="#dc2626" font-size="8" font-weight="bold" font-family="sans-serif">VS</text>
+  <rect x="25" y="110" width="250" height="42" fill="#f1f5f9" rx="4" stroke="#cbd5e1"/>
+  <text x="150" y="125" text-anchor="middle" fill="#1e293b" font-size="9" font-weight="bold" font-family="sans-serif">Batallas clave: Marne (1914) - Verdún (1916)</text>
+  <text x="150" y="138" text-anchor="middle" fill="#475569" font-size="8" font-family="sans-serif">Somme (1916) - Nuevas armas: ametralladoras, gas, tanques</text>
+  <rect x="25" y="160" width="250" height="28" fill="#e0e7ff" rx="4" stroke="#818cf8"/>
+  <text x="150" y="178" text-anchor="middle" fill="#3730a3" font-size="9" font-weight="bold" font-family="sans-serif">Tratado de Versalles (1919) → Sociedad de Naciones</text>
+</svg>`
     ],
     exercises: [
       {
@@ -5980,34 +5980,34 @@ const historiaModulesPart3: CourseModule[] = [
       }
     ],
     illustrations: [
-      '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">',
-      '  <rect width="300" height="200" fill="#f8fafc" rx="12"/>',
-      '  <text x="150" y="22" text-anchor="middle" fill="#2563eb" font-size="12" font-weight="bold" font-family="sans-serif">Revolución Rusa y URSS (1917-1991)</text>',
-      '  <rect x="15" y="40" width="85" height="55" fill="#fecaca" rx="6"/>',
-      '  <text x="57" y="55" text-anchor="middle" fill="#991b1b" font-size="9" font-weight="bold" font-family="sans-serif">FEBRERO</text>',
-      '  <text x="57" y="68" text-anchor="middle" fill="#991b1b" font-size="8" font-family="sans-serif">1917</text>',
-      '  <text x="57" y="80" text-anchor="middle" fill="#991b1b" font-size="7" font-family="sans-serif">Cae el Zar</text>',
-      '  <text x="57" y="89" text-anchor="middle" fill="#ef4444" font-size="7" font-family="sans-serif">Gov. Provisional</text>',
-      '  <rect x="110" y="40" width="85" height="55" fill="#bbf7d0" rx="6"/>',
-      '  <text x="152" y="55" text-anchor="middle" fill="#166534" font-size="9" font-weight="bold" font-family="sans-serif">OCTUBRE</text>',
-      '  <text x="152" y="68" text-anchor="middle" fill="#166534" font-size="8" font-family="sans-serif">1917</text>',
-      '  <text x="152" y="80" text-anchor="middle" fill="#166534" font-size="7" font-family="sans-serif">Lenin toma</text>',
-      '  <text x="152" y="89" text-anchor="middle" fill="#22c55e" font-size="7" font-family="sans-serif">el poder</text>',
-      '  <rect x="205" y="40" width="85" height="55" fill="#e0e7ff" rx="6"/>',
-      '  <text x="247" y="55" text-anchor="middle" fill="#3730a3" font-size="9" font-weight="bold" font-family="sans-serif">URSS</text>',
-      '  <text x="247" y="68" text-anchor="middle" fill="#3730a3" font-size="8" font-family="sans-serif">1922-1991</text>',
-      '  <text x="247" y="80" text-anchor="middle" fill="#3730a3" font-size="7" font-family="sans-serif">Stalin → Stalinismo</text>',
-      '  <text x="247" y="89" text-anchor="middle" fill="#6366f1" font-size="7" font-family="sans-serif">Planes quinquenales</text>',
-      '  <line x1="100" y1="67" x2="110" y2="67" stroke="#64748b" stroke-width="1.5"/>',
-      '  <polygon points="107,63 107,71 113,67" fill="#64748b"/>',
-      '  <line x1="195" y1="67" x2="205" y2="67" stroke="#64748b" stroke-width="1.5"/>',
-      '  <polygon points="192,63 192,71 198,67" fill="#64748b"/>',
-      '  <rect x="25" y="110" width="250" height="75" fill="#f1f5f9" rx="4" stroke="#cbd5e1"/>',
-      '  <text x="150" y="125" text-anchor="middle" fill="#1e293b" font-size="9" font-weight="bold" font-family="sans-serif">Línea del tiempo</text>',
-      '  <text x="150" y="140" text-anchor="middle" fill="#475569" font-size="8" font-family="sans-serif">1917 Lenin → 1922 URSS → 1924 Stalin → 1991 Disolución</text>',
-      '  <text x="150" y="155" text-anchor="middle" fill="#475569" font-size="8" font-family="sans-serif">Guerra civil (1918-21) → NEP → Planes quinquenales</text>',
-      '  <text x="150" y="170" text-anchor="middle" fill="#475569" font-size="8" font-family="sans-serif">Modelo soviético → Guerra Fría → Caída (1991)</text>',
-      '</svg>'
+      `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="200" fill="#f8fafc" rx="12"/>
+  <text x="150" y="22" text-anchor="middle" fill="#2563eb" font-size="12" font-weight="bold" font-family="sans-serif">Revolución Rusa y URSS (1917-1991)</text>
+  <rect x="15" y="40" width="85" height="55" fill="#fecaca" rx="6"/>
+  <text x="57" y="55" text-anchor="middle" fill="#991b1b" font-size="9" font-weight="bold" font-family="sans-serif">FEBRERO</text>
+  <text x="57" y="68" text-anchor="middle" fill="#991b1b" font-size="8" font-family="sans-serif">1917</text>
+  <text x="57" y="80" text-anchor="middle" fill="#991b1b" font-size="7" font-family="sans-serif">Cae el Zar</text>
+  <text x="57" y="89" text-anchor="middle" fill="#ef4444" font-size="7" font-family="sans-serif">Gov. Provisional</text>
+  <rect x="110" y="40" width="85" height="55" fill="#bbf7d0" rx="6"/>
+  <text x="152" y="55" text-anchor="middle" fill="#166534" font-size="9" font-weight="bold" font-family="sans-serif">OCTUBRE</text>
+  <text x="152" y="68" text-anchor="middle" fill="#166534" font-size="8" font-family="sans-serif">1917</text>
+  <text x="152" y="80" text-anchor="middle" fill="#166534" font-size="7" font-family="sans-serif">Lenin toma</text>
+  <text x="152" y="89" text-anchor="middle" fill="#22c55e" font-size="7" font-family="sans-serif">el poder</text>
+  <rect x="205" y="40" width="85" height="55" fill="#e0e7ff" rx="6"/>
+  <text x="247" y="55" text-anchor="middle" fill="#3730a3" font-size="9" font-weight="bold" font-family="sans-serif">URSS</text>
+  <text x="247" y="68" text-anchor="middle" fill="#3730a3" font-size="8" font-family="sans-serif">1922-1991</text>
+  <text x="247" y="80" text-anchor="middle" fill="#3730a3" font-size="7" font-family="sans-serif">Stalin → Stalinismo</text>
+  <text x="247" y="89" text-anchor="middle" fill="#6366f1" font-size="7" font-family="sans-serif">Planes quinquenales</text>
+  <line x1="100" y1="67" x2="110" y2="67" stroke="#64748b" stroke-width="1.5"/>
+  <polygon points="107,63 107,71 113,67" fill="#64748b"/>
+  <line x1="195" y1="67" x2="205" y2="67" stroke="#64748b" stroke-width="1.5"/>
+  <polygon points="192,63 192,71 198,67" fill="#64748b"/>
+  <rect x="25" y="110" width="250" height="75" fill="#f1f5f9" rx="4" stroke="#cbd5e1"/>
+  <text x="150" y="125" text-anchor="middle" fill="#1e293b" font-size="9" font-weight="bold" font-family="sans-serif">Línea del tiempo</text>
+  <text x="150" y="140" text-anchor="middle" fill="#475569" font-size="8" font-family="sans-serif">1917 Lenin → 1922 URSS → 1924 Stalin → 1991 Disolución</text>
+  <text x="150" y="155" text-anchor="middle" fill="#475569" font-size="8" font-family="sans-serif">Guerra civil (1918-21) → NEP → Planes quinquenales</text>
+  <text x="150" y="170" text-anchor="middle" fill="#475569" font-size="8" font-family="sans-serif">Modelo soviético → Guerra Fría → Caída (1991)</text>
+</svg>`
     ],
     exercises: [
       {
@@ -6093,30 +6093,30 @@ const historiaModulesPart3: CourseModule[] = [
       }
     ],
     illustrations: [
-      '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">',
-      '  <rect width="300" height="200" fill="#f8fafc" rx="12"/>',
-      '  <text x="150" y="22" text-anchor="middle" fill="#2563eb" font-size="12" font-weight="bold" font-family="sans-serif">Segunda Guerra Mundial (1939-1945)</text>',
-      '  <rect x="15" y="40" width="120" height="55" fill="#dcfce7" rx="6"/>',
-      '  <text x="75" y="55" text-anchor="middle" fill="#166534" font-size="9" font-weight="bold" font-family="sans-serif">ALIADOS</text>',
-      '  <text x="75" y="68" text-anchor="middle" fill="#166534" font-size="7" font-family="sans-serif">EE.UU. - URSS - GB</text>',
-      '  <text x="75" y="80" text-anchor="middle" fill="#22c55e" font-size="7" font-family="sans-serif">Francia - China + otros</text>',
-      '  <text x="75" y="89" text-anchor="middle" fill="#166534" font-size="7" font-family="sans-serif">Victoria: mayo 1945 / sept 1945</text>',
-      '  <rect x="165" y="40" width="120" height="55" fill="#fecaca" rx="6"/>',
-      '  <text x="225" y="55" text-anchor="middle" fill="#991b1b" font-size="9" font-weight="bold" font-family="sans-serif">EJE</text>',
-      '  <text x="225" y="68" text-anchor="middle" fill="#991b1b" font-size="7" font-family="sans-serif">Hitler (Alemania)</text>',
-      '  <text x="225" y="80" text-anchor="middle" fill="#ef4444" font-size="7" font-family="sans-serif">Mussolini (Italia)</text>',
-      '  <text x="225" y="89" text-anchor="middle" fill="#991b1b" font-size="7" font-family="sans-serif">Tojo (Japón)</text>',
-      '  <line x1="135" y1="67" x2="165" y2="67" stroke="#dc2626" stroke-width="2"/>',
-      '  <text x="150" y="63" text-anchor="middle" fill="#dc2626" font-size="8" font-weight="bold" font-family="sans-serif">VS</text>',
-      '  <rect x="25" y="105" width="110" height="40" fill="#fef3c7" rx="4" stroke="#d97706"/>',
-      '  <text x="80" y="120" text-anchor="middle" fill="#92400e" font-size="8" font-weight="bold" font-family="sans-serif">Holocausto</text>',
-      '  <text x="80" y="132" text-anchor="middle" fill="#b45309" font-size="7" font-family="sans-serif">6M judíos asesinados</text>',
-      '  <rect x="145" y="105" width="110" height="40" fill="#e0e7ff" rx="4" stroke="#6366f1"/>',
-      '  <text x="200" y="120" text-anchor="middle" fill="#3730a3" font-size="8" font-weight="bold" font-family="sans-serif">Bomba Atómica</text>',
-      '  <text x="200" y="132" text-anchor="middle" fill="#6366f1" font-size="7" font-family="sans-serif">Hiroshima 6/ago/1945</text>',
-      '  <rect x="25" y="155" width="250" height="30" fill="#f1f5f9" rx="4" stroke="#cbd5e1"/>',
-      '  <text x="150" y="174" text-anchor="middle" fill="#1e293b" font-size="8" font-weight="bold" font-family="sans-serif">ONU (1945) → DDHH (1948) → Bipolaridad → Guerra Fría</text>',
-      '</svg>'
+      `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="200" fill="#f8fafc" rx="12"/>
+  <text x="150" y="22" text-anchor="middle" fill="#2563eb" font-size="12" font-weight="bold" font-family="sans-serif">Segunda Guerra Mundial (1939-1945)</text>
+  <rect x="15" y="40" width="120" height="55" fill="#dcfce7" rx="6"/>
+  <text x="75" y="55" text-anchor="middle" fill="#166534" font-size="9" font-weight="bold" font-family="sans-serif">ALIADOS</text>
+  <text x="75" y="68" text-anchor="middle" fill="#166534" font-size="7" font-family="sans-serif">EE.UU. - URSS - GB</text>
+  <text x="75" y="80" text-anchor="middle" fill="#22c55e" font-size="7" font-family="sans-serif">Francia - China + otros</text>
+  <text x="75" y="89" text-anchor="middle" fill="#166534" font-size="7" font-family="sans-serif">Victoria: mayo 1945 / sept 1945</text>
+  <rect x="165" y="40" width="120" height="55" fill="#fecaca" rx="6"/>
+  <text x="225" y="55" text-anchor="middle" fill="#991b1b" font-size="9" font-weight="bold" font-family="sans-serif">EJE</text>
+  <text x="225" y="68" text-anchor="middle" fill="#991b1b" font-size="7" font-family="sans-serif">Hitler (Alemania)</text>
+  <text x="225" y="80" text-anchor="middle" fill="#ef4444" font-size="7" font-family="sans-serif">Mussolini (Italia)</text>
+  <text x="225" y="89" text-anchor="middle" fill="#991b1b" font-size="7" font-family="sans-serif">Tojo (Japón)</text>
+  <line x1="135" y1="67" x2="165" y2="67" stroke="#dc2626" stroke-width="2"/>
+  <text x="150" y="63" text-anchor="middle" fill="#dc2626" font-size="8" font-weight="bold" font-family="sans-serif">VS</text>
+  <rect x="25" y="105" width="110" height="40" fill="#fef3c7" rx="4" stroke="#d97706"/>
+  <text x="80" y="120" text-anchor="middle" fill="#92400e" font-size="8" font-weight="bold" font-family="sans-serif">Holocausto</text>
+  <text x="80" y="132" text-anchor="middle" fill="#b45309" font-size="7" font-family="sans-serif">6M judíos asesinados</text>
+  <rect x="145" y="105" width="110" height="40" fill="#e0e7ff" rx="4" stroke="#6366f1"/>
+  <text x="200" y="120" text-anchor="middle" fill="#3730a3" font-size="8" font-weight="bold" font-family="sans-serif">Bomba Atómica</text>
+  <text x="200" y="132" text-anchor="middle" fill="#6366f1" font-size="7" font-family="sans-serif">Hiroshima 6/ago/1945</text>
+  <rect x="25" y="155" width="250" height="30" fill="#f1f5f9" rx="4" stroke="#cbd5e1"/>
+  <text x="150" y="174" text-anchor="middle" fill="#1e293b" font-size="8" font-weight="bold" font-family="sans-serif">ONU (1945) → DDHH (1948) → Bipolaridad → Guerra Fría</text>
+</svg>`
     ],
     exercises: [
       {
@@ -6202,27 +6202,27 @@ const historiaModulesPart3: CourseModule[] = [
       }
     ],
     illustrations: [
-      '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">',
-      '  <rect width="300" height="200" fill="#f8fafc" rx="12"/>',
-      '  <text x="150" y="22" text-anchor="middle" fill="#2563eb" font-size="12" font-weight="bold" font-family="sans-serif">Guerra Fría y Globalización (1947-1991)</text>',
-      '  <rect x="15" y="40" width="120" height="60" fill="#dcfce7" rx="6"/>',
-      '  <text x="75" y="55" text-anchor="middle" fill="#166534" font-size="9" font-weight="bold" font-family="sans-serif">EE.UU. (Occidente)</text>',
-      '  <text x="75" y="68" text-anchor="middle" fill="#166534" font-size="8" font-family="sans-serif">Capitalismo liberal</text>',
-      '  <text x="75" y="80" text-anchor="middle" fill="#22c55e" font-size="7" font-family="sans-serif">OTAN (1949)</text>',
-      '  <text x="75" y="90" text-anchor="middle" fill="#166534" font-size="7" font-family="sans-serif">Plan Marshall</text>',
-      '  <rect x="165" y="40" width="120" height="60" fill="#fecaca" rx="6"/>',
-      '  <text x="225" y="55" text-anchor="middle" fill="#991b1b" font-size="9" font-weight="bold" font-family="sans-serif">URSS (Oriente)</text>',
-      '  <text x="225" y="68" text-anchor="middle" fill="#991b1b" font-size="8" font-family="sans-serif">Comunismo soviético</text>',
-      '  <text x="225" y="80" text-anchor="middle" fill="#ef4444" font-size="7" font-family="sans-serif">Pacto de Varsovia (1955)</text>',
-      '  <text x="225" y="90" text-anchor="middle" fill="#991b1b" font-size="7" font-family="sans-serif">Planes quinquenales</text>',
-      '  <line x1="135" y1="70" x2="165" y2="70" stroke="#dc2626" stroke-width="2"/>',
-      '  <text x="150" y="66" text-anchor="middle" fill="#dc2626" font-size="8" font-weight="bold" font-family="sans-serif">VS</text>',
-      '  <rect x="25" y="115" width="250" height="45" fill="#f1f5f9" rx="4" stroke="#cbd5e1"/>',
-      '  <text x="150" y="130" text-anchor="middle" fill="#1e293b" font-size="8" font-weight="bold" font-family="sans-serif">Eventos clave</text>',
-      '  <text x="150" y="142" text-anchor="middle" fill="#475569" font-size="7" font-family="sans-serif">Cuba 1962 → Espacio 1969 → Berlín 1989 → URSS 1991</text>',
-      '  <rect x="25" y="165" width="250" height="25" fill="#e0e7ff" rx="4" stroke="#818cf8"/>',
-      '  <text x="150" y="181" text-anchor="middle" fill="#3730a3" font-size="8" font-weight="bold" font-family="sans-serif">Post-1991: Globalización → ONU → OEA → UE → Multipolaridad</text>',
-      '</svg>'
+      `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="200" fill="#f8fafc" rx="12"/>
+  <text x="150" y="22" text-anchor="middle" fill="#2563eb" font-size="12" font-weight="bold" font-family="sans-serif">Guerra Fría y Globalización (1947-1991)</text>
+  <rect x="15" y="40" width="120" height="60" fill="#dcfce7" rx="6"/>
+  <text x="75" y="55" text-anchor="middle" fill="#166534" font-size="9" font-weight="bold" font-family="sans-serif">EE.UU. (Occidente)</text>
+  <text x="75" y="68" text-anchor="middle" fill="#166534" font-size="8" font-family="sans-serif">Capitalismo liberal</text>
+  <text x="75" y="80" text-anchor="middle" fill="#22c55e" font-size="7" font-family="sans-serif">OTAN (1949)</text>
+  <text x="75" y="90" text-anchor="middle" fill="#166534" font-size="7" font-family="sans-serif">Plan Marshall</text>
+  <rect x="165" y="40" width="120" height="60" fill="#fecaca" rx="6"/>
+  <text x="225" y="55" text-anchor="middle" fill="#991b1b" font-size="9" font-weight="bold" font-family="sans-serif">URSS (Oriente)</text>
+  <text x="225" y="68" text-anchor="middle" fill="#991b1b" font-size="8" font-family="sans-serif">Comunismo soviético</text>
+  <text x="225" y="80" text-anchor="middle" fill="#ef4444" font-size="7" font-family="sans-serif">Pacto de Varsovia (1955)</text>
+  <text x="225" y="90" text-anchor="middle" fill="#991b1b" font-size="7" font-family="sans-serif">Planes quinquenales</text>
+  <line x1="135" y1="70" x2="165" y2="70" stroke="#dc2626" stroke-width="2"/>
+  <text x="150" y="66" text-anchor="middle" fill="#dc2626" font-size="8" font-weight="bold" font-family="sans-serif">VS</text>
+  <rect x="25" y="115" width="250" height="45" fill="#f1f5f9" rx="4" stroke="#cbd5e1"/>
+  <text x="150" y="130" text-anchor="middle" fill="#1e293b" font-size="8" font-weight="bold" font-family="sans-serif">Eventos clave</text>
+  <text x="150" y="142" text-anchor="middle" fill="#475569" font-size="7" font-family="sans-serif">Cuba 1962 → Espacio 1969 → Berlín 1989 → URSS 1991</text>
+  <rect x="25" y="165" width="250" height="25" fill="#e0e7ff" rx="4" stroke="#818cf8"/>
+  <text x="150" y="181" text-anchor="middle" fill="#3730a3" font-size="8" font-weight="bold" font-family="sans-serif">Post-1991: Globalización → ONU → OEA → UE → Multipolaridad</text>
+</svg>`
     ],
     exercises: [
       {
