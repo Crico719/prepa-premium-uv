@@ -1396,7 +1396,7 @@ export const courseContent: CourseContent = {
         difficulty: "avanzado",
       },
     ],
-  },,
+  },
   {
     slug: "piramide-y-cono",
     tip: "En el examen, distingue siempre entre la altura (h) y la apotema o generatriz (g). La altura cae perpendicular desde el vértice al centro de la base; la generatriz va del vértice al borde de la base. Muchos errores ocurren por confundir ambas. Memoriza: V_pirámide = (1/3)·A_base·h y V_cono = (1/3)·π·r²·h.",

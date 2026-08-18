@@ -11,7 +11,7 @@ type Message = {
   role: "user" | "assistant";
   content: string;
   timestamp: Date;
-  imagePreview?: string;
+  imagePreview?: string | undefined;
 };
 
 type Suggestion = {
