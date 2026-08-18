@@ -1,9 +1,7 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { useState } from "react";
 import {
-  AlertCircle,
   ArrowLeft,
-  ArrowRight,
   CheckCircle2,
   ChevronLeft,
   ChevronRight,
@@ -13,12 +11,57 @@ import {
   MessageCircle,
   NotebookPen,
   Sparkles,
-  XCircle,
+  BookOpen,
+  Zap,
+  Trophy,
 } from "lucide-react";
 import { IconTile, ProgressBar, Surface } from "@/components/kit";
 import { courses, lessons, courseLessons } from "@/lib/data";
-import { courseContent, type CourseExercise } from "@/lib/course-content";
+import { courseContent, type DifficultyLevel, type TheorySection, type CourseExercise } from "@/lib/course-content";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+
+const difficultyConfig: Record<DifficultyLevel, { label: string; color: string; bg: string; border: string; icon: typeof BookOpen }> = {
+  basico: { label: "Básico", color: "text-green-700 dark:text-green-300", bg: "bg-green-50 dark:bg-green-950/50", border: "border-green-200 dark:border-green-800", icon: BookOpen },
+  intermedio: { label: "Intermedio", color: "text-amber-700 dark:text-amber-300", bg: "bg-amber-50 dark:bg-amber-950/50", border: "border-amber-200 dark:border-amber-800", icon: Zap },
+  avanzado: { label: "Avanzado", color: "text-red-700 dark:text-red-300", bg: "bg-red-50 dark:bg-red-950/50", border: "border-red-200 dark:border-red-800", icon: Trophy },
+};
+
+const difficultyOrder: DifficultyLevel[] = ["basico", "intermedio", "avanzado"];
+
+function DifficultyBadge({ level }: { level: DifficultyLevel }) {
+  const cfg = difficultyConfig[level];
+  const Icon = cfg.icon;
+  return (
+    <span className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-semibold ${cfg.color} ${cfg.bg} border ${cfg.border}`}>
+      <Icon className="size-3.5" />
+      {cfg.label}
+    </span>
+  );
+}
+
+function TheorySectionBlock({ section }: { section: TheorySection }) {
+  const cfg = difficultyConfig[section.level];
+  const Icon = cfg.icon;
+  return (
+    <div className={`rounded-[16px] border p-4 space-y-2 ${cfg.border} ${cfg.bg}`}>
+      <div className="flex items-center gap-2">
+        <Icon className={`size-4 ${cfg.color}`} />
+        <h3 className={`text-sm font-bold ${cfg.color}`}>{section.title}</h3>
+      </div>
+      <div className="space-y-1.5">
+        {section.lines.map((line, i) => (
+          <p key={i} className="text-sm">
+            {line.startsWith("- ") ? (
+              <span className="ml-4 block text-muted-foreground">{line.slice(2)}</span>
+            ) : (
+              <span dangerouslySetInnerHTML={{ __html: line.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>") }} />
+            )}
+          </p>
+        ))}
+      </div>
+    </div>
+  );
+}
 
 export const Route = createFileRoute("/cursos/$slug")({
   loader: ({ params }) => {
@@ -45,10 +88,15 @@ function Leccion() {
   const content = courseContent[slug] || [];
 
   const [activeLesson, setActiveLesson] = useState(0);
+  const [activeIllustration, setActiveIllustration] = useState(0);
   const [exerciseState, setExerciseState] = useState<Record<number, number | null>>({});
+  const [difficultyFilter, setDifficultyFilter] = useState<DifficultyLevel | "all">("all");
 
   const currentContent = content[activeLesson] || null;
-  const exercises = currentContent?.exercises || [];
+  const allExercises = currentContent?.exercises || [];
+  const exercises = difficultyFilter === "all" ? allExercises : allExercises.filter((e) => e.difficulty === difficultyFilter);
+  const illustrations = currentContent?.illustrations || [];
+  const theorySections = currentContent?.theory || [];
 
   const handleAnswer = (exerciseId: number, optionIndex: number) => {
     if (exerciseState[exerciseId] !== undefined) return;
@@ -57,9 +105,11 @@ function Leccion() {
 
   const resetExercises = () => setExerciseState({});
 
-  const correctCount = exercises.filter((e) => exerciseState[e.id] === e.correctIndex).length;
-  const answeredCount = exercises.filter((e) => exerciseState[e.id] !== undefined).length;
-  const allDone = answeredCount === exercises.length && exercises.length > 0;
+  const correctCount = allExercises.filter((e) => exerciseState[e.id] === e.correctIndex).length;
+  const answeredCount = allExercises.filter((e) => exerciseState[e.id] !== undefined).length;
+  const allDone = answeredCount === allExercises.length && allExercises.length > 0;
+
+  const sortedExercises = [...exercises].sort((a, b) => difficultyOrder.indexOf(a.difficulty) - difficultyOrder.indexOf(b.difficulty));
 
   return (
     <div className="space-y-6">
@@ -96,10 +146,26 @@ function Leccion() {
           {currentContent ? (
             <>
               <Surface className="p-0 overflow-hidden">
-                <div
-                  className="flex aspect-video items-center justify-center rounded-t-[24px] bg-gradient-to-br from-primary-deep/90 to-primary/90 p-6"
-                  dangerouslySetInnerHTML={{ __html: currentContent.illustration }}
-                />
+                {illustrations.length > 0 && (
+                  <div className="relative">
+                    <div
+                      className="flex aspect-video items-center justify-center rounded-t-[24px] bg-gradient-to-br from-primary-deep/90 to-primary/90 p-6"
+                      dangerouslySetInnerHTML={{ __html: illustrations[activeIllustration] || illustrations[0]! }}
+                    />
+                    {illustrations.length > 1 && (
+                      <div className="absolute bottom-3 left-1/2 flex -translate-x-1/2 gap-2">
+                        {illustrations.map((_, i) => (
+                          <button
+                            key={i}
+                            type="button"
+                            onClick={() => setActiveIllustration(i)}
+                            className={`size-2.5 rounded-full transition-colors ${i === activeIllustration ? "bg-white" : "bg-white/40 hover:bg-white/60"}`}
+                          />
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                )}
                 <Tabs defaultValue="teoria" className="p-6">
                   <TabsList className="rounded-[16px]">
                     <TabsTrigger value="teoria">Teoría</TabsTrigger>
@@ -107,7 +173,7 @@ function Leccion() {
                     <TabsTrigger value="notas">Notas</TabsTrigger>
                   </TabsList>
 
-                  <TabsContent value="teoria" className="pt-4 text-sm leading-relaxed space-y-3">
+                  <TabsContent value="teoria" className="pt-4 text-sm leading-relaxed space-y-4">
                     <div className="flex items-start gap-3 rounded-[16px] bg-yellow-50 p-4 dark:bg-yellow-950/50">
                       <Lightbulb className="mt-0.5 size-5 shrink-0 text-yellow-600" />
                       <div>
@@ -115,21 +181,15 @@ function Leccion() {
                         <p className="mt-1 text-yellow-600 dark:text-yellow-400">{currentContent.tip}</p>
                       </div>
                     </div>
-                    <div className="space-y-2">
-                      {currentContent.theory.map((line, i) => (
-                        <p key={i} className="text-sm">
-                          {line.startsWith("- ") ? (
-                            <span className="ml-4 block text-muted-foreground">{line.slice(2)}</span>
-                          ) : (
-                            <span dangerouslySetInnerHTML={{ __html: line.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') }} />
-                          )}
-                        </p>
+                    <div className="space-y-4">
+                      {theorySections.map((section, i) => (
+                        <TheorySectionBlock key={i} section={section} />
                       ))}
                     </div>
                   </TabsContent>
 
                   <TabsContent value="ejercicios" className="pt-4 space-y-4">
-                    {exercises.length === 0 ? (
+                    {allExercises.length === 0 ? (
                       <div className="rounded-[16px] bg-muted p-6 text-center text-sm text-muted-foreground">
                         <Sparkles className="mx-auto mb-2 size-8 text-primary" />
                         Próximamente habrá ejercicios para este tema.
@@ -138,21 +198,49 @@ function Leccion() {
                       <>
                         <div className="flex items-center justify-between text-sm">
                           <span className="text-muted-foreground">
-                            {answeredCount}/{exercises.length} respondidas
+                            {answeredCount}/{allExercises.length} respondidas
                           </span>
                           {allDone && (
-                            <span className={correctCount === exercises.length ? "font-semibold text-green-600" : "text-muted-foreground"}>
-                              {correctCount}/{exercises.length} correctas
+                            <span className={correctCount === allExercises.length ? "font-semibold text-green-600" : "text-muted-foreground"}>
+                              {correctCount}/{allExercises.length} correctas
                             </span>
                           )}
                         </div>
-                        {exercises.map((ex) => {
+
+                        <div className="flex flex-wrap gap-2">
+                          <button
+                            type="button"
+                            onClick={() => setDifficultyFilter("all")}
+                            className={`rounded-full px-3 py-1 text-xs font-semibold transition-colors ${difficultyFilter === "all" ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground hover:bg-muted/80"}`}
+                          >
+                            Todos ({allExercises.length})
+                          </button>
+                          {difficultyOrder.map((level) => {
+                            const count = allExercises.filter((e) => e.difficulty === level).length;
+                            const cfg = difficultyConfig[level];
+                            return (
+                              <button
+                                key={level}
+                                type="button"
+                                onClick={() => setDifficultyFilter(level)}
+                                className={`rounded-full px-3 py-1 text-xs font-semibold transition-colors ${difficultyFilter === level ? `${cfg.bg} ${cfg.color} border ${cfg.border}` : "bg-muted text-muted-foreground hover:bg-muted/80"}`}
+                              >
+                                {cfg.label} ({count})
+                              </button>
+                            );
+                          })}
+                        </div>
+
+                        {sortedExercises.map((ex) => {
                           const selected = exerciseState[ex.id];
                           const answered = selected !== undefined;
                           const isCorrect = answered && selected === ex.correctIndex;
                           return (
                             <div key={ex.id} className="rounded-[16px] border border-border p-4 space-y-3">
-                              <p className="font-medium">{ex.question}</p>
+                              <div className="flex items-start justify-between gap-2">
+                                <p className="font-medium">{ex.question}</p>
+                                <DifficultyBadge level={ex.difficulty} />
+                              </div>
                               <div className="space-y-2">
                                 {ex.options.map((opt, oi) => {
                                   const isSelected = selected === oi;
@@ -225,7 +313,7 @@ function Leccion() {
               <div className="flex items-center justify-between">
                 <button
                   type="button"
-                  onClick={() => { setActiveLesson(Math.max(0, activeLesson - 1)); resetExercises(); }}
+                  onClick={() => { setActiveLesson(Math.max(0, activeLesson - 1)); resetExercises(); setActiveIllustration(0); setDifficultyFilter("all"); }}
                   disabled={activeLesson === 0}
                   className="press flex min-h-10 items-center gap-1 rounded-[18px] border border-border px-4 text-sm font-semibold disabled:opacity-40"
                 >
@@ -233,7 +321,7 @@ function Leccion() {
                 </button>
                 <button
                   type="button"
-                  onClick={() => { setActiveLesson(Math.min(courseSpecificLessons.length - 1, activeLesson + 1)); resetExercises(); }}
+                  onClick={() => { setActiveLesson(Math.min(courseSpecificLessons.length - 1, activeLesson + 1)); resetExercises(); setActiveIllustration(0); setDifficultyFilter("all"); }}
                   disabled={activeLesson === courseSpecificLessons.length - 1}
                   className="press flex min-h-10 items-center gap-1 rounded-[18px] bg-primary px-4 text-sm font-semibold text-primary-foreground hover:bg-primary/90 disabled:opacity-40"
                 >
@@ -279,7 +367,7 @@ function Leccion() {
                 <li key={l.title}>
                   <button
                     type="button"
-                    onClick={() => { setActiveLesson(i); resetExercises(); }}
+                    onClick={() => { setActiveLesson(i); resetExercises(); setActiveIllustration(0); setDifficultyFilter("all"); }}
                     className={`flex w-full items-center gap-3 p-4 text-left transition-colors hover:bg-muted ${i === activeLesson ? "bg-primary/5" : ""}`}
                   >
                     <IconTile

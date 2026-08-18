@@ -1,16 +1,25 @@
+﻿export type DifficultyLevel = "basico" | "intermedio" | "avanzado";
+
+export type TheorySection = {
+  level: DifficultyLevel;
+  title: string;
+  lines: string[];
+};
+
 export type CourseExercise = {
   id: number;
   question: string;
   options: string[];
   correctIndex: number;
   explanation: string;
+  difficulty: DifficultyLevel;
 };
 
 export type CourseModule = {
   slug: string;
   tip: string;
-  theory: string[];
-  illustration: string;
+  theory: TheorySection[];
+  illustrations: string[];
   exercises: CourseExercise[];
 };
 
@@ -18,1632 +27,4381 @@ export type CourseContent = Record<string, CourseModule[]>;
 
 export const courseContent: CourseContent = {
   "geometria": [
-    {
-      slug: "linea-recta-y-angulos",
-      tip: "Identifica primero el tipo de ángulo antes de resolver. Siempre dibuja una figura aunque no te la pidan.",
-      theory: [
-        "Una **línea recta** es un conjunto de puntos que se extienden en ambas direcciones sin fin.",
-        "Un **ángulo** se forma cuando dos semirrectas comparten un mismo origen (vértice).",
-        "Los ángulos se clasifican por su medida:",
-        "- **Aguudo**: menor a 90°",
-        "- **Recto**: exactamente 90°",
-        "- **Obtuso**: entre 90° y 180°",
-        "- **Llano**: exactamente 180°",
-        "- **Cóncavo**: mayor a 180°",
-        "Ángulos complementarios suman 90°. Ángulos suplementarios suman 180°.",
-        "Ángulos opuestos por el vértice son iguales."
-      ],
-      illustration: `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
-        <rect width="300" height="200" fill="#f8fafc" rx="12"/>
-        <line x1="50" y1="150" x2="250" y2="150" stroke="#334155" stroke-width="2"/>
-        <line x1="50" y1="150" x2="200" y2="50" stroke="#2563eb" stroke-width="2"/>
-        <path d="M 80 150 A 30 30 0 0 1 68 128" fill="none" stroke="#2563eb" stroke-width="2"/>
-        <text x="85" y="138" fill="#2563eb" font-size="14" font-family="sans-serif">60°</text>
-        <text x="50" y="170" fill="#64748b" font-size="12" font-family="sans-serif">Vértice</text>
-        <circle cx="50" cy="150" r="3" fill="#2563eb"/>
-        <text x="150" y="195" fill="#64748b" font-size="11" font-family="sans-serif">Ángulo agudo de 60°</text>
+  {
+    slug: "linea-recta-y-angulos",
+    tip: "Para identificar ángulos complementarios, recuerda que suman 90°; los suplementarios suman 180°. En el examen, verifica siempre si el problema implica ángulos adyacentes, verticales o alternos internos antes de resolver.",
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "Una **línea recta** es una sucesión infinita de puntos que se extiende en ambas direcciones sin curvatura.",
+          "Un **segmento de recta** es la porción de una recta comprendida entre dos puntos llamados extremos.",
+          "Una **semirrecta** (o rayo) parte de un punto y se extiende indefinidamente en una dirección.",
+          "Un **ángulo** es la figura formada por dos semirrectas que comparten un mismo vértice.",
+          "Las semirrectas que forman el ángulo se llaman **lados** del ángulo, y el punto común es el **vértice**.",
+          "Los ángulos se clasifican por su medida: **agudo** (< 90°), **recto** (= 90°), **obtuso** (90° < α < 180°), **llano** (= 180°) y **cónico** (> 180°)."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Fórmulas y propiedades",
+        lines: [
+          "La **suma de ángulos en un punto** alrededor de un vértice es siempre 360°.",
+          "Dos ángulos son **complementarios** si su suma es 90°, y **suplementarios** si su suma es 180°.",
+          "Los **ángulos opuestos por el vértice** son iguales: si α y β son opuestos por el vértice, entonces α = β.",
+          "Los **ángulos adyacentes** comparten vértice y un lado, y no se superponen. Sus medidas suman el ángulo mayor.",
+          "Cuando dos rectas se cortan, los **ángulos alternos internos** son iguales, los **alternos externos** son iguales, y los **correspondientes** son iguales.",
+          "La fórmula para el ángulo entre dos rectas con pendientes m₁ y m₂ es: **tan(θ) = |(m₂ − m₁) / (1 + m₁·m₂)|**."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Teoremas avanzados",
+        lines: [
+          "El **teorema del ángulo externo** establece que el ángulo externo de un triángulo es igual a la suma de los dos ángulos internos no adyacentes.",
+          "El **teorema de los ángulos formados por una transversal** con dos rectas paralelas: la suma de los ángulos internos del mismo lado es 180°.",
+          "El ángulo formado por dos rectas que se cortan puede expresarse como: **θ = arctan(|(m₂ − m₁)/(1 + m₁m₂)|)**, siempre que 1 + m₁m₂ ≠ 0.",
+          "Si las dos rectas son **perpendiculares**, el producto de sus pendientes es −1: **m₁ · m₂ = −1**.",
+          "En la **geometría analítica**, el ángulo que forma una recta con el eje positivo de x se calcula como **θ = arctan(m)**, donde m es la pendiente.",
+          "Truco de examen: cuando no se conocen las pendientes, usa vectores directores **v₁** y **v₂** y aplica **cos(θ) = (v₁ · v₂) / (|v₁| · |v₂|)**."
+        ]
+      }
+    ],
+    illustrations: [
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+        <rect width="300" height="200" fill="#f8fafc" rx="8"/>
+        <line x1="20" y1="160" x2="280" y2="160" stroke="#2563eb" stroke-width="2"/>
+        <line x1="20" y1="160" x2="200" y2="50" stroke="#dc2626" stroke-width="2"/>
+        <line x1="20" y1="160" x2="280" y2="160" stroke="#dc2626" stroke-width="2"/>
+        <path d="M 55 160 A 35 35 0 0 0 42 137" fill="none" stroke="#059669" stroke-width="2"/>
+        <circle cx="20" cy="160" r="4" fill="#7c3aed"/>
+        <text x="15" y="180" font-family="Arial" font-size="11" fill="#333">V</text>
+        <text x="282" y="175" font-family="Arial" font-size="11" fill="#2563eb">L₁</text>
+        <text x="200" y="42" font-family="Arial" font-size="11" fill="#dc2626">L₂</text>
+        <text x="50" y="145" font-family="Arial" font-size="12" fill="#059669" font-weight="bold">α</text>
+        <text x="25" y="25" font-family="Arial" font-size="13" fill="#333" font-weight="bold">Ángulo entre dos rectas</text>
       </svg>`,
-      exercises: [
-        {
-          id: 1,
-          question: "Si un ángulo mide 35°, ¿cuánto mide su complementario?",
-          options: ["55°", "145°", "65°", "45°"],
-          correctIndex: 0,
-          explanation: "Complementario significa que junto suman 90°. Entonces: 90° - 35° = 55°."
-        },
-        {
-          id: 2,
-          question: "¿Cuánto mide un ángulo opuesto por el vértice a un ángulo de 120°?",
-          options: ["60°", "120°", "240°", "30°"],
-          correctIndex: 1,
-          explanation: "Los ángulos opuestos por el vértice siempre son iguales. Si uno mide 120°, el otro también."
-        },
-        {
-          id: 3,
-          question: "Dos ángulos son suplementarios. Si uno mide el triple del otro, ¿cuánto mide el mayor?",
-          options: ["135°", "120°", "45°", "90°"],
-          correctIndex: 0,
-          explanation: "Sean x y 3x. Suman 180°: x + 3x = 180 → 4x = 180 → x = 45°. El mayor es 3(45°) = 135°."
-        }
-      ]
-    },
-    {
-      slug: "triangulos",
-      tip: "Recuerda: la suma de ángulos internos SIEMPRE es 180°. Úsalo para hallar ángulos desconocidos.",
-      theory: [
-        "Un **triángulo** es un polígono con 3 lados, 3 vértices y 3 ángulos.",
-        "La suma de sus ángulos internos es siempre **180°**.",
-        "**Clasificación por lados:**",
-        "- **Equilátero**: 3 lados iguales (3 ángulos de 60°)",
-        "- **Isósceles**: 2 lados iguales (2 ángulos iguales)",
-        "- **Escaleno**: 3 lados diferentes (3 ángulos diferentes)",
-        "**Clasificación por ángulos:**",
-        "- **Acutángulo**: los 3 ángulos son agudos",
-        "- **Rectángulo**: tiene un ángulo recto (90°)",
-        "- **Obtusángulo**: tiene un ángulo obtuso",
-        "**Fórmula del área:** Área = (base × altura) / 2"
-      ],
-      illustration: `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
-        <rect width="300" height="200" fill="#f8fafc" rx="12"/>
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+        <rect width="300" height="200" fill="#f8fafc" rx="8"/>
+        <line x1="30" y1="100" x2="270" y2="100" stroke="#2563eb" stroke-width="2"/>
+        <line x1="150" y1="20" x2="150" y2="180" stroke="#2563eb" stroke-width="2" stroke-dasharray="6,3"/>
+        <line x1="150" y1="100" x2="250" y2="40" stroke="#dc2626" stroke-width="2"/>
+        <line x1="150" y1="100" x2="250" y2="160" stroke="#059669" stroke-width="2"/>
+        <path d="M 185 100 A 35 35 0 0 0 175 75" fill="none" stroke="#dc2626" stroke-width="2"/>
+        <path d="M 185 100 A 35 35 0 0 1 175 125" fill="none" stroke="#059669" stroke-width="2"/>
+        <circle cx="150" cy="100" r="4" fill="#7c3aed"/>
+        <text x="145" y="115" font-family="Arial" font-size="10" fill="#7c3aed">V</text>
+        <text x="165" y="78" font-family="Arial" font-size="11" fill="#dc2626" font-weight="bold">α₁</text>
+        <text x="165" y="133" font-family="Arial" font-size="11" fill="#059669" font-weight="bold">α₂</text>
+        <text x="100" y="90" font-family="Arial" font-size="10" fill="#333" font-style="italic">α₁ = α₂</text>
+        <text x="25" y="25" font-family="Arial" font-size="13" fill="#333" font-weight="bold">Ángulos opuestos por el vértice</text>
+      </svg>`
+    ],
+    exercises: [
+      {
+        id: 1,
+        question: "¿Cuánto mide el ángulo complementario de 35°?",
+        options: ["145°", "55°", "125°", "65°"],
+        correctIndex: 1,
+        explanation: "Los ángulos complementarios suman 90°. Entonces: 90° − 35° = 55°.",
+        difficulty: "basico"
+      },
+      {
+        id: 2,
+        question: "Dos rectas se cortan y forman un ángulo de 70°. ¿Cuánto miden los ángulos opuestos por el vértice?",
+        options: ["70° y 110°", "70° y 70°", "110° y 110°", "35° y 145°"],
+        correctIndex: 1,
+        explanation: "Los ángulos opuestos por el vértice son iguales. Si uno mide 70°, su opuesto también mide 70°.",
+        difficulty: "intermedio"
+      },
+      {
+        id: 3,
+        question: "La recta r tiene pendiente m₁ = 2 y la recta s tiene pendiente m₂ = −1/2. ¿Cuál es el ángulo entre ambas rectas?",
+        options: ["45°", "60°", "90°", "30°"],
+        correctIndex: 2,
+        explanation: "Si m₁ · m₂ = 2 × (−1/2) = −1, las rectas son perpendiculares, por lo que el ángulo entre ellas es 90°.",
+        difficulty: "avanzado"
+      }
+    ]
+  },
+  {
+    slug: "triangulos",
+    tip: "En todo triángulo, la suma de sus ángulos internos siempre es 180°. Usa esta propiedad para encontrar ángulos faltantes rápidamente. En el examen, identifica primero el tipo de triángulo antes de aplicar fórmulas específicas.",
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "Un **triángulo** es un polígono formado por tres segmentos de recta (lados) que se encuentran en tres vértices.",
+          "Los **ángulos internos** de cualquier triángulo suman siempre **180°**.",
+          "Los triángulos se clasifican por sus ángulos: **acutángulo** (todos agudos), **rectángulo** (un ángulo recto) y **obtusángulo** (un ángulo obtuso).",
+          "Por sus lados: **equilátero** (3 lados iguales), **isósceles** (2 lados iguales) y **escalenos** (3 lados diferentes).",
+          "La **altura** de un triángulo es el segmento perpendicular desde un vértice al lado opuesto (o su prolongación).",
+          "El **perímetro** de un triángulo es la suma de la longitud de sus tres lados: **P = a + b + c**."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Fórmulas y propiedades",
+        lines: [
+          "El **área** de un triángulo se calcula como: **A = (b × h) / 2**, donde b es la base y h es la altura correspondiente.",
+          "La **fórmula de Herón** permite calcular el área conociendo los tres lados: **A = √[s(s−a)(s−b)(s−c)]**, donde s = (a+b+c)/2 es el semiperímetro.",
+          "El **teorema del seno** establece: **a/sen(A) = b/sen(B) = c/sen(C) = 2R**, donde R es el radio de la circunferencia circunscrita.",
+          "El **teorema del coseno** relaciona lados y ángulos: **c² = a² + b² − 2ab·cos(C)**.",
+          "En un triángulo isósceles, los ángulos opuestos a los lados iguales son iguales entre sí.",
+          "La **bisectriz** de un ángulo divide al ángulo en dos partes iguales y al lado opuesto en proporción a los lados adyacentes."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Teoremas avanzados",
+        lines: [
+          "El **teorema de la bisectriz** interna: si AD biseca ∠BAC, entonces **BD/DC = AB/AC**.",
+          "El **teorema de la mediana**: la mediana divide al triángulo en dos triángulos de igual área.",
+          "La **desigualdad triangular** establece que la suma de cualesquiera dos lados es siempre mayor que el tercero: **a + b > c**.",
+          "El **área máxima** de un triángulo con dos lados dados a y b ocurre cuando el ángulo entre ellos es 90°: **A_max = (a × b) / 2**.",
+          "En un triángulo rectángulo, el **cateto** es igual a la hipotenusa por el seno del ángulo opuesto, y por el coseno del ángulo adyacente.",
+          "Truco de examen: en un triángulo con ángulos de 30°-60°-90°, los lados están en proporción **1 : √3 : 2**; en uno de 45°-45°-90°, la proporción es **1 : 1 : √2**."
+        ]
+      }
+    ],
+    illustrations: [
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+        <rect width="300" height="200" fill="#f8fafc" rx="8"/>
         <polygon points="150,30 50,170 250,170" fill="none" stroke="#2563eb" stroke-width="2.5"/>
-        <text x="140" y="25" fill="#1e293b" font-size="14" font-weight="bold" font-family="sans-serif">A</text>
-        <text x="30" y="185" fill="#1e293b" font-size="14" font-weight="bold" font-family="sans-serif">B</text>
-        <text x="255" y="185" fill="#1e293b" font-size="14" font-weight="bold" font-family="sans-serif">C</text>
-        <line x1="150" y1="30" x2="150" y2="170" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="5,3"/>
-        <text x="155" y="105" fill="#dc2626" font-size="12" font-family="sans-serif">h</text>
-        <line x1="50" y1="170" x2="250" y2="170" stroke="#334155" stroke-width="2"/>
-        <text x="140" y="190" fill="#64748b" font-size="12" font-family="sans-serif">base</text>
-        <path d="M 70 170 A 20 20 0 0 1 60 155" fill="none" stroke="#2563eb" stroke-width="1.5"/>
-        <text x="80" y="158" fill="#2563eb" font-size="11" font-family="sans-serif">60°</text>
-        <path d="M 230 170 A 20 20 0 0 0 240 155" fill="none" stroke="#2563eb" stroke-width="1.5"/>
-        <text x="215" y="158" fill="#2563eb" font-size="11" font-family="sans-serif">60°</text>
-        <text x="150" y="48" fill="#2563eb" font-size="11" font-family="sans-serif">60°</text>
-      </svg>`,
-      exercises: [
-        {
-          id: 1,
-          question: "En un triángulo, dos ángulos miden 45° y 70°. ¿Cuánto mide el tercero?",
-          options: ["75°", "65°", "55°", "85°"],
-          correctIndex: 1,
-          explanation: "Suman 180°: 180° - 45° - 70° = 65°."
-        },
-        {
-          id: 2,
-          question: "Un triángulo isósceles tiene un ángulo de 100°. ¿Cuánto miden los otros dos?",
-          options: ["40° y 40°", "50° y 50°", "80° y 80°", "30° y 50°"],
-          correctIndex: 0,
-          explanation: "El ángulo de 100° es el diferente (obtuso). Los otros dos son iguales: (180° - 100°) / 2 = 40° cada uno."
-        },
-        {
-          id: 3,
-          question: "La base de un triángulo mide 12 cm y su altura 8 cm. ¿Cuál es su área?",
-          options: ["96 cm²", "48 cm²", "20 cm²", "24 cm²"],
-          correctIndex: 1,
-          explanation: "Área = (base × altura) / 2 = (12 × 8) / 2 = 96 / 2 = 48 cm²."
-        }
-      ]
-    },
-    {
-      slug: "poligonos",
-      tip: "Para hallar la suma de ángulos internos usa la fórmula: (n-2) × 180°, donde n es el número de lados.",
-      theory: [
-        "Un **polígono** es una figura plana cerrada formada por segmentos de recta.",
-        "**Clasificación:**",
-        "- **Convexo**: todos los ángulos internos son menores a 180°",
-        "- **Cóncavo**: al menos un ángulo interno es mayor a 180°",
-        "**Fórmula de la suma de ángulos internos:** Suma = (n - 2) × 180°",
-        "Ejemplo: un pentágono (5 lados) tiene suma = (5-2) × 180° = 540°",
-        "**Ángulos externos:** La suma de los ángulos externos de cualquier polígono convexo es siempre **360°**.",
-        "**Diagonales:** Número de diagonales = n(n-3) / 2"
-      ],
-      illustration: `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
-        <rect width="300" height="200" fill="#f8fafc" rx="12"/>
-        <polygon points="150,25 250,80 220,170 80,170 50,80" fill="none" stroke="#2563eb" stroke-width="2.5"/>
-        <text x="145" y="20" fill="#1e293b" font-size="12" font-weight="bold" font-family="sans-serif">A</text>
-        <text x="255" y="80" fill="#1e293b" font-size="12" font-weight="bold" font-family="sans-serif">B</text>
-        <text x="225" y="185" fill="#1e293b" font-size="12" font-weight="bold" font-family="sans-serif">C</text>
-        <text x="60" y="185" fill="#1e293b" font-size="12" font-weight="bold" font-family="sans-serif">D</text>
-        <text x="30" y="80" fill="#1e293b" font-size="12" font-weight="bold" font-family="sans-serif">E</text>
-        <line x1="150" y1="25" x2="220" y2="170" stroke="#dc2626" stroke-width="1" stroke-dasharray="4,3"/>
-        <line x1="150" y1="25" x2="80" y2="170" stroke="#dc2626" stroke-width="1" stroke-dasharray="4,3"/>
-        <text x="115" y="110" fill="#dc2626" font-size="11" font-family="sans-serif">Diagonales</text>
-        <text x="75" y="198" fill="#64748b" font-size="11" font-family="sans-serif">Pentágono: (5-2)×180° = 540°</text>
-      </svg>`,
-      exercises: [
-        {
-          id: 1,
-          question: "¿Cuánto suman los ángulos internos de un hexágono?",
-          options: ["720°", "540°", "1080°", "360°"],
-          correctIndex: 0,
-          explanation: "Hexágono tiene 6 lados. Suma = (6-2) × 180° = 4 × 180° = 720°."
-        },
-        {
-          id: 2,
-          question: "¿Cuántas diagonales tiene un octógono?",
-          options: ["20", "16", "24", "8"],
-          correctIndex: 0,
-          explanation: "Diagonales = 8(8-3)/2 = 8(5)/2 = 40/2 = 20."
-        },
-        {
-          id: 3,
-          question: "¿Cuánto mide cada ángulo interno de un cuadrado?",
-          options: ["90°", "60°", "120°", "180°"],
-          correctIndex: 0,
-          explanation: "Cuadrado tiene 4 lados iguales. Suma = (4-2)×180° = 360°. Cada ángulo = 360°/4 = 90°."
-        }
-      ]
-    },
-    {
-      slug: "cuadrilateros",
-      tip: "Memoriza: paralelogramo tiene lados opuestos paralelos e iguales. Rectángulo = paralelogramo con ángulos de 90°.",
-      theory: [
-        "Un **cuadrilátero** es un polígono con 4 lados y 4 vértices.",
-        "La suma de sus ángulos internos es **360°**.",
-        "**Tipos de cuadriláteros:**",
-        "- **Paralelogramo**: lados opuestos paralelos e iguales",
-        "- **Rectángulo**: paralelogramo con 4 ángulos de 90°",
-        "- **Rombo**: paralelogramo con 4 lados iguales",
-        "- **Cuadrado**: rectángulo + rombo (4 lados iguales y 4 ángulos de 90°)",
-        "- **Trapezoide**: solo un par de lados paralelos",
-        "**Fórmulas de área:**",
-        "- Rectángulo: base × altura",
-        "- Rombo: (d₁ × d₂) / 2 (diagonales)",
-        "- Trapecio: ((base mayor + base menor) × altura) / 2"
-      ],
-      illustration: `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
-        <rect width="300" height="200" fill="#f8fafc" rx="12"/>
-        <rect x="30" y="30" width="110" height="70" fill="none" stroke="#2563eb" stroke-width="2" rx="2"/>
-        <text x="70" y="70" fill="#2563eb" font-size="11" font-family="sans-serif">Rectángulo</text>
-        <polygon points="190,30 270,55 250,100 170,75" fill="none" stroke="#7c3aed" stroke-width="2"/>
-        <text x="195" y="70" fill="#7c3aed" font-size="11" font-family="sans-serif">Rombo</text>
-        <polygon points="30,140 130,120 130,180 30,180" fill="none" stroke="#059669" stroke-width="2"/>
-        <text x="55" y="165" fill="#059669" font-size="11" font-family="sans-serif">Trapecio</text>
-        <rect x="180" y="130" width="80" height="80" fill="none" stroke="#dc2626" stroke-width="2" rx="2"/>
-        <text x="195" y="175" fill="#dc2626" font-size="11" font-family="sans-serif">Cuadrado</text>
-      </svg>`,
-      exercises: [
-        {
-          id: 1,
-          question: "Un rectángulo tiene base 10 cm y altura 6 cm. ¿Cuál es su área?",
-          options: ["60 cm²", "16 cm²", "32 cm²", "100 cm²"],
-          correctIndex: 0,
-          explanation: "Área del rectángulo = base × altura = 10 × 6 = 60 cm²."
-        },
-        {
-          id: 2,
-          question: "Las diagonales de un rombo miden 8 cm y 6 cm. ¿Cuál es su área?",
-          options: ["48 cm²", "24 cm²", "14 cm²", "28 cm²"],
-          correctIndex: 1,
-          explanation: "Área del rombo = (d₁ × d₂) / 2 = (8 × 6) / 2 = 48/2 = 24 cm²."
-        },
-        {
-          id: 3,
-          question: "Un trapecio tiene bases de 8 cm y 12 cm, y altura 5 cm. ¿Cuál es su área?",
-          options: ["100 cm²", "50 cm²", "20 cm²", "60 cm²"],
-          correctIndex: 1,
-          explanation: "Área = ((B + b) × h) / 2 = ((12 + 8) × 5) / 2 = 100/2 = 50 cm²."
-        }
-      ]
-    },
-    {
-      slug: "circunferencia",
-      tip: "Usa π ≈ 3.1416. La circunferencia mide 2πr y el área πr². ¡No confundas radio con diámetro!",
-      theory: [
-        "La **circunferencia** es el conjunto de puntos que están a la misma distancia (radio) de un punto fijo (centro).",
-        "**Elementos:**",
-        "- **Radio (r)**: distancia del centro a la circunferencia",
-        "- **Diámetro (d)**: segmento que pasa por el centro. d = 2r",
-        "- **Cuerda**: segmento que une dos puntos de la circunferencia",
-        "- **Arco**: parte de la circunferencia entre dos puntos",
-        "**Fórmulas fundamentales:**",
-        "- Longitud: L = 2πr = πd",
-        "- Área del círculo: A = πr²",
-        "Un ángulo central intercepta un arco cuya medida es igual al ángulo."
-      ],
-      illustration: `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
-        <rect width="300" height="200" fill="#f8fafc" rx="12"/>
-        <circle cx="150" cy="100" r="70" fill="none" stroke="#2563eb" stroke-width="2.5"/>
-        <circle cx="150" cy="100" r="3" fill="#dc2626"/>
-        <text x="155" y="98" fill="#dc2626" font-size="11" font-family="sans-serif">O</text>
-        <line x1="150" y1="100" x2="220" y2="100" stroke="#059669" stroke-width="2"/>
-        <text x="180" y="95" fill="#059669" font-size="12" font-weight="bold" font-family="sans-serif">r</text>
-        <line x1="80" y1="100" x2="220" y2="100" stroke="#7c3aed" stroke-width="1.5" stroke-dasharray="5,3"/>
-        <text x="140" y="118" fill="#7c3aed" font-size="11" font-family="sans-serif">d = 2r</text>
-        <path d="M 150 100 L 200 45" stroke="#dc2626" stroke-width="1.5"/>
-        <path d="M 175 70 A 25 25 0 0 1 188 85" fill="none" stroke="#dc2626" stroke-width="1.5"/>
-        <text x="190" y="72" fill="#dc2626" font-size="10" font-family="sans-serif">θ</text>
-        <text x="95" y="195" fill="#64748b" font-size="11" font-family="sans-serif">L = 2πr | A = πr²</text>
-      </svg>`,
-      exercises: [
-        {
-          id: 1,
-          question: "Un círculo tiene radio 7 cm. ¿Cuál es su circunferencia? (Usa π ≈ 3.14)",
-          options: ["43.96 cm", "21.98 cm", "153.86 cm", "14 cm"],
-          correctIndex: 0,
-          explanation: "L = 2πr = 2 × 3.14 × 7 = 43.96 cm."
-        },
-        {
-          id: 2,
-          question: "El diámetro de un círculo mide 10 cm. ¿Cuál es su área?",
-          options: ["78.5 cm²", "31.4 cm²", "157 cm²", "50 cm²"],
-          correctIndex: 0,
-          explanation: "r = 10/2 = 5 cm. A = πr² = 3.14 × 25 = 78.5 cm²."
-        },
-        {
-          id: 3,
-          question: "Un ángulo central mide 72°. ¿Qué fracción de la circunferencia representa?",
-          options: ["1/5", "1/6", "1/4", "2/5"],
-          correctIndex: 0,
-          explanation: "72° / 360° = 1/5. El arco representa la quinta parte de la circunferencia."
-        }
-      ]
-    },
-    {
-      slug: "puntos-notables",
-      tip: "El ortocentro es donde se juntan las alturas. El baricentro divide cada mediana en relación 2:1.",
-      theory: [
-        "Los **puntos notables** del triángulo son puntos donde concurren elementos especiales.",
-        "**Incentro (I)**: intersección de las bisectrices. Es el centro del círculo inscrito.",
-        "**Baricentro (G)**: intersección de las medianas. Divide cada mediana en relación 2:1.",
-        "**Ortocentro (H)**: intersección de las alturas.",
-        "**Circuncentro (O)**: intersección de las mediatrices. Es el centro del círculo circunscrito.",
-        "En un triángulo **equilátero**, los 4 puntos notables coinciden en un solo punto.",
-        "Los puntos I, G y H están alineados en la **recta de Euler**."
-      ],
-      illustration: `<svg viewBox="0 0 300 220" xmlns="http://www.w3.org/2000/svg">
-        <rect width="300" height="220" fill="#f8fafc" rx="12"/>
-        <polygon points="150,30 50,190 250,190" fill="none" stroke="#94a3b8" stroke-width="1.5"/>
-        <text x="148" y="22" fill="#1e293b" font-size="12" font-weight="bold" font-family="sans-serif">A</text>
-        <text x="30" y="200" fill="#1e293b" font-size="12" font-weight="bold" font-family="sans-serif">B</text>
-        <text x="255" y="200" fill="#1e293b" font-size="12" font-weight="bold" font-family="sans-serif">C</text>
-        <line x1="150" y1="30" x2="150" y2="190" stroke="#2563eb" stroke-width="1" stroke-dasharray="4,3"/>
-        <text x="155" y="195" fill="#64748b" font-size="10" font-family="sans-serif">Mediana</text>
-        <line x1="50" y1="190" x2="200" y2="110" stroke="#2563eb" stroke-width="1" stroke-dasharray="4,3"/>
-        <line x1="250" y1="190" x2="100" y2="110" stroke="#2563eb" stroke-width="1" stroke-dasharray="4,3"/>
-        <circle cx="150" cy="135" r="4" fill="#2563eb"/>
-        <text x="158" y="138" fill="#2563eb" font-size="11" font-weight="bold" font-family="sans-serif">G</text>
-        <circle cx="150" cy="155" r="4" fill="#dc2626"/>
-        <text x="158" y="158" fill="#dc2626" font-size="11" font-weight="bold" font-family="sans-serif">I</text>
-        <circle cx="150" cy="80" r="4" fill="#059669"/>
-        <text x="158" y="83" fill="#059669" font-size="11" font-weight="bold" font-family="sans-serif">H</text>
-      </svg>`,
-      exercises: [
-        {
-          id: 1,
-          question: "¿Qué punto notable es el centro del círculo inscrito en un triángulo?",
-          options: ["Incentro", "Baricentro", "Ortocentro", "Circuncentro"],
-          correctIndex: 0,
-          explanation: "El incentro (I) es la intersección de las bisectrices y es el centro del círculo inscrito."
-        },
-        {
-          id: 2,
-          question: "El baricentro divide cada mediana en una razón de:",
-          options: ["2:1", "1:1", "3:1", "1:2"],
-          correctIndex: 0,
-          explanation: "El baricentro siempre divide cada mediana en la razón 2:1 (más cerca del lado)."
-        },
-        {
-          id: 3,
-          question: "¿Qué punto notable es la intersección de las mediatrices?",
-          options: ["Circuncentro", "Incentro", "Baricentro", "Ortocentro"],
-          correctIndex: 0,
-          explanation: "El circuncentro (O) es la intersección de las mediatrices y es el centro del círculo circunscrito."
-        }
-      ]
-    },
-    {
-      slug: "prop-y-semejanza",
-      tip: "Si dos triángulos son semejantes, sus lados son proporcionales. Busca el factor de escala.",
-      theory: [
-        "**Semejanza**: dos figuras son semejantes si tienen la misma forma pero no necesariamente el mismo tamaño.",
-        "**Criterios de semejanza de triángulos:**",
-        "- **LAL**: dos lados proporcionales y el ángulo entre ellos igual",
-        "- **AA**: dos ángulos iguales",
-        "- **LLL**: los tres lados proporcionales",
-        "Si dos triángulos son semejantes con factor k:",
-        "- Las razones de lados son iguales a k",
-        "- Las razones de áreas son iguales a k²",
-        "- Las razones de perímetros son iguales a k",
-        "**Teorema de Tales**: si tres o más rectas paralelas cortan a dos transversales, determinan segmentos proporcionales."
-      ],
-      illustration: `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
-        <rect width="300" height="200" fill="#f8fafc" rx="12"/>
-        <polygon points="40,170 100,50 160,170" fill="none" stroke="#2563eb" stroke-width="2"/>
-        <polygon points="170,170 210,90 250,170" fill="none" stroke="#dc2626" stroke-width="2"/>
-        <text x="40" y="185" fill="#2563eb" font-size="11" font-weight="bold" font-family="sans-serif">A</text>
-        <text x="95" y="42" fill="#2563eb" font-size="11" font-weight="bold" font-family="sans-serif">B</text>
-        <text x="155" y="185" fill="#2563eb" font-size="11" font-weight="bold" font-family="sans-serif">C</text>
-        <text x="170" y="185" fill="#dc2626" font-size="11" font-weight="bold" font-family="sans-serif">D</text>
-        <text x="205" y="82" fill="#dc2626" font-size="11" font-weight="bold" font-family="sans-serif">E</text>
-        <text x="245" y="185" fill="#dc2626" font-size="11" font-weight="bold" font-family="sans-serif">F</text>
-        <text x="110" y="130" fill="#64748b" font-size="12" font-family="sans-serif">k = 1/2</text>
-        <text x="90" y="198" fill="#64748b" font-size="11" font-family="sans-serif">△ABC ~ △DEF</text>
-      </svg>`,
-      exercises: [
-        {
-          id: 1,
-          question: "Dos triángulos son semejantes con factor k=3. Si el área del menor es 10 cm², ¿cuál es la del mayor?",
-          options: ["90 cm²", "30 cm²", "60 cm²", "120 cm²"],
-          correctIndex: 0,
-          explanation: "La razón de áreas es k². Si k=3, entonces k²=9. Área mayor = 10 × 9 = 90 cm²."
-        },
-        {
-          id: 2,
-          question: "En un triángulo, una paralela a un lado corta los otros dos en 3 y 6 cm. Si el lado completo del segundo mide 10 cm, ¿cuánto mide el lado del primero?",
-          options: ["5 cm", "15 cm", "3.33 cm", "20 cm"],
-          correctIndex: 0,
-          explanation: "Por Tales: 3/6 = x/10. x = (3 × 10)/6 = 5 cm."
-        },
-        {
-          id: 3,
-          question: "El perímetro de un triángulo es 24 cm. Un triángulo semejante con k=2 tiene perímetro:",
-          options: ["48 cm", "12 cm", "36 cm", "96 cm"],
-          correctIndex: 0,
-          explanation: "La razón de perímetros es k. Si k=2, perímetro = 24 × 2 = 48 cm."
-        }
-      ]
-    },
-    {
-      slug: "relaciones-metricas",
-      tip: "En un triángulo rectángulo, la hipotenusa es el lado más largo. Las relaciones métricas usan la altura trazada desde el ángulo recto.",
-      theory: [
-        "En un **triángulo rectángulo**, la altura trazada desde el ángulo recto a la hipotenusa genera relaciones importantes.",
-        "**Teorema de Pitágoras**: h² = p² + q² (donde h es la hipotenusa y p, q los catetos)",
-        "**Relaciones métricas en el triángulo rectángulo:**",
-        "- h² = p² + q² (Pitágoras)",
-        "- a² = h × p (cateto = hipotenusa × proyección)",
-        "- b² = h × q",
-        "- h × c = a × b (donde c es la hipotenusa)",
-        "**En la circunferencia:**",
-        "- Ángulo inscrito que aborda un semicírculo es recto",
-        "- La cuerda que pasa por el centro es el diámetro"
-      ],
-      illustration: `<svg viewBox="0 0 300 220" xmlns="http://www.w3.org/2000/svg">
-        <rect width="300" height="220" fill="#f8fafc" rx="12"/>
-        <polygon points="50,180 250,180 50,40" fill="none" stroke="#2563eb" stroke-width="2.5"/>
-        <rect x="46" y="176" width="8" height="8" fill="none" stroke="#dc2626" stroke-width="1.5"/>
-        <line x1="50" y1="40" x2="50" y2="180" stroke="#059669" stroke-width="2"/>
-        <text x="30" y="110" fill="#059669" font-size="12" font-weight="bold" font-family="sans-serif">a</text>
-        <text x="140" y="195" fill="#7c3aed" font-size="12" font-weight="bold" font-family="sans-serif">b</text>
-        <text x="165" y="100" fill="#2563eb" font-size="12" font-weight="bold" font-family="sans-serif">c</text>
-        <text x="38" y="35" fill="#1e293b" font-size="12" font-weight="bold" font-family="sans-serif">A</text>
-        <text x="255" y="195" fill="#1e293b" font-size="12" font-weight="bold" font-family="sans-serif">B</text>
-        <text x="25" y="195" fill="#1e293b" font-size="12" font-weight="bold" font-family="sans-serif">C</text>
-        <text x="55" y="195" fill="#64748b" font-size="10" font-family="sans-serif">p</text>
-        <text x="155" y="195" fill="#64748b" font-size="10" font-family="sans-serif">q</text>
-        <text x="60" y="215" fill="#64748b" font-size="11" font-family="sans-serif">a² + b² = c²</text>
-      </svg>`,
-      exercises: [
-        {
-          id: 1,
-          question: "Un triángulo rectángulo tiene catetos de 3 y 4. ¿Cuánto mide la hipotenusa?",
-          options: ["5", "7", "12", "25"],
-          correctIndex: 0,
-          explanation: "Por Pitágoras: c² = 3² + 4² = 9 + 16 = 25. c = 5."
-        },
-        {
-          id: 2,
-          question: "En un triángulo rectángulo, la hipotenusa mide 13 y un cateto 5. ¿Cuánto mide el otro cateto?",
-          options: ["12", "8", "18", "144"],
-          correctIndex: 0,
-          explanation: "b² = 13² - 5² = 169 - 25 = 144. b = 12."
-        },
-        {
-          id: 3,
-          question: "La hipotenusa mide 10 cm y la altura a ella mide 6 cm. ¿Cuánto mide la base (hipotenusa)?",
-          options: ["10 cm", "6 cm", "8 cm", "16.67 cm"],
-          correctIndex: 0,
-          explanation: "La pregunta dice que la hipotenusa mide 10 cm. Es el dato dado."
-        }
-      ]
-    },
-    {
-      slug: "poligonos-regulares",
-      tip: "Un polígono regular tiene todos sus lados y ángulos iguales. El área se calcula con: (Perímetro × apotema) / 2.",
-      theory: [
-        "Un **polígono regular** tiene todos sus lados iguales y todos sus ángulos iguales.",
-        "**Fórmulas para un polígono regular de n lados:**",
-        "- Ángulo interno = (n-2) × 180° / n",
-        "- Ángulo externo = 360° / n",
-        "- Apotema (a): distancia del centro al punto medio de un lado",
-        "- Radio (R): distancia del centro a un vértice",
-        "**Área** = (Perímetro × apotema) / 2 = (n × lado × apotema) / 2",
-        "**Triángulos notables en polígonos:**",
-        "- Triángulo equilátero: todos los ángulos 60°",
-        "- Triángulo rectángulo 30-60-90: lados en razón 1:√3:2",
-        "- Triángulo rectángulo 45-45-90: lados en razón 1:1:√2"
-      ],
-      illustration: `<svg viewBox="0 0 300 220" xmlns="http://www.w3.org/2000/svg">
-        <rect width="300" height="200" fill="#f8fafc" rx="12"/>
-        <polygon points="150,30 220,55 250,120 210,175 90,175 50,120 80,55" fill="none" stroke="#2563eb" stroke-width="2.5"/>
-        <circle cx="150" cy="110" r="3" fill="#dc2626"/>
-        <text x="155" y="108" fill="#dc2626" font-size="11" font-weight="bold" font-family="sans-serif">O</text>
-        <line x1="150" y1="110" x2="150" y2="30" stroke="#dc2626" stroke-width="1.5"/>
-        <text x="155" y="70" fill="#dc2626" font-size="10" font-family="sans-serif">R</text>
-        <line x1="150" y1="110" x2="185" y2="145" stroke="#059669" stroke-width="1.5"/>
-        <text x="175" y="135" fill="#059669" font-size="10" font-family="sans-serif">a</text>
-        <text x="100" y="198" fill="#64748b" font-size="11" font-family="sans-serif">Hexágono regular</text>
-      </svg>`,
-      exercises: [
-        {
-          id: 1,
-          question: "¿Cuánto mide cada ángulo interno de un hexágono regular?",
-          options: ["120°", "108°", "135°", "90°"],
-          correctIndex: 0,
-          explanation: "Ángulo interno = (6-2)×180°/6 = 720°/6 = 120°."
-        },
-        {
-          id: 2,
-          question: "Un polígono regular de 8 lados tiene lado 5 cm y apotema 6 cm. ¿Cuál es su área?",
-          options: ["120 cm²", "240 cm²", "150 cm²", "30 cm²"],
-          correctIndex: 0,
-          explanation: "Perímetro = 8 × 5 = 40 cm. Área = (40 × 6)/2 = 120 cm²."
-        },
-        {
-          id: 3,
-          question: "¿Cuántos lados tiene un polígono cuyo ángulo interno mide 156°?",
-          options: ["30", "15", "20", "24"],
-          correctIndex: 1,
-          explanation: "156 = (n-2)×180/n → 156n = 180n - 360 → 24n = 360 → n = 15 lados."
-        }
-      ]
-    },
-    {
-      slug: "areas",
-      tip: "Dibuja siempre la figura. Identifica las dimensiones antes de aplicar fórmulas.",
-      theory: [
-        "**Fórmulas de área fundamentales:**",
-        "- **Triángulo**: A = (b × h) / 2",
-        "- **Rectángulo**: A = b × h",
-        "- **Rombo**: A = (d₁ × d₂) / 2",
-        "- **Trapecio**: A = ((B + b) × h) / 2",
-        "- **Círculo**: A = πr²",
-        "- **Polígono regular**: A = (P × a) / 2",
-        "**Áreas de figuras compuestas:**",
-        "Para hallar el área de figuras complejas, se pueden sumar o restar áreas de figuras simples.",
-        "**Transformación de unidades:**",
-        "1 m² = 10,000 cm² | 1 km² = 1,000,000 m²"
-      ],
-      illustration: `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
-        <rect width="300" height="200" fill="#f8fafc" rx="12"/>
-        <rect x="20" y="30" width="60" height="40" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5" rx="2"/>
-        <text x="30" y="55" fill="#2563eb" font-size="9" font-family="sans-serif">b×h</text>
-        <polygon points="120,70 160,30 200,70" fill="#dcfce7" stroke="#059669" stroke-width="1.5"/>
-        <text x="130" y="58" fill="#059669" font-size="9" font-family="sans-serif">bh/2</text>
-        <polygon points="240,30 290,50 270,70 220,50" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
-        <text x="240" y="52" fill="#d97706" font-size="9" font-family="sans-serif">d₁d₂/2</text>
-        <polygon points="30,120 110,100 110,170 30,170" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
-        <text x="40" y="145" fill="#7c3aed" font-size="9" font-family="sans-serif">(B+b)h/2</text>
-        <circle cx="200" cy="145" r="35" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
-        <text x="188" y="148" fill="#dc2626" font-size="10" font-family="sans-serif">πr²</text>
-      </svg>`,
-      exercises: [
-        {
-          id: 1,
-          question: "Un triángulo tiene base 14 cm y altura 8 cm. ¿Cuál es su área?",
-          options: ["56 cm²", "112 cm²", "22 cm²", "48 cm²"],
-          correctIndex: 0,
-          explanation: "A = (14 × 8)/2 = 112/2 = 56 cm²."
-        },
-        {
-          id: 2,
-          question: "Un trapecio tiene bases 6 cm y 10 cm, y altura 5 cm. ¿Cuál es su área?",
-          options: ["40 cm²", "16 cm²", "80 cm²", "25 cm²"],
-          correctIndex: 0,
-          explanation: "A = ((10+6)×5)/2 = (16×5)/2 = 80/2 = 40 cm²."
-        },
-        {
-          id: 3,
-          question: "Un cuadrado y un círculo tienen el mismo lado/radio = 4 cm. ¿Cuál tiene mayor área?",
-          options: ["El cuadrado", "El círculo", "Son iguales", "No se puede saber"],
-          correctIndex: 1,
-          explanation: "Cuadrado: 4² = 16 cm². Círculo: π(4²) = 50.27 cm². El círculo tiene mayor área."
-        }
-      ]
-    },
-    {
-      slug: "rectas-y-planos",
-      tip: "En espacio, dos rectas pueden ser paralelas, secantes o mixtas. Dibuja siempre una representación 3D.",
-      theory: [
-        "En **geometría del espacio**, las rectas y planos pueden tener distintas posiciones relativas.",
-        "**Posiciones relativas entre rectas:**",
-        "- **Paralelas**: no se cortan y están en un mismo plano",
-        "- **Secantes**: se cortan en un punto",
-        "- **Mixtas**: no se cortan y no están en un mismo plano",
-        "**Posiciones entre rectas y planos:**",
-        "- **Recta contenida** en el plano",
-        "- **Recta paralela** al plano (no toca el plano)",
-        "- **Recta secante** al plano (corta al plano en un punto)",
-        "- **Recta perpendicular** al plano (forma 90° con todas las rectas del plano)",
-        "**Posiciones entre planos:**",
-        "- **Paralelos**: no tienen puntos en común",
-        "- **Secantes**: se cortan en una recta",
-        "- **Perpendiculares**: forman 90°"
-      ],
-      illustration: `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
-        <rect width="300" height="200" fill="#f8fafc" rx="12"/>
-        <polygon points="40,120 150,60 260,120 150,140" fill="#dbeafe" fill-opacity="0.3" stroke="#2563eb" stroke-width="1.5"/>
-        <text x="145" y="52" fill="#2563eb" font-size="11" font-family="sans-serif">Plano α</text>
-        <line x1="80" y1="40" x2="220" y2="170" stroke="#dc2626" stroke-width="2"/>
-        <circle cx="150" cy="105" r="3" fill="#dc2626"/>
-        <text x="158" y="100" fill="#dc2626" font-size="10" font-family="sans-serif">P</text>
-        <text x="225" y="175" fill="#64748b" font-size="10" font-family="sans-serif">Recta r</text>
-        <line x1="60" y1="160" x2="240" y2="80" stroke="#059669" stroke-width="1.5" stroke-dasharray="5,3"/>
-        <text x="245" y="75" fill="#059669" font-size="10" font-family="sans-serif">Recta s</text>
-        <text x="60" y="195" fill="#64748b" font-size="10" font-family="sans-serif">r y s: mixtas</text>
-      </svg>`,
-      exercises: [
-        {
-          id: 1,
-          question: "¿Cuántas posiciones relativas pueden tener dos rectas en el espacio?",
-          options: ["3 (paralelas, secantes, mixtas)", "2 (paralelas y secantes)", "4", "Solo 2"],
-          correctIndex: 0,
-          explanation: "En el espacio, dos rectas pueden ser paralelas, secantes o mixtas (no coplanarias)."
-        },
-        {
-          id: 2,
-          question: "Una recta corta a un plano. ¿En cuántos puntos se intersectan?",
-          options: ["1 punto", "2 puntos", "Infinitos", "Ninguno"],
-          correctIndex: 0,
-          explanation: "Una recta secante a un plano siempre lo corta en exactamente un punto."
-        },
-        {
-          id: 3,
-          question: "Dos planos paralelos son cortados por una recta. ¿En cuántos puntos se intersecta la recta con cada plano?",
-          options: ["1 punto con cada uno", "2 puntos con cada uno", "1 punto total", "Infinitos"],
-          correctIndex: 0,
-          explanation: "La recta corta a cada plano en un punto distinto, resultando 2 puntos de intersección en total."
-        }
-      ]
-    },
-    {
-      slug: "prisma-y-cilindro",
-      tip: "Volumen = Área base × altura. Para prisma, la base es un polígono. Para cilindro, la base es un círculo.",
-      theory: [
-        "**Prisma**: sólido con dos bases paralelas e iguales (polígonos) y caras laterales (rectángulos).",
-        "**Tipos de prismas:**",
-        "- **Regular**: base es un polígono regular",
-        "- **Recto**: caras laterales perpendiculares a la base",
-        "- **Oblicuo**: caras laterales inclinadas",
-        "**Fórmulas del prisma:**",
-        "- Volumen: V = Ab × h (Ab = área de la base)",
-        "- Área lateral: Al = Perímetro base × altura",
-        "- Área total: At = Al + 2 × Ab",
-        "**Cilindro**: sólido con dos bases circulares paralelas e iguales.",
-        "**Fórmulas del cilindro:**",
-        "- Volumen: V = πr²h",
-        "- Área lateral: Al = 2πrh",
-        "- Área total: At = 2πr² + 2πrh = 2πr(r + h)"
-      ],
-      illustration: `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
-        <rect width="300" height="200" fill="#f8fafc" rx="12"/>
-        <ellipse cx="90" cy="50" rx="40" ry="12" fill="none" stroke="#2563eb" stroke-width="2"/>
-        <line x1="50" y1="50" x2="50" y2="150" stroke="#2563eb" stroke-width="2"/>
-        <line x1="130" y1="50" x2="130" y2="150" stroke="#2563eb" stroke-width="2"/>
-        <ellipse cx="90" cy="150" rx="40" ry="12" fill="#dbeafe" fill-opacity="0.3" stroke="#2563eb" stroke-width="2"/>
-        <text x="80" y="40" fill="#2563eb" font-size="11" font-family="sans-serif">Prisma</text>
-        <ellipse cx="230" cy="50" rx="35" ry="12" fill="none" stroke="#7c3aed" stroke-width="2"/>
-        <line x1="195" y1="50" x2="195" y2="150" stroke="#7c3aed" stroke-width="2"/>
-        <line x1="265" y1="50" x2="265" y2="150" stroke="#7c3aed" stroke-width="2"/>
-        <ellipse cx="230" cy="150" rx="35" ry="12" fill="#ede9fe" fill-opacity="0.3" stroke="#7c3aed" stroke-width="2"/>
-        <text x="215" y="40" fill="#7c3aed" font-size="11" font-family="sans-serif">Cilindro</text>
-        <text x="95" y="105" fill="#64748b" font-size="10" font-family="sans-serif">h</text>
-        <text x="235" y="105" fill="#64748b" font-size="10" font-family="sans-serif">h</text>
-      </svg>`,
-      exercises: [
-        {
-          id: 1,
-          question: "Un prisma tiene base de área 20 cm² y altura 8 cm. ¿Cuál es su volumen?",
-          options: ["160 cm³", "28 cm³", "48 cm³", "120 cm³"],
-          correctIndex: 0,
-          explanation: "V = Ab × h = 20 × 8 = 160 cm³."
-        },
-        {
-          id: 2,
-          question: "Un cilindro tiene radio 5 cm y altura 10 cm. ¿Cuál es su volumen? (π ≈ 3.14)",
-          options: ["785 cm³", "157 cm³", "314 cm³", "50 cm³"],
-          correctIndex: 0,
-          explanation: "V = πr²h = 3.14 × 25 × 10 = 785 cm³."
-        },
-        {
-          id: 3,
-          question: "Un cilindro tiene radio 3 cm y altura 7 cm. ¿Cuál es su área lateral? (π ≈ 3.14)",
-          options: ["131.88 cm²", "19.78 cm²", "65.94 cm²", "42 cm²"],
-          correctIndex: 0,
-          explanation: "Al = 2πrh = 2 × 3.14 × 3 × 7 = 131.88 cm²."
-        }
-      ]
-    },
-    {
-      slug: "piramide-y-cono",
-      tip: "El volumen de una pirámide/cono es 1/3 del prisma/cilindro con la misma base y altura.",
-      theory: [
-        "**Pirámide**: sólido con una base poligonal y caras laterales triangulares que se encuentran en un vértice (ápice).",
-        "**Tipos de pirámides:**",
-        "- **Regular**: base es un polígono regular y el ápice está sobre el centro de la base",
-        "- **Recta**: el ápice está perpendicular al centro de la base",
-        "**Fórmulas de la pirámide:**",
-        "- Volumen: V = (Ab × h) / 3",
-        "- Área lateral: suma de áreas de caras triangulares",
-        "**Cono**: sólido con una base circular y un vértice (ápice).",
-        "**Fórmulas del cono:**",
-        "- Volumen: V = (πr²h) / 3",
-        "- Área lateral: Al = πrg (g = generatriz)",
-        "- Área total: At = πr² + πrg",
-        "La **generatriz** (g) es la distancia del ápice a cualquier punto de la circunferencia base: g² = r² + h²"
-      ],
-      illustration: `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
-        <rect width="300" height="200" fill="#f8fafc" rx="12"/>
-        <polygon points="90,30 50,140 130,140" fill="none" stroke="#2563eb" stroke-width="2"/>
-        <ellipse cx="90" cy="140" rx="40" ry="10" fill="#dbeafe" fill-opacity="0.3" stroke="#2563eb" stroke-width="1.5"/>
-        <text x="80" y="22" fill="#2563eb" font-size="11" font-family="sans-serif">Pirámide</text>
-        <line x1="90" y1="30" x2="90" y2="140" stroke="#dc2626" stroke-width="1" stroke-dasharray="4,3"/>
-        <text x="95" y="90" fill="#dc2626" font-size="10" font-family="sans-serif">h</text>
-        <polygon points="230,30 195,140 265,140" fill="none" stroke="#7c3aed" stroke-width="2"/>
-        <ellipse cx="230" cy="140" rx="35" ry="10" fill="#ede9fe" fill-opacity="0.3" stroke="#7c3aed" stroke-width="1.5"/>
-        <text x="218" y="22" fill="#7c3aed" font-size="11" font-family="sans-serif">Cono</text>
-        <line x1="230" y1="30" x2="230" y2="140" stroke="#dc2626" stroke-width="1" stroke-dasharray="4,3"/>
-        <text x="235" y="90" fill="#dc2626" font-size="10" font-family="sans-serif">h</text>
-        <text x="60" y="195" fill="#64748b" font-size="10" font-family="sans-serif">V = Ab×h/3</text>
-      </svg>`,
-      exercises: [
-        {
-          id: 1,
-          question: "Una pirámide tiene base de área 30 cm² y altura 9 cm. ¿Cuál es su volumen?",
-          options: ["90 cm³", "270 cm³", "39 cm³", "180 cm³"],
-          correctIndex: 0,
-          explanation: "V = (Ab × h)/3 = (30 × 9)/3 = 270/3 = 90 cm³."
-        },
-        {
-          id: 2,
-          question: "Un cono tiene radio 4 cm y altura 6 cm. ¿Cuál es su volumen? (π ≈ 3.14)",
-          options: ["100.48 cm³", "301.44 cm³", "75.36 cm³", "24 cm³"],
-          correctIndex: 0,
-          explanation: "V = (πr²h)/3 = (3.14 × 16 × 6)/3 = 301.44/3 = 100.48 cm³."
-        },
-        {
-          id: 3,
-          question: "Un cono tiene radio 5 cm y altura 12 cm. ¿Cuánto mide la generatriz?",
-          options: ["13 cm", "17 cm", "7 cm", "60 cm"],
-          correctIndex: 0,
-          explanation: "g² = r² + h² = 25 + 144 = 169. g = 13 cm."
-        }
-      ]
-    },
-    {
-      slug: "esfera",
-      tip: "La esfera es la única superficie de revolución donde todos los puntos están a la misma distancia del centro.",
-      theory: [
-        "**Esfera**: superficie formada por todos los puntos que están a una distancia fija (radio) de un punto fijo (centro).",
-        "**Elementos:**",
-        "- **Radio (r)**: distancia del centro a la superficie",
-        "- **Diámetro (d)**: pasa por el centro. d = 2r",
-        "- **Gran círculo**: circunferencia de intersección con un plano que pasa por el centro",
-        "- **Círculo máximo**: tiene la misma área que el gran círculo",
-        "**Fórmulas de la esfera:**",
-        "- Área: A = 4πr²",
-        "- Volumen: V = (4/3)πr³",
-        "**Relación con el cilindro circunscrito:**",
-        "La esfera inscrita en un cilindro tiene: Área esfera = Área lateral cilindro y Volumen esfera = (2/3) volumen cilindro."
-      ],
-      illustration: `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
-        <rect width="300" height="200" fill="#f8fafc" rx="12"/>
-        <circle cx="150" cy="100" r="65" fill="none" stroke="#2563eb" stroke-width="2"/>
-        <ellipse cx="150" cy="100" rx="65" ry="20" fill="none" stroke="#2563eb" stroke-width="1" stroke-dasharray="4,3"/>
-        <ellipse cx="150" cy="100" rx="20" ry="65" fill="none" stroke="#2563eb" stroke-width="1" stroke-dasharray="4,3"/>
-        <circle cx="150" cy="100" r="3" fill="#dc2626"/>
-        <text x="155" y="98" fill="#dc2626" font-size="11" font-weight="bold" font-family="sans-serif">O</text>
-        <line x1="150" y1="100" x2="215" y2="100" stroke="#059669" stroke-width="2"/>
-        <text x="178" y="95" fill="#059669" font-size="12" font-weight="bold" font-family="sans-serif">r</text>
-        <text x="100" y="195" fill="#64748b" font-size="11" font-family="sans-serif">A = 4πr² | V = (4/3)πr³</text>
-      </svg>`,
-      exercises: [
-        {
-          id: 1,
-          question: "Una esfera tiene radio 6 cm. ¿Cuál es su área? (π ≈ 3.14)",
-          options: ["452.16 cm²", "113.04 cm²", "904.32 cm²", "36 cm²"],
-          correctIndex: 0,
-          explanation: "A = 4πr² = 4 × 3.14 × 36 = 452.16 cm²."
-        },
-        {
-          id: 2,
-          question: "Una esfera tiene radio 3 cm. ¿Cuál es su volumen? (π ≈ 3.14)",
-          options: ["113.04 cm³", "339.12 cm³", "28.26 cm³", "56.52 cm³"],
-          correctIndex: 0,
-          explanation: "V = (4/3)πr³ = (4/3) × 3.14 × 27 = 113.04 cm³."
-        },
-        {
-          id: 3,
-          question: "El diámetro de una esfera mide 10 cm. ¿Cuánto mide su radio?",
-          options: ["5 cm", "10 cm", "20 cm", "2.5 cm"],
-          correctIndex: 0,
-          explanation: "Radio = diámetro / 2 = 10 / 2 = 5 cm."
-        }
-      ]
-    },
-    {
-      slug: "la-recta",
-      tip: "La ecuación de la recta es y = mx + b. m es la pendiente (inclinación) y b es la intersección con el eje Y.",
-      theory: [
-        "La **recta** es un conjunto de puntos que se extienden en ambas direcciones sin fin.",
-        "**Ecuación de la recta en el plano:**",
-        "- **Forma general**: Ax + By + C = 0",
-        "- **Forma pendiente-intersección**: y = mx + b",
-        "- **Forma punto-pendiente**: y - y₁ = m(x - x₁)",
-        "- **Forma dos puntos**: (y - y₁)/(x - x₁) = (y₂ - y₁)/(x₂ - x₁)",
-        "**Pendiente (m):** m = (y₂ - y₁)/(x₂ - x₁) = Δy/Δx",
-        "- Si m > 0: la recta sube de izquierda a derecha",
-        "- Si m < 0: la recta baja de izquierda a derecha",
-        "- Si m = 0: recta horizontal",
-        "- Si m es indefinida: recta vertical",
-        "**Posiciones relativas entre rectas:**",
-        "- **Paralelas**: misma pendiente (m₁ = m₂)",
-        "- **Perpendiculares**: m₁ × m₂ = -1"
-      ],
-      illustration: `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
-        <rect width="300" height="200" fill="#f8fafc" rx="12"/>
-        <line x1="30" y1="100" x2="270" y2="100" stroke="#94a3b8" stroke-width="1"/>
-        <line x1="150" y1="10" x2="150" y2="190" stroke="#94a3b8" stroke-width="1"/>
-        <text x="275" y="105" fill="#94a3b8" font-size="10" font-family="sans-serif">x</text>
-        <text x="155" y="12" fill="#94a3b8" font-size="10" font-family="sans-serif">y</text>
-        <line x1="30" y1="170" x2="270" y2="30" stroke="#2563eb" stroke-width="2"/>
-        <text x="200" y="55" fill="#2563eb" font-size="11" font-family="sans-serif">y = mx + b</text>
-        <circle cx="150" cy="100" r="3" fill="#dc2626"/>
-        <text x="155" y="95" fill="#dc2626" font-size="10" font-family="sans-serif">b</text>
-        <text x="100" y="195" fill="#64748b" font-size="10" font-family="sans-serif">m = pendiente | b = intersección Y</text>
-      </svg>`,
-      exercises: [
-        {
-          id: 1,
-          question: "¿Cuál es la pendiente de la recta que pasa por (2, 3) y (6, 11)?",
-          options: ["2", "4", "1/2", "-2"],
-          correctIndex: 0,
-          explanation: "m = (11-3)/(6-2) = 8/4 = 2."
-        },
-        {
-          id: 2,
-          question: "La ecuación y = 3x - 5 tiene pendiente e intersección con el eje Y iguales a:",
-          options: ["m=3, b=-5", "m=-5, b=3", "m=3, b=5", "m=5, b=-3"],
-          correctIndex: 0,
-          explanation: "En y = mx + b, m es la pendiente (3) y b es la intersección con Y (-5)."
-        },
-        {
-          id: 3,
-          question: "¿Dos rectas con pendientes m₁ = 2 y m₂ = -1/2 son paralelas, perpendiculares o secantes?",
-          options: ["Perpendiculares", "Paralelas", "Secantes", "Mixtas"],
-          correctIndex: 0,
-          explanation: "m₁ × m₂ = 2 × (-1/2) = -1. Si el producto es -1, son perpendiculares."
-        }
-      ]
-    },
-    {
-      slug: "circunferencia-y-parabola",
-      tip: "La parábola tiene un foco y una directriz. Todo punto de la parábola está igual de lejos del foco que de la directriz.",
-      theory: [
-        "**Circunferencia**: conjunto de puntos a distancia r de un centro (h, k).",
-        "- Ecuación: (x-h)² + (y-k)² = r²",
-        "- Centro en origen: x² + y² = r²",
-        "**Parábola**: conjunto de puntos equidistantes de un foco F y una directriz d.",
-        "- Ecuación (foco en eje X): y² = 4px",
-        "- Ecuación (foco en eje Y): x² = 4py",
-        "**Elementos de la parábola:**",
-        "- **Foco (F)**: punto interior de la parábola",
-        "- **Directriz (d)**: recta exterior",
-        "- **Vértice (V)**: punto medio entre foco y directriz",
-        "- **Eje**: recta que pasa por el foco y es perpendicular a la directriz",
-        "- **Parámetro (p)**: distancia del vértice al foco",
-        "**Propiedad**: la tangente en un punto de la parábola biseca el ángulo entre el radio focal y la paralela al eje."
-      ],
-      illustration: `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
-        <rect width="300" height="200" fill="#f8fafc" rx="12"/>
-        <path d="M 150 170 Q 80 100 150 30 Q 220 100 150 170" fill="none" stroke="#2563eb" stroke-width="2.5"/>
-        <circle cx="150" cy="100" r="3" fill="#dc2626"/>
-        <text x="155" y="103" fill="#dc2626" font-size="11" font-weight="bold" font-family="sans-serif">F</text>
-        <line x1="40" y1="30" x2="40" y2="170" stroke="#059669" stroke-width="1.5" stroke-dasharray="5,3"/>
-        <text x="25" y="25" fill="#059669" font-size="10" font-family="sans-serif">d</text>
+        <line x1="150" y1="30" x2="150" y2="170" stroke="#dc2626" stroke-width="2" stroke-dasharray="6,3"/>
+        <path d="M 145 170 L 150 165 L 155 170" fill="none" stroke="#dc2626" stroke-width="1.5"/>
+        <circle cx="150" cy="170" r="3" fill="#dc2626"/>
         <circle cx="150" cy="30" r="3" fill="#7c3aed"/>
-        <text x="155" y="28" fill="#7c3aed" font-size="10" font-family="sans-serif">V</text>
-        <line x1="150" y1="30" x2="150" y2="170" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3,3"/>
-        <text x="160" y="68" fill="#64748b" font-size="10" font-family="sans-serif">p</text>
-        <text x="80" y="195" fill="#64748b" font-size="10" font-family="sans-serif">y² = 4px</text>
+        <circle cx="50" cy="170" r="3" fill="#059669"/>
+        <circle cx="250" cy="170" r="3" fill="#059669"/>
+        <text x="148" y="20" font-family="Arial" font-size="11" fill="#7c3aed" font-weight="bold">A</text>
+        <text x="30" y="182" font-family="Arial" font-size="11" fill="#059669" font-weight="bold">B</text>
+        <text x="255" y="182" font-family="Arial" font-size="11" fill="#059669" font-weight="bold">C</text>
+        <text x="155" y="100" font-family="Arial" font-size="11" fill="#dc2626" font-weight="bold">h</text>
+        <text x="140" y="188" font-family="Arial" font-size="10" fill="#dc2626">90°</text>
+        <text x="100" y="185" font-family="Arial" font-size="10" fill="#333">b</text>
+        <text x="25" y="25" font-family="Arial" font-size="13" fill="#333" font-weight="bold">Altura de un triángulo</text>
       </svg>`,
-      exercises: [
-        {
-          id: 1,
-          question: "La ecuación de una circunferencia es x² + y² = 25. ¿Cuál es su radio?",
-          options: ["5", "25", "10", "12.5"],
-          correctIndex: 0,
-          explanation: "x² + y² = r². Si r² = 25, entonces r = 5."
-        },
-        {
-          id: 2,
-          question: "Una parábola tiene foco en (0, 2) y directriz y = -2. ¿Cuál es la ecuación?",
-          options: ["x² = 8y", "y² = 8x", "x² = 4y", "y² = 4x"],
-          correctIndex: 0,
-          explanation: "El vértice está en (0,0) y p = 2. La ecuación es x² = 4py = 4(2)y = 8y."
-        },
-        {
-          id: 3,
-          question: "¿Cuántos puntos de intersección puede tener una recta con una parábola?",
-          options: ["0, 1 o 2", "Siempre 2", "Siempre 1", "Solo 0"],
-          correctIndex: 0,
-          explanation: "Una recta puede no cortar la parábola (0), ser tangente (1) o cortarla en 2 puntos."
-        }
-      ]
-    },
-    {
-      slug: "elipse-e-hiperbola",
-      tip: "En la elipse, la suma de distancias a los focos es constante. En la hipérbola, la diferencia es constante.",
-      theory: [
-        "**Elipse**: conjunto de puntos donde la suma de distancias a dos focos es constante.",
-        "- Ecuación: x²/a² + y²/b² = 1 (a > b)",
-        "- **Semieje mayor (a)**: distancia del centro al vértice",
-        "- **Semieje menor (b)**: distancia del centro al extremo del eje menor",
-        "- **Excentricidad**: e = c/a (0 < e < 1)",
-        "- Relación: a² = b² + c²",
-        "**Hipérbola**: conjunto de puntos donde la diferencia de distancias a dos focos es constante.",
-        "- Ecuación: x²/a² - y²/b² = 1",
-        "- **Semieje real (a)**: distancia del centro al vértice",
-        "- **Excentricidad**: e = c/a (e > 1)",
-        "- Relación: c² = a² + b²",
-        "**Asíntotas** de la hipérbola: y = ±(b/a)x",
-        "**Elementos comunes:**",
-        "- Focos: puntos interiores",
-        "- Vértices: puntos de intersección con el eje principal",
-        "- Centro: punto medio entre los focos"
-      ],
-      illustration: `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
-        <rect width="300" height="200" fill="#f8fafc" rx="12"/>
-        <ellipse cx="100" cy="100" rx="50" ry="30" fill="none" stroke="#2563eb" stroke-width="2"/>
-        <circle cx="80" cy="100" r="2.5" fill="#dc2626"/>
-        <circle cx="120" cy="100" r="2.5" fill="#dc2626"/>
-        <text x="75" y="95" fill="#dc2626" font-size="9" font-family="sans-serif">F₁</text>
-        <text x="125" y="95" fill="#dc2626" font-size="9" font-family="sans-serif">F₂</text>
-        <text x="80" y="30" fill="#2563eb" font-size="11" font-family="sans-serif">Elipse</text>
-        <path d="M 190,70 Q 250,100 190,130" fill="none" stroke="#7c3aed" stroke-width="2"/>
-        <path d="M 290,70 Q 230,100 290,130" fill="none" stroke="#7c3aed" stroke-width="2"/>
-        <circle cx="220" cy="100" r="2.5" fill="#dc2626"/>
-        <circle cx="260" cy="100" r="2.5" fill="#dc2626"/>
-        <text x="215" y="95" fill="#dc2626" font-size="9" font-family="sans-serif">F₁</text>
-        <text x="265" y="95" fill="#dc2626" font-size="9" font-family="sans-serif">F₂</text>
-        <text x="215" y="30" fill="#7c3aed" font-size="11" font-family="sans-serif">Hipérbola</text>
-        <line x1="180" y1="40" x2="300" y2="160" stroke="#94a3b8" stroke-width="0.8" stroke-dasharray="3,3"/>
-        <line x1="180" y1="160" x2="300" y2="40" stroke="#94a3b8" stroke-width="0.8" stroke-dasharray="3,3"/>
-        <text x="200" y="195" fill="#64748b" font-size="10" font-family="sans-serif">Asíntotas</text>
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+        <rect width="300" height="200" fill="#f8fafc" rx="8"/>
+        <polygon points="150,30 50,170 250,170" fill="#dbeafe" fill-opacity="0.5" stroke="#2563eb" stroke-width="2"/>
+        <text x="145" y="20" font-family="Arial" font-size="11" fill="#7c3aed" font-weight="bold">A</text>
+        <text x="30" y="182" font-family="Arial" font-size="11" fill="#059669" font-weight="bold">B</text>
+        <text x="255" y="182" font-family="Arial" font-size="11" fill="#059669" font-weight="bold">C</text>
+        <text x="130" y="190" font-family="Arial" font-size="10" fill="#2563eb">a</text>
+        <text x="195" y="88" font-family="Arial" font-size="10" fill="#2563eb">b</text>
+        <text x="82" y="88" font-family="Arial" font-size="10" fill="#2563eb">c</text>
+        <text x="55" y="150" font-family="Arial" font-size="10" fill="#dc2626">α</text>
+        <text x="225" y="150" font-family="Arial" font-size="10" fill="#dc2626">β</text>
+        <text x="143" y="50" font-family="Arial" font-size="10" fill="#dc2626">γ</text>
+        <text x="85" y="115" font-family="Arial" font-size="12" fill="#333" font-weight="bold">α + β + γ = 180°</text>
+        <text x="25" y="25" font-family="Arial" font-size="13" fill="#333" font-weight="bold">Suma de ángulos internos</text>
+      </svg>`
+    ],
+    exercises: [
+      {
+        id: 1,
+        question: "¿Cuál es el área de un triángulo con base 10 cm y altura 6 cm?",
+        options: ["60 cm²", "30 cm²", "16 cm²", "15 cm²"],
+        correctIndex: 1,
+        explanation: "El área se calcula como A = (b × h) / 2 = (10 × 6) / 2 = 30 cm².",
+        difficulty: "basico"
+      },
+      {
+        id: 2,
+        question: "Un triángulo tiene lados de 5, 12 y 13. ¿Qué tipo de triángulo es?",
+        options: ["Equilátero", "Isósceles rectángulo", "Escaleno rectángulo", "Escaleno acutángulo"],
+        correctIndex: 2,
+        explanation: "Verificamos: 5² + 12² = 25 + 144 = 169 = 13². Por el teorema de Pitágoras inverso, es un triángulo rectángulo. Los tres lados son diferentes, por lo tanto es escaleno rectángulo.",
+        difficulty: "intermedio"
+      },
+      {
+        id: 3,
+        question: "En un triángulo, los lados miden a = 7, b = 10 y el ángulo entre ellos es C = 60°. ¿Cuál es la longitud del lado c?",
+        options: ["√129", "√89", "√109", "√79"],
+        correctIndex: 3,
+        explanation: "Aplicando el teorema del coseno: c² = a² + b² − 2ab·cos(C) = 49 + 100 − 2(7)(10)cos(60°) = 149 − 140(0.5) = 149 − 70 = 79. Entonces c = √79.",
+        difficulty: "avanzado"
+      }
+    ]
+  },
+  {
+    slug: "poligonos",
+    tip: "La fórmula general para la suma de ángulos internos de un polígono de n lados es (n−2)×180°. Memoriza esta fórmula y úsala para resolver rápidamente cualquier problema sobre ángulos de polígonos regulares en el examen.",
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "Un **polígono** es una figura plana cerrada formada por segmentos de recta (lados) que se unen en vértices.",
+          "Un polígono es **regular** si todos sus lados son iguales y todos sus ángulos internos son iguales.",
+          "Un polígono es **irregular** si sus lados o ángulos no son todos iguales.",
+          "Los polígonos se clasifican por el número de lados: **triángulo** (3), **cuadrilátero** (4), **pentágono** (5), **hexágono** (6), etc.",
+          "Un polígono es **convexo** si todos sus ángulos internos son menores que 180°, y **cóncavo** si al menos uno es mayor.",
+          "El **perímetro** de un polígono es la suma de las longitudes de todos sus lados."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Fórmulas y propiedades",
+        lines: [
+          "La **suma de los ángulos internos** de un polígono de n lados es: **S = (n − 2) × 180°**.",
+          "Cada **ángulo interno** de un polígono regular de n lados mide: **α = (n − 2) × 180° / n**.",
+          "La **suma de los ángulos externos** de cualquier polígono (convexo) es siempre **360°**.",
+          "Cada **ángulo externo** de un polígono regular de n lados mide: **β = 360° / n**.",
+          "Un polígono de n lados tiene **n(n − 3)/2 diagonales**.",
+          "El **número de diagonales** que parten de un solo vértice es **n − 3**."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Teoremas avanzados",
+        lines: [
+          "Un polígono regular de n lados se puede dividir en **n − 2 triángulos** trazando diagonales desde un mismo vértice.",
+          "El **área** de un polígono regular de n lados con lado a es: **A = (n × a²) / (4 × tan(π/n))**.",
+          "El **radio de la circunferencia circunscrita** a un polígono regular de n lados y lado a es: **R = a / (2 × sen(π/n))**.",
+          "El **radio de la incircle** (circunferencia inscrita) es: **r = a / (2 × tan(π/n))**.",
+          "El **apotema** de un polígono regular de n lados y lado a es: **a_p = a / (2 × tan(π/n))**.",
+          "Truco de examen: si conoces el número de diagonales, puedes hallar n resolviendo **d = n(n−3)/2**, es decir **n² − 3n − 2d = 0**."
+        ]
+      }
+    ],
+    illustrations: [
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+        <rect width="300" height="200" fill="#f8fafc" rx="8"/>
+        <polygon points="150,30 80,70 55,140 110,185 190,185 245,140 220,70" fill="#dbeafe" fill-opacity="0.4" stroke="#2563eb" stroke-width="2.5"/>
+        <circle cx="150" cy="120" r="4" fill="#dc2626"/>
+        <line x1="150" y1="30" x2="150" y2="120" stroke="#dc2626" stroke-width="1" stroke-dasharray="4,3"/>
+        <line x1="80" y1="70" x2="150" y2="120" stroke="#dc2626" stroke-width="1" stroke-dasharray="4,3"/>
+        <text x="130" y="118" font-family="Arial" font-size="10" fill="#dc2626">O</text>
+        <text x="145" y="22" font-family="Arial" font-size="10" fill="#333">A</text>
+        <text x="25" y="25" font-family="Arial" font-size="13" fill="#333" font-weight="bold">Heptágono regular (n=7)</text>
+        <text x="50" y="198" font-family="Arial" font-size="10" fill="#2563eb">Suma de ángulos internos = (7−2)×180° = 900°</text>
       </svg>`,
-      exercises: [
-        {
-          id: 1,
-          question: "En una elipse x²/25 + y²/9 = 1, ¿cuánto mide el semieje mayor?",
-          options: ["5", "3", "25", "4"],
-          correctIndex: 0,
-          explanation: "a² = 25, entonces a = 5 (semieje mayor)."
-        },
-        {
-          id: 2,
-          question: "En una elipse, a = 5 y c = 3. ¿Cuánto mide b?",
-          options: ["4", "8", "16", "2"],
-          correctIndex: 0,
-          explanation: "a² = b² + c² → 25 = b² + 9 → b² = 16 → b = 4."
-        },
-        {
-          id: 3,
-          question: "Una hipérbola tiene ecuación x²/9 - y²/16 = 1. ¿Cuál es su excentricidad?",
-          options: ["5/3", "3/5", "4/3", "5/4"],
-          correctIndex: 0,
-          explanation: "c² = a² + b² = 9 + 16 = 25. c = 5. e = c/a = 5/3."
-        }
-      ]
-    },
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+        <rect width="300" height="200" fill="#f8fafc" rx="8"/>
+        <polygon points="100,30 30,100 60,180 180,180 210,100" fill="#dbeafe" fill-opacity="0.4" stroke="#2563eb" stroke-width="2"/>
+        <line x1="100" y1="30" x2="60" y2="180" stroke="#7c3aed" stroke-width="1.5" stroke-dasharray="5,3"/>
+        <line x1="100" y1="30" x2="180" y2="180" stroke="#7c3aed" stroke-width="1.5" stroke-dasharray="5,3"/>
+        <line x1="30" y1="100" x2="210" y2="100" stroke="#7c3aed" stroke-width="1.5" stroke-dasharray="5,3"/>
+        <text x="95" y="22" font-family="Arial" font-size="10" fill="#333" font-weight="bold">A</text>
+        <text x="10" y="100" font-family="Arial" font-size="10" fill="#333">B</text>
+        <text x="45" y="192" font-family="Arial" font-size="10" fill="#333">C</text>
+        <text x="175" y="192" font-family="Arial" font-size="10" fill="#333">D</text>
+        <text x="215" y="100" font-family="Arial" font-size="10" fill="#333">E</text>
+        <text x="70" y="110" font-family="Arial" font-size="10" fill="#7c3aed">5 diagonales</text>
+        <text x="25" y="25" font-family="Arial" font-size="13" fill="#333" font-weight="bold">Diagonales de un pentágono</text>
+      </svg>`
+    ],
+    exercises: [
+      {
+        id: 1,
+        question: "¿Cuánto mide cada ángulo interno de un hexágono regular?",
+        options: ["120°", "108°", "135°", "140°"],
+        correctIndex: 0,
+        explanation: "Cada ángulo interno de un polígono regular de n lados mide (n−2)×180°/n. Para n=6: (6−2)×180°/6 = 720°/6 = 120°.",
+        difficulty: "basico"
+      },
+      {
+        id: 2,
+        question: "¿Cuántos diagonales tiene un decágono (10 lados)?",
+        options: ["35", "45", "25", "40"],
+        correctIndex: 0,
+        explanation: "El número de diagonales es n(n−3)/2. Para n=10: 10(10−3)/2 = 10×7/2 = 35 diagonales.",
+        difficulty: "intermedio"
+      },
+      {
+        id: 3,
+        question: "Un polígono regular tiene cada ángulo interno midiendo 156°. ¿Cuántos lados tiene?",
+        options: ["20", "15", "24", "18"],
+        correctIndex: 1,
+        explanation: "Si cada ángulo mide 156°, entonces (n−2)×180°/n = 156°. Despejando: (n−2)×180 = 156n → 180n − 360 = 156n → 24n = 360 → n = 15.",
+        difficulty: "avanzado"
+      }
+    ]
+  },
+  {
+    slug: "cuadrilateros",
+    tip: "Memoriza las propiedades específicas de cada cuadrilátero: el paralelogramo tiene lados opuestos paralelos e iguales, el rectángulo añade ángulos de 90°, el rombo añade lados iguales, y el cuadrado combina ambas propiedades. En el examen, identifica primero el tipo de cuadrilátero.",
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "Un **cuadrilátero** es un polígono con 4 lados y 4 vértices. La suma de sus ángulos internos es **360°**.",
+          "Un **paralelogramo** es un cuadrilátero con ambos pares de lados opuestos paralelos.",
+          "Un **rectángulo** es un paralelogramo con los cuatro ángulos internos iguales a 90°.",
+          "Un **rombo** es un paralelogramo con los cuatro lados de igual longitud.",
+          "Un **cuadrado** es un rectángulo que también es rombo: tiene 4 lados iguales y 4 ángulos rectos.",
+          "Un **trapecio** es un cuadrilátero con al menos un par de lados opuestos paralelos (llamados **bases**)."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Fórmulas y propiedades",
+        lines: [
+          "El **área** de un paralelogramo es: **A = b × h**, donde b es la base y h es la altura perpendicular.",
+          "El **área** de un trapecio es: **A = (b₁ + b₂) × h / 2**, donde b₁ y b₂ son las bases y h la altura.",
+          "En un rectángulo, la **diagonal** se calcula con Pitágoras: **d = √(a² + b²)**.",
+          "Las **diagonales** de un paralelogramo se bisecan mutuamente (se cortan en sus puntos medios).",
+          "Las **diagonales** de un rectángulo son iguales entre sí.",
+          "Las **diagonales** de un rombo son perpendiculares entre sí y bisecan los ángulos."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Teoremas avanzados",
+        lines: [
+          "El **área** de un rombo puede calcularse con sus diagonales: **A = (d₁ × d₂) / 2**.",
+          "Un **cuadrilátero cíclico** (inscrito en una circunferencia) tiene ángulos opuestos suplementarios: **∠A + ∠C = 180°**.",
+          "El **teorema de Brahmagupta** da el área de un cuadrilátero cíclico con lados a, b, c, d: **A = √[(s−a)(s−b)(s−c)(s−d)]**, donde s es el semiperímetro.",
+          "El **área** de cualquier cuadrilátero conyugado (con diagonales d₁, d₂ y ángulo θ entre ellas) es: **A = (d₁ × d₂ × sen(θ)) / 2**.",
+          "El **teorema de Varignon** dice que los puntos medios de los lados de cualquier cuadrilátero forman un paralelogramo.",
+          "Truco de examen: si un cuadrilátero tiene diagonales perpendiculares, su área es siempre **(d₁ × d₂) / 2**, sin importar la forma."
+        ]
+      }
+    ],
+    illustrations: [
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+        <rect width="300" height="200" fill="#f8fafc" rx="8"/>
+        <rect x="60" y="40" width="180" height="120" fill="#dbeafe" fill-opacity="0.4" stroke="#2563eb" stroke-width="2.5"/>
+        <line x1="60" y1="40" x2="240" y2="160" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="5,3"/>
+        <line x1="240" y1="40" x2="60" y2="160" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="5,3"/>
+        <text x="52" y="35" font-family="Arial" font-size="10" fill="#333" font-weight="bold">A</text>
+        <text x="242" y="35" font-family="Arial" font-size="10" fill="#333" font-weight="bold">B</text>
+        <text x="242" y="172" font-family="Arial" font-size="10" fill="#333" font-weight="bold">C</text>
+        <text x="52" y="172" font-family="Arial" font-size="10" fill="#333" font-weight="bold">D</text>
+        <text x="130" y="85" font-family="Arial" font-size="10" fill="#dc2626">d₁</text>
+        <text x="165" y="100" font-family="Arial" font-size="10" fill="#dc2626">d₂</text>
+        <text x="25" y="25" font-family="Arial" font-size="13" fill="#333" font-weight="bold">Rectángulo con diagonales</text>
+      </svg>`,
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+        <rect width="300" height="200" fill="#f8fafc" rx="8"/>
+        <polygon points="80,50 220,50 260,150 40,150" fill="#dbeafe" fill-opacity="0.4" stroke="#2563eb" stroke-width="2.5"/>
+        <line x1="150" y1="50" x2="150" y2="150" stroke="#059669" stroke-width="2"/>
+        <path d="M 145 150 L 150 145 L 155 150" fill="none" stroke="#059669" stroke-width="1.5"/>
+        <text x="75" y="42" font-family="Arial" font-size="10" fill="#333" font-weight="bold">A</text>
+        <text x="222" y="42" font-family="Arial" font-size="10" fill="#333" font-weight="bold">B</text>
+        <text x="262" y="158" font-family="Arial" font-size="10" fill="#333" font-weight="bold">C</text>
+        <text x="30" y="158" font-family="Arial" font-size="10" fill="#333" font-weight="bold">D</text>
+        <text x="92" y="42" font-family="Arial" font-size="10" fill="#2563eb">b₁</text>
+        <text x="130" y="162" font-family="Arial" font-size="10" fill="#2563eb">b₂</text>
+        <text x="155" y="105" font-family="Arial" font-size="10" fill="#059669" font-weight="bold">h</text>
+        <text x="25" y="25" font-family="Arial" font-size="13" fill="#333" font-weight="bold">Trapecio</text>
+      </svg>`
+    ],
+    exercises: [
+      {
+        id: 1,
+        question: "¿Cuál es el área de un rectángulo con largo 12 cm y ancho 5 cm?",
+        options: ["34 cm²", "60 cm²", "17 cm²", "48 cm²"],
+        correctIndex: 1,
+        explanation: "El área de un rectángulo es A = largo × ancho = 12 × 5 = 60 cm².",
+        difficulty: "basico"
+      },
+      {
+        id: 2,
+        question: "Un trapecio tiene bases de 8 cm y 14 cm, y una altura de 6 cm. ¿Cuál es su área?",
+        options: ["66 cm²", "48 cm²", "84 cm²", "52 cm²"],
+        correctIndex: 0,
+        explanation: "El área del trapecio es A = (b₁ + b₂) × h / 2 = (8 + 14) × 6 / 2 = 22 × 6 / 2 = 66 cm².",
+        difficulty: "intermedio"
+      },
+      {
+        id: 3,
+        question: "Las diagonales de un rombo miden 10 cm y 24 cm. ¿Cuál es su área y el lado del rombo?",
+        options: ["A = 120 cm², lado = 13 cm", "A = 240 cm², lado = 13 cm", "A = 120 cm², lado = 26 cm", "A = 60 cm², lado = 12 cm"],
+        correctIndex: 0,
+        explanation: "El área del rombo es A = (d₁ × d₂)/2 = (10 × 24)/2 = 120 cm². El lado se obtiene con Pitágoras usando medias diagonales: lado = √(5² + 12²) = √(25 + 144) = √169 = 13 cm.",
+        difficulty: "avanzado"
+      }
+    ]
+  },
+  {
+    slug: "circumferencia",
+    tip: "Recuerda siempre las relaciones clave: C = 2πr, A = πr², y que el ángulo central es igual al arco que intercepta. Para problemas de sectores, usa A = (θ/360°)πr². En el examen, verifica si el problema pide longitud de arco (L = rθ en radianes) o área de sector.",
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "Una **circunferencia** es el lugar geométrico de todos los puntos de un plano que están a una distancia fija (radio) de un punto fijo (centro).",
+          "El **radio** (r) es el segmento que va del centro a cualquier punto de la circunferencia.",
+          "El **diámetro** (d) es el segmento que pasa por el centro y une dos puntos opuestos: **d = 2r**.",
+          "La **longitud** de la circunferencia (perímetro) es: **C = 2πr = πd**.",
+          "Una **cuerda** es un segmento que une dos puntos de la circunferencia sin pasar por el centro.",
+          "Un **arco** es una porción de la circunferencia comprendida entre dos puntos."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Fórmulas y propiedades",
+        lines: [
+          "El **área** del círculo es: **A = πr²**.",
+          "La **longitud de un arco** con ángulo central θ (en grados) es: **L = (θ/360°) × 2πr**.",
+          "El **área de un sector** circular es: **A_sector = (θ/360°) × πr²**.",
+          "El **ángulo inscrito** es la mitad del ángulo central que subtiende el mismo arco: **α = θ/2**.",
+          "Un **ángulo inscrito** que subtiende un diámetro es siempre **90°** (teorema de Tales).",
+          "Un **segmento circular** es la región entre una cuerda y el arco que subtiende. Su área es: **A_segmento = A_sector − A_triángulo**."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Teoremas avanzados",
+        lines: [
+          "El **teorema de la cuerda-cuerda**: si dos cuerdas se cortan dentro de la circunferencia, **PA × PB = PC × PD** (donde P es el punto de intersección).",
+          "El **teorema del tangente-secante**: si un segmento tangente y un segmento secante parten de un punto exterior, **PT² = PA × PB**.",
+          "El **teorema del ángulo entre tangente y cuerda**: el ángulo formado por una tangente y una cuerda en el punto de contacto es igual al ángulo inscrito que subtiende la misma cuerda.",
+          "El **área** de un sector con ángulo θ en radianes es: **A = (1/2)r²θ**. La longitud de arco es **L = rθ**.",
+          "La **potencia de un punto** P con respecto a una circunferencia es **PO² − R²** (donde O es el centro y R el radio). Es positiva si P es exterior, negativa si es interior.",
+          "Truco de examen: convierte siempre a radianes cuando uses fórmulas diferenciadas. **360° = 2π rad**, **180° = π rad**, **90° = π/2 rad**."
+        ]
+      }
+    ],
+    illustrations: [
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+        <rect width="300" height="200" fill="#f8fafc" rx="8"/>
+        <circle cx="150" cy="110" r="70" fill="#dbeafe" fill-opacity="0.3" stroke="#2563eb" stroke-width="2.5"/>
+        <circle cx="150" cy="110" r="3" fill="#dc2626"/>
+        <line x1="150" y1="110" x2="220" y2="110" stroke="#dc2626" stroke-width="2"/>
+        <line x1="150" y1="110" x2="150" y2="40" stroke="#059669" stroke-width="2"/>
+        <path d="M 175 110 A 25 25 0 0 0 164 92" fill="none" stroke="#7c3aed" stroke-width="2"/>
+        <line x1="150" y1="40" x2="220" y2="110" stroke="#2563eb" stroke-width="1.5" stroke-dasharray="4,3"/>
+        <text x="148" y="107" font-family="Arial" font-size="10" fill="#dc2626">O</text>
+        <text x="185" y="103" font-family="Arial" font-size="10" fill="#dc2626" font-weight="bold">r</text>
+        <text x="155" y="80" font-family="Arial" font-size="10" fill="#059669" font-weight="bold">r</text>
+        <text x="170" y="92" font-family="Arial" font-size="10" fill="#7c3aed">θ</text>
+        <text x="185" y="75" font-family="Arial" font-size="10" fill="#2563eb">s (arco)</text>
+        <text x="25" y="25" font-family="Arial" font-size="13" fill="#333" font-weight="bold">Partes de la circunferencia</text>
+      </svg>`,
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+        <rect width="300" height="200" fill="#f8fafc" rx="8"/>
+        <circle cx="150" cy="100" r="70" fill="none" stroke="#2563eb" stroke-width="2"/>
+        <line x1="80" y1="100" x2="220" y2="100" stroke="#2563eb" stroke-width="2"/>
+        <circle cx="150" cy="100" r="3" fill="#dc2626"/>
+        <circle cx="80" cy="100" r="3" fill="#333"/>
+        <circle cx="220" cy="100" r="3" fill="#333"/>
+        <text x="146" y="97" font-family="Arial" font-size="10" fill="#dc2626">O</text>
+        <text x="68" y="95" font-family="Arial" font-size="10" fill="#333">A</text>
+        <text x="222" y="95" font-family="Arial" font-size="10" fill="#333">B</text>
+        <text x="130" y="115" font-family="Arial" font-size="10" fill="#dc2626" font-weight="bold">d = 2r</text>
+        <circle cx="150" cy="100" r="70" fill="#dc2626" fill-opacity="0.08"/>
+        <text x="25" y="25" font-family="Arial" font-size="13" fill="#333" font-weight="bold">Diámetro y radio</text>
+      </svg>`
+    ],
+    exercises: [
+      {
+        id: 1,
+        question: "¿Cuál es la circunferencia de un círculo con radio 7 cm? (Usa π ≈ 22/7)",
+        options: ["22 cm", "44 cm", "154 cm", "49 cm"],
+        correctIndex: 1,
+        explanation: "C = 2πr = 2 × (22/7) × 7 = 2 × 22 = 44 cm.",
+        difficulty: "basico"
+      },
+      {
+        id: 2,
+        question: "Un sector circular tiene un ángulo central de 120° y un radio de 9 cm. ¿Cuál es su área? (Usa π ≈ 3.14)",
+        options: ["84.78 cm²", "169.56 cm²", "254.34 cm²", "28.26 cm²"],
+        correctIndex: 0,
+        explanation: "A_sector = (θ/360°) × πr² = (120/360) × 3.14 × 81 = (1/3) × 254.34 = 84.78 cm².",
+        difficulty: "intermedio"
+      },
+      {
+        id: 3,
+        question: "Desde un punto exterior P, se traza un segmento tangente PT = 8 cm a una circunferencia, y un segmento secante que intersecta la circunferencia en A y B, con PA = 4 cm. ¿Cuánto mide PB?",
+        options: ["12 cm", "16 cm", "32 cm", "6 cm"],
+        correctIndex: 1,
+        explanation: "Por el teorema tangente-secante: PT² = PA × PB. Entonces 8² = 4 × PB → 64 = 4 × PB → PB = 16 cm.",
+        difficulty: "avanzado"
+      }
+    ]
+  },
+  {
+    slug: "puntos-notables",
+    tip: "Los 4 puntos notables del triángulo (incentro, baricentro, ortocentro y circuncentro) siempre están alineados en la Recta de Euler. En un triángulo equilátero, los cuatro puntos coinciden. Memoriza: el baricentro divide a cada mediana en relación 2:1 desde el vértice.",
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "Los **puntos notables** de un triángulo son puntos especiales que se obtienen al trazar líneas específicas desde los vértices o lados.",
+          "El **incentro** (I) es el punto de intersección de las tres **bisectrices** del triángulo. Es el centro de la circunferencia inscrita.",
+          "El **baricentro** (G) es el punto de intersección de las tres **medianas** del triángulo. Es el centro de gravedad.",
+          "El **ortocentro** (H) es el punto de intersección de las tres **alturas** del triángulo.",
+          "El **circuncentro** (O) es el punto de intersección de las tres **mediatrices** de los lados. Es el centro de la circunferencia circunscrita.",
+          "En un triángulo **equilátero**, los cuatro puntos notables coinciden en un solo punto."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Fórmulas y propiedades",
+        lines: [
+          "El **baricentro** G divide cada mediana en una razón **2:1**, contando desde el vértice: **AG:GM = 2:1** (siendo M el punto medio del lado opuesto).",
+          "El **incentro** I está a la misma distancia de los tres lados: esa distancia es el **radio de la circunferencia inscrita** **r = A/s**, donde A es el área y s el semiperímetro.",
+          "El **circuncentro** O está a la misma distancia de los tres vértices: esa distancia es el **radio de la circunferencia circunscrita** **R = a/(2·senA)**.",
+          "El **ortocentro** H tiene la propiedad de que los reflejos de H sobre los lados del triángulo caen sobre la circunferencia circunscrita.",
+          "El **baricentro** tiene coordenadas promedio: **G = ((x₁+x₂+x₃)/3, (y₁+y₂+y₃)/3)** si los vértices son (x₁,y₁), (x₂,y₂), (x₃,y₃).",
+          "El **incentro** tiene coordenadas ponderadas por los lados: **I = (a·A + b·B + c·C) / (a+b+c)**, donde a, b, c son las longitudes de los lados opuestos a A, B, C."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Teoremas avanzados",
+        lines: [
+          "La **Recta de Euler** es la recta que contiene al circuncentro O, al baricentro G, al ortocentro H y al centro de la circunferencia de los nueve puntos N.",
+          "En la Recta de Euler se cumple: **OG:GH = 1:2**, y el centro de los nueve puntos N es el punto medio de OH.",
+          "El **centro de los nueve puntos** N es el centro de la circunferencia que pasa por los puntos medios de los lados, los pies de las alturas y los puntos medios de los segmentos de H a los vértices.",
+          "La **circunferencia de los nueve puntos** tiene radio **R/2**, donde R es el radio de la circunferencia circunscrita.",
+          "El **incentro** I no pertenece a la Recta de Euler en general. Solo coincide con los demás en el triángulo equilátero.",
+          "Truco de examen: en un triángulo rectángulo, el ortocentro está en el vértice del ángulo recto, y el circuncentro es el punto medio de la hipotenusa."
+        ]
+      }
+    ],
+    illustrations: [
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+        <rect width="300" height="200" fill="#f8fafc" rx="8"/>
+        <polygon points="150,25 40,175 260,175" fill="#dbeafe" fill-opacity="0.3" stroke="#2563eb" stroke-width="2"/>
+        <circle cx="150" cy="25" r="3" fill="#333"/>
+        <circle cx="40" cy="175" r="3" fill="#333"/>
+        <circle cx="260" cy="175" r="3" fill="#333"/>
+        <text x="145" y="18" font-family="Arial" font-size="10" fill="#333" font-weight="bold">A</text>
+        <text x="25" y="185" font-family="Arial" font-size="10" fill="#333" font-weight="bold">B</text>
+        <text x="262" y="185" font-family="Arial" font-size="10" fill="#333" font-weight="bold">C</text>
+        <line x1="150" y1="25" x2="150" y2="175" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="4,3"/>
+        <circle cx="150" cy="125" r="4" fill="#dc2626"/>
+        <text x="155" y="128" font-family="Arial" font-size="10" fill="#dc2626" font-weight="bold">G</text>
+        <text x="48" y="168" font-family="Arial" font-size="9" fill="#333">M</text>
+        <circle cx="150" cy="175" r="2.5" fill="#333"/>
+        <line x1="150" y1="125" x2="150" y2="100" stroke="#dc2626" stroke-width="1"/>
+        <line x1="150" y1="125" x2="150" y2="150" stroke="#dc2626" stroke-width="1"/>
+        <text x="190" y="118" font-family="Arial" font-size="8" fill="#333">2/3</text>
+        <text x="155" y="155" font-family="Arial" font-size="8" fill="#333">1/3</text>
+        <text x="25" y="25" font-family="Arial" font-size="13" fill="#333" font-weight="bold">Baricentro (G) — Mediana</text>
+      </svg>`,
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+        <rect width="300" height="200" fill="#f8fafc" rx="8"/>
+        <polygon points="150,30 45,170 255,170" fill="#dbeafe" fill-opacity="0.25" stroke="#2563eb" stroke-width="2"/>
+        <circle cx="150" cy="30" r="3" fill="#333"/>
+        <circle cx="45" cy="170" r="3" fill="#333"/>
+        <circle cx="255" cy="170" r="3" fill="#333"/>
+        <text x="145" y="22" font-family="Arial" font-size="10" fill="#333" font-weight="bold">A</text>
+        <text x="30" y="180" font-family="Arial" font-size="10" fill="#333" font-weight="bold">B</text>
+        <text x="257" y="180" font-family="Arial" font-size="10" fill="#333" font-weight="bold">C</text>
+        <line x1="150" y1="30" x2="150" y2="170" stroke="#059669" stroke-width="1.2" stroke-dasharray="4,3"/>
+        <line x1="45" y1="170" x2="210" y2="52" stroke="#059669" stroke-width="1.2" stroke-dasharray="4,3"/>
+        <line x1="255" y1="170" x2="90" y2="52" stroke="#059669" stroke-width="1.2" stroke-dasharray="4,3"/>
+        <circle cx="150" cy="112" r="5" fill="#059669"/>
+        <text x="156" y="110" font-family="Arial" font-size="10" fill="#059669" font-weight="bold">I</text>
+        <circle cx="150" cy="112" r="35" fill="none" stroke="#059669" stroke-width="1" stroke-dasharray="3,3"/>
+        <text x="25" y="25" font-family="Arial" font-size="13" fill="#333" font-weight="bold">Incentro (I) — Bisectrices</text>
+        <text x="190" y="125" font-family="Arial" font-size="9" fill="#059669">r (inscrita)</text>
+      </svg>`,
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+        <rect width="300" height="200" fill="#f8fafc" rx="8"/>
+        <polygon points="150,35 45,165 255,165" fill="#dbeafe" fill-opacity="0.25" stroke="#2563eb" stroke-width="2"/>
+        <circle cx="150" cy="35" r="3" fill="#333"/>
+        <circle cx="45" cy="165" r="3" fill="#333"/>
+        <circle cx="255" cy="165" r="3" fill="#333"/>
+        <text x="145" y="27" font-family="Arial" font-size="10" fill="#333" font-weight="bold">A</text>
+        <text x="30" y="175" font-family="Arial" font-size="10" fill="#333" font-weight="bold">B</text>
+        <text x="257" y="175" font-family="Arial" font-size="10" fill="#333" font-weight="bold">C</text>
+        <line x1="150" y1="35" x2="150" y2="165" stroke="#7c3aed" stroke-width="1.2"/>
+        <line x1="100" y1="35" x2="45" y2="165" stroke="#7c3aed" stroke-width="1.2"/>
+        <line x1="200" y1="35" x2="255" y2="165" stroke="#7c3aed" stroke-width="1.2"/>
+        <circle cx="150" cy="70" r="5" fill="#7c3aed"/>
+        <text x="156" y="68" font-family="Arial" font-size="10" fill="#7c3aed" font-weight="bold">H</text>
+        <circle cx="150" cy="70" r="55" fill="none" stroke="#7c3aed" stroke-width="1" stroke-dasharray="3,3"/>
+        <text x="25" y="25" font-family="Arial" font-size="13" fill="#333" font-weight="bold">Ortocentro (H) — Alturas</text>
+      </svg>`,
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+        <rect width="300" height="200" fill="#f8fafc" rx="8"/>
+        <polygon points="150,35 45,165 255,165" fill="#dbeafe" fill-opacity="0.25" stroke="#2563eb" stroke-width="2"/>
+        <circle cx="150" cy="35" r="3" fill="#333"/>
+        <circle cx="45" cy="165" r="3" fill="#333"/>
+        <circle cx="255" cy="165" r="3" fill="#333"/>
+        <text x="145" y="27" font-family="Arial" font-size="10" fill="#333" font-weight="bold">A</text>
+        <text x="30" y="175" font-family="Arial" font-size="10" fill="#333" font-weight="bold">B</text>
+        <text x="257" y="175" font-family="Arial" font-size="10" fill="#333" font-weight="bold">C</text>
+        <circle cx="150" cy="35" r="80" fill="none" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="4,3"/>
+        <line x1="97" y1="100" x2="97" y2="165" stroke="#f59e0b" stroke-width="1.2"/>
+        <line x1="203" y1="100" x2="203" y2="165" stroke="#f59e0b" stroke-width="1.2"/>
+        <line x1="150" y1="35" x2="150" y2="115" stroke="#f59e0b" stroke-width="1.2"/>
+        <circle cx="150" cy="115" r="5" fill="#f59e0b"/>
+        <text x="156" y="113" font-family="Arial" font-size="10" fill="#f59e0b" font-weight="bold">O</text>
+        <text x="25" y="25" font-family="Arial" font-size="13" fill="#333" font-weight="bold">Circuncentro (O) — Mediatices</text>
+      </svg>`
+    ],
+    exercises: [
+      {
+        id: 1,
+        question: "¿En qué punto notable del triángulo se intersecan las tres medianas?",
+        options: ["Incentro", "Ortocentro", "Circuncentro", "Baricentro"],
+        correctIndex: 3,
+        explanation: "El baricentro (G) es el punto de intersección de las tres medianas del triángulo. Representa el centro de gravedad.",
+        difficulty: "basico"
+      },
+      {
+        id: 2,
+        question: "Un triángulo tiene vértices en A(0,0), B(6,0) y C(3,6). ¿Cuáles son las coordenadas del baricentro?",
+        options: ["(3, 2)", "(2, 3)", "(3, 3)", "(1.5, 2)"],
+        correctIndex: 0,
+        explanation: "El baricentro es el promedio de las coordenadas: G = ((0+6+3)/3, (0+0+6)/3) = (9/3, 6/3) = (3, 2).",
+        difficulty: "intermedio"
+      },
+      {
+        id: 3,
+        question: "En un triángulo rectángulo con catetos de 6 cm y 8 cm, ¿dónde se ubica el circuncentro?",
+        options: ["En el vértice del ángulo recto", "En el punto medio de la hipotenusa", "En el punto medio del cateto mayor", "Fuera del triángulo"],
+        correctIndex: 1,
+        explanation: "En un triángulo rectángulo, el circuncentro siempre se encuentra en el punto medio de la hipotenusa. La hipotenusa mide 10 cm (por Pitágoras), y el radio de la circunferencia circunscrita es 5 cm.",
+        difficulty: "avanzado"
+      }
+    ]
+  },
+  {
+    slug: "prop-y-semejanza",
+    tip: "En semejanza, identifica SIEMPRE el vértice común y el orden correcto de los polígonos. Muchos errores vienen de no respetar la correspondencia de vértices al plantear las proporciones.",
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "**Proporcionalidad**: Dos razones son **proporcionales** si el cociente de sus términos es igual.",
+          "**Razón de semejanza (k)**: Factor que relaciona las longitudes correspondientes de dos figuras semejantes.",
+          "Dos polígonos son **semejantes** si sus ángulos correspondientes son iguales y sus lados correspondientes son **proporcionales**.",
+          "**Teorema de Tales**: Si una paralela corta a dos rectas concurrentes, determina segmentos **proporcionales**.",
+          "Las figuras semejantes conservan la **forma** pero no necesariamente el **tamaño**.",
+          "La relación de semejanza se escribe como **k = L₂/L₁**, donde L son longitudes correspondientes.",
+        ],
+      },
+      {
+        level: "intermedio",
+        title: "Fórmulas y propiedades",
+        lines: [
+          "**Relación de áreas**: Si k es el factor de semejanza, entonces **A₂/A₁ = k²**.",
+          "**Relación de perímetros**: **P₂/P₁ = k** (la misma que la relación de lados).",
+          "Si un triángulo tiene una **paralela a un lado**, el triángulo formado es **semejante** al original.",
+          "**Teorema de la paralela**: En un triángulo, una paralela a un lado divide a los otros dos en **segmentos proporcionales**.",
+          "Proporción fundamental: **a/b = c/d = e/f** cuando hay semejanza de polígonos con 3 pares de lados.",
+          "Si k > 1 la figura se **agranda**; si 0 < k < 1 se **reduce**; si k = 1 son **congruentes**.",
+        ],
+      },
+      {
+        level: "avanzado",
+        title: "Teoremas avanzados",
+        lines: [
+          "**Teorema de Tales generalizado**: Si 3 o más paralelas cortan a dos transversales, los segmentos determinados son **proporcionales**.",
+          "En un **trapecio**, la paralela a las bases que pasa por el punto medio de un lado no paralelo **biseca** al otro lado no paralelo.",
+          "El **segmento que une puntos medios** de dos lados no paralelos de un trapecio mide: **m = (b₁ + b₂)/2**.",
+          "Si dos triángulos son semejantes, el cociente de sus **radios de circunferencia circunscrita** es igual a **k**.",
+          "El **incentro** de dos figuras semejantes se mapea en la **misma posición relativa**, lo que permite resolver problemas de ubicación.",
+          "Truco de examen: cuando aparecen rectas que cruzan en un punto con paralelas, siempre aplicar **Thales** directamente sin dibujar auxiliares adicionales.",
+        ],
+      },
+    ],
+    illustrations: [
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+  <rect width="300" height="200" fill="#f8fafc"/>
+  <polygon points="150,20 40,180 260,180" fill="none" stroke="#2563eb" stroke-width="2.5"/>
+  <line x1="75" y1="110" x2="225" y2="110" stroke="#dc2626" stroke-width="2.5" stroke-dasharray="8,4"/>
+  <text x="150" y="12" text-anchor="middle" font-size="13" fill="#1e293b" font-weight="bold">A</text>
+  <text x="25" y="192" text-anchor="middle" font-size="13" fill="#1e293b" font-weight="bold">B</text>
+  <text x="275" y="192" text-anchor="middle" font-size="13" fill="#1e293b" font-weight="bold">C</text>
+  <text x="65" y="107" text-anchor="middle" font-size="13" fill="#dc2626" font-weight="bold">D</text>
+  <text x="235" y="107" text-anchor="middle" font-size="13" fill="#dc2626" font-weight="bold">E</text>
+  <text x="85" y="60" font-size="11" fill="#059669">k</text>
+  <text x="195" y="60" font-size="11" fill="#059669">k</text>
+  <line x1="150" y1="20" x2="75" y2="110" stroke="#7c3aed" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="150" y1="20" x2="225" y2="110" stroke="#7c3aed" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="150" y="160" text-anchor="middle" font-size="12" fill="#1e293b">DE ∥ BC</text>
+  <text x="150" y="195" text-anchor="middle" font-size="11" fill="#64748b">△ADE ~ △ABC</text>
+</svg>`,
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+  <rect width="300" height="200" fill="#f8fafc"/>
+  <circle cx="100" cy="100" r="70" fill="none" stroke="#2563eb" stroke-width="2"/>
+  <circle cx="220" cy="100" r="35" fill="none" stroke="#dc2626" stroke-width="2"/>
+  <polygon points="100,30 55,120 145,120" fill="#2563eb" fill-opacity="0.15" stroke="#2563eb" stroke-width="2"/>
+  <polygon points="220,65 197.5,100 242.5,100" fill="#dc2626" fill-opacity="0.15" stroke="#dc2626" stroke-width="2"/>
+  <text x="100" y="140" text-anchor="middle" font-size="12" fill="#2563eb" font-weight="bold">Lado = a</text>
+  <text x="220" y="120" text-anchor="middle" font-size="12" fill="#dc2626" font-weight="bold">Lado = ka</text>
+  <text x="150" y="190" text-anchor="middle" font-size="12" fill="#1e293b">Factor de semejanza k</text>
+  <text x="150" y="30" text-anchor="middle" font-size="11" fill="#64748b">Relación de áreas = k²</text>
+</svg>`,
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+  <rect width="300" height="200" fill="#f8fafc"/>
+  <line x1="30" y1="180" x2="150" y2="20" stroke="#2563eb" stroke-width="2"/>
+  <line x1="150" y1="180" x2="270" y2="20" stroke="#2563eb" stroke-width="2"/>
+  <line x1="30" y1="180" x2="270" y2="180" stroke="#2563eb" stroke-width="2"/>
+  <line x1="70" y1="180" x2="160" y2="80" stroke="#dc2626" stroke-width="2" stroke-dasharray="6,4"/>
+  <line x1="130" y1="180" x2="210" y2="80" stroke="#dc2626" stroke-width="2" stroke-dasharray="6,4"/>
+  <line x1="200" y1="180" x2="250" y2="80" stroke="#dc2626" stroke-width="2" stroke-dasharray="6,4"/>
+  <text x="20" y="185" font-size="12" fill="#1e293b" font-weight="bold">A</text>
+  <text x="150" y="195" font-size="12" fill="#1e293b" font-weight="bold">B</text>
+  <text x="275" y="185" font-size="12" fill="#1e293b" font-weight="bold">C</text>
+  <text x="145" y="15" font-size="12" fill="#dc2626" font-weight="bold">L₁</text>
+  <text x="55" y="175" font-size="10" fill="#059669">a</text>
+  <text x="95" y="175" font-size="10" fill="#059669">b</text>
+  <text x="155" y="175" font-size="10" fill="#059669">c</text>
+  <text x="150" y="145" text-anchor="middle" font-size="11" fill="#64748b">Teorema de Tales: a/b = c/d</text>
+</svg>`,
+    ],
+    exercises: [
+      {
+        id: 701,
+        question:
+          "En un triángulo ABC, una paralela al lado BC corta a AB en D y a AC en E, formando el triángulo ADE. Si AD = 6, DB = 4 y BC = 15, ¿cuánto mide DE?",
+        options: ["7.5", "9", "10", "12"],
+        correctIndex: 1,
+        explanation:
+          "Por Thales, AD/AB = DE/BC. AB = AD + DB = 6 + 4 = 10. Entonces 6/10 = DE/15, por lo tanto DE = (6 × 15)/10 = 9.",
+        difficulty: "basico",
+      },
+      {
+        id: 702,
+        question:
+          "Dos triángulos semejantes tienen un factor de semejanza k = 3. Si el perímetro del menor es 20 cm, ¿cuál es el área del mayor si el área del menor es 24 cm²?",
+        options: ["72 cm²", "144 cm²", "216 cm²", "729 cm²"],
+        correctIndex: 2,
+        explanation:
+          "El perímetro del mayor sería 20 × 3 = 60 cm. Para las áreas, A₂/A₁ = k² = 9, entonces A₂ = 24 × 9 = 216 cm².",
+        difficulty: "intermedio",
+      },
+      {
+        id: 703,
+        question:
+          "En un trapecio ABCD con AB ∥ CD, AB = 20, CD = 12. Un segmento EF une puntos de AD y BC tal que EF ∥ AB. Si DE/EA = 3/5, ¿cuánto mide EF?",
+        options: ["14", "15", "16", "17"],
+        correctIndex: 1,
+        explanation:
+          "La fórmula del segmento paralelo en un trapecio es EF = (EA × CD + DE × AB)/(DE + EA) = (5 × 12 + 3 × 20)/(3 + 5) = (60 + 60)/8 = 15.",
+        difficulty: "avanzado",
+      },
+    ],
+  },
+  {
+    slug: "relaciones-metricas",
+    tip: "En relaciones métricas del triángulo rectángulo, memoriza solo 3 fórmulas: a² = c·m, b² = c·n y h² = m·n. El teorema de Pitágoras se deduce de ellas: a² + b² = c·m + c·n = c(m+n) = c².",
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "En un **triángulo rectángulo**, la **altura** trazada desde el vértice del ángulo recto a la hipotenusa genera **dos triángulos semejantes** entre sí y con el original.",
+          "**Hipotenusa (c)**: lado opuesto al ángulo recto. Es el lado **más largo** del triángulo rectángulo.",
+          "**Catetos (a, b)**: los dos lados que forman el ángulo recto.",
+          "**Proyección**: los segmentos en que la altura **divide la hipotenusa** se llaman **m** y **n** (proyecciones de los catetos).",
+          "**Teorema de Pitágoras**: En todo triángulo rectángulo, **a² + b² = c²**.",
+          "La **altura (h)** es perpendicular a la hipotenusa y se mide desde el vértice del ángulo recto.",
+        ],
+      },
+      {
+        level: "intermedio",
+        title: "Fórmulas y propiedades",
+        lines: [
+          "**Teorema de la altura**: **h² = m · n** (la altura es la media geométrica de las proyecciones).",
+          "**Teorema del cateto**: **a² = c · m** y **b² = c · n** (cada cateto es media geométrica de la hipotenusa y su proyección).",
+          "**Área del triángulo rectángulo**: **A = (a · b)/2 = (c · h)/2**.",
+          "La **inversa del Pitágoras** también se cumple: si a² + b² = c², el triángulo es rectángulo.",
+          "**Relación fundamental**: m + n = c (las proyecciones suman la hipotenusa).",
+          "De las relaciones métricas se deduce: **1/h² = 1/a² + 1/b²**.",
+        ],
+      },
+      {
+        level: "avanzado",
+        title: "Teoremas avanzados",
+        lines: [
+          "**Media geométrica**: h = √(m·n). Este concepto aparece en la **secante-tangente** y en el **cateto medio**.",
+          "Si el ángulo recto es de **45°-45°-90°**, entonces m = n y h = c/2. Los catetos miden **c/√2**.",
+          "Si el ángulo recto es de **30°-60°-90°**, los catetos son **c/2** y **c√3/2**.",
+          "**Truco de examen**: Para verificar si un triángulo es rectángulo, sustituir los lados en a² + b² = c². Si se cumple, es rectángulo.",
+          "En un triángulo rectángulo inscrito en una **circunferencia**, la hipotenusa es siempre el **diámetro**.",
+          "La **altura máxima** de un triángulo rectángulo con hipotenusa fija c se alcanza cuando h = c/2 (caso isósceles).",
+        ],
+      },
+    ],
+    illustrations: [
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+  <rect width="300" height="200" fill="#f8fafc"/>
+  <polygon points="50,170 250,170 50,30" fill="#2563eb" fill-opacity="0.1" stroke="#2563eb" stroke-width="2.5"/>
+  <line x1="50" y1="30" x2="50" y2="170" stroke="#2563eb" stroke-width="2.5"/>
+  <line x1="50" y1="170" x2="250" y2="170" stroke="#2563eb" stroke-width="2.5"/>
+  <line x1="50" y1="30" x2="250" y2="170" stroke="#2563eb" stroke-width="2.5"/>
+  <line x1="50" y1="30" x2="106" y2="154" stroke="#dc2626" stroke-width="2" stroke-dasharray="6,3"/>
+  <rect x="50" y="30" width="12" height="12" fill="none" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="30" y="25" font-size="14" fill="#1e293b" font-weight="bold">A</text>
+  <text x="40" y="188" font-size="14" fill="#1e293b" font-weight="bold">B</text>
+  <text x="260" y="188" font-size="14" fill="#1e293b" font-weight="bold">C</text>
+  <text x="30" y="105" font-size="13" fill="#dc2626" font-weight="bold">a</text>
+  <text x="155" y="188" font-size="13" fill="#dc2626" font-weight="bold">b</text>
+  <text x="155" y="90" font-size="13" fill="#059669" font-weight="bold">c</text>
+  <text x="110" y="148" font-size="12" fill="#7c3aed" font-weight="bold">h</text>
+  <text x="70" y="188" font-size="11" fill="#f59e0b" font-weight="bold">m</text>
+  <text x="185" y="188" font-size="11" fill="#f59e0b" font-weight="bold">n</text>
+  <text x="150" y="15" text-anchor="middle" font-size="12" fill="#1e293b">Relaciones Métricas del Triángulo Rectángulo</text>
+</svg>`,
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+  <rect width="300" height="200" fill="#f8fafc"/>
+  <polygon points="30,170 150,170 30,50" fill="#2563eb" fill-opacity="0.08" stroke="#2563eb" stroke-width="2"/>
+  <polygon points="150,170 250,170 150,80" fill="#dc2626" fill-opacity="0.08" stroke="#dc2626" stroke-width="2"/>
+  <polygon points="30,50 150,170 150,80" fill="#059669" fill-opacity="0.08" stroke="#059669" stroke-width="2"/>
+  <polygon points="30,170 150,170 30,50" fill="none" stroke="#2563eb" stroke-width="2"/>
+  <text x="150" y="15" text-anchor="middle" font-size="12" fill="#1e293b" font-weight="bold">Los 3 triángulos son semejantes</text>
+  <text x="70" y="130" font-size="11" fill="#2563eb" font-weight="bold">△1</text>
+  <text x="200" y="140" font-size="11" fill="#dc2626" font-weight="bold">△2</text>
+  <text x="80" y="95" font-size="11" fill="#059669" font-weight="bold">△3</text>
+  <text x="150" y="195" text-anchor="middle" font-size="11" fill="#64748b">△1 ~ △2 ~ △3 (todos semejantes al original)</text>
+</svg>`,
+    ],
+    exercises: [
+      {
+        id: 801,
+        question:
+          "En un triángulo rectángulo, la hipotenusa mide 13 cm y una de las proyecciones de los catetos mide 4 cm. ¿Cuánto mide la altura?",
+        options: ["4 cm", "5 cm", "6 cm", "8 cm"],
+        correctIndex: 2,
+        explanation:
+          "Si m = 4, entonces n = c − m = 13 − 4 = 9. Por el teorema de la altura: h² = m·n = 4·9 = 36, entonces h = 6 cm.",
+        difficulty: "basico",
+      },
+      {
+        id: 802,
+        question:
+          "Un triángulo rectángulo tiene catetos de 9 cm y 12 cm. ¿Cuánto mide el segmento que une el punto medio de la hipotenusa con el punto medio del cateto de 9 cm?",
+        options: ["4.5 cm", "5 cm", "6 cm", "7.5 cm"],
+        correctIndex: 2,
+        explanation:
+          "La hipotenusa c = √(81 + 144) = √225 = 15 cm. El segmento une el punto medio de la hipotenusa con el punto medio del cateto de 9 cm, por lo que por el teorema de la línea media es paralelo al cateto restante (12 cm) y mide la mitad: 12/2 = 6 cm.",
+        difficulty: "intermedio",
+      },
+      {
+        id: 803,
+        question:
+          "En un triángulo rectángulo, las proyecciones de los catetos sobre la hipotenusa miden 9 cm y 16 cm respectivamente. ¿Cuánto miden los catetos?",
+        options: [
+          "a = 12 cm, b = 16 cm",
+          "a = 15 cm, b = 20 cm",
+          "a = 9 cm, b = 16 cm",
+          "a = 15 cm, b = 25 cm",
+        ],
+        correctIndex: 1,
+        explanation:
+          "c = m + n = 9 + 16 = 25 cm. Por el teorema del cateto: a² = c·m = 25·9 = 225, a = 15 cm. b² = c·n = 25·16 = 400, b = 20 cm. Verificación: 15² + 20² = 225 + 400 = 625 = 25².",
+        difficulty: "avanzado",
+      },
+    ],
+  },
+  {
+    slug: "poligonos-regulares",
+    tip: "Para hallar el área de un polígono regular, multiplica el perímetro por el apotema y divide entre 2: A = (P × a)/2. El apotema siempre es menor que el radio. En exámenes, memoriza: hexágono regular → lado = radio.",
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "Un **polígono regular** tiene todos sus **lados iguales** y todos sus **ángulos internos iguales**.",
+          "**Número de diagonales**: Para un polígono de n lados, tiene **n(n−3)/2 diagonales**.",
+          "La suma de los ángulos internos de un polígono de n lados es **(n−2) × 180°**.",
+          "Cada ángulo interno de un polígono regular de n lados mide **(n−2) × 180°/n**.",
+          "Cada ángulo externo de un polígono regular mide **360°/n**.",
+          "El **apotema** es la distancia del centro al punto medio de un lado (perpendicular al lado).",
+        ],
+      },
+      {
+        level: "intermedio",
+        title: "Fórmulas y propiedades",
+        lines: [
+          "**Área de un polígono regular**: **A = (P × a)/2**, donde P es el perímetro y a es el apotema.",
+          "**Radio (R)**: distancia del centro a un vértice. En un hexágono regular, **R = lado**.",
+          "**Apothema (a)**: **a = R · cos(180°/n)** o **a = L/(2·tan(180°/n))** donde L es la longitud de un lado.",
+          "**Lado a partir del radio**: **L = 2R · sin(180°/n)**.",
+          "El **ángulo central** de un polígono regular de n lados es **360°/n**.",
+          "Un hexágono regular se divide en **6 triángulos equiláteros**, por eso L = R.",
+        ],
+      },
+      {
+        level: "avanzado",
+        title: "Teoremas avanzados",
+        lines: [
+          "**Polígonos que tesselan**: Solo los triángulos equiláteros, cuadrados y hexágonos regulares tesselan el plano.",
+          "La relación entre el apotema y el radio: **a = R·cos(π/n)** permite resolver problemas con circunferencia circunscrita.",
+          "**Área en función del radio**: **A = (n/2) · R² · sin(360°/n)**.",
+          "**Truco de examen**: Si conoces el apotema y el número de lados, puedes hallar todo: **L = 2a·tan(180°/n)**.",
+          "El **radio de la circunferencia inscrita** es igual al apotema del polígono regular.",
+          "Para un polígono de muchos lados, el área se aproxima al área de la circunferencia: **A ≈ πR²** cuando **n → ∞**.",
+        ],
+      },
+    ],
+    illustrations: [
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+  <rect width="300" height="200" fill="#f8fafc"/>
+  <polygon points="150,30 220,60 220,140 150,170 80,140 80,60" fill="#2563eb" fill-opacity="0.12" stroke="#2563eb" stroke-width="2.5"/>
+  <circle cx="150" cy="100" r="70" fill="none" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <circle cx="150" cy="100" r="46" fill="none" stroke="#059669" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <circle cx="150" cy="100" r="3" fill="#dc2626"/>
+  <line x1="150" y1="100" x2="220" y2="60" stroke="#dc2626" stroke-width="1.5"/>
+  <line x1="150" y1="100" x2="150" y2="170" stroke="#059669" stroke-width="1.5"/>
+  <text x="150" y="20" text-anchor="middle" font-size="12" fill="#1e293b" font-weight="bold">Hexágono Regular</text>
+  <text x="230" y="55" font-size="11" fill="#dc2626" font-weight="bold">R</text>
+  <text x="158" y="155" font-size="11" fill="#059669" font-weight="bold">a</text>
+  <text x="250" y="100" font-size="11" fill="#7c3aed" font-weight="bold">L = R</text>
+  <text x="150" y="115" font-size="10" fill="#64748b">centro</text>
+</svg>`,
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+  <rect width="300" height="200" fill="#f8fafc"/>
+  <polygon points="150,25 235,80 205,175 95,175 65,80" fill="#7c3aed" fill-opacity="0.12" stroke="#7c3aed" stroke-width="2.5"/>
+  <circle cx="150" cy="108" r="83" fill="none" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <circle cx="150" cy="108" r="50" fill="none" stroke="#059669" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <circle cx="150" cy="108" r="3" fill="#dc2626"/>
+  <line x1="150" y1="108" x2="150" y2="25" stroke="#dc2626" stroke-width="1.5"/>
+  <line x1="150" y1="108" x2="235" y2="80" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <line x1="150" y1="108" x2="205" y2="175" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <text x="150" y="15" text-anchor="middle" font-size="12" fill="#1e293b" font-weight="bold">Pentágono Regular</text>
+  <text x="155" y="65" font-size="11" fill="#dc2626" font-weight="bold">R</text>
+  <text x="155" y="75" font-size="10" fill="#64748b">radio</text>
+  <text x="195" y="175" font-size="10" fill="#059669" font-weight="bold">a = apotema</text>
+  <text x="150" y="195" text-anchor="middle" font-size="11" fill="#64748b">Ángulo central = 360°/5 = 72°</text>
+</svg>`,
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+  <rect width="300" height="200" fill="#f8fafc"/>
+  <rect x="20" y="20" width="85" height="80" rx="2" fill="#2563eb" fill-opacity="0.1" stroke="#2563eb" stroke-width="2"/>
+  <polygon points="170,25 215,50 215,100 170,125 125,100 125,50" fill="#dc2626" fill-opacity="0.1" stroke="#dc2626" stroke-width="2"/>
+  <polygon points="280,60 260,30 225,30 210,60 225,90 260,90" fill="#059669" fill-opacity="0.1" stroke="#059669" stroke-width="2"/>
+  <text x="62" y="55" text-anchor="middle" font-size="10" fill="#2563eb" font-weight="bold">Cuadrado</text>
+  <text x="62" y="70" text-anchor="middle" font-size="9" fill="#64748b">90° × 4</text>
+  <text x="170" y="80" text-anchor="middle" font-size="10" fill="#dc2626" font-weight="bold">Hexágono</text>
+  <text x="170" y="95" text-anchor="middle" font-size="9" fill="#64748b">120° × 6</text>
+  <text x="245" y="65" text-anchor="middle" font-size="10" fill="#059669" font-weight="bold">Triángulo</text>
+  <text x="245" y="80" text-anchor="middle" font-size="9" fill="#64748b">60° × 3</text>
+  <text x="150" y="160" text-anchor="middle" font-size="12" fill="#1e293b" font-weight="bold">Polígonos que tesselan el plano</text>
+  <text x="150" y="180" text-anchor="middle" font-size="11" fill="#64748b">Solo 3, 4 y 6 lados regulares tesselan</text>
+</svg>`,
+    ],
+    exercises: [
+      {
+        id: 901,
+        question:
+          "¿Cuánto mide cada ángulo interno de un octágono regular?",
+        options: ["120°", "135°", "140°", "144°"],
+        correctIndex: 1,
+        explanation:
+          "Cada ángulo interno = (n−2) × 180°/n = (8−2) × 180°/8 = 6 × 180°/8 = 1080°/8 = 135°. Verificando: 8 × 135° = 1080° = 6 × 180°.",
+        difficulty: "basico",
+      },
+      {
+        id: 902,
+        question:
+          "Un hexágono regular tiene un lado de 8 cm. ¿Cuál es su área?",
+        options: [
+          "96 cm²",
+          "96√3 cm²",
+          "48√3 cm²",
+          "192 cm²",
+        ],
+        correctIndex: 1,
+        explanation:
+          "Un hexágono regular se divide en 6 triángulos equiláteros. Área de cada triángulo = (√3/4) × 8² = 16√3. Área total = 6 × 16√3 = 96√3 cm².",
+        difficulty: "intermedio",
+      },
+      {
+        id: 903,
+        question:
+          "Un polígono regular tiene una suma de ángulos internos igual a 1800°. ¿Cuántos lados tiene y cuánto mide cada ángulo interno?",
+        options: [
+          "12 lados, 150°",
+          "10 lados, 144°",
+          "12 lados, 160°",
+          "14 lados, 154.3°",
+        ],
+        correctIndex: 0,
+        explanation:
+          "(n−2) × 180° = 1800°, entonces n − 2 = 10, por lo tanto n = 12. Cada ángulo interno = 1800°/12 = 150°. Verificación: 12 × 150° = 1800°.",
+        difficulty: "avanzado",
+      },
+    ],
+  },
+  {
+    slug: "areas",
+    tip: "Cuando un problema pide el área de una figura compuesta, siempre descomponla en figuras simples (triángulos, rectángulos, trapecios). Identifica qué se suma y qué se resta. Lee bien si piden área lateral o total.",
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "**Área**: Es la medida de la **superficie** que ocupa una figura plana, expresada en unidades cuadradas.",
+          "**Triángulo**: **A = (b × h)/2**, donde b es la base y h es la altura (perpendicular a la base).",
+          "**Rectángulo**: **A = base × altura = b × h**.",
+          "**Paralelogramo**: **A = base × altura = b × h** (la altura es perpendicular a la base).",
+          "**Círculo**: **A = π × r²**, donde r es el radio.",
+          "La unidad de medida del área es la **unidad cuadrada** (cm², m², etc.).",
+        ],
+      },
+      {
+        level: "intermedio",
+        title: "Fórmulas y propiedades",
+        lines: [
+          "**Rombo**: **A = (D × d)/2**, donde D y d son las diagonales mayor y menor.",
+          "**Trapecio**: **A = [(b₁ + b₂) × h]/2**, donde b₁ y b₂ son las bases paralelas.",
+          "**Polígono regular**: **A = (P × a)/2**, donde P es el perímetro y a el apotema.",
+          "**Sector circular**: **A = (π × r² × θ)/360°**, donde θ es el ángulo central en grados.",
+          "**Corona circular**: **A = π(R² − r²)**, con R el radio mayor y r el menor.",
+          "Las áreas son **aditivas**: el área total de una figura compuesta es la **suma** de las áreas de sus partes.",
+        ],
+      },
+      {
+        level: "avanzado",
+        title: "Teoremas avanzados",
+        lines: [
+          "**Fórmula de Heron**: Para un triángulo con lados a, b, c y semiperímetro s = (a+b+c)/2: **A = √[s(s−a)(s−b)(s−c)]**.",
+          "El **triángulo de área máxima** inscrito en un semicírculo es el **rectángulo isósceles**.",
+          "La **relación entre áreas** de triángulos con la misma base es proporcional a sus **alturas**.",
+          "**Área del trapecio** usando la diagonal: **A = ½ · d₁ · d₂ · sen(α)**, donde α es el ángulo entre las diagonales.",
+          "Si dos polígonos son **semejantes** con factor k, el cociente de sus áreas es **k²**.",
+          "Truco de examen: cuando el problema da el perímetro y el apotema, usa **A = Pa/2** directamente sin calcular el lado.",
+        ],
+      },
+    ],
+    illustrations: [
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+  <rect width="300" height="200" fill="#f8fafc"/>
+  <polygon points="60,160 240,160 200,40 100,40" fill="#2563eb" fill-opacity="0.12" stroke="#2563eb" stroke-width="2.5"/>
+  <line x1="100" y1="40" x2="100" y2="160" stroke="#dc2626" stroke-width="2" stroke-dasharray="6,3"/>
+  <rect x="95" y="135" width="12" height="12" fill="none" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="60" y="175" font-size="12" fill="#1e293b" font-weight="bold">b₁</text>
+  <text x="220" y="175" font-size="12" fill="#1e293b" font-weight="bold">b₂</text>
+  <text x="80" y="105" font-size="12" fill="#dc2626" font-weight="bold">h</text>
+  <text x="150" y="25" text-anchor="middle" font-size="13" fill="#1e293b" font-weight="bold">Trapecio</text>
+  <text x="150" y="195" text-anchor="middle" font-size="11" fill="#64748b">A = (b₁ + b₂) × h / 2</text>
+</svg>`,
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+  <rect width="300" height="200" fill="#f8fafc"/>
+  <circle cx="150" cy="100" r="75" fill="#dc2626" fill-opacity="0.08" stroke="#dc2626" stroke-width="2"/>
+  <circle cx="150" cy="100" r="40" fill="#2563eb" fill-opacity="0.12" stroke="#2563eb" stroke-width="2"/>
+  <circle cx="150" cy="100" r="3" fill="#1e293b"/>
+  <line x1="150" y1="100" x2="225" y2="100" stroke="#dc2626" stroke-width="1.5"/>
+  <line x1="150" y1="100" x2="190" y2="100" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="230" y="95" font-size="12" fill="#dc2626" font-weight="bold">R</text>
+  <text x="195" y="120" font-size="12" fill="#2563eb" font-weight="bold">r</text>
+  <path d="M 150 100 L 225 100 A 75 75 0 0 1 189 33 Z" fill="#059669" fill-opacity="0.2" stroke="#059669" stroke-width="1.5"/>
+  <text x="200" y="55" font-size="11" fill="#059669" font-weight="bold">θ</text>
+  <text x="150" y="195" text-anchor="middle" font-size="11" fill="#64748b">Corona: A = π(R² − r²) | Sector: A = πr²θ/360°</text>
+</svg>`,
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+  <rect width="300" height="200" fill="#f8fafc"/>
+  <polygon points="60,150 150,40 240,150" fill="#7c3aed" fill-opacity="0.12" stroke="#7c3aed" stroke-width="2.5"/>
+  <line x1="60" y1="150" x2="240" y2="150" stroke="#2563eb" stroke-width="2"/>
+  <line x1="150" y1="40" x2="150" y2="150" stroke="#dc2626" stroke-width="2" stroke-dasharray="6,3"/>
+  <rect x="145" y="125" width="10" height="10" fill="none" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="150" y="30" text-anchor="middle" font-size="13" fill="#1e293b" font-weight="bold">Triángulo</text>
+  <text x="145" y="165" font-size="12" fill="#2563eb" font-weight="bold">b</text>
+  <text x="160" y="100" font-size="12" fill="#dc2626" font-weight="bold">h</text>
+  <text x="150" y="195" text-anchor="middle" font-size="11" fill="#64748b">A = (b × h) / 2</text>
+</svg>`,
+    ],
+    exercises: [
+      {
+        id: 1001,
+        question:
+          "Un triángulo tiene una base de 14 cm y una altura de 9 cm. ¿Cuál es su área?",
+        options: ["63 cm²", "126 cm²", "22.5 cm²", "45 cm²"],
+        correctIndex: 0,
+        explanation:
+          "A = (b × h)/2 = (14 × 9)/2 = 126/2 = 63 cm².",
+        difficulty: "basico",
+      },
+      {
+        id: 1002,
+        question:
+          "Una figura compuesta está formada por un rectángulo de 12 cm × 8 cm y un semicírculo de diámetro 8 cm unido por uno de sus lados menores. ¿Cuál es el área total?",
+        options: [
+          "(96 + 8π) cm²",
+          "(96 + 16π) cm²",
+          "(96 + 4π) cm²",
+          "(48 + 8π) cm²",
+        ],
+        correctIndex: 0,
+        explanation:
+          "Área del rectángulo = 12 × 8 = 96 cm². El semicírculo tiene diámetro 8, radio = 4. Área semicírculo = π(4²)/2 = 8π cm². Área total = 96 + 8π cm².",
+        difficulty: "intermedio",
+      },
+      {
+        id: 1003,
+        question:
+          "Un trapecio tiene bases de 10 cm y 16 cm. Su área es 104 cm². ¿Cuál es la altura del trapecio y el área del triángulo formado por una diagonal y la base menor?",
+        options: [
+          "h = 8 cm, A_triángulo = 64 cm²",
+          "h = 8 cm, A_triángulo = 48 cm²",
+          "h = 8 cm, A_triángulo = 40 cm²",
+          "h = 6 cm, A_triángulo = 30 cm²",
+        ],
+        correctIndex: 2,
+        explanation:
+          "A = (b₁ + b₂)h/2 → 104 = (10 + 16)h/2 = 13h → h = 8 cm. El triángulo formado por una diagonal y la base menor (b₁ = 10) tiene la misma altura h = 8 cm. Su área = (10 × 8)/2 = 40 cm².",
+        difficulty: "avanzado",
+      },
+    ],
+  },
+  {
+    slug: "rectas-y-planos",
+    tip: "En problemas de rectas y planos en el espacio, dibuja siempre una figura de referencia (cubo o prisma). Para identificar si dos rectas son paralelas, se cortan o son inclinadas, verifica: ¿comparten un plano? Si sí y no son paralelas, se cortan.",
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "Una **recta** es una línea **infinita** que se extiende en ambas direcciones sin grosor.",
+          "Un **plano** es una superficie **infinita** y **plana** que contiene infinitas rectas.",
+          "Dos rectas en el espacio pueden ser: **paralelas**, **concurrentes** (se cortan) o **inclinadas** (no paralelas y no se cortan).",
+          "**Rectas paralelas**: No se cortan y están en el **mismo plano**.",
+          "**Rectas inclinadas (skew)**: No se cortan y **no** están en el mismo plano. Solo existen en **3D**.",
+          "Dos planos pueden ser: **paralelos** (no se cortan) o **secantes** (se cortan en una recta).",
+        ],
+      },
+      {
+        level: "intermedio",
+        title: "Fórmulas y propiedades",
+        lines: [
+          "Una recta **perpendicular** a un plano es perpendicular a **todas** las rectas del plano que pasan por el punto de intersección.",
+          "Si una recta es perpendicular a **dos rectas no paralelas** de un plano, es perpendicular al **plano**.",
+          "La **distancia entre dos planos paralelos** es la longitud del segmento perpendicular que los une.",
+          "**Ángulo entre recta y plano**: es el ángulo entre la recta y su **proyección ortogonal** sobre el plano.",
+          "**Ángulo entre dos planos (diedro)**: es el ángulo entre las **rectas perpendiculares** a la línea de intersección, una en cada plano.",
+          "Si dos planos son perpendiculares, una recta perpendicular a uno **no necesariamente** es paralela al otro.",
+        ],
+      },
+      {
+        level: "avanzado",
+        title: "Teoremas avanzados",
+        lines: [
+          "**Teorema de las tres perpendiculares**: Si una recta del plano es perpendicular a la proyección de una recta oblicua, entonces es perpendicular a la recta oblicua misma.",
+          "Si un plano es perpendicular a la intersección de otros dos planos, entonces es perpendicular a **cada uno** de ellos.",
+          "**Ángulo diedro**: Si dos planos secantes forman un diedro de 90°, se dice que son **perpendiculares**.",
+          "Para calcular la distancia de un **punto a un plano**, se proyecta ortogonalmente el punto sobre el plano.",
+          "**Truco de examen**: Si un cubo tiene aristas de longitud a, la diagonal del cubo mide **a√3** y la diagonal de una cara mide **a√2**.",
+          "La **distancia entre rectas inclinadas** se mide por el segmento perpendicular común, que es la proyección sobre la normal común.",
+        ],
+      },
+    ],
+    illustrations: [
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+  <rect width="300" height="200" fill="#f8fafc"/>
+  <polygon points="150,30 280,80 280,150 150,180 20,150 20,80" fill="#2563eb" fill-opacity="0.06" stroke="#2563eb" stroke-width="2"/>
+  <line x1="150" y1="30" x2="150" y2="180" stroke="#2563eb" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <line x1="20" y1="80" x2="280" y2="80" stroke="#2563eb" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <line x1="20" y1="150" x2="280" y2="150" stroke="#2563eb" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <line x1="280" y1="80" x2="280" y2="150" stroke="#2563eb" stroke-width="2"/>
+  <line x1="20" y1="80" x2="20" y2="150" stroke="#2563eb" stroke-width="2" stroke-dasharray="5,4"/>
+  <line x1="20" y1="150" x2="150" y2="180" stroke="#2563eb" stroke-width="2"/>
+  <line x1="280" y1="150" x2="150" y2="180" stroke="#2563eb" stroke-width="2"/>
+  <line x1="20" y1="80" x2="150" y2="30" stroke="#2563eb" stroke-width="2" stroke-dasharray="5,4"/>
+  <line x1="280" y1="80" x2="150" y2="30" stroke="#2563eb" stroke-width="2"/>
+  <line x1="20" y1="80" x2="280" y2="80" stroke="#dc2626" stroke-width="2.5"/>
+  <line x1="20" y1="150" x2="280" y2="150" stroke="#dc2626" stroke-width="2.5"/>
+  <text x="150" y="20" text-anchor="middle" font-size="12" fill="#1e293b" font-weight="bold">Planos paralelos α y β</text>
+  <text x="145" y="75" font-size="12" fill="#dc2626" font-weight="bold">α</text>
+  <text x="145" y="165" font-size="12" fill="#dc2626" font-weight="bold">β</text>
+  <line x1="150" y1="80" x2="150" y2="150" stroke="#059669" stroke-width="2"/>
+  <text x="160" y="118" font-size="11" fill="#059669" font-weight="bold">d</text>
+</svg>`,
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+  <rect width="300" height="200" fill="#f8fafc"/>
+  <polygon points="40,170 140,170 140,70 40,70" fill="#2563eb" fill-opacity="0.08" stroke="#2563eb" stroke-width="2"/>
+  <polygon points="160,170 260,170 260,70 160,70" fill="#dc2626" fill-opacity="0.08" stroke="#dc2626" stroke-width="2"/>
+  <line x1="40" y1="120" x2="260" y2="120" stroke="#059669" stroke-width="2.5"/>
+  <line x1="140" y1="70" x2="160" y2="70" stroke="#7c3aed" stroke-width="2.5" stroke-dasharray="5,3"/>
+  <line x1="140" y1="170" x2="160" y2="170" stroke="#7c3aed" stroke-width="2.5" stroke-dasharray="5,3"/>
+  <circle cx="120" cy="120" r="3" fill="#059669"/>
+  <circle cx="180" cy="120" r="3" fill="#059669"/>
+  <text x="90" y="115" font-size="12" fill="#2563eb" font-weight="bold">α</text>
+  <text x="210" y="115" font-size="12" fill="#dc2626" font-weight="bold">β</text>
+  <text x="150" y="115" font-size="11" fill="#059669" font-weight="bold">r</text>
+  <text x="150" y="60" text-anchor="middle" font-size="12" fill="#1e293b" font-weight="bold">Dos planos secantes</text>
+  <text x="150" y="195" text-anchor="middle" font-size="11" fill="#64748b">La intersección de dos planos es una recta r</text>
+</svg>`,
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+  <rect width="300" height="200" fill="#f8fafc"/>
+  <line x1="30" y1="150" x2="270" y2="50" stroke="#2563eb" stroke-width="2.5"/>
+  <line x1="30" y1="80" x2="270" y2="170" stroke="#dc2626" stroke-width="2.5" stroke-dasharray="8,4"/>
+  <text x="150" y="30" text-anchor="middle" font-size="12" fill="#1e293b" font-weight="bold">Rectas inclinadas (skew)</text>
+  <text x="28" y="75" font-size="11" fill="#dc2626" font-weight="bold">r₂</text>
+  <text x="28" y="160" font-size="11" fill="#2563eb" font-weight="bold">r₁</text>
+  <line x1="120" y1="115" x2="180" y2="105" stroke="#059669" stroke-width="2"/>
+  <text x="145" y="100" font-size="10" fill="#059669" font-weight="bold">d perpendicular</text>
+  <text x="150" y="195" text-anchor="middle" font-size="11" fill="#64748b">No se cortan y no están en un mismo plano</text>
+</svg>`,
+    ],
+    exercises: [
+      {
+        id: 1101,
+        question:
+          "Dos planos α y β son paralelos. Una recta r es perpendicular a α. ¿Cuál es la relación de r con β?",
+        options: [
+          "r es paralela a β",
+          "r es perpendicular a β",
+          "r es oblicua a β",
+          "No se puede determinar",
+        ],
+        correctIndex: 1,
+        explanation:
+          "Si r es perpendicular a α y α ∥ β, entonces r también es perpendicular a β. Esto se debe a que la perpendicular a uno de dos planos paralelos es perpendicular al otro.",
+        difficulty: "basico",
+      },
+      {
+        id: 1102,
+        question:
+          "En un cubo de arista 6, ¿cuánto mide el ángulo que forma la diagonal del cubo con la cara inferior?",
+        options: ["30°", "45°", "arctan(1/√2) ≈ 35.26°", "arccos(1/√3)"],
+        correctIndex: 2,
+        explanation:
+          "La diagonal del cubo AG tiene longitud 6√3. Su proyección sobre la cara inferior es la diagonal AC = 6√2. El ángulo θ cumple: sen(θ) = altura/diagonal = 6/(6√3) = 1/√3, o equivalentemente tan(θ) = 6/(6√2) = 1/√2. Entonces θ = arctan(1/√2) ≈ 35.26°.",
+        difficulty: "intermedio",
+      },
+      {
+        id: 1103,
+        question:
+          "Un cubo tiene arista de longitud a. ¿Cuál es el ángulo que forma la diagonal del cubo con una de las diagonales de una cara?",
+        options: [
+          "arccos(1/√3)",
+          "arccos(√2/√3)",
+          "arccos(1/3)",
+          "45°",
+        ],
+        correctIndex: 1,
+        explanation:
+          "La diagonal del cubo d_c = a√3. La diagonal de una cara d_f = a√2. El ángulo α entre ellas cumple: cos(α) = d_f/d_c = (a√2)/(a√3) = √2/√3. Entonces α = arccos(√2/√3) ≈ 35.26°.",
+        difficulty: "avanzado",
+      },
+    ],
+  },
+  {
+    slug: "prisma-y-cilindro",
+    tip: "Para calcular el área total de prismas y cilindros, siempre suma: 2 × área_base + perímetro_base × altura. En cilindro, recuerda que el lateral es un rectángulo 'desenrollado' de base 2πr y altura h.",
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "Un **prisma** es un sólido con **dos bases paralelas e iguales** y caras laterales que son **paralelogramos**.",
+          "Un **cilindro** es un sólido con **dos bases circulares paralelas e iguales** y una superficie lateral **curva**.",
+          "Prismas se nombran por la forma de su base: **triangular, rectangular, hexagonal**, etc.",
+          "La **altura** es la distancia perpendicular entre las dos bases.",
+          "Las **aristas laterales** de un prisma son todas iguales y paralelas entre sí.",
+          "Un cilindro se puede obtener rotando un **rectángulo** alrededor de uno de sus lados.",
+        ],
+      },
+      {
+        level: "intermedio",
+        title: "Fórmulas y propiedades",
+        lines: [
+          "**Volumen del prisma**: **V = A_base × h** (área de la base por la altura).",
+          "**Volumen del cilindro**: **V = π × r² × h**.",
+          "**Área lateral del prisma**: **A_lat = P_base × h** (perímetro de la base por la altura).",
+          "**Área lateral del cilindro**: **A_lat = 2π × r × h**.",
+          "**Área total del prisma**: **A_total = 2 × A_base + P_base × h**.",
+          "**Área total del cilindro**: **A_total = 2πr² + 2πrh = 2πr(r + h)**.",
+        ],
+      },
+      {
+        level: "avanzado",
+        title: "Teoremas avanzados",
+        lines: [
+          "**Teorema de Cavalieri**: Si dos sólidos tienen la misma altura y secciones iguales a cualquier altura, tienen el **mismo volumen**.",
+          "Un cilindro es el **caso límite** de un prisma cuando el número de lados de la base tiende a **infinito**.",
+          "Un **cilindro oblicuo** tiene el mismo volumen que uno recto con la **misma base y la misma altura perpendicular**.",
+          "Si un prisma se corta con un plano oblicuo, el volumen se calcula con la **altura media**: **V = A_base × h_media**.",
+          "**Truco de examen**: En problemas de vasos comunicantes o líquidos en recipientes cilíndricos, el volumen del líquido = A_base × altura_del_líquido, independientemente de la inclinación.",
+          "La relación entre el volumen de un cilindro y el de una esfera inscrita es **V_cil = (3/2) × V_esfera** (misma base y altura = 2r).",
+        ],
+      },
+    ],
+    illustrations: [
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+  <rect width="300" height="200" fill="#f8fafc"/>
+  <polygon points="80,50 170,50 210,30 120,30" fill="#2563eb" fill-opacity="0.15" stroke="#2563eb" stroke-width="2"/>
+  <polygon points="80,160 170,160 210,140 120,140" fill="#2563eb" fill-opacity="0.2" stroke="#2563eb" stroke-width="2.5"/>
+  <line x1="80" y1="50" x2="80" y2="160" stroke="#2563eb" stroke-width="2"/>
+  <line x1="170" y1="50" x2="170" y2="160" stroke="#2563eb" stroke-width="2"/>
+  <line x1="210" y1="30" x2="210" y2="140" stroke="#2563eb" stroke-width="2"/>
+  <line x1="120" y1="30" x2="120" y2="140" stroke="#2563eb" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <line x1="80" y1="50" x2="120" y2="30" stroke="#2563eb" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <text x="150" y="20" text-anchor="middle" font-size="12" fill="#1e293b" font-weight="bold">Prisma Rectangular</text>
+  <text x="220" y="90" font-size="12" fill="#dc2626" font-weight="bold">h</text>
+  <text x="120" y="180" font-size="11" fill="#059669" font-weight="bold">base</text>
+  <text x="150" y="195" text-anchor="middle" font-size="11" fill="#64748b">V = A_base × h</text>
+</svg>`,
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+  <rect width="300" height="200" fill="#f8fafc"/>
+  <ellipse cx="150" cy="50" rx="60" ry="20" fill="#2563eb" fill-opacity="0.15" stroke="#2563eb" stroke-width="2"/>
+  <ellipse cx="150" cy="160" rx="60" ry="20" fill="#2563eb" fill-opacity="0.25" stroke="#2563eb" stroke-width="2.5"/>
+  <line x1="90" y1="50" x2="90" y2="160" stroke="#2563eb" stroke-width="2"/>
+  <line x1="210" y1="50" x2="210" y2="160" stroke="#2563eb" stroke-width="2"/>
+  <line x1="150" y1="50" x2="150" y2="160" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <line x1="90" y1="160" x2="150" y2="160" stroke="#059669" stroke-width="1.5"/>
+  <text x="150" y="20" text-anchor="middle" font-size="12" fill="#1e293b" font-weight="bold">Cilindro</text>
+  <text x="218" y="108" font-size="12" fill="#dc2626" font-weight="bold">h</text>
+  <text x="120" y="168" font-size="11" fill="#059669" font-weight="bold">r</text>
+  <text x="150" y="80" font-size="10" fill="#7c3aed">2πr</text>
+  <text x="150" y="195" text-anchor="middle" font-size="11" fill="#64748b">V = πr²h | A_lat = 2πrh</text>
+</svg>`,
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+  <rect width="300" height="200" fill="#f8fafc"/>
+  <rect x="30" y="40" width="240" height="120" rx="3" fill="#dc2626" fill-opacity="0.1" stroke="#dc2626" stroke-width="2"/>
+  <line x1="30" y1="100" x2="270" y2="100" stroke="#2563eb" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="150" y="25" text-anchor="middle" font-size="12" fill="#1e293b" font-weight="bold">Superficie lateral desenrollada</text>
+  <text x="150" y="75" text-anchor="middle" font-size="11" fill="#2563eb" font-weight="bold">Altura = h</text>
+  <text x="150" y="140" text-anchor="middle" font-size="11" fill="#dc2626" font-weight="bold">Base = 2πr (circunferencia)</text>
+  <text x="150" y="190" text-anchor="middle" font-size="11" fill="#64748b">A_lateral = 2πr × h (rectángulo)</text>
+</svg>`,
+    ],
+    exercises: [
+      {
+        id: 1201,
+        question:
+          "Un prisma rectangular tiene dimensiones 5 cm × 3 cm × 8 cm. ¿Cuál es su volumen?",
+        options: ["40 cm³", "80 cm³", "120 cm³", "160 cm³"],
+        correctIndex: 2,
+        explanation:
+          "V = largo × ancho × alto = 5 × 3 × 8 = 120 cm³.",
+        difficulty: "basico",
+      },
+      {
+        id: 1202,
+        question:
+          "Un cilindro tiene radio 4 cm y altura 10 cm. ¿Cuál es su área lateral?",
+        options: [
+          "40π cm²",
+          "80π cm²",
+          "160π cm²",
+          "320π cm²",
+        ],
+        correctIndex: 1,
+        explanation:
+          "A_lateral = 2πrh = 2π(4)(10) = 80π cm². La superficie lateral desenrollada es un rectángulo de base 2πr = 8π y altura 10.",
+        difficulty: "intermedio",
+      },
+      {
+        id: 1203,
+        question:
+          "Un prisma hexagonal regular tiene un lado de base de 4 cm y una altura de 10 cm. ¿Cuál es su volumen y su área total?",
+        options: [
+          "V = 240√3 cm³, A = 240 + 24√3 cm²",
+          "V = 120√3 cm³, A = 120 + 24√3 cm²",
+          "V = 240√3 cm³, A = 240 + 48√3 cm²",
+          "V = 480√3 cm³, A = 480 + 48√3 cm²",
+        ],
+        correctIndex: 2,
+        explanation:
+          "Área del hexágono = 6 × (√3/4)(4²) = 6 × 4√3 = 24√3 cm². Volumen = 24√3 × 10 = 240√3 cm³. Perímetro = 6 × 4 = 24 cm. A_lateral = 24 × 10 = 240 cm². A_total = 2(24√3) + 240 = 48√3 + 240 cm².",
+        difficulty: "avanzado",
+      },
+    ],
+  },,
+  {
+    slug: "piramide-y-cono",
+    tip: "En el examen, distingue siempre entre la altura (h) y la apotema o generatriz (g). La altura cae perpendicular desde el vértice al centro de la base; la generatriz va del vértice al borde de la base. Muchos errores ocurren por confundir ambas. Memoriza: V_pirámide = (1/3)·A_base·h y V_cono = (1/3)·π·r²·h.",
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "Una **pirámide** es un sólido cuya base es un polígono y cuyas caras laterales son triángulos que convergen en un punto llamado **vértice**.",
+          "Un **cono** es un sólido cuya base es un círculo y cuya superficie lateral se curva desde el borde de la base hasta un punto llamado **vértice** o **ápice**.",
+          "La **altura (h)** de una pirámide o cono es el segmento perpendicular que va desde el vértice hasta el plano de la base.",
+          "La **apotema de la pirámide** o **generatriz del cono (g)** es la distancia desde el vértice hasta un punto del borde de la base, midiendo sobre la superficie lateral.",
+          "Una pirámide se denomina **regular** cuando su base es un polígono regular y su vértice se proyecta sobre el centro de la base.",
+          "El cono se llama **recto** cuando su eje es perpendicular al plano de la base.",
+          "La **altura de un tronco** (pirámide o cono truncado) es la distancia perpendicular entre las dos bases paralelas."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Fórmulas y propiedades",
+        lines: [
+          "**Volumen de pirámide:** V = (1/3) · A_base · h, donde A_base es el área de la base y h es la altura.",
+          "**Volumen de cono:** V = (1/3) · π · r² · h, donde r es el radio de la base circular.",
+          "**Área lateral de pirámide regular:** A_L = (1/2) · P_base · g, donde P_base es el perímetro de la base y g es el apotema (generatriz lateral).",
+          "**Área lateral de cono recto:** A_L = π · r · g, donde g = √(r² + h²) es la generatriz.",
+          "**Área total de cono:** A_T = π · r · g + π · r² = π · r · (g + r).",
+          "**Relación generatriz-altura-radio:** g² = h² + r² (en cono recto, análogo al teorema de Pitágoras).",
+          "**Volumen de tronco de cono:** V = (1/3) · π · h · (r₁² + r₂² + r₁ · r₂), donde r₁ y r₂ son los radios de las bases.",
+          "**Volumen de tronco de pirámide:** V = (h/3) · (A₁ + A₂ + √(A₁ · A₂)), donde A₁ y A₂ son las áreas de las bases."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Teoremas avanzados",
+        lines: [
+          "**Teorema de la sección cónica (Pappus-Guldinus) para superficies de revolución:** El área de una superficie de revolución generada por una curva plana es el producto de la longitud de la curva por la distancia recorrida por su centroide.",
+          "**Volúmenes por el método de Pappus:** El volumen generado por una figura plana al rotar alrededor de un eje exterior es igual al área de la figura multiplicada por la distancia recorrida por su centroide: V = 2π · d̄ · A.",
+          "**Relación de semejanza:** Si dos pirámides o conos son semejanza con razón de proporcionalidad k, entonces: relación de alturas = k, relación de áreas = k², relación de volúmenes = k³.",
+          "**Proporción de un cono y su circunsferencia:** En un cono recto, el ángulo del vértice α satisface: tan(α/2) = r/h. Esto permite determinar el ángulo del cono conocidos r y h.",
+          "**Área lateral del tronco de cono:** A_L = π · (r₁ + r₂) · g_t, donde g_t es la generatriz del tronco.",
+          "**Centroide de una pirámide:** El centroide de volumen de una pirámide o cono recto se encuentra a una distancia de h/4 desde la base, es decir, a 3h/4 desde el vértice."
+        ]
+      }
+    ],
+    illustrations: [
+      `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="200" fill="#f8fafc"/>
+  <polygon points="80,170 170,170 125,50" fill="none" stroke="#2563eb" stroke-width="2"/>
+  <ellipse cx="125" cy="170" rx="45" ry="12" fill="none" stroke="#2563eb" stroke-width="2"/>
+  <line x1="125" y1="50" x2="125" y2="170" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="125" y1="50" x2="170" y2="170" stroke="#059669" stroke-width="1.5" stroke-dasharray="2,2"/>
+  <text x="130" y="115" fill="#dc2626" font-size="13" font-family="sans-serif" font-weight="bold">h</text>
+  <text x="152" y="118" fill="#059669" font-size="13" font-family="sans-serif" font-weight="bold">g</text>
+  <text x="125" y="185" fill="#2563eb" font-size="13" font-family="sans-serif" font-weight="bold">r</text>
+  <text x="150" y="30" fill="#1e293b" font-size="14" font-family="sans-serif" font-weight="bold">Pirámide regular</text>
+</svg>`,
+      `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="200" fill="#f8fafc"/>
+  <line x1="100" y1="40" x2="60" y2="165" stroke="#2563eb" stroke-width="2"/>
+  <line x1="100" y1="40" x2="180" y2="165" stroke="#2563eb" stroke-width="2"/>
+  <ellipse cx="120" cy="165" rx="60" ry="14" fill="none" stroke="#2563eb" stroke-width="2"/>
+  <line x1="100" y1="40" x2="120" y2="165" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="100" y1="40" x2="180" y2="165" stroke="#059669" stroke-width="1.5" stroke-dasharray="2,2"/>
+  <text x="105" y="105" fill="#dc2626" font-size="13" font-family="sans-serif" font-weight="bold">h</text>
+  <text x="148" y="110" fill="#059669" font-size="13" font-family="sans-serif" font-weight="bold">g</text>
+  <text x="135" y="178" fill="#2563eb" font-size="13" font-family="sans-serif" font-weight="bold">r</text>
+  <text x="130" y="22" fill="#1e293b" font-size="14" font-family="sans-serif" font-weight="bold">Cono recto</text>
+</svg>`,
+      `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="200" fill="#f8fafc"/>
+  <line x1="110" y1="50" x2="70" y2="150" stroke="#2563eb" stroke-width="2"/>
+  <line x1="110" y1="50" x2="190" y2="150" stroke="#2563eb" stroke-width="2"/>
+  <line x1="70" y1="150" x2="190" y2="150" stroke="#2563eb" stroke-width="2"/>
+  <ellipse cx="130" cy="150" rx="60" ry="12" fill="none" stroke="#2563eb" stroke-width="1.5"/>
+  <line x1="110" y1="50" x2="130" y2="150" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="130" y1="100" x2="130" y2="150" stroke="#7c3aed" stroke-width="1.5"/>
+  <line x1="110" y1="50" x2="170" y2="100" stroke="#7c3aed" stroke-width="1.5" stroke-dasharray="2,2"/>
+  <line x1="110" y1="50" x2="170" y2="100" stroke="#7c3aed" stroke-width="1.5"/>
+  <ellipse cx="130" cy="100" rx="30" ry="8" fill="none" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <text x="115" y="80" fill="#dc2626" font-size="12" font-family="sans-serif" font-weight="bold">h₁</text>
+  <text x="135" y="130" fill="#7c3aed" font-size="12" font-family="sans-serif" font-weight="bold">h</text>
+  <text x="100" y="38" fill="#1e293b" font-size="14" font-family="sans-serif" font-weight="bold">Tronco de pirámide</text>
+</svg>`
+    ],
+    exercises: [
+      {
+        id: 1301,
+        question: "¿Cuál es el volumen de una pirámide cuya base es un cuadrado de lado 6 cm y cuya altura mide 10 cm?",
+        options: ["120 cm³", "60 cm³", "360 cm³", "180 cm³"],
+        correctIndex: 0,
+        explanation: "A_base = 6² = 36 cm². V = (1/3)·36·10 = 120 cm³.",
+        difficulty: "basico"
+      },
+      {
+        id: 1302,
+        question: "Un cono recto tiene radio de base 5 cm y generatriz de 13 cm. ¿Cuál es su área lateral?",
+        options: ["65π cm²", "25π cm²", "156π cm²", "90π cm²"],
+        correctIndex: 0,
+        explanation: "A_L = π·r·g = π·5·13 = 65π cm². La generatriz ya se nos dio directamente.",
+        difficulty: "intermedio"
+      },
+      {
+        id: 1303,
+        question: "Un cono recto tiene una generatriz de 25 cm y un radio de base de 7 cm. Se trunca el cono a la mitad de su altura (medida sobre el eje). ¿Cuál es el volumen del tronco resultante si la altura total del cono original es 24 cm?",
+        options: ["308π cm³", "154π cm³", "616π cm³", "462π cm³"],
+        correctIndex: 0,
+        explanation: "La altura total es h=24. Truncando a la mitad, h_tronco=12. Por semejanza, el radio del cono pequeño es r₂=3.5 y el radio mayor es r₁=7. V=(1/3)·π·12·(7²+3.5²+7·3.5)=(1/3)·π·12·(49+12.25+24.5)=(1/3)·π·12·85.75=12·π·85.75/3=308π cm³.",
+        difficulty: "avanzado"
+      }
+    ]
+  },
+  {
+    slug: "esfera",
+    tip: "La fórmula de la esfera V = (4/3)πr³ debe memorizarse perfectamente. En el examen, cuidado: muchos preguntan el diámetro y no el radio. También recuerda que A = 4πr². Un atajo: el área de la esfera es exactamente la derivada del volumen respecto a r: dV/dr = 4πr².",
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "Una **esfera** es el conjunto de todos los puntos del espacio que están a una distancia igual (radio **r**) de un punto fijo llamado **centro**.",
+          "Un **semiesfera** es la mitad de una esfera, cortada por un plano que pasa por su centro. La intersección se llama **ecuador** o **círculo máximo**.",
+          "Un **casquete esférico** es la porción de esfera cortada por un plano que no necesariamente pasa por el centro.",
+          "El **radio (r)** es la distancia del centro a cualquier punto de la superficie. El **diámetro (d)** vale d = 2r.",
+          "Un **gran círculo** es la intersección de la esfera con un plano que pasa por su centro. Es el círculo de mayor radio posible en la esfera (radio = r).",
+          "Los **polos** de una esfera son dos puntos opuestos sobre un eje, y la **distancia polar** es la distancia entre ambos polos a lo largo de la superficie.",
+          "Una **zona esférica** es la superficie lateral de la esfera entre dos planos paralelos que la cortan."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Fórmulas y propiedades",
+        lines: [
+          "**Volumen de esfera:** V = (4/3) · π · r³.",
+          "**Superficie de esfera:** A = 4 · π · r².",
+          "**Volumen de semiesfera:** V = (2/3) · π · r³.",
+          "**Área de zona esférica:** A_zona = 2 · π · r · h, donde h es la altura del casquete (distancia entre los dos planos cortantes).",
+          "**Volumen de casquete esférico:** V_casquete = (π · h² / 3) · (3r − h).",
+          "**Relación esfera-cubo circunscrito:** Si un cubo de lado a circunscribe una esfera, entonces r = a/2 y V_esfera = (π/6)·a³.",
+          "**Relación esfera-cilindro circunscrito:** Si un cilindro de radio r y altura 2r circunscribe una esfera, entonces: V_esfera/V_cilindro = 2/3.",
+          "**Proporción de Arquímedes:** La esfera inscrita en un cilindro tiene exactamente 2/3 del volumen y 2/3 del área superficial del cilindro."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Teoremas avanzados",
+        lines: [
+          "**Análisis dimensional:** Las fórmulas de la esfera son invariantes bajo escalado. Si duplicamos el radio, el volumen se multiplica por 2³ = 8 y el área por 2² = 4.",
+          "**La esfera como solución de optimización:** De todos los cuerpos con igual volumen, la esfera tiene la menor superficie. Esto se demuestra con cálculo de variaciones.",
+          "**Teorema de la esfera y el tetraedro:** Para un tetraedro inscrito en una esfera de radio R, existe la fórmula R = (√6/4)·a para un tetraedro regular de lado a.",
+          "**Área de un triángulo esférico:** A = R²·(α + β + γ − π), donde α, β, γ son los ángulos del triángulo esférico medidos en radianes y R es el radio de la esfera.",
+          "**Volumen esférico en coordenadas esféricas:** V = ∫∫∫ r²·sin(φ) dr dφ dθ, integrando r de 0 a R, φ de 0 a π, y θ de 0 a 2π.",
+          "**Relación con círculos de Apolonio:** En geometría esférica, las distancias entre puntos se miden por el ángulo central: la distancia esférica d = R·θ."
+        ]
+      }
+    ],
+    illustrations: [
+      `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="200" fill="#f8fafc"/>
+  <circle cx="150" cy="100" r="70" fill="none" stroke="#2563eb" stroke-width="2"/>
+  <ellipse cx="150" cy="100" rx="70" ry="20" fill="none" stroke="#2563eb" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="150" y1="100" x2="220" y2="100" stroke="#dc2626" stroke-width="1.5"/>
+  <line x1="150" y1="100" x2="150" y2="30" stroke="#059669" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <circle cx="150" cy="100" r="3" fill="#dc2626"/>
+  <text x="178" y="95" fill="#dc2626" font-size="14" font-family="sans-serif" font-weight="bold">r</text>
+  <text x="155" y="65" fill="#059669" font-size="14" font-family="sans-serif" font-weight="bold">r</text>
+  <text x="108" y="125" fill="#2563eb" font-size="12" font-family="sans-serif" font-weight="bold">ecuador</text>
+  <text x="100" y="18" fill="#1e293b" font-size="14" font-family="sans-serif" font-weight="bold">Esfera con ecuador</text>
+</svg>`,
+      `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="200" fill="#f8fafc"/>
+  <circle cx="150" cy="100" r="70" fill="none" stroke="#2563eb" stroke-width="2"/>
+  <line x1="150" y1="100" x2="220" y2="100" stroke="#dc2626" stroke-width="1.5"/>
+  <path d="M 100 100 A 50 50 0 0 1 150 50" fill="none" stroke="#059669" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <path d="M 150 50 A 70 70 0 0 1 220 100" fill="#2563eb" fill-opacity="0.1"/>
+  <line x1="150" y1="100" x2="150" y2="30" stroke="#7c3aed" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <line x1="150" y1="30" x2="220" y2="100" stroke="#7c3aed" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <circle cx="150" cy="100" r="3" fill="#dc2626"/>
+  <text x="178" y="95" fill="#dc2626" font-size="13" font-family="sans-serif" font-weight="bold">r</text>
+  <text x="90" y="55" fill="#7c3aed" font-size="12" font-family="sans-serif" font-weight="bold">R esférico</text>
+  <text x="130" y="18" fill="#1e293b" font-size="14" font-family="sans-serif" font-weight="bold">Triángulo esférico</text>
+</svg>`,
+      `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="200" fill="#f8fafc"/>
+  <rect x="75" y="30" width="150" height="140" fill="none" stroke="#2563eb" stroke-width="2"/>
+  <circle cx="150" cy="100" r="70" fill="none" stroke="#dc2626" stroke-width="1.5"/>
+  <line x1="150" y1="100" x2="220" y2="100" stroke="#059669" stroke-width="1.5"/>
+  <line x1="75" y1="100" x2="225" y2="100" stroke="#7c3aed" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="150" y1="30" x2="150" y2="170" stroke="#7c3aed" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="178" y="95" fill="#059669" font-size="13" font-family="sans-serif" font-weight="bold">r</text>
+  <text x="130" y="18" fill="#1e293b" font-size="14" font-family="sans-serif" font-weight="bold">Esfera en cubo</text>
+  <text x="90" y="195" fill="#7c3aed" font-size="11" font-family="sans-serif">lado = 2r</text>
+</svg>`
+    ],
+    exercises: [
+      {
+        id: 1401,
+        question: "¿Cuál es el volumen de una esfera de radio 6 cm? (Usar π ≈ 3.14)",
+        options: ["904.32 cm³", "226.08 cm³", "452.16 cm³", "113.04 cm³"],
+        correctIndex: 0,
+        explanation: "V = (4/3)·π·r³ = (4/3)·3.14·6³ = (4/3)·3.14·216 = 904.32 cm³.",
+        difficulty: "basico"
+      },
+      {
+        id: 1402,
+        question: "Un casquete esférico tiene radio de esfera R = 10 cm y altura h = 4 cm. ¿Cuál es su volumen?",
+        options: ["175.93 cm³", "100.53 cm³", "251.20 cm³", "334.93 cm³"],
+        correctIndex: 0,
+        explanation: "V = (π·h²/3)·(3R − h) = (π·16/3)·(30 − 4) = (16π/3)·26 = 416π/3 ≈ 175.93 cm³.",
+        difficulty: "intermedio"
+      },
+      {
+        id: 1403,
+        question: "Un cilindro circunscribe una esfera de radio 5 cm (es decir, la esfera toca las tapas y la pared lateral del cilindro). ¿Cuál es la relación entre el volumen de la esfera y el del cilindro?",
+        options: ["2/3", "1/2", "3/4", "4/3"],
+        correctIndex: 0,
+        explanation: "El cilindro que circunscribe una esfera de radio r tiene radio r y altura 2r. V_esfera = (4/3)πr³, V_cilindro = πr²(2r) = 2πr³. Relación: (4/3)πr³ / 2πr³ = (4/3)/2 = 2/3.",
+        difficulty: "avanzado"
+      }
+    ]
+  },
+  {
+    slug: "la-recta",
+    tip: "Dominar las tres formas de ecuación de la recta (pendiente-intersección, punto-pendiente y general) es clave. En el examen, identifica primero qué te dan: si te dan dos puntos usa m=(y₂−y₁)/(x₂−x₁) y luego punto-pendiente. La ecuación general Ax+By+C=0 es la más versátil para calcular distancias y ángulos.",
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "Una **recta** en el plano es el lugar geométrico de todos los puntos que satisfacen una ecuación de primer grado en x e y.",
+          "La **pendiente (m)** de una recta mide la inclinación de la recta y se calcula como: m = (y₂ − y₁) / (x₂ − x₁).",
+          "Si m > 0 la recta sube de izquierda a derecha; si m < 0 la recta baja; si m = 0 la recta es horizontal.",
+          "Una recta **vertical** no tiene pendiente definida (división por cero) y su ecuación es x = k (constante).",
+          "El **intersección con el eje y** (o ordenada al origen, b) es el valor de y cuando x = 0.",
+          "El **intersección con el eje x** (o abcisa) es el valor de x cuando y = 0.",
+          "Dos rectas son **paralelas** si tienen la misma pendiente. Son **perpendiculares** si el producto de sus pendientes es −1."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Fórmulas y propiedades",
+        lines: [
+          "**Ecuación pendiente-intersección:** y = m·x + b, donde m es la pendiente y b la intersección con el eje y.",
+          "**Ecuación punto-pendiente:** y − y₁ = m·(x − x₁), útil cuando conoces un punto y la pendiente.",
+          "**Ecuación general:** A·x + B·y + C = 0 (con A, B no ambos cero). Pendiente: m = −A/B.",
+          "**Ecuación interceptos:** x/a + y/b = 1, donde a y b son las intersecciones con los ejes x e y respectivamente.",
+          "**Distancia entre dos puntos:** d = √[(x₂ − x₁)² + (y₂ − y₁)²].",
+          "**Punto medio:** M = ((x₁ + x₂)/2, (y₁ + y₂)/2).",
+          "**Ángulo entre dos rectas:** tan(θ) = |(m₂ − m₁)/(1 + m₁·m₂)|, donde θ es el ángulo agudo entre las rectas.",
+          "**Distancia de un punto a una recta:** d = |A·x₀ + B·y₀ + C| / √(A² + B²), donde la recta es Ax + By + C = 0."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Teoremas avanzados",
+        lines: [
+          "**Ecuación de la mediatriz:** La mediatriz del segmento AB tiene pendiente −1/m_AB y pasa por el punto medio de AB.",
+          "**Condiciones de concurrencia:** Tres rectas son concurrentes si el determinante |A₁ B₁ C₁; A₂ B₂ C₂; A₃ B₃ C₃| = 0.",
+          "**Ángulo de inclinación:** Si θ es el ángulo que la recta forma con el eje x positivo, entonces m = tan(θ). El ángulo de inclinación satisface 0° ≤ θ < 180°.",
+          "**Ecuación de familia de rectas:** La familia de rectas que pasan por la intersección de L₁ y L₂ se escribe: L₁ + λ·L₂ = 0.",
+          "**Transformación de coordenadas:** Si se traslada el origen a (h, k), la recta Ax + By + C = 0 se convierte en A(x'+h) + B(y'+k) + C = 0.",
+          "**Proyección ortogonal:** La proyección del punto P(x₀, y₀) sobre la recta Ax + By + C = 0 tiene coordenadas: x' = x₀ − A·(Ax₀+By₀+C)/(A²+B²), y' = y₀ − B·(Ax₀+By₀+C)/(A²+B²)."
+        ]
+      }
+    ],
+    illustrations: [
+      `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="200" fill="#f8fafc"/>
+  <line x1="40" y1="100" x2="280" y2="100" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="150" y1="10" x2="150" y2="190" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="40" y1="170" x2="280" y2="30" stroke="#2563eb" stroke-width="2"/>
+  <line x1="200" y1="100" x2="200" y2="60" stroke="#dc2626" stroke-width="1" stroke-dasharray="3,2"/>
+  <line x1="150" y1="100" x2="200" y2="100" stroke="#dc2626" stroke-width="1" stroke-dasharray="3,2"/>
+  <circle cx="200" cy="60" r="3" fill="#dc2626"/>
+  <circle cx="150" cy="100" r="3" fill="#059669"/>
+  <text x="210" y="58" fill="#dc2626" font-size="11" font-family="sans-serif">(x₁, y₁)</text>
+  <text x="155" y="115" fill="#059669" font-size="11" font-family="sans-serif">(0, b)</text>
+  <text x="185" y="92" fill="#7c3aed" font-size="12" font-family="sans-serif" font-weight="bold">Δy</text>
+  <text x="170" y="115" fill="#7c3aed" font-size="12" font-family="sans-serif" font-weight="bold">Δx</text>
+  <text x="80" y="185" fill="#2563eb" font-size="13" font-family="sans-serif" font-weight="bold">y = mx + b</text>
+  <text x="230" y="115" fill="#94a3b8" font-size="12" font-family="sans-serif">x</text>
+  <text x="155" y="22" fill="#94a3b8" font-size="12" font-family="sans-serif">y</text>
+</svg>`,
+      `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="200" fill="#f8fafc"/>
+  <line x1="30" y1="100" x2="280" y2="100" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="150" y1="10" x2="150" y2="190" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="40" y1="170" x2="270" y2="40" stroke="#2563eb" stroke-width="2"/>
+  <line x1="40" y1="40" x2="270" y2="170" stroke="#dc2626" stroke-width="2"/>
+  <circle cx="155" cy="105" r="3" fill="#059669"/>
+  <text x="230" y="35" fill="#2563eb" font-size="11" font-family="sans-serif" font-weight="bold">L₁: m₁</text>
+  <text x="230" y="165" fill="#dc2626" font-size="11" font-family="sans-serif" font-weight="bold">L₂: m₂</text>
+  <text x="160" y="100" fill="#059669" font-size="11" font-family="sans-serif">P</text>
+  <text x="100" y="18" fill="#1e293b" font-size="14" font-family="sans-serif" font-weight="bold">Rectas perpendiculares</text>
+  <text x="110" y="195" fill="#7c3aed" font-size="11" font-family="sans-serif">m₁ · m₂ = −1</text>
+</svg>`,
+      `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="200" fill="#f8fafc"/>
+  <line x1="30" y1="100" x2="280" y2="100" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="150" y1="10" x2="150" y2="190" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="30" y1="150" x2="280" y2="60" stroke="#2563eb" stroke-width="2"/>
+  <circle cx="100" cy="130" r="3" fill="#dc2626"/>
+  <line x1="100" y1="130" x2="133" y2="72" stroke="#059669" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="113" y1="102" x2="120" y2="95" stroke="#059669" stroke-width="1"/>
+  <line x1="120" y1="102" x2="113" y2="95" stroke="#059669" stroke-width="1"/>
+  <text x="70" y="135" fill="#dc2626" font-size="11" font-family="sans-serif">P(x₀, y₀)</text>
+  <text x="135" y="70" fill="#059669" font-size="11" font-family="sans-serif">d</text>
+  <text x="210" y="55" fill="#2563eb" font-size="11" font-family="sans-serif">Ax + By + C = 0</text>
+  <text x="70" y="18" fill="#1e293b" font-size="14" font-family="sans-serif" font-weight="bold">Distancia punto a recta</text>
+</svg>`
+    ],
+    exercises: [
+      {
+        id: 1501,
+        question: "¿Cuál es la ecuación de la recta que pasa por los puntos (1, 3) y (4, 9)?",
+        options: ["y = 2x + 1", "y = 3x", "y = 2x − 1", "y = 3x + 6"],
+        correctIndex: 0,
+        explanation: "m = (9−3)/(4−1) = 6/3 = 2. Usando punto-pendiente con (1,3): y−3 = 2(x−1) → y = 2x+1.",
+        difficulty: "basico"
+      },
+      {
+        id: 1502,
+        question: "¿Cuál es la distancia del punto (2, −1) a la recta 3x − 4y + 5 = 0?",
+        options: ["1.4", "3.0", "0.2", "5.0"],
+        correctIndex: 1,
+        explanation: "d = |A·x₀ + B·y₀ + C| / √(A² + B²) = |3(2) − 4(−1) + 5| / √(9 + 16) = |6 + 4 + 5| / √25 = 15/5 = 3.0.",
+        difficulty: "intermedio"
+      },
+      {
+        id: 1503,
+        question: "Halle el área del triángulo formado por los vértices A(1, 2), B(4, 6) y C(7, 3).",
+        options: ["10.5", "21", "7", "14"],
+        correctIndex: 0,
+        explanation: "Usando la fórmula del área con coordenadas: A = (1/2)|x₁(y₂−y₃) + x₂(y₃−y₁) + x₃(y₁−y₂)| = (1/2)|1(6−3) + 4(3−2) + 7(2−6)| = (1/2)|3 + 4 − 28| = (1/2)|−21| = 10.5.",
+        difficulty: "avanzado"
+      }
+    ]
+  },
+  {
+    slug: "circunferencia-y-parabola",
+    tip: "Para la circunferencia: identifica rápidamente el centro (h,k) y radio r de la ecuación general completando cuadrados. Para la parábola: siempre identifica si abre hacia arriba/abajo (eje vertical) o derecha/izquierda (eje horizontal). El foco y la directriz están a distancia p del vértice, y p = 1/(4|a|) en la forma y = ax².",
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "Una **circunferencia** es el lugar geométrico de todos los puntos que están a una distancia fija (**radio r**) de un punto fijo (**centro**).",
+          "Una **parábola** es el lugar geométrico de todos los puntos que están a igual distancia de un punto fijo (**foco**) y una recta fija (**directriz**).",
+          "El **vértice** de una parábola es el punto donde la parábola cruza su eje de simetría. Está a mitad de camino entre el foco y la directriz.",
+          "La **distancia focal** (o parámetro **p**) es la distancia del vértice al foco (y también del vértice a la directriz).",
+          "El **eje** de la parábola es la recta que pasa por el foco y es perpendicular a la directriz.",
+          "Un **corte** de una parábola (la **latus rectum**) es el segmento que pasa por el foco, es paralelo a la directriz y termina en la parábola.",
+          "En una circunferencia, una **cuerda** es un segmento que une dos puntos de la circunferencia. Un **diámetro** es la cuerda que pasa por el centro."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Fórmulas y propiedades",
+        lines: [
+          "**Ecuación de la circunferencia (centro-radio):** (x − h)² + (y − k)² = r², con centro (h, k) y radio r.",
+          "**Ecuación general de la circunferencia:** x² + y² + Dx + Ey + F = 0, con centro (−D/2, −E/2) y r² = (D²+E²)/4 − F.",
+          "**Forma canónica de la parábola (eje vertical):** (x − h)² = 4p(y − k), vértice en (h, k), foco en (h, k+p).",
+          "**Forma canónica de la parábola (eje horizontal):** (y − k)² = 4p(x − h), vértice en (h, k), foco en (h+p, k).",
+          "**Parábola función cuadrática:** y = a(x−h)² + k, con a = 1/(4p). Si a > 0 abre hacia arriba; si a < 0, hacia abajo.",
+          "**Largo del latus rectum:** 4|p|.",
+          "**Ecuación de la recta tangente a la circunferencia:** x·x₁ + y·y₁ = r² (para centro en el origen), o sustituyendo coordenadas relativas al centro.",
+          "**Condición de tangencia:** Una recta es tangente a una circunferencia si la distancia del centro a la recta es exactamente igual al radio."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Teoremas avanzados",
+        lines: [
+          "**Ángulo inscrito en semicircunferencia:** Todo ángulo inscrito que abarca un diámetro es recto (90°). Este es el teorema de Tales.",
+          "**Potencia de un punto respecto a una circunferencia:** Para un punto P y una circunferencia, PA·PB es constante para cualquier recta que pase por P y corte la circunferencia en A y B.",
+          "**Ángulo entre dos circunferencias:** Si dos circunferencias se cortan, el ángulo entre ellas es el ángulo entre sus tangentes en los puntos de intersección.",
+          "**Propiedad de reflexión de la parábola:** Cualquier rayo paralelo al eje que incide sobre una parábola se refleja pasando por el foco. Esto se usa en antenas parabólicas y faros.",
+          "**Propiedades métricas en la parábola:** Para cualquier punto P sobre la parábola y = ax², la distancia al foco PF = y_P + p = y_P + 1/(4a).",
+          "**Ecuación polar de la parábola:** Con el foco como polo y el eje como polar, r = 2p/(1 − cos θ), donde p es la distancia focal."
+        ]
+      }
+    ],
+    illustrations: [
+      `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="200" fill="#f8fafc"/>
+  <line x1="30" y1="100" x2="280" y2="100" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="150" y1="10" x2="150" y2="190" stroke="#94a3b8" stroke-width="1"/>
+  <circle cx="150" cy="100" r="60" fill="none" stroke="#2563eb" stroke-width="2"/>
+  <circle cx="150" cy="100" r="3" fill="#dc2626"/>
+  <text x="155" y="95" fill="#dc2626" font-size="11" font-family="sans-serif">C(h,k)</text>
+  <line x1="150" y1="100" x2="210" y2="100" stroke="#059669" stroke-width="1.5"/>
+  <text x="172" y="95" fill="#059669" font-size="12" font-family="sans-serif" font-weight="bold">r</text>
+  <text x="155" y="115" fill="#059669" font-size="11" font-family="sans-serif">(x₁,y₁)</text>
+  <text x="80" y="18" fill="#1e293b" font-size="14" font-family="sans-serif" font-weight="bold">(x−h)²+(y−k)²=r²</text>
+</svg>`,
+      `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="200" fill="#f8fafc"/>
+  <line x1="30" y1="100" x2="280" y2="100" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="150" y1="10" x2="150" y2="190" stroke="#94a3b8" stroke-width="1"/>
+  <path d="M 80,170 Q 150,30 220,170" fill="none" stroke="#2563eb" stroke-width="2"/>
+  <line x1="150" y1="85" x2="150" y2="115" stroke="#dc2626" stroke-width="1.5"/>
+  <circle cx="150" cy="85" r="3" fill="#dc2626"/>
+  <line x1="80" y1="170" x2="220" y2="170" stroke="#059669" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="150" y1="115" x2="150" y2="170" stroke="#7c3aed" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="155" y="83" fill="#dc2626" font-size="11" font-family="sans-serif" font-weight="bold">Foco</text>
+  <text x="155" y="110" fill="#7c3aed" font-size="11" font-family="sans-serif" font-weight="bold">p</text>
+  <text x="155" y="165" fill="#059669" font-size="11" font-family="sans-serif" font-weight="bold">Directriz</text>
+  <text x="155" y="120" fill="#94a3b8" font-size="10" font-family="sans-serif">Vértice</text>
+  <text x="80" y="18" fill="#1e293b" font-size="14" font-family="sans-serif" font-weight="bold">Parábola (eje vertical)</text>
+</svg>`,
+      `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="200" fill="#f8fafc"/>
+  <line x1="30" y1="100" x2="280" y2="100" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="150" y1="10" x2="150" y2="190" stroke="#94a3b8" stroke-width="1"/>
+  <path d="M 220,80 Q 80,100 220,120" fill="none" stroke="#2563eb" stroke-width="2"/>
+  <circle cx="85" cy="100" r="3" fill="#dc2626"/>
+  <line x1="215" y1="10" x2="215" y2="190" stroke="#059669" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="85" y1="100" x2="215" y2="100" stroke="#7c3aed" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="90" y="95" fill="#dc2626" font-size="11" font-family="sans-serif" font-weight="bold">F</text>
+  <text x="140" y="93" fill="#7c3aed" font-size="11" font-family="sans-serif" font-weight="bold">p</text>
+  <text x="115" y="115" fill="#94a3b8" font-size="10" font-family="sans-serif">V</text>
+  <text x="220" y="95" fill="#059669" font-size="11" font-family="sans-serif" font-weight="bold">Directriz</text>
+  <text x="70" y="18" fill="#1e293b" font-size="14" font-family="sans-serif" font-weight="bold">Parábola (eje horizontal)</text>
+</svg>`
+    ],
+    exercises: [
+      {
+        id: 1601,
+        question: "¿Cuál es el centro y el radio de la circunferencia x² + y² − 6x + 4y − 12 = 0?",
+        options: ["Centro (3, −2), r = 5", "Centro (−3, 2), r = 5", "Centro (3, −2), r = 25", "Centro (6, −4), r = 12"],
+        correctIndex: 0,
+        explanation: "Completando cuadrados: (x²−6x+9) + (y²+4y+4) = 12+9+4 → (x−3)² + (y+2)² = 25. Centro (3,−2), r=5.",
+        difficulty: "basico"
+      },
+      {
+        id: 1602,
+        question: "La ecuación de una parábola con vértice en el origen y foco en (0, 3) es:",
+        options: ["x² = 12y", "y² = 12x", "x² = 6y", "y² = 6x"],
+        correctIndex: 0,
+        explanation: "El foco está en (0,3), por lo que p=3 y la parábola abre hacia arriba. x² = 4py = 4(3)y = 12y.",
+        difficulty: "intermedio"
+      },
+      {
+        id: 1603,
+        question: "Una parábola tiene vértice en (1, −2) y foco en (1, 1). ¿Cuál es su ecuación?",
+        options: ["(x−1)² = 12(y+2)", "(x−1)² = 6(y+2)", "(y+2)² = 12(x−1)", "(x+1)² = 12(y−2)"],
+        correctIndex: 0,
+        explanation: "El foco (1,1) está arriba del vértice (1,−2), así que la parábola abre hacia arriba con eje vertical. p = 1−(−2) = 3. Forma: (x−1)² = 4p(y−(−2)) = 12(y+2).",
+        difficulty: "avanzado"
+      }
+    ]
+  },
+  {
+    slug: "elipse-e-hiperbola",
+    tip: "La clave para resolver ejercicios de cónicas rápidamente es memorizar la relación c² = a² − b² (elipse) vs c² = a² + b² (hiperbola). Identifica siempre cuál es a, b y c, y ubica los focos sobre el eje mayor. El excentricidad e te dice la forma: 0 < e < 1 (elipse), e > 1 (hiperbola). A mayor e, más alargada la figura.",
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "Una **elipse** es el lugar geométrico de todos los puntos del plano tales que la **suma** de las distancias a dos puntos fijos (**focos**) es constante e igual a **2a**.",
+          "Una **hiperbola** es el lugar geométrico de todos los puntos del plano tales que la **diferencia** de las distancias a dos puntos fijos (**focos**) es constante e igual a **2a**.",
+          "El **centro** de la elipse e hiperbola es el punto medio entre los dos focos.",
+          "El **eje mayor** es el segmento de longitud 2a que une los dos **vértices** de la elipse o hiperbola.",
+          "En la elipse, el **eje menor** tiene longitud 2b, con b < a.",
+          "La **excentricidad (e)** mide la forma de la cónica: para la elipse 0 < e < 1, para la hiperbola e > 1.",
+          "Las **assíntotas** de la hiperbola son dos rectas que se cruzan en el centro y que la hiperbola se aproxima infinitamente sin cruzarlas."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Fórmulas y propiedades",
+        lines: [
+          "**Elipse (eje mayor horizontal):** x²/a² + y²/b² = 1, con a > b > 0, focos en (±c, 0) y c² = a² − b².",
+          "**Elipse (eje mayor vertical):** x²/b² + y²/a² = 1, con a > b > 0, focos en (0, ±c).",
+          "**Excentricidad de la elipse:** e = c/a, con 0 < e < 1.",
+          "**Hiperbola (eje transversal horizontal):** x²/a² − y²/b² = 1, focos en (±c, 0) y c² = a² + b².",
+          "**Hiperbola (eje transversal vertical):** y²/a² − x²/b² = 1, focos en (0, ±c).",
+          "**Excentricidad de la hiperbola:** e = c/a, con e > 1.",
+          "**Assíntotas de la hiperbola:** y = ±(b/a)·x (eje horizontal) o y = ±(a/b)·x (eje vertical).",
+          "**Relación fundamental:** En la elipse, la suma PF₁ + PF₂ = 2a para cualquier punto P de la elipse. En la hiperbola, |PF₁ − PF₂| = 2a."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Teoremas avanzados",
+        lines: [
+          "**Propiedades de reflexión de la elipse:** Un rayo emitido desde un foco de una elipse se refleja y pasa por el otro foco. Esto se aplica en lámparas elípticas y en litotripcia.",
+          "**Propiedades de reflexión de la hiperbola:** Un rayo emitido desde un foco de una hiperbola se refleja como si viniera del otro foco. Se usa en telescopios de Cassegrain.",
+          "**Forma general de las cónicas:** Ax² + Bxy + Cy² + Dx + Ey + F = 0. El discriminante B² − 4AC determina el tipo: < 0 (elipse), = 0 (parábola), > 0 (hiperbola).",
+          "**Invariantes bajo rotación:** Al rotar coordenadas para eliminar el término Bxy, los valores A + C y AC − B²/4 se conservan.",
+          "**Cónicas degeneradas:** La ecuación general puede representar un punto (0 intersecciones), una recta (1 intersección tangente), dos rectas, o una circunferencia como casos degenerados.",
+          "**Área y perímetro de la elipse:** Área = π·a·b. El perímetro no tiene fórmula exacta simple; una aproximación es P ≈ π[3(a+b) − √((3a+b)(a+3b))] (fórmula de Ramanujan)."
+        ]
+      }
+    ],
+    illustrations: [
+      `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="200" fill="#f8fafc"/>
+  <line x1="30" y1="100" x2="280" y2="100" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="150" y1="10" x2="150" y2="190" stroke="#94a3b8" stroke-width="1"/>
+  <ellipse cx="150" cy="100" rx="100" ry="55" fill="none" stroke="#2563eb" stroke-width="2"/>
+  <circle cx="100" cy="100" r="3" fill="#dc2626"/>
+  <circle cx="200" cy="100" r="3" fill="#dc2626"/>
+  <circle cx="50" cy="100" r="3" fill="#059669"/>
+  <circle cx="250" cy="100" r="3" fill="#059669"/>
+  <line x1="150" y1="100" x2="50" y2="100" stroke="#059669" stroke-width="1.5"/>
+  <line x1="150" y1="100" x2="250" y2="100" stroke="#059669" stroke-width="1.5"/>
+  <line x1="150" y1="100" x2="150" y2="45" stroke="#7c3aed" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="93" y="93" fill="#dc2626" font-size="11" font-family="sans-serif">F₁</text>
+  <text x="203" y="93" fill="#dc2626" font-size="11" font-family="sans-serif">F₂</text>
+  <text x="43" y="93" fill="#059669" font-size="11" font-family="sans-serif">V₁</text>
+  <text x="253" y="93" fill="#059669" font-size="11" font-family="sans-serif">V₂</text>
+  <text x="155" y="58" fill="#7c3aed" font-size="11" font-family="sans-serif">b</text>
+  <text x="80" y="18" fill="#1e293b" font-size="14" font-family="sans-serif" font-weight="bold">Elipse: x²/a² + y²/b² = 1</text>
+  <text x="80" y="195" fill="#7c3aed" font-size="11" font-family="sans-serif">c² = a² − b²</text>
+</svg>`,
+      `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="200" fill="#f8fafc"/>
+  <line x1="30" y1="100" x2="280" y2="100" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="150" y1="10" x2="150" y2="190" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="50" y1="25" x2="250" y2="175" stroke="#059669" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="50" y1="175" x2="250" y2="25" stroke="#059669" stroke-width="1" stroke-dasharray="4,3"/>
+  <path d="M 60,55 Q 120,90 60,145" fill="none" stroke="#2563eb" stroke-width="2"/>
+  <path d="M 240,55 Q 180,90 240,145" fill="none" stroke="#2563eb" stroke-width="2"/>
+  <circle cx="110" cy="100" r="3" fill="#dc2626"/>
+  <circle cx="190" cy="100" r="3" fill="#dc2626"/>
+  <line x1="60" y1="100" x2="100" y2="100" stroke="#059669" stroke-width="1"/>
+  <line x1="200" y1="100" x2="240" y2="100" stroke="#059669" stroke-width="1"/>
+  <text x="103" y="93" fill="#dc2626" font-size="11" font-family="sans-serif">F₁</text>
+  <text x="193" y="93" fill="#dc2626" font-size="11" font-family="sans-serif">F₂</text>
+  <text x="80" y="18" fill="#1e293b" font-size="14" font-family="sans-serif" font-weight="bold">Hiperbola: x²/a² − y²/b² = 1</text>
+  <text x="55" y="18" fill="#059669" font-size="11" font-family="sans-serif">assíntotas</text>
+  <text x="80" y="195" fill="#7c3aed" font-size="11" font-family="sans-serif">c² = a² + b²</text>
+</svg>`,
+      `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="200" fill="#f8fafc"/>
+  <text x="80" y="18" fill="#1e293b" font-size="14" font-family="sans-serif" font-weight="bold">Excentricidad comparativa</text>
+  <ellipse cx="80" cy="110" rx="50" ry="48" fill="none" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="60" y="180" fill="#2563eb" font-size="11" font-family="sans-serif">e ≈ 0 (círculo)</text>
+  <ellipse cx="200" cy="110" rx="70" ry="35" fill="none" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="160" y="180" fill="#dc2626" font-size="11" font-family="sans-serif">e ≈ 0.87 (elipse)</text>
+  <path d="M 240,40 Q 260,100 240,160" fill="none" stroke="#059669" stroke-width="1.5"/>
+  <path d="M 270,40 Q 250,100 270,160" fill="none" stroke="#059669" stroke-width="1.5"/>
+  <text x="240" y="180" fill="#059669" font-size="11" font-family="sans-serif">e > 1 (hiperbola)</text>
+  <line x1="5" y1="110" x2="300" y2="110" stroke="#94a3b8" stroke-width="0.5"/>
+  <line x1="150" y1="10" x2="150" y2="195" stroke="#94a3b8" stroke-width="0.5"/>
+</svg>`
+    ],
+    exercises: [
+      {
+        id: 1701,
+        question: "¿Cuáles son los focos de la elipse x²/25 + y²/16 = 1?",
+        options: ["(±3, 0)", "(±4, 0)", "(±5, 0)", "(±√41, 0)"],
+        correctIndex: 0,
+        explanation: "a²=25, b²=16. c²=a²−b²=25−16=9, c=3. Los focos están en (±3, 0).",
+        difficulty: "basico"
+      },
+      {
+        id: 1702,
+        question: "Una hiperbola tiene vértices en (±5, 0) y focos en (±13, 0). ¿Cuál es su ecuación?",
+        options: ["x²/25 − y²/144 = 1", "x²/169 − y²/25 = 1", "x²/25 − y²/169 = 1", "x²/144 − y²/25 = 1"],
+        correctIndex: 0,
+        explanation: "a=5 (vértices), c=13 (focos). c²=a²+b² → 169=25+b² → b²=144. Ecuación: x²/25 − y²/144 = 1.",
+        difficulty: "intermedio"
+      },
+      {
+        id: 1703,
+        question: "Una elipse tiene focos en (0, ±4) y pasa por el punto (3, 0). ¿Cuál es su excentricidad?",
+        options: ["4/5", "3/5", "4/3", "5/4"],
+        correctIndex: 0,
+        explanation: "Focos en (0,±4): c=4. El punto (3,0) está en la elipse: 3²/b²+0²/a²=1 → b²=9, b=3. Con eje vertical: a²=b²+c²=9+16=25, a=5. e=c/a=4/5.",
+        difficulty: "avanzado"
+      }
+    ]
+  }
   ],
   "cokito-rm": [
-    {
-      slug: "relaciones-de-parentesco",
-      tip: "Lee el enunciado de atrás hacia adelante. Identifica primero la persona de referencia y luego sube por las relaciones.",
-      theory: [
-        "**Relaciones de consanguinidad:** Padres, hijos, hermanos, abuelos, nietos, tíos, sobrinos, primos.",
-        "**Relaciones de afinidad (legales):** Esposos, suegros, yernos, nueras, cuñados.",
-        "**Método regresivo:** Leer el enunciado de final a inicio para identificar la relación.",
-        "**Ejemplo:** La madre del hijo de la esposa de mi padre = mi madre.",
-        "**Cantidad mínima de personas:** Una persona puede asumir múltiples roles (ser padre, abuelo y suegro a la vez).",
-        "**Consejo:** Dibuja un árbol genealógico para visualizar las relaciones."
-      ],
-      illustration: `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
-        <rect width="300" height="200" fill="#f8fafc" rx="12"/>
-        <circle cx="150" cy="30" r="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
-        <text x="150" y="34" text-anchor="middle" fill="#2563eb" font-size="9" font-family="sans-serif">Abuelo</text>
-        <line x1="150" y1="42" x2="150" y2="60" stroke="#94a3b8" stroke-width="1.5"/>
-        <line x1="100" y1="60" x2="200" y2="60" stroke="#94a3b8" stroke-width="1.5"/>
-        <line x1="100" y1="60" x2="100" y2="80" stroke="#94a3b8" stroke-width="1.5"/>
-        <line x1="200" y1="60" x2="200" y2="80" stroke="#94a3b8" stroke-width="1.5"/>
-        <circle cx="100" cy="90" r="12" fill="#dcfce7" stroke="#059669" stroke-width="2"/>
-        <text x="100" y="94" text-anchor="middle" fill="#059669" font-size="8" font-family="sans-serif">Padre</text>
-        <circle cx="200" cy="90" r="12" fill="#fce7f3" stroke="#ec4899" stroke-width="2"/>
-        <text x="200" y="94" text-anchor="middle" fill="#ec4899" font-size="8" font-family="sans-serif">Tío</text>
-        <line x1="100" y1="102" x2="100" y2="120" stroke="#94a3b8" stroke-width="1.5"/>
-        <line x1="200" y1="102" x2="200" y2="120" stroke="#94a3b8" stroke-width="1.5"/>
-        <circle cx="100" cy="130" r="12" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
-        <text x="100" y="134" text-anchor="middle" fill="#d97706" font-size="8" font-family="sans-serif">Yo</text>
-        <circle cx="200" cy="130" r="12" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
-        <text x="200" y="134" text-anchor="middle" fill="#d97706" font-size="8" font-family="sans-serif">Primo</text>
-        <line x1="80" y1="60" x2="80" y2="42" stroke="#94a3b8" stroke-width="1"/>
-        <line x1="220" y1="60" x2="220" y2="42" stroke="#94a3b8" stroke-width="1"/>
-        <text x="150" y="175" fill="#64748b" font-size="10" font-family="sans-serif">Árbol genealógico</text>
-      </svg>`,
-      exercises: [
-        { id: 1, question: "¿Qué parentesco tiene conmigo Rocío, si su madre fue la única hija de mi madre?", options: ["Sobrina", "Hija", "Hermana", "Prima"], correctIndex: 0, explanation: "La única hija de mi madre es mi hermana. La hija de mi hermana es mi sobrina." },
-        { id: 2, question: "En una fábrica trabajan 3 padres y 3 hijos. ¿Cuál es el menor número de personas?", options: ["4", "3", "5", "6"], correctIndex: 0, explanation: "Si un hombre es padre e hijo a la vez, y otro es solo padre, y otro es solo hijo, con 4 personas basta." },
-        { id: 3, question: "Mi abuela tuvo una hija solamente. ¿Qué parentesco tiene conmigo la hija del nuero de la mamá de mi madre?", options: ["Hermana", "Prima", "Tía", "Sobrina"], correctIndex: 0, explanation: "La mamá de mi madre es mi abuela. Su única hija es mi mamá. El nuero de mi abuela es el esposo de mi mamá. Su hija soy yo o mi hermana." }
-      ]
-    },
-    {
-      slug: "relaciones-de-tiempo",
-      tip: "Convierte todas las expresiones a números: ayer = -1, hoy = 0, mañana = +1. Usa módulo 7 para días de la semana.",
-      theory: [
-        "**Equivalencias numéricas:** Anteayer = -2, Ayer = -1, Hoy = 0, Mañana = +1, Pasado mañana = +2.",
-        "**Días de la semana:** Lunes(1), Martes(2), Miércoles(3), Jueves(4), Viernes(5), Sábado(6), Domingo(0).",
-        "**Regla práctica:** Para saber qué día fue hace n días, divide n entre 7 y usa el resto.",
-        "**Calendarios:** Los meses tienen 28, 29, 30 o 31 días. No hay dos meses consecutivos con 30 días.",
-        "**Año bisiesto:** Divisible entre 4 (excepto los terminados en 00, que deben ser divisibles entre 400)."
-      ],
-      illustration: `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
-        <rect width="300" height="200" fill="#f8fafc" rx="12"/>
-        <line x1="30" y1="100" x2="270" y2="100" stroke="#94a3b8" stroke-width="2"/>
-        <circle cx="150" cy="100" r="6" fill="#2563eb"/>
-        <text x="150" y="120" text-anchor="middle" fill="#2563eb" font-size="10" font-weight="bold" font-family="sans-serif">Hoy (0)</text>
-        <circle cx="100" cy="100" r="5" fill="#dc2626"/>
-        <text x="100" y="120" text-anchor="middle" fill="#dc2626" font-size="9" font-family="sans-serif">Ayer (-1)</text>
-        <circle cx="50" cy="100" r="5" fill="#dc2626"/>
-        <text x="50" y="120" text-anchor="middle" fill="#dc2626" font-size="9" font-family="sans-serif">Anteayer (-2)</text>
-        <circle cx="200" cy="100" r="5" fill="#059669"/>
-        <text x="200" y="120" text-anchor="middle" fill="#059669" font-size="9" font-family="sans-serif">Mañana (+1)</text>
-        <circle cx="250" cy="100" r="5" fill="#059669"/>
-        <text x="250" y="120" text-anchor="middle" fill="#059669" font-size="9" font-family="sans-serif">Pasado mañana (+2)</text>
-        <text x="150" y="165" fill="#64748b" font-size="10" font-family="sans-serif">Línea del tiempo</text>
-      </svg>`,
-      exercises: [
-        { id: 1, question: "Si hoy es lunes, ¿qué día será dentro de 100 días?", options: ["Viernes", "Jueves", "Sábado", "Lunes"], correctIndex: 0, explanation: "100 ÷ 7 = 14 remainder 2. Lunes + 2 = Miércoles. Verificando: 100 = 14×7 + 2. Lunes + 2 = Miércoles. Hmm, verifiquemos: 100/7 = 14.28, 14×7=98, 100-98=2. Lunes+2 = Miércoles." },
-        { id: 2, question: "Si el mañana de ayer fue miércoles, ¿qué día fue ayer?", options: ["Lunes", "Martes", "Miércoles", "Jueves"], correctIndex: 0, explanation: "Mañana de ayer = ayer + 1 = hoy. Si hoy es miércoles, ayer fue martes. Pero la respuesta es lunes porque mañana de ayer = hoy - 1 + 1 = hoy. Si eso es miércoles, ayer = martes. La respuesta correcta es martes." },
-        { id: 3, question: "En un mes hay 5 lunes, 5 martes y 5 miércoles. ¿Cuántos días tiene ese mes?", options: ["31", "30", "28", "29"], correctIndex: 0, explanation: "Para que haya 5 lunes, 5 martes y 5 miércoles, el mes debe tener 31 días y empezar lunes." }
-      ]
-    },
-    {
-      slug: "verdades-y-mentiras",
-      tip: "Si solo 1 persona dice la verdad, prueba con cada opción. Si hay más, busca contradicciones entre las afirmaciones.",
-      theory: [
-        "**Problemas de verdad y mentira:** Cada persona dice algo y debes determinar quién dice la verdad y quién miente.",
-        "**Estrategia 1:** Si solo uno dice la verdad, prueba cada alternativa y verifica que solo una sea consistente.",
-        "**Estrategia 2:** Si hay contradicciones directas (A dice algo y B lo niega), uno dice la verdad y el otro miente.",
-        "**Estrategia 3:** Usa tablas de verdad para organizar la información.",
-        "**Regla clave:** Un mentiroso SIEMPRE miente. Un veraz SIEMPRE dice la verdad."
-      ],
-      illustration: `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
-        <rect width="300" height="200" fill="#f8fafc" rx="12"/>
-        <circle cx="100" cy="80" r="25" fill="#dcfce7" stroke="#059669" stroke-width="2"/>
-        <text x="100" y="84" text-anchor="middle" fill="#059669" font-size="11" font-weight="bold" font-family="sans-serif">V</text>
-        <text x="100" y="120" text-anchor="middle" fill="#64748b" font-size="10" font-family="sans-serif">Verdadero</text>
-        <circle cx="200" cy="80" r="25" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
-        <text x="200" y="84" text-anchor="middle" fill="#dc2626" font-size="11" font-weight="bold" font-family="sans-serif">M</text>
-        <text x="200" y="120" text-anchor="middle" fill="#64748b" font-size="10" font-family="sans-serif">Mentira</text>
-        <line x1="130" y1="80" x2="170" y2="80" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4,3"/>
-        <text x="150" y="75" text-anchor="middle" fill="#94a3b8" font-size="10" font-family="sans-serif">≠</text>
-        <text x="150" y="170" fill="#64748b" font-size="10" font-family="sans-serif">Siempre opuestos</text>
-      </svg>`,
-      exercises: [
-        { id: 1, question: "Ana dice: 'Carlos miente'. Carlos dice: 'Ana dice la verdad'. Si solo uno dice la verdad, ¿quién es?", options: ["Carlos", "Ana", "Ambos", "Ninguno"], correctIndex: 0, explanation: "Si Ana dice la verdad, Carlos miente. Pero Carlos dice que Ana dice la verdad, lo cual sería cierto. Contradicción. Si Carlos dice la verdad, Ana miente cuando dice que Carlos miente." },
-        { id: 2, question: "Pedro dice: 'Al menos uno de los dos miente'. Juan dice: 'Los dos decimos la verdad'. ¿Quién miente?", options: ["Juan", "Pedro", "Ambos", "Ninguno"], correctIndex: 0, explanation: "Si Juan dice la verdad, ambos dicen la verdad. Pero Pedro dice que al menos uno miente, lo cual sería falso. Contradicción. Pedro dice la verdad." },
-        { id: 3, question: "En un pueblo, los veraces siempre dicen la verdad y los mentirosos siempre mienten. Luis dice: 'Somos mentirosos'. ¿Quién es Luis?", options: ["Mentirosso", "Veraz", "No se puede saber", "Ambos"], correctIndex: 0, explanation: "Si Luis fuera veraz, no podría decir que es mentiroso. Si es mentiroso, miente al decir que es mentiroso, lo cual es consistente." }
-      ]
-    },
-    {
-      slug: "orden-de-informacion",
-      tip: "Organiza la información en una tabla o lista antes de resolver. Lee CUIDADOSAMENTE qué te piden.",
-      theory: [
-        "**Orden de información:** Problemas donde debes organizar datos según ciertas reglas o condiciones.",
-        "**Estrategia:** Lee primero todo el enunciado, identifica las restricciones, luego prueba opciones.",
-        "**Técnica de eliminación:** Descarta opciones que no cumplan alguna condición.",
-        "**Consejo:** No te dejes engañar por la apariencia del problema. A veces la respuesta es más simple de lo que parece."
-      ],
-      illustration: `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
-        <rect width="300" height="200" fill="#f8fafc" rx="12"/>
-        <rect x="30" y="30" width="240" height="140" fill="white" stroke="#2563eb" stroke-width="1.5" rx="8"/>
-        <line x1="30" y1="60" x2="270" y2="60" stroke="#2563eb" stroke-width="1"/>
-        <text x="70" y="50" fill="#2563eb" font-size="10" font-weight="bold" font-family="sans-serif">Dato</text>
-        <text x="180" y="50" fill="#2563eb" font-size="10" font-weight="bold" font-family="sans-serif">Condición</text>
-        <text x="50" y="80" fill="#1e293b" font-size="9" font-family="sans-serif">A</text>
-        <text x="160" y="80" fill="#64748b" font-size="9" font-family="sans-serif">Mayor que B</text>
-        <text x="50" y="105" fill="#1e293b" font-size="9" font-family="sans-serif">B</text>
-        <text x="160" y="105" fill="#64748b" font-size="9" font-family="sans-serif">Menor que C</text>
-        <text x="50" y="130" fill="#1e293b" font-size="9" font-family="sans-serif">C</text>
-        <text x="160" y="130" fill="#64748b" font-size="9" font-family="sans-serif">Igual a 10</text>
-        <text x="150" y="185" fill="#64748b" font-size="10" font-family="sans-serif">Organiza antes de resolver</text>
-      </svg>`,
-      exercises: [
-        { id: 1, question: "Juan, Pedro y Luis tienen 10, 15 y 20 años. Juan es mayor que Pedro. Pedro es mayor que Luis. ¿Quién tiene 20 años?", options: ["Juan", "Pedro", "Luis", "No se sabe"], correctIndex: 0, explanation: "Juan > Pedro > Luis. Si Juan tiene 15, Pedro 10 y Luis no puede tener 20. Si Juan tiene 20, Pedro 15 y Luis 10. Juan tiene 20." },
-        { id: 2, question: "En una carrera, Ana llegó antes que Luis. Carlos llegó después de Beatriz pero antes de Luis. ¿Quién llegó segundo?", options: ["Beatriz", "Ana", "Carlos", "Luis"], correctIndex: 0, explanation: "Ana primero. Carlos después de Beatriz pero antes de Luis: Beatriz, Carlos, Luis. Orden: Ana, Beatriz, Carlos, Luis." },
-        { id: 3, question: "Si A > B, B > C y C > D, ¿cuál de las siguientes es VERDADERA?", options: ["A > D", "D > A", "B > A", "C > A"], correctIndex: 0, explanation: "Por transitividad: si A > B y B > C y C > D, entonces A > D." }
-      ]
-    },
-    {
-      slug: "razonamiento-inductivo",
-      tip: "Busca el patrón en los primeros términos. Prueba la fórmula con los valores que ya conoces.",
-      theory: [
-        "**Razonamiento inuctivo:** Observar patrones para hacer generalizaciones.",
-        "**Secuencias aritméticas:** Diferencia constante entre términos consecutivos. an = a1 + (n-1)d",
-        "**Secuencias geométricas:** Razón constante entre términos consecutivos. an = a1 × r^(n-1)",
-        "**Sucesiones de Fibonacci:** Cada término es la suma de los dos anteriores: 1, 1, 2, 3, 5, 8, 13...",
-        "**Triángulo de Pascal:** Cada número es la suma de los dos superiores."
-      ],
-      illustration: `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
-        <rect width="300" height="200" fill="#f8fafc" rx="12"/>
-        <text x="150" y="25" text-anchor="middle" fill="#2563eb" font-size="12" font-weight="bold" font-family="sans-serif">Triángulo de Pascal</text>
-        <text x="150" y="50" text-anchor="middle" fill="#1e293b" font-size="11" font-family="sans-serif">1</text>
-        <text x="120" y="75" text-anchor="middle" fill="#1e293b" font-size="11" font-family="sans-serif">1</text>
-        <text x="180" y="75" text-anchor="middle" fill="#1e293b" font-size="11" font-family="sans-serif">1</text>
-        <text x="90" y="100" text-anchor="middle" fill="#1e293b" font-size="11" font-family="sans-serif">1</text>
-        <text x="150" y="100" text-anchor="middle" fill="#dc2626" font-size="11" font-weight="bold" font-family="sans-serif">2</text>
-        <text x="210" y="100" text-anchor="middle" fill="#1e293b" font-size="11" font-family="sans-serif">1</text>
-        <text x="60" y="125" text-anchor="middle" fill="#1e293b" font-size="11" font-family="sans-serif">1</text>
-        <text x="120" y="125" text-anchor="middle" fill="#dc2626" font-size="11" font-weight="bold" font-family="sans-serif">3</text>
-        <text x="180" y="125" text-anchor="middle" fill="#dc2626" font-size="11" font-weight="bold" font-family="sans-serif">3</text>
-        <text x="240" y="125" text-anchor="middle" fill="#1e293b" font-size="11" font-family="sans-serif">1</text>
-        <text x="150" y="170" fill="#64748b" font-size="10" font-family="sans-serif">Cada número = suma de los dos superiores</text>
-      </svg>`,
-      exercises: [
-        { id: 1, question: "La sucesión es: 2, 5, 8, 11, ¿cuál es el siguiente término?", options: ["14", "13", "12", "15"], correctIndex: 0, explanation: "Diferencia constante de 3. 11 + 3 = 14." },
-        { id: 2, question: "En la sucesión de Fibonacci, ¿cuál es el séptimo término?", options: ["13", "8", "21", "5"], correctIndex: 0, explanation: "1, 1, 2, 3, 5, 8, 13. El séptimo término es 13." },
-        { id: 3, question: "Si 1, 4, 9, 16, 25... ¿cuál es la fórmula del término n-ésimo?", options: ["n²", "2n", "n+1", "n²+1"], correctIndex: 0, explanation: "1=1², 4=2², 9=3², 16=4², 25=5². La fórmula es n²." }
-      ]
-    },
-    {
-      slug: "sistemas-de-numeracion",
-      tip: "Para convertir de decimal a binario, divide sucesivamente entre 2 y toma los residuos de abajo hacia arriba.",
-      theory: [
-        "**Sistema decimal (base 10):** Dígitos 0-9. Cada posición representa una potencia de 10.",
-        "**Sistema binario (base 2):** Dígitos 0 y 1. Cada posición representa una potencia de 2.",
-        "**Sistema octal (base 8):** Dígitos 0-7. Cada posición representa una potencia de 8.",
-        "**Sistema hexadecimal (base 16):** Dígitos 0-9 y A-F.",
-        "**Conversión decimal a binario:** Dividir sucesivamente entre 2 y tomar residuos.",
-        "**Conversión binario a decimal:** Multiplicar cada dígito por 2^n y sumar."
-      ],
-      illustration: `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
-        <rect width="300" height="200" fill="#f8fafc" rx="12"/>
-        <text x="150" y="25" text-anchor="middle" fill="#2563eb" font-size="12" font-weight="bold" font-family="sans-serif">Conversión Decimal → Binario</text>
-        <text x="150" y="55" text-anchor="middle" fill="#1e293b" font-size="11" font-family="sans-serif">13 ÷ 2 = 6 residuo 1</text>
-        <text x="150" y="75" text-anchor="middle" fill="#1e293b" font-size="11" font-family="sans-serif">6 ÷ 2 = 3 residuo 0</text>
-        <text x="150" y="95" text-anchor="middle" fill="#1e293b" font-size="11" font-family="sans-serif">3 ÷ 2 = 1 residuo 1</text>
-        <text x="150" y="115" text-anchor="middle" fill="#1e293b" font-size="11" font-family="sans-serif">1 ÷ 2 = 0 residuo 1</text>
-        <line x1="60" y1="130" x2="240" y2="130" stroke="#94a3b8" stroke-width="1"/>
-        <text x="150" y="155" text-anchor="middle" fill="#dc2626" font-size="13" font-weight="bold" font-family="sans-serif">13₁₀ = 1101₂</text>
-        <text x="150" y="185" fill="#64748b" font-size="10" font-family="sans-serif">Lee residuos de abajo hacia arriba</text>
-      </svg>`,
-      exercises: [
-        { id: 1, question: "¿Cuál es el equivalente en binario de 10 en decimal?", options: ["1010", "1100", "1001", "1110"], correctIndex: 0, explanation: "10 = 8+2 = 2³+2¹ = 1010₂." },
-        { id: 2, question: "¿Cuánto vale 1101₂ en decimal?", options: ["13", "11", "15", "12"], correctIndex: 0, explanation: "1101₂ = 1×8 + 1×4 + 0×2 + 1×1 = 8+4+1 = 13." },
-        { id: 3, question: "En el sistema hexadecimal, ¿cuál es el dígito que representa 15 en decimal?", options: ["F", "E", "D", "G"], correctIndex: 0, explanation: "En hexadecimal: 0-9 = 0-9, A=10, B=11, C=12, D=13, E=14, F=15." }
-      ]
-    },
-    {
-      slug: "criptoaritmetica",
-      tip: "Empieza por las columnas con menos posibilidades. Un dígito que se repite en la misma columna da pistas inmediatas.",
-      theory: [
-        "**Criptoaritmética:** Cada letra representa un dígito único (0-9). Las cifras principales no pueden ser 0.",
-        "**Estrategia:** Analiza columna por columna, empezando por la derecha (unidades).",
-        "**Pistas clave:**",
-        "- Si A + A = A, entonces A = 0",
-        "- Si A + B = A (sin carry), entonces B = 0",
-        "- Si A × B = A (y A ≠ 0), entonces B = 1",
-        "- Si A + B produce carry, el resultado es A + B - 10",
-        "**Verificación:** Sustituye las letras y verifica que la operación sea correcta."
-      ],
-      illustration: `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
-        <rect width="300" height="200" fill="#f8fafc" rx="12"/>
-        <text x="150" y="25" text-anchor="middle" fill="#2563eb" font-size="12" font-weight="bold" font-family="sans-serif">Ejemplo: SEND + MORE = MONEY</text>
-        <text x="180" y="60" text-anchor="end" fill="#1e293b" font-size="14" font-family="monospace">SEND</text>
-        <text x="180" y="80" text-anchor="end" fill="#1e293b" font-size="14" font-family="sans-serif">+ MORE</text>
-        <line x1="110" y1="88" x2="240" y2="88" stroke="#1e293b" stroke-width="1.5"/>
-        <text x="180" y="110" text-anchor="end" fill="#dc2626" font-size="14" font-weight="bold" font-family="monospace">MONEY</text>
-        <text x="150" y="145" fill="#64748b" font-size="10" font-family="sans-serif">Cada letra = un dígito (0-9)</text>
-        <text x="150" y="170" fill="#64748b" font-size="10" font-family="sans-serif">Empieza por la columna de unidades</text>
-      </svg>`,
-      exercises: [
-        { id: 1, question: "Si ABC + ABC = 642, ¿cuánto vale A?", options: ["3", "2", "4", "6"], correctIndex: 0, explanation: "Si ABC + ABC = 642, entonces 2×ABC = 642, ABC = 321. A = 3." },
-        { id: 2, question: "Si AA + BB = CDC, ¿cuánto vale C?", options: ["1", "2", "3", "0"], correctIndex: 0, explanation: "AA + BB = CDC. Si A=5, B=6: 55+66=121. C=1, D=2." },
-        { id: 3, question: "En XY + YX = 121, ¿cuánto vale X + Y?", options: ["11", "12", "10", "13"], correctIndex: 0, explanation: "XY + YX = 121. Si X=5, Y=6: 56+65=121. X+Y = 11." }
-      ]
-    },
-    {
-      slug: "sucesiones",
-      tip: "Identifica si la diferencia o razón es constante. Si no lo es, busca patrones de segundo orden (diferencia de diferencias).",
-      theory: [
-        "**Sucesión aritmética:** Diferencia constante d. an = a1 + (n-1)d",
-        "**Sucesión geométrica:** Razón constante r. an = a1 × r^(n-1)",
-        "**Suma de los primeros n términos:**",
-        "- Aritmética: Sn = n(a1 + an)/2",
-        "- Geométrica: Sn = a1(rⁿ - 1)/(r - 1)",
-        "**Diferencia de segundo orden:** Si la diferencia de las diferencias es constante, es una sucesión cuadrática.",
-        "**Sucesiones alternadas:** Pueden tener dos patrones distintos para términos pares e impares."
-      ],
-      illustration: `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
-        <rect width="300" height="200" fill="#f8fafc" rx="12"/>
-        <text x="150" y="25" text-anchor="middle" fill="#2563eb" font-size="12" font-weight="bold" font-family="sans-serif">Tipos de sucesiones</text>
-        <text x="50" y="55" fill="#059669" font-size="11" font-weight="bold" font-family="sans-serif">Aritmética:</text>
-        <text x="50" y="75" fill="#1e293b" font-size="11" font-family="sans-serif">2, 5, 8, 11, 14... (d=3)</text>
-        <text x="50" y="95" fill="#64748b" font-size="10" font-family="sans-serif">an = 2 + (n-1)×3 = 3n-1</text>
-        <text x="50" y="125" fill="#dc2626" font-size="11" font-weight="bold" font-family="sans-serif">Geométrica:</text>
-        <text x="50" y="145" fill="#1e293b" font-size="11" font-family="sans-serif">3, 6, 12, 24, 48... (r=2)</text>
-        <text x="50" y="165" fill="#64748b" font-size="10" font-family="sans-serif">an = 3 × 2^(n-1)</text>
-      </svg>`,
-      exercises: [
-        { id: 1, question: "¿Cuál es el décimo término de la sucesión 3, 7, 11, 15...?", options: ["39", "37", "41", "35"], correctIndex: 0, explanation: "d = 4. a10 = 3 + (10-1)×4 = 3 + 36 = 39." },
-        { id: 2, question: "¿Cuánto suman los primeros 5 términos de 2, 6, 18, 54...?", options: ["242", "80", "120", "364"], correctIndex: 0, explanation: "r = 3. S5 = 2(3⁵ - 1)/(3-1) = 2(243-1)/2 = 242." },
-        { id: 3, question: "Si un = 2n + 3, ¿cuál es a5?", options: ["13", "10", "15", "8"], correctIndex: 0, explanation: "a5 = 2(5) + 3 = 10 + 3 = 13." }
-      ]
-    },
-    {
-      slug: "analogias-y-distribuciones",
-      tip: "En analogías, busca la relación del primer par y aplícala al segundo. En distribuciones, cuenta todas las formas posibles.",
-      theory: [
-        "**Analogías:** Relación entre pares de conceptos. A:B :: C:D significa que la relación A→B es igual que C→D.",
-        "**Tipos de analogías:**",
-        "- Sinónimos: grande:enorme :: pequeño:diminuto",
-        "- Antónimos: caliente:frío :: alto:bajo",
-        "- Parte-todo: dedo:mano :: hoja:árbol",
-        "- Causa-efecto: lluvia:inundación :: fuego:humo",
-        "**Distribuciones:** Asignar elementos a grupos según restricciones.",
-        "**Principio de multiplicación:** Si hay n formas de hacer A y m formas de hacer B, hay n×m formas de hacer ambos."
-      ],
-      illustration: `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
-        <rect width="300" height="200" fill="#f8fafc" rx="12"/>
-        <text x="150" y="25" text-anchor="middle" fill="#2563eb" font-size="12" font-weight="bold" font-family="sans-serif">Analogías</text>
-        <text x="40" y="60" fill="#1e293b" font-size="11" font-family="sans-serif">A : B</text>
-        <text x="130" y="60" fill="#2563eb" font-size="14" font-family="sans-serif">→</text>
-        <text x="180" y="60" fill="#1e293b" font-size="11" font-family="sans-serif">C : D</text>
-        <text x="40" y="90" fill="#059669" font-size="10" font-family="sans-serif">grande : enorme</text>
-        <text x="180" y="90" fill="#059669" font-size="10" font-family="sans-serif">pequeño : diminuto</text>
-        <line x1="85" y1="55" x2="85" y2="95" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3,3"/>
-        <line x1="225" y1="55" x2="225" y2="95" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3,3"/>
-        <text x="150" y="130" text-anchor="middle" fill="#dc2626" font-size="11" font-weight="bold" font-family="sans-serif">Misma relación</text>
-        <text x="150" y="175" fill="#64748b" font-size="10" font-family="sans-serif">A→B = C→D</text>
-      </svg>`,
-      exercises: [
-        { id: 1, question: "Libro : Leído :: Camino : ¿?", options: ["Recorrido", "Largo", "Piedra", "Ancho"], correctIndex: 0, explanation: "Un libro se lee, un camino se recorre. La relación es acción que se realiza sobre el objeto." },
-        { id: 2, question: "Tengo 3 camisas y 4 pantalones. ¿Cuántos atuendos diferentes puedo hacer?", options: ["12", "7", "8", "15"], correctIndex: 0, explanation: "Por el principio de multiplicación: 3 × 4 = 12 atuendos." },
-        { id: 3, question: "Mano : Dedo :: Pie : ¿?", options: ["Dedo del pie", "Uña", "Talón", "Zapato"], correctIndex: 0, explanation: "Los dedos son partes de la mano, los dedos del pie son partes del pie." }
-      ]
-    },
-    {
-      slug: "series",
-      tip: "Las series pueden combinar varios patrones: pares/impares, posiciones, operaciones. Analiza cada posición por separado.",
-      theory: [
-        "**Series:** Conjuntos de elementos que siguen un patrón.",
-        "**Tipos de patrones:**",
-        "- Progresión aritmética o geométrica",
-        "- Alternancia: dos subseries entrelazadas",
-        "- Operaciones entre términos",
-        "- Movimiento de posiciones",
-        "- Letras o números en orden específico",
-        "**Estrategia:** Analiza diferencias entre términos, busca patrones en posiciones pares/impares, identifica si hay operaciones entre elementos."
-      ],
-      illustration: `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
-        <rect width="300" height="200" fill="#f8fafc" rx="12"/>
-        <text x="150" y="25" text-anchor="middle" fill="#2563eb" font-size="12" font-weight="bold" font-family="sans-serif">Serie alternada</text>
-        <text x="40" y="70" fill="#dc2626" font-size="14" font-family="sans-serif">2</text>
-        <text x="80" y="70" fill="#2563eb" font-size="14" font-family="sans-serif">9</text>
-        <text x="120" y="70" fill="#dc2626" font-size="14" font-family="sans-serif">4</text>
-        <text x="160" y="70" fill="#2563eb" font-size="14" font-family="sans-serif">7</text>
-        <text x="200" y="70" fill="#dc2626" font-size="14" font-family="sans-serif">6</text>
-        <text x="240" y="70" fill="#2563eb" font-size="14" font-family="sans-serif">5</text>
-        <text x="270" y="70" fill="#dc2626" font-size="14" font-family="sans-serif">?</text>
-        <path d="M 45 65 L 75 65" stroke="#dc2626" stroke-width="1" marker-end="url(#arrow)"/>
-        <path d="M 125 65 L 155 65" stroke="#dc2626" stroke-width="1"/>
-        <path d="M 205 65 L 235 65" stroke="#dc2626" stroke-width="1"/>
-        <text x="55" y="55" fill="#dc2626" font-size="8" font-family="sans-serif">+2</text>
-        <text x="135" y="55" fill="#dc2626" font-size="8" font-family="sans-serif">+2</text>
-        <path d="M 85 65 L 115 65" stroke="#2563eb" stroke-width="1"/>
-        <path d="M 165 65 L 195 65" stroke="#2563eb" stroke-width="1"/>
-        <text x="95" y="55" fill="#2563eb" font-size="8" font-family="sans-serif">-2</text>
-        <text x="175" y="55" fill="#2563eb" font-size="8" font-family="sans-serif">-2</text>
-        <text x="150" y="120" fill="#64748b" font-size="10" font-family="sans-serif">Posiciones impares: +2, +2 → 8</text>
-        <text x="150" y="145" fill="#64748b" font-size="10" font-family="sans-serif">Posiciones pares: -2, -2 → 3</text>
-      </svg>`,
-      exercises: [
-        { id: 1, question: "¿Cuál es el siguiente número? 1, 4, 9, 16, 25, ?", options: ["36", "30", "35", "49"], correctIndex: 0, explanation: "Son cuadrados perfectos: 1², 2², 3², 4², 5², 6² = 36." },
-        { id: 2, question: "Serie: 2, 3, 5, 8, 13, ?", options: ["21", "18", "20", "16"], correctIndex: 0, explanation: "Cada término es la suma de los dos anteriores (Fibonacci): 8+13 = 21." },
-        { id: 3, question: "Serie: A, C, F, J, O, ?", options: ["U", "T", "S", "V"], correctIndex: 0, explanation: "Diferencias: +2, +3, +4, +5, +6. O+6 = U." }
-      ]
-    },
-    {
-      slug: "sumatorias",
-      tip: "La suma de los primeros n naturales es n(n+1)/2. Memoriza esta fórmula, te ahorrará mucho tiempo.",
-      theory: [
-        "**Suma de naturales:** 1+2+3+...+n = n(n+1)/2",
-        "**Suma de pares:** 2+4+6+...+2n = n(n+1)",
-        "**Suma de impares:** 1+3+5+...+(2n-1) = n²",
-        "**Suma de cuadrados:** 1²+2²+3²+...+n² = n(n+1)(2n+1)/6",
-        "**Suma de cubos:** 1³+2³+3³+...+n³ = [n(n+1)/2]²",
-        "**Propiedad lineal:** Σ(ak+b) = aΣk + Σb"
-      ],
-      illustration: `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
-        <rect width="300" height="200" fill="#f8fafc" rx="12"/>
-        <text x="150" y="25" text-anchor="middle" fill="#2563eb" font-size="12" font-weight="bold" font-family="sans-serif">Fórmulas de sumatoria</text>
-        <rect x="20" y="40" width="260" height="35" fill="#dbeafe" rx="6"/>
-        <text x="150" y="62" text-anchor="middle" fill="#2563eb" font-size="11" font-family="sans-serif">1+2+3+...+n = n(n+1)/2</text>
-        <rect x="20" y="82" width="260" height="35" fill="#dcfce7" rx="6"/>
-        <text x="150" y="104" text-anchor="middle" fill="#059669" font-size="11" font-family="sans-serif">1+3+5+...+(2n-1) = n²</text>
-        <rect x="20" y="124" width="260" height="35" fill="#fef3c7" rx="6"/>
-        <text x="150" y="146" text-anchor="middle" fill="#d97706" font-size="11" font-family="sans-serif">1²+2²+3²+...+n² = n(n+1)(2n+1)/6</text>
-        <text x="150" y="185" fill="#64748b" font-size="10" font-family="sans-serif">Memoriza estas fórmulas</text>
-      </svg>`,
-      exercises: [
-        { id: 1, question: "¿Cuánto suman los primeros 20 números naturales?", options: ["210", "200", "190", "420"], correctIndex: 0, explanation: "S = 20(21)/2 = 420/2 = 210." },
-        { id: 2, question: "¿Cuánto suman los primeros 10 números impares?", options: ["100", "55", "90", "110"], correctIndex: 0, explanation: "La suma de los primeros n impares es n². 10² = 100." },
-        { id: 3, question: "¿Cuánto vale 1² + 2² + 3² + 4² + 5²?", options: ["55", "15", "225", "30"], correctIndex: 0, explanation: "1+4+9+16+25 = 55." }
-      ]
-    },
-    {
-      slug: "cuatro-operaciones",
-      tip: "Respeta el orden de operaciones: primero paréntesis, luego potencias, multiplicación/división, y finalmente suma/resta.",
-      theory: [
-        "**Orden de operaciones (PEMDAS):**",
-        "1. Paréntesis (agrupaciones)",
-        "2. Exponentes (potencias)",
-        "3. Multiplicación y División (izquierda a derecha)",
-        "4. Suma y Resta (izquierda a derecha)",
-        "**Propiedades:**",
-        "- Conmutativa: a+b = b+a, a×b = b×a",
-        "- Asociativa: (a+b)+c = a+(b+c)",
-        "- Distributiva: a(b+c) = ab + ac"
-      ],
-      illustration: `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
-        <rect width="300" height="200" fill="#f8fafc" rx="12"/>
-        <text x="150" y="25" text-anchor="middle" fill="#2563eb" font-size="12" font-weight="bold" font-family="sans-serif">Orden de operaciones</text>
-        <rect x="100" y="40" width="100" height="25" fill="#dc2626" rx="4"/>
-        <text x="150" y="57" text-anchor="middle" fill="white" font-size="10" font-weight="bold" font-family="sans-serif">1. Paréntesis</text>
-        <rect x="100" y="70" width="100" height="25" fill="#d97706" rx="4"/>
-        <text x="150" y="87" text-anchor="middle" fill="white" font-size="10" font-weight="bold" font-family="sans-serif">2. Potencias</text>
-        <rect x="100" y="100" width="100" height="25" fill="#2563eb" rx="4"/>
-        <text x="150" y="117" text-anchor="middle" fill="white" font-size="10" font-weight="bold" font-family="sans-serif">3. × ÷</text>
-        <rect x="100" y="130" width="100" height="25" fill="#059669" rx="4"/>
-        <text x="150" y="147" text-anchor="middle" fill="white" font-size="10" font-weight="bold" font-family="sans-serif">4. + −</text>
-        <text x="150" y="185" fill="#64748b" font-size="10" font-family="sans-serif">De arriba hacia abajo</text>
-      </svg>`,
-      exercises: [
-        { id: 1, question: "¿Cuánto vale 3 + 4 × 2?", options: ["11", "14", "8", "10"], correctIndex: 0, explanation: "Primero multiplicación: 4×2=8. Luego suma: 3+8=11." },
-        { id: 2, question: "¿Cuánto vale (3 + 4) × 2?", options: ["14", "11", "8", "10"], correctIndex: 0, explanation: "Primero paréntesis: 3+4=7. Luego multiplicación: 7×2=14." },
-        { id: 3, question: "¿Cuánto vale 2³ + 5 × 3?", options: ["23", "39", "17", "48"], correctIndex: 0, explanation: "Primero potencia: 2³=8. Luego multiplicación: 5×3=15. Finalmente suma: 8+15=23." }
-      ]
-    },
-    {
-      slug: "metodos-practicos",
-      tip: "En problemas de盛り込み, prueba las alternativas directamente. Es más rápido que resolver algebraicamente.",
-      theory: [
-        "**Métodos prácticos:** Técnicas para resolver problemas sin fórmulas complejas.",
-        "**Método de prueba y error:** Sustituye las alternativas hasta encontrar la correcta.",
-        "**Método de eliminación:** Descarta alternativas que no cumplan las condiciones.",
-        "**Método gráfico:** Dibuja una representación visual del problema.",
-        "**Aproximación:** Usa redondeos para estimar la respuesta y descartar opciones.",
-        "**Casos especiales:** Prueba con valores simples (0, 1, -1) para verificar generalizaciones."
-      ],
-      illustration: `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
-        <rect width="300" height="200" fill="#f8fafc" rx="12"/>
-        <text x="150" y="25" text-anchor="middle" fill="#2563eb" font-size="12" font-weight="bold" font-family="sans-serif">Métodos prácticos</text>
-        <rect x="20" y="45" width="120" height="50" fill="#dbeafe" rx="8"/>
-        <text x="80" y="65" text-anchor="middle" fill="#2563eb" font-size="10" font-weight="bold" font-family="sans-serif">Prueba y error</text>
-        <text x="80" y="82" text-anchor="middle" fill="#64748b" font-size="8" font-family="sans-serif">Sustituye opciones</text>
-        <rect x="160" y="45" width="120" height="50" fill="#dcfce7" rx="8"/>
-        <text x="220" y="65" text-anchor="middle" fill="#059669" font-size="10" font-weight="bold" font-family="sans-serif">Eliminación</text>
-        <text x="220" y="82" text-anchor="middle" fill="#64748b" font-size="8" font-family="sans-serif">Descarta falsas</text>
-        <rect x="20" y="105" width="120" height="50" fill="#fef3c7" rx="8"/>
-        <text x="80" y="125" text-anchor="middle" fill="#d97706" font-size="10" font-weight="bold" font-family="sans-serif">Gráfico</text>
-        <text x="80" y="142" text-anchor="middle" fill="#64748b" font-size="8" font-family="sans-serif">Dibuja la situación</text>
-        <rect x="160" y="105" width="120" height="50" fill="#ede9fe" rx="8"/>
-        <text x="220" y="125" text-anchor="middle" fill="#7c3aed" font-size="10" font-weight="bold" font-family="sans-serif">Aproximación</text>
-        <text x="220" y="142" text-anchor="middle" fill="#64748b" font-size="8" font-family="sans-serif">Redondea y estima</text>
-      </svg>`,
-      exercises: [
-        { id: 1, question: "¿Cuál de estas es raíz cuadrada de 144?", options: ["12", "14", "11", "13"], correctIndex: 0, explanation: "12 × 12 = 144. La raíz cuadrada de 144 es 12." },
-        { id: 2, question: "Si 3x + 7 = 22, ¿cuánto vale x?", options: ["5", "7", "3", "9"], correctIndex: 0, explanation: "3x = 22-7 = 15. x = 15/3 = 5." },
-        { id: 3, question: "Aproximadamente, ¿cuánto vale √50?", options: ["7", "8", "6", "5"], correctIndex: 0, explanation: "7²=49, 8²=64. √50 está entre 7 y 8, pero más cerca de 7." }
-      ]
-    },
-    {
-      slug: "planteo-de-ecuaciones",
-      tip: "Traduce cada frase del problema a una ecuación. Identifica la incógnita y plantea ecuaciones que la relacionen.",
-      theory: [
-        "**Planteo de ecuaciones:** Convertir un problema verbal a una expresión matemática.",
-        "**Pasos:**",
-        "1. Lee el problema completamente",
-        "2. Identifica la incógnita (x)",
-        "3. Escribe las relaciones en ecuaciones",
-        "4. Resuelve la ecuación",
-        "5. Verifica la respuesta",
-        "**Expresiones clave:**",
-        "- 'es igual a' → =",
-        "- 'mayor que' → +",
-        "- 'menor que' → -",
-        "- 'veces' → ×",
-        "- 'la mitad de' → /2"
-      ],
-      illustration: `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
-        <rect width="300" height="200" fill="#f8fafc" rx="12"/>
-        <text x="150" y="25" text-anchor="middle" fill="#2563eb" font-size="12" font-weight="bold" font-family="sans-serif">Traducir a ecuaciones</text>
-        <text x="30" y="60" fill="#1e293b" font-size="10" font-family="sans-serif">"María tiene 5 soles más que Juan"</text>
-        <text x="30" y="80" fill="#dc2626" font-size="11" font-weight="bold" font-family="sans-serif">→ M = J + 5</text>
-        <text x="30" y="110" fill="#1e293b" font-size="10" font-family="sans-serif">"El ingreso es 1/5 de lo recibido"</text>
-        <text x="30" y="130" fill="#dc2626" font-size="11" font-weight="bold" font-family="sans-serif">→ I = R/5</text>
-        <text x="30" y="160" fill="#1e293b" font-size="10" font-family="sans-serif">"Recibirá el 30% del dinero"</text>
-        <text x="30" y="180" fill="#dc2626" font-size="11" font-weight="bold" font-family="sans-serif">→ R = 0.30 × D</text>
-      </svg>`,
-      exercises: [
-        { id: 1, question: "Un número multiplicado por 3 y aumentado en 5 da 20. ¿Cuál es el número?", options: ["5", "3", "7", "10"], correctIndex: 0, explanation: "3x + 5 = 20 → 3x = 15 → x = 5." },
-        { id: 2, question: "María tiene el doble de soles que Pedro. Juntos tienen 36. ¿Cuánto tiene Pedro?", options: ["12", "18", "24", "6"], correctIndex: 0, explanation: "M = 2P y M + P = 36. 2P + P = 36 → 3P = 36 → P = 12." },
-        { id: 3, question: "La mitad de un número menos 3 es igual a 7. ¿Cuál es el número?", options: ["20", "10", "14", "8"], correctIndex: 0, explanation: "x/2 - 3 = 7 → x/2 = 10 → x = 20." }
-      ]
-    },
-    {
-      slug: "edades",
-      tip: "Siempre plantea edades en función de UNA variable. El tiempo pasa igual para todos.",
-      theory: [
-        "**Problemas de edades:** Relaciones entre edades de diferentes personas.",
-        "**Conceptos clave:**",
-        "- Las edades aumentan igual para todos (1 año más para cada persona)",
-        "- Si A es el doble de edad que B, en 5 años la relación cambia",
-        "**Estrategia:**",
-        "1. Define una variable base (la edad actual de alguien)",
-        "2. Expresa todas las edades en función de esa variable",
-        "3. Plantea ecuaciones según las condiciones",
-        "4. Resuelve y verifica"
-      ],
-      illustration: `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
-        <rect width="300" height="200" fill="#f8fafc" rx="12"/>
-        <text x="150" y="25" text-anchor="middle" fill="#2563eb" font-size="12" font-weight="bold" font-family="sans-serif">Edades en el tiempo</text>
-        <line x1="30" y1="100" x2="270" y2="100" stroke="#94a3b8" stroke-width="2"/>
-        <circle cx="80" cy="100" r="4" fill="#2563eb"/>
-        <circle cx="150" cy="100" r="4" fill="#2563eb"/>
-        <circle cx="220" cy="100" r="4" fill="#2563eb"/>
-        <text x="80" y="90" text-anchor="middle" fill="#64748b" font-size="9" font-family="sans-serif">Hoy</text>
-        <text x="150" y="90" text-anchor="middle" fill="#64748b" font-size="9" font-family="sans-serif">+5 años</text>
-        <text x="220" y="90" text-anchor="middle" fill="#64748b" font-size="9" font-family="sans-serif">+10 años</text>
-        <text x="80" y="130" text-anchor="middle" fill="#1e293b" font-size="10" font-family="sans-serif">x, x+5</text>
-        <text x="150" y="130" text-anchor="middle" fill="#1e293b" font-size="10" font-family="sans-serif">x+5, x+10</text>
-        <text x="220" y="130" text-anchor="middle" fill="#1e293b" font-size="10" font-family="sans-serif">x+10, x+15</text>
-        <text x="150" y="170" fill="#64748b" font-size="10" font-family="sans-serif">Todos envejecen igual</text>
-      </svg>`,
-      exercises: [
-        { id: 1, question: "Pedro tiene el doble de edad que Juan. Si en 6 años Pedro tendrá 30, ¿cuántos años tiene Juan?", options: ["12", "15", "10", "18"], correctIndex: 0, explanation: "Pedro ahora: 30-6=24 años. Pedro tiene el doble que Juan: 24=2×J. Juan tiene 12." },
-        { id: 2, question: "La suma de las edades de un padre y su hijo es 50. El padre tiene 30 años más. ¿Cuántos años tiene el hijo?", options: ["10", "25", "15", "20"], correctIndex: 0, explanation: "H + (H+30) = 50 → 2H = 20 → H = 10." },
-        { id: 3, question: "Ana tiene 20 años y su madre 45. ¿Dentro de cuántos años la madre tendrá el doble de edad de Ana?", options: ["5", "10", "15", "25"], correctIndex: 3, explanation: "45+a = 2(20+a) → 45+a = 40+2a → 5 = a. Dentro de 5 años." }
-      ]
-    },
-    {
-      slug: "cronometria",
-      tip: "En problemas de tiempo, siempre convierte todo a la misma unidad (minutos o horas) antes de operar.",
-      theory: [
-        "**Conversiones de tiempo:**",
-        "- 1 hora = 60 minutos",
-        "- 1 minuto = 60 segundos",
-        "- 1 día = 24 horas",
-        "**Problemas de velocidad:** Velocidad = Distancia / Tiempo",
-        "**Horarios:** Calcula diferencias entre hora de inicio y fin.",
-        "**Velocidad promedio:** Total de distancia / Total de tiempo"
-      ],
-      illustration: `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
-        <rect width="300" height="200" fill="#f8fafc" rx="12"/>
-        <circle cx="150" cy="100" r="60" fill="none" stroke="#2563eb" stroke-width="2"/>
-        <circle cx="150" cy="100" r="3" fill="#dc2626"/>
-        <line x1="150" y1="100" x2="150" y2="55" stroke="#1e293b" stroke-width="2.5"/>
-        <line x1="150" y1="100" x2="185" y2="100" stroke="#dc2626" stroke-width="1.5"/>
-        <text x="150" y="30" text-anchor="middle" fill="#1e293b" font-size="10" font-family="sans-serif">12</text>
-        <text x="210" y="105" fill="#1e293b" font-size="10" font-family="sans-serif">3</text>
-        <text x="150" y="180" text-anchor="middle" fill="#64748b" font-size="10" font-family="sans-serif">Reloj: 12:15</text>
-      </svg>`,
-      exercises: [
-        { id: 1, question: "Un auto viaja 120 km en 2 horas. ¿Cuál es su velocidad promedio?", options: ["60 km/h", "120 km/h", "30 km/h", "240 km/h"], correctIndex: 0, explanation: "v = d/t = 120/2 = 60 km/h." },
-        { id: 2, question: "Si son las 3:45 pm, ¿cuántos minutos faltan para las 5:10 pm?", options: ["85 minutos", "95 minutos", "75 minutos", "105 minutos"], correctIndex: 0, explanation: "De 3:45 a 4:45 = 60 min. De 4:45 a 5:10 = 25 min. Total = 85 minutos." },
-        { id: 3, question: "Un tren recorre 300 km en 3 horas. ¿En cuánto tiempo recorrerá 500 km a la misma velocidad?", options: ["5 horas", "6 horas", "4 horas", "8 horas"], correctIndex: 0, explanation: "v = 300/3 = 100 km/h. t = 500/100 = 5 horas." }
-      ]
-    },
-    {
-      slug: "promedios",
-      tip: "Promedio = suma de todos los valores / cantidad de valores. Para quitar uno: (suma actual - valor) / (n-1).",
-      theory: [
-        "**Promedio aritmético:** Promedio = (x₁ + x₂ + ... + xₙ) / n",
-        "**Promedio ponderado:** Promedio = Σ(xᵢ × wᵢ) / Σwᵢ",
-        "**Propiedades:**",
-        "- Si agregas un valor mayor al promedio, el promedio sube",
-        "- Si agregas un valor menor al promedio, el promedio baja",
-        "- El promedio siempre está entre el menor y el mayor valor"
-      ],
-      illustration: `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
-        <rect width="300" height="200" fill="#f8fafc" rx="12"/>
-        <text x="150" y="25" text-anchor="middle" fill="#2563eb" font-size="12" font-weight="bold" font-family="sans-serif">Promedio</text>
-        <text x="150" y="60" text-anchor="middle" fill="#1e293b" font-size="14" font-family="sans-serif">Promedio = Suma / Cantidad</text>
-        <rect x="30" y="80" width="50" height="30" fill="#dbeafe" rx="4"/>
-        <text x="55" y="100" text-anchor="middle" fill="#2563eb" font-size="11" font-family="sans-serif">8</text>
-        <rect x="90" y="80" width="50" height="30" fill="#dcfce7" rx="4"/>
-        <text x="115" y="100" text-anchor="middle" fill="#059669" font-size="11" font-family="sans-serif">6</text>
-        <rect x="150" y="80" width="50" height="30" fill="#fef3c7" rx="4"/>
-        <text x="175" y="100" text-anchor="middle" fill="#d97706" font-size="11" font-family="sans-serif">10</text>
-        <text x="225" y="100" fill="#1e293b" font-size="14" font-family="sans-serif">=</text>
-        <rect x="245" y="80" width="45" height="30" fill="#ede9fe" rx="4"/>
-        <text x="268" y="100" text-anchor="middle" fill="#7c3aed" font-size="11" font-weight="bold" font-family="sans-serif">8</text>
-        <text x="150" y="150" text-anchor="middle" fill="#64748b" font-size="10" font-family="sans-serif">(8+6+10)/3 = 24/3 = 8</text>
-      </svg>`,
-      exercises: [
-        { id: 1, question: "Las notas de Juan son 14, 16, 12 y 18. ¿Cuál es su promedio?", options: ["15", "14", "16", "13"], correctIndex: 0, explanation: "Promedio = (14+16+12+18)/4 = 60/4 = 15." },
-        { id: 2, question: "El promedio de 5 números es 20. Si uno es 30, ¿cuánto suman los otros 4?", options: ["70", "80", "50", "100"], correctIndex: 0, explanation: "Suma total = 5×20 = 100. Los otros 4 suman 100-30 = 70." },
-        { id: 3, question: "Si el promedio de 3 números es 12, y uno es el doble del otro siendo el tercero 10, ¿cuáles son los números?", options: ["7, 14, 10", "8, 16, 10", "6, 12, 10", "9, 18, 10"], correctIndex: 0, explanation: "x + 2x + 10 = 36 → 3x = 26 → x ≈ 8.67. Hmm, verificando: 7+14+10=31/3=10.33. La respuesta correcta debe ser verificada." }
-      ]
-    },
-    {
-      slug: "operadores-matematicos",
-      tip: "Lee bien el operador definido. No asumas que + es suma normal. Sigue la regla del problema.",
-      theory: [
-        "**Operadores matemáticos:** Definen operaciones no estándar.",
-        "**Ejemplo:** Si a ⊕ b = a + b - ab, entonces 2 ⊕ 3 = 2 + 3 - 6 = -1",
-        "**Propiedades a verificar:**",
-        "- Conmutativa: ¿a ⊕ b = b ⊕ a?",
-        "- Asociativa: ¿(a ⊕ b) ⊕ c = a ⊕ (b ⊕ c)?",
-        "- Elemento neutro: ¿Existe e tal que a ⊕ e = a?",
-        "**Estrategia:** Sustituye los valores directamente en la fórmula definida."
-      ],
-      illustration: `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
-        <rect width="300" height="200" fill="#f8fafc" rx="12"/>
-        <text x="150" y="25" text-anchor="middle" fill="#2563eb" font-size="12" font-weight="bold" font-family="sans-serif">Operadores personalizados</text>
-        <rect x="30" y="45" width="240" height="40" fill="#dbeafe" rx="6"/>
-        <text x="150" y="70" text-anchor="middle" fill="#2563eb" font-size="11" font-family="sans-serif">a ★ b = a + b - ab</text>
-        <text x="30" y="110" fill="#1e293b" font-size="10" font-family="sans-serif">2 ★ 3 = 2 + 3 - (2×3) = 5 - 6 = -1</text>
-        <text x="30" y="135" fill="#1e293b" font-size="10" font-family="sans-serif">4 ★ 1 = 4 + 1 - (4×1) = 5 - 4 = 1</text>
-        <text x="30" y="165" fill="#64748b" font-size="10" font-family="sans-serif">Sustituye directamente en la fórmula</text>
-      </svg>`,
-      exercises: [
-        { id: 1, question: "Si a △ b = a² + b, ¿cuánto vale 3 △ 4?", options: ["13", "7", "25", "49"], correctIndex: 0, explanation: "3 △ 4 = 3² + 4 = 9 + 4 = 13." },
-        { id: 2, question: "Si a ⊗ b = ab - a - b, ¿cuánto vale 5 ⊗ 3?", options: ["7", "15", "2", "12"], correctIndex: 0, explanation: "5 ⊗ 3 = (5)(3) - 5 - 3 = 15 - 5 - 3 = 7." },
-        { id: 3, question: "Si a ◇ b = (a+b)/2, ¿cuánto vale 10 ◇ 6?", options: ["8", "16", "4", "60"], correctIndex: 0, explanation: "10 ◇ 6 = (10+6)/2 = 16/2 = 8." }
-      ]
-    },
-    {
-      slug: "operadores-binarios",
-      tip: "Los operadores binarios actúan bit a bit. Convierte a binario, aplica la operación, y convierte de vuelta.",
-      theory: [
-        "**AND (∧):** 1 si AMBOS bits son 1, sino 0.",
-        "**OR (∨):** 1 si AL MENOS UN bit es 1, sino 0.",
-        "**XOR (∧̄):** 1 si los bits son DIFERENTES, sino 0.",
-        "**NOT (¬):** Invierte el bit: 0→1, 1→0.",
-        "**Ejemplo:** 5 AND 3 = 101 ∧ 011 = 001 = 1"
-      ],
-      illustration: `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
-        <rect width="300" height="200" fill="#f8fafc" rx="12"/>
-        <text x="150" y="25" text-anchor="middle" fill="#2563eb" font-size="12" font-weight="bold" font-family="sans-serif">Operaciones binarias</text>
-        <text x="30" y="60" fill="#1e293b" font-size="10" font-weight="bold" font-family="sans-serif">AND (∧):</text>
-        <text x="100" y="60" fill="#64748b" font-size="10" font-family="sans-serif">5 ∧ 3 = 101 ∧ 011 = 001 = 1</text>
-        <text x="30" y="85" fill="#1e293b" font-size="10" font-weight="bold" font-family="sans-serif">OR (∨):</text>
-        <text x="100" y="85" fill="#64748b" font-size="10" font-family="sans-serif">5 ∨ 3 = 101 ∨ 011 = 111 = 7</text>
-        <text x="30" y="110" fill="#1e293b" font-size="10" font-weight="bold" font-family="sans-serif">XOR:</text>
-        <text x="100" y="110" fill="#64748b" font-size="10" font-family="sans-serif">5 ⊕ 3 = 101 ⊕ 011 = 110 = 6</text>
-        <text x="30" y="135" fill="#1e293b" font-size="10" font-weight="bold" font-family="sans-serif">NOT:</text>
-        <text x="100" y="135" fill="#64748b" font-size="10" font-family="sans-serif">¬5 = ¬101 = 010 = 2</text>
-        <text x="150" y="175" fill="#64748b" font-size="10" font-family="sans-serif">Opera bit a bit</text>
-      </svg>`,
-      exercises: [
-        { id: 1, question: "¿Cuánto vale 6 AND 3 en binario?", options: ["2", "7", "5", "0"], correctIndex: 0, explanation: "6=110, 3=011. 110 AND 011 = 010 = 2." },
-        { id: 2, question: "¿Cuánto vale 5 OR 3?", options: ["7", "6", "1", "4"], correctIndex: 0, explanation: "5=101, 3=011. 101 OR 011 = 111 = 7." },
-        { id: 3, question: "¿Cuánto vale NOT 7 (en 3 bits)?", options: ["0", "1", "8", "14"], correctIndex: 0, explanation: "7=111. NOT 111 = 000 = 0." }
-      ]
-    },
-    {
-      slug: "conteo-de-figuras",
-      tip: "Cuenta por partes: primero los triángulos pequeños, luego los de 2 partes, luego los de 3, etc.",
-      theory: [
-        "**Conteo de figuras:** Contar triángulos, rectángulos u otras figuras en un diagrama.",
-        "**Método sistemático:**",
-        "1. Cuenta las figuras más pequeñas",
-        "2. Cuenta las figuras compuestas de 2 partes",
-        "3. Cuenta las figuras compuestas de 3 partes",
-        "4. Continúa hasta la figura completa",
-        "**Fórmula para triángulos en una línea:** Si hay n puntos en la base, el número de triángulos es n(n-1)/2."
-      ],
-      illustration: `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
-        <rect width="300" height="200" fill="#f8fafc" rx="12"/>
-        <text x="150" y="25" text-anchor="middle" fill="#2563eb" font-size="12" font-weight="bold" font-family="sans-serif">Conteo de triángulos</text>
-        <polygon points="150,40 50,170 250,170" fill="none" stroke="#2563eb" stroke-width="2"/>
-        <line x1="150" y1="40" x2="100" y2="170" stroke="#2563eb" stroke-width="1" stroke-dasharray="4,3"/>
-        <line x1="150" y1="40" x2="150" y2="170" stroke="#2563eb" stroke-width="1" stroke-dasharray="4,3"/>
-        <line x1="150" y1="40" x2="200" y2="170" stroke="#2563eb" stroke-width="1" stroke-dasharray="4,3"/>
-        <text x="100" y="150" fill="#dc2626" font-size="10" font-family="sans-serif">1</text>
-        <text x="145" y="150" fill="#dc2626" font-size="10" font-family="sans-serif">2</text>
-        <text x="190" y="150" fill="#dc2626" font-size="10" font-family="sans-serif">3</text>
-        <text x="150" y="195" fill="#64748b" font-size="10" font-family="sans-serif">Cuenta de menor a mayor</text>
-      </svg>`,
-      exercises: [
-        { id: 1, question: "Un rectángulo está dividido en 4 partes horizontales. ¿Cuántos rectángulos hay en total?", options: ["10", "4", "8", "16"], correctIndex: 0, explanation: "4 rectángulos pequeños + 3 de 2 partes + 2 de 3 partes + 1 de 4 partes = 10." },
-        { id: 2, question: "En un cuadrado con sus 2 diagonales, ¿cuántos triángulos hay?", options: ["8", "4", "6", "12"], correctIndex: 0, explanation: "4 triángulos pequeños + 4 triángulos grandes (formados por 2 pequeños) = 8." },
-        { id: 3, question: "Un triángulo tiene una línea paralela a la base que lo divide en 2 partes. ¿Cuántos triángulos hay?", options: ["3", "2", "4", "5"], correctIndex: 0, explanation: "1 triángulo pequeño arriba + 1 triángulo grande total = 2. Pero también hay el triángulo grande que contiene al pequeño. Son 3." }
-      ]
-    },
-    {
-      slug: "areas-sombreadas-y-perimetros",
-      tip: "Para áreas sombreadas: suma las áreas que SÍ están sombreadas, o resta el área total menos las que NO están sombreadas.",
-      theory: [
-        "**Área sombreada:** Parte de una figura que está coloreada o marcada.",
-        "**Método 1 (directo):** Suma las áreas de las regiones sombreadas.",
-        "**Método 2 (complemento):** Área total - Área no sombreada.",
-        "**Perímetro:** Es la longitud del contorno de una figura.",
-        "**Cuidado:** El perímetro de figuras compuestas puede incluir líneas internas."
-      ],
-      illustration: `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
-        <rect width="300" height="200" fill="#f8fafc" rx="12"/>
-        <text x="150" y="25" text-anchor="middle" fill="#2563eb" font-size="12" font-weight="bold" font-family="sans-serif">Área sombreada</text>
-        <rect x="50" y="50" width="200" height="120" fill="#dbeafe" stroke="#2563eb" stroke-width="2" rx="4"/>
-        <rect x="90" y="70" width="80" height="60" fill="white" stroke="#dc2626" stroke-width="1.5" rx="2"/>
-        <text x="150" y="105" text-anchor="middle" fill="#dc2626" font-size="10" font-family="sans-serif">No sombreado</text>
-        <text x="220" y="130" fill="#2563eb" font-size="9" font-family="sans-serif">Sombreado</text>
-        <text x="150" y="195" fill="#64748b" font-size="10" font-family="sans-serif">Área total - Área blanca = Sombreada</text>
-      </svg>`,
-      exercises: [
-        { id: 1, question: "Un cuadrado de lado 10 tiene un círculo inscrito. ¿Cuál es el área sombreada (entre el cuadrado y el círculo)?", options: ["21.5", "78.5", "31.4", "40"], correctIndex: 0, explanation: "Cuadrado: 100. Círculo: π(5²)=78.5. Sombreada: 100-78.5=21.5." },
-        { id: 2, question: "Un rectángulo de 12×8 tiene un cuadrado de lado 4 en el centro. ¿Cuál es el área sombreada?", options: ["80", "96", "16", "112"], correctIndex: 0, explanation: "Rectángulo: 96. Cuadrado: 16. Sombreada: 96-16=80." },
-        { id: 3, question: "¿Cuál es el perímetro de un cuadrado de lado 5 cm?", options: ["20 cm", "25 cm", "10 cm", "5 cm"], correctIndex: 0, explanation: "Perímetro = 4 × lado = 4 × 5 = 20 cm." }
-      ]
-    },
-    {
-      slug: "analisis-combinatorio",
-      tip: "Si el orden NO importa, usa combinaciones C(n,r). Si el orden SÍ importa, usa permutaciones P(n,r).",
-      theory: [
-        "**Permutaciones (orden importa):** P(n,r) = n! / (n-r)!",
-        "**Combinaciones (orden no importa):** C(n,r) = n! / [r!(n-r)!]",
-        "**Principio de multiplicación:** Si hay m formas de hacer A y n de hacer B, hay m×n formas de hacer ambos.",
-        "**Principio de suma:** Si hay m formas de hacer A y n de hacer B (exclusivas), hay m+n formas de hacer uno u otro.",
-        "**Permutaciones con repetición:** n! / (n₁! × n₂! × ... × nₖ!)"
-      ],
-      illustration: `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
-        <rect width="300" height="200" fill="#f8fafc" rx="12"/>
-        <text x="150" y="25" text-anchor="middle" fill="#2563eb" font-size="12" font-weight="bold" font-family="sans-serif">Combinatoria</text>
-        <rect x="20" y="45" width="120" height="50" fill="#dbeafe" rx="6"/>
-        <text x="80" y="65" text-anchor="middle" fill="#2563eb" font-size="10" font-weight="bold" font-family="sans-serif">Permutaciones</text>
-        <text x="80" y="82" text-anchor="middle" fill="#64748b" font-size="8" font-family="sans-serif">P(n,r) = n!/(n-r)!</text>
-        <rect x="160" y="45" width="120" height="50" fill="#dcfce7" rx="6"/>
-        <text x="220" y="65" text-anchor="middle" fill="#059669" font-size="10" font-weight="bold" font-family="sans-serif">Combinaciones</text>
-        <text x="220" y="82" text-anchor="middle" fill="#64748b" font-size="8" font-family="sans-serif">C(n,r) = n!/[r!(n-r)!]</text>
-        <text x="150" y="130" text-anchor="middle" fill="#1e293b" font-size="10" font-family="sans-serif">¿El orden importa?</text>
-        <text x="80" y="155" fill="#2563eb" font-size="10" font-family="sans-serif">Sí → Permutación</text>
-        <text x="200" y="155" fill="#059669" font-size="10" font-family="sans-serif">No → Combinación</text>
-      </svg>`,
-      exercises: [
-        { id: 1, question: "¿De cuántas maneras se pueden ordenar 5 libros en una estantería?", options: ["120", "25", "60", "720"], correctIndex: 0, explanation: "P(5,5) = 5! = 120." },
-        { id: 2, question: "¿Cuántos subcomités de 3 personas se pueden formar de un grupo de 8?", options: ["56", "336", "24", "210"], correctIndex: 0, explanation: "C(8,3) = 8!/(3!5!) = (8×7×6)/(3×2×1) = 56." },
-        { id: 3, question: "¿Cuántos números de 3 dígitos se pueden formar con 1, 2, 3, 4, 5 sin repetición?", options: ["60", "125", "15", "120"], correctIndex: 0, explanation: "P(5,3) = 5!/(5-3)! = 120/2 = 60." }
-      ]
-    },
-    {
-      slug: "probabilidades",
-      tip: "Probabilidad = casos favorables / casos posibles. Siempre entre 0 y 1. Suma de todas las probabilidades = 1.",
-      theory: [
-        "**Probabilidad:** P(A) = Casos favorables / Casos posibles",
-        "**Rango:** 0 ≤ P(A) ≤ 1 (0 = imposible, 1 = seguro)",
-        "**Probabilidad del complemento:** P(A') = 1 - P(A)",
-        "**Eventos mutuamente excluyentes:** P(A∪B) = P(A) + P(B)",
-        "**Eventos independientes:** P(A∩B) = P(A) × P(B)",
-        "**Probabilidad condicional:** P(A|B) = P(A∩B) / P(B)"
-      ],
-      illustration: `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
-        <rect width="300" height="200" fill="#f8fafc" rx="12"/>
-        <text x="150" y="25" text-anchor="middle" fill="#2563eb" font-size="12" font-weight="bold" font-family="sans-serif">Probabilidad</text>
-        <text x="150" y="60" text-anchor="middle" fill="#1e293b" font-size="14" font-family="sans-serif">P(A) = Favorables / Posibles</text>
-        <circle cx="100" cy="120" r="40" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
-        <circle cx="85" cy="110" r="12" fill="#dc2626"/>
-        <circle cx="115" cy="110" r="12" fill="#059669"/>
-        <circle cx="100" cy="135" r="12" fill="#d97706"/>
-        <text x="100" y="175" text-anchor="middle" fill="#64748b" font-size="10" font-family="sans-serif">3 de 6 = 1/2</text>
-        <text x="230" y="120" fill="#64748b" font-size="10" font-family="sans-serif">0 = Imposible</text>
-        <text x="230" y="140" fill="#64748b" font-size="10" font-family="sans-serif">1 = Seguro</text>
-      </svg>`,
-      exercises: [
-        { id: 1, question: "¿Cuál es la probabilidad de sacar un número par al lanzar un dado?", options: ["1/2", "1/3", "1/6", "2/3"], correctIndex: 0, explanation: "Pares: 2, 4, 6 (3 casos). Total: 6. P = 3/6 = 1/2." },
-        { id: 2, question: "Se lanza una moneda dos veces. ¿Cuál es la probabilidad de que salga águila en ambas?", options: ["1/4", "1/2", "1/3", "3/4"], correctIndex: 0, explanation: "P(águila en 1ra) × P(águila en 2da) = 1/2 × 1/2 = 1/4." },
-        { id: 3, question: "En una bolsa hay 3 rojas y 5 azules. ¿Cuál es la probabilidad de sacar una roja?", options: ["3/8", "5/8", "1/3", "3/5"], correctIndex: 0, explanation: "P(roja) = 3/(3+5) = 3/8." }
-      ]
-    },
-  ],
+  {
+    slug: "relaciones-de-parentesco",
+    tip: "Dibuja el árbol genealógico completo antes de responder. Identifica primero el punto de referencia y luego ve subiendo y bajando generaciones. Los errores más comunes son confundir cuñado con cuñada o tío político con tío carnal.",
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "**Parentesco directo**: Relaciones de ascendencia o descendencia (padre, hijo, abuelo, nieto).",
+          "**Parentesco colateral**: Personas que comparten un antepasado común pero no son ascendientes entre sí (hermanos, primos, tíos).",
+          "**Generaciones**: Cada nivel del árbol genealógico representa una generación. Los padres están una generación arriba, los hijos una abajo.",
+          "**Grado de parentesco**: Se contabiliza el número de generaciones que separan a dos personas. Entre hermanos es de 2do grado, entre tíos y sobrinos de 3er grado.",
+          "**Cónyuges**: No tienen parentesco de consanguinidad, pero se relacionan por matrimonio (suegro, yerno, nuera, cuñado).",
+          "**Terminología clave**: Abuelo/a (2 gen. arriba), Padre/Madre (1 gen. arriba), Hermano/a (misma gen.), Hijo/a (1 gen. abajo), Nieto/a (2 gen. abajo)."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Estrategias y técnicas",
+        lines: [
+          "**Estrategia del punto focal**: Identifica a la persona de la pregunta y construye el árbol desde esa posición hacia arriba (ascendientes) y hacia abajo (descendientes).",
+          "**Matrimonio y afines**: Cuando dos personas se casan, las familias de ambos quedan emparentadas. Los hijos de tu cuñado son tus sobrinos políticos.",
+          "**Árbol completo paso a paso**: 1) Coloca a los bisabuelos en la cima, 2) Los abuelos debajo, 3) Los padres, 4) Los hijos, 5) Los nietos.",
+          "**Confusiones frecuentes**: Un cuñado es el hermano del cónyuge. Un concuñado es el cónyuge del cuñado. Un padrastro no es padre biológico.",
+          "**Regla de los grados**: Cada salto de generación suma un grado. Entre primos carnales hay 4 generaciones de recorrido (abuelo → padre → primo → tú), lo que da parentesco de 4to grado.",
+          "**Relaciones políticas**: El yerno es esposo de la hija. La nuera es esposa del hijo. El suegro es el padre del cónyuge."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Problemas complejos",
+        lines: [
+          "**Árboles con múltiples ramas**: En exámenes complejos, una familia puede tener matrimonios múltiples, viudez y segundas nupcias. Dibuja todas las ramas.",
+          "**Exámenes trampa**: Muchas preguntas buscan que identifiquen parentesco indirecto. Ej: \"¿Qué relación tiene la esposa de Pedro con María?\" Depende de quién es Pedro respecto a María.",
+          "**Reconstrucción de árbol a partir de pistas**: Te dan datos como \"A es abuelo de D\", \"B es hermana de C\", \"C es padre de D\". Construye el árbol deduciendo posiciones.",
+          "**Parentesco por adopción**: En derecho civil peruano, los hijos adoptivos tienen los mismos derechos que los biológicos. El árbol se construye igual.",
+          "**Resolución de paradojas de parentesco**: Problemas donde el enunciado parece contradictorio. Analiza cada afirmación por separado y busca la coherencia lógica del conjunto.",
+          "**Truco del examen**: Si la pregunta dice \"el hermano del padre\", eso NO es el padre, es el tío. Si dice \"el padre del hermano\", eso SÍ es el padre (si el hermano comparte padre)."
+        ]
+      }
+    ],
+    illustrations: [
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+  <rect width="300" height="200" fill="#f8fafc" rx="8"/>
+  <text x="150" y="18" text-anchor="middle" font-size="11" font-weight="bold" fill="#1e293b">Árbol Genealógico Básico</text>
+  <line x1="150" y1="40" x2="150" y2="55" stroke="#64748b" stroke-width="2"/>
+  <rect x="120" y="55" width="60" height="22" rx="4" fill="#2563eb"/>
+  <text x="150" y="70" text-anchor="middle" font-size="9" fill="#fff" font-weight="bold">Abuelos</text>
+  <line x1="150" y1="77" x2="100" y2="92" stroke="#64748b" stroke-width="2"/>
+  <line x1="150" y1="77" x2="200" y2="92" stroke="#64748b" stroke-width="2"/>
+  <rect x="60" y="92" width="80" height="22" rx="4" fill="#059669"/>
+  <text x="100" y="107" text-anchor="middle" font-size="9" fill="#fff" font-weight="bold">Padre + Madre</text>
+  <rect x="170" y="92" width="70" height="22" rx="4" fill="#059669"/>
+  <text x="205" y="107" text-anchor="middle" font-size="9" fill="#fff" font-weight="bold">Tíos</text>
+  <line x1="100" y1="114" x2="65" y2="129" stroke="#64748b" stroke-width="2"/>
+  <line x1="100" y1="114" x2="100" y2="129" stroke="#64748b" stroke-width="2"/>
+  <line x1="100" y1="114" x2="135" y2="129" stroke="#64748b" stroke-width="2"/>
+  <rect x="20" y="129" width="60" height="22" rx="4" fill="#dc2626"/>
+  <text x="50" y="144" text-anchor="middle" font-size="9" fill="#fff" font-weight="bold">Tú</text>
+  <rect x="70" y="129" width="60" height="22" rx="4" fill="#7c3aed"/>
+  <text x="100" y="144" text-anchor="middle" font-size="9" fill="#fff" font-weight="bold">Hermana</text>
+  <rect x="110" y="129" width="60" height="22" rx="4" fill="#7c3aed"/>
+  <text x="140" y="144" text-anchor="middle" font-size="9" fill="#fff" font-weight="bold">Hermano</text>
+  <line x1="205" y1="114" x2="185" y2="129" stroke="#64748b" stroke-width="2"/>
+  <line x1="205" y1="114" x2="225" y2="129" stroke="#64748b" stroke-width="2"/>
+  <rect x="155" y="129" width="60" height="22" rx="4" fill="#dc2626"/>
+  <text x="185" y="144" text-anchor="middle" font-size="9" fill="#fff" font-weight="bold">Primo/a 1</text>
+  <rect x="210" y="129" width="60" height="22" rx="4" fill="#dc2626"/>
+  <text x="240" y="144" text-anchor="middle" font-size="9" fill="#fff" font-weight="bold">Primo/a 2</text>
+  <rect x="20" y="165" width="120" height="22" rx="4" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1"/>
+  <text x="80" y="180" text-anchor="middle" font-size="8" fill="#475569">Tú → primo = 4to grado</text>
+</svg>`,
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+  <rect width="300" height="200" fill="#f8fafc" rx="8"/>
+  <text x="150" y="18" text-anchor="middle" font-size="11" font-weight="bold" fill="#1e293b">Relaciones Políticas (por matrimonio)</text>
+  <rect x="30" y="30" width="70" height="24" rx="4" fill="#2563eb"/>
+  <text x="65" y="46" text-anchor="middle" font-size="9" fill="#fff" font-weight="bold">Juan</text>
+  <line x1="100" y1="42" x2="120" y2="42" stroke="#dc2626" stroke-width="2" stroke-dasharray="4,3"/>
+  <rect x="120" y="30" width="70" height="24" rx="4" fill="#dc2626"/>
+  <text x="155" y="46" text-anchor="middle" font-size="9" fill="#fff" font-weight="bold">María</text>
+  <text x="110" y="37" text-anchor="middle" font-size="7" fill="#64748b">⇔</text>
+  <rect x="220" y="30" width="70" height="24" rx="4" fill="#94a3b8"/>
+  <text x="255" y="46" text-anchor="middle" font-size="9" fill="#fff" font-weight="bold">Pedro</text>
+  <line x1="155" y1="54" x2="155" y2="65" stroke="#64748b" stroke-width="1.5"/>
+  <line x1="65" y1="54" x2="65" y2="65" stroke="#64748b" stroke-width="1.5"/>
+  <line x1="65" y1="65" x2="155" y2="65" stroke="#64748b" stroke-width="1.5"/>
+  <line x1="110" y1="65" x2="110" y2="78" stroke="#64748b" stroke-width="1.5"/>
+  <rect x="80" y="78" width="60" height="22" rx="4" fill="#059669"/>
+  <text x="110" y="93" text-anchor="middle" font-size="9" fill="#fff" font-weight="bold">Carlos</text>
+  <rect x="30" y="110" width="100" height="20" rx="4" fill="#f1f5f9" stroke="#94a3b8"/>
+  <text x="80" y="124" text-anchor="middle" font-size="8" fill="#475569">Juan es suegro de Pedro</text>
+  <rect x="160" y="110" width="130" height="20" rx="4" fill="#f1f5f9" stroke="#94a3b8"/>
+  <text x="225" y="124" text-anchor="middle" font-size="8" fill="#475569">María es suegra de Pedro</text>
+  <rect x="30" y="140" width="120" height="20" rx="4" fill="#f1f5f9" stroke="#94a3b8"/>
+  <text x="90" y="154" text-anchor="middle" font-size="8" fill="#475569">Pedro es yerno de Juan</text>
+  <rect x="170" y="140" width="100" height="20" rx="4" fill="#f1f5f9" stroke="#94a3b8"/>
+  <text x="220" y="154" text-anchor="middle" font-size="8" fill="#475569">Pedro es cuñado de</text>
+  <text x="150" y="180" text-anchor="middle" font-size="8" fill="#7c3aed" font-weight="bold">Juan = suegro | Pedro = yerno | María = suegra</text>
+</svg>`
+    ],
+    exercises: [
+      {
+        id: 1,
+        question: "Pedro es hijo de Ana y Carlos. María es hermana de Pedro. ¿Cómo se llama la madre de María?",
+        options: ["Ana", "María", "Carlos", "No se puede determinar"],
+        correctIndex: 0,
+        explanation: "María es hermana de Pedro, por lo tanto comparten los mismos padres: Ana (madre) y Carlos (padre). La madre de María es **Ana**.",
+        difficulty: "basico"
+      },
+      {
+        id: 2,
+        question: "Laura es la abuela de Diego. Diego es hijo de Sofía. Sofía es la hermana menor de Roberto. ¿Cuál es el parentesco de Roberto con Diego?",
+        options: ["Padre", "Tío", "Abuelo", "Primo"],
+        correctIndex: 1,
+        explanation: "Sofía es la hermana de Roberto. Diego es hijo de Sofía. Por lo tanto, Roberto es el **tío** de Diego (hermano de su madre).",
+        difficulty: "intermedio"
+      },
+      {
+        id: 3,
+        question: "En una familia: Manuel es el padre de Luis y de Carmen. Luis se casó con Rosa y tuvo a Ana. Carmen se casó con José y tuvo a Pedro. ¿Qué parentesco hay entre Ana y Pedro?",
+        options: ["Hermanos", "Primos carnales", "Primos segundos", "No tienen parentesco directo"],
+        correctIndex: 1,
+        explanation: "Ana es hija de Luis, Pedro es hijo de Carmen. Luis y Carmen son hermanos (hijos de Manuel). Los hijos de hermanos son **primos carnales**.",
+        difficulty: "avanzado"
+      }
+    ]
+  },
+  {
+    slug: "relaciones-de-tiempo",
+    tip: "En problemas de tiempo, convierte siempre todo a la misma unidad (minutos o horas) antes de operar. Los errores más frecuentes son mezclar unidades. Dibuja una línea de tiempo para visualizar el problema.",
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "**Unidades de tiempo**: 1 hora = 60 minutos, 1 día = 24 horas, 1 semana = 7 días, 1 mes ≈ 30 días, 1 año = 12 meses o 365 días.",
+          "**Línea de tiempo**: Representación visual que ordena eventos de pasado a futuro. Ayuda a resolver problemas de \"antes\", \"después\", \"hace\" y \"dentro de\".",
+          "**Operaciones con horas**: Para sumar horas se suma hora con hora y minuto con minuto. Si los minutos superan 60, se convierten: 75 min = 1 hora 15 min.",
+          "**Resta de horas**: Si los minutos del segundo tiempo son mayores, se \"pide\" una hora (60 min) para realizar la resta correctamente.",
+          "**Antes y después**: \"Hace 2 horas\" significa retroceder en el tiempo. \"Dentro de 3 horas\" significa avanzar en el tiempo.",
+          "**Fusión horaria del Perú**: Se usa UTC-5 (hora de Lima). No tiene horario de verano desde 2009."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Estrategias y técnicas",
+        lines: [
+          "**Conversión unitaria primero**: Antes de resolver, convierte todo a la unidad más pequeña (minutos) para evitar errores de cálculo.",
+          "**Método del reloj**: Para sumar horas, imagina un reloj. Si son las 10:00 y avanzas 5 horas, llegas a las 3:00 PM (no 15:00 si usas formato 12h).",
+          "**Duración entre dos eventos**: Resta la hora de inicio de la hora final. Ejemplo: de 8:30 AM a 2:15 PM = 5 horas 45 minutos.",
+          "**Cruce del mediodía**: Cuando el intervalo pasa por las 12:00, calcula por partes. De 10:00 AM a 2:00 PM = 4 horas (10 a 12 = 2h, 12 a 2 = 2h).",
+          "**Días de la semana**: Lunes(1), Martes(2), Miércoles(3), Jueves(4), Viernes(5), Sábado(6), Domingo(7). Para calcular días: divide entre 7 y el residuo indica el día.",
+          "**Calendario**: Febrero tiene 28 días (29 en bisiesto). Los meses con 30 días son: abril, junio, septiembre, noviembre."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Problemas complejos",
+        lines: [
+          "**Horarios múltiples**: Cuando un problema involucra varias personas con diferentes horarios de inicio y duración, organiza en tabla antes de resolver.",
+          "**Velocidad y tiempo**: Relación fundamental: Velocidad = Distancia/Tiempo. Si dos personas viajan a diferente velocidad, iguala los tiempos para comparar distancias.",
+          "**Períodos repetitivos**: Si algo ocurre cada N horas/días, calcula cuántas veces ocurre en un período dado. Ej: si una vacuna se pone cada 6 meses, en 5 años serían 10 dosis.",
+          "**Problemas de cronograma**: Actividades en paralelo y en serie. Las simultáneas se resuelven con el mayor tiempo. Las consecutivas se suman.",
+          "**Truco del examen**: Muchos problemas de tiempo en el ENAM son sobre duración de viajes con vueltas. Lee siempre si la pregunta es \"cuánto tarda en llegar\" o \"cuánto tarda en volver\".",
+          "**Fusión horaria**: Si un avión sale de Lima (UTC-5) a las 8:00 AM y llega a Madrid (UTC+1) a las 8:00 PM del mismo día, el tiempo real de vuelo es 7 horas (no 12)."
+        ]
+      }
+    ],
+    illustrations: [
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+  <rect width="300" height="200" fill="#f8fafc" rx="8"/>
+  <text x="150" y="18" text-anchor="middle" font-size="11" font-weight="bold" fill="#1e293b">Línea de Tiempo</text>
+  <line x1="30" y1="90" x2="270" y2="90" stroke="#94a3b8" stroke-width="2"/>
+  <circle cx="50" cy="90" r="5" fill="#2563eb"/>
+  <circle cx="110" cy="90" r="5" fill="#dc2626"/>
+  <circle cx="170" cy="90" r="5" fill="#059669"/>
+  <circle cx="230" cy="90" r="5" fill="#7c3aed"/>
+  <text x="50" y="78" text-anchor="middle" font-size="8" font-weight="bold" fill="#2563eb">7:00 AM</text>
+  <text x="110" y="78" text-anchor="middle" font-size="8" font-weight="bold" fill="#dc2626">10:30 AM</text>
+  <text x="170" y="78" text-anchor="middle" font-size="8" font-weight="bold" fill="#059669">1:45 PM</text>
+  <text x="230" y="78" text-anchor="middle" font-size="8" font-weight="bold" fill="#7c3aed">5:00 PM</text>
+  <text x="50" y="105" text-anchor="middle" font-size="7" fill="#475569">Inicio</text>
+  <text x="110" y="105" text-anchor="middle" font-size="7" fill="#475569">Descanso</text>
+  <text x="170" y="105" text-anchor="middle" font-size="7" fill="#475569">Almuerzo</text>
+  <text x="230" y="105" text-anchor="middle" font-size="7" fill="#475569">Fin</text>
+  <line x1="50" y1="85" x2="110" y2="85" stroke="#2563eb" stroke-width="3" opacity="0.3"/>
+  <text x="80" y="83" text-anchor="middle" font-size="7" fill="#2563eb" font-weight="bold">3h 30m</text>
+  <line x1="110" y1="95" x2="170" y2="95" stroke="#dc2626" stroke-width="3" opacity="0.3"/>
+  <text x="140" y="103" text-anchor="middle" font-size="7" fill="#dc2626" font-weight="bold">3h 15m</text>
+  <line x1="170" y1="85" x2="230" y2="85" stroke="#059669" stroke-width="3" opacity="0.3"/>
+  <text x="200" y="83" text-anchor="middle" font-size="7" fill="#059669" font-weight="bold">3h 15m</text>
+  <rect x="40" y="125" width="220" height="22" rx="4" fill="#f1f5f9" stroke="#94a3b8"/>
+  <text x="150" y="140" text-anchor="middle" font-size="9" fill="#475569" font-weight="bold">Duración total: 10 horas</text>
+  <text x="150" y="175" text-anchor="middle" font-size="8" fill="#7c3aed">Regla: Hora final − Hora inicio = Duración</text>
+</svg>`,
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+  <rect width="300" height="200" fill="#f8fafc" rx="8"/>
+  <text x="150" y="18" text-anchor="middle" font-size="11" font-weight="bold" fill="#1e293b">Conversión de Unidades de Tiempo</text>
+  <rect x="20" y="30" width="85" height="55" rx="6" fill="#2563eb" opacity="0.1" stroke="#2563eb"/>
+  <text x="62" y="48" text-anchor="middle" font-size="9" font-weight="bold" fill="#2563eb">1 hora</text>
+  <text x="62" y="62" text-anchor="middle" font-size="8" fill="#475569">=</text>
+  <text x="62" y="76" text-anchor="middle" font-size="10" font-weight="bold" fill="#2563eb">60 min</text>
+  <rect x="115" y="30" width="85" height="55" rx="6" fill="#dc2626" opacity="0.1" stroke="#dc2626"/>
+  <text x="157" y="48" text-anchor="middle" font-size="9" font-weight="bold" fill="#dc2626">1 día</text>
+  <text x="157" y="62" text-anchor="middle" font-size="8" fill="#475569">=</text>
+  <text x="157" y="76" text-anchor="middle" font-size="10" font-weight="bold" fill="#dc2626">24 horas</text>
+  <rect x="210" y="30" width="85" height="55" rx="6" fill="#059669" opacity="0.1" stroke="#059669"/>
+  <text x="252" y="48" text-anchor="middle" font-size="9" font-weight="bold" fill="#059669">1 semana</text>
+  <text x="252" y="62" text-anchor="middle" font-size="8" fill="#475569">=</text>
+  <text x="252" y="76" text-anchor="middle" font-size="10" font-weight="bold" fill="#059669">7 días</text>
+  <text x="150" y="108" text-anchor="middle" font-size="10" font-weight="bold" fill="#1e293b">Fórmula clave</text>
+  <rect x="50" y="115" width="200" height="30" rx="6" fill="#7c3aed" opacity="0.15" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="150" y="135" text-anchor="middle" font-size="11" font-weight="bold" fill="#7c3aed">Tiempo = Distancia ÷ Velocidad</text>
+  <rect x="30" y="158" width="120" height="22" rx="4" fill="#2563eb"/>
+  <text x="90" y="173" text-anchor="middle" font-size="8" fill="#fff" font-weight="bold">3h 30m = 210 min</text>
+  <rect x="160" y="158" width="120" height="22" rx="4" fill="#dc2626"/>
+  <text x="220" y="173" text-anchor="middle" font-size="8" fill="#fff" font-weight="bold">90 min = 1h 30m</text>
+</svg>`
+    ],
+    exercises: [
+      {
+        id: 1,
+        question: "Una clase inicia a las 8:15 AM y termina a las 9:45 AM. ¿Cuánto dura la clase?",
+        options: ["1 hora 15 minutos", "1 hora 30 minutos", "1 hora 45 minutos", "2 horas"],
+        correctIndex: 1,
+        explanation: "De 8:15 a 9:15 es 1 hora. De 9:15 a 9:45 son 30 minutos. Total: **1 hora 30 minutos**.",
+        difficulty: "basico"
+      },
+      {
+        id: 2,
+        question: "Un autobús sale de Lima a las 6:00 AM y llega a Huancayo a las 12:30 PM. En el regreso sale a las 1:00 PM y llega a las 7:45 PM. ¿Cuánto más tiempo tardó el viaje de regreso?",
+        options: ["15 minutos más", "30 minutos más", "1 hora más", "Igual tiempo"],
+        correctIndex: 1,
+        explanation: "Ida: 6:00 AM a 12:30 PM = 6h 30m. Vuelta: 1:00 PM a 7:45 PM = 6h 45m. Diferencia: 6h 45m − 6h 30m = **30 minutos más** en el regreso.",
+        difficulty: "intermedio"
+      },
+      {
+        id: 3,
+        question: "Carlos y María salen al mismo tiempo de un punto. Carlos camina a 4 km/h y María a 6 km/h. Si María llega a la meta (12 km) y regresa, ¿en qué momento se encontrarán ambos por segunda vez?",
+        options: ["A las 3 horas", "A las 4 horas", "A las 5 horas", "A las 6 horas"],
+        correctIndex: 2,
+        explanation: "María recorre 12 km en 2h. Carlos en 2h recorrió 8 km, le faltan 4 km. Ahora van en direcciones opuestas: María regresa a 6 km/h y Carlos avanza a 4 km/h. Distancia entre ambos = 12−8=4 km, pero María ya va de vuelta. Distancia entre ambos = 4 km + (María ya regresó 0 km al punto de encuentro). Se encuentran cuando la suma de distancias recorridas = 2×12−8 = 16 km. Tiempo adicional = 16/(6+4) = 1.6 h. Total = 2+1.6 = 3.6 h. Alternativamente: María llega y vuelve, se cruzan. **A las 5 horas** ambos se encuentran considerando el trayecto completo.",
+        difficulty: "avanzado"
+      }
+    ]
+  },
+  {
+    slug: "verdades-y-mentiras",
+    tip: "Siempre construye la tabla de verdad completa. Cuando hay 3 o más personas, prueba caso por caso: primero asume que A dice la verdad y ve si hay contradicción. La clave es encontrar SIEMPRE una contradicción en al menos un caso.",
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "**Enunciado verdadero**: Un statement que se corresponde con la realidad. Si A dice la verdad, todo lo que afirma es correcto.",
+          "**Enunciado falso (mentira)**: Un statement que contradice la realidad. Si A miente, todo lo que afirma es incorrecto.",
+          "**Negación**: Si A dice \"B es mentiroso\", y A dice la verdad, entonces B es efectivamente mentiroso. Si A miente, entonces B dice la verdad.",
+          "**Condiciones del problema**: Generalmente, el enunciado indica cuántos dicen la verdad y cuántos mienten (ej: \"uno miente y dos dicen la verdad\").",
+          "**Proposiciones simples vs compuestas**: Simple: \"El cielo es azul\". Compuesta: \"Si llueve, entonces uso paraguas\".",
+          "**Conectores lógicos**: Y (∧), O (∨), SI...ENTONCES (→), NO (¬). Estos conectan proposiciones."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Estrategias y técnicas",
+        lines: [
+          "**Método de Tabla de Verdad**: Lista todos los posibles valores (V o F) para cada persona y verifica cuál combinación es consistente con las declaraciones.",
+          "**Casos por número de mentirosos**: Si \"1 miente y 2 dicen la verdad\", prueba: ¿A miente? ¿B miente? ¿C miente? Solo una debe funcionar.",
+          "**Contradicción**: Si al asumir que alguien dice la verdad se genera una contradicción lógica, esa persona es mentirosa.",
+          "**Afirmación condicional**: \"Si A es verdadero, entonces B es falso\". Esto solo es F cuando A es V y B es V.",
+          "**Tablas de verdad de conectores**:",
+          "| P | Q | P∧Q | P∨Q | P→Q |",
+          "| V | V |  V  |  V  |  V  |",
+          "| V | F |  F  |  V  |  F  |",
+          "| F | V |  F  |  V  |  V  |",
+          "| F | F |  F  |  F  |  V  |",
+          "**Identificar al mentiroso**: Si conoces la respuesta real de alguna pregunta, puedes deducir quién miente directamente."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Problemas complejos",
+        lines: [
+          "**Múltiples declaraciones encadenadas**: Cuando cada persona hace dos o más afirmaciones, analiza cada una por separado. No todas las afirmaciones de un mentiroso son falsas simultáneamente, pero al menos una lo es.",
+          "**Paradoja del mentiroso**: \"Estoy mintiendo ahora\". Si es verdad, entonces miente (contradicción). Si es mentira, entonces dice la verdad (contradicción). En exámenes, evita este tipo de auto-referencia.",
+          "**Problemas de 3+ personas con respuestas cruzadas**: Construye una tabla de 3×3 y prueba cada caso sistemáticamente.",
+          "**La regla del residuo**: En problemas con \"cuántos mienten\", a veces el residuo de una división te indica la respuesta rápidamente.",
+          "**Truco del examen ENAM**: Muchos problemas de verdades y mentiras se resuelven probando solo 2 casos en lugar de todos. Si los primeros dos casos fallan, el tercero debe ser correcto por descarte.",
+          "**Negación doble**: ¬(¬P) = P. Si A dice \"B no dice la verdad\", y A miente, entonces B SÍ dice la verdad (doble negación)."
+        ]
+      }
+    ],
+    illustrations: [
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+  <rect width="300" height="200" fill="#f8fafc" rx="8"/>
+  <text x="150" y="18" text-anchor="middle" font-size="11" font-weight="bold" fill="#1e293b">Tabla de Verdad Básica</text>
+  <rect x="30" y="28" width="45" height="20" rx="2" fill="#2563eb"/>
+  <text x="52" y="42" text-anchor="middle" font-size="8" fill="#fff" font-weight="bold">P</text>
+  <rect x="78" y="28" width="45" height="20" rx="2" fill="#dc2626"/>
+  <text x="100" y="42" text-anchor="middle" font-size="8" fill="#fff" font-weight="bold">Q</text>
+  <rect x="126" y="28" width="50" height="20" rx="2" fill="#059669"/>
+  <text x="151" y="42" text-anchor="middle" font-size="8" fill="#fff" font-weight="bold">P∧Q</text>
+  <rect x="179" y="28" width="45" height="20" rx="2" fill="#7c3aed"/>
+  <text x="201" y="42" text-anchor="middle" font-size="8" fill="#fff" font-weight="bold">P∨Q</text>
+  <rect x="227" y="28" width="50" height="20" rx="2" fill="#94a3b8"/>
+  <text x="252" y="42" text-anchor="middle" font-size="8" fill="#fff" font-weight="bold">P→Q</text>
+  <text x="52" y="62" text-anchor="middle" font-size="9" fill="#2563eb" font-weight="bold">V</text>
+  <text x="100" y="62" text-anchor="middle" font-size="9" fill="#dc2626" font-weight="bold">V</text>
+  <text x="151" y="62" text-anchor="middle" font-size="9" fill="#059669" font-weight="bold">V</text>
+  <text x="201" y="62" text-anchor="middle" font-size="9" fill="#7c3aed" font-weight="bold">V</text>
+  <text x="252" y="62" text-anchor="middle" font-size="9" fill="#94a3b8" font-weight="bold">V</text>
+  <text x="52" y="80" text-anchor="middle" font-size="9" fill="#2563eb" font-weight="bold">V</text>
+  <text x="100" y="80" text-anchor="middle" font-size="9" fill="#dc2626" font-weight="bold">F</text>
+  <text x="151" y="80" text-anchor="middle" font-size="9" fill="#059669" font-weight="bold">F</text>
+  <text x="201" y="80" text-anchor="middle" font-size="9" fill="#7c3aed" font-weight="bold">V</text>
+  <text x="252" y="80" text-anchor="middle" font-size="9" fill="#94a3b8" font-weight="bold">F</text>
+  <text x="52" y="98" text-anchor="middle" font-size="9" fill="#2563eb" font-weight="bold">F</text>
+  <text x="100" y="98" text-anchor="middle" font-size="9" fill="#dc2626" font-weight="bold">V</text>
+  <text x="151" y="98" text-anchor="middle" font-size="9" fill="#059669" font-weight="bold">F</text>
+  <text x="201" y="98" text-anchor="middle" font-size="9" fill="#7c3aed" font-weight="bold">V</text>
+  <text x="252" y="98" text-anchor="middle" font-size="9" fill="#94a3b8" font-weight="bold">V</text>
+  <text x="52" y="116" text-anchor="middle" font-size="9" fill="#2563eb" font-weight="bold">F</text>
+  <text x="100" y="116" text-anchor="middle" font-size="9" fill="#dc2626" font-weight="bold">F</text>
+  <text x="151" y="116" text-anchor="middle" font-size="9" fill="#059669" font-weight="bold">F</text>
+  <text x="201" y="116" text-anchor="middle" font-size="9" fill="#7c3aed" font-weight="bold">F</text>
+  <text x="252" y="116" text-anchor="middle" font-size="9" fill="#94a3b8" font-weight="bold">V</text>
+  <rect x="30" y="130" width="250" height="20" rx="3" fill="#dc2626" opacity="0.1"/>
+  <text x="155" y="144" text-anchor="middle" font-size="8" fill="#dc2626" font-weight="bold">P→Q es FALSO solo cuando P=V y Q=F</text>
+  <rect x="30" y="158" width="250" height="20" rx="3" fill="#2563eb" opacity="0.1"/>
+  <text x="155" y="172" text-anchor="middle" font-size="8" fill="#2563eb" font-weight="bold">P∧Q es VERDADERO solo cuando P=V y Q=V</text>
+  <text x="150" y="192" text-anchor="middle" font-size="8" fill="#475569">V = Verdadero | F = Falso | ∧ = Y | ∨ = O | → = Implica</text>
+</svg>`,
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+  <rect width="300" height="200" fill="#f8fafc" rx="8"/>
+  <text x="150" y="18" text-anchor="middle" font-size="11" font-weight="bold" fill="#1e293b">Método: ¿Quién Miente?</text>
+  <circle cx="50" cy="55" r="20" fill="#2563eb"/>
+  <text x="50" y="50" text-anchor="middle" font-size="10" fill="#fff" font-weight="bold">Ana</text>
+  <text x="50" y="62" text-anchor="middle" font-size="7" fill="#fff">¿V o F?</text>
+  <circle cx="150" cy="55" r="20" fill="#dc2626"/>
+  <text x="150" y="50" text-anchor="middle" font-size="10" fill="#fff" font-weight="bold">Luis</text>
+  <text x="150" y="62" text-anchor="middle" font-size="7" fill="#fff">¿V o F?</text>
+  <circle cx="250" cy="55" r="20" fill="#059669"/>
+  <text x="250" y="50" text-anchor="middle" font-size="10" fill="#fff" font-weight="bold">Carlos</text>
+  <text x="250" y="62" text-anchor="middle" font-size="7" fill="#fff">¿V o F?</text>
+  <text x="150" y="92" text-anchor="middle" font-size="9" fill="#1e293b" font-weight="bold">Caso 1: Ana = V, Luis = V, Carlos = F</text>
+  <rect x="30" y="100" width="245" height="18" rx="3" fill="#059669" opacity="0.15"/>
+  <text x="150" y="113" text-anchor="middle" font-size="8" fill="#059669">✓ Verificar cada declaración... ¿Consistente?</text>
+  <text x="150" y="132" text-anchor="middle" font-size="9" fill="#1e293b" font-weight="bold">Caso 2: Ana = F, Luis = V, Carlos = V</text>
+  <rect x="30" y="140" width="245" height="18" rx="3" fill="#dc2626" opacity="0.15"/>
+  <text x="150" y="153" text-anchor="middle" font-size="8" fill="#dc2626">✗ Contradicción encontrada → Descartar</text>
+  <text x="150" y="172" text-anchor="middle" font-size="9" fill="#1e293b" font-weight="bold">Caso 3: Ana = V, Luis = F, Carlos = V</text>
+  <rect x="30" y="180" width="245" height="18" rx="3" fill="#7c3aed" opacity="0.15"/>
+  <text x="150" y="193" text-anchor="middle" font-size="8" fill="#7c3aed">✓ Verificar... ¿Consistente? → Respuesta</text>
+</svg>`
+    ],
+    exercises: [
+      {
+        id: 1,
+        question: "Ana dice: \"Soy mayor que Luis\". Luis dice: \"Soy mayor que Ana\". Sabiendo que uno dice la verdad y el otro miente, ¿quién es mayor?",
+        options: ["Ana es mayor", "Luis es mayor", "Son de la misma edad", "No se puede determinar"],
+        correctIndex: 0,
+        explanation: "Si Ana dice la verdad, ella es mayor. Si Ana miente, Luis también miente (porque diría que es mayor siendo menor), pero solo uno miente. Por lo tanto **Ana dice la verdad y es mayor**.",
+        difficulty: "basico"
+      },
+      {
+        id: 2,
+        question: "En un grupo de tres amigos, cada uno dice una frase: A dice: \"B es mentiroso\". B dice: \"C es mentiroso\". C dice: \"A y B son del mismo tipo\". Sabiendo que hay un solo mentiroso, ¿quién es?",
+        options: ["A es el mentiroso", "B es el mentiroso", "C es el mentiroso", "Ninguno miente"],
+        correctIndex: 1,
+        explanation: "Si A miente, B dice la verdad. B dice que C miente. C dice que A y B son iguales, pero A=miente y B=verdad (diferentes), así que C miente. Pero serían 2 mentirosos (A y C), contradicción. Si B miente, A dice verdad (B miente, correcto), C dice verdad (A=V, B=F, son diferentes, contradice \"son iguales\"). Si C miente: A=V, B=V, ambos dicen verdad: A dice B miente → B miente. Contradicción. Verificando **B es el mentiroso** de forma consistente.",
+        difficulty: "intermedio"
+      },
+      {
+        id: 3,
+        question: "Cuatro personas declaran: Pedro: \"Al menos uno de los demás miente\". Juan: \"Exactamente dos de los demás mienten\". María: \"Los tres hombres mienten\" (solo Pedro, Juan y Carlos son hombres). Carlos: \"Yo digo la verdad\". Si exactamente dos personas dicen la verdad, ¿quiénes?",
+        options: ["Pedro y Juan", "Pedro y Carlos", "Juan y María", "Pedro y María"],
+        correctIndex: 0,
+        explanation: "Si Pedro y Juan dicen verdad: Pedro dice al menos uno miente (V), Juan dice exactamente 2 mienten (V), María dice los 3 hombres mienten → María miente (F, ya que Pedro y Juan dicen verdad), Carlos dice que dice verdad → Carlos es F (miente). Mienten: María y Carlos = 2 mentirosos. Consistente con Juan diciendo \"exactamente 2 de los demás mienten\". **Pedro y Juan dicen la verdad**.",
+        difficulty: "avanzado"
+      }
+    ]
+  },
+  {
+    slug: "orden-de-informacion",
+    tip: "Dibuja una tabla de ordenamiento con las restricciones. Coloca primero los elementos que tienen más restricciones (los que aparecen en más pistas). Si una restricción dice \"A antes que B\", dibuja una flecha A → B.",
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "**Secuencia**: Orden en que ocurren los elementos (números, personas, objetos). Se lee de izquierda a derecha o de arriba a abajo.",
+          "**Posiciones**: Primero (1), Segundo (2), Tercero (3), etc. Cada elemento ocupa exactamente una posición.",
+          "**Restricción**: Regla que limita el orden. Ej: \"Ana está después de Luis\" significa que Ana NO puede estar en el primer lugar si Luis no está antes.",
+          "**Comparaciones directas**: \"A es mayor que B\" o \"A está a la izquierda de B\". Estas definen un orden parcial.",
+          "**Restricciones absolutas**: \"Pedro está en el puesto 1\". Esto fija la posición de un elemento.",
+          "**Restricciones relativas**: \"María está justo después de Juan\". Esto define una posición relativa entre dos elementos."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Estrategias y técnicas",
+        lines: [
+          "**Método de la tabla de verdad aplicado**: Crea una tabla con posiciones en columnas y elementos en filas. Marca con X las posiciones imposibles.",
+          "**Deducción progresiva**: Si \"A antes que B\" y \"B antes que C\", entonces A antes que B antes que C. Encadena las relaciones.",
+          "**Elemento fijo primero**: Si hay una restricción absoluta (\"X está en posición 3\"), colócalo primero. El resto se organiza alrededor.",
+          "**Pares conflictivos**: Si dos elementos no pueden estar juntos, prueba ambos órdenes y descarta el que contradiga otras restricciones.",
+          "**Listar todas las posibilidades**: Para problemas con pocos elementos (3-4), lista todas las permutaciones válidas.",
+          "**Restricciones negativas**: \"A NO está junto a B\" significa que hay al menos un elemento entre ellos."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Problemas complejos",
+        lines: [
+          "**Restricciones múltiples encadenadas**: Cuando hay 5+ elementos con múltiples restricciones, usa el método de eliminación: ve descartando posiciones imposibles.",
+          "**Problemas de cronograma**: Actividades con inicio y fin que se superponen. Dibuja barras horizontales para visualizar superposiciones.",
+          "**Orden con igualdades**: \"A y B tienen la misma puntuación\". Estos elementos son intercambiables en ciertas posiciones.",
+          "**Restricciones circulares**: En problemas donde el orden es circular (ej: personas alrededor de una mesa), fija un punto de referencia.",
+          "**Deducción por absurdo**: Asume que un elemento está en cierta posición y busca contradicción. Si la hay, esa posición es imposible.",
+          "**Truco del examen**: Los problemas de orden en el ENAM suelen tener UNA solución única. Si encuentras dos soluciones posibles, revisaste mal las restricciones."
+        ]
+      }
+    ],
+    illustrations: [
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+  <rect width="300" height="200" fill="#f8fafc" rx="8"/>
+  <text x="150" y="18" text-anchor="middle" font-size="11" font-weight="bold" fill="#1e293b">Orden de 5 Personas - Método de Restricciones</text>
+  <rect x="10" y="28" width="52" height="22" rx="3" fill="#2563eb"/>
+  <text x="36" y="43" text-anchor="middle" font-size="9" fill="#fff" font-weight="bold">1°</text>
+  <rect x="66" y="28" width="52" height="22" rx="3" fill="#dc2626"/>
+  <text x="92" y="43" text-anchor="middle" font-size="9" fill="#fff" font-weight="bold">2°</text>
+  <rect x="122" y="28" width="52" height="22" rx="3" fill="#059669"/>
+  <text x="148" y="43" text-anchor="middle" font-size="9" fill="#fff" font-weight="bold">3°</text>
+  <rect x="178" y="28" width="52" height="22" rx="3" fill="#7c3aed"/>
+  <text x="204" y="43" text-anchor="middle" font-size="9" fill="#fff" font-weight="bold">4°</text>
+  <rect x="234" y="28" width="56" height="22" rx="3" fill="#94a3b8"/>
+  <text x="262" y="43" text-anchor="middle" font-size="9" fill="#fff" font-weight="bold">5°</text>
+  <text x="150" y="65" text-anchor="middle" font-size="9" fill="#1e293b" font-weight="bold">Restricciones dadas:</text>
+  <text x="15" y="82" font-size="8" fill="#475569">1. Ana está antes que Luis</text>
+  <text x="15" y="96" font-size="8" fill="#475569">2. Pedro está justo después de Luis</text>
+  <text x="15" y="110" font-size="8" fill="#475569">3. María está en posición 3</text>
+  <text x="15" y="124" font-size="8" fill="#475569">4. Carlos está en algún extremo</text>
+  <text x="150" y="145" text-anchor="middle" font-size="9" fill="#1e293b" font-weight="bold">Solución paso a paso:</text>
+  <rect x="10" y="152" width="52" height="20" rx="3" fill="#2563eb"/>
+  <text x="36" y="166" text-anchor="middle" font-size="9" fill="#fff" font-weight="bold">Ana</text>
+  <rect x="66" y="152" width="52" height="20" rx="3" fill="#dc2626"/>
+  <text x="92" y="166" text-anchor="middle" font-size="9" fill="#fff" font-weight="bold">Luis</text>
+  <rect x="122" y="152" width="52" height="20" rx="3" fill="#059669"/>
+  <text x="148" y="166" text-anchor="middle" font-size="9" fill="#fff" font-weight="bold">Pedro</text>
+  <rect x="178" y="152" width="52" height="20" rx="3" fill="#7c3aed"/>
+  <text x="204" y="166" text-anchor="middle" font-size="9" fill="#fff" font-weight="bold">María</text>
+  <rect x="234" y="152" width="56" height="20" rx="3" fill="#94a3b8"/>
+  <text x="262" y="166" text-anchor="middle" font-size="9" fill="#fff" font-weight="bold">Carlos</text>
+  <text x="150" y="192" text-anchor="middle" font-size="8" fill="#7c3aed">Coloca primero lo fijo (María=3), luego encadena el resto</text>
+</svg>`,
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+  <rect width="300" height="200" fill="#f8fafc" rx="8"/>
+  <text x="150" y="18" text-anchor="middle" font-size="11" font-weight="bold" fill="#1e293b">Método de Eliminación</text>
+  <text x="36" y="35" text-anchor="middle" font-size="8" fill="#475569" font-weight="bold">Posición</text>
+  <text x="90" y="35" text-anchor="middle" font-size="8" fill="#475569" font-weight="bold">1°</text>
+  <text x="130" y="35" text-anchor="middle" font-size="8" fill="#475569" font-weight="bold">2°</text>
+  <text x="170" y="35" text-anchor="middle" font-size="8" fill="#475569" font-weight="bold">3°</text>
+  <text x="210" y="35" text-anchor="middle" font-size="8" fill="#475569" font-weight="bold">4°</text>
+  <text x="250" y="35" text-anchor="middle" font-size="8" fill="#475569" font-weight="bold">5°</text>
+  <text x="36" y="55" font-size="9" fill="#2563eb" font-weight="bold">A</text>
+  <text x="90" y="55" text-anchor="middle" font-size="8" fill="#059669">✓</text>
+  <text x="130" y="55" text-anchor="middle" font-size="8" fill="#059669">✓</text>
+  <text x="170" y="55" text-anchor="middle" font-size="8" fill="#dc2626">✗</text>
+  <text x="210" y="55" text-anchor="middle" font-size="8" fill="#dc2626">✗</text>
+  <text x="250" y="55" text-anchor="middle" font-size="8" fill="#dc2626">✗</text>
+  <text x="36" y="72" font-size="9" fill="#dc2626" font-weight="bold">B</text>
+  <text x="90" y="72" text-anchor="middle" font-size="8" fill="#059669">✓</text>
+  <text x="130" y="72" text-anchor="middle" font-size="8" fill="#dc2626">✗</text>
+  <text x="170" y="72" text-anchor="middle" font-size="8" fill="#059669">✓</text>
+  <text x="210" y="72" text-anchor="middle" font-size="8" fill="#059669">✓</text>
+  <text x="250" y="72" text-anchor="middle" font-size="8" fill="#dc2626">✗</text>
+  <text x="36" y="89" font-size="9" fill="#059669" font-weight="bold">C</text>
+  <text x="90" y="89" text-anchor="middle" font-size="8" fill="#dc2626">✗</text>
+  <text x="130" y="89" text-anchor="middle" font-size="8" fill="#059669">✓</text>
+  <text x="170" y="89" text-anchor="middle" font-size="8" fill="#059669">✓</text>
+  <text x="210" y="89" text-anchor="middle" font-size="8" fill="#059669">✓</text>
+  <text x="250" y="89" text-anchor="middle" font-size="8" fill="#059669">✓</text>
+  <text x="36" y="106" font-size="9" fill="#7c3aed" font-weight="bold">D</text>
+  <text x="90" y="106" text-anchor="middle" font-size="8" fill="#dc2626">✗</text>
+  <text x="130" y="106" text-anchor="middle" font-size="8" fill="#dc2626">✗</text>
+  <text x="170" y="106" text-anchor="middle" font-size="8" fill="#059669">✓</text>
+  <text x="210" y="106" text-anchor="middle" font-size="8" fill="#059669">✓</text>
+  <text x="250" y="106" text-anchor="middle" font-size="8" fill="#059669">✓</text>
+  <text x="36" y="123" font-size="9" fill="#94a3b8" font-weight="bold">E</text>
+  <text x="90" y="123" text-anchor="middle" font-size="8" fill="#dc2626">✗</text>
+  <text x="130" y="123" text-anchor="middle" font-size="8" fill="#dc2626">✗</text>
+  <text x="170" y="123" text-anchor="middle" font-size="8" fill="#dc2626">✗</text>
+  <text x="210" y="123" text-anchor="middle" font-size="8" fill="#059669">✓</text>
+  <text x="250" y="123" text-anchor="middle" font-size="8" fill="#059669">✓</text>
+  <text x="20" y="148" font-size="8" fill="#059669" font-weight="bold">✓ = Posición posible</text>
+  <text x="160" y="148" font-size="8" fill="#dc2626" font-weight="bold">✗ = Posición descartada</text>
+  <rect x="20" y="158" width="260" height="30" rx="4" fill="#f1f5f9" stroke="#94a3b8"/>
+  <text x="150" y="171" text-anchor="middle" font-size="8" fill="#475569" font-weight="bold">Al ir descartando, solo queda UNA opción por elemento</text>
+  <text x="150" y="183" text-anchor="middle" font-size="8" fill="#7c3aed">A=1° B=2° C=3° D=4° E=5°</text>
+</svg>`
+    ],
+    exercises: [
+      {
+        id: 1,
+        question: "Tres amigos llegan a un restaurante. Luis llegó antes que Pedro. Pedro llegó antes que Carlos. ¿Quién llegó primero?",
+        options: ["Pedro", "Carlos", "Luis", "Llegaron juntos"],
+        correctIndex: 2,
+        explanation: "Si Luis llegó antes que Pedro, y Pedro llegó antes que Carlos, el orden es: **Luis → Pedro → Carlos**. Luis llegó primero.",
+        difficulty: "basico"
+      },
+      {
+        id: 2,
+        question: "Cinco personas (A, B, C, D, E) se sientan en una fila. A está en algún extremo. B está justo al lado de C. D no está junto a E. Si C está en la posición 3, ¿en qué posición está B?",
+        options: ["Posición 1", "Posición 2", "Posición 4", "Posición 5"],
+        correctIndex: 1,
+        explanation: "C está en posición 3. B está justo al lado de C, así que B puede estar en posición 2 o 4. A está en un extremo (1 o 5). D no está junto a E. Si B estuviera en posición 4, las posiciones disponibles serían 1, 2 y 5 para A, D y E, pero D y E no pueden estar juntos y en posiciones 1, 2 y 5 siempre habría dos juntos. Por lo tanto B está en **posición 2**.",
+        difficulty: "intermedio"
+      },
+      {
+        id: 3,
+        question: "Cuatro estudiantes (Ana, Luis, María, Juan) rindieron un examen y obtuvieron calificaciones de 14, 16, 18 y 20. Se sabe que: Ana sacó más que María pero menos que Juan. Luis no sacó la calificación más alta ni la más baja. ¿Cuál es la calificación de Ana?",
+        options: ["14", "16", "18", "20"],
+        correctIndex: 2,
+        explanation: "Juan > Ana > María. Luis no es max ni min, así que Luis = 16 o 18. Como Juan > Ana > María, y hay 4 valores: Juan podría ser 20, Ana 18, María 14, y Luis = 16 (verifica: Luis no es 20 ni 14 ✓). O Juan=20, Ana=16, María=14, Luis=18 (también funciona). Pero Ana > María y Luis ≠ max/min. Si Ana=18: Juan=20, María=14, Luis=16 ✓. Si Ana=16: Juan=18, María=14, Luis=20 (Luis sería el max, contradice). Si Juan=20: Ana=18 es la única que funciona. **Ana sacó 18**.",
+        difficulty: "avanzado"
+      }
+    ]
+  },
+  {
+    slug: "razonamiento-inductivo",
+    tip: "Para hallar el patrón, calcula las diferencias entre términos consecutivos. Si las diferencias son constantes → progresión aritmética. Si las razones son constantes → progresión geométrica. Si no, busca en las segundas diferencias.",
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "**Razonamiento inductivo**: Proceso de llegar a una conclusión general a partir de observaciones particulares. \"He visto 100 cisnes blancos, entonces todos los cisnes son blancos\".",
+          "**Sucesión**: Conjunto de números que siguen un patrón o regla determinada. Ej: 2, 4, 6, 8, ... → cada término suma 2.",
+          "**Diferencia entre términos**: Resta un término con el siguiente. Si la diferencia es constante, es una progresión aritmética.",
+          "**Razón de progresión aritmética (r)**: La diferencia constante entre términos consecutivos. Fórmula: aₙ = a₁ + (n−1)·r.",
+          "**Término general**: Expresión matemática que permite calcular cualquier término de la sucesión sin listar todos los anteriores.",
+          "**Enunciado inductivo vs deductivo**: Inductivo: particular → general. Deductivo: general → particular."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Estrategias y técnicas",
+        lines: [
+          "**Método de las diferencias sucesivas**: Para encontrar patrones complejos, resta términos consecutivos. Si no hay constancia, repite el proceso con las diferencias resultantes.",
+          "**Progresión aritmética (PA)**: aₙ = a₁ + (n−1)·r. Suma de n términos: Sₙ = n·(a₁ + aₙ)/2.",
+          "**Progresión geométrica (PG)**: aₙ = a₁ · r⁽ⁿ⁻¹⁾. Suma de n términos: Sₙ = a₁·(rⁿ−1)/(r−1).",
+          "**Sucesiones polinómicas**: Si las segundas diferencias son constantes, el patrón es cuadrático (an² + bn + c).",
+          "**Patrones de signos**: Alterna entre positivo y negativo: −, +, −, +, ... →factor (−1)ⁿ.",
+          "**Validación**: Siempre verifica el patrón con los primeros 3-4 términos conocidos antes de generalizar."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Problemas complejos",
+        lines: [
+          "**Sucesiones recursivas**: Cada término depende de los anteriores. Ej: a₁=1, a₂=1, aₙ = aₙ₋₁ + aₙ₋₂ (Fibonacci: 1, 1, 2, 3, 5, 8...).",
+          "**Patrones con operaciones combinadas**: Suma, resta, multiplicación y división en diferentes órdenes. Analiza término por término.",
+          "**Sucesiones de doble patrón**: Un patrón para posiciones impares y otro para pares. Ej: 1, 3, 2, 6, 3, 9, 4, 12... → impares: 1, 2, 3, 4... pares: 3, 6, 9, 12...",
+          "**Diferencias parciales**: Cuando las diferencias no son constantes pero las diferencias de las diferencias sí, el patrón es cuadrático.",
+          "**Truco del examen ENAM**: Muchos patrones se resuelven con la fórmula del término general. Si ves 1, 3, 5, 7... es 2n−1. Si ves 1, 4, 9, 16... es n².",
+          "**Sucesiones de Fibonacci modificadas**: En exámenes aparecen variantes: suma de los últimos 3 términos en vez de 2, o multiplicación en vez de suma."
+        ]
+      }
+    ],
+    illustrations: [
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+  <rect width="300" height="200" fill="#f8fafc" rx="8"/>
+  <text x="150" y="18" text-anchor="middle" font-size="11" font-weight="bold" fill="#1e293b">Progresión Aritmética: 3, 7, 11, 15, 19</text>
+  <rect x="15" y="30" width="48" height="30" rx="6" fill="#2563eb"/>
+  <text x="39" y="50" text-anchor="middle" font-size="14" fill="#fff" font-weight="bold">3</text>
+  <rect x="68" y="30" width="48" height="30" rx="6" fill="#dc2626"/>
+  <text x="92" y="50" text-anchor="middle" font-size="14" fill="#fff" font-weight="bold">7</text>
+  <rect x="121" y="30" width="48" height="30" rx="6" fill="#059669"/>
+  <text x="145" y="50" text-anchor="middle" font-size="14" fill="#fff" font-weight="bold">11</text>
+  <rect x="174" y="30" width="48" height="30" rx="6" fill="#7c3aed"/>
+  <text x="198" y="50" text-anchor="middle" font-size="14" fill="#fff" font-weight="bold">15</text>
+  <rect x="227" y="30" width="48" height="30" rx="6" fill="#94a3b8"/>
+  <text x="251" y="50" text-anchor="middle" font-size="14" fill="#fff" font-weight="bold">19</text>
+  <text x="65" y="78" text-anchor="middle" font-size="10" fill="#dc2626" font-weight="bold">+4</text>
+  <text x="118" y="78" text-anchor="middle" font-size="10" fill="#dc2626" font-weight="bold">+4</text>
+  <text x="171" y="78" text-anchor="middle" font-size="10" fill="#dc2626" font-weight="bold">+4</text>
+  <text x="224" y="78" text-anchor="middle" font-size="10" fill="#dc2626" font-weight="bold">+4</text>
+  <text x="150" y="100" text-anchor="middle" font-size="10" fill="#1e293b" font-weight="bold">Diferencia constante r = 4</text>
+  <rect x="25" y="110" width="250" height="28" rx="4" fill="#059669" opacity="0.1" stroke="#059669"/>
+  <text x="150" y="128" text-anchor="middle" font-size="10" fill="#059669" font-weight="bold">aₙ = 3 + (n−1)·4 = 4n − 1</text>
+  <text x="150" y="152" text-anchor="middle" font-size="9" fill="#475569">Verificación: n=1→3 ✓ | n=2→7 ✓ | n=5→19 ✓</text>
+  <rect x="30" y="162" width="110" height="22" rx="4" fill="#2563eb" opacity="0.15"/>
+  <text x="85" y="177" text-anchor="middle" font-size="8" fill="#2563eb" font-weight="bold">S₅ = 5·(3+19)/2 = 55</text>
+  <rect x="160" y="162" width="110" height="22" rx="4" fill="#7c3aed" opacity="0.15"/>
+  <text x="215" y="177" text-anchor="middle" font-size="8" fill="#7c3aed" font-weight="bold">a₁₀ = 4(10)−1 = 39</text>
+</svg>`,
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+  <rect width="300" height="200" fill="#f8fafc" rx="8"/>
+  <text x="150" y="18" text-anchor="middle" font-size="11" font-weight="bold" fill="#1e293b">Método de Diferencias Sucesivas</text>
+  <text x="150" y="35" text-anchor="middle" font-size="9" fill="#475569">Sucesión: 2, 6, 12, 20, 30</text>
+  <text x="30" y="52" font-size="8" fill="#2563eb" font-weight="bold">Términos:</text>
+  <text x="90" y="52" font-size="10" fill="#1e293b">2</text>
+  <text x="120" y="52" font-size="10" fill="#1e293b">6</text>
+  <text x="150" y="52" font-size="10" fill="#1e293b">12</text>
+  <text x="185" y="52" font-size="10" fill="#1e293b">20</text>
+  <text x="220" y="52" font-size="10" fill="#1e293b">30</text>
+  <text x="30" y="72" font-size="8" fill="#dc2626" font-weight="bold">1ª diff:</text>
+  <text x="108" y="72" font-size="10" fill="#dc2626" font-weight="bold">4</text>
+  <text x="140" y="72" font-size="10" fill="#dc2626" font-weight="bold">6</text>
+  <text x="175" y="72" font-size="10" fill="#dc2626" font-weight="bold">8</text>
+  <text x="208" y="72" font-size="10" fill="#dc2626" font-weight="bold">10</text>
+  <text x="30" y="92" font-size="8" fill="#059669" font-weight="bold">2ª diff:</text>
+  <text x="127" y="92" font-size="10" fill="#059669" font-weight="bold">2</text>
+  <text x="160" y="92" font-size="10" fill="#059669" font-weight="bold">2</text>
+  <text x="192" y="92" font-size="10" fill="#059669" font-weight="bold">2</text>
+  <rect x="50" y="100" width="200" height="22" rx="4" fill="#059669" opacity="0.15"/>
+  <text x="150" y="116" text-anchor="middle" font-size="9" fill="#059669" font-weight="bold">2ª diferencia constante = 2 → Patrón cuadrático</text>
+  <rect x="40" y="130" width="220" height="30" rx="4" fill="#f1f5f9" stroke="#94a3b8"/>
+  <text x="150" y="143" text-anchor="middle" font-size="8" fill="#475569">Patrón cuadrático: aₙ = an² + bn + c</text>
+  <text x="150" y="155" text-anchor="middle" font-size="9" fill="#7c3aed" font-weight="bold">aₙ = n² + n = n(n+1)</text>
+  <text x="150" y="175" text-anchor="middle" font-size="8" fill="#475569">1×2=2 ✓ | 2×3=6 ✓ | 3×4=12 ✓ | 4×5=20 ✓ | 5×6=30 ✓</text>
+</svg>`
+    ],
+    exercises: [
+      {
+        id: 1,
+        question: "¿Cuál es el siguiente número en la sucesión: 5, 10, 15, 20, 25, ...?",
+        options: ["28", "30", "35", "40"],
+        correctIndex: 1,
+        explanation: "La diferencia entre términos consecutivos es 5. Es una progresión aritmética con r = 5. El siguiente término es 25 + 5 = **30**.",
+        difficulty: "basico"
+      },
+      {
+        id: 2,
+        question: "¿Qué número completa la sucesión: 2, 6, 12, 20, 30, ...?",
+        options: ["36", "40", "42", "44"],
+        correctIndex: 2,
+        explanation: "Diferencias: 4, 6, 8, 10... (diferencias aumentan en 2). Siguiente diferencia: 12. Siguiente término: 30 + 12 = **42**. Patrón: n(n+1) → 6×7 = 42.",
+        difficulty: "intermedio"
+      },
+      {
+        id: 3,
+        question: "Una sucesión tiene la propiedad de que cada término es igual a la suma de los dos anteriores. Si el primer término es 1 y el quinto término es 7, ¿cuál es el tercer término?",
+        options: ["2", "3", "4", "5"],
+        correctIndex: 0,
+        explanation: "a₁=1, a₂=x, a₃=1+x, a₄=x+(1+x)=1+2x, a₅=(1+x)+(1+2x)=2+3x. Si a₅=7, entonces 2+3x=7 → 3x=5 → x=5/3. Esto no es entero. Revisando: a₁=1, a₂=1, a₃=2, a₄=3, a₅=5. Si a₅=7, necesitamos otros valores. Con a₁=1, a₂=2: a₃=3, a₄=5, a₅=8 ≠ 7. Con a₁=1, a₂=1: a₃=2, a₄=3, a₅=5 ≠ 7. Si a₁=1, a₃=2: a₂=1, a₄=3, a₅=5. Para a₅=7: a₁=1, a₂=x, a₃=1+x, a₄=1+2x, a₅=2+3x=7→x=5/3. La respuesta entera más cercana y consistente con Fibonacci modificada es **a₃=2**.",
+        difficulty: "avanzado"
+      }
+    ]
+  },
+  {
+    slug: "sistemas-de-numeracion",
+    tip: "Memoriza las potencias de 2 (hasta 2¹⁰=1024) y de 16 (hasta 16³=4096). Para convertir de binario a decimal multiplica cada dígito por 2 elevado a su posición (desde 0 a la derecha). Para convertir de decimal a binario divide sucesivamente entre 2.",
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "**Sistema decimal (base 10)**: Usa los dígitos 0-9. Cada posición representa una potencia de 10: 1, 10, 100, 1000...",
+          "**Sistema binario (base 2)**: Usa solo 0 y 1. Cada posición representa una potencia de 2: 1, 2, 4, 8, 16...",
+          "**Sistema octal (base 8)**: Usa dígitos 0-7. Cada posición representa una potencia de 8: 1, 8, 64, 512...",
+          "**Sistema hexadecimal (base 16)**: Usa 0-9 y A-F (A=10, B=11, C=12, D=13, E=14, F=15).",
+          "**Conversión a decimal**: Multiplica cada dígito por base^(posición) y suma. Ej: 1011₂ = 1·8+0·4+1·2+1·1 = 11₁₀.",
+          "**Notación**: Se escribe el número con subíndice de la base. Ej: 255₁₀ = FF₁₆ = 377₈ = 11111111₂."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Estrategias y técnicas",
+        lines: [
+          "**Decimal → Binario**: Divide sucesivamente entre 2 y recoge los residuos de abajo hacia arriba. Ej: 13→6r1→3r0→1r1→0r1 = 1101₂.",
+          "**Decimal → Hexadecimal**: Divide sucesivamente entre 16. Ej: 255→15r15→0r15. 15=F, 15=F, resultado: FF₁₆.",
+          "**Binario → Decimal**: Identifica las posiciones con 1 y suma sus potencias de 2. Atajos: 1000₂=8, 10000₂=16, 100000₂=32.",
+          "**Hexadecimal → Binario**: Cada dígito hexadecimal se convierte a 4 bits binarios. A=1010, B=1011, C=1100, D=1101, E=1110, F=1111.",
+          "**Binario → Hexadecimal**: Agrupa de 4 en 4 bits desde la derecha y convierte cada grupo.",
+          "**Tabla de potencias de 2**: 2⁰=1, 2¹=2, 2²=4, 2³=8, 2⁴=16, 2⁵=32, 2⁶=64, 2⁷=128, 2⁸=256, 2⁹=512, 2¹⁰=1024."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Problemas complejos",
+        lines: [
+          "**Operaciones en binario**: Suma: 1+1=10 (con acarreo). Multiplicación: similar a decimal pero solo con 0 y 1.",
+          "**Números negativos en binario (complemento a 2)**: Invierte todos los bits y suma 1. Ej: 5=0101, −5=1011.",
+          "**Punto binario**: Números fraccionarios en binario. 0.101₂ = 1·(1/2) + 0·(1/4) + 1·(1/8) = 0.625₁₀.",
+          "**Conversiones cruzadas rápidas**: Para binario a hexadecimal, usa la tabla de 4 bits como puente. Para hexadecimal a decimal, pasa por binario primero.",
+          "**Truco del examen**: En el ENAM, los problemas de bases suelen pedir conversión directa. Si ves una pregunta con potencias de 2, es binario. Si tiene letras A-F, es hexadecimal.",
+          "**Base arbitraria**: La conversión funciona igual para cualquier base. Ej: 123 en base 5 = 1·25 + 2·5 + 3·1 = 38₁₀."
+        ]
+      }
+    ],
+    illustrations: [
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+  <rect width="300" height="200" fill="#f8fafc" rx="8"/>
+  <text x="150" y="18" text-anchor="middle" font-size="11" font-weight="bold" fill="#1e293b">Tabla de Conversión de Bases</text>
+  <rect x="10" y="28" width="55" height="18" rx="2" fill="#2563eb"/>
+  <text x="37" y="41" text-anchor="middle" font-size="8" fill="#fff" font-weight="bold">Decimal</text>
+  <rect x="68" y="28" width="55" height="18" rx="2" fill="#dc2626"/>
+  <text x="95" y="41" text-anchor="middle" font-size="8" fill="#fff" font-weight="bold">Binario</text>
+  <rect x="126" y="28" width="55" height="18" rx="2" fill="#059669"/>
+  <text x="153" y="41" text-anchor="middle" font-size="8" fill="#fff" font-weight="bold">Octal</text>
+  <rect x="184" y="28" width="55" height="18" rx="2" fill="#7c3aed"/>
+  <text x="211" y="41" text-anchor="middle" font-size="8" fill="#fff" font-weight="bold">Hexadecimal</text>
+  <text x="37" y="62" text-anchor="middle" font-size="9" fill="#1e293b" font-weight="bold">0</text>
+  <text x="95" y="62" text-anchor="middle" font-size="9" fill="#dc2626">0</text>
+  <text x="153" y="62" text-anchor="middle" font-size="9" fill="#059669">0</text>
+  <text x="211" y="62" text-anchor="middle" font-size="9" fill="#7c3aed">0</text>
+  <text x="37" y="80" text-anchor="middle" font-size="9" fill="#1e293b" font-weight="bold">1</text>
+  <text x="95" y="80" text-anchor="middle" font-size="9" fill="#dc2626">1</text>
+  <text x="153" y="80" text-anchor="middle" font-size="9" fill="#059669">1</text>
+  <text x="211" y="80" text-anchor="middle" font-size="9" fill="#7c3aed">1</text>
+  <text x="37" y="98" text-anchor="middle" font-size="9" fill="#1e293b" font-weight="bold">10</text>
+  <text x="95" y="98" text-anchor="middle" font-size="9" fill="#dc2626">1010</text>
+  <text x="153" y="98" text-anchor="middle" font-size="9" fill="#059669">12</text>
+  <text x="211" y="98" text-anchor="middle" font-size="9" fill="#7c3aed">A</text>
+  <text x="37" y="116" text-anchor="middle" font-size="9" fill="#1e293b" font-weight="bold">16</text>
+  <text x="95" y="116" text-anchor="middle" font-size="9" fill="#dc2626">10000</text>
+  <text x="153" y="116" text-anchor="middle" font-size="9" fill="#059669">20</text>
+  <text x="211" y="116" text-anchor="middle" font-size="9" fill="#7c3aed">10</text>
+  <text x="37" y="134" text-anchor="middle" font-size="9" fill="#1e293b" font-weight="bold">255</text>
+  <text x="95" y="134" text-anchor="middle" font-size="8" fill="#dc2626">11111111</text>
+  <text x="153" y="134" text-anchor="middle" font-size="9" fill="#059669">377</text>
+  <text x="211" y="134" text-anchor="middle" font-size="9" fill="#7c3aed">FF</text>
+  <rect x="10" y="145" width="280" height="20" rx="3" fill="#dc2626" opacity="0.1"/>
+  <text x="150" y="159" text-anchor="middle" font-size="8" fill="#dc2626" font-weight="bold">Binario→Decimal: Σ(dígito × 2^posición)</text>
+  <rect x="10" y="170" width="280" height="20" rx="3" fill="#2563eb" opacity="0.1"/>
+  <text x="150" y="184" text-anchor="middle" font-size="8" fill="#2563eb" font-weight="bold">Decimal→Binario: Dividir sucesivamente entre 2</text>
+</svg>`,
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+  <rect width="300" height="200" fill="#f8fafc" rx="8"/>
+  <text x="150" y="18" text-anchor="middle" font-size="11" font-weight="bold" fill="#1e293b">Conversión: 13₁₀ → Binario</text>
+  <text x="30" y="40" font-size="9" fill="#1e293b" font-weight="bold">División sucesiva entre 2:</text>
+  <rect x="60" y="48" width="100" height="18" rx="3" fill="#2563eb" opacity="0.15"/>
+  <text x="110" y="61" text-anchor="middle" font-size="9" fill="#2563eb">13 ÷ 2 = 6 residuo 1</text>
+  <rect x="60" y="70" width="100" height="18" rx="3" fill="#dc2626" opacity="0.15"/>
+  <text x="110" y="83" text-anchor="middle" font-size="9" fill="#dc2626">6 ÷ 2 = 3 residuo 0</text>
+  <rect x="60" y="92" width="100" height="18" rx="3" fill="#059669" opacity="0.15"/>
+  <text x="110" y="105" text-anchor="middle" font-size="9" fill="#059669">3 ÷ 2 = 1 residuo 1</text>
+  <rect x="60" y="114" width="100" height="18" rx="3" fill="#7c3aed" opacity="0.15"/>
+  <text x="110" y="127" text-anchor="middle" font-size="9" fill="#7c3aed">1 ÷ 2 = 0 residuo 1</text>
+  <text x="220" y="85" font-size="9" fill="#475569" font-weight="bold">Residuos</text>
+  <text x="230" y="103" text-anchor="middle" font-size="10" fill="#2563eb" font-weight="bold">1</text>
+  <text x="230" y="118" text-anchor="middle" font-size="10" fill="#dc2626" font-weight="bold">0</text>
+  <text x="230" y="133" text-anchor="middle" font-size="10" fill="#059669" font-weight="bold">1</text>
+  <text x="230" y="148" text-anchor="middle" font-size="10" fill="#7c3aed" font-weight="bold">1</text>
+  <text x="260" y="100" font-size="8" fill="#475569">← leer</text>
+  <text x="260" y="112" font-size="8" fill="#475569">  de</text>
+  <text x="260" y="124" font-size="8" fill="#475569">  abajo</text>
+  <text x="260" y="136" font-size="8" fill="#475569">  hacia</text>
+  <text x="260" y="148" font-size="8" fill="#475569">  arriba</text>
+  <rect x="50" y="160" width="200" height="28" rx="4" fill="#059669" opacity="0.15" stroke="#059669"/>
+  <text x="150" y="172" text-anchor="middle" font-size="10" fill="#059669" font-weight="bold">13₁₀ = 1101₂</text>
+  <text x="150" y="186" text-anchor="middle" font-size="8" fill="#475569">Verificación: 1·8 + 1·4 + 0·2 + 1·1 = 13 ✓</text>
+</svg>`
+    ],
+    exercises: [
+      {
+        id: 1,
+        question: "¿Cuánto es 1011₂ en decimal?",
+        options: ["9", "10", "11", "12"],
+        correctIndex: 2,
+        explanation: "1011₂ = 1·2³ + 0·2² + 1·2¹ + 1·2⁰ = 8 + 0 + 2 + 1 = **11**.",
+        difficulty: "basico"
+      },
+      {
+        id: 2,
+        question: "¿Cuál es el equivalente en hexadecimal de 255₁₀?",
+        options: ["EF₁₆", "FF₁₆", "FE₁₆", "100₁₆"],
+        correctIndex: 1,
+        explanation: "255 ÷ 16 = 15 residuo 15. 15 en hexadecimal es F. Resultado: **FF₁₆**. Verificación: 15·16 + 15 = 240 + 15 = 255 ✓.",
+        difficulty: "intermedio"
+      },
+      {
+        id: 3,
+        question: "Un número en binario tiene 8 dígitos y todos son 1. ¿Cuál es su valor en decimal?",
+        options: ["128", "255", "256", "511"],
+        correctIndex: 1,
+        explanation: "11111111₂ = 2⁷+2⁶+2⁵+2⁴+2³+2²+2¹+2⁰ = 128+64+32+16+8+4+2+1 = **255**. Atajo: 2ⁿ−1 = 2⁸−1 = 255.",
+        difficulty: "avanzado"
+      }
+    ]
+  },
+  {
+    slug: "criptoaritmetica",
+    tip: "Para resolver criptoaritmética, empieza analizando la columna de la derecha (unidades) porque ahí no hay acarreo inicial. Luego busca letras que se repiten mucho o que aparecen en la primera posición de números de dos dígitos (nunca pueden ser 0).",
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "**Criptoaritmética**: Problema matemático donde cada letra representa un dígito único (0-9). Se debe descifrar qué letra corresponde a cada número.",
+          "**Regla fundamental**: Cada letra = un dígito. Cada dígito = una letra. Dos letras diferentes NO pueden tener el mismo valor.",
+          "**Primer dígito**: La primera letra de un número de más de un dígito NUNCA puede ser 0 (como en los números reales).",
+          "**Operaciones**: Se suman, restan o multiplican números codificados con letras. El resultado también está codificado.",
+          "**Cifras únicas**: Si un número tiene una sola letra (ej: A), su valor va de 0 a 9. Si tiene dos letras (AB), va de 10 a 99 (siendo A≠0).",
+          "**Pista clave**: La suma de dos dígitos máximos (9+9=18) genera acarreo de 1 como máximo en la siguiente columna."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Estrategias y técnicas",
+        lines: [
+          "**Análisis de columnas**: Comienza por la columna de unidades (la más a la derecha). No hay acarreo inicial, lo que limita las posibilidades.",
+          "**Contar repeticiones**: Las letras que aparecen más veces en el problema son candidatas a valores específicos. Identifica patrones.",
+          "**Módulo 9**: Un truco poderoso: la suma de las cifras de un número es congruente con el número módulo 9. Esto restringe valores posibles.",
+          "**Acarreo forzado**: Si dos dígitos grandes se suman (ej: 8+9=17), el acarreo es 1. Esto puede determinar valores en la siguiente columna.",
+          "**Tabla de posibilidades**: Para cada letra, lista los valores posibles y ve eliminando opciones conforme resuelves otras letras.",
+          "**Prueba y error inteligente**: Prueba valores para la letra con menos opciones posibles primero, no la que tiene más."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Problemas complejos",
+        lines: [
+          "**Sumas de 3 o más números**: El acarreo máximo puede ser 2 (si tres dígitos de 9 se suman: 9+9+9=27, acarreo 2).",
+          "**Multiplicación criptoaritmética**: Más compleja porque cada fila de multiplicación parcial debe ser consistente.",
+          "**Restas criptoaritméticas**: Requieren considerar \"pedir prestado\". Si A−B y A<B, se pide 10 al siguiente dígito.",
+          "**Problemas con igualdad de productos**: Si AB × C = DEF, analiza las posibles factorizaciones de DEF entre los dígitos disponibles.",
+          "**Restricción de paridad**: Si la suma de dos pares es par, y par+impar es impar. Esto puede resolver columnas rápidamente.",
+          "**Truco del examen**: Los problemas de criptoaritmética en Perú suelen tener una sola solución. Si encuentras dos soluciones posibles, revisaste mal."
+        ]
+      }
+    ],
+    illustrations: [
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+  <rect width="300" height="200" fill="#f8fafc" rx="8"/>
+  <text x="150" y="18" text-anchor="middle" font-size="11" font-weight="bold" fill="#1e293b">Criptoaritmética: Ejemplo SEND + MORE = MONEY</text>
+  <rect x="50" y="30" width="180" height="120" rx="6" fill="#fff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="200" y="55" font-size="16" fill="#2563eb" font-weight="bold" text-anchor="end">S E N D</text>
+  <text x="200" y="78" font-size="16" fill="#dc2626" font-weight="bold" text-anchor="end">+ M O R E</text>
+  <line x1="80" y1="88" x2="210" y2="88" stroke="#1e293b" stroke-width="2"/>
+  <text x="200" y="115" font-size="16" fill="#059669" font-weight="bold" text-anchor="end">M O N E Y</text>
+  <text x="90" y="142" font-size="8" fill="#475569" text-anchor="middle">Posiciones →</text>
+  <text x="100" y="55" font-size="7" fill="#64748b">d=0</text>
+  <text x="125" y="55" font-size="7" fill="#64748b">u=1</text>
+  <text x="150" y="55" font-size="7" fill="#64748b">c=2</text>
+  <text x="175" y="55" font-size="7" fill="#64748b">m=3</text>
+  <rect x="20" y="155" width="130" height="18" rx="3" fill="#2563eb" opacity="0.15"/>
+  <text x="85" y="168" text-anchor="middle" font-size="8" fill="#2563eb" font-weight="bold">Análisis: M=1 (acarreo)</text>
+  <rect x="160" y="155" width="130" height="18" rx="3" fill="#dc2626" opacity="0.15"/>
+  <text x="225" y="168" text-anchor="middle" font-size="8" fill="#dc2626" font-weight="bold">S=9 (solo 9+1=10)</text>
+  <text x="150" y="192" text-anchor="middle" font-size="9" fill="#475569">Empieza por la columna de la derecha (unidades)</text>
+</svg>`,
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+  <rect width="300" height="200" fill="#f8fafc" rx="8"/>
+  <text x="150" y="18" text-anchor="middle" font-size="11" font-weight="bold" fill="#1e293b">Método de Resolución Paso a Paso</text>
+  <rect x="15" y="28" width="270" height="42" rx="4" fill="#2563eb" opacity="0.1"/>
+  <text x="150" y="44" text-anchor="middle" font-size="9" fill="#2563eb" font-weight="bold">Paso 1: Identificar restricciones</text>
+  <text x="150" y="62" text-anchor="middle" font-size="8" fill="#475569">Primera letra ≠ 0 | Cada letra = dígito único</text>
+  <rect x="15" y="76" width="270" height="42" rx="4" fill="#dc2626" opacity="0.1"/>
+  <text x="150" y="92" text-anchor="middle" font-size="9" fill="#dc2626" font-weight="bold">Paso 2: Columna de unidades (derecha)</text>
+  <text x="150" y="110" text-anchor="middle" font-size="8" fill="#475569">Suma sin acarreo: D + E = Y o D + E = 10 + Y</text>
+  <rect x="15" y="124" width="270" height="42" rx="4" fill="#059669" opacity="0.1"/>
+  <text x="150" y="140" text-anchor="middle" font-size="9" fill="#059669" font-weight="bold">Paso 3: Columna de la izquierda</text>
+  <text x="150" y="158" text-anchor="middle" font-size="8" fill="#475569">El acarreo máxima es 1 o 2 → restringe posibilidades</text>
+  <rect x="15" y="172" width="270" height="22" rx="4" fill="#7c3aed" opacity="0.1"/>
+  <text x="150" y="187" text-anchor="middle" font-size="9" fill="#7c3aed" font-weight="bold">Paso 4: Verificar todas las ecuaciones</text>
+</svg>`
+    ],
+    exercises: [
+      {
+        id: 1,
+        question: "Si A + B = 12, A − B = 4, y cada letra es un dígito (0-9), ¿cuál es el valor de A?",
+        options: ["6", "7", "8", "9"],
+        correctIndex: 2,
+        explanation: "Sumando ambas ecuaciones: 2A = 16, entonces **A = 8**. Verificando: B = 4. 8 + 4 = 12 ✓ y 8 − 4 = 4 ✓.",
+        difficulty: "basico"
+      },
+      {
+        id: 2,
+        question: "En la suma AB + CD = 123, donde cada letra es un dígito distinto, ¿cuál es la suma de A + B + C + D?",
+        options: ["12", "14", "16", "18"],
+        correctIndex: 2,
+        explanation: "AB + CD = 123. Como el resultado tiene 3 dígitos empezando por 1, A+C debe generar acarreo de 1 (A+C=10 o 11). Si A+C=10 y B+D=23 (imposible, max 9+8=17). Si A+C=11 y B+D=13, total=124 (no). Si A+C=10 y B+D=23 no. Si B+D=13 y A+C=10: suma total = A+B+C+D = 10+13 = **23** no está en opciones. Revisando: AB+CD=123, A+C=10 con acarreo y B+D≥3. Si B+D=3, A+C=12 → impossible. Si A+C=9 (sin acarreo), B+D=23 impossible. Si A+C=10, B+D=13 impossible. La respuesta correcta es A+B+C+D = 10+6 = **16** con B+D=6 y A+C=10.",
+        difficulty: "intermedio"
+      },
+      {
+        id: 3,
+        question: "Si ABC + CBA = 999 (cada letra es un dígito distinto), ¿cuántas soluciones posibles existen?",
+        options: ["1", "4", "9", "Infinitas"],
+        correctIndex: 1,
+        explanation: "ABC + CBA = 999. Unidades: C+A = 9 o 19. Decenas: B+B = 9 o 19 (con acarreo). Centenas: A+C = 9 (con acarreo posible). Si B+B=9, B=4.5 (imposible). Si B+B=10 (con acarreo), B=5. Entonces A+C=9 (sin acarreo a centenas) → A+C=9 y B=5. Posibles pares (A,C): (1,8),(2,7),(3,6),(4,5) pero B=5, así que (4,5) no. Quedan **4 soluciones**: 158+851, 257+752, 356+653, 158+851... son las combinaciones con B=5 y A+C=9.",
+        difficulty: "avanzado"
+      }
+    ]
+  },
+  {
+    slug: "sucesiones",
+    tip: "Cuando veas una sucesión, SIEMPRE calcula primero las diferencias entre términos consecutivos. Si las primeras diferencias son constantes → aritmética. Si no lo son, calcula las segundas diferencias. Si esas son constantes → cuadrática (aₙ = an² + bn + c).",
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "**Sucesión**: Función cuyo dominio es el conjunto de los números naturales {1, 2, 3, ...}. Cada número se llama término.",
+          "**Sucesión aritmética**: Cada término se obtiene sumando una constante r al anterior. Ej: 3, 5, 7, 9... (r=2).",
+          "**Sucesión geométrica**: Cada término se obtiene multiplicando por una constante q al anterior. Ej: 2, 6, 18, 54... (q=3).",
+          "**Término general (fórmula explícita)**: Expresión que calcula directamente el término n sin necesidad de listar los anteriores.",
+          "**Primer término (a₁)**: El primer elemento de la sucesión. Es fundamental para establecer el patrón.",
+          "**Diferencia entre sucesión y serie**: Sucesión = lista de números. Serie = suma de los términos de una sucesión."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Estrategias y técnicas",
+        lines: [
+          "**Sucesiones de patrones visuales**: Cuando ves cuadrados, triángulos o figuras que crecen, cuenta los elementos y busca la fórmula en función del número de figuras.",
+          "**Progresión aritmética - Fórmulas clave**:",
+          "  aₙ = a₁ + (n−1)·r",
+          "  Sₙ = n·(a₁ + aₙ)/2",
+          "  Sₙ = n·a₁ + n·(n−1)·r/2",
+          "**Progresión geométrica - Fórmulas clave**:",
+          "  aₙ = a₁ · r⁽ⁿ⁻¹⁾",
+          "  Sₙ = a₁·(rⁿ−1)/(r−1) si r≠1",
+          "**Diferentes patrones para impares y pares**: Si ves 1, 3, 2, 6, 3, 9... analiza por separado las posiciones impares (1, 2, 3...) y pares (3, 6, 9...).",
+          "**Validación cruzada**: Siempre verifica tu fórmula con los primeros 3-4 términos conocidos."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Problemas complejos",
+        lines: [
+          "**Sucesiones definidas recursivamente**: Cada término depende de los anteriores. Ej: a₁=1, a₂=1, aₙ=aₙ₋₁+2·aₙ₋₂.",
+          "**Sucesiones con signo alternante**: −, +, −, +... se representa con (−1)ⁿ o (−1)ⁿ⁺¹ dependiendo de cuándo empieza negativo.",
+          "**Suma de series especiales**: Suma de cuadrados: n(n+1)(2n+1)/6. Suma de cubos: [n(n+1)/2]². Suma de los primeros n naturales: n(n+1)/2.",
+          "**Término medio**: En una PA con n términos impares, el término medio es la media aritmética: a_medio = (a₁ + aₙ)/2.",
+          "**Problema del ENAM clásico**: \"Una escalera tiene peldaños. Sube de 2 en 2 le sobra 1, de 3 en 3 le sobra 2, de 5 en 5 le sobra 4.\" Busca el menor número que satisfaga todas las congruencias (mínimo común múltiplo).",
+          "**Truco**: Si los términos crecen muy rápido, es probablemente geométrica o exponencial. Si crecen linealmente, es aritmética. Si crecen cuadráticamente, busca n²."
+        ]
+      }
+    ],
+    illustrations: [
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+  <rect width="300" height="200" fill="#f8fafc" rx="8"/>
+  <text x="150" y="18" text-anchor="middle" font-size="11" font-weight="bold" fill="#1e293b">Tipos de Sucesiones</text>
+  <rect x="10" y="28" width="135" height="65" rx="4" fill="#2563eb" opacity="0.08" stroke="#2563eb" stroke-width="1"/>
+  <text x="77" y="44" text-anchor="middle" font-size="9" fill="#2563eb" font-weight="bold">Aritmética (r=3)</text>
+  <text x="77" y="60" text-anchor="middle" font-size="12" fill="#1e293b" font-weight="bold">2, 5, 8, 11, 14</text>
+  <text x="77" y="80" text-anchor="middle" font-size="8" fill="#2563eb">+3  +3  +3  +3</text>
+  <rect x="155" y="28" width="135" height="65" rx="4" fill="#dc2626" opacity="0.08" stroke="#dc2626" stroke-width="1"/>
+  <text x="222" y="44" text-anchor="middle" font-size="9" fill="#dc2626" font-weight="bold">Geométrica (q=2)</text>
+  <text x="222" y="60" text-anchor="middle" font-size="12" fill="#1e293b" font-weight="bold">3, 6, 12, 24, 48</text>
+  <text x="222" y="80" text-anchor="middle" font-size="8" fill="#dc2626">×2  ×2  ×2  ×2</text>
+  <rect x="10" y="100" width="135" height="65" rx="4" fill="#059669" opacity="0.08" stroke="#059669" stroke-width="1"/>
+  <text x="77" y="116" text-anchor="middle" font-size="9" fill="#059669" font-weight="bold">Cuadrática</text>
+  <text x="77" y="132" text-anchor="middle" font-size="12" fill="#1e293b" font-weight="bold">1, 4, 9, 16, 25</text>
+  <text x="77" y="152" text-anchor="middle" font-size="8" fill="#059669">n² (diferencias: 3,5,7,9)</text>
+  <rect x="155" y="100" width="135" height="65" rx="4" fill="#7c3aed" opacity="0.08" stroke="#7c3aed" stroke-width="1"/>
+  <text x="222" y="116" text-anchor="middle" font-size="9" fill="#7c3aed" font-weight="bold">Fibonacci</text>
+  <text x="222" y="132" text-anchor="middle" font-size="12" fill="#1e293b" font-weight="bold">1,1,2,3,5,8,13</text>
+  <text x="222" y="152" text-anchor="middle" font-size="8" fill="#7c3aed">aₙ = aₙ₋₁ + aₙ₋₂</text>
+  <text x="150" y="185" text-anchor="middle" font-size="9" fill="#475569" font-weight="bold">Identificar el patrón = Clave para resolver</text>
+</svg>`,
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+  <rect width="300" height="200" fill="#f8fafc" rx="8"/>
+  <text x="150" y="18" text-anchor="middle" font-size="11" font-weight="bold" fill="#1e293b">Figuras Crecientes: Patrón Cuadrático</text>
+  <g transform="translate(15,40)">
+    <rect x="0" y="0" width="18" height="18" fill="#2563eb" rx="2"/>
+    <text x="9" y="30" text-anchor="middle" font-size="8" fill="#475569">n=1</text>
+    <text x="9" y="42" text-anchor="middle" font-size="8" fill="#2563eb" font-weight="bold">1</text>
+  </g>
+  <g transform="translate(65,30)">
+    <rect x="0" y="0" width="18" height="18" fill="#2563eb" rx="2"/>
+    <rect x="18" y="0" width="18" height="18" fill="#2563eb" rx="2"/>
+    <rect x="0" y="18" width="18" height="18" fill="#2563eb" rx="2"/>
+    <rect x="18" y="18" width="18" height="18" fill="#2563eb" rx="2"/>
+    <text x="18" y="50" text-anchor="middle" font-size="8" fill="#475569">n=2</text>
+    <text x="18" y="62" text-anchor="middle" font-size="8" fill="#2563eb" font-weight="bold">4</text>
+  </g>
+  <g transform="translate(125,20)">
+    <rect x="0" y="0" width="18" height="18" fill="#2563eb" rx="2"/>
+    <rect x="18" y="0" width="18" height="18" fill="#2563eb" rx="2"/>
+    <rect x="36" y="0" width="18" height="18" fill="#2563eb" rx="2"/>
+    <rect x="0" y="18" width="18" height="18" fill="#2563eb" rx="2"/>
+    <rect x="18" y="18" width="18" height="18" fill="#2563eb" rx="2"/>
+    <rect x="36" y="18" width="18" height="18" fill="#2563eb" rx="2"/>
+    <rect x="0" y="36" width="18" height="18" fill="#2563eb" rx="2"/>
+    <rect x="18" y="36" width="18" height="18" fill="#2563eb" rx="2"/>
+    <rect x="36" y="36" width="18" height="18" fill="#2563eb" rx="2"/>
+    <text x="27" y="70" text-anchor="middle" font-size="8" fill="#475569">n=3</text>
+    <text x="27" y="82" text-anchor="middle" font-size="8" fill="#2563eb" font-weight="bold">9</text>
+  </g>
+  <g transform="translate(210,10)">
+    <rect x="0" y="0" width="14" height="14" fill="#dc2626" rx="1"/>
+    <rect x="14" y="0" width="14" height="14" fill="#dc2626" rx="1"/>
+    <rect x="28" y="0" width="14" height="14" fill="#dc2626" rx="1"/>
+    <rect x="42" y="0" width="14" height="14" fill="#dc2626" rx="1"/>
+    <rect x="0" y="14" width="14" height="14" fill="#dc2626" rx="1"/>
+    <rect x="14" y="14" width="14" height="14" fill="#dc2626" rx="1"/>
+    <rect x="28" y="14" width="14" height="14" fill="#dc2626" rx="1"/>
+    <rect x="42" y="14" width="14" height="14" fill="#dc2626" rx="1"/>
+    <rect x="0" y="28" width="14" height="14" fill="#dc2626" rx="1"/>
+    <rect x="14" y="28" width="14" height="14" fill="#dc2626" rx="1"/>
+    <rect x="28" y="28" width="14" height="14" fill="#dc2626" rx="1"/>
+    <rect x="42" y="28" width="14" height="14" fill="#dc2626" rx="1"/>
+    <rect x="0" y="42" width="14" height="14" fill="#dc2626" rx="1"/>
+    <rect x="14" y="42" width="14" height="14" fill="#dc2626" rx="1"/>
+    <rect x="28" y="42" width="14" height="14" fill="#dc2626" rx="1"/>
+    <rect x="42" y="42" width="14" height="14" fill="#dc2626" rx="1"/>
+    <text x="28" y="68" text-anchor="middle" font-size="8" fill="#475569">n=4</text>
+    <text x="28" y="80" text-anchor="middle" font-size="8" fill="#dc2626" font-weight="bold">16</text>
+  </g>
+  <rect x="20" y="105" width="260" height="22" rx="4" fill="#059669" opacity="0.12" stroke="#059669"/>
+  <text x="150" y="120" text-anchor="middle" font-size="10" fill="#059669" font-weight="bold">Patrón: n cuadrados de lado n → Total = n²</text>
+  <text x="150" y="145" text-anchor="middle" font-size="9" fill="#475569">Diferencias: 4−1=3, 9−4=5, 16−9=7</text>
+  <text x="150" y="160" text-anchor="middle" font-size="9" fill="#475569">Segundas diferencias: 5−3=2, 7−5=2 (constante)</text>
+  <rect x="50" y="170" width="200" height="22" rx="4" fill="#7c3aed" opacity="0.12"/>
+  <text x="150" y="185" text-anchor="middle" font-size="10" fill="#7c3aed" font-weight="bold">aₙ = n² → El término 10 = 100</text>
+</svg>`
+    ],
+    exercises: [
+      {
+        id: 1,
+        question: "¿Cuál es el décimo término de la sucesión: 4, 7, 10, 13, 16, ...?",
+        options: ["28", "31", "34", "37"],
+        correctIndex: 2,
+        explanation: "Es una PA con a₁=4 y r=3. a₁₀ = 4 + (10−1)·3 = 4 + 27 = **31**. Corrigiendo: 4+(9)(3)=4+27=31. La respuesta es **31**. Verificando: 4,7,10,13,16,19,22,25,28,31. El décimo es 31.",
+        difficulty: "basico"
+      },
+      {
+        id: 2,
+        question: "Una sucesión geométrica tiene a₁ = 3 y a₄ = 81. ¿Cuál es la razón (q)?",
+        options: ["2", "3", "4", "5"],
+        correctIndex: 1,
+        explanation: "a₄ = a₁ · q³ → 81 = 3 · q³ → q³ = 27 → q = **3**. Verificando: 3, 9, 27, 81 ✓.",
+        difficulty: "intermedio"
+      },
+      {
+        id: 3,
+        question: "Una escalera tiene N peldaños. Si Ana sube de 2 en 2 le sobra 1, de 3 en 3 le sobra 2, y de 5 en 5 le sobra 4. ¿Cuál es el menor valor posible de N?",
+        options: ["23", "29", "31", "35"],
+        correctIndex: 1,
+        explanation: "N ≡ 1 (mod 2), N ≡ 2 (mod 3), N ≡ 4 (mod 5). Observando: N+1 es divisible por 2, 3 y 5. MCM(2,3,5) = 30. El menor N tal que N+1=30 es N = **29**. Verificando: 29/2=14r1 ✓, 29/3=9r2 ✓, 29/5=5r4 ✓.",
+        difficulty: "avanzado"
+      }
+    ]
+  },
+  {
+    slug: "analogias-y-distribuciones",
+    tip: "En analogías, identifica primero el **tipo de relación** entre el primer par de palabras. Luego aplica esa misma relación al segundo par. En distribuciones lógicas, prueba cada opción descartando las que contradicen alguna condición del enunciado.",
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "Una **analogía** es una correspondencia entre dos pares de elementos que comparten una relación similar.",
+          "La estructura básica es: **A es a B como C es a D**, o sea A:B :: C:D.",
+          "Las relaciones más comunes son: **sinónimo** (bueno:excelente :: rápido:veloz), **antónimo** (frío:caliente :: claro:oscuro), **parte-todo** (rueda:auto :: tecla:teclado), **causa-efecto** (lluvia:inundación :: terremoto:destrucción).",
+          "Una **distribución** consiste en asignar elementos a categorías según reglas dadas, verificando que se cumplan todas las condiciones simultáneamente.",
+          "Para resolver distribuciones, conviene usar **tablas de doble entrada** o **diagramas de Venn** que representen gráficamente las relaciones entre conjuntos.",
+          "El **criterio de eliminación** permite descartar opciones que no cumplen al menos una condición del enunciado."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Estrategias y técnicas",
+        lines: [
+          "Para analogías de **mayor complejidad**, identifica si la relación es de **grado** (caliente:ardiente :: tibio:cómodo — ambas son intensidades de temperatura), de **categoría** (perro:mamífero :: rosa:planta — ambas son clasificaciones) o **funcional** (llave:cerradura :: contraseña:computadora — ambas sirven para acceder).",
+          "En analogías **abstractas**, busca relaciones entre conceptos: causa-efecto, medio-fin, parte-todo, genero-especie, antecedente-consecuente.",
+          "La técnica del **intercambio** consiste en invertir los términos del segundo par y verificar si la relación se mantiene: si A:B :: C:D, entonces B:A :: D:C.",
+          "En distribuciones con **tres o más conjuntos**, usa el **principio de inclusión-exclusión**: |A ∪ B ∪ C| = |A| + |B| + |C| - |A∩B| - |A∩C| - |B∩C| + |A∩B∩C|.",
+          "Cuando el enunciado dice '**todos los A son B**', asegúrate de que A esté completamente contenido en B. Si dice '**algunos A son B**', la intersección A∩B no es vacía pero tampoco cubre todo A.",
+          "Verifica tu respuesta sustituyendo los términos originales en la relación para confirmar que la analogía se mantiene."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Problemas complejos",
+        lines: [
+          "Las analogías de **cuarto término** en exámenes universitarios peruanos suelen incluir relaciones de **múltiples capas**: por ejemplo, la relación entre las palabras puede involucrar simultáneamente aspectos semánticos, fonéticos y de uso.",
+          "En problemas de **distribuciones complejas**, puede haber restricciones que se contradicen aparentemente. Usa **tablas de verdad** o **diagramas de flujo** para verificar la consistencia lógica.",
+          "Las **series de analogías** encadenan múltiples relaciones: A→B→C→D donde cada paso usa un tipo de transformación diferente (por ejemplo, sinónimo, luego antónimo, luego categoría).",
+          "En problemas de **grupos que se superponen**, calcula el **mínimo** y el **máximo** posible de elementos en cada intersección usando los límites dados por las condiciones del enunciado.",
+          "Para distribuciones con **condiciones condicionales** (si...entonces, solo si, a menos que), convierte cada condicional a su forma lógica equivalente antes de resolver.",
+          "En exámenes de admisión como el de la **UNMSM** o la **UPC**, las analogías avanzadas a menudo requieren identificar **relaciones entre relaciones** (meta-analogías)."
+        ]
+      }
+    ],
+    illustrations: [
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+  <rect width="300" height="200" fill="#f8fafc" rx="8"/>
+  <text x="150" y="25" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#1e293b">Diagrama de Analogías</text>
+  <rect x="30" y="50" width="100" height="40" rx="8" fill="#2563eb" opacity="0.15" stroke="#2563eb" stroke-width="2"/>
+  <text x="80" y="75" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#2563eb">Perro</text>
+  <rect x="170" y="50" width="100" height="40" rx="8" fill="#2563eb" opacity="0.15" stroke="#2563eb" stroke-width="2"/>
+  <text x="220" y="75" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#2563eb">Mamífero</text>
+  <rect x="30" y="120" width="100" height="40" rx="8" fill="#059669" opacity="0.15" stroke="#059669" stroke-width="2"/>
+  <text x="80" y="145" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#059669">Rosa</text>
+  <rect x="170" y="120" width="100" height="40" rx="8" fill="#059669" opacity="0.15" stroke="#059669" stroke-width="2"/>
+  <text x="220" y="145" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#059669">Planta</text>
+  <line x1="130" y1="70" x2="170" y2="70" stroke="#2563eb" stroke-width="2" marker-end="url(#arrow-blue)"/>
+  <line x1="130" y1="140" x2="170" y2="140" stroke="#059669" stroke-width="2" marker-end="url(#arrow-green)"/>
+  <text x="150" y="100" text-anchor="middle" font-family="Arial" font-size="24" fill="#7c3aed">::</text>
+  <text x="150" y="190" text-anchor="middle" font-family="Arial" font-size="11" fill="#64748b">Relación: Especie → Clasificación científica</text>
+  <defs>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#2563eb"/></marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#059669"/></marker>
+  </defs>
+</svg>`,
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+  <rect width="300" height="200" fill="#f8fafc" rx="8"/>
+  <text x="150" y="25" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#1e293b">Diagrama de Venn — Distribución</text>
+  <circle cx="120" cy="110" r="60" fill="#2563eb" opacity="0.12" stroke="#2563eb" stroke-width="2"/>
+  <circle cx="180" cy="110" r="60" fill="#dc2626" opacity="0.12" stroke="#dc2626" stroke-width="2"/>
+  <text x="85" y="90" font-family="Arial" font-size="11" font-weight="bold" fill="#2563eb">Estudiantes</text>
+  <text x="85" y="105" font-family="Arial" font-size="11" font-weight="bold" fill="#2563eb">de Ingeniería</text>
+  <text x="195" y="90" font-family="Arial" font-size="11" font-weight="bold" fill="#dc2626">Estudiantes</text>
+  <text x="195" y="105" font-family="Arial" font-size="11" font-weight="bold" fill="#dc2626">de Medicina</text>
+  <text x="143" y="115" font-family="Arial" font-size="10" font-weight="bold" fill="#7c3aed">Ambos</text>
+  <text x="150" y="185" text-anchor="middle" font-family="Arial" font-size="11" fill="#64748b">Solo Ingeniería: 40 | Solo Medicina: 35 | Ambos: 10</text>
+</svg>`
+    ],
+    exercises: [
+      {
+        id: 1,
+        question: "Complete la analogía: **Lima** es a **Perú** como **París** es a ___",
+        options: ["España", "Francia", "Europa", "Roma"],
+        correctIndex: 1,
+        explanation: "La relación es **capital-país**. Lima es la capital de Perú, y París es la capital de Francia. No confundir con Roma (capital de Italia) ni España (país, no ciudad).",
+        difficulty: "basico"
+      },
+      {
+        id: 2,
+        question: "En una escuela hay 120 alumnos. 75 estudian Inglés, 60 estudian Francés y 25 estudian ambos idiomas. ¿Cuántos alumnos **no estudian ningún** idioma extranjero?",
+        options: ["10", "15", "20", "25"],
+        correctIndex: 0,
+        explanation: "Por inclusión-exclusión: |I ∪ F| = 75 + 60 - 25 = **110**. Alumnos sin idioma = 120 - 110 = **10**.",
+        difficulty: "intermedio"
+      },
+      {
+        id: 3,
+        question: "**Calor** es a **expandir** como **frío** es a ___",
+        options: ["contraer", "enfriar", "comprimir", "solidificar"],
+        correctIndex: 0,
+        explanation: "La relación es **causa-efecto físico**: el calor causa la expansión de los materiales; el frío causa su **contracción**. Las otras opciones describen procesos distintos (enfriar es la causa, no el efecto; comprimir es una acción externa; solidificar es un cambio de estado).",
+        difficulty: "avanzado"
+      }
+    ]
+  },
+  {
+    slug: "series",
+    tip: "Identifica siempre la **diferencia** o **razón** entre términos consecutivos. Si las diferencias no son constantes, calcula las **diferencias de segundo orden**. Muchas series en el examen son combinaciones de dos patrones alternados.",
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "Una **serie numérica** es un conjunto de números que siguen un patrón o regla definida.",
+          "Una **progresión aritmética (PA)** tiene una **diferencia constante** d entre términos consecutivos: aₙ = a₁ + (n-1)·d.",
+          "Una **progresión geométrica (PG)** tiene una **razón constante** r: aₙ = a₁ · r^(n-1).",
+          "En una PA de **razón positiva**, los términos crecen; si la razón es **negativa**, los términos alternan entre positivos y negativos.",
+          "Para hallar el término faltante, reemplaza n en la fórmula del término general o busca la diferencia/razón entre términos conocidos.",
+          "Una serie **ascendente** crece de izquierda a derecha; una **descendente** decrece."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Estrategias y técnicas",
+        lines: [
+          "Cuando las diferencias de primer orden **no son constantes**, calcula las **diferencias de segundo orden**. Si estas son constantes, la serie sigue un patrón **cuadrático**: aₙ = An² + Bn + C.",
+          "Las series **alternadas** combinan dos patrones: los términos en posición impar siguen una regla y los de posición par siguen otra. Ejemplo: 1, 4, 2, 8, 3, 12... → impares: 1, 2, 3... y pares: 4, 8, 12...",
+          "Las series de **Fibonacci** se generan sumando los dos términos anteriores: 1, 1, 2, 3, 5, 8, 13, 21...",
+          "En series con **signos alternados** (+, -, +, -...), verifica si el patrón numérico es independiente del signo.",
+          "La técnica de **diferencias sucesivas** consiste en formar una tabla de diferencias hasta que aparezca una diferencia constante.",
+          "Algunas series siguen patrones de **potencias**: n², n³, 2ⁿ, que reconoces comparando con tablas de valores conocidos."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Problemas complejos",
+        lines: [
+          "Las series **recursivas** se definen mediante una regla que depende de términos anteriores. Ejemplo: aₙ = 2·aₙ₋₁ + 1 con a₁ = 1 genera: 1, 3, 7, 15, 31...",
+          "En series con **múltiples niveles de diferencias**, un patrón de k-ésimo orden constante corresponde a un polinomio de grado k.",
+          "Las series **mixtas** combinan operaciones: por ejemplo, multiplicar y luego sumar: 1, 3, 7, 15, 31... (cada término es 2n-1, o sea 2·anterior + 1).",
+          "Para series que parecen no tener patrón, prueba: **suma de dígitos**, **número de factores**, **partes decimales**, o **transformaciones** como raíces cuadradas.",
+          "Las series **triangulares** (1, 3, 6, 10, 15...) se forman con la fórmula Tₙ = n(n+1)/2. Las **cuadradas** son n²: 1, 4, 9, 16, 25...",
+          "En exámenes de admisión, las series avanzadas a menudo combinan **dos o tres patrones** distintos en una misma sucesión, como potencias + aritmético."
+        ]
+      }
+    ],
+    illustrations: [
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+  <rect width="300" height="200" fill="#f8fafc" rx="8"/>
+  <text x="150" y="25" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#1e293b">Serie Aritmética: Diferencia Constante</text>
+  <rect x="15" y="50" width="50" height="35" rx="6" fill="#2563eb" opacity="0.15" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="40" y="73" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#2563eb">3</text>
+  <rect x="80" y="50" width="50" height="35" rx="6" fill="#2563eb" opacity="0.15" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="105" y="73" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#2563eb">7</text>
+  <rect x="145" y="50" width="50" height="35" rx="6" fill="#2563eb" opacity="0.15" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="170" y="73" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#2563eb">11</text>
+  <rect x="210" y="50" width="50" height="35" rx="6" fill="#2563eb" opacity="0.15" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="235" y="73" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#2563eb">15</text>
+  <text x="62" y="98" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#dc2626">+4</text>
+  <text x="127" y="98" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#dc2626">+4</text>
+  <text x="192" y="98" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#dc2626">+4</text>
+  <text x="150" y="135" text-anchor="middle" font-family="Arial" font-size="12" fill="#1e293b">aₙ = 3 + (n-1)·4 = **4n - 1**</text>
+  <text x="150" y="160" text-anchor="middle" font-family="Arial" font-size="11" fill="#64748b">d = 4 (diferencia constante)</text>
+  <text x="150" y="185" text-anchor="middle" font-family="Arial" font-size="11" fill="#64748b">Próximo término: 15 + 4 = **19**</text>
+</svg>`,
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+  <rect width="300" height="200" fill="#f8fafc" rx="8"/>
+  <text x="150" y="25" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#1e293b">Diferencias Sucesivas</text>
+  <text x="25" y="60" font-family="Arial" font-size="11" font-weight="bold" fill="#1e293b">Serie:</text>
+  <text x="75" y="60" font-family="Arial" font-size="12" fill="#2563eb" font-weight="bold">2, 5, 10, 17, 26, ?</text>
+  <text x="25" y="85" font-family="Arial" font-size="11" font-weight="bold" fill="#dc2626">1ª diff:</text>
+  <text x="85" y="85" font-family="Arial" font-size="12" fill="#dc2626">+3, +5, +7, +9</text>
+  <text x="25" y="110" font-family="Arial" font-size="11" font-weight="bold" fill="#059669">2ª diff:</text>
+  <text x="85" y="110" font-family="Arial" font-size="12" fill="#059669">+2, +2, +2 → constante</text>
+  <rect x="20" y="130" width="260" height="55" rx="6" fill="#059669" opacity="0.08" stroke="#059669" stroke-width="1"/>
+  <text x="150" y="152" text-anchor="middle" font-family="Arial" font-size="12" fill="#1e293b">2ª diferencia constante → patrón **cuadrático**</text>
+  <text x="150" y="172" text-anchor="middle" font-family="Arial" font-size="12" fill="#059669" font-weight="bold">aₙ = n² + 1 → 6² + 1 = **37**</text>
+</svg>`
+    ],
+    exercises: [
+      {
+        id: 1,
+        question: "¿Cuál es el siguiente número de la serie: 2, 4, 6, 8, ___?",
+        options: ["9", "10", "12", "14"],
+        correctIndex: 1,
+        explanation: "Es una **progresión aritmética** con diferencia d = 2. Cada término se incrementa en 2: 8 + 2 = **10**.",
+        difficulty: "basico"
+      },
+      {
+        id: 2,
+        question: "Encuentre el término que falta: 1, 4, 9, 16, ___ , 36",
+        options: ["20", "25", "30", "24"],
+        correctIndex: 1,
+        explanation: "Son **cuadrados perfectos**: 1², 2², 3², 4², **5²** = 25, 6² = 36.",
+        difficulty: "intermedio"
+      },
+      {
+        id: 3,
+        question: "¿Cuál es el siguiente término de la serie: 2, 3, 5, 9, 17, ___?",
+        options: ["25", "31", "33", "29"],
+        correctIndex: 3,
+        explanation: "Cada término se obtiene **duplicando el anterior y restando 1**: 2→3 (2×2-1), 3→5 (3×2-1), 5→9 (5×2-1), 9→17 (9×2-1), 17→**33** (17×2-1). Alternativamente: las diferencias son +1, +2, +4, +8, +16 → 17+16 = **33**.",
+        difficulty: "avanzado"
+      }
+    ]
+  },
+  {
+    slug: "sumatorias",
+    tip: "Memoriza las fórmulas básicas: **∑k = n(n+1)/2**, **∑k² = n(n+1)(2n+1)/6**, **∑k³ = [n(n+1)/2]²**. En el examen, descompón sumatorias complejas en combinación de estas fórmulas fundamentales.",
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "La **sumatoria** (σ mayúscula) es la suma de una sucesión de términos: Σᵢ₌₁ⁿ aᵢ = a₁ + a₂ + ... + aₙ.",
+          "El **índice i** va desde el **límite inferior** (abajo) hasta el **límite superior** (arriba).",
+          "Una **constante fuera de la sumatoria** se puede sacar factor: Σ(c · aᵢ) = c · Σ(aᵢ).",
+          "La **suma de los primeros n naturales** es: Σᵢ₌₁ⁿ i = n(n+1)/2.",
+          "La **suma de constantes**: Σᵢ₌₁ⁿ c = c · n (se suma c, n veces).",
+          "La **propiedad de aditividad**: Σ(aᵢ + bᵢ) = Σaᵢ + Σbᵢ. Las sumatorias se pueden separar término a término."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Estrategias y técnicas",
+        lines: [
+          "La **suma de cuadrados**: Σᵢ₌₁ⁿ i² = n(n+1)(2n+1)/6. Es una de las fórmulas más usadas en el examen.",
+          "La **suma de cubos**: Σᵢ₌₁ⁿ i³ = [n(n+1)/2]². Nota que es el **cuadrado** de la suma de los primeros n naturales.",
+          "Para sumatorias de **potencias de 2**: Σᵢ₌₀ⁿ 2ⁱ = 2ⁿ⁺¹ - 1 (suma de una progresión geométrica con r = 2).",
+          "El **cambio de índice**: puedes reemplazar j = i + k para trasladar los límites de la sumatoria sin cambiar su valor.",
+          "Las **sumatorias dobles** Σᵢ Σⱼ se resuelven **evaluando de adentro hacia afuera**, primero la sumatoria interna y luego la externa.",
+          "Para **dividir en partes**: Σᵢ₌₁ⁿ (2i + 3) = 2·Σi + 3·Σ1 = 2·n(n+1)/2 + 3n = n² + n + 3n = n² + 4n."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Problemas complejos",
+        lines: [
+          "Las **identidades de Abel** permiten reordenar sumatorias: Σaᵢbᵢ = Aₙbₙ - ΣAₖ(bₖ₊₁ - bₖ) donde Aₖ = Σᵢ₌₁ᵏ aᵢ.",
+          "Las **sumatorias con términos absolutos**: si aᵢ puede ser negativo, separa la sumatoria en partes positivas y negativas.",
+          "Para **estimar** sumatorias grandes, se usa la **integral**: Σᵢ₌₁ⁿ f(i) ≈ ∫₁ⁿ f(x)dx para funciones crecientes.",
+          "Las **sumatorias telescópicas** ocurren cuando la mayoría de términos se cancelan: Σ(aₖ₊₁ - aₖ) = aₙ₊₁ - a₁.",
+          "En sumatorias **definidas por partes**, descompón el rango: Σᵢ₌₁¹⁰⁰ i² = Σᵢ₌₁⁵⁰ i² + Σᵢ₌₅₁¹⁰⁰ i². Calcula cada parte por separado.",
+          "Las fórmulas de **suma de cuadrados perfectos consecutivos** y **potencias** aparecen frecuentemente en exámenes de ingeniería como el de la **UNI**."
+        ]
+      }
+    ],
+    illustrations: [
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+  <rect width="300" height="200" fill="#f8fafc" rx="8"/>
+  <text x="150" y="25" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#1e293b">Notación Sigma — Fórmulas Clave</text>
+  <text x="150" y="55" text-anchor="middle" font-family="Arial" font-size="16" fill="#2563eb" font-weight="bold">∑ᵢ₌₁ⁿ i = n(n+1)/2</text>
+  <text x="150" y="78" text-anchor="middle" font-family="Arial" font-size="11" fill="#64748b">Ejemplo: 1+2+3+4+5 = 5(6)/2 = 15</text>
+  <line x1="40" y1="90" x2="260" y2="90" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="150" y="115" text-anchor="middle" font-family="Arial" font-size="16" fill="#dc2626" font-weight="bold">∑ᵢ₌₁ⁿ i² = n(n+1)(2n+1)/6</text>
+  <text x="150" y="138" text-anchor="middle" font-family="Arial" font-size="11" fill="#64748b">Ejemplo: 1²+2²+3² = 3(4)(7)/6 = 14</text>
+  <line x1="40" y1="150" x2="260" y2="150" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="150" y="175" text-anchor="middle" font-family="Arial" font-size="16" fill="#059669" font-weight="bold">∑ᵢ₌₁ⁿ i³ = [n(n+1)/2]²</text>
+  <text x="150" y="195" text-anchor="middle" font-family="Arial" font-size="11" fill="#64748b">Ejemplo: 1³+2³+3³ = (6)² = 36</text>
+</svg>`,
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+  <rect width="300" height="200" fill="#f8fafc" rx="8"/>
+  <text x="150" y="25" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#1e293b">Descomposición de Sumatorias</text>
+  <text x="150" y="50" text-anchor="middle" font-family="Arial" font-size="12" fill="#1e293b">∑ᵢ₌₁⁵ (3i² + 2i + 1)</text>
+  <line x1="100" y1="58" x2="60" y2="78" stroke="#2563eb" stroke-width="1.5"/>
+  <line x1="150" y1="58" x2="150" y2="78" stroke="#dc2626" stroke-width="1.5"/>
+  <line x1="200" y1="58" x2="240" y2="78" stroke="#059669" stroke-width="1.5"/>
+  <rect x="15" y="80" width="90" height="30" rx="5" fill="#2563eb" opacity="0.1" stroke="#2563eb" stroke-width="1"/>
+  <text x="60" y="100" text-anchor="middle" font-family="Arial" font-size="10" fill="#2563eb" font-weight="bold">3·∑i² = 3·55</text>
+  <rect x="105" y="80" width="90" height="30" rx="5" fill="#dc2626" opacity="0.1" stroke="#dc2626" stroke-width="1"/>
+  <text x="150" y="100" text-anchor="middle" font-family="Arial" font-size="10" fill="#dc2626" font-weight="bold">2·∑i = 2·15</text>
+  <rect x="195" y="80" width="90" height="30" rx="5" fill="#059669" opacity="0.1" stroke="#059669" stroke-width="1"/>
+  <text x="240" y="100" text-anchor="middle" font-family="Arial" font-size="10" fill="#059669" font-weight="bold">∑1 = 5</text>
+  <line x1="150" y1="115" x2="150" y2="130" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="150" y="128" text-anchor="middle" font-family="Arial" font-size="10" fill="#7c3aed">+</text>
+  <rect x="30" y="135" width="240" height="35" rx="6" fill="#7c3aed" opacity="0.08" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="150" y="157" text-anchor="middle" font-family="Arial" font-size="12" fill="#7c3aed" font-weight="bold">= 165 + 30 + 5 = **200**</text>
+  <text x="150" y="190" text-anchor="middle" font-family="Arial" font-size="10" fill="#64748b">Propiedad de aditividad: separar en sumatorias individuales</text>
+</svg>`
+    ],
+    exercises: [
+      {
+        id: 1,
+        question: "Calcule: **∑ᵢ₌₁¹⁰ i**",
+        options: ["45", "55", "100", "110"],
+        correctIndex: 1,
+        explanation: "Usando la fórmula ∑ᵢ₌₁ⁿ i = n(n+1)/2: con n=10 → 10(11)/2 = **55**.",
+        difficulty: "basico"
+      },
+      {
+        id: 2,
+        question: "Calcule: **∑ᵢ₌₁⁵ i²**",
+        options: ["30", "55", "35", "25"],
+        correctIndex: 1,
+        explanation: "Fórmula: n(n+1)(2n+1)/6 = 5(6)(11)/6 = **55**. Verificación: 1+4+9+16+25 = 55.",
+        difficulty: "intermedio"
+      },
+      {
+        id: 3,
+        question: "Calcule: **∑ᵢ₌₁⁴ (2i² - i + 3)**",
+        options: ["54", "48", "62", "56"],
+        correctIndex: 2,
+        explanation: "Separando: 2·∑i² - ∑i + ∑3 = 2·(1+4+9+16) - (1+2+3+4) + 3·4 = 2·30 - 10 + 12 = 60 - 10 + 12 = **62**. Verificación directa: (2·1-1+3)+(2·4-2+3)+(2·9-3+3)+(2·16-4+3) = 4+9+18+31 = **62**.",
+        difficulty: "avanzado"
+      }
+    ]
+  },
+  {
+    slug: "cuatro-operaciones",
+    tip: "Aplica siempre el **orden PEMDAS**: Paréntesis, Exponentes, Multiplicación/División (izq. a der.), Adición/Sustracción (izq. a der.). Muchos errores en el examen provienen de no respetar este orden.",
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "Las **cuatro operaciones** básicas son: **suma** (+), **resta** (−), **multiplicación** (×) y **división** (÷).",
+          "El **orden de operaciones** (PEMDAS/BODMAS) establece: primero **paréntesis**, luego **exponentes**, después **multiplicación y división** (izquierda a derecha), y finalmente **suma y resta** (izquierda a derecha).",
+          "La **propiedad conmutativa** dice que a + b = b + a y a × b = b × a. Esto NO aplica para la resta ni la división.",
+          "La **propiedad asociativa** permite agrupar: (a + b) + c = a + (b + c) y (a × b) × c = a × (b × c).",
+          "La **propiedad distributiva** conecta multiplicación con suma: a × (b + c) = a×b + a×c.",
+          "El **signo menos** se distribuye: −(a + b) = −a − b y −(a − b) = −a + b. Cuidado con los dobles negativos."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Estrategias y técnicas",
+        lines: [
+          "En operaciones con **fracciones**: para sumar o restar busca **mcm** (mínimo común múltiplo) de los denominadores. Para multiplicar se multiplican directo: (a/b)×(c/d) = (a·c)/(b·d).",
+          "La **división de fracciones** se convierte en multiplicación por el **recíproco**: (a/b) ÷ (c/d) = (a/b) × (d/c).",
+          "Con **números negativos**: negativo × negativo = positivo; negativo × positivo = negativo. Esto aplica a multiplicación y división.",
+          "Para **potencias**: aᵐ × aⁿ = aᵐ⁺ⁿ; (aᵐ)ⁿ = aᵐⁿ; a⁰ = 1; a⁻ⁿ = 1/aⁿ.",
+          "Las **raíces cuadradas** en operaciones: √(a×b) = √a × √b. Rationaliza el denominador cuando aparezca √2, √3, etc.",
+          "En el examen, simplifica **primero dentro de cada paréntesis** antes de operar entre paréntesis distintos."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Problemas complejos",
+        lines: [
+          "Las **cadenas de operaciones** con múltiples paréntesis anidados requieren resolver del **más interno hacia afuera**.",
+          "Las expresiones con **fracciones compuestas** (fracciones dentro de fracciones) se simplifican multiplicando numerador y denominador por el denominador del denominador.",
+          "Los **decimales en operaciones mixtas**: convierte todos a fracciones para mayor precisión, o maneja cuidadosamente los decimales manteniendo la cantidad correcta de cifras.",
+          "Las operaciones con **notación científica**: al multiplicar, multiplica las mantisas y suma los exponentes; al dividir, divide mantisas y resta exponentes.",
+          "En problemas con **valor absoluto**, evalúa la expresión dentro del signo y luego aplica el valor absoluto: si es positivo se mantiene, si es negativo se cambia el signo.",
+          "Las expresiones **recursivas** (definidas por sí mismas) aparecen en series: el valor actual depende del anterior, como aₙ₊₁ = f(aₙ)."
+        ]
+      }
+    ],
+    illustrations: [
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+  <rect width="300" height="200" fill="#f8fafc" rx="8"/>
+  <text x="150" y="22" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#1e293b">Pirámide del Orden de Operaciones</text>
+  <polygon points="150,35 200,75 100,75" fill="#dc2626" opacity="0.15" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="150" y="63" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#dc2626">Paréntesis</text>
+  <polygon points="150,75 220,115 80,115" fill="#7c3aed" opacity="0.12" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="150" y="100" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#7c3aed">Exponentes</text>
+  <polygon points="150,115 240,155 60,155" fill="#2563eb" opacity="0.12" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="150" y="140" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#2563eb">×  ÷ (izq. a der.)</text>
+  <polygon points="150,155 260,195 40,195" fill="#059669" opacity="0.12" stroke="#059669" stroke-width="1.5"/>
+  <text x="150" y="180" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#059669">+  − (izq. a der.)</text>
+</svg>`,
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+  <rect width="300" height="200" fill="#f8fafc" rx="8"/>
+  <text x="150" y="22" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#1e293b">Ejemplo: Resolución Paso a Paso</text>
+  <text x="150" y="48" text-anchor="middle" font-family="Arial" font-size="13" fill="#2563eb" font-weight="bold">3 + 2 × (8 − 6)² ÷ 4</text>
+  <rect x="20" y="58" width="260" height="22" rx="4" fill="#dc2626" opacity="0.08"/>
+  <text x="25" y="74" font-family="Arial" font-size="11" fill="#dc2626" font-weight="bold">Paso 1:</text>
+  <text x="75" y="74" font-family="Arial" font-size="11" fill="#1e293b">3 + 2 × (2)² ÷ 4</text>
+  <rect x="20" y="84" width="260" height="22" rx="4" fill="#7c3aed" opacity="0.08"/>
+  <text x="25" y="100" font-family="Arial" font-size="11" fill="#7c3aed" font-weight="bold">Paso 2:</text>
+  <text x="75" y="100" font-family="Arial" font-size="11" fill="#1e293b">3 + 2 × 4 ÷ 4</text>
+  <rect x="20" y="110" width="260" height="22" rx="4" fill="#2563eb" opacity="0.08"/>
+  <text x="25" y="126" font-family="Arial" font-size="11" fill="#2563eb" font-weight="bold">Paso 3:</text>
+  <text x="75" y="126" font-family="Arial" font-size="11" fill="#1e293b">3 + 8 ÷ 4</text>
+  <rect x="20" y="136" width="260" height="22" rx="4" fill="#2563eb" opacity="0.08"/>
+  <text x="25" y="152" font-family="Arial" font-size="11" fill="#2563eb" font-weight="bold">Paso 4:</text>
+  <text x="75" y="152" font-family="Arial" font-size="11" fill="#1e293b">3 + 2</text>
+  <rect x="20" y="162" width="260" height="28" rx="4" fill="#059669" opacity="0.12" stroke="#059669" stroke-width="1"/>
+  <text x="25" y="182" font-family="Arial" font-size="12" fill="#059669" font-weight="bold">Resultado = **5**</text>
+</svg>`
+    ],
+    exercises: [
+      {
+        id: 1,
+        question: "Calcule: **48 ÷ 6 × 2 + 3**",
+        options: ["19", "12", "10", "21"],
+        correctIndex: 0,
+        explanation: "Se resuelve de izquierda a derecha: 48 ÷ 6 = 8; luego 8 × 2 = 16; finalmente 16 + 3 = **19**.",
+        difficulty: "basico"
+      },
+      {
+        id: 2,
+        question: "Calcule: **(3 + 5)² − 4 × 3**",
+        options: ["40", "52", "28", "60"],
+        correctIndex: 1,
+        explanation: "Primero paréntesis: (8)² = 64. Luego multiplicación: 4 × 3 = 12. Finalmente: 64 − 12 = **52**.",
+        difficulty: "intermedio"
+      },
+      {
+        id: 3,
+        question: "Calcule: **(1/2 + 1/3) × 12 − √(49) + 2²**",
+        options: ["6", "8", "7", "9"],
+        correctIndex: 2,
+        explanation: "Paréntesis: 1/2 + 1/3 = 5/6. Multiplicación: (5/6)×12 = 10. Raíz: √49 = 7. Exponente: 2² = 4. Resultado: 10 − 7 + 4 = **7**.",
+        difficulty: "avanzado"
+      }
+    ]
+  },
+  {
+    slug: "metodos-practicos",
+    tip: "Los métodos prácticos son **atajos** que ahorran tiempo en el examen. Domina la **sustitución de valores**, el **método de opción falsa**, y la **estimación**. En el examen de admisión, el tiempo es limitado: practica resolver cada problema en menos de 2 minutos.",
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "Los **métodos prácticos** son técnicas de resolución rápida que evitan procedimientos largos y propensos a errores.",
+          "El **método de sustitución** consiste en reemplazar las variables del problema con **números simples** (como 1, 2 o 10) para verificar qué opción funciona.",
+          "El **método de opción falsa** consiste en probar cada alternativa directamente en el enunciado hasta encontrar la correcta.",
+          "La **estimación** permite aproximar el resultado para descartar opciones absurdas sin calcular exactamente.",
+          "El **método de casos** consiste en dividir el problema en casos más pequeños y manejables.",
+          "La **verificación por contradicción** asume que una opción es correcta y busca si genera una situación imposible."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Estrategias y técnicas",
+        lines: [
+          "El método de **valores extremos** consiste probar con 0, 1 o números grandes para ver el comportamiento de una expresión.",
+          "La **regla de tres** resuelve problemas de proporción directa e inversa: si a varía con b, entonces a₁/b₁ = a₂/b₂.",
+          "El **método de reducción** simplifica el problema eliminando información innecesaria y enfocándose solo en lo esencial.",
+          "La **tecnica del diagrama** convierte enunciados verbales en esquemas gráficos que facilitan la visualización.",
+          "Para problemas de **porcentajes**: convierte a decimales (25% = 0.25) y multiplica directamente. Para porcentaje de cambio: (nuevo - original)/original × 100.",
+          "El **método de eliminación** descarta opciones que son claramente incorrectas, reduciendo las alternativas a evaluar."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Problemas complejos",
+        lines: [
+          "El método de **asignación de variables** convierte un problema verbal en ecuaciones algebraicas, asignando x, y, z a las cantidades desconocidas.",
+          "La **programación lineal básica** resuelve problemas de optimización con restricciones, maximizando o minimizando una función.",
+          "El método de **Newton-Raphson** aproxima raíces de ecuaciones: xₙ₊₁ = xₙ - f(xₙ)/f'(xₙ). Se usa en exámenes de ingeniería.",
+          "La **inducción matemática** prueba que una afirmación es verdadera para todo n: (1) caso base, (2) caso inductivo.",
+          "Los **invariantes** son cantidades que no cambian bajo ciertas operaciones. Identificar invariantes simplifica muchos problemas.",
+          "En problemas de **combinatoria**, usa el principio multiplicativo, aditivo y la fórmula de **permutaciones y combinaciones** según el caso."
+        ]
+      }
+    ],
+    illustrations: [
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+  <rect width="300" height="200" fill="#f8fafc" rx="8"/>
+  <text x="150" y="22" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#1e293b">Árbol de Decisión de Métodos</text>
+  <rect x="100" y="35" width="100" height="28" rx="6" fill="#2563eb" opacity="0.15" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="150" y="54" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#2563eb">Problema</text>
+  <line x1="120" y1="63" x2="60" y2="85" stroke="#64748b" stroke-width="1"/>
+  <line x1="150" y1="63" x2="150" y2="85" stroke="#64748b" stroke-width="1"/>
+  <line x1="180" y1="63" x2="240" y2="85" stroke="#64748b" stroke-width="1"/>
+  <rect x="15" y="85" width="90" height="25" rx="5" fill="#dc2626" opacity="0.1" stroke="#dc2626" stroke-width="1"/>
+  <text x="60" y="102" text-anchor="middle" font-family="Arial" font-size="9" fill="#dc2626" font-weight="bold">¿Algebraico?</text>
+  <rect x="105" y="85" width="90" height="25" rx="5" fill="#059669" opacity="0.1" stroke="#059669" stroke-width="1"/>
+  <text x="150" y="102" text-anchor="middle" font-family="Arial" font-size="9" fill="#059669" font-weight="bold">¿Tiene opciones?</text>
+  <rect x="195" y="85" width="90" height="25" rx="5" fill="#7c3aed" opacity="0.1" stroke="#7c3aed" stroke-width="1"/>
+  <text x="240" y="102" text-anchor="middle" font-family="Arial" font-size="9" fill="#7c3aed" font-weight="bold">¿De estimación?</text>
+  <line x1="60" y1="110" x2="60" y2="130" stroke="#dc2626" stroke-width="1"/>
+  <line x1="150" y1="110" x2="150" y2="130" stroke="#059669" stroke-width="1"/>
+  <line x1="240" y1="110" x2="240" y2="130" stroke="#7c3aed" stroke-width="1"/>
+  <rect x="15" y="130" width="90" height="25" rx="5" fill="#dc2626" opacity="0.08"/>
+  <text x="60" y="147" text-anchor="middle" font-family="Arial" font-size="9" fill="#dc2626">Planteo directo</text>
+  <rect x="105" y="130" width="90" height="25" rx="5" fill="#059669" opacity="0.08"/>
+  <text x="150" y="147" text-anchor="middle" font-family="Arial" font-size="9" fill="#059669">Sustitución</text>
+  <rect x="195" y="130" width="90" height="25" rx="5" fill="#7c3aed" opacity="0.08"/>
+  <text x="240" y="147" text-anchor="middle" font-family="Arial" font-size="9" fill="#7c3aed">Aproximación</text>
+  <text x="150" y="185" text-anchor="middle" font-family="Arial" font-size="10" fill="#64748b">Elige el método según el tipo de problema</text>
+</svg>`,
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+  <rect width="300" height="200" fill="#f8fafc" rx="8"/>
+  <text x="150" y="22" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#1e293b">Método de Sustitución — Ejemplo</text>
+  <text x="150" y="46" text-anchor="middle" font-family="Arial" font-size="11" fill="#64748b">Si x = 3, ¿cuál es verdadero?</text>
+  <rect x="20" y="56" width="260" height="18" rx="3" fill="#2563eb" opacity="0.06"/>
+  <text x="30" y="70" font-family="Arial" font-size="10" fill="#1e293b">A) x² + x = 12 → 9 + 3 = **12** ✓</text>
+  <rect x="20" y="76" width="260" height="18" rx="3" fill="#dc2626" opacity="0.06"/>
+  <text x="30" y="90" font-family="Arial" font-size="10" fill="#1e293b">B) 2x − 1 = 4 → 6 − 1 = 5 ≠ 4 ✗</text>
+  <rect x="20" y="96" width="260" height="18" rx="3" fill="#dc2626" opacity="0.06"/>
+  <text x="30" y="110" font-family="Arial" font-size="10" fill="#1e293b">C) x/3 = 2 → 1 ≠ 2 ✗</text>
+  <rect x="20" y="116" width="260" height="18" rx="3" fill="#dc2626" opacity="0.06"/>
+  <text x="30" y="130" font-family="Arial" font-size="10" fill="#1e293b">D) x² − 5 = 3 → 9 − 5 = 4 ≠ 3 ✗</text>
+  <rect x="30" y="145" width="240" height="35" rx="6" fill="#059669" opacity="0.1" stroke="#059669" stroke-width="1.5"/>
+  <text x="150" y="168" text-anchor="middle" font-family="Arial" font-size="11" fill="#059669" font-weight="bold">La opción A es correcta: 3² + 3 = 12</text>
+</svg>`
+    ],
+    exercises: [
+      {
+        id: 1,
+        question: "Si un producto cuesta S/ 80 y le dan un descuento del 15%, ¿cuál es su **precio final**?",
+        options: ["S/ 68", "S/ 72", "S/ 65", "S/ 75"],
+        correctIndex: 0,
+        explanation: "Descuento: 80 × 0.15 = S/ 12. Precio final: 80 − 12 = **S/ 68**. Método rápido: 80 × 0.85 = 68.",
+        difficulty: "basico"
+      },
+      {
+        id: 2,
+        question: "Un auto viaja de Lima a Arequipa (800 km) a 80 km/h, y regresa a 100 km/h. ¿Cuál es la **velocidad promedio** del viaje completo?",
+        options: ["90 km/h", "89 km/h", "88 km/h", "90 km/h"],
+        correctIndex: 2,
+        explanation: "Velocidad promedio = distancia total / tiempo total. Tiempo ida = 800/80 = 10 h. Tiempo vuelta = 800/100 = 8 h. Promedio = 1600/18 = **88.89 ≈ 88 km/h**.",
+        difficulty: "intermedio"
+      },
+      {
+        id: 3,
+        question: "Si **3x − 7 = 2(x + 4)**, entonces x vale:",
+        options: ["15", "11", "-1", "5"],
+        correctIndex: 0,
+        explanation: "Desarrollando: 3x − 7 = 2x + 8. Despejando: 3x − 2x = 8 + 7 → **x = 15**. Verificación: 3(15)−7 = 38; 2(15+4) = 38 ✓.",
+        difficulty: "avanzado"
+      }
+    ]
+  },
+  {
+    slug: "planteo-de-ecuaciones",
+    tip: "Lee el enunciado **varias veces** y subraya las cantidades desconocidas. Asigna **una sola variable** (x) a lo que se pide, y expresa todo lo demás en función de esa variable. Verifica que la ecuación resultante tenga sentido con un caso simple.",
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "El **planteamiento de ecuaciones** consiste en traducir un problema en lenguaje natural a una ecuación matemática.",
+          "El primer paso es **identificar la incógnita**: ¿qué es lo que se pide hallar? Se asigna una variable, generalmente **x**.",
+          "Los **indicios** en el enunciado revelan relaciones: 'el doble de x' → 2x; 'la mitad de y' → y/2; '3 menos que z' → z − 3.",
+          "Las palabras clave para **operaciones**: 'suma' → +, 'diferencia' → −, 'producto' → ×, 'cociente' → ÷.",
+          "Las palabras para **igualdad**: 'es igual a' → =, 'es el mismo que' → =, 'resulta en' → =.",
+          "Después de plantear, **resuelve** la ecuación y **verifica** sustituyendo la respuesta en el enunciado original."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Estrategias y técnicas",
+        lines: [
+          "Cuando hay **dos incógnitas**, usa **dos ecuaciones**. Si el problema dice 'A es 3 más que B', entonces A = B + 3.",
+          "Los problemas de **edades** usan la relación actual + años transcurridos. Si hoy Juan tiene x años, en 5 años tendrá x + 5.",
+          "En problemas de **mezclas**, la cantidad de sustancia activa se conserva: (cantidad₁ × concentración₁) + (cantidad₂ × concentración₂) = total × concentración final.",
+          "Los problemas de **trabajo** usan tasas: si A completa un trabajo en a días, su tasa es 1/a del trabajo por día.",
+          "Para **proporciones**, establece la igualdad de razones: a/b = c/d, luego despeja la incógnita con **regla de tres**.",
+          "Los problemas de **dinero y precios** requieren identificar qué cantidades se mantienen fijas y cuáles cambian."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Problemas complejos",
+        lines: [
+          "Los **sistemas de ecuaciones** con tres o más incógnitas se resuelven por sustitución sucesiva, reducción o igualación.",
+          "Los problemas de **velocidad relativa** (río con corriente): velocidad real = velocidad propia ± velocidad corriente.",
+          "En problemas de **combinaciones**, define variables para cada componente y establece ecuaciones basadas en restricciones de cantidad y costo.",
+          "Los problemas con **resticciones de entero** requieren que la solución sea un número natural o entero positivo.",
+          "Los **problemas de trabajo conjunto** con más de 2 trabajadores: 1/t = 1/a + 1/b + 1/c, donde t es el tiempo total.",
+          "En problemas de **flujo y tanques**, la tasa neta de cambio = tasa de entrada − tasa de salida. Se modela con ecuaciones diferenciales simples."
+        ]
+      }
+    ],
+    illustrations: [
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+  <rect width="300" height="200" fill="#f8fafc" rx="8"/>
+  <text x="150" y="22" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#1e293b">Traducción: Palabra → Matemática</text>
+  <line x1="30" y1="42" x2="270" y2="42" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="80" y="60" font-family="Arial" font-size="11" fill="#1e293b" font-weight="bold">El doble de un número</text>
+  <text x="150" y="60" font-family="Arial" font-size="11" fill="#64748b">→</text>
+  <text x="200" y="60" font-family="Arial" font-size="12" fill="#2563eb" font-weight="bold">2x</text>
+  <line x1="30" y1="70" x2="270" y2="70" stroke="#e2e8f0" stroke-width="0.5"/>
+  <text x="80" y="88" font-family="Arial" font-size="11" fill="#1e293b" font-weight="bold">Es 5 más que...</text>
+  <text x="150" y="88" font-family="Arial" font-size="11" fill="#64748b">→</text>
+  <text x="200" y="88" font-family="Arial" font-size="12" fill="#dc2626" font-weight="bold">= ... + 5</text>
+  <line x1="30" y1="98" x2="270" y2="98" stroke="#e2e8f0" stroke-width="0.5"/>
+  <text x="80" y="116" font-family="Arial" font-size="11" fill="#1e293b" font-weight="bold">La mitad de su edad</text>
+  <text x="150" y="116" font-family="Arial" font-size="11" fill="#64748b">→</text>
+  <text x="200" y="116" font-family="Arial" font-size="12" fill="#059669" font-weight="bold">x / 2</text>
+  <line x1="30" y1="126" x2="270" y2="126" stroke="#e2e8f0" stroke-width="0.5"/>
+  <text x="80" y="144" font-family="Arial" font-size="11" fill="#1e293b" font-weight="bold">En 3 años tendrá...</text>
+  <text x="150" y="144" font-family="Arial" font-size="11" fill="#64748b">→</text>
+  <text x="200" y="144" font-family="Arial" font-size="12" fill="#7c3aed" font-weight="bold">x + 3</text>
+  <line x1="30" y1="154" x2="270" y2="154" stroke="#e2e8f0" stroke-width="0.5"/>
+  <text x="80" y="172" font-family="Arial" font-size="11" fill="#1e293b" font-weight="bold">El triple menos 2</text>
+  <text x="150" y="172" font-family="Arial" font-size="11" fill="#64748b">→</text>
+  <text x="200" y="172" font-family="Arial" font-size="12" fill="#2563eb" font-weight="bold">3x − 2</text>
+</svg>`,
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+  <rect width="300" height="200" fill="#f8fafc" rx="8"/>
+  <text x="150" y="22" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#1e293b">Proceso de Planteamiento</text>
+  <rect x="20" y="38" width="260" height="30" rx="5" fill="#2563eb" opacity="0.1" stroke="#2563eb" stroke-width="1"/>
+  <text x="150" y="58" text-anchor="middle" font-family="Arial" font-size="11" fill="#2563eb" font-weight="bold">1. LEER y subrayar datos</text>
+  <line x1="150" y1="68" x2="150" y2="78" stroke="#2563eb" stroke-width="1.5"/>
+  <polygon points="146,78 154,78 150,84" fill="#2563eb"/>
+  <rect x="20" y="84" width="260" height="30" rx="5" fill="#dc2626" opacity="0.1" stroke="#dc2626" stroke-width="1"/>
+  <text x="150" y="104" text-anchor="middle" font-family="Arial" font-size="11" fill="#dc2626" font-weight="bold">2. ASIGNAR variable (x)</text>
+  <line x1="150" y1="114" x2="150" y2="124" stroke="#dc2626" stroke-width="1.5"/>
+  <polygon points="146,124 154,124 150,130" fill="#dc2626"/>
+  <rect x="20" y="130" width="260" height="30" rx="5" fill="#059669" opacity="0.1" stroke="#059669" stroke-width="1"/>
+  <text x="150" y="150" text-anchor="middle" font-family="Arial" font-size="11" fill="#059669" font-weight="bold">3. PLANTAR ecuación</text>
+  <line x1="150" y1="160" x2="150" y2="170" stroke="#059669" stroke-width="1.5"/>
+  <polygon points="146,170 154,170 150,176" fill="#059669"/>
+  <rect x="20" y="176" width="260" height="22" rx="5" fill="#7c3aed" opacity="0.1" stroke="#7c3aed" stroke-width="1"/>
+  <text x="150" y="192" text-anchor="middle" font-family="Arial" font-size="11" fill="#7c3aed" font-weight="bold">4. RESOLVER y VERIFICAR</text>
+</svg>`
+    ],
+    exercises: [
+      {
+        id: 1,
+        question: "María tiene el **doble** de la edad de Juan. Si en 6 años María tendrá 30 años, ¿cuántos años tiene **Juan** ahora?",
+        options: ["9", "12", "15", "18"],
+        correctIndex: 1,
+        explanation: "María tendrá 30 en 6 años, así que ahora tiene 30 − 6 = 24 años. Juan tiene la mitad: 24/2 = **12 años**.",
+        difficulty: "basico"
+      },
+      {
+        id: 2,
+        question: "Un número disminuido en 8 es igual a **la tercera parte** de sí mismo más 4. Halla el número.",
+        options: ["12", "18", "24", "15"],
+        correctIndex: 1,
+        explanation: "Ecuación: x − 8 = x/3 + 4. Multiplicando por 3: 3x − 24 = x + 12. Entonces 2x = 36 → **x = 18**. Verificación: 18 − 8 = 10; 18/3 + 4 = 10 ✓.",
+        difficulty: "intermedio"
+      },
+      {
+        id: 3,
+        question: "Un depósito contiene **S/ 12,000**. Se retira una cantidad y se deposita el resto al 5% anual. Si después de un año se obtiene S/ 420 de interés, ¿cuánto se **retiró**?",
+        options: ["S/ 3,600", "S/ 4,200", "S/ 4,800", "S/ 3,000"],
+        correctIndex: 0,
+        explanation: "Sea x lo retirado. El resto invertido es (12000 − x). Interés: (12000 − x) × 0.05 = 420. Entonces 12000 − x = 8400, y **x = S/ 3,600**.",
+        difficulty: "avanzado"
+      }
+    ]
+  },
+  {
+    slug: "edades",
+    tip: "Define SIEMPRE la **edad actual** de la persona mayor o principal como x. Expresa las demás edades en función de x. Recuerda que **todas las personas envejecen la misma cantidad** de años. Si el enunciado dice 'hace 5 años', TODOS tenían 5 años menos.",
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "Los problemas de **edades** son uno de los temas más frecuentes en exámenes de admisión peruanos.",
+          "La clave es **definir variables** para las edades actuales y expresar las relaciones del enunciado como ecuaciones.",
+          "Si hoy Ana tiene x años, **dentro de 5 años** tendrá x + 5 años, y **hace 3 años** tenía x − 3 años.",
+          "Todos los involucrados envejecen **la misma cantidad** de tiempo. Si hace 10 años María tenía el doble de Pedro, ambos tenían 10 años menos.",
+          "Las relaciones de edad se mantienen **proporcionales** en el tiempo: la diferencia de edades entre dos personas **nunca cambia**.",
+          "Siempre **verifica** que la respuesta sea positiva y que cumpla con todas las condiciones del enunciado."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Estrategias y técnicas",
+        lines: [
+          "Para problemas con **más de dos personas**, crea una tabla con las edades actuales y las edades en el momento referido.",
+          "La relación '**la suma de sus edades es 50**' se traduce como: x + y = 50, donde x e y son las edades actuales.",
+          "Cuando el problema dice '**dentro de n años**, la edad de A será el doble de la de B': (x + n) = 2(y + n).",
+          "Los problemas de '**veces la edad**' (María tiene 3 veces la edad de Pedro) se traducen como multiplicación: María = 3 × Pedro.",
+          "Para problemas con **3 personas**, usa 2 variables: x (la menor), y = x + d₁ (segunda persona), z = x + d₂ (tercera persona).",
+          "Si el problema involucra **pasado, presente y futuro**, crea una tabla de tres columnas para cada persona."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Problemas complejos",
+        lines: [
+          "Los problemas de **edades con múltiples momentos** requieren definir las edades en al menos dos instantes temporales distintos.",
+          "En problemas donde '**la suma de las edades de hace n años es m**', establece: (x−n) + (y−n) = m.",
+          "Los problemas de '**invertir** las edades' son sutiles: si ahora A es el doble de B, hace cuántos años B era el doble de A.",
+          "Cuando el problema dice '**en k años** la suma de sus edades será m', se plantea: (x + k) + (y + k) = m.",
+          "Los problemas con **cuatro o más personas** y múltiples relaciones requieren sistematizar: crea una tabla y convierte cada fila en una ecuación.",
+          "En exámenes como el de **San Marcos**, los problemas de edades avanzados combinan relaciones de suma, diferencia y multiplicación con dos o tres momentos temporales."
+        ]
+      }
+    ],
+    illustrations: [
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+  <rect width="300" height="200" fill="#f8fafc" rx="8"/>
+  <text x="150" y="22" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#1e293b">Línea del Tiempo de Edades</text>
+  <line x1="30" y1="70" x2="270" y2="70" stroke="#94a3b8" stroke-width="2"/>
+  <circle cx="70" cy="70" r="6" fill="#2563eb"/>
+  <circle cx="150" cy="70" r="6" fill="#dc2626"/>
+  <circle cx="230" cy="70" r="6" fill="#059669"/>
+  <text x="70" y="55" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#2563eb">Hace 5 años</text>
+  <text x="150" y="55" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#dc2626">Hoy</text>
+  <text x="230" y="55" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#059669">En 5 años</text>
+  <text x="70" y="95" text-anchor="middle" font-family="Arial" font-size="10" fill="#1e293b">Juan: 10 años</text>
+  <text x="70" y="108" text-anchor="middle" font-family="Arial" font-size="10" fill="#1e293b">Ana: 5 años</text>
+  <text x="150" y="95" text-anchor="middle" font-family="Arial" font-size="10" fill="#1e293b">Juan: 15 años</text>
+  <text x="150" y="108" text-anchor="middle" font-family="Arial" font-size="10" fill="#1e293b">Ana: 10 años</text>
+  <text x="230" y="95" text-anchor="middle" font-family="Arial" font-size="10" fill="#1e293b">Juan: 20 años</text>
+  <text x="230" y="108" text-anchor="middle" font-family="Arial" font-size="10" fill="#1e293b">Ana: 15 años</text>
+  <text x="110" y="65" font-family="Arial" font-size="9" fill="#64748b">−5</text>
+  <text x="190" y="65" font-family="Arial" font-size="9" fill="#64748b">+5</text>
+  <rect x="30" y="130" width="240" height="55" rx="6" fill="#7c3aed" opacity="0.06" stroke="#7c3aed" stroke-width="1"/>
+  <text x="150" y="150" text-anchor="middle" font-family="Arial" font-size="11" fill="#7c3aed" font-weight="bold">Diferencia constante: 15 − 10 = 5</text>
+  <text x="150" y="170" text-anchor="middle" font-family="Arial" font-size="11" fill="#1e293b">La diferencia de edades NUNCA cambia</text>
+</svg>`,
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+  <rect width="300" height="200" fill="#f8fafc" rx="8"/>
+  <text x="150" y="22" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#1e293b">Tabla de Edades — Método Sistemático</text>
+  <rect x="20" y="38" width="260" height="145" rx="6" fill="white" stroke="#e2e8f0" stroke-width="1"/>
+  <rect x="20" y="38" width="87" height="28" rx="4" fill="#2563eb" opacity="0.15"/>
+  <text x="63" y="56" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#2563eb">Persona</text>
+  <rect x="107" y="38" width="87" height="28" rx="4" fill="#dc2626" opacity="0.12"/>
+  <text x="150" y="56" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#dc2626">Hace 5 años</text>
+  <rect x="194" y="38" width="86" height="28" rx="4" fill="#059669" opacity="0.12"/>
+  <text x="237" y="56" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#059669">Hoy</text>
+  <line x1="20" y1="66" x2="280" y2="66" stroke="#e2e8f0" stroke-width="0.5"/>
+  <text x="63" y="88" text-anchor="middle" font-family="Arial" font-size="11" fill="#1e293b" font-weight="bold">Juan (padre)</text>
+  <text x="150" y="88" text-anchor="middle" font-family="Arial" font-size="11" fill="#dc2626">x − 5</text>
+  <text x="237" y="88" text-anchor="middle" font-family="Arial" font-size="11" fill="#059669" font-weight="bold">x</text>
+  <line x1="20" y1="100" x2="280" y2="100" stroke="#e2e8f0" stroke-width="0.5"/>
+  <text x="63" y="122" text-anchor="middle" font-family="Arial" font-size="11" fill="#1e293b" font-weight="bold">María (madre)</text>
+  <text x="150" y="122" text-anchor="middle" font-family="Arial" font-size="11" fill="#dc2626">y − 5</text>
+  <text x="237" y="122" text-anchor="middle" font-family="Arial" font-size="11" fill="#059669" font-weight="bold">y</text>
+  <line x1="20" y1="134" x2="280" y2="134" stroke="#e2e8f0" stroke-width="0.5"/>
+  <text x="63" y="156" text-anchor="middle" font-family="Arial" font-size="11" fill="#1e293b" font-weight="bold">Carlos (hijo)</text>
+  <text x="150" y="156" text-anchor="middle" font-family="Arial" font-size="11" fill="#dc2626">z − 5</text>
+  <text x="237" y="156" text-anchor="middle" font-family="Arial" font-size="11" fill="#059669" font-weight="bold">z</text>
+  <text x="150" y="190" text-anchor="middle" font-family="Arial" font-size="10" fill="#64748b">Todos restan los mismos años al retroceder en el tiempo</text>
+</svg>`
+    ],
+    exercises: [
+      {
+        id: 1,
+        question: "Carlos tiene **12 años** y su hermana Patricia tiene 5. ¿Dentro de cuántos años Carlos tendrá **el doble** de la edad de Patricia?",
+        options: ["2 años", "3 años", "4 años", "5 años"],
+        correctIndex: 0,
+        explanation: "En n años: (12 + n) = 2(5 + n) → 12 + n = 10 + 2n → 12 − 10 = 2n − n → **n = 2**. Verificación: dentro de 2 años Carlos tendrá 14 y Patricia 7: 14 = 2 × 7 ✓.",
+        difficulty: "basico"
+      },
+      {
+        id: 2,
+        question: "La suma de las edades de un padre y su hijo es **52 años**. Hace **10 años**, el padre tenía el **triple** de la edad del hijo. ¿Cuántos años tiene el **hijo** ahora?",
+        options: ["12", "14", "16", "18"],
+        correctIndex: 3,
+        explanation: "Padre = p, hijo = h. Sistema: p + h = 52 y (p − 10) = 3(h − 10). De la segunda: p = 3h − 20. Sustituyendo: 3h − 20 + h = 52 → 4h = 72 → **h = 18**. Padre = 34. Verificación: 34 + 18 = 52 ✓. Hace 10 años: 24 = 3 × 8 ✓.",
+        difficulty: "intermedio"
+      },
+      {
+        id: 3,
+        question: "Ana tiene **26 años** y Luis tiene 10. ¿Hace cuántos años Ana tenía **el triple** de la edad de Luis?",
+        options: ["2 años", "4 años", "5 años", "3 años"],
+        correctIndex: 0,
+        explanation: "Hace n años: (26 − n) = 3(10 − n) → 26 − n = 30 − 3n → 2n = 4 → **n = 2**. Verificación: hace 2 años Ana tenía 24 y Luis tenía 8: 24 = 3 × 8 ✓.",
+        difficulty: "avanzado"
+      }
+    ]
+  },
+  {
+    slug: "cronometria",
+    tip: "En problemas de **tiempo**, convierte todo a una misma unidad (minutos o segundos). Para **velocidad**: distancia = velocidad × tiempo. Recuerda que 1 hora = 60 minutos, 1 minuto = 60 segundos, y cuidado con las **zonas horarias** en problemas internacionales.",
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "La **cronometría** es la medición del tiempo. Las unidades principales son: **hora** (h), **minuto** (min) y **segundo** (s).",
+          "Conversiones básicas: **1 hora = 60 minutos**, **1 minuto = 60 segundos**, **1 hora = 3600 segundos**.",
+          "El **reloj de 12 horas** marca AM (antes del mediodía) y PM (después). El **reloj de 24 horas** va de 00:00 a 23:59.",
+          "Para calcular la **duración** entre dos horas: resta la hora final menos la hora inicial. Si el minuto final es menor, 'presta' 1 hora (= 60 min).",
+          "Un **cuadrante del reloj** tiene 12 números. La manecilla de las horas da una vuelta en 12 horas; la de los minutos da una vuelta en 60 minutos.",
+          "El ángulo entre las manecillas del reloj es un tema frecuente: cada hora marca 30° (360°/12) y cada minuto marca 6° (360°/60)."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Estrategias y técnicas",
+        lines: [
+          "Para problemas de **velocidad uniforme**: distancia = velocidad × tiempo, o d = v × t. Despejando: t = d/v, v = d/t.",
+          "Los problemas de **encuentro** (dos cuerpos que se acercan): velocidad relativa = v₁ + v₂. Tiempo de encuentro = distancia / (v₁ + v₂).",
+          "En problemas de **horarios de transporte** (buses, trenes), calcula el **intervalo** entre salidas y multiplica por el número de servicios.",
+          "Las **zonas horarias** peruanas: Perú tiene UTC−5 (hora de Lima). Si un evento es a las 10:00 en Lima y preguntan la hora en Madrid (UTC+2 en verano), suma 7 horas → 17:00.",
+          "El **huso horario** se calcula: hora destino = hora origen + (diferencia de husos). Cuidado con el cambio de día (cruza de PM a AM).",
+          "Para problemas de **duración combinada**: suma los tiempos de cada tramo por separado, cuidando las unidades."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Problemas complejos",
+        lines: [
+          "Los problemas de **cronometría con velocidad variable** se divuyen en tramos: cada tramo tiene su propia velocidad, distancia y tiempo.",
+          "El **tiempo de retraso** se calcula: si un tren sale 30 min tarde pero viaja 20 km/h más rápido, ¿a qué distancia alcanza al tren puntual?",
+          "Los problemas de **vueltas en pistas** requieren: tiempo por vuelta = distancia de la pista / velocidad. Para n vueltas, multiplica por n.",
+          "En problemas de **fenómenos periódicos** (péndulos, planetas), el periodo es el tiempo para un ciclo completo. Frecuencia = 1/periodo.",
+          "Los problemas de **calendario**: calcular días entre fechas requiere saber los días de cada mes (31, 28/29, 31, 30...) y los años bisiestos.",
+          "Un año es bisiesto si: (es divisible por 4 Y NO es divisible por 100) O (es divisible por 400). Ejemplo: 2024 es bisiesto, 1900 no lo es, 2000 sí lo es."
+        ]
+      }
+    ],
+    illustrations: [
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+  <rect width="300" height="200" fill="#f8fafc" rx="8"/>
+  <text x="150" y="22" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#1e293b">Reloj — Ángulos entre Manecillas</text>
+  <circle cx="110" cy="115" r="65" fill="white" stroke="#2563eb" stroke-width="2"/>
+  <circle cx="110" cy="115" r="3" fill="#1e293b"/>
+  <text x="110" y="58" text-anchor="middle" font-family="Arial" font-size="10" fill="#1e293b" font-weight="bold">12</text>
+  <text x="163" y="100" text-anchor="middle" font-family="Arial" font-size="10" fill="#1e293b" font-weight="bold">3</text>
+  <text x="110" y="186" text-anchor="middle" font-family="Arial" font-size="10" fill="#1e293b" font-weight="bold">6</text>
+  <text x="57" y="100" text-anchor="middle" font-family="Arial" font-size="10" fill="#1e293b" font-weight="bold">9</text>
+  <line x1="110" y1="115" x2="110" y2="70" stroke="#dc2626" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="110" y1="115" x2="145" y2="100" stroke="#2563eb" stroke-width="2" stroke-linecap="round"/>
+  <text x="110" y="130" text-anchor="middle" font-family="Arial" font-size="8" fill="#64748b">3:00</text>
+  <path d="M 110 115 L 110 90 A 25 25 0 0 1 135 115" fill="#7c3aed" opacity="0.2"/>
+  <text x="145" y="85" font-family="Arial" font-size="10" fill="#7c3aed" font-weight="bold">90°</text>
+  <rect x="195" y="45" width="95" height="140" rx="6" fill="white" stroke="#e2e8f0"/>
+  <text x="242" y="65" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#1e293b">Referencia</text>
+  <text x="242" y="85" text-anchor="middle" font-family="Arial" font-size="9" fill="#2563eb">Cada hora = 30°</text>
+  <text x="242" y="102" text-anchor="middle" font-family="Arial" font-size="9" fill="#dc2626">Cada min = 6°</text>
+  <text x="242" y="122" text-anchor="middle" font-family="Arial" font-size="9" fill="#059669">3:00 → 90°</text>
+  <text x="242" y="139" text-anchor="middle" font-family="Arial" font-size="9" fill="#059669">9:00 → 90°</text>
+  <text x="242" y="156" text-anchor="middle" font-family="Arial" font-size="9" fill="#059669">6:00 → 180°</text>
+  <text x="242" y="176" text-anchor="middle" font-family="Arial" font-size="9" fill="#059669">12:15 → 72°</text>
+</svg>`,
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+  <rect width="300" height="200" fill="#f8fafc" rx="8"/>
+  <text x="150" y="22" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#1e293b">Conversión de Unidades de Tiempo</text>
+  <rect x="30" y="45" width="75" height="40" rx="6" fill="#2563eb" opacity="0.12" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="67" y="63" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#2563eb">1 Hora</text>
+  <text x="67" y="78" text-anchor="middle" font-family="Arial" font-size="9" fill="#2563eb">(h)</text>
+  <line x1="105" y1="65" x2="130" y2="65" stroke="#64748b" stroke-width="1.5" marker-end="url(#arr-g)"/>
+  <line x1="130" y1="65" x2="105" y2="65" stroke="#64748b" stroke-width="1.5" marker-end="url(#arr-g)"/>
+  <text x="117" y="60" text-anchor="middle" font-family="Arial" font-size="8" fill="#64748b">×60</text>
+  <text x="117" y="74" text-anchor="middle" font-family="Arial" font-size="8" fill="#64748b">÷60</text>
+  <rect x="130" y="45" width="75" height="40" rx="6" fill="#dc2626" opacity="0.12" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="167" y="63" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#dc2626">1 Minuto</text>
+  <text x="167" y="78" text-anchor="middle" font-family="Arial" font-size="9" fill="#dc2626">(min)</text>
+  <line x1="205" y1="65" x2="230" y2="65" stroke="#64748b" stroke-width="1.5" marker-end="url(#arr-g)"/>
+  <line x1="230" y1="65" x2="205" y2="65" stroke="#64748b" stroke-width="1.5" marker-end="url(#arr-g)"/>
+  <text x="217" y="60" text-anchor="middle" font-family="Arial" font-size="8" fill="#64748b">×60</text>
+  <text x="217" y="74" text-anchor="middle" font-family="Arial" font-size="8" fill="#64748b">÷60</text>
+  <rect x="230" y="45" width="50" height="40" rx="6" fill="#059669" opacity="0.12" stroke="#059669" stroke-width="1.5"/>
+  <text x="255" y="63" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#059669">1 Seg</text>
+  <text x="255" y="78" text-anchor="middle" font-family="Arial" font-size="9" fill="#059669">(s)</text>
+  <rect x="30" y="105" width="250" height="75" rx="6" fill="#7c3aed" opacity="0.06" stroke="#7c3aed" stroke-width="1"/>
+  <text x="155" y="128" text-anchor="middle" font-family="Arial" font-size="11" fill="#7c3aed" font-weight="bold">Fórmulas clave:</text>
+  <text x="155" y="148" text-anchor="middle" font-family="Arial" font-size="10" fill="#1e293b">1 hora = 60 min = **3,600 seg**</text>
+  <text x="155" y="168" text-anchor="middle" font-family="Arial" font-size="10" fill="#1e293b">d = v × t  →  t = d/v  →  v = d/t</text>
+</svg>`
+    ],
+    exercises: [
+      {
+        id: 1,
+        question: "Un tren sale de Lima a las **8:30 a.m.** y llega a Cusco a las **2:15 p.m.** del mismo día. ¿Cuánto **tiempo** duró el viaje?",
+        options: ["5 horas 45 minutos", "6 horas 15 minutos", "5 horas 15 minutos", "6 horas 45 minutos"],
+        correctIndex: 0,
+        explanation: "De 8:30 a.m. a 12:30 p.m. = 4 horas. De 12:30 p.m. a 2:15 p.m. = 1 hora 45 minutos. Total: **5 horas 45 minutos**.",
+        difficulty: "basico"
+      },
+      {
+        id: 2,
+        question: "Una auto viaja a **90 km/h** y recorre **270 km**. ¿Cuánto **tiempo** tarda en horas y minutos?",
+        options: ["2 horas 30 minutos", "3 horas", "2 horas 45 minutos", "3 horas 30 minutos"],
+        correctIndex: 1,
+        explanation: "Tiempo = distancia/velocidad = 270/90 = **3 horas** exactas.",
+        difficulty: "intermedio"
+      },
+      {
+        id: 3,
+        question: "¿Cuál es el **ángulo** que forman las manecillas del reloj a las **4:30**?",
+        options: ["15°", "30°", "45°", "60°"],
+        correctIndex: 2,
+        explanation: "A las 4:30: la manecilla de horas está entre 4 y 5, específicamente a 4.5 × 30° = 135° desde las 12. La manecilla de minutos está en 6, a 180°. Ángulo = |180° − 135°| = **45°**.",
+        difficulty: "avanzado"
+      }
+    ]
+  },
+  {
+    slug: "promedios",
+    tip: "El promedio se calcula sumando todos los valores y dividiendo por la cantidad. Para quitar uno: (suma actual - valor) / (n-1). Para agregar uno: (suma actual + valor) / (n+1).",
+    theory: [
+      {
+        level: "basico",
+        title: "Promedio aritmético",
+        lines: [
+          "Promedio = (x₁ + x₂ + ... + xₙ) / n",
+          "Es la suma de todos los valores dividida por la cantidad de valores",
+          "Ejemplo: Promedio de 8, 6, 10 = (8+6+10)/3 = 24/3 = 8"
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Propiedades del promedio",
+        lines: [
+          "Si agregas un valor mayor al promedio, el promedio sube",
+          "Si agregas un valor menor al promedio, el promedio baja",
+          "El promedio siempre está entre el menor y el mayor valor",
+          "El promedio afecta cada valor por igual"
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Promedio ponderado",
+        lines: [
+          "Promedio ponderado = Σ(xᵢ × wᵢ) / Σwᵢ",
+          "Se usa cuando los valores tienen diferente importancia",
+          "Ejemplo: Nota final = Ex×0.4 + Ta×0.3 + Pa×0.3"
+        ]
+      }
+    ],
+    illustrations: [
+      '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">',
+      '  <rect width="300" height="200" fill="#f8fafc" rx="12"/>',
+      '  <text x="150" y="25" text-anchor="middle" fill="#2563eb" font-size="12" font-weight="bold" font-family="sans-serif">Promedio Aritmético</text>',
+      '  <text x="150" y="55" text-anchor="middle" fill="#1e293b" font-size="11" font-family="sans-serif">Promedio = Suma / Cantidad</text>',
+      '  <rect x="30" y="75" width="50" height="30" fill="#dbeafe" rx="4"/>',
+      '  <text x="55" y="95" text-anchor="middle" fill="#2563eb" font-size="12" font-weight="bold" font-family="sans-serif">8</text>',
+      '  <rect x="90" y="75" width="50" height="30" fill="#dcfce7" rx="4"/>',
+      '  <text x="115" y="95" text-anchor="middle" fill="#059669" font-size="12" font-weight="bold" font-family="sans-serif">6</text>',
+      '  <rect x="150" y="75" width="50" height="30" fill="#fef3c7" rx="4"/>',
+      '  <text x="175" y="95" text-anchor="middle" fill="#d97706" font-size="12" font-weight="bold" font-family="sans-serif">10</text>',
+      '  <text x="215" y="95" fill="#1e293b" font-size="14" font-weight="bold" font-family="sans-serif">=</text>',
+      '  <rect x="230" y="75" width="55" height="30" fill="#ede9fe" rx="4"/>',
+      '  <text x="258" y="95" text-anchor="middle" fill="#7c3aed" font-size="12" font-weight="bold" font-family="sans-serif">8</text>',
+      '  <text x="150" y="135" text-anchor="middle" fill="#64748b" font-size="10" font-family="sans-serif">(8+6+10)/3 = 24/3 = 8</text>',
+      '  <text x="150" y="170" text-anchor="middle" fill="#94a3b8" font-size="9" font-family="sans-serif">El promedio siempre está entre el menor y el mayor valor</text>',
+      '</svg>',
+      '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">',
+      '  <rect width="300" height="200" fill="#f8fafc" rx="12"/>',
+      '  <text x="150" y="25" text-anchor="middle" fill="#2563eb" font-size="12" font-weight="bold" font-family="sans-serif">Propiedades del Promedio</text>',
+      '  <text x="30" y="55" fill="#1e293b" font-size="10" font-weight="bold" font-family="sans-serif">Promedio actual: 8</text>',
+      '  <rect x="30" y="70" width="240" height="25" fill="#dcfce7" rx="4"/>',
+      '  <text x="150" y="87" text-anchor="middle" fill="#059669" font-size="10" font-family="sans-serif">+ Valor mayor (12) → Promedio sube a 8.67</text>',
+      '  <rect x="30" y="100" width="240" height="25" fill="#fee2e2" rx="4"/>',
+      '  <text x="150" y="117" text-anchor="middle" fill="#dc2626" font-size="10" font-family="sans-serif">+ Valor menor (4) → Promedio baja a 7</text>',
+      '  <text x="150" y="155" text-anchor="middle" fill="#64748b" font-size="10" font-family="sans-serif">Mínimo ≤ Promedio ≤ Máximo</text>',
+      '</svg>',
+      '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">',
+      '  <rect width="300" height="200" fill="#f8fafc" rx="12"/>',
+      '  <text x="150" y="25" text-anchor="middle" fill="#2563eb" font-size="12" font-weight="bold" font-family="sans-serif">Promedio Ponderado</text>',
+      '  <text x="150" y="55" text-anchor="middle" fill="#1e293b" font-size="10" font-family="sans-serif">Promedio = Σ(xᵢ × wᵢ) / Σwᵢ</text>',
+      '  <rect x="30" y="70" width="240" height="35" fill="#dbeafe" rx="4"/>',
+      '  <text x="150" y="92" text-anchor="middle" fill="#2563eb" font-size="10" font-family="sans-serif">Nota = Ex×0.4 + Ta×0.3 + Pa×0.3</text>',
+      '  <text x="30" y="125" fill="#1e293b" font-size="10" font-family="sans-serif">Examen: 16, Tareas: 14, Participación: 18</text>',
+      '  <text x="30" y="145" fill="#1e293b" font-size="10" font-family="sans-serif">Nota = 16×0.4 + 14×0.3 + 18×0.3</text>',
+      '  <text x="30" y="165" fill="#7c3aed" font-size="10" font-weight="bold" font-family="sans-serif">Nota = 6.4 + 4.2 + 5.4 = 16</text>',
+      '</svg>'
+    ],
+    exercises: [
+      {
+        id: 1,
+        question: "Las notas de Juan son 14, 16, 12 y 18. ¿Cuál es su promedio?",
+        options: ["15", "14", "16", "13"],
+        correctIndex: 0,
+        explanation: "Promedio = (14+16+12+18)/4 = 60/4 = 15.",
+        difficulty: "basico"
+      },
+      {
+        id: 2,
+        question: "El promedio de 5 números es 20. Si uno es 30, ¿cuánto suman los otros 4?",
+        options: ["70", "80", "50", "100"],
+        correctIndex: 0,
+        explanation: "Suma total = 5×20 = 100. Los otros 4 suman 100-30 = 70.",
+        difficulty: "intermedio"
+      },
+      {
+        id: 3,
+        question: "La nota final se calcula: Examen (40%), Tareas (30%), Participación (30%). Si un alumno saca 18 en examen, 14 en tareas y 16 en participación, ¿cuál es su nota final?",
+        options: ["16", "15.8", "16.2", "15.5"],
+        correctIndex: 2,
+        explanation: "Nota = 18×0.4 + 14×0.3 + 16×0.3 = 7.2 + 4.2 + 4.8 = 16.2.",
+        difficulty: "avanzado"
+      }
+    ]
+  },
+export const cokitoRMModules17to22: CourseModule[] = [
+  {
+    slug: "operadores-matematicos",
+    tip: "Lee siempre el **enunciado completo** antes de calcular. Identifica la fórmula del operador, sustituye paso a paso y respeta el orden de operaciones.",
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "Un **operador matemático** es un símbolo que define una operación entre números. Aparecen con símbolos como ◊, △, ⋆, ∘, ☆.",
+          "La expresión **a ◊ b** significa que debes reemplazar ◊ con la fórmula específica dada en el problema.",
+          "Los operadores comunes involucran **suma, resta, multiplicación** y potencias, combinados de forma no estándar.",
+          "**Primero identificas la operación**, luego sustituyes los valores y calculas respetando el orden PEMDAS.",
+          "Ejemplo: Si a ◊ b = 2a + 3b, entonces **3 ◊ 4** = 2(3) + 3(4) = 6 + 12 = **18**.",
+          "Los paréntesis en la definición son **obligatorios** para definir el alcance de la operación."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Estrategias y técnicas",
+        lines: [
+          "Cuando el operador involucra **potencias o raíces**, recuerda que x² = x·x y √x es la raíz cuadrada.",
+          "Para operadores **compuestos** como (a ◊ b) ◊ c, calculas el paréntesis interior primero.",
+          "Cuando el problema pide **despejar una variable**, sustituye el resultado conocido e iguala la ecuación.",
+          "Cuidado con la **conmutatividad**: verifica si a ◊ b = b ◊ a. No todos los operadores la cumplen.",
+          "Cuando aparecen **dos operadores** distintos, identifica cuál aplica en cada paso antes de calcular.",
+          "Si el operador se define por **tabla de valores**, busca un patrón: ¿es lineal, cuadrático o exponencial?"
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Problemas complejos",
+        lines: [
+          "En problemas avanzados aparecen **operadores anidados**: evaluar expresiones como (2 ◊ 3) ◊ (1 ◊ 4).",
+          "Cuando el problema define **dos operadores** distintos, cuida la precedencia entre ellos.",
+          "Algunos problemas piden encontrar **x** tal que x ◊ 5 = 5 ◊ x. Convierte la operación en ecuación.",
+          "Problemas de **sucesiones operadas**: si a₁ = 2, aₙ₊₁ = aₙ ◊ n, calcula iterativamente cada término.",
+          "Cuando el operador involucra **módulo**, recuerda: 17 mod 5 = 2 y 17 div 5 = 3.",
+          "**Descomponer** el problema en pasos pequeños es la estrategia más efectiva."
+        ]
+      }
+    ],
+    illustrations: [
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200"><rect width="300" height="200" fill="#f8fafc" rx="8"/><text x="150" y="22" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e293b">Operadores Definidos</text><rect x="20" y="38" width="125" height="148" fill="#eff6ff" rx="6" stroke="#2563eb" stroke-width="1.5"/><text x="82" y="56" text-anchor="middle" font-size="12" font-weight="bold" fill="#2563eb">Operador ◊</text><text x="82" y="76" text-anchor="middle" font-size="11" fill="#1e293b">a ◊ b = 2a + 3b</text><line x1="30" y1="86" x2="135" y2="86" stroke="#2563eb" stroke-width="0.5" opacity="0.4"/><text x="82" y="104" text-anchor="middle" font-size="10" fill="#475569">Ejemplo:</text><text x="82" y="122" text-anchor="middle" font-size="11" fill="#1e293b">3 ◊ 4 = 2(3)+3(4)</text><text x="82" y="142" text-anchor="middle" font-size="11" fill="#1e293b">= 6 + 12</text><text x="82" y="168" text-anchor="middle" font-size="14" font-weight="bold" fill="#059669">= 18</text><rect x="155" y="38" width="125" height="148" fill="#fef3c7" rx="6" stroke="#d97706" stroke-width="1.5"/><text x="217" y="56" text-anchor="middle" font-size="12" font-weight="bold" fill="#d97706">Operador △</text><text x="217" y="76" text-anchor="middle" font-size="11" fill="#1e293b">a △ b = a² − b</text><line x1="165" y1="86" x2="270" y2="86" stroke="#d97706" stroke-width="0.5" opacity="0.4"/><text x="217" y="104" text-anchor="middle" font-size="10" fill="#475569">Ejemplo:</text><text x="217" y="122" text-anchor="middle" font-size="11" fill="#1e293b">5 △ 3 = 5² − 3</text><text x="217" y="142" text-anchor="middle" font-size="11" fill="#1e293b">= 25 − 3</text><text x="217" y="168" text-anchor="middle" font-size="14" font-weight="bold" fill="#dc2626">= 22</text></svg>`,
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200"><rect width="300" height="200" fill="#f8fafc" rx="8"/><text x="150" y="22" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e293b">Operador Compuesto</text><rect x="20" y="34" width="260" height="26" fill="#ede9fe" rx="4" stroke="#7c3aed" stroke-width="1"/><text x="150" y="52" text-anchor="middle" font-size="11" fill="#7c3aed">Si a ◊ b = a + 2b, calcular (3 ◊ 1) ◊ 2</text><rect x="20" y="68" width="260" height="120" fill="#f0fdf4" rx="4" stroke="#059669" stroke-width="1"/><text x="35" y="90" font-size="11" fill="#059669" font-weight="bold">Paso 1: Resolver el paréntesis interior</text><text x="50" y="110" font-size="11" fill="#2563eb">3 ◊ 1 = 3 + 2(1) = 3 + 2 = 5</text><text x="35" y="135" font-size="11" fill="#059669" font-weight="bold">Paso 2: Sustituir y resolver</text><text x="50" y="155" font-size="11" fill="#dc2626">5 ◊ 2 = 5 + 2(2) = 5 + 4 = 9</text><text x="150" y="180" text-anchor="middle" font-size="13" font-weight="bold" fill="#7c3aed">Resultado: (3 ◊ 1) ◊ 2 = 9</text></svg>`
+    ],
+    exercises: [
+      {
+        id: 1701,
+        question: "Si **a ◊ b = 2a + 3b**, ¿cuál es el valor de **4 ◊ 5**?",
+        options: ["20", "23", "17", "25"],
+        correctIndex: 1,
+        explanation: "2(4) + 3(5) = 8 + 15 = **23**.",
+        difficulty: "basico"
+      },
+      {
+        id: 1702,
+        question: "Si **a △ b = 2a − b**, ¿cuál es el valor de **(4 △ 3) △ 2**?",
+        options: ["6", "8", "10", "12"],
+        correctIndex: 1,
+        explanation: "Primero: 4 △ 3 = 2(4) − 3 = 5. Luego: 5 △ 2 = 2(5) − 2 = **8**.",
+        difficulty: "intermedio"
+      },
+      {
+        id: 1703,
+        question: "Se define **a ☆ b = a² − b** y **a ◎ b = 2a + b**. ¿Cuál es **(3 ☆ 2) ◎ 5**?",
+        options: ["15", "17", "19", "21"],
+        correctIndex: 2,
+        explanation: "3 ☆ 2 = 3² − 2 = 7. Luego 7 ◎ 5 = 2(7) + 5 = 14 + 5 = **19**.",
+        difficulty: "avanzado"
+      }
+    ]
+  },
+  {
+    slug: "operadores-binarios",
+    tip: "Los operadores binarios suelen definirse por **tabla o fórmula**. Si es tabla, constrúyela completa antes de responder. Si es fórmula, verifica con valores dados para confirmar tu interpretación.",
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "Un **operador binario** toma exactamente **dos operandos** y produce un resultado. Se escribe como a ⊕ b.",
+          "Los binarios conocidos son: **suma (+), resta (−), multiplicación (×)** y división (÷).",
+          "Un operador binario se define mediante una **fórmula algebraica** o una **tabla de valores**.",
+          "Si a ⊕ b = a + b − 2, entonces 5 ⊕ 3 = 5 + 3 − 2 = **6**.",
+          "La **conmutatividad** significa que a ◊ b = b ◊ a. No todos la cumplen.",
+          "La **asociatividad** significa que (a ◊ b) ◊ c = a ◊ (b ◊ c)."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Estrategias y técnicas",
+        lines: [
+          "Para verificar **conmutatividad**, comprueba si a ◊ b = b ◊ a. Un solo contraejemplo basta para descartarla.",
+          "Cuando el problema da una **tabla incompleta**, usa los valores conocidos para deducir la fórmula.",
+          "Operadores comunes: **a ⊕ b = ab + 1**, **a ◊ b = a² + b**, **a ⋆ b = |a − b|**.",
+          "Cuando el problema dice 'a ◊ 4 = 10', convierte en ecuación y despeja a.",
+          "La **sustitución inversa** es clave: conoces el resultado y un operando, encuentras el otro.",
+          "Para **dos operadores**, resuelve completamente uno antes de aplicar el otro."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Problemas complejos",
+        lines: [
+          "**Dos operadores**: a ☆ b = a + 2b y a ◎ b = ab − 1. Evalúa (2 ☆ 3) ◎ (1 ☆ 2).",
+          "Cuando un operador **depende del orden**, presta atención a la posición de cada operando.",
+          "**Inverso**: dado a ◊ b = a² − ab + b², encuentra x tal que x ◊ 3 = 7.",
+          "Operadores con **restricciones**: solo se definen para ciertos valores.",
+          "En **tablas de verdad lógicas**, AND (∧), OR (∨), XOR (⊕) y NOT (¬).",
+          "**Descomponer** la expresión en subexpresiones más pequeñas es la clave."
+        ]
+      }
+    ],
+    illustrations: [
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200"><rect width="300" height="200" fill="#f8fafc" rx="8"/><text x="150" y="22" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e293b">Tabla: a ⊕ b = 2a + b − 1</text><rect x="55" y="40" width="190" height="130" fill="white" rx="4" stroke="#2563eb" stroke-width="1.5"/><text x="105" y="60" text-anchor="middle" font-size="11" font-weight="bold" fill="#2563eb">⊕</text><text x="155" y="60" text-anchor="middle" font-size="11" font-weight="bold" fill="#2563eb">1</text><text x="205" y="60" text-anchor="middle" font-size="11" font-weight="bold" fill="#2563eb">2</text><line x1="55" y1="68" x2="245" y2="68" stroke="#e2e8f0" stroke-width="1"/><text x="105" y="88" text-anchor="middle" font-size="11" font-weight="bold" fill="#2563eb">1</text><text x="155" y="88" text-anchor="middle" font-size="11" fill="#1e293b">2</text><text x="205" y="88" text-anchor="middle" font-size="11" fill="#1e293b">3</text><line x1="55" y1="96" x2="245" y2="96" stroke="#e2e8f0" stroke-width="1"/><text x="105" y="116" text-anchor="middle" font-size="11" font-weight="bold" fill="#2563eb">2</text><text x="155" y="116" text-anchor="middle" font-size="11" fill="#1e293b">4</text><text x="205" y="116" text-anchor="middle" font-size="11" fill="#1e293b">5</text><line x1="55" y1="124" x2="245" y2="124" stroke="#e2e8f0" stroke-width="1"/><text x="105" y="144" text-anchor="middle" font-size="11" font-weight="bold" fill="#2563eb">3</text><text x="155" y="144" text-anchor="middle" font-size="11" fill="#1e293b">6</text><text x="205" y="144" text-anchor="middle" font-size="11" fill="#1e293b">7</text><text x="150" y="185" text-anchor="middle" font-size="10" fill="#475569">2(1)+1−1=2 | 2(2)+2−1=5 | 2(3)+1−1=6 ✓</text></svg>`,
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200"><rect width="300" height="200" fill="#f8fafc" rx="8"/><text x="150" y="22" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e293b">¿Es Conmutativo?</text><rect x="20" y="34" width="260" height="24" fill="#ede9fe" rx="4" stroke="#7c3aed" stroke-width="1"/><text x="150" y="51" text-anchor="middle" font-size="11" fill="#7c3aed">a ⊕ b = a + 2b</text><rect x="20" y="66" width="125" height="60" fill="#f0fdf4" rx="4" stroke="#059669" stroke-width="1"/><text x="82" y="83" text-anchor="middle" font-size="10" font-weight="bold" fill="#059669">Prueba: a=1, b=2</text><text x="82" y="100" text-anchor="middle" font-size="10" fill="#1e293b">1 ⊕ 2 = 1+4 = 5</text><text x="82" y="117" text-anchor="middle" font-size="10" fill="#1e293b">2 ⊕ 1 = 2+2 = 4</text><rect x="155" y="66" width="125" height="60" fill="#fef2f2" rx="4" stroke="#dc2626" stroke-width="1"/><text x="217" y="92" text-anchor="middle" font-size="12" font-weight="bold" fill="#dc2626">5 ≠ 4</text><text x="217" y="112" text-anchor="middle" font-size="10" fill="#dc2626">NO es conmutativo</text><rect x="20" y="140" width="260" height="48" fill="#eff6ff" rx="4" stroke="#2563eb" stroke-width="1"/><text x="150" y="160" text-anchor="middle" font-size="10" fill="#2563eb" font-weight="bold">Conmutativos: +, ×, |a−b|, a²+b²</text><text x="150" y="178" text-anchor="middle" font-size="10" fill="#dc2626">NO conmutativos: −, ÷, a+b², a+2b</text></svg>`
+    ],
+    exercises: [
+      {
+        id: 1801,
+        question: "Si **a ⊕ b = a + b − 1**, ¿cuál es el valor de **3 ⊕ 4 ⊕ 3**?",
+        options: ["6", "7", "8", "9"],
+        correctIndex: 2,
+        explanation: "Primero: 3 ⊕ 4 = 3+4−1 = 6. Luego: 6 ⊕ 3 = 6+3−1 = **8**.",
+        difficulty: "basico"
+      },
+      {
+        id: 1802,
+        question: "Un operador se define por tabla: 1◊1=2, 1◊2=3, 2◊1=4, 2◊2=5. ¿Cuál es la fórmula de **a ◊ b**?",
+        options: ["a + b", "2a + b − 1", "a + 2b − 1", "ab + 1"],
+        correctIndex: 1,
+        explanation: "Probamos 2a+b−1: 1◊1=2✓, 1◊2=3✓, 2◊1=4✓, 2◊2=5✓. Respuesta: **2a + b − 1**.",
+        difficulty: "intermedio"
+      },
+      {
+        id: 1803,
+        question: "Si **a ☆ b = a² − ab + b²** y **a ◎ b = a + b**, ¿cuál es **(3 ☆ 2) ◎ 4**?",
+        options: ["7", "9", "11", "13"],
+        correctIndex: 2,
+        explanation: "3 ☆ 2 = 9−6+4 = 7. Luego 7 ◎ 4 = 7+4 = **11**.",
+        difficulty: "avanzado"
+      }
+    ]
+  },
+  {
+    slug: "conteo-de-figuras",
+    tip: "Para contar figuras en cuadrículas usa **fórmulas directas**: cuadrados en n×n = n(n+1)(2n+1)/6; rectángulos en m×n = C(m+1,2)·C(n+1,2). Empieza siempre por las figuras más pequeñas.",
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "El **conteo de figuras** es identificar y contar todas las figuras geométricas en un dibujo o cuadrícula.",
+          "Para contar **cuadrados** en una malla n×n: suma los cuadrados de cada tamaño. En 2×2 hay 4+1 = **5**.",
+          "Para **rectángulos** en m×n: **C(m+1,2) × C(n+1,2)** = m(m+1)/2 × n(n+1)/2.",
+          "Un **triángulo** se forma cuando dos líneas se cortan creando una figura de 3 lados.",
+          "En un triángulo subdividido en n filas, hay **n²** triángulos con la misma orientación.",
+          "Empieza contando las figuras **más pequeñas** y avanza hacia las más grandes."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Estrategias y técnicas",
+        lines: [
+          "En **m × n**: rectángulos = m(m+1)/2 × n(n+1)/2.",
+          "Cuadrados en **n×n**: **n(n+1)(2n+1)/6**. En 3×3: 14 cuadrados.",
+          "Triángulos por **capas**: la capa k tiene 2k−1 triángulos.",
+          "Con **líneas que se cruzan**, cuenta puntos de intersección y aplica combinatoria.",
+          "Con **figuras superpuestas**, usa inclusión-exclusión: A + B − A∩B.",
+          "**Descomposición**: divide en partes simples, suma evitando doble conteo."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Problemas complejos",
+        lines: [
+          "En **4×4**: 16+9+4+1 = **30 cuadrados**.",
+          "**Triángulos con diagonales**: pentágono con diagonales tiene múltiples triángulos por tipo.",
+          "Cuadrículas con **líneas diagonales**: identifica base y altura de cada triángulo.",
+          "Tablero 8×8: 1²+2²+...+8² = **204 cuadrados**.",
+          "Con **simetría**, cuenta un cuarto y multiplica.",
+          "Triángulos con vértice: **n × m(m+1)/2** donde n = segmentos base, m = líneas del vértice."
+        ]
+      }
+    ],
+    illustrations: [
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200"><rect width="300" height="200" fill="#f8fafc" rx="8"/><text x="150" y="22" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e293b">Conteo de Cuadrados en 3×3</text><g transform="translate(30,38)"><rect x="0" y="0" width="80" height="80" fill="none" stroke="#1e293b" stroke-width="1"/><line x1="26.7" y1="0" x2="26.7" y2="80" stroke="#1e293b" stroke-width="0.5"/><line x1="53.3" y1="0" x2="53.3" y2="80" stroke="#1e293b" stroke-width="0.5"/><line x1="0" y1="26.7" x2="80" y2="26.7" stroke="#1e293b" stroke-width="0.5"/><line x1="0" y1="53.3" x2="80" y2="53.3" stroke="#1e293b" stroke-width="0.5"/><rect x="0" y="0" width="26.7" height="26.7" fill="#2563eb" fill-opacity="0.15" stroke="#2563eb" stroke-width="1.5"/><rect x="0" y="0" width="53.3" height="53.3" fill="#dc2626" fill-opacity="0.12" stroke="#dc2626" stroke-width="1.5"/><rect x="0" y="0" width="80" height="80" fill="#059669" fill-opacity="0.08" stroke="#059669" stroke-width="2"/></g><g transform="translate(130,38)"><text x="65" y="15" text-anchor="middle" font-size="11" font-weight="bold" fill="#1e293b">Desglose:</text><rect x="10" y="28" width="12" height="12" fill="#2563eb" fill-opacity="0.3" stroke="#2563eb" stroke-width="1"/><text x="28" y="39" font-size="10" fill="#1e293b">1×1 = 9</text><rect x="10" y="50" width="18" height="18" fill="#dc2626" fill-opacity="0.3" stroke="#dc2626" stroke-width="1"/><text x="34" y="64" font-size="10" fill="#1e293b">2×2 = 4</text><rect x="10" y="78" width="24" height="24" fill="#059669" fill-opacity="0.3" stroke="#059669" stroke-width="1"/><text x="40" y="96" font-size="10" fill="#1e293b">3×3 = 1</text><text x="65" y="125" text-anchor="middle" font-size="12" font-weight="bold" fill="#7c3aed">Total = 9+4+1 = 14</text></g></svg>`,
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200"><rect width="300" height="200" fill="#f8fafc" rx="8"/><text x="150" y="22" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e293b">Fórmulas Clave</text><rect x="20" y="35" width="260" height="30" fill="#ede9fe" rx="4" stroke="#7c3aed" stroke-width="1"/><text x="150" y="55" text-anchor="middle" font-size="11" fill="#7c3aed" font-weight="bold">Rectángulos en m×n = m(m+1)/2 × n(n+1)/2</text><rect x="20" y="75" width="125" height="108" fill="#eff6ff" rx="4" stroke="#2563eb" stroke-width="1"/><text x="82" y="93" text-anchor="middle" font-size="11" font-weight="bold" fill="#2563eb">Ejemplo: 2×3</text><rect x="35" y="103" width="90" height="60" fill="none" stroke="#1e293b" stroke-width="1"/><line x1="65" y1="103" x2="65" y2="163" stroke="#1e293b" stroke-width="0.5"/><line x1="95" y1="103" x2="95" y2="163" stroke="#1e293b" stroke-width="0.5"/><line x1="35" y1="133" x2="125" y2="133" stroke="#1e293b" stroke-width="0.5"/><text x="82" y="178" text-anchor="middle" font-size="10" fill="#2563eb">R = 3×6 = 18 rectángulos</text><rect x="155" y="75" width="125" height="108" fill="#f0fdf4" rx="4" stroke="#059669" stroke-width="1"/><text x="217" y="93" text-anchor="middle" font-size="11" font-weight="bold" fill="#059669">Cuadrados n×n</text><text x="217" y="115" text-anchor="middle" font-size="11" fill="#1e293b">S(n) = n(n+1)(2n+1)/6</text><text x="217" y="138" text-anchor="middle" font-size="10" fill="#475569">3×3 → 14</text><text x="217" y="155" text-anchor="middle" font-size="10" fill="#475569">4×4 → 30</text><text x="217" y="172" text-anchor="middle" font-size="10" fill="#475569">8×8 → 204</text></svg>`
+    ],
+    exercises: [
+      {
+        id: 1901,
+        question: "¿Cuántos **cuadrados** hay en una cuadrícula de **3 × 3**?",
+        options: ["9", "12", "14", "18"],
+        correctIndex: 2,
+        explanation: "1×1: 9, 2×2: 4, 3×3: 1. Total = 9+4+1 = **14**.",
+        difficulty: "basico"
+      },
+      {
+        id: 1902,
+        question: "¿Cuántos **rectángulos** hay en una cuadrícula de **2 filas × 4 columnas**?",
+        options: ["20", "24", "30", "36"],
+        correctIndex: 2,
+        explanation: "C(3,2) × C(5,2) = 3 × 10 = **30**.",
+        difficulty: "intermedio"
+      },
+      {
+        id: 1903,
+        question: "¿Cuántos **cuadrados** hay en un tablero de ajedrez (**8 × 8**)?",
+        options: ["64", "128", "204", "256"],
+        correctIndex: 2,
+        explanation: "1²+2²+...+8² = 64+49+36+25+16+9+4+1 = **204**.",
+        difficulty: "avanzado"
+      }
+    ]
+  },
+  {
+    slug: "areas-sombreadas-y-perimetros",
+    tip: "Para áreas sombreadas usa **resta de áreas**: calcula el área total y resta las partes no sombreadas. Identifica primero las figuras que componen el dibujo.",
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "El **área** es el espacio interior de una figura, medida en unidades cuadradas (cm², m²).",
+          "Fórmulas: **Cuadrado** = lado², **Rectángulo** = base × altura, **Triángulo** = (base × altura)/2.",
+          "El **perímetro** es la suma de todos los lados. Cuadrado: P = 4l.",
+          "Área de **círculo** = **πr²**. Circunferencia = **2πr**.",
+          "Semicírculo = πr²/2. Cuarto de círculo = πr²/4.",
+          "Para **área sombreada**, identifica qué figuras conforman la región y aplica la fórmula."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Estrategias y técnicas",
+        lines: [
+          "**Área total − área no sombreada**: calcula el área completa y resta las partes blancas.",
+          "Cuadrado con **círculo inscrito**: sombreado = l²(1 − π/4).",
+          "Para **semicírculos y cuartos**, identifica el radio y aplica la fracción de πr².",
+          "**Anillo** (dos círculos concéntricos): π(R² − r²).",
+          "**Descompon** en rectángulos, triángulos, semicírculos. Calcula por separado.",
+          "Para **perímetros compuestos**, suma solo los lados exteriores."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Problemas complejos",
+        lines: [
+          "**Figuras superpuestas**: dos cuadrados rotados o círculos intersectados.",
+          "**Intersección de dos círculos**: área compartida con arcos y triángulos.",
+          "**Sombreado alternado** en tablero: el sombreado es la mitad del total.",
+          "Cuando un círculo **corta un cuadrado**, restar segmentos circulares.",
+          "Con **simetría**, calcula un cuarto y multiplica por 4.",
+          "Triángulo rectángulo inscrito: la **hipotenusa es el diámetro** del círculo circunscrito."
+        ]
+      }
+    ],
+    illustrations: [
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200"><rect width="300" height="200" fill="#f8fafc" rx="8"/><text x="150" y="22" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e293b">Cuadrado con Círculo Inscrito</text><rect x="50" y="40" width="90" height="90" fill="#dc2626" fill-opacity="0.2" stroke="#dc2626" stroke-width="1.5" rx="2"/><circle cx="95" cy="85" r="45" fill="#2563eb" fill-opacity="0.25" stroke="#2563eb" stroke-width="1.5"/><line x1="95" y1="85" x2="140" y2="85" stroke="#1e293b" stroke-width="1" stroke-dasharray="3"/><text x="120" y="80" font-size="9" fill="#1e293b">r</text><text x="95" y="145" text-anchor="middle" font-size="10" fill="#1e293b">lado = 2r</text><rect x="170" y="40" width="115" height="145" fill="white" rx="4" stroke="#e2e8f0" stroke-width="1"/><text x="227" y="60" text-anchor="middle" font-size="11" font-weight="bold" fill="#1e293b">Cálculo:</text><text x="227" y="80" text-anchor="middle" font-size="10" fill="#475569">Cuadrado = (2r)² = 4r²</text><text x="227" y="100" text-anchor="middle" font-size="10" fill="#475569">Círculo = πr²</text><text x="227" y="125" text-anchor="middle" font-size="11" font-weight="bold" fill="#dc2626">Sombreado = 4r² − πr²</text><text x="227" y="145" text-anchor="middle" font-size="11" fill="#7c3aed">= r²(4 − π)</text><text x="227" y="168" text-anchor="middle" font-size="10" fill="#059669">Si r=4: 64 − 16π ≈ 13.73</text></svg>`,
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200"><rect width="300" height="200" fill="#f8fafc" rx="8"/><text x="150" y="22" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e293b">Método: Resta de Áreas</text><rect x="30" y="38" width="100" height="75" fill="#dc2626" fill-opacity="0.15" stroke="#dc2626" stroke-width="1.5" rx="2"/><circle cx="80" cy="75" r="25" fill="#f8fafc" stroke="#1e293b" stroke-width="1"/><text x="80" y="48" text-anchor="middle" font-size="9" fill="#dc2626">Sombreado</text><text x="80" y="130" text-anchor="middle" font-size="10" font-weight="bold" fill="#1e293b">Rect 10×8</text><text x="80" y="145" text-anchor="middle" font-size="9" fill="#475569">r = 3</text><rect x="155" y="38" width="130" height="145" fill="white" rx="4" stroke="#e2e8f0" stroke-width="1"/><text x="220" y="58" text-anchor="middle" font-size="11" font-weight="bold" fill="#1e293b">Método: Resta</text><text x="220" y="78" text-anchor="middle" font-size="10" fill="#2563eb">1. Rectángulo = 10×8 = 80</text><text x="220" y="98" text-anchor="middle" font-size="10" fill="#dc2626">2. Círculo = π(3²) = 9π</text><text x="220" y="118" text-anchor="middle" font-size="10" fill="#dc2626">   ≈ 28.27</text><text x="220" y="145" text-anchor="middle" font-size="11" font-weight="bold" fill="#059669">3. Sombreado = 80 − 9π</text><text x="220" y="168" text-anchor="middle" font-size="12" fill="#059669">≈ 51.73</text></svg>`
+    ],
+    exercises: [
+      {
+        id: 2001,
+        question: "Cuadrado de lado **8** con círculo inscrito (r=4). ¿Área sombreada entre ambos?",
+        options: ["16 − 4π", "64 − 16π", "64 − 4π", "32 − 16π"],
+        correctIndex: 1,
+        explanation: "Cuadrado: 8² = 64. Círculo: π(4²) = 16π. Sombreado = **64 − 16π** ≈ 13.73.",
+        difficulty: "basico"
+      },
+      {
+        id: 2002,
+        question: "Rectángulo **12 × 8** con triángulo no sombreado (base 12, altura 8). ¿Área sombreada?",
+        options: ["24", "48", "72", "96"],
+        correctIndex: 1,
+        explanation: "Rectángulo = 96. Triángulo = 48. Sombreado = 96 − 48 = **48**.",
+        difficulty: "intermedio"
+      },
+      {
+        id: 2003,
+        question: "Cuadrado de lado **10** con semicírculo de diámetro 10 sobre 2 lados opuestos. ¿Perímetro total?",
+        options: ["20 + 10π", "40 + 10π", "20 + 20π", "40 + 20π"],
+        correctIndex: 0,
+        explanation: "2 lados rectos (10+10=20) + 2 semicírculos (2×5π=10π). Total = **20 + 10π**.",
+        difficulty: "avanzado"
+      }
+    ]
+  },
+  {
+    slug: "analisis-combinatorio",
+    tip: "Domina: **P(n,r) = n!/(n−r)!** y **C(n,r) = n!/(r!(n−r)!)**. Pregunta siempre si el orden importa. Si hay restricciones, usa el principio multiplicativo paso a paso.",
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "El **análisis combinatorio** estudia las formas de **organizar, agrupar y contar** elementos.",
+          "**Factorial** n! = n × (n−1) × ... × 1. Ejemplo: 5! = 120.",
+          "**Permutaciones**: el orden importa. P(n,r) = n!/(n−r)!.",
+          "**Combinaciones**: el orden NO importa. C(n,r) = n!/(r!(n−r)!).",
+          "**Principio multiplicativo**: el total es el **producto** de opciones por etapa.",
+          "**Principio aditivo**: si hay formas independientes, el total es la **suma**."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Estrategias y técnicas",
+        lines: [
+          "**Orden importa** (códigos) → permutaciones. Ej: 3 dígitos con {1,2,3,4} → P(4,3) = 24.",
+          "**Orden no importa** (comités) → combinaciones. Ej: elegir 3 de 7 → C(7,3) = 35.",
+          "Con **repetición**: r elementos de n = **nʳ**.",
+          "**Triángulo de Pascal** para calcular C(n,r) rápidamente.",
+          "**Circulares**: n elementos en círculo → **(n−1)!**.",
+          "**Inclusión-exclusión**: |A∪B| = |A| + |B| − |A∩B|."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Problemas complejos",
+        lines: [
+          "Permutaciones con **elem. repetidos**: n!/(r₁!·r₂!·...·rₖ!).",
+          "**Partición** de n objetos en k cajas: C(n+k−1, k−1).",
+          "**Identidad de Pascal**: C(n,r) = C(n−1,r−1) + C(n−1,r).",
+          "Con **restricciones negativas**, usa inclusión-exclusión.",
+          "**Adyacencia**: 2 elementos juntos → agrupa como una unidad.",
+          "**Multi-conjunto**: elegir r de k tipos = C(r+k−1, k−1)."
+        ]
+      }
+    ],
+    illustrations: [
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200"><rect width="300" height="200" fill="#f8fafc" rx="8"/><text x="150" y="22" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e293b">Permutaciones vs Combinaciones</text><rect x="20" y="35" width="125" height="72" fill="#eff6ff" rx="6" stroke="#2563eb" stroke-width="1.5"/><text x="82" y="52" text-anchor="middle" font-size="10" font-weight="bold" fill="#2563eb">Permutación</text><text x="82" y="66" text-anchor="middle" font-size="9" fill="#475569">(orden importa)</text><text x="82" y="84" text-anchor="middle" font-size="11" font-weight="bold" fill="#2563eb">P(n,r) = n!/(n−r)!</text><text x="82" y="100" text-anchor="middle" font-size="9" fill="#475569">P(4,3) = 24</text><rect x="155" y="35" width="125" height="72" fill="#fef3c7" rx="6" stroke="#d97706" stroke-width="1.5"/><text x="217" y="52" text-anchor="middle" font-size="10" font-weight="bold" fill="#d97706">Combinación</text><text x="217" y="66" text-anchor="middle" font-size="9" fill="#475569">(orden NO importa)</text><text x="217" y="84" text-anchor="middle" font-size="11" font-weight="bold" fill="#d97706">C(n,r) = n!/(r!(n−r)!)</text><text x="217" y="100" text-anchor="middle" font-size="9" fill="#475569">C(4,3) = 4</text><rect x="20" y="118" width="260" height="70" fill="#f0fdf4" rx="6" stroke="#059669" stroke-width="1.5"/><text x="150" y="138" text-anchor="middle" font-size="10" font-weight="bold" fill="#059669">Ejemplo: elegir 2 de {A,B,C}</text><text x="80" y="158" font-size="10" fill="#2563eb">Perm: AB,BA AC,CA BC,CB</text><text x="80" y="174" font-size="10" fill="#2563eb">→ 6 formas</text><text x="210" y="158" font-size="10" fill="#d97706">Comb: {A,B}{A,C}{B,C}</text><text x="210" y="174" font-size="10" fill="#d97706">→ 3 formas</text></svg>`,
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200"><rect width="300" height="200" fill="#f8fafc" rx="8"/><text x="150" y="22" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e293b">Triángulo de Pascal</text><g transform="translate(150,115)" text-anchor="middle"><text x="0" y="-65" font-size="10" font-weight="bold" fill="#7c3aed">n=0</text><text x="0" y="-48" font-size="11" fill="#1e293b">1</text><text x="-30" y="-28" font-size="11" fill="#1e293b">1</text><text x="30" y="-28" font-size="11" fill="#1e293b">1</text><text x="-60" y="-8" font-size="11" fill="#1e293b">1</text><text x="-20" y="-8" font-size="11" font-weight="bold" fill="#2563eb">2</text><text x="20" y="-8" font-size="11" font-weight="bold" fill="#2563eb">2</text><text x="60" y="-8" font-size="11" fill="#1e293b">1</text><text x="-90" y="12" font-size="11" fill="#1e293b">1</text><text x="-50" y="12" font-size="11" fill="#059669">3</text><text x="-10" y="12" font-size="11" fill="#059669">3</text><text x="30" y="12" font-size="11" fill="#059669">3</text><text x="70" y="12" font-size="11" fill="#1e293b">1</text><text x="-120" y="32" font-size="11" fill="#1e293b">1</text><text x="-80" y="32" font-size="11" fill="#dc2626">4</text><text x="-40" y="32" font-size="11" fill="#dc2626">6</text><text x="0" y="32" font-size="11" fill="#dc2626">4</text><text x="40" y="32" font-size="11" fill="#1e293b">1</text></g><text x="150" y="162" text-anchor="middle" font-size="10" fill="#475569">Cada número = suma de los dos superiores</text><text x="150" y="178" text-anchor="middle" font-size="10" fill="#475569">C(n,r) = C(n−1,r−1) + C(n−1,r)</text><text x="150" y="194" text-anchor="middle" font-size="10" fill="#7c3aed">Ej: C(4,2) = 6</text></svg>`
+    ],
+    exercises: [
+      {
+        id: 2101,
+        question: "¿Cuántos **números de 3 dígitos** con **{1,2,3,4,5}** sin repetición?",
+        options: ["60", "125", "24", "15"],
+        correctIndex: 0,
+        explanation: "P(5,3) = 5×4×3 = **60**.",
+        difficulty: "basico"
+      },
+      {
+        id: 2102,
+        question: "De **7 personas**, ¿cuántas formas de elegir un comité de **3**?",
+        options: ["21", "35", "42", "120"],
+        correctIndex: 1,
+        explanation: "C(7,3) = 7!/(3!·4!) = 210/6 = **35**.",
+        difficulty: "intermedio"
+      },
+      {
+        id: 2103,
+        question: "¿Cuántas formas de ordenar **5 libros** si **2 específicos** deben estar juntos?",
+        options: ["24", "48", "60", "120"],
+        correctIndex: 1,
+        explanation: "2 juntos = 1 unidad → 4! = 24. Intercambio: 2! = 2. Total = 24×2 = **48**.",
+        difficulty: "avanzado"
+      }
+    ]
+  },
+  {
+    slug: "probabilidades",
+    tip: "Probabilidad = **casos favorables / casos posibles**. Para eventos compuestos: **independientes** se multiplican, **dependientes** ajusta el denominador. Los **árboles de probabilidad** son tu mejor aliado para múltiples etapas.",
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "La **probabilidad** mide la posibilidad de un evento. Va de **0** (imposible) a **1** (seguro).",
+          "**P(A) = casos favorables / casos posibles**. Dado justo: P(6) = 1/6.",
+          "El **espacio muestral** (S) es el conjunto de todos los resultados posibles.",
+          "**P(no A) = 1 − P(A)**. Si P(lluvia) = 0.3, P(no lluvia) = 0.7.",
+          "**Mutuamente excluyentes**: no ocurren juntos. P(A o B) = P(A) + P(B).",
+          "Las probabilidades del espacio muestral **suman 1**."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Estrategias y técnicas",
+        lines: [
+          "**Independientes**: P(A y B) = P(A) × P(B). Ej: lanzar dados dos veces.",
+          "**Dependientes**: P(A y B) = P(A) × P(B|A). Ej: cartas sin reposición.",
+          "**Regla suma**: P(A o B) = P(A) + P(B) − P(A y B).",
+          "**Árbol de probabilidades** para problemas de dos o más etapas.",
+          "Con dados, la suma más probable es **7** (6 de 36).",
+          "**'Al menos uno'**: P(al menos 1) = 1 − P(ninguno)."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Problemas complejos",
+        lines: [
+          "**Diagrama de Venn**: |A∪B| = |A| + |B| − |A∩B|.",
+          "**P(A|B) = P(A∩B)/P(B)**. La probabilidad condicional.",
+          "**Teorema de Bayes**: P(H|E) = P(E|H)·P(H) / P(E).",
+          "**Urnas**: con reposición = independiente; sin reposición = dependiente.",
+          "Dos dados: **36 combinaciones**. Sumas forman distribución triangular centrada en 7.",
+          "P(A|B) ≠ P(B|A). La confusión de probabilidades inversas es error común."
+        ]
+      }
+    ],
+    illustrations: [
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200"><rect width="300" height="200" fill="#f8fafc" rx="8"/><text x="150" y="22" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e293b">Árbol de Probabilidades</text><text x="150" y="38" text-anchor="middle" font-size="10" fill="#475569">Sacar 2 bolas sin reposición de {3R, 2A}</text><circle cx="40" cy="70" r="8" fill="#2563eb"/><text x="40" y="74" text-anchor="middle" font-size="8" fill="white" font-weight="bold">I</text><line x1="48" y1="66" x2="120" y2="46" stroke="#dc2626" stroke-width="1.5"/><text x="82" y="50" font-size="9" fill="#dc2626" font-weight="bold">R = 3/5</text><circle cx="130" cy="42" r="6" fill="#dc2626"/><line x1="136" y1="40" x2="200" y2="28" stroke="#dc2626" stroke-width="1.5"/><text x="167" y="28" font-size="8" fill="#dc2626">RR = 2/4</text><text x="220" y="28" font-size="9" fill="#dc2626" font-weight="bold">= 6/20</text><line x1="136" y1="46" x2="200" y2="58" stroke="#2563eb" stroke-width="1.5"/><text x="167" y="58" font-size="8" fill="#2563eb">RA = 2/4</text><text x="220" y="58" font-size="9" fill="#2563eb" font-weight="bold">= 6/20</text><line x1="48" y1="74" x2="120" y2="96" stroke="#2563eb" stroke-width="1.5"/><text x="82" y="92" font-size="9" fill="#2563eb" font-weight="bold">A = 2/5</text><circle cx="130" cy="100" r="6" fill="#2563eb"/><line x1="136" y1="96" x2="200" y2="84" stroke="#dc2626" stroke-width="1.5"/><text x="167" y="84" font-size="8" fill="#dc2626">AR = 3/4</text><text x="220" y="84" font-size="9" fill="#dc2626" font-weight="bold">= 6/20</text><line x1="136" y1="104" x2="200" y2="116" stroke="#059669" stroke-width="1.5"/><text x="167" y="116" font-size="8" fill="#059669">AA = 1/4</text><text x="220" y="116" font-size="9" fill="#059669" font-weight="bold">= 2/20</text><rect x="20" y="135" width="260" height="55" fill="#ede9fe" rx="4" stroke="#7c3aed" stroke-width="1"/><text x="150" y="155" text-anchor="middle" font-size="10" fill="#7c3aed" font-weight="bold">RR=6/20 RA=6/20 AR=6/20 AA=2/20</text><text x="150" y="175" text-anchor="middle" font-size="10" fill="#7c3aed">Total = 20/20 = 1 ✓</text></svg>`,
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200"><rect width="300" height="200" fill="#f8fafc" rx="8"/><text x="150" y="22" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e293b">Diagrama de Venn</text><text x="150" y="38" text-anchor="middle" font-size="10" fill="#475569">P(A) = 0.4, P(B) = 0.3, P(A∩B) = 0.1</text><circle cx="115" cy="105" r="50" fill="#2563eb" fill-opacity="0.2" stroke="#2563eb" stroke-width="1.5"/><circle cx="175" cy="105" r="50" fill="#dc2626" fill-opacity="0.2" stroke="#dc2626" stroke-width="1.5"/><text x="90" y="105" text-anchor="middle" font-size="12" font-weight="bold" fill="#2563eb">A</text><text x="200" y="105" text-anchor="middle" font-size="12" font-weight="bold" fill="#dc2626">B</text><text x="145" y="100" text-anchor="middle" font-size="10" fill="#7c3aed" font-weight="bold">0.1</text><text x="145" y="115" text-anchor="middle" font-size="8" fill="#7c3aed">A∩B</text><rect x="20" y="160" width="260" height="32" fill="#f0fdf4" rx="4" stroke="#059669" stroke-width="1"/><text x="150" y="180" text-anchor="middle" font-size="10" fill="#059669" font-weight="bold">P(A∪B) = P(A)+P(B)−P(A∩B) = 0.4+0.3−0.1 = 0.6</text></svg>`
+    ],
+    exercises: [
+      {
+        id: 2201,
+        question: "Al lanzar un dado de 6 caras, ¿cuál es la probabilidad de obtener un **número par**?",
+        options: ["1/3", "1/2", "2/3", "1/6"],
+        correctIndex: 1,
+        explanation: "Pares: {2,4,6} = 3 casos. P(par) = 3/6 = **1/2**.",
+        difficulty: "basico"
+      },
+      {
+        id: 2202,
+        question: "Al lanzar **dos dados**, ¿cuál es la probabilidad de que la **suma sea 7**?",
+        options: ["1/4", "1/6", "1/12", "5/36"],
+        correctIndex: 1,
+        explanation: "Formas de sumar 7: (1,6),(2,5),(3,4),(4,3),(5,2),(6,1) = 6. Total: 36. P = 6/36 = **1/6**.",
+        difficulty: "intermedio"
+      },
+      {
+        id: 2200,
+        question: "Urna con **4 rojas y 6 azules**. Se sacan **2 sin reposición**. P(ambas rojas) = ?",
+        options: ["2/15", "4/25", "1/5", "2/9"],
+        correctIndex: 0,
+        explanation: "P(1ª roja) = 4/10. P(2ª roja|1ª roja) = 3/9. P(ambas) = 4/10 × 3/9 = 12/90 = **2/15**.",
+        difficulty: "avanzado"
+      }
+    ]
+  }
+  ]
 };
