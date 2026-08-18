@@ -4405,8 +4405,7 @@ export const courseContent: CourseContent = {
   }
   ]
 };
-,
-  "historia": [
+
 const historiaModulesPart1: CourseModule[] = [
   {
     slug: "civilizaciones-preincaicas",
@@ -4977,7 +4976,9 @@ const historiaModulesPart1: CourseModule[] = [
       { id: 3071, question: "El sistema de Consignaciones del Oncenio consistía en:", options: ["La venta de terrenos estatales a particulares", "El otorgamiento de monopolios de exportación a empresas extranjeras", "El reparto de tierras a campesinos", "La creación de cooperativas agrícolas"], correctIndex: 1, explanation: "El sistema de Consignaciones permitía a empresas como W.R. Grace controlar la exportación de productos peruanos a cambio de préstamos que endeudaban al Estado.", difficulty: "intermedio" },
       { id: 3072, question: "La Gran Depresión de 1929 afectó a Perú principalmente por:", options: ["La caída de precios del algodón y la plata", "La invasión de tropas extranjeras", "La pérdida de territorios en la frontera norte", "La rebelión armada de los campesinos"], correctIndex: 0, explanation: "La Gran Depresión colapsó los precios internacionales del algodón y la plata, principales exportaciones peruanas, provocando desempleo masivo y quiebras bancarias que debilitaron al régimen.", difficulty: "avanzado" }
     ]
-  },
+  }
+];
+
 const historiaModulesPart2: CourseModule[] = [
   {
     slug: "aprismo-y-guerra",
@@ -5521,7 +5522,9 @@ $part6 = @"
       { id: 4071, question: "¿Qué caso emblemático involucró la ejecución de internos en los penales?", options: ["La matanza de los penales (1992)", "La masacre de Putis (1983)", "El caso de Accomarca (1985)", "La toma de la embajada de Japón (1996)"], correctIndex: 0, explanation: "La matanza de los penales en 1992 involucró la ejecución extrajudicial de internos acusados de terrorismo por agentes del Estado.", difficulty: "intermedio" },
       { id: 4072, question: "¿Cuál es el principio fundamental de la justicia transicional en sociedades post-conflicto?", options: ["Equilibrar verdad, justicia y reparación", "Olvídar el pasado para avanzar", "Castigo severo sin excepciones", "Impunidad garantizada para los victimarios"], correctIndex: 0, explanation: "La justicia transicional busca equilibrar verdad, justicia y reparación, reconociendo que la paz social requiere abordar las violaciones del pasado de manera integral.", difficulty: "avanzado" }
     ]
-  },
+  }
+];
+
 const historiaModulesPart3: CourseModule[] = [
   {
     slug: "revolucion-francesa",
@@ -6273,5 +6276,6 @@ const historiaModulesPart3: CourseModule[] = [
       }
     ]
   }
-  ]
-};
+];
+
+courseContent["historia"] = [...historiaModulesPart1, ...historiaModulesPart2, ...historiaModulesPart3];
