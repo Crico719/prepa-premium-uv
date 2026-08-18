@@ -4405,3 +4405,1873 @@ export const courseContent: CourseContent = {
   }
   ]
 };
+,
+  "historia": [
+const historiaModulesPart1: CourseModule[] = [
+  {
+    slug: "civilizaciones-preincaicas",
+    tip: "En el examen, memoriza la ubicaci\u00f3n geogr\u00e1fica y caracter\u00edstica principal de cada civilizaci\u00f3n: Nazca=L\u00edneas, Moche=cer\u00e1mica, Wari=imperio temprano, Chim\u00fa=Chan Chan.",
+    theory: [
+      {
+        level: "basico",
+        title: "Las seis grandes civilizaciones preincaicas",
+        lines: [
+          "Chav\u00edn (1200-400 a.C.): civilizaci\u00f3n matriz ubicada en la sierra norte (Chav\u00edn de Hu\u00e1ntar). Su deidad principal fue el Lanz\u00f3n monol\u00edtico.",
+          "Paracas (800 a.C.-100 d.C.): se desarroll\u00f3 en la pen\u00ednsula de Paracas (Ica). Destac\u00f3 por sus textiles momia y trepanaciones craneanas.",
+          "Nazca (100 a.C.-800 d.C.): floreci\u00f3 en la costa sur. Son famosas las L\u00edneas de Nazca y los acueductos de Cahuachi.",
+          "Moche (100-700 d.C.): se ubic\u00f3 en la costa norte (Valle de Moche, La Libertad). Produjo la cer\u00e1mica retrato m\u00e1s realista del antiguo Per\u00fa.",
+          "Wari (550-1000 d.C.): imperio centralista que domin\u00f3 la sierra y costa centrales desde su capital en Ayacucho (Huari).",
+          "Chim\u00fa (900-1470 d.C.): imperio coste\u00f1o con capital en Chan Chan (La Libertad). Fue el \u00faltimo gran rival del Tahuantinsuyo."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Caracter\u00edsticas espec\u00edficas de cada civilizaci\u00f3n",
+        lines: [
+          "Chav\u00edn: desarrollo de la religi\u00f3n teocr\u00e1tica, agricultura en terrazas y uso de la coca. Su estilo art\u00edstico se expandi\u00f3 por toda la costa y sierra.",
+          "Paracas: dominaron la metalurgia (oro, plata, cobre), la trepanaci\u00f3n craneana con 40% de supervivencia y el te\u00f1ido de textiles con tintes naturales.",
+          "Nazca: crearon un sistema de acueductos subterr\u00e1neos (puquios) que a\u00fan funciona. Sus cer\u00e1micas policromas representan seres sobrenaturales (Cantorales).",
+          "Moche: construyeron huacas monumentales (Sol y Luna). Practicaron el sacrificio ritual (Sacrificio de los Llanos de Moche) y la agricultura por irrigaci\u00f3n.",
+          "Wari: implementaron un sistema de caminos estatales (precursores del Qhapaq \u00d1an). Usaron el mitmaq (reubicaci\u00f3n forzada de poblaciones).",
+          "Chim\u00fa: perfeccionaron la metalurgia (oro lunar), el sistema de canales de irrigaci\u00f3n y la artesan\u00eda en talleres centralizados de Chan Chan."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Relaciones, decadencia e influencias entre civilizaciones",
+        lines: [
+          "Chav\u00edn ejerci\u00f3 influencia teol\u00f3gica sobre las culturas coste\u00f1as posteriores (Paracas y Nazca), pero no fue un imperio pol\u00edtico territorial.",
+          "Paracas y Nazca comparten zona geogr\u00e1fica; los nazcas habr\u00edan sucedido a los paracas, adoptando su tecnolog\u00eda textil y a\u00f1adiendo innovaciones cer\u00e1micas.",
+          "Los Moche declinaron por factores clim\u00e1ticos (El Ni\u00f1o) y conflictos internos. Se fragmentaron en reinos emergentes (Sic\u00e1n, Chim\u00fa).",
+          "Wari y Tiwanaku fueron los primeros imperios panregionales: Wari controlaba la costa y sierra central; Tiwanaku, el altiplano collao.",
+          "Chim\u00fa, heredero de los Moche, expandi\u00f3 su dominio por toda la costa norte y central hasta ser conquistado por Pachac\u00fatec alrededor de 1470.",
+          "El Tahuantinsuyo integr\u00f3 y super\u00f3 todas estas tradiciones: administraci\u00f3n wari, metalurgia chim\u00fa, arte nazca y agricultura andina."
+        ]
+      }
+    ],
+    illustrations: [
+      '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">',
+      '  <rect width="300" height="200" fill="#f8fafc" rx="12"/>',
+      '  <text x="150" y="22" text-anchor="middle" fill="#2563eb" font-size="12" font-weight="bold" font-family="sans-serif">Civilizaciones Preincaicas</text>',
+      '  <rect x="20" y="40" width="80" height="30" fill="#dbeafe" rx="6"/>',
+      '  <text x="60" y="60" text-anchor="middle" fill="#1e40af" font-size="9" font-family="sans-serif">Chav\u00edn</text>',
+      '  <rect x="110" y="40" width="80" height="30" fill="#dbeafe" rx="6"/>',
+      '  <text x="150" y="60" text-anchor="middle" fill="#1e40af" font-size="9" font-family="sans-serif">Paracas</text>',
+      '  <rect x="200" y="40" width="80" height="30" fill="#dbeafe" rx="6"/>',
+      '  <text x="240" y="60" text-anchor="middle" fill="#1e40af" font-size="9" font-family="sans-serif">Nazca</text>',
+      '  <rect x="20" y="80" width="80" height="30" fill="#fef3c7" rx="6"/>',
+      '  <text x="60" y="100" text-anchor="middle" fill="#92400e" font-size="9" font-family="sans-serif">Moche</text>',
+      '  <rect x="110" y="80" width="80" height="30" fill="#fef3c7" rx="6"/>',
+      '  <text x="150" y="100" text-anchor="middle" fill="#92400e" font-size="9" font-family="sans-serif">Wari</text>',
+      '  <rect x="200" y="80" width="80" height="30" fill="#fef3c7" rx="6"/>',
+      '  <text x="240" y="100" text-anchor="middle" fill="#92400e" font-size="9" font-family="sans-serif">Chim\u00fa</text>',
+      '  <text x="150" y="140" text-anchor="middle" fill="#475569" font-size="9" font-family="sans-serif">Per\u00edodo: 1200 a.C. - 1470 d.C.</text>',
+      '  <text x="150" y="160" text-anchor="middle" fill="#475569" font-size="9" font-family="sans-serif">Ubicaci\u00f3n: Costa y Sierra del Per\u00fa</text>',
+      '  <text x="150" y="185" text-anchor="middle" fill="#64748b" font-size="8" font-family="sans-serif">Todas fueron integradas al Tahuantinsuyo</text>',
+      '</svg>'
+    ],
+    exercises: [
+      { id: 3001, question: "\u00bfQu\u00e9 civilizaci\u00f3n preincaica construy\u00f3 las famosas L\u00edneas de Nazca en la costa sur del Per\u00fa?", options: ["Chav\u00edn", "Moche", "Nazca", "Chim\u00fa"], correctIndex: 2, explanation: "Las L\u00edneas de Nazca fueron construidas por la cultura Nazca (100 a.C.-800 d.C.) en la meseta de Nazca, Ica. Representan animales, plantas y figuras geom\u00e9tricas.", difficulty: "basico" },
+      { id: 3002, question: "La civilizaci\u00f3n Moche se caracteriz\u00f3 principalmente por:", options: ["Las L\u00edneas de Nazca", "La cer\u00e1mica retrato y las huacas Sol y Luna", "El sistema de mitmaq", "La construcci\u00f3n de Chan Chan"], correctIndex: 1, explanation: "Los Moche destacaron por su cer\u00e1mica retrato de gran realismo y por construir las Huacas del Sol y de la Luna en el valle de Moche, La Libertad.", difficulty: "intermedio" },
+      { id: 3003, question: "\u00bfCu\u00e1l de las siguientes afirmaciones sobre el imperio Wari es correcta?", options: ["Fue un imperio coste\u00f1o con capital en Chan Chan", "Implement\u00f3 el sistema de mitmaq y caminos estatales", "Se desarroll\u00f3 exclusivamente en la sierra sur", "Sus dioses fueron representados en cer\u00e1mica policroma"], correctIndex: 1, explanation: "El Wari (550-1000 d.C.) fue el primer imperio centralista andino. Desde Huari (Ayacucho) extendi\u00f3 caminos estatales y us\u00f3 el mitmaq (reubicaci\u00f3n forzada) para controlar territorios.", difficulty: "avanzado" }
+    ]
+  },
+  {
+    slug: "tahuantinsuyo",
+    tip: "Pachac\u00fatec expandi\u00f3 el imperio, T\u00fapac Inca lo consolid\u00f3, Atahualpa lo perdi\u00f3. Memoriza la estructura social: Sapa Inca \u2192 Curacas \u2192 Hatun Runa \u2192 Yanakuna.",
+    theory: [
+      {
+        level: "basico",
+        title: "El Tahuantinsuyo: el imperio incaico",
+        lines: [
+          "El Tahuantinsuyo (\u201clas cuatro regiones\u201d) fue el imperio m\u00e1s grande de Am\u00e9rica precolombina, abarcando desde Colombia hasta Chile.",
+          "Su capital fue Cusco, el ombligo del mundo (Qosqo), desde donde se gobernaron cuatro suyus: Chinchaysuyu, Antisuyu, Collasuyu y Cuntisuyu.",
+          "Pachac\u00fatec (1438-1471) es considerado el fundador del Tahuantinsuyo. Derrot\u00f3 a los chancas y expandi\u00f3 el imperio hacia el norte y sur.",
+          "T\u00fapac Inca Yupanqui (1471-1493) consolid\u00f3 la expansi\u00f3n, llegando hasta el r\u00edo Atrato (Colombia) y la zona central de Chile.",
+          "Huayna C\u00e1pac (1493-1527) fue el \u00faltimo gran Sapa Inca. Muri\u00f3 de una epidemia europea, lo que desat\u00f3 la guerra civil entre Atahualpa y Hu\u00e1scar.",
+          "El imperio colaps\u00f3 en 1532 cuando Pizarro captur\u00f3 a Atahualpa en Cajamarca, fragmentando un poder que se sosten\u00eda en la figura del Sapa Inca."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Organizaci\u00f3n social, econ\u00f3mica y pol\u00edtica del Tahuantinsuyo",
+        lines: [
+          "La pir\u00e1mide social estaba encabezada por el Sapa Inca (hijo del Sol), seguido por los Awki (pr\u00edncipes), los Curacas (jefes locales) y el Hatun Runa (pueblo).",
+          "Los Yanakuna eran servidores personales del Inca, libres de tributo. Los Mitimaes eran comunidades reubicadas para controlar territorios estrat\u00e9gicos.",
+          "El sistema econ\u00f3mico se basaba en la reciprocidad (ayni) y la redistribuci\u00f3n: el Estado almacenaba excedentes en qollqas (dep\u00f3sitos) para redistribuirlos en \u00e9pocas de escasez.",
+          "La mit'a era el trabajo obligatorio al Estado, que se pagaba en trabajo, no en dinero. Los trabajadores recib\u00edan alimento y coca a cambio.",
+          "Los quipus eran dispositivos de cuerdas con nudos para registrar informaci\u00f3n num\u00e9rica y posiblemente narrativa. Solo los quipucamayocs sab\u00edan interpretarlos.",
+          "El aillu era la unidad social b\u00e1sica: un grupo de parentesco que compart\u00eda tierras, trabajo y ritual. Todos los incas pertenec\u00edan a un aillu."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Red de caminos, tambos, mitmaes y sistemas de control",
+        lines: [
+          "El Qhapaq \u00d1an (red de caminos) ten\u00eda m\u00e1s de 30,000 km, incluyendo puentes colgantes sobre r\u00edos y camachacuyes (caminos de altura).",
+          "Los tambos eran estaciones de descanso y dep\u00f3sito cada 15-20 km a lo largo de los caminos. Los m\u00e1s grandes eran los tampus reales para el Sapa Inca.",
+          "El sistema de mitmaes permit\u00eda al Estado reubicar poblaciones enteras para evitar rebeliones, poblar nuevas regiones o ejecutar proyectos agr\u00edcolas.",
+          "La mit'a incaica era rotativa y obligatoria: duraba meses y abarcaba desde la agricultura hasta la construcci\u00f3n de obras p\u00fablicas (caminos, puentes, tambos).",
+          "El sistema de ceques (l\u00edneas rituales) conectaba los huacas (lugares sagrados) desde el Coricancha en Cusco, estructurando el territorio en clave sagrada.",
+          "El Tahuantinsuyo se sostuvo por la interacci\u00f3n entre centralismo incaico y autonom\u00eda local: los curacas manten\u00edan poder siempre que pagaran tributo y aceptaran al Sapa Inca."
+        ]
+      }
+    ],
+    illustrations: [
+      '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">',
+      '  <rect width="300" height="200" fill="#f8fafc" rx="12"/>',
+      '  <text x="150" y="22" text-anchor="middle" fill="#2563eb" font-size="12" font-weight="bold" font-family="sans-serif">Estructura del Tahuantinsuyo</text>',
+      '  <polygon points="150,35 185,65 115,65" fill="#fbbf24" stroke="#d97706" stroke-width="1"/>',
+      '  <text x="150" y="58" text-anchor="middle" fill="#78350f" font-size="8" font-weight="bold" font-family="sans-serif">Sapa Inca</text>',
+      '  <rect x="110" y="70" width="80" height="20" fill="#fde68a" rx="4"/>',
+      '  <text x="150" y="84" text-anchor="middle" fill="#92400e" font-size="8" font-family="sans-serif">Curacas</text>',
+      '  <rect x="95" y="95" width="110" height="20" fill="#fef3c7" rx="4"/>',
+      '  <text x="150" y="109" text-anchor="middle" fill="#92400e" font-size="8" font-family="sans-serif">Hatun Runa (Pueblo)</text>',
+      '  <rect x="80" y="120" width="140" height="20" fill="#fffbeb" rx="4"/>',
+      '  <text x="150" y="134" text-anchor="middle" fill="#92400e" font-size="8" font-family="sans-serif">Yanakuna / Mitimaes</text>',
+      '  <text x="150" y="162" text-anchor="middle" fill="#475569" font-size="9" font-family="sans-serif">4 Suyus: Chinchay, Anti, Cunti, Colla</text>',
+      '  <text x="150" y="182" text-anchor="middle" fill="#64748b" font-size="8" font-family="sans-serif">Capital: Cusco (Qosqo)</text>',
+      '</svg>'
+    ],
+    exercises: [
+      { id: 3010, question: "\u00bfQui\u00e9n es considerado el fundador del Tahuantinsuyo tras la derrota de los chancas?", options: ["T\u00fapac Inca Yupanqui", "Pachac\u00fatec", "Huayna C\u00e1pac", "Atahualpa"], correctIndex: 1, explanation: "Pachac\u00fatec (1438-1471) derrot\u00f3 a los chancas y transform\u00f3 el Curacazgo del Cusco en un vasto imperio, siendo reconocido como el verdadero fundador del Tahuantinsuyo.", difficulty: "basico" },
+      { id: 3011, question: "\u00bfCu\u00e1l era el sistema de trabajo obligatorio al Estado incaico que se pagaba en trabajo y no en dinero?", options: ["Ayllu", "Minka", "Mit'a", "Ayni"], correctIndex: 2, explanation: "La mit'a era el trabajo obligatorio y rotativo que cada comunidad deb\u00eda al Estado inca. A diferencia de la minka (trabajo comunal voluntario), la mit'a era impuesta por el poder central.", difficulty: "intermedio" },
+      { id: 3012, question: "El sistema de mitmaes cumpl\u00eda la funci\u00f3n pol\u00edtica de:", options: ["Registrar informaci\u00f3n en quipus", "Reubicar poblaciones para controlar territorios y prevenir rebeliones", "Distribuir excedentes agr\u00edcolas en los qollqas", "Establecer rutas comerciales entre los suyus"], correctIndex: 1, explanation: "Los mitmaes eran comunidades desplazadas por orden del Inca hacia zonas estrat\u00e9gicas. Esta pol\u00edtica evitaba concentraciones de poder local y facilitaba la integraci\u00f3n de nuevos territorios.", difficulty: "avanzado" }
+    ]
+  },
+  {
+    slug: "conquista-espanola",
+    tip: "La batalla de Cajamarca (1532) fue decisiva. Solo 168 espa\u00f1oles capturaron al Inca. Memoriza fechas: 1532-conquista, 1533-ejecuci\u00f3n de Atahualpa, 1535-fundaci\u00f3n de Lima.",
+    theory: [
+      {
+        level: "basico",
+        title: "La llegada de Pizarro y la captura de Atahualpa",
+        lines: [
+          "Francisco Pizarro lleg\u00f3 al Per\u00fa en 1532 con 168 soldados, 27 caballos y armas de fuego. Parti\u00f3 de San Miguel de Piura hacia la sierra.",
+          "En Cajamarca, el 16 de noviembre de 1532, Pizarro embosc\u00f3 al ej\u00e9rcito inca y captur\u00f3 al Sapa Inca Atahualpa en el Patio de la Recepci\u00f3n.",
+          "Atahualpa ofreci\u00f3 una habitaci\u00f3n llena de oro y dos de plata como rescate. Los espa\u00f1oles la recolectaron pero no lo liberaron.",
+          "El 26 de julio de 1533, Atahualpa fue ejecutado en la plaza de Cajamarca mediante garrote, bajo la acusaci\u00f3n de idolatr\u00eda y usurpaci\u00f3n del trono.",
+          "Tras la ejecuci\u00f3n, Pizarro march\u00f3 hacia Cusco, entrando el 15 de noviembre de 1533 sin resistencia significativa, ali\u00e1ndose con los partidarios de Hu\u00e1scar.",
+          "El 18 de enero de 1535, Pizarro fund\u00f3 la Ciudad de los Reyes (Lima) como capital del nuevo territorio, rompiendo con la tradici\u00f3n cusque\u00f1a."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Guerras civiles espa\u00f1olas y alianzas ind\u00edgenas",
+        lines: [
+          "La guerra civil inca (Atahualpa vs. Hu\u00e1scar) debilit\u00f3 profundamente al Tahuantinsuyo. Pizarro explot\u00f3 esta divisi\u00f3n ali\u00e1ndose con los seguidores de Hu\u00e1scar.",
+          "Diego de Almagro, socio de Pizarro, se rebel\u00f3 por el reparto de territorios. La guerra culmin\u00f3 con su ejecuci\u00f3n en Cusco en 1538.",
+          "Manco Inca lider\u00f3 una gran rebeli\u00f3n en 1536-1537, asediando Cusco durante meses. Fue derrotado y huy\u00f3 a Vilcabamba, donde estableci\u00f3 un neoestado inca.",
+          "Las guerras civiles espa\u00f1olas (Pizarro vs. Almagro) paralizaron la colonizaci\u00f3n durante a\u00f1os, permitiendo que la resistencia inca se mantuviera en Vilcabamba.",
+          "Los curacas colaboraron activamente con los espa\u00f1oles, aportando miles de guerreros (especialmente en la lucha contra Manco Inca). Su lealtad era estrat\u00e9gica.",
+          "El neoestado de Vilcabamba resisti\u00f3 hasta 1572, cuando el virrey Toledo captur\u00f3 y ejecut\u00f3 a T\u00fapac Amaru I, \u00faltimo Inca de Vilcabamba."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Impacto demogr\u00e1fico, mestizaje y resistencia cultural",
+        lines: [
+          "Se estima que la poblaci\u00f3n del Per\u00fa cay\u00f3 de aproximadamente 9-12 millones en 1530 a menos de 1 mill\u00f3n en 1620, principalmente por epidemias (viruela, sarampi\u00f3n, gripe).",
+          "El mestizaje racial y cultural fue un proceso complejo: no solo biol\u00f3gico, sino tambi\u00e9n deusi\u00f3n de cosmovisiones, religiones y pr\u00e1cticas agr\u00edcolas.",
+          "La imposici\u00f3n del catolicismo convivi\u00f3 con la resistencia religiosa andina: los ind\u00edgenas practicaban su religi\u00f3n en secreto o la sincretizaban con el cristianismo.",
+          "El sistema de encomiendas distribuy\u00f3 poblaciones ind\u00edgenas entre espa\u00f1oles, generando explotaci\u00f3n laboral que deriv\u00f3 en levantamientos y la posterior creaci\u00f3n de reducciones.",
+          "El quipu fue prohibido y muchos fueron quemados por los curas, pero su uso persisti\u00f3 en comunidades andinas hasta el siglo XVIII.",
+          "La conquista no fue un evento puntual sino un proceso de m\u00e1s de 40 a\u00f1os de resistencia, adaptaci\u00f3n y transformaci\u00f3n mutua entre espa\u00f1oles e ind\u00edgenas."
+        ]
+      }
+    ],
+    illustrations: [
+      '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">',
+      '  <rect width="300" height="200" fill="#f8fafc" rx="12"/>',
+      '  <text x="150" y="22" text-anchor="middle" fill="#dc2626" font-size="12" font-weight="bold" font-family="sans-serif">Conquista Espa\u00f1ola del Per\u00fa</text>',
+      '  <line x1="50" y1="50" x2="250" y2="50" stroke="#e2e8f0" stroke-width="2"/>',
+      '  <circle cx="80" cy="50" r="6" fill="#2563eb"/>',
+      '  <text x="80" y="73" text-anchor="middle" fill="#1e293b" font-size="7" font-family="sans-serif">1532</text>',
+      '  <text x="80" y="83" text-anchor="middle" fill="#475569" font-size="7" font-family="sans-serif">Cajamarca</text>',
+      '  <circle cx="135" cy="50" r="6" fill="#dc2626"/>',
+      '  <text x="135" y="73" text-anchor="middle" fill="#1e293b" font-size="7" font-family="sans-serif">1533</text>',
+      '  <text x="135" y="83" text-anchor="middle" fill="#475569" font-size="7" font-family="sans-serif">Ejecuci\u00f3n</text>',
+      '  <circle cx="190" cy="50" r="6" fill="#f59e0b"/>',
+      '  <text x="190" y="73" text-anchor="middle" fill="#1e293b" font-size="7" font-family="sans-serif">1535</text>',
+      '  <text x="190" y="83" text-anchor="middle" fill="#475569" font-size="7" font-family="sans-serif">Lima</text>',
+      '  <circle cx="240" cy="50" r="6" fill="#16a34a"/>',
+      '  <text x="240" y="73" text-anchor="middle" fill="#1e293b" font-size="7" font-family="sans-serif">1572</text>',
+      '  <text x="240" y="83" text-anchor="middle" fill="#475569" font-size="7" font-family="sans-serif">Vilcabamba</text>',
+      '  <text x="150" y="115" text-anchor="middle" fill="#1e293b" font-size="9" font-weight="bold" font-family="sans-serif">Impacto Demogr\u00e1fico</text>',
+      '  <rect x="40" y="125" width="100" height="16" fill="#dcfce7" rx="4"/>',
+      '  <text x="90" y="137" text-anchor="middle" fill="#166534" font-size="7" font-family="sans-serif">1530: ~9-12 millones</text>',
+      '  <rect x="160" y="125" width="100" height="16" fill="#fee2e2" rx="4"/>',
+      '  <text x="210" y="137" text-anchor="middle" fill="#991b1b" font-size="7" font-family="sans-serif">1620: ~1 mill\u00f3n</text>',
+      '  <text x="150" y="165" text-anchor="middle" fill="#475569" font-size="8" font-family="sans-serif">Mortalidad estimada: 80-90%</text>',
+      '  <text x="150" y="188" text-anchor="middle" fill="#64748b" font-size="7" font-family="sans-serif">Resistencia: Vilcabamba (1536-1572)</text>',
+      '</svg>'
+    ],
+    exercises: [
+      { id: 3020, question: "\u00bfEn qu\u00e9 fecha Pizarro captur\u00f3 al Sapa Inca Atahualpa en Cajamarca?", options: ["16 de noviembre de 1532", "26 de julio de 1533", "18 de enero de 1535", "15 de noviembre de 1533"], correctIndex: 0, explanation: "El 16 de noviembre de 1532, Pizarro embosc\u00f3 a Atahualpa en la Plaza de Cajamarca, captur\u00e1ndolo con solo 168 soldados frente a un ej\u00e9rcito de miles.", difficulty: "basico" },
+      { id: 3021, question: "\u00bfQui\u00e9n lider\u00f3 la gran rebeli\u00f3n inca contra los espa\u00f1oles en 1536-1537, asediando Cusco?", options: ["Atahualpa", "Hu\u00e1scar", "Manco Inca", "T\u00fapac Amaru I"], correctIndex: 2, explanation: "Manco Inca, originalmente aliado de los espa\u00f1oles, lider\u00f3 una rebeli\u00f3n masiva en 1536 que asedi\u00f3 Cusco durante meses. Fue derrotado y huy\u00f3 a Vilcabamba.", difficulty: "intermedio" },
+      { id: 3022, question: "La ca\u00feda del neoestado de Vilcabamba en 1572 signific\u00f3:", options: ["El inicio de la colonizaci\u00f3n espa\u00f1ola", "La ejecuci\u00f3n de Atahualpa en Cajamarca", "La captura y ejecuci\u00f3n de T\u00fapac Amaru I, \u00faltimo inca de Vilcabamba", "La fundaci\u00f3n de la Ciudad de los Reyes"], correctIndex: 2, explanation: "El virrey Toledo captur\u00f3 a T\u00fapac Amaru I en 1572 y lo ejecut\u00f3 p\u00fablicamente en Cusco, poniendo fin a m\u00e1s de 40 a\u00f1os de resistencia inca organizada.", difficulty: "avanzado" }
+    ]
+  },
+  {
+    slug: "virreinato-del-peru",
+    tip: "El Virreinato del Per\u00fa abarcaba casi toda Sudam\u00e9rica. Los virreyes m\u00e1s importantes: Toledo (reformas), Lima (expansi\u00f3n), Amat (ilustraci\u00f3n).",
+    theory: [
+      {
+        level: "basico",
+        title: "El Virreinato del Per\u00fa: estructura y gobierno colonial",
+        lines: [
+          "El Virreinato del Per\u00fa fue creado en 1542 por Carlos V. Inicialmente abarcaba casi toda Sudam\u00e9rica, excepto Brasil, Venezuela y la regi\u00f3n del R\u00edo de la Plata.",
+          "La capital era la Ciudad de los Reyes (Lima), que desde 1560 fue sede de la Real Audiencia y centro administrativo del imperio espa\u00f1ol en Sudam\u00e9rica.",
+          "El virrey era el representante directo del rey y ten\u00eda poder ejecutivo, judicial y militar. Los primeros virreyes enfrentaron rebeliones como la de Gonzalo Pizarro.",
+          "Blasco N\u00fa\u00f1ez Vira fue el primer virrey (1544-1546), pero fue derrocado por Gonzalo Pizarro, quien gobern\u00f3 hasta su ejecuci\u00f3n en 1548.",
+          "El Toledo (1569-1581) realiz\u00f3 reformas fundamentales: estableci\u00f3 la reducci\u00f3n de indios, reorganiz\u00f3 la mit'a y fund\u00f3 pueblos de espa\u00f1oles.",
+          "El virreinato se dividi\u00f3 en gobernaciones, corregimientos y encomiendas, creando una jerarqu\u00eda administrativa que controlaba la explotaci\u00f3n de recursos y mano de obra ind\u00edgena."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Econom\u00eda colonial: miner\u00eda, mita y comercio",
+        lines: [
+          "Potos\u00ed (actual Bolivia) fue la mina de plata m\u00e1s grande del mundo. Su cerro de plata financi\u00f3 el imperio espa\u00f1ol durante m\u00e1s de dos siglos.",
+          "La mita colonial, establecida por Toledo, obligaba a los ind\u00edgenas a trabajar en las minas de Potos\u00ed durante cuatro meses al a\u00f1o, causando alt\u00edsima mortalidad.",
+          "El comercio se realizaba a trav\u00e9s del sistema de flotas: barcos que viajaban de Sevilla a Portobelo (Panam\u00e1) y de all\u00ed por tierra al Pac\u00edfico.",
+          "El sistema de monopolio comercial (Casa de Contrataci\u00f3n) prohib\u00eda el comercio directo entre las colonias y otros pa\u00edses europeos.",
+          "Los obrajes eran talleres textiles donde ind\u00edgenas y mestizos trabajaban en condiciones de explotaci\u00f3n, produciendo telas para todo el virreinato.",
+          "La econom\u00eda colonial era fundamentalmente extractiva: se extra\u00edan metales preciosos y productos agr\u00edcolas, sin desarrollar industria local."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Reformas borb\u00f3nicas, ilustraci\u00f3n y conspiraciones",
+        lines: [
+          "Las reformas borb\u00f3nicas (siglo XVIII) buscaron modernizar la administraci\u00f3n colonial, aumentar la recaudaci\u00f3n y romper el monopolio lime\u00f1o.",
+          "La creaci\u00f3n del Virreinato del R\u00edo de la Plata (1776) desmembr\u00f3 territorios del Per\u00fa, debilitando su hegemon\u00eda pol\u00edtica y econ\u00f3mica.",
+          "La expulsi\u00f3n de los jesuitas (1767) gener\u00f3 un vac\u00edo educativo y de atenci\u00f3n a las poblaciones ind\u00edgenas de la Amazon\u00eda y la sierra.",
+          "La Ilustraci\u00f3n lleg\u00f3 al Per\u00fa a trav\u00e9s de universidades y viajes cient\u00edficos (La Condamine, 1740). Intelectuales como Pablo de Olavide promovieron reformas.",
+          "La conspiraci\u00f3n de los Tres Abogados (1780) y la rebeli\u00f3n de T\u00fapac Amaru II (1780-1783) desafiaron frontalmente el sistema colonial.",
+          "Las reformas borb\u00f3nicas, paradojicamente, al descontentar tanto a criollos como a ind\u00edgenas, sembraron las semillas de la independencia."
+        ]
+      }
+    ],
+    illustrations: [
+      '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">',
+      '  <rect width="300" height="200" fill="#f8fafc" rx="12"/>',
+      '  <text x="150" y="22" text-anchor="middle" fill="#7c3aed" font-size="12" font-weight="bold" font-family="sans-serif">Virreinato del Per\u00fa</text>',
+      '  <rect x="25" y="38" width="120" height="60" fill="#ede9fe" rx="6"/>',
+      '  <text x="85" y="53" text-anchor="middle" fill="#5b21b6" font-size="9" font-weight="bold" font-family="sans-serif">Estructura</text>',
+      '  <text x="85" y="66" text-anchor="middle" fill="#1e293b" font-size="7" font-family="sans-serif">Rey \u2192 Virrey \u2192 Gobernador</text>',
+      '  <text x="85" y="78" text-anchor="middle" fill="#1e293b" font-size="7" font-family="sans-serif">\u2192 Corregidor \u2192 Encomendero</text>',
+      '  <text x="85" y="90" text-anchor="middle" fill="#1e293b" font-size="7" font-family="sans-serif">\u2192 Curaca \u2192 Ind\u00edgena</text>',
+      '  <rect x="155" y="38" width="120" height="60" fill="#fef3c7" rx="6"/>',
+      '  <text x="215" y="53" text-anchor="middle" fill="#92400e" font-size="9" font-weight="bold" font-family="sans-serif">Econom\u00eda</text>',
+      '  <text x="215" y="66" text-anchor="middle" fill="#1e293b" font-size="7" font-family="sans-serif">Mita minera (Potos\u00ed)</text>',
+      '  <text x="215" y="78" text-anchor="middle" fill="#1e293b" font-size="7" font-family="sans-serif">Monopolio comercial</text>',
+      '  <text x="215" y="90" text-anchor="middle" fill="#1e293b" font-size="7" font-family="sans-serif">Flotas de Sevilla</text>',
+      '  <text x="150" y="120" text-anchor="middle" fill="#1e293b" font-size="9" font-weight="bold" font-family="sans-serif">Reformas Borb\u00f3nicas (s. XVIII)</text>',
+      '  <rect x="30" y="130" width="70" height="35" fill="#dbeafe" rx="4"/>',
+      '  <text x="65" y="143" text-anchor="middle" fill="#1e40af" font-size="7" font-family="sans-serif">Expulsi\u00f3n</text>',
+      '  <text x="65" y="155" text-anchor="middle" fill="#1e40af" font-size="7" font-family="sans-serif">Jesuitas 1767</text>',
+      '  <rect x="115" y="130" width="70" height="35" fill="#fee2e2" rx="4"/>',
+      '  <text x="150" y="143" text-anchor="middle" fill="#991b1b" font-size="7" font-family="sans-serif">T\u00fapac Amaru</text>',
+      '  <text x="150" y="155" text-anchor="middle" fill="#991b1b" font-size="7" font-family="sans-serif">1780-1783</text>',
+      '  <rect x="200" y="130" width="70" height="35" fill="#dcfce7" rx="4"/>',
+      '  <text x="235" y="143" text-anchor="middle" fill="#166534" font-size="7" font-family="sans-serif">Nuevo Virreinato</text>',
+      '  <text x="235" y="155" text-anchor="middle" fill="#166534" font-size="7" font-family="sans-serif">R\u00edo Plata 1776</text>',
+      '  <text x="150" y="190" text-anchor="middle" fill="#64748b" font-size="7" font-family="sans-serif">1542-1824: 282 a\u00f1os de dominio espa\u00f1ol</text>',
+      '</svg>'
+    ],
+    exercises: [
+      { id: 3030, question: "\u00bfEn qu\u00e9 a\u00f1o fue creado el Virreinato del Per\u00fa y por qui\u00e9n?", options: ["1532 por Francisco Pizarro", "1542 por Carlos V", "1560 por Felipe II", "1776 por Carlos III"], correctIndex: 1, explanation: "El Virreinato del Per\u00fa fue creado en 1542 por Real Cédula de Carlos V, como parte de las Reformas de Nueva Cástilla, con capital en la Ciudad de los Reyes (Lima).", difficulty: "basico" },
+      { id: 3031, question: "Potos\u00ed, la famosa mina de plata, fue administrada a trav\u00e9s del sistema de:", options: ["Encomiendas", "Corregimientos", "Mita colonial", "Obrajes"], correctIndex: 2, explanation: "La mita colonial, establecida por el virrey Toledo, obligaba a los ind\u00edgenas a trabajar en las minas de Potos\u00ef de forma rotativa, causando una alt\u00edsima mortalidad.", difficulty: "intermedio" },
+      { id: 3032, question: "La rebeli\u00f3n de T\u00fapac Amaru II (1780-1783) fue consecuencia directa de:", options: ["La expulsi\u00f3n de los jesuitas", "Las reformas borb\u00f3nicas y la explotaci\u00f3n del sistema de mita", "La creaci\u00f3n del Virreinato del R\u00edo de la Plata", "La guerra de los Siete A\u00f1os"], correctIndex: 1, explanation: "T\u00fapac Amaru II lider\u00f3 la rebeli\u00f3n m\u00e1s grande contra el sistema colonial, motivado por las reformas borb\u00f3nicas que aumentaron la explotaci\u00f3n ind\u00edgena, especialmente a través de la mita minera.", difficulty: "avanzado" }
+    ]
+  },
+  {
+    slug: "independencia-del-peru",
+    tip: "San Mart\u00edn proclam\u00f3 la independencia el 28 de julio de 1821. Bol\u00edvar la consolid\u00f3 en 1824. La batalla de Ayacucho (1824) fue la definitiva.",
+    theory: [
+      {
+        level: "basico",
+        title: "Proclamaci\u00f3n y batallas de la independencia",
+        lines: [
+          "José de San Martín llegó al Perú en 1820 desde Chile con el Ejército de los Andes, desembarcando en Paracas y marchando hacia Lima.",
+          "El 28 de julio de 1821, San Martín proclamó la independencia del Perú en la Plaza de Armas de Lima, declarando al país como Estado Libre.",
+          "San Martín se autoproclamó Protector del Perú y promulgo leyes libertarias como la abolición de la mita y la libertad de vientres.",
+          "En 1822, San Martín y Simón Bolívar se reunieron en la conferencia de Guayaquil, tras la cual San Martín renunció y se exilió a Europa.",
+          "Bolívar asumió el liderazgo y consolidó la independencia con la batalla de Junín (1824) y la batalla de Ayacucho (1824), ambas victorias decisivas.",
+          "La batalla de Ayacucho (9 de diciembre de 1824) fue la última gran batalla de las guerras de independencia sudamericanas. El virrey La Serna se rindió."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "San Martín vs. Bolívar: estrategias y differencias",
+        lines: [
+          "San Martín optó por una estrategia diplomática y gradual: buscó la independencia sin violencia extrema y propuso una monarquía constitucional para el Perú.",
+          "Bolívar, en cambio, defendía la república y la unificación de América del Sur en una sola nación (Gran Colombia). Su enfoque era más militar.",
+          "La conferencia de Guayaquil (26-27 de julio de 1822) resolvió la disputa a favor de Bolívar: San Martín cedió el control del Perú y se retiró.",
+          "El Congreso de Angostura (1819) fue donde Bolívar delineó su proyecto político para la unidad sudamericana, incluyendo un ejecutivo fuerte y bicameral.",
+          "La Constitución de 1826, impulsada por Bolívar, estableció una presidencia vitalicia, pero fue rechazada por los peruanos que preferían un sistema más republicano.",
+          "La tensión entre las visiones de San Martín (monarquía moderada) y Bolívar (república centralizada) definió los primeros débates políticos de la república."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Causas económicas, sociales y la influencia de la Ilustración",
+        lines: [
+          "Las causas económicas incluían el monopolio comercial español, las reformas borbónicas que gravaban a los criollos y la exclusión del comercio libre.",
+          "Los criollos, descendientes de españoles nacidos en América, sentían que las reformas borbónicas les quitaban privilegios económicos y políticos.",
+          "La Ilustración difundió ideas de soberanía popular, separación de poderes y derechos del hombre, influyendo en los líderes independentistas.",
+          "La revolución francesa (1789) y la independencia de EE.UU. (1776) fueron modelos ideológicos para los libertadores sudamericanos.",
+          "La rebelión de Túpac Amaru II (1780), aunque indígena, demostró la fragilidad del sistema colonial y sembró el descontento que los criollos canalizaron en 1810.",
+          "El comercio ilícito de los criollos con Inglaterra y EE.UU. les mostró las ventajas de un sistema económico abierto, incompatible con el monopolio español."
+        ]
+      }
+    ],
+    illustrations: [
+      '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">',
+      '  <rect width="300" height="200" fill="#f8fafc" rx="12"/>',
+      '  <text x="150" y="22" text-anchor="middle" fill="#16a34a" font-size="12" font-weight="bold" font-family="sans-serif">Independencia del Per\u00fa</text>',
+      '  <line x1="30" y1="50" x2="270" y2="50" stroke="#e2e8f0" stroke-width="2"/>',
+      '  <circle cx="60" cy="50" r="5" fill="#2563eb"/>',
+      '  <text x="60" y="72" text-anchor="middle" fill="#1e293b" font-size="7" font-family="sans-serif">1820</text>',
+      '  <text x="60" y="82" text-anchor="middle" fill="#475569" font-size="6" font-family="sans-serif">Llegada San Mart\u00edn</text>',
+      '  <circle cx="120" cy="50" r="5" fill="#16a34a"/>',
+      '  <text x="120" y="72" text-anchor="middle" fill="#1e293b" font-size="7" font-family="sans-serif">1821</text>',
+      '  <text x="120" y="82" text-anchor="middle" fill="#475569" font-size="6" font-family="sans-serif">Proclamac.Independencia</text>',
+      '  <circle cx="180" cy="50" r="5" fill="#f59e0b"/>',
+      '  <text x="180" y="72" text-anchor="middle" fill="#1e293b" font-size="7" font-family="sans-serif">1822</text>',
+      '  <text x="180" y="82" text-anchor="middle" fill="#475569" font-size="6" font-family="sans-serif">Guayaquil</text>',
+      '  <circle cx="240" cy="50" r="5" fill="#dc2626"/>',
+      '  <text x="240" y="72" text-anchor="middle" fill="#1e293b" font-size="7" font-family="sans-serif">1824</text>',
+      '  <text x="240" y="82" text-anchor="middle" fill="#475569" font-size="6" font-family="sans-serif">Ayacucho</text>',
+      '  <text x="150" y="110" text-anchor="middle" fill="#1e293b" font-size="9" font-weight="bold" font-family="sans-serif">Batalla de Ayacucho (1824)</text>',
+      '  <text x="150" y="128" text-anchor="middle" fill="#475569" font-size="8" font-family="sans-serif">Ej\u00e9rcito Unido Libertador: 5,780</text>',
+      '  <text x="150" y="143" text-anchor="middle" fill="#475569" font-size="8" font-family="sans-serif">Realistas: 9,310 (rindi\u00f3n)</text>',
+      '  <text x="150" y="168" text-anchor="middle" fill="#64748b" font-size="7" font-family="sans-serif">\u00daltima gran batalla de Am\u00e9rica del Sur</text>',
+      '  <text x="150" y="188" text-anchor="middle" fill="#64748b" font-size="7" font-family="sans-serif">Comandante: Antonio Jos\u00e9 de Sucre</text>',
+      '</svg>'
+    ],
+    exercises: [
+      { id: 3040, question: "\u00bfEn qu\u00e9 fecha se proclam\u00f3 la independencia del Per\u00fa y qui\u00e9n lo hizo?", options: ["9 de diciembre de 1824, Sim\u00f3n Bol\u00edvar", "28 de julio de 1821, Jos\u00e9 de San Mart\u00edn", "26 de julio de 1822, Antonio Sucre", "7 de abril de 1825, Andrés de Santa Cruz"], correctIndex: 1, explanation: "El 28 de julio de 1821, José de San Martín proclamó la independencia del Perú en la Plaza de Armas de Lima, estableciendo un gobierno provisional.", difficulty: "basico" },
+      { id: 3041, question: "La conferencia de Guayaquil (1822) entre San Martín y Bolívar resultó en:", options: ["La alianza militar contra los realistas", "San Martín cedió el liderazgo a Bolívar y se retiró", "La creación de la Gran Colombia", "La firma de la Constitución de 1826"], correctIndex: 1, explanation: "En Guayaquil, las diferencias entre San Martín (monarquía moderada) y Bolívar (república) llevaron a que San Martín cediera el control y se exiliara a Europa.", difficulty: "intermedio" },
+      { id: 3042, question: "La influencia de la Ilustración en la independencia peruana se manifestó principalmente en:", options: ["El uso de armas modernas europeas", "La difusión de ideas de soberanía popular y derechos del hombre", "La alianza militar con Francia", "La creación de un ejército profesional"], correctIndex: 1, explanation: "La Ilustración proporcionó el marco teórico de soberanía popular, separación de poderes y derechos naturales que justificaron la ruptura con el dominio español.", difficulty: "avanzado" }
+    ]
+  },
+  {
+    slug: "republica-temprana",
+    tip: "La Rep\u00fablica temprana (1826-1872) fue inestable: caudillos, guerras con Colombia y Bolivia. Memoriza: Guerra con Colombia (1828-1829), Guerra del Pac\u00edfico (1879-1883).",
+    theory: [
+      {
+        level: "basico",
+        title: "Primeros gobiernos y la inestabilidad republicana",
+        lines: [
+          "Después de Ayacucho (1824), Perú tuvo múltiples gobiernos inestables: caudillos militares, presidentes provisionales y constituciones cambiantes.",
+          "Agustín Gamarra y Andrés de Santa Cruz fueron dos de los primeros líderes que intentaron consolidar la república, pero ambos enfrentaron oposición armada.",
+          "Santa Cruz creó la Confederación Perú-Bolivia (1836-1839), un proyecto unionista que fue destruido por Chile y Argentina en la Guerra de la Confederación.",
+          "La Guerra contra la Confederación (1836-1839) terminó con la derrota en la batalla de Yungay y la disolución forzosa de la unión.",
+          "En la década de 1840-1850, los caudillos como Ramón Castilla (1845-1849, 1855-1862) intentaron modernizar el Estado sin abandonar el autoritarismo.",
+          "La constitución de 1860, impulsada por Castilla, fue la más estable del siglo XIX y sirvió como marco político durante décadas."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Guerras externas y la consolidación territorial",
+        lines: [
+          "La guerra con la Gran Colombia (1828-1829) se disputó por el control del norte. La batalla de Portete de Tarqui (1829) definieron las fronteras.",
+          "El Tratado de Pascuales (1829) estableció las fronteras entre Perú y la Gran Colombia, marcando el inicio de la configuración territorial republicana.",
+          "La Guerra contra la Confederación Perú-Bolivia (1836-1839) fue instigada por Chile, que temía una alianza que lo rodeara. La batalla de Yungay fue decisiva.",
+          "La Guerra hispano-sudamericana (1864-1866) involucró a Perú, Chile, Bolivia y Ecuador contra España. El bombardeo del Callao (1866) unificó temporalmente a los países.",
+          "La década de 1860-1870 fue de relativa estabilidad bajo Castilla, con la abolición de la esclavitud (1854) y la llegada del ferrocarril.",
+          "La prosperidad del guano en las décadas de 1840-1860 generó riqueza pero también corrupción, preparando el terreno para la Guerra del Pacífico."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Guano, salitre y el inicio de la Guerra del Pacífico",
+        lines: [
+          "El guano (excremento de aves marinas) fue el principal recurso económico del Perú entre 1840-1880, generando enormes ingresos fiscales por la venta en Europa.",
+          "La isla de Lobos, el guano de Pisco y las islas de Chincha fueron las principales fuentes. A fines del siglo XIX, el recurso se agotó progresivamente.",
+          "El salitre (nitrato de sodio) en Tarapacá era otra fuente de riqueza: se usaba como fertilizante y explosivo, siendo codiciado por Chile y Bolivia.",
+          "La Guerra del Pacífico (1879-1883) comenzó por disputas sobre el salitre. Chile invadió Tarapacá tras la alianza secreta con Bolivia (Tratado de 1874).",
+          "La batalla de Tacna y Arica (1880) y la captura de Lima (1881) fueron los momentos decisivos que sellaron la derrota peruana.",
+          "El Tratado de Ancón (1883) cedió Tarapacá a Chile. La Guerra del Pacífico fue el trauma más grande de la República temprana y definió la política exterior peruana."
+        ]
+      }
+    ],
+    illustrations: [
+      '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">',
+      '  <rect width="300" height="200" fill="#f8fafc" rx="12"/>',
+      '  <text x="150" y="22" text-anchor="middle" fill="#d97706" font-size="12" font-weight="bold" font-family="sans-serif">Rep\u00fablica Temprana (1826-1872)</text>',
+      '  <line x1="30" y1="50" x2="270" y2="50" stroke="#e2e8f0" stroke-width="2"/>',
+      '  <circle cx="60" cy="50" r="5" fill="#2563eb"/>',
+      '  <text x="60" y="70" text-anchor="middle" fill="#1e293b" font-size="6" font-family="sans-serif">1829</text>',
+      '  <text x="60" y="79" text-anchor="middle" fill="#475569" font-size="6" font-family="sans-serif">Colombia</text>',
+      '  <circle cx="120" cy="50" r="5" fill="#dc2626"/>',
+      '  <text x="120" y="70" text-anchor="middle" fill="#1e293b" font-size="6" font-family="sans-serif">1839</text>',
+      '  <text x="120" y="79" text-anchor="middle" fill="#475569" font-size="6" font-family="sans-serif">Yungay</text>',
+      '  <circle cx="180" cy="50" r="5" fill="#f59e0b"/>',
+      '  <text x="180" y="70" text-anchor="middle" fill="#1e293b" font-size="6" font-family="sans-serif">1866</text>',
+      '  <text x="180" y="79" text-anchor="middle" fill="#475569" font-size="6" font-family="sans-serif">Callao</text>',
+      '  <circle cx="240" cy="50" r="5" fill="#dc2626"/>',
+      '  <text x="240" y="70" text-anchor="middle" fill="#1e293b" font-size="6" font-family="sans-serif">1879</text>',
+      '  <text x="240" y="79" text-anchor="middle" fill="#475569" font-size="6" font-family="sans-serif">Pac\u00edfico</text>',
+      '  <text x="150" y="105" text-anchor="middle" fill="#1e293b" font-size="9" font-weight="bold" font-family="sans-serif">Guano y Salitre</text>',
+      '  <rect x="40" y="115" width="100" height="30" fill="#fef3c7" rx="4"/>',
+      '  <text x="90" y="130" text-anchor="middle" fill="#92400e" font-size="8" font-family="sans-serif">Guano: 1840-1880</text>',
+      '  <text x="90" y="140" text-anchor="middle" fill="#92400e" font-size="7" font-family="sans-serif">Islas de Chincha</text>',
+      '  <rect x="160" y="115" width="100" height="30" fill="#fef3c7" rx="4"/>',
+      '  <text x="210" y="130" text-anchor="middle" fill="#92400e" font-size="8" font-family="sans-serif">Salitre: 1879-1883</text>',
+      '  <text x="210" y="140" text-anchor="middle" fill="#92400e" font-size="7" font-family="sans-serif">Tarapac\u00e1</text>',
+      '  <text x="150" y="170" text-anchor="middle" fill="#64748b" font-size="7" font-family="sans-serif">Caudillos: Gamarra, Santa Cruz, Castilla</text>',
+      '</svg>'
+    ],
+    exercises: [
+      { id: 3050, question: "\u00bfQué acontecimiento militar puso fin a la Confederación Perú-Bolivia en 1839?", options: ["La batalla de Junín", "La batalla de Yungay", "La batalla de Ayacucho", "La batalla de Portete de Tarqui"], correctIndex: 1, explanation: "La batalla de Yungay (20 de enero de 1839) fue decisiva para la derrota de la Confederación Perú-Bolivia, liderada por Santa Cruz, por las fuerzas chilenas y peruanas opositoras.", difficulty: "basico" },
+      { id: 3051, question: "La guerra con la Gran Colombia (1828-1829) se resolvió con:", options: ["La batalla de Ayacucho", "El Tratado de Pascuales", "La proclamación de Lima", "La batalla de Callao"], correctIndex: 1, explanation: "El Tratado de Pascuales (1829) definió las fronteras entre Perú y la Gran Colombia, poniendo fin al conflicto por el control del norte del país.", difficulty: "intermedio" },
+      { id: 3052, question: "La Guerra del Pacífico (1879-1883) fue provocada fundamentalmente por:", options: ["La disputa por el control de Lima", "La codicia chilena sobre el salitre de Tarapacá", "La alianza de Perú con Bolivia contra Chile", "La rebelión de los caudillos del sur"], correctIndex: 1, explanation: "Chile invadió Tarapacá por el control del salitre, recurso valioso como fertilizante y explosivo. La Guerra del Pacífico fue el conflicto más devastador de la República temprana.", difficulty: "avanzado" }
+    ]
+  },
+  {
+    slug: "guano-y-salitre",
+    tip: "El guano generó fortunas (1840-1880). La Guerra del Pacífico (1879-1883) contra Chile nos costó Tarapacá, Arica y Tacna. Memoriza: Batalla de San Francisco, Batalla de Angamos.",
+    theory: [
+      {
+        level: "basico",
+        title: "Época del guano y la causa de la Guerra del Pacífico",
+        lines: [
+          "El Perú vivió una época de prosperidad gracias a la exportación de guano (excremento de aves marinas) entre 1840 y 1880.",
+          "Las islas de Chincha, Lobos y Pisco fueron las principales fuentes de guano, que se vendía a precios altísimos en Europa como fertilizante.",
+          "El salitre (nitrato de sodio) en Tarapacá era igualmente valioso: se usaba como fertilizante agrícola y componente de explosivos.",
+          "Chile invadió Tarapacá en 1879, desatando la Guerra del Pacífico (1879-1883) que resultó en la pérdida territorial más grande de Perú.",
+          "La Guerra del Pacífico se desarrolló en tres frentes: terrestre (desierto de Atacama), naval (costa del Pacífico) y la defensa de Lima.",
+          "La captura de Lima en enero de 1881 por el ejército chileno marcó el fin efectivo de la resistencia peruana y el inicio de la ocupación."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Batallas principales y el Pacto de Tacna-Arica",
+        lines: [
+          "La batalla de Iquique (1879) fue el primer enfrentamiento naval importante: el Huáscar peruanó, pero Arturo Prat se convirtió en héroe chileno.",
+          "La batalla de Angamos (1879) fue decisiva: Chile capturó al monitor Huáscar, asegurando el dominio naval del Pacífico sur.",
+          "La batalla de San Francisco (1879) fue la primera gran batalla terrestre en el desierto de Atacama, donde las fuerzas peruanas fueron superadas por la movilidad chilena.",
+          "La batalla de Miraflores (1881), en los suburbios de Lima, fue la última resistencia organizada antes de la caþda de la capital.",
+          "El Pacto de Tacna-Arica (1929) estableció que Chile devolvería Tacna a Perú después de un plebiscito, pero Arica quedaría definitivamente en manos chilenas.",
+          "La Ocupación chilena del Perú (1881-1883) incluyó la confiscación de propiedades, la imposición de un gobierno títere y la resistencia civil."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Impacto económico, pérdida territorial y tratados",
+        lines: [
+          "Perú perdió Tarapacá, Arica y Tacna (después de 50 años de ocupación chilena). La pérdida de salitre significó la ruina económica prolongada.",
+          "El Tratado de Ancón (1883) cedió Tarapacá a Chile en propiedad absoluta, sin compensación ni plebiscito, bajo coacción militar.",
+          "La deuda de guerra y la pérdida de recursos generaron una crisis fiscal que duró décadas, financiándose con préstamos que hipotecaron la economía nacional.",
+          "El Tratado de Río de Janeiro (1904) consolidó la pérdida de Arica y estableció límites definitivos en la frontera norte, sin consultar a la población peruana.",
+          "La Comisión Mixta de Límites (1900-1930) intentó resolver disputes fronterizas restantes pero generó tensiones persistentes con Bolivia y Ecuador.",
+          "La Guerra del Pacífico dejó una herida nacional que impulsó el revisionismo territorial y moldeó la política exterior peruana durante todo el siglo XX."
+        ]
+      }
+    ],
+    illustrations: [
+      '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">',
+      '  <rect width="300" height="200" fill="#f8fafc" rx="12"/>',
+      '  <text x="150" y="22" text-anchor="middle" fill="#dc2626" font-size="12" font-weight="bold" font-family="sans-serif">Guerra del Pac\u00edfico</text>',
+      '  <line x1="30" y1="50" x2="270" y2="50" stroke="#e2e8f0" stroke-width="2"/>',
+      '  <circle cx="60" cy="50" r="5" fill="#2563eb"/>',
+      '  <text x="60" y="70" text-anchor="middle" fill="#1e293b" font-size="7" font-family="sans-serif">1879</text>',
+      '  <text x="60" y="80" text-anchor="middle" fill="#475569" font-size="6" font-family="sans-serif">Invasi\u00f3n</text>',
+      '  <circle cx="120" cy="50" r="5" fill="#f59e0b"/>',
+      '  <text x="120" y="70" text-anchor="middle" fill="#1e293b" font-size="7" font-family="sans-serif">1879</text>',
+      '  <text x="120" y="80" text-anchor="middle" fill="#475569" font-size="6" font-family="sans-serif">Angamos</text>',
+      '  <circle cx="180" cy="50" r="5" fill="#dc2626"/>',
+      '  <text x="180" y="70" text-anchor="middle" fill="#1e293b" font-size="7" font-family="sans-serif">1881</text>',
+      '  <text x="180" y="80" text-anchor="middle" fill="#475569" font-size="6" font-family="sans-serif">Caida Lima</text>',
+      '  <circle cx="240" cy="50" r="5" fill="#16a34a"/>',
+      '  <text x="240" y="70" text-anchor="middle" fill="#1e293b" font-size="7" font-family="sans-serif">1883</text>',
+      '  <text x="240" y="80" text-anchor="middle" fill="#475569" font-size="6" font-family="sans-serif">Anc\u00f3n</text>',
+      '  <text x="150" y="108" text-anchor="middle" fill="#1e293b" font-size="9" font-weight="bold" font-family="sans-serif">Territorio Perdido</text>',
+      '  <rect x="40" y="118" width="100" height="28" fill="#fee2e2" rx="4"/>',
+      '  <text x="90" y="132" text-anchor="middle" fill="#991b1b" font-size="8" font-family="sans-serif">Tarapac\u00e1 (1883)</text>',
+      '  <text x="90" y="142" text-anchor="middle" fill="#991b1b" font-size="7" font-family="sans-serif">Propiedad absoluta</text>',
+      '  <rect x="160" y="118" width="100" height="28" fill="#fee2e2" rx="4"/>',
+      '  <text x="210" y="132" text-anchor="middle" fill="#991b1b" font-size="8" font-family="sans-serif">Arica (1929)</text>',
+      '  <text x="210" y="142" text-anchor="middle" fill="#991b1b" font-size="7" font-family="sans-serif">Definitivo Chile</text>',
+      '  <rect x="100" y="155" width="100" height="20" fill="#fef3c7" rx="4"/>',
+      '  <text x="150" y="169" text-anchor="middle" fill="#92400e" font-size="8" font-family="sans-serif">Tacna (1929)</text>',
+      '  <text x="150" y="192" text-anchor="middle" fill="#64748b" font-size="7" font-family="sans-serif">P\u00e9rdida: ~180,000 km\u00b2 de territorio</text>',
+      '</svg>'
+    ],
+    exercises: [
+      { id: 3060, question: "\u00bfQué recurso natural generó las principales fortunas del Perú entre 1840 y 1880?", options: ["El caucho", "El guano", "La plata de Cerro de Pasco", "El cobre de Cerro Verde"], correctIndex: 1, explanation: "El guano, excremento de aves marinas acumulado en islas costeñas, fue la principal fuente de riqueza del Perú en la segunda mitad del siglo XIX, vendiéndose como fertilizante en Europa.", difficulty: "basico" },
+      { id: 3061, question: "La batalla de Angamos (1879) fue decisiva porque:", options: ["Perú capturó el Huáscar chileno", "Chile aseguró el dominio naval al capturar el Huáscar", "Se firmó el Tratado de Pascuales", "Se liberó Lima del sitio chileno"], correctIndex: 1, explanation: "En Angamos, la armada chilena capturó al monitor Huásar, asegurando el dominio naval del Pacífico sur y facilitando las operaciones terrestres en Tarapacá.", difficulty: "intermedio" },
+      { id: 3062, question: "El Tratado de Ancón (1883) tuvo como consecuencia principal:", options: ["La devolución de Tacna a Perú", "La cesión absoluta de Tarapacá a Chile", "La creación de una zona neutral", "El plebiscito sobre Arica"], correctIndex: 1, explanation: "El Tratado de Ancón cedió Tarapacá a Chile en propiedad absoluta, sin compensación, bajo presión militar chilena. La situación de Tacna y Arica se resolvería después.", difficulty: "avanzado" }
+    ]
+  },
+  {
+    slug: "oncenio-y-guerra",
+    tip: "El Oncenio de Leguía (1919-1930) modernizó Lima pero fue autoritario. La Gran Depresión de 1929 lo derrocó. Memoriza: Nuevo Civilismo, Leguía, Sánchez Cerro.",
+    theory: [
+      {
+        level: "basico",
+        title: "El Oncenio: modernización y autoritarismo de Leguía",
+        lines: [
+          "Augusto B. Leguía gobernó el Perú durante 11 años (1919-1930), un período conocido como el Oncenio, el más largo del siglo XX.",
+          "Leguía llegó al poder por segunda vez en 1919, prometiendo modernizar la economía y la infraestructura del país.",
+          "Bajo su gobierno se construyó el Palacio de Gobierno actual (Casa de Pizarro), el Edificio Giuffre y el Teatro Municipal de Lima.",
+          "Leguía implementó el sistema de Consignaciones, que otorgaba monopolios de exportación a empresas extranjeras a cambio de préstamos.",
+          "Su gobierno fue autoritario: cerró el Congreso, persiguió opositores y utilizó la censura de prensa para silenciar críticas.",
+          "La Gran Depresión de 1929 provocó una crisis económica que debilitó a Leguía, facilitando su derrocamiento en agosto de 1930."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Contexto político: Nuevo Civilismo, aprismo y oposición",
+        lines: [
+          "El Nuevo Civilismo (1912-1919) fue un movimiento político que buscaba una república más inclusiva y moderna, liderado por Augusto Bernardino Leguía.",
+          "Leguía, originalmente civilista, rompió con su partido y se alió con sectores militares y oligárquicos para perpetuarse en el poder.",
+          "El Partido Aprista Peruano (APRA), fundado en 1924 por Víctor Raúl Haya de la Torre en México, surgió como la principal fuerza de oposición al Oncenio.",
+          "Haya de la Torre propuso un programa reformista: industrialización, reforma agraria, educación pública y alianza con las clases medias y obreras.",
+          "La oposición al Oncenio incluyó a intelectuales, estudiantes universitarios y sectores medios que veían a Leguía como un dictador disfrazado.",
+          "El golpe de estado de Luis Sánchez Cerro en agosto de 1930 puso fin al Oncenio, pero no resolvió la inestabilidad política crónica del país."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Impacto económico de la Depresión y nuevos movimientos sociales",
+        lines: [
+          "La Gran Depresión (1929) colapsó los precios del algodón y la plata, principales exportaciones peruanas, provocando desempleo masivo y quiebras bancarias.",
+          "El sistema de Consignaciones de Leguía transferó riqueza nacional a empresas extranjeras como Grace y W.R. Grace, debilitando la economía interna.",
+          "La crisis económica aceleró la movilización social: los sindicatos crecieron, los estudiantes se politizaron y los partidos de izquierda ganaron fuerza.",
+          "El aprismo, nacido en el exilio, se convirtió en el primer movimiento político de masas en el Perú, con base en la clase media y los obreros.",
+          "La crisis del Oncenio marcó el fin de la oligarquía limeña como único actor político: los sectores medios y populares entraron definitivamente en escena.",
+          "El período 1930-1950 fue de inestabilidad crónica: Sánchez Cerro, Benavides, Prado y el movimiento del 4 de julio de 1936 reflejaron esta transición."
+        ]
+      }
+    ],
+    illustrations: [
+      '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">',
+      '  <rect width="300" height="200" fill="#f8fafc" rx="12"/>',
+      '  <text x="150" y="22" text-anchor="middle" fill="#7c3aed" font-size="12" font-weight="bold" font-family="sans-serif">Oncenio de Legu\u00eda</text>',
+      '  <rect x="30" y="38" width="240" height="25" fill="#ede9fe" rx="6"/>',
+      '  <text x="150" y="55" text-anchor="middle" fill="#5b21b6" font-size="9" font-weight="bold" font-family="sans-serif">1919-1930: 11 a\u00f1os de gobierno</text>',
+      '  <rect x="30" y="70" width="110" height="55" fill="#dcfce7" rx="6"/>',
+      '  <text x="85" y="85" text-anchor="middle" fill="#166534" font-size="8" font-weight="bold" font-family="sans-serif">Modernizaci\u00f3n</text>',
+      '  <text x="85" y="97" text-anchor="middle" fill="#1e293b" font-size="7" font-family="sans-serif">Palacio de Gobierno</text>',
+      '  <text x="85" y="107" text-anchor="middle" fill="#1e293b" font-size="7" font-family="sans-serif">Edificio Giuffre</text>',
+      '  <text x="85" y="117" text-anchor="middle" fill="#1e293b" font-size="7" font-family="sans-serif">Obras p\u00fablicas</text>',
+      '  <rect x="160" y="70" width="110" height="55" fill="#fee2e2" rx="6"/>',
+      '  <text x="215" y="85" text-anchor="middle" fill="#991b1b" font-size="8" font-weight="bold" font-family="sans-serif">Autoritarismo</text>',
+      '  <text x="215" y="97" text-anchor="middle" fill="#1e293b" font-size="7" font-family="sans-serif">Cierre del Congreso</text>',
+      '  <text x="215" y="107" text-anchor="middle" fill="#1e293b" font-size="7" font-family="sans-serif">Censura de prensa</text>',
+      '  <text x="215" y="117" text-anchor="middle" fill="#1e293b" font-size="7" font-family="sans-serif">Persecuci\u00f3n pol\u00edtica</text>',
+      '  <text x="150" y="148" text-anchor="middle" fill="#1e293b" font-size="9" font-weight="bold" font-family="sans-serif">Crisis y Ca\u00edda</text>',
+      '  <rect x="50" y="155" width="90" height="22" fill="#fef3c7" rx="4"/>',
+      '  <text x="95" y="170" text-anchor="middle" fill="#92400e" font-size="7" font-family="sans-serif">Gran Depresi\u00f3n 1929</text>',
+      '  <rect x="160" y="155" width="90" height="22" fill="#fee2e2" rx="4"/>',
+      '  <text x="205" y="170" text-anchor="middle" fill="#991b1b" font-size="7" font-family="sans-serif">Golpe S\u00e1nchez Cerro</text>',
+      '  <text x="150" y="195" text-anchor="middle" fill="#64748b" font-size="7" font-family="sans-serif">APRA: primer partido de masas (1924)</text>',
+      '</svg>'
+    ],
+    exercises: [
+      { id: 3070, question: "\u00bfCuánto duró el gobierno de Augusto B. Leguía durante su Oncenio?", options: ["6 años", "8 años", "11 años", "15 años"], correctIndex: 2, explanation: "El Oncenio de Leguía duró 11 años (1919-1930), siendo el período de gobierno más largo del siglo XX en el Perú.", difficulty: "basico" },
+      { id: 3071, question: "El sistema de Consignaciones del Oncenio consistía en:", options: ["La venta de terrenos estatales a particulares", "El otorgamiento de monopolios de exportación a empresas extranjeras", "El reparto de tierras a campesinos", "La creación de cooperativas agrícolas"], correctIndex: 1, explanation: "El sistema de Consignaciones permitía a empresas como W.R. Grace controlar la exportación de productos peruanos a cambio de préstamos que endeudaban al Estado.", difficulty: "intermedio" },
+      { id: 3072, question: "La Gran Depresión de 1929 afectó a Perú principalmente por:", options: ["La caída de precios del algodón y la plata", "La invasión de tropas extranjeras", "La pérdida de territorios en la frontera norte", "La rebelión armada de los campesinos"], correctIndex: 0, explanation: "La Gran Depresión colapsó los precios internacionales del algodón y la plata, principales exportaciones peruanas, provocando desempleo masivo y quiebras bancarias que debilitaron al régimen.", difficulty: "avanzado" }
+    ]
+  },
+const historiaModulesPart2: CourseModule[] = [
+  {
+    slug: "aprismo-y-guerra",
+    tip: "APRA (Alianza Popular Revolucionaria Americana) fue fundado en 1924. Sánchez Cerro derrocó a Leguía (1930) y enfrentó al aprismo. La Guerra con Ecuador fue en 1941.",
+    theory: [
+      {
+        level: "basico",
+        title: "APRA, Sánchez Cerro y la Guerra con Ecuador",
+        lines: [
+          "El APRA fue fundado por Víctor Raúl Haya de la Torre en 1924 en México como movimiento continental antiimperialista.",
+          "En 1930, Luis Sánchez Cerro lideró un golpe de estado que derrocó al gobierno de Augusto B. Leguía.",
+          "Sánchez Cerro enfrentó una fuerte oposición del APRA, lo que generó un enfrentamiento político violento.",
+          "La Guerra con Ecuador estalló en julio de 1941 por disputas territoriales en la frontera amazónica.",
+          "El conflicto terminó con la firma del Protocolo de Río de Janeiro en 1942, favorable al Perú.",
+          "El Perú obtuvo territorios significativos en la Amazonía, consolidando su soberanía en la frontera norte."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Ideología aprista y persecución política",
+        lines: [
+          "Haya de la Torre propuso un programa de reformas antiimperialistas basado en la nacionalización de recursos estratégicos.",
+          "El APRA defendía la alianza de clases media y obrera contra las oligarquías tradicionales y el dominio económico extranjero.",
+          "Durante el gobierno de Sánchez Cerro, los miembros del APRA fueron sistemáticamente perseguidos y encarcelados.",
+          "Sánchez Cerro fue asesinado en 1933 en Lima, un episodio que marcó profundamente la historia del partido aprista.",
+          "El Protocolo de Río de Janeiro de 1942 estableció límites definitivos entre Perú y Ecuador, aunque Ecuador no los aceptó plenamente.",
+          "La guerra de 1941 tuvo como consecuencia la expulsión de colonos ecuatorianos de zonas en disputa y la consolidación territorial peruana."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Movimientos sociales y reformismo vs. conservadurismo",
+        lines: [
+          "El aprismo representó una alternativa reformista en un contexto de dominio oligárquico en América Latina durante la primera mitad del siglo XX.",
+          "El enfrentamiento entre APRA y las fuerzas conservadoras reflejó tensiones sobre modernización, participación popular y soberanía económica.",
+          "Haya de la Torre propuso el concepto de 'dictadura del comercio exterior' como mecanismo para controlar la economía nacional.",
+          "El reformismo aprista se articuló en torno a la defensa de los trabajadores y la reivindicación de los sectores medios urbanos.",
+          "El conservadurismo representado por las élites limeñas y terratenientes resistió cualquier intento de redistribución de tierras o poder político.",
+          "Este enfrentamiento definió la vida política peruana durante décadas y sentó las bases de la polarización entre izquierda y derecha."
+        ]
+      }
+    ],
+    illustrations: [
+      '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">',
+      '  <rect width="300" height="200" fill="#f8fafc" rx="12"/>',
+      '  <text x="150" y="25" text-anchor="middle" fill="#2563eb" font-size="12" font-weight="bold" font-family="sans-serif">APRA y Guerra con Ecuador (1930-1941)</text>',
+      '  <rect x="20" y="45" width="120" height="30" fill="#dbeafe" rx="6"/>',
+      '  <text x="80" y="65" text-anchor="middle" fill="#1e40af" font-size="10" font-weight="bold" font-family="sans-serif">APRA (1924)</text>',
+      '  <line x1="80" y1="75" x2="80" y2="100" stroke="#93c5fd" stroke-width="2"/>',
+      '  <rect x="20" y="100" width="120" height="30" fill="#fef3c7" rx="6"/>',
+      '  <text x="80" y="120" text-anchor="middle" fill="#92400e" font-size="10" font-weight="bold" font-family="sans-serif">Golpe Sánchez Cerro (1930)</text>',
+      '  <line x1="140" y1="60" x2="180" y2="60" stroke="#93c5fd" stroke-width="2" marker-end="url(#arrow)"/>',
+      '  <rect x="180" y="45" width="100" height="30" fill="#fecaca" rx="6"/>',
+      '  <text x="230" y="65" text-anchor="middle" fill="#991b1b" font-size="10" font-weight="bold" font-family="sans-serif">Guerra 1941</text>',
+      '  <text x="230" y="110" text-anchor="middle" fill="#1e293b" font-size="9" font-family="sans-serif">Protocolo de Río</text>',
+      '  <text x="230" y="125" text-anchor="middle" fill="#1e293b" font-size="9" font-family="sans-serif">(1942)</text>',
+      '  <defs><marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#2563eb"/></marker></defs>',
+      '</svg>'
+    ],
+    exercises: [
+      { id: 4001, question: "¿Quién fundó el APRA en 1924?", options: ["Víctor Raúl Haya de la Torre", "Luis Sánchez Cerro", "Augusto B. Leguía", "Alan García"], correctIndex: 0, explanation: "Haya de la Torre fundó el APRA en México en 1924 como movimiento antiimperialista continental.", difficulty: "basico" },
+      { id: 4002, question: "¿En qué año se firmó el Protocolo de Río de Janeiro tras la guerra con Ecuador?", options: ["1941", "1942", "1945", "1938"], correctIndex: 1, explanation: "El Protocolo de Río de Janeiro se firmó en 1942, tras la Guerra de 1941, definiendo los límites entre ambos países.", difficulty: "intermedio" },
+      { id: 4003, question: "¿Cuál fue el concepto económico central propuesto por Haya de la Torre?", options: ["Dictadura del comercio exterior", "Liberalización económica total", "Industrialización por sustitución de importaciones", "Economía planificada soviética"], correctIndex: 0, explanation: "Haya de la Torre propuso la 'dictadura del comercio exterior' para controlar los recursos económicos nacionales frente al imperialismo.", difficulty: "avanzado" }
+    ]
+  },
+  {
+    slug: "segundo-militarismo",
+    tip: "Odría gobernó 1948-1956. Su esposa Manuelita gobernó de facto 1950-1955. Memoriza: 1948-golpe, 1950-Manuelita, 1955-revolución libertadora.",
+    theory: [
+      {
+        level: "basico",
+        title: "Golpe de Odría y gobierno autoritario",
+        lines: [
+          "En 1948, Manuel A. Odría dio un golpe de estado derrocando al gobierno de José Luis Bustamante y Rivero.",
+          "Odría instauró un régimen autoritario conocido como el 'Ochenio' (1948-1956).",
+          "Su gobierno se caracterizó por la represión de opositores, la censura de prensa y la persecución política.",
+          "Entre 1950 y 1955, Odría delegó el poder a su esposa, Manuelita Odría, mientras gobernaba desde las sombras.",
+          "Manuelita Odría impulsó obras públicas, educación y la mejora de la infraestructura urbana.",
+          "Odría cayó en 1955 tras una 'revolución libertadora' encabezada por el general Ricardo Pérez Godoy."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Economía, relaciones exteriores y movimientos estudiantiles",
+        lines: [
+          "Durante el Ochenio, el Perú experimentó un crecimiento económico basado en la exportación de minerales y productos agropecuarios.",
+          "Las relaciones internacionales del Perú se orientaron hacia una política de no injerencia y acercamiento a Estados Unidos.",
+          "Los movimientos estudiantiles fueron reprimidos con violencia, destacando la Masacre de la Plaza San Martín en 1954.",
+          "El gobierno de Odría implementó políticas de desarrollo industrial sustitutivo para reducir la dependencia de importaciones.",
+          "La censura de prensa fue una de las características más notorias, con cierre sistemático de medios opositores.",
+          "El fin del Ochenio marcó el regreso a un proceso electoral, aunque no plenamente democrático."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Impacto en la democracia y comparación con otros golpes",
+        lines: [
+          "El Ochenio consolidó un modelo de gobierno autoritario-militar que se repetiría en la historia peruana posterior.",
+          "La experiencia de Odría demostró la fragilidad de las instituciones democráticas frente a las ambiciones personales del poder militar.",
+          "La 'revolución libertadora' de 1955 sentó precedentes para futuros movimientos cívico-militares en el Perú.",
+          "La dictadura de Odría se comparó con otros regímenes autoritarios latinoamericanos como el de Trujillo en Rep. Dominicana.",
+          "El legado del Ochenio dejó una huella profunda en la percepción social sobre los gobiernos militares en el Perú.",
+          "El retorno a la democracia en 1956 fue un proceso gradual que no resolvió las tensiones sociales acumuladas."
+        ]
+      }
+    ],
+    illustrations: [
+      '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">',
+      '  <rect width="300" height="200" fill="#f8fafc" rx="12"/>',
+      '  <text x="150" y="25" text-anchor="middle" fill="#7c3aed" font-size="12" font-weight="bold" font-family="sans-serif">Segundo Militarismo: Odría (1948-1956)</text>',
+      '  <rect x="20" y="50" width="80" height="25" fill="#ede9fe" rx="6"/>',
+      '  <text x="60" y="67" text-anchor="middle" fill="#5b21b6" font-size="9" font-weight="bold" font-family="sans-serif">Golpe 1948</text>',
+      '  <line x1="100" y1="62" x2="130" y2="62" stroke="#8b5cf6" stroke-width="2" marker-end="url(#arrow2)"/>',
+      '  <rect x="130" y="50" width="80" height="25" fill="#fce7f3" rx="6"/>',
+      '  <text x="170" y="67" text-anchor="middle" fill="#9d174d" font-size="9" font-weight="bold" font-family="sans-serif">Manuelita 1950</text>',
+      '  <line x1="210" y1="62" x2="240" y2="62" stroke="#8b5cf6" stroke-width="2" marker-end="url(#arrow2)"/>',
+      '  <rect x="240" y="50" width="50" height="25" fill="#fee2e2" rx="6"/>',
+      '  <text x="265" y="67" text-anchor="middle" fill="#991b1b" font-size="9" font-weight="bold" font-family="sans-serif">Caída 1955</text>',
+      '  <rect x="20" y="100" width="260" height="80" fill="#f1f5f9" rx="8"/>',
+      '  <text x="150" y="120" text-anchor="middle" fill="#1e293b" font-size="10" font-weight="bold" font-family="sans-serif">Características del Ochenio</text>',
+      '  <text x="30" y="138" fill="#475569" font-size="9" font-family="sans-serif">• Represión de opositores</text>',
+      '  <text x="30" y="153" fill="#475569" font-size="9" font-family="sans-serif">• Censura de prensa</text>',
+      '  <text x="30" y="168" fill="#475569" font-size="9" font-family="sans-serif">• Desarrollo económico</text>',
+      '  <defs><marker id="arrow2" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#7c3aed"/></marker></defs>',
+      '</svg>'
+    ],
+    exercises: [
+      { id: 4010, question: "¿En qué año dio su golpe de estado Manuel A. Odría?", options: ["1946", "1948", "1950", "1952"], correctIndex: 1, explanation: "Odría dio su golpe de estado el 27 de octubre de 1948, derrocando al gobierno de Bustamante y Rivero.", difficulty: "basico" },
+      { id: 4011, question: "¿Qué acontecimiento marcó la represión estudiantil durante el Ochenio?", options: ["Masacre de la Plaza San Martín (1954)", "Matanza de Trujillo (1932)", "Violencia en Puno (2023)", "Golpe de Velasco (1968)"], correctIndex: 0, explanation: "La Masacre de la Plaza San Martín en 1954 fue un episodio emblemático de la represión estudiantil durante el Ochenio.", difficulty: "intermedio" },
+      { id: 4012, question: "¿Cuál fue el legado más significativo del Ochenio para la democracia peruana?", options: ["Consolidó un modelo de gobierno autoritario-militar repetible", "Estableció una constitución democrática duradera", "Impulsó la industrialización completa del país", "Eliminó la corrupción política"], correctIndex: 0, explanation: "El Ochenio consolidó un patrón de gobierno autoritario-militar que se repetiría en la historia peruana posterior.", difficulty: "avanzado" }
+    ]
+  },
+"@
+
+$part2 = @"
+  {
+    slug: "primer-belaunde",
+    tip: "Belaúnde (1963-1968) promovió la democracia y la industrialización. Fue derrocado por Velasco en 1968. Memoria: Reforma agraria anunciada, contradicción con la izquierda.",
+    theory: [
+      {
+        level: "basico",
+        title: "Elecciones de 1963, gobierno y golpe de Velasco",
+        lines: [
+          "En 1963, Fernando Belaúnde Terry fue elegido presidente con el apoyo de la coalición Acción Popular-MDP.",
+          "Su gobierno promovió la democratización, la educación y la industrialización del país.",
+          "Belaúnde anunció una reforma agraria que fue criticada por ser insuficiente por la izquierda.",
+          "El 3 de octubre de 1968, el general Juan Velasco Alvarado dio un golpe de estado contra Belaúnde.",
+          "El golpe fue motivado por la crisis económica y la percepción de incapacidad gubernamental.",
+          "Belaúnde fue exiliado a Argentina y el Perú inició una nueva etapa de gobierno militar reformista."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Coalición AP-UDP y contradicciones del gobierno",
+        lines: [
+          "La coalición Acción Popular-MDP (Movimiento Democrático Popular) unió fuerzas reformistas de distintos sectores.",
+          "El APRA se opuso a Belaúnde acusándolo de no cumplir sus promesas de reforma agraria y social.",
+          "La contradicción principal fue la falta de voluntad política para una reforma agraria profunda.",
+          "La izquierda exigía nacionalizaciones y redistribución de tierras, mientras Belaúnde buscaba un equilibrio.",
+          "El fracaso de las negociaciones con los militares reformistas condujo al golpe de estado de 1968.",
+          "El golpe de Velasco contó con apoyo de sectores que veían la reforma agraria como urgente e inevitable."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Reformismo civil vs. fuerzas armadas y contexto latinoamericano",
+        lines: [
+          "El primer gobierno de Belaúnde representó el último intento serio de reformismo civil en Perú antes de 1980.",
+          "El contexto latinoamericano de los años 60 influyó profundamente en la crisis política peruana.",
+          "La Revolución Cubana (1959) inspiró movimientos de izquierda en toda América Latina, incluido el Perú.",
+          "Los militares reformistas peruanos vieron en el golpe la oportunidad de implementar cambios estructurales.",
+          "La contradicción entre reformismo civil y proyecto militar reformista definió la transición política de 1968.",
+          "El golpe de Velasco marcó el inicio de un proyecto de transformación social sin precedentes en la historia peruana."
+        ]
+      }
+    ],
+    illustrations: [
+      '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">',
+      '  <rect width="300" height="200" fill="#f8fafc" rx="12"/>',
+      '  <text x="150" y="25" text-anchor="middle" fill="#059669" font-size="12" font-weight="bold" font-family="sans-serif">Primer Gobierno de Belaúnde (1963-1968)</text>',
+      '  <rect x="20" y="50" width="80" height="30" fill="#d1fae5" rx="6"/>',
+      '  <text x="60" y="70" text-anchor="middle" fill="#065f46" font-size="9" font-weight="bold" font-family="sans-serif">Elección 1963</text>',
+      '  <line x1="100" y1="65" x2="130" y2="65" stroke="#059669" stroke-width="2" marker-end="url(#arrow3)"/>',
+      '  <rect x="130" y="50" width="80" height="30" fill="#ecfdf5" rx="6"/>',
+      '  <text x="170" y="70" text-anchor="middle" fill="#065f46" font-size="9" font-weight="bold" font-family="sans-serif">Gobierno</text>',
+      '  <line x1="210" y1="65" x2="240" y2="65" stroke="#059669" stroke-width="2" marker-end="url(#arrow3)"/>',
+      '  <rect x="240" y="50" width="50" height="30" fill="#fee2e2" rx="6"/>',
+      '  <text x="265" y="70" text-anchor="middle" fill="#991b1b" font-size="9" font-weight="bold" font-family="sans-serif">Golpe 1968</text>',
+      '  <rect x="20" y="100" width="260" height="80" fill="#f1f5f9" rx="8"/>',
+      '  <text x="150" y="118" text-anchor="middle" fill="#1e293b" font-size="10" font-weight="bold" font-family="sans-serif">Tensiones del gobierno</text>',
+      '  <text x="30" y="136" fill="#475569" font-size="9" font-family="sans-serif">• Reforma agraria insuficiente</text>',
+      '  <text x="30" y="151" fill="#475569" font-size="9" font-family="sans-serif">• Oposición del APRA</text>',
+      '  <text x="30" y="166" fill="#475569" font-size="9" font-family="sans-serif">• Crisis económica y golpe militar</text>',
+      '  <defs><marker id="arrow3" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#059669"/></marker></defs>',
+      '</svg>'
+    ],
+    exercises: [
+      { id: 4020, question: "¿En qué año fue elegido Fernando Belaúnde Terry como presidente del Perú?", options: ["1960", "1963", "1966", "1968"], correctIndex: 1, explanation: "Belaúnde fue elegido en 1963 con el apoyo de la coalición Acción Popular-MDP.", difficulty: "basico" },
+      { id: 4021, question: "¿Cuál fue la contradicción principal del gobierno de Belaúnde con la izquierda?", options: ["Reforma agraria percibida como insuficiente", "Falta de educación pública", "Censura de prensa total", "Persecución del APRA"], correctIndex: 0, explanation: "La izquierda criticó la reforma agraria de Belaúnde como insuficiente, exigiendo cambios más profundos en la distribución de tierras.", difficulty: "intermedio" },
+      { id: 4022, question: "¿Qué significado histórico tuvo el golpe de Velasco en el contexto latinoamericano?", options: ["Marcó el inicio de un proyecto de transformación social sin precedentes", "Fue una simple restauración del orden conservador", "No tuvo relación con movimientos reformistas continentales", "Consolidó el poder de la oligarquía terrateniente"], correctIndex: 0, explanation: "El golpe de Velasco representó un proyecto reformista radical que buscó transformar la estructura social del Perú, en sintonía con movimientos similares en la región.", difficulty: "avanzado" }
+    ]
+  },
+  {
+    slug: "velasco-y-reforma",
+    tip: "Velasco (1968-1975) hizo la reforma agraria más grande de América Latina. Expropió haciendas y las repartió a campesinos. Fue derrocado por Morales Bermúdez.",
+    theory: [
+      {
+        level: "basico",
+        title: "Reforma agraria, expropiaciones y cambios sociales",
+        lines: [
+          "En 1968, el general Juan Velasco Alvarado dio un golpe de estado instaurando un gobierno militar reformista.",
+          "Su principal obra fue la Reforma Agraria de 1969, que expropió grandes haciendas para redistribuirlas a campesinos.",
+          "La reforma buscó eliminar el latifundio como estructura de explotación social y económica en el campo.",
+          "Se crearon cooperativas agrícolas y se impulsó la organización comunal de los productores rurales.",
+          "Velasco también nacionalizó empresas extranjeras en sectores clave como la minería y la industria.",
+          "Los cambios sociales incluyeron la creación de sindicatos campesinos y la mejora de las condiciones de vida rurales."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Modelos económicos: Velasco vs. Morales Bermúdez",
+        lines: [
+          "El gobierno de Velasco implementó un modelo económico mixto con fuerte intervención estatal en la economía.",
+          "Se crearon empresas estatales para controlar sectores estratégicos como el petróleo, la siderurgia y la pesca.",
+          "En 1975, Morales Bermúdez dio un contra-golpe contra Velasco, derrocándolo argumentando su enfermedad.",
+          "Morales Bermúdez implementó un modelo de liberalización económica, abriendo el mercado a la inversión privada.",
+          "La transición de un modelo estatista a uno más abierto generó tensiones sociales y económicas significativas.",
+          "El fin del gobierno militar en 1980 marcó el retorno a la democracia bajo el gobierno civil de Belaúnde."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Impacto a largo plazo: latifundio vs. minifundio y producción agrícola",
+        lines: [
+          "La reforma agraria peruana fue una de las más ambiciosas de América Latina, transformando radicalmente la estructura agraria.",
+          "Sin embargo, la redistribución creó minifundios que redujeron la productividad agrícola en comparación con las grandes haciendas.",
+          "El latifundio fue eliminado como sistema, pero no se logró una producción agrícola eficiente y competitiva.",
+          "Las cooperativas agrícolas tuvieron resultados mixtos, con problemas de gestión y falta de capacitación técnica.",
+          "El impacto a largo plazo incluyó la migración rural-urbana masiva hacia las ciudades costeras del Perú.",
+          "La reforma agraria sentó bases para la lucha por la tierra que continuaría durante décadas."
+        ]
+      }
+    ],
+    illustrations: [
+      '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">',
+      '  <rect width="300" height="200" fill="#f8fafc" rx="12"/>',
+      '  <text x="150" y="25" text-anchor="middle" fill="#ea580c" font-size="12" font-weight="bold" font-family="sans-serif">Reforma Agraria: Velasco (1968-1975)</text>',
+      '  <rect x="20" y="45" width="100" height="30" fill="#fed7aa" rx="6"/>',
+      '  <text x="70" y="65" text-anchor="middle" fill="#9a3412" font-size="9" font-weight="bold" font-family="sans-serif">Golpe 1968</text>',
+      '  <line x1="120" y1="60" x2="150" y2="60" stroke="#ea580c" stroke-width="2" marker-end="url(#arrow4)"/>',
+      '  <rect x="150" y="45" width="100" height="30" fill="#fef3c7" rx="6"/>',
+      '  <text x="200" y="65" text-anchor="middle" fill="#92400e" font-size="9" font-weight="bold" font-family="sans-serif">Reforma 1969</text>',
+      '  <line x1="250" y1="60" x2="275" y2="60" stroke="#ea580c" stroke-width="2" marker-end="url(#arrow4)"/>',
+      '  <rect x="20" y="95" width="260" height="85" fill="#f1f5f9" rx="8"/>',
+      '  <text x="150" y="115" text-anchor="middle" fill="#1e293b" font-size="10" font-weight="bold" font-family="sans-serif">Transformación Agraria</text>',
+      '  <text x="30" y="133" fill="#475569" font-size="9" font-family="sans-serif">Latifundio → Minifundio + Cooperativas</text>',
+      '  <text x="30" y="148" fill="#475569" font-size="9" font-family="sans-serif">Nacionalización de empresas extranjeras</text>',
+      '  <text x="30" y="163" fill="#475569" font-size="9" font-family="sans-serif">Migración rural-urbana masiva</text>',
+      '  <defs><marker id="arrow4" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#ea580c"/></marker></defs>',
+      '</svg>'
+    ],
+    exercises: [
+      { id: 4030, question: "¿En qué año se implementó la Reforma Agraria en el Perú?", options: ["1968", "1969", "1970", "1975"], correctIndex: 1, explanation: "La Reforma Agraria se implementó en 1969 bajo el gobierno de Velasco Alvarado.", difficulty: "basico" },
+      { id: 4031, question: "¿Cuál fue uno de los problemas estructurales de la Reforma Agraria?", options: ["Creación de minifundios con baja productividad", "Exceso de inversión extranjera en el campo", "Falta de organización campesina", "No se expropiaron haciendas"], correctIndex: 0, explanation: "La reforma creó minifundios que redujeron la productividad agrícola en comparación con las grandes haciendas expropiadas.", difficulty: "intermedio" },
+      { id: 4032, question: "¿Qué modelo económico implementó Morales Bermúdez tras derrocar a Velasco?", options: ["Modelo de liberalización económica", "Modelo estatista más radical", "Modelo de economía planificada", "Modelo de autarquía económica"], correctIndex: 0, explanation: "Morales Bermúdez implementó un modelo de liberalización económica, abriendo el mercado a la inversión privada tras el estatismo de Velasco.", difficulty: "avanzado" }
+    ]
+  },
+"@
+
+$part3 = @"
+  {
+    slug: "terrorismo-y-dictadura",
+    tip: "El terrorismo (1980-2000) mató a más de 69,000 personas. Fujimori dio el autogolpe en 1992. Memoriza: Sendero Luminoso (Abimael Guzmán), MRTA, Comisión de la Verdad.",
+    theory: [
+      {
+        level: "basico",
+        title: "Sendero Luminoso, MRTA y violencia 1980-2000",
+        lines: [
+          "El Sendero Luminoso fue una organización maoísta liderada por Abimael Guzmán que inició la lucha armada en 1980.",
+          "El MRTA (Movimiento Revolucionario Túpac Amaru) fue otro grupo insurgente de orientación marxista-leninista.",
+          "Entre 1980 y 2000, la violencia terrorista mató a más de 69,000 personas, principalmente en zonas rurales.",
+          "Sendero Luminoso atacó infraestructura, instituciones del Estado y comunidades campesinas.",
+          "El MRTA realizó secuestros y atentados, destacando la toma de la embajada de Japón en 1996.",
+          "La lucha contra el terrorismo provocó violaciones de derechos humanos por parte de las fuerzas del Estado."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Autogolpe de Fujimori, Montesinos y el régimen autoritario",
+        lines: [
+          "En 1992, Alberto Fujimori dio un autogolpe disolviendo el Congreso y suspendiendo la Constitución.",
+          "El autogolpe fue justificado como medida para combatir el terrorismo y la corrupción política.",
+          "Vladimiro Montesinos fue la figura clave detrás del aparato de inteligencia y represión del régimen.",
+          "Fujimori implementó políticas económicas neoliberales, incluyendo la privatización de empresas estatales.",
+          "La lucha contra Sendero Luminoso logró la captura de Abimael Guzmán en septiembre de 1992.",
+          "El régimen de Fujimori terminó en 2000 tras la revelación de los vladivideos y la crisis política subsiguiente."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Impacto en derechos humanos, memoria y reconciliación",
+        lines: [
+          "El conflicto armado interno dejó un legado profundo de violaciones de derechos humanos en todo el país.",
+          "La Comisión de la Verdad y Reconciliación (2001-2003) documentó más de 69,000 muertos y desaparecidos.",
+          "Los casos emblemáticos incluyen la masacre de Barrios Altos (1991) y el caso de los penales (1992).",
+          "La reconciliación nacional requiere reconocer el sufrimiento de las víctimas y garantizar no repetición.",
+          "El juicio a Fujimori y Montesinos por crímenes de derechos humanos marcó un precedente histórico.",
+          "La memoria histórica es fundamental para construir una sociedad más justa y democrática en el Perú."
+        ]
+      }
+    ],
+    illustrations: [
+      '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">',
+      '  <rect width="300" height="200" fill="#f8fafc" rx="12"/>',
+      '  <text x="150" y="25" text-anchor="middle" fill="#dc2626" font-size="12" font-weight="bold" font-family="sans-serif">Terrorismo y Dictadura (1980-2000)</text>',
+      '  <rect x="20" y="45" width="120" height="30" fill="#fee2e2" rx="6"/>',
+      '  <text x="80" y="65" text-anchor="middle" fill="#991b1b" font-size="9" font-weight="bold" font-family="sans-serif">Sendero Luminoso</text>',
+      '  <rect x="160" y="45" width="120" height="30" fill="#fef3c7" rx="6"/>',
+      '  <text x="220" y="65" text-anchor="middle" fill="#92400e" font-size="9" font-weight="bold" font-family="sans-serif">MRTA</text>',
+      '  <rect x="20" y="95" width="260" height="90" fill="#f1f5f9" rx="8"/>',
+      '  <text x="150" y="115" text-anchor="middle" fill="#1e293b" font-size="10" font-weight="bold" font-family="sans-serif">Impacto del Conflicto</text>',
+      '  <text x="30" y="133" fill="#475569" font-size="9" font-family="sans-serif">• 69,000+ víctimas mortales</text>',
+      '  <text x="30" y="148" fill="#475569" font-size="9" font-family="sans-serif">• Autogolpe de Fujimori (1992)</text>',
+      '  <text x="30" y="163" fill="#475569" font-size="9" font-family="sans-serif">• Captura de Guzmán (1992)</text>',
+      '  <text x="30" y="178" fill="#475569" font-size="9" font-family="sans-serif">• Violaciones de derechos humanos</text>',
+      '</svg>'
+    ],
+    exercises: [
+      { id: 4040, question: "¿Quién fue el líder del Sendero Luminoso?", options: ["Abimael Guzmán", "Vladimiro Montesinos", "Alberto Fujimori", "Oscar Ramírez"], correctIndex: 0, explanation: "Abimael Guzmán fue el líder fundador del Sendero Luminoso, capturado en 1992.", difficulty: "basico" },
+      { id: 4041, question: "¿En qué año Fujimori dio el autogolpe que disolvió el Congreso?", options: ["1990", "1992", "1995", "1998"], correctIndex: 1, explanation: "Fujimori dio el autogolpe el 5 de abril de 1992, disolviendo el Congreso y suspendiendo la Constitución.", difficulty: "intermedio" },
+      { id: 4042, question: "¿Qué caso emblemático de derechos humanos involucró la masacre de Barrios Altos?", options: ["Grupo Colina y operaciones de inteligencia", "El MRTA y la embajada de Japón", "Sendero Luminoso y comunidades campesinas", "El ejército y zonas rurales"], correctIndex: 0, explanation: "La masacre de Barrios Altos (1991) fue perpetrada por el Grupo Colina, unidad de inteligencia vinculada al régimen de Fujimori.", difficulty: "avanzado" }
+    ]
+  },
+"@
+
+$part4 = @"
+  {
+    slug: "transicion-democratica",
+    tip: "La transición (2001-2016) fue difícil: Paniagua limpió, Toledo creció, Humala moderó. Memoriza: Comisión de la Verdad, crisis 2008, corrupción generalizada.",
+    theory: [
+      {
+        level: "basico",
+        title: "Paniagua, Toledo y Humala",
+        lines: [
+          "Valentín Paniagua asumió la presidencia en 2001 tras la caída de Fujimori, liderando un gobierno de transición.",
+          "Paniagua convocó elecciones y sentó las bases para la reconstrucción democrática del país.",
+          "Alejandro Toledo fue elegido en 2001 y gobernó hasta 2006, implementando políticas de crecimiento económico.",
+          "Toledo enfrentó protestas sociales y crisis políticas que afectaron gravemente su popularidad.",
+          "Ollanta Humala fue elegido en 2011 con un discurso moderado, alejándose de su postura radical inicial.",
+          "Humala implementó políticas sociales y mantuvo la estabilidad macroeconómica durante su gobierno."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Crecimiento económico, pobreza y corrupción",
+        lines: [
+          "Durante la transición, el Perú experimentó un crecimiento económico sostenido impulsado por los commodities.",
+          "La pobreza disminuyó significativamente, pero la desigualdad persistió en zonas rurales y urbanas.",
+          "La corrupción fue un problema crónico que afectó a todos los gobiernos durante la transición.",
+          "El caso Odebrecht y otros escándalos de corrupción sacudieron al país a partir de 2016.",
+          "La crisis de 2008, derivada de la crisis financiera global, afectó momentáneamente la economía peruana.",
+          "La inestabilidad política y la corrupción generaron desconfianza ciudadana en las instituciones del Estado."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Legado, comparaciones y participación ciudadana",
+        lines: [
+          "La transición democrática dejó un legado mixto: crecimiento económico pero debilidad institucional persistente.",
+          "La comparación con otros países latinoamericanos muestra que el Perú logró estabilidad política relativa.",
+          "La participación ciudadana aumentó con movimientos sociales que demandaron transparencia y justicia.",
+          "Las protestas contra la corrupción y la ineficiencia del Estado se intensificaron durante la transición.",
+          "El legado de la transición incluye la consolidación de derechos civiles y la apertura política.",
+          "La sociedad civil peruana se fortaleció como actor clave en la defensa de la democracia y los derechos humanos."
+        ]
+      }
+    ],
+    illustrations: [
+      '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">',
+      '  <rect width="300" height="200" fill="#f8fafc" rx="12"/>',
+      '  <text x="150" y="25" text-anchor="middle" fill="#0891b2" font-size="12" font-weight="bold" font-family="sans-serif">Transición Democrática (2001-2016)</text>',
+      '  <rect x="15" y="45" width="80" height="25" fill="#cffafe" rx="6"/>',
+      '  <text x="55" y="62" text-anchor="middle" fill="#155e75" font-size="8" font-weight="bold" font-family="sans-serif">Paniagua</text>',
+      '  <line x1="95" y1="57" x2="110" y2="57" stroke="#0891b2" stroke-width="2" marker-end="url(#arrow5)"/>',
+      '  <rect x="110" y="45" width="80" height="25" fill="#cffafe" rx="6"/>',
+      '  <text x="150" y="62" text-anchor="middle" fill="#155e75" font-size="8" font-weight="bold" font-family="sans-serif">Toledo</text>',
+      '  <line x1="190" y1="57" x2="205" y2="57" stroke="#0891b2" stroke-width="2" marker-end="url(#arrow5)"/>',
+      '  <rect x="205" y="45" width="80" height="25" fill="#cffafe" rx="6"/>',
+      '  <text x="245" y="62" text-anchor="middle" fill="#155e75" font-size="8" font-weight="bold" font-family="sans-serif">Humala</text>',
+      '  <rect x="20" y="90" width="260" height="95" fill="#f1f5f9" rx="8"/>',
+      '  <text x="150" y="110" text-anchor="middle" fill="#1e293b" font-size="10" font-weight="bold" font-family="sans-serif">Balance de la Transición</text>',
+      '  <text x="30" y="128" fill="#16a34a" font-size="9" font-family="sans-serif">+ Crecimiento económico sostenido</text>',
+      '  <text x="30" y="143" fill="#16a34a" font-size="9" font-family="sans-serif">+ Reducción de pobreza</text>',
+      '  <text x="30" y="158" fill="#dc2626" font-size="9" font-family="sans-serif">- Corrupción generalizada</text>',
+      '  <text x="30" y="173" fill="#dc2626" font-size="9" font-family="sans-serif">- Debilidad institucional</text>',
+      '  <defs><marker id="arrow5" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#0891b2"/></marker></defs>',
+      '</svg>'
+    ],
+    exercises: [
+      { id: 4050, question: "¿Quién asumió la presidencia tras la caída de Fujimori en 2001?", options: ["Valentín Paniagua", "Alejandro Toledo", "Alan García", "Ollanta Humala"], correctIndex: 0, explanation: "Valentín Paniagua asumió la presidencia como presidente del Congreso tras la renuncia de Fujimori.", difficulty: "basico" },
+      { id: 4051, question: "¿Cuál fue el principal problema estructural durante la transición democrática?", options: ["Crecimiento económico insuficiente", "Corrupción generalizada en todas las ramas del Estado", "Falta de elecciones libres", "Ausencia de partidos políticos"], correctIndex: 1, explanation: "La corrupción fue el problema más persistente durante la transición, afectando a todos los gobiernos y erosionando la confianza institucional.", difficulty: "intermedio" },
+      { id: 4052, question: "¿Qué actor social se fortaleció como defensor de la democracia durante la transición?", options: ["La sociedad civil organizada", "Las fuerzas armadas", "La Iglesia Católica", "Los medios de comunicación"], correctIndex: 0, explanation: "La sociedad civil peruana se fortaleció como actor clave en la defensa de la democracia, los derechos humanos y la lucha contra la corrupción.", difficulty: "avanzado" }
+    ]
+  },
+"@
+
+$part5 = @"
+  {
+    slug: "peru-contemporaneo",
+    tip: "El Perú contemporáneo (2016-2025) tiene crisis políticas frecuentes: Kuczynski renunció, Vizcarra fue vacado, Castillo fue vacado y arrestado.",
+    theory: [
+      {
+        level: "basico",
+        title: "Kuczynski, Vizcarra, Castillo y Boluarte",
+        lines: [
+          "Pedro Pablo Kuczynski fue elegido en 2016 pero renunció en 2018 ante la amenaza de vacancia por corrupción.",
+          "Martín Vizcarra asumió la presidencia y fue vacado por el Congreso en 2020 en un proceso polémico.",
+          "Manuel Merino asumió brevemente la presidencia pero renunció tras fuertes protestas ciudadanas.",
+          "Francisco Sagasti lideró un gobierno de transición hasta las elecciones de 2021.",
+          "Pedro Castillo fue elegido en 2021 con un discurso de transformación social pero enfrentó múltiples crisis.",
+          "Castillo fue vacado y arrestado en diciembre de 2022, asumiendo Dina Boluarte la presidencia."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Crisis constitucional, vacancias y protestas",
+        lines: [
+          "El período 2016-2023 estuvo marcado por una crisis constitucional sin precedentes en la república.",
+          "Las vacancias presidenciales de Vizcarra y Castillo reflejaron la profunda polarización política del país.",
+          "Las protestas sociales contra Boluarte en 2022-2023 dejaron un saldo trágico de muertos y heridos.",
+          "El Congreso fue percibido como un obstáculo para la gobernabilidad y la implementación de reformas.",
+          "La inestabilidad presidencial generó incertidumbre económica y social en todo el territorio nacional.",
+          "La crisis política cuestionó la vigencia de la Constitución de 1993 y el modelo institucional vigente."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Estabilidad institucional, reformas pendientes y participación ciudadana",
+        lines: [
+          "El Perú enfrenta un desafío fundamental de construir estabilidad institucional en un contexto de polarización extrema.",
+          "Las reformas pendientes incluyen la modernización del Estado, la descentralización y la mejora de servicios públicos.",
+          "La participación ciudadana se ha intensificado a través de protestas sociales y demandas de rendición de cuentas.",
+          "La crisis contemporánea reveló las debilidades estructurales del sistema político peruano post-Fujimori.",
+          "El debate sobre una nueva constitución refleja la búsqueda de un nuevo contrato social para el país.",
+          "La superación de la crisis requiere diálogo, consenso y compromiso de todos los sectores de la sociedad."
+        ]
+      }
+    ],
+    illustrations: [
+      '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">',
+      '  <rect width="300" height="200" fill="#f8fafc" rx="12"/>',
+      '  <text x="150" y="25" text-anchor="middle" fill="#9333ea" font-size="12" font-weight="bold" font-family="sans-serif">Perú Contemporáneo (2016-2025)</text>',
+      '  <rect x="10" y="45" width="60" height="25" fill="#f3e8ff" rx="6"/>',
+      '  <text x="40" y="62" text-anchor="middle" fill="#6b21a8" font-size="7" font-weight="bold" font-family="sans-serif">Kuczynski</text>',
+      '  <line x1="70" y1="57" x2="82" y2="57" stroke="#9333ea" stroke-width="2" marker-end="url(#arrow6)"/>',
+      '  <rect x="82" y="45" width="60" height="25" fill="#fce7f3" rx="6"/>',
+      '  <text x="112" y="62" text-anchor="middle" fill="#9d174d" font-size="7" font-weight="bold" font-family="sans-serif">Vizcarra</text>',
+      '  <line x1="142" y1="57" x2="154" y2="57" stroke="#9333ea" stroke-width="2" marker-end="url(#arrow6)"/>',
+      '  <rect x="154" y="45" width="60" height="25" fill="#fee2e2" rx="6"/>',
+      '  <text x="184" y="62" text-anchor="middle" fill="#991b1b" font-size="7" font-weight="bold" font-family="sans-serif">Castillo</text>',
+      '  <line x1="214" y1="57" x2="226" y2="57" stroke="#9333ea" stroke-width="2" marker-end="url(#arrow6)"/>',
+      '  <rect x="226" y="45" width="65" height="25" fill="#fef3c7" rx="6"/>',
+      '  <text x="258" y="62" text-anchor="middle" fill="#92400e" font-size="7" font-weight="bold" font-family="sans-serif">Boluarte</text>',
+      '  <rect x="20" y="90" width="260" height="95" fill="#f1f5f9" rx="8"/>',
+      '  <text x="150" y="110" text-anchor="middle" fill="#1e293b" font-size="10" font-weight="bold" font-family="sans-serif">Crisis Institucional</text>',
+      '  <text x="30" y="128" fill="#475569" font-size="9" font-family="sans-serif">• Vacancias presidenciales (2020, 2022)</text>',
+      '  <text x="30" y="143" fill="#475569" font-size="9" font-family="sans-serif">• Protestas sociales masivas</text>',
+      '  <text x="30" y="158" fill="#475569" font-size="9" font-family="sans-serif">• Debate constitucional</text>',
+      '  <text x="30" y="173" fill="#475569" font-size="9" font-family="sans-serif">• Polarización política extrema</text>',
+      '  <defs><marker id="arrow6" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#9333ea"/></marker></defs>',
+      '</svg>'
+    ],
+    exercises: [
+      { id: 4060, question: "¿Por qué renunció Pedro Pablo Kuczynski en 2018?", options: ["Ante la amenaza de vacancia por corrupción", "Por razones de salud", "Tras perder las elecciones", "Por conflictos con el Congreso"], correctIndex: 0, explanation: "Kuczynski renunció en marzo de 2018 antes de que el Congreso votara su vacancia por presuntos pagos ilegales de Odebrecht.", difficulty: "basico" },
+      { id: 4061, question: "¿Qué proceso constitucional se utilizó contra Vizcarra en 2020?", options: ["Vacancia presidencial por incapacidad moral permanente", "Juicio político por corrupción", "Referéndum revocatorio", "Destitución por la Corte Suprema"], correctIndex: 0, explanation: "Vizcarra fue vacado en noviembre de 2020 bajo la figura de 'incapacidad moral permanente', un mecanismo cuestionado jurídicamente.", difficulty: "intermedio" },
+      { id: 4062, question: "¿Qué reveló la crisis política contemporánea sobre el sistema institucional peruano?", options: ["Debilidades estructurales del modelo post-Fujimori", "Fortaleza del sistema de contrapesos", "Éxito de la descentralización", "Consolidación del Estado de derecho"], correctIndex: 0, explanation: "La crisis contemporánea evidenció las debilidades estructurales del sistema político peruano, incluyendo la falta de equilibrio entre poderes y ausencia de cultura democrática.", difficulty: "avanzado" }
+    ]
+  },
+"@
+
+$part6 = @"
+  {
+    slug: "derechos-humanos",
+    tip: "La Comisión de la Verdad (2001-2003) documentó 69,280 muertos. El caso de los penales fue emblemático. Memoriza: Comisión de la Verdad, informe final, reparaciones.",
+    theory: [
+      {
+        level: "basico",
+        title: "Qué fue la Comisión de la Verdad, mandato y hallazgos",
+        lines: [
+          "La Comisión de la Verdad y Reconciliación (CVR) fue creada en 2001 para investigar el conflicto armado interno.",
+          "Su mandato fue establecer la verdad sobre las violaciones de derechos humanos cometidas entre 1980 y 2000.",
+          "La CVR documentó 69,280 víctimas mortales y desaparecidos durante el período de violencia.",
+          "El informe final fue presentado en agosto de 2003 y contuvo recomendaciones para la reconciliación nacional.",
+          "La comisión estuvo presidida por Salomón Lerner Febres y contó con el apoyo de organizaciones de derechos humanos.",
+          "Los hallazgos de la CVR revelaron la responsabilidad de Sendero Luminoso, el MRTA y las fuerzas del Estado."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Casos emblemáticos, penales y comunidades afectadas",
+        lines: [
+          "El caso de los penales (1992) involucró la ejecución extrajudicial de internos acusados de terrorismo.",
+          "La masacre de Barrios Altos (1991) dejó 15 muertos y fue perpetrada por el Grupo Colina.",
+          "Las comunidades campesinas de Ayacucho fueron las más afectadas por la violencia de Sendero Luminoso.",
+          "El caso de los vladivideos reveló la corrupción sistémica del régimen de Fujimori y Montesinos.",
+          "Los casos emblemáticos sirvieron como base para procesos judiciales contra responsables de violaciones.",
+          "La CVR documentó desplazamientos forzados, violencia sexual y reclutamiento forzado de menores."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Justicia transicional, reparaciones y memoria histórica",
+        lines: [
+          "La justicia transicional busca equilibrar verdad, justicia y reparación en sociedades post-conflicto.",
+          "El caso peruano ha sido reconocido internacionalmente como un modelo de comisión de la verdad.",
+          "Las reparaciones incluyeron indemnizaciones económicas, programas de salud y educación para víctimas.",
+          "La memoria histórica se ha convertido en un instrumento fundamental para la no repetición de la violencia.",
+          "El debate sobre amnistías y prescripción de crímenes sigue siendo un tema controversial en el Perú.",
+          "La sociedad civil peruana ha jugado un rol fundamental en la defensa de los derechos de las víctimas."
+        ]
+      }
+    ],
+    illustrations: [
+      '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">',
+      '  <rect width="300" height="200" fill="#f8fafc" rx="12"/>',
+      '  <text x="150" y="25" text-anchor="middle" fill="#b91c1c" font-size="12" font-weight="bold" font-family="sans-serif">Derechos Humanos y Comisión de la Verdad</text>',
+      '  <rect x="20" y="45" width="260" height="30" fill="#fef2f2" rx="6"/>',
+      '  <text x="150" y="65" text-anchor="middle" fill="#991b1b" font-size="10" font-weight="bold" font-family="sans-serif">69,280 víctimas documentadas (1980-2000)</text>',
+      '  <rect x="20" y="90" width="120" height="45" fill="#f1f5f9" rx="6"/>',
+      '  <text x="80" y="108" text-anchor="middle" fill="#1e293b" font-size="9" font-weight="bold" font-family="sans-serif">CVR (2001-2003)</text>',
+      '  <text x="80" y="125" text-anchor="middle" fill="#475569" font-size="8" font-family="sans-serif">Verdad y Reconciliación</text>',
+      '  <rect x="160" y="90" width="120" height="45" fill="#f1f5f9" rx="6"/>',
+      '  <text x="220" y="108" text-anchor="middle" fill="#1e293b" font-size="9" font-weight="bold" font-family="sans-serif">Casos Emblemáticos</text>',
+      '  <text x="220" y="125" text-anchor="middle" fill="#475569" font-size="8" font-family="sans-serif">Barrios Altos, Penales</text>',
+      '  <rect x="20" y="150" width="260" height="35" fill="#ecfdf5" rx="6"/>',
+      '  <text x="150" y="172" text-anchor="middle" fill="#065f46" font-size="9" font-weight="bold" font-family="sans-serif">Justicia Transicional + Reparaciones + Memoria</text>',
+      '</svg>'
+    ],
+    exercises: [
+      { id: 4070, question: "¿Cuántas víctimas documentó la Comisión de la Verdad y Reconciliación?", options: ["69,280", "50,000", "100,000", "30,000"], correctIndex: 0, explanation: "La CVR documentó 69,280 víctimas mortales y desaparecidos durante el conflicto armado interno (1980-2000).", difficulty: "basico" },
+      { id: 4071, question: "¿Qué caso emblemático involucró la ejecución de internos en los penales?", options: ["La matanza de los penales (1992)", "La masacre de Putis (1983)", "El caso de Accomarca (1985)", "La toma de la embajada de Japón (1996)"], correctIndex: 0, explanation: "La matanza de los penales en 1992 involucró la ejecución extrajudicial de internos acusados de terrorismo por agentes del Estado.", difficulty: "intermedio" },
+      { id: 4072, question: "¿Cuál es el principio fundamental de la justicia transicional en sociedades post-conflicto?", options: ["Equilibrar verdad, justicia y reparación", "Olvídar el pasado para avanzar", "Castigo severo sin excepciones", "Impunidad garantizada para los victimarios"], correctIndex: 0, explanation: "La justicia transicional busca equilibrar verdad, justicia y reparación, reconociendo que la paz social requiere abordar las violaciones del pasado de manera integral.", difficulty: "avanzado" }
+    ]
+  },
+const historiaModulesPart3: CourseModule[] = [
+  {
+    slug: "revolucion-francesa",
+    tip: "La Revolución Francesa (1789) cambió el mundo. Causas: desigualdad social, Ilustración, crisis económica. Memoriza: Toma de la Bastilla (14 jul 1789), Declaración de Derechos del Hombre.",
+    theory: [
+      {
+        level: "basico",
+        title: "Causas y detonantes de la Revolución Francesa",
+        lines: [
+          "Francia vivía bajo el Antiguo Régimen, dividido en tres estamentos: clero, nobleza y pueblo llano (97% de la población).",
+          "Los primeros dos estamentos gozaban de privilegios fiscales, mientras el tercero soportaba la carga tributaria.",
+          "La Ilustración (Voltaire, Rousseau, Montesquieu) promovió ideas de libertad, soberanía popular y separación de poderes.",
+          "La crisis económica, derivada de la deuda por apoyar la independencia de EE.UU. y malas cosechas, provocó hambruna.",
+          "El 14 de julio de 1789, el pueblo tomó la Bastilla, símbolo del poder absoluto monárquico, marcando el inicio de la Revolución.",
+          "En agosto de 1789 se proclamó la Declaración de los Derechos del Hombre y del Ciudadano, base del constitucionalismo moderno."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Fases de la Revolución y ascenso de Napoleón",
+        lines: [
+          "Fase moderada (1789-1792): Asamblea Nacional y Constitución de 1791 que instauró la monarquía constitucional.",
+          "Fase radical (1792-1794): Proclamación de la República, ejecución de Luis XVI y Reinado del Terror bajo Robespierre.",
+          "El Comité de Salvación Pública, liderado por Robespierre, ejecutó a miles de sospechosos de ser enemigos de la Revolución.",
+          "Fase termidoriana (1794-1799): Caída de Robespierre en Termidor y retorno a posiciones moderadas.",
+          "Napoleón Bonaparte dio un golpe de Estado en 1799 (18 Brumario) y se proclamó Primer Cónsul.",
+          "Napoleón consolidó el Estado moderno con el Código Civil (1804), el sistema métrico y la reorganización administrativa."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Impacto mundial y comparación con la Revolución Americana",
+        lines: [
+          "La Revolución Francesa influyó directamente en los procesos de independencia latinoamericanos (Bolívar, San Martín).",
+          "A diferencia de la Rev. Americana (1776), la francesa buscó transformar la estructura social interna, no solo la soberanía política.",
+          "Ambas revoluciones compartieron los ideales ilustrados: libertad, igualdad y gobierno representativo.",
+          "La Revolución Francesa generó las guerras napoleónicas, que reconfiguraron el mapa europeo y debilitaron el colonialismo español.",
+          "En Haití (1791-1804), la primera revolución esclava exitosa fue directamente influenciada por los ideales franceses.",
+          "El legado incluye el laicismo, los derechos humanos, el nacionalismo moderno y el modelo republicano de gobierno."
+        ]
+      }
+    ],
+    illustrations: [
+      '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">',
+      '  <rect width="300" height="200" fill="#f8fafc" rx="12"/>',
+      '  <text x="150" y="25" text-anchor="middle" fill="#2563eb" font-size="12" font-weight="bold" font-family="sans-serif">La Revolución Francesa (1789)</text>',
+      '  <rect x="30" y="45" width="70" height="110" fill="#fecaca" rx="6"/>',
+      '  <text x="65" y="75" text-anchor="middle" fill="#991b1b" font-size="9" font-weight="bold" font-family="sans-serif">CLERO</text>',
+      '  <text x="65" y="90" text-anchor="middle" fill="#991b1b" font-size="8" font-family="sans-serif">Privilegios</text>',
+      '  <text x="65" y="102" text-anchor="middle" fill="#991b1b" font-size="8" font-family="sans-serif">fiscales</text>',
+      '  <rect x="115" y="45" width="70" height="110" fill="#fed7aa" rx="6"/>',
+      '  <text x="150" y="75" text-anchor="middle" fill="#9a3412" font-size="9" font-weight="bold" font-family="sans-serif">NOBLEZA</text>',
+      '  <text x="150" y="90" text-anchor="middle" fill="#9a3412" font-size="8" font-family="sans-serif">Monopolio</text>',
+      '  <text x="150" y="102" text-anchor="middle" fill="#9a3412" font-size="8" font-family="sans-serif">territorial</text>',
+      '  <rect x="200" y="45" width="70" height="110" fill="#bbf7d0" rx="6"/>',
+      '  <text x="235" y="75" text-anchor="middle" fill="#166534" font-size="9" font-weight="bold" font-family="sans-serif">PUEBLO</text>',
+      '  <text x="235" y="90" text-anchor="middle" fill="#166534" font-size="8" font-family="sans-serif">97%</text>',
+      '  <text x="235" y="102" text-anchor="middle" fill="#166534" font-size="8" font-family="sans-serif">Sin derechos</text>',
+      '  <line x1="150" y1="165" x2="150" y2="180" stroke="#dc2626" stroke-width="2"/>',
+      '  <polygon points="145,180 155,180 150,190" fill="#dc2626"/>',
+      '  <text x="150" y="198" text-anchor="middle" fill="#dc2626" font-size="8" font-family="sans-serif">14 jul 1789: Toma de la Bastilla</text>',
+      '</svg>'
+    ],
+    exercises: [
+      {
+        id: 5001,
+        question: "¿Cuál fue el acontecimiento que marcó el inicio simbólico de la Revolución Francesa?",
+        options: [
+          "La ejecución de Luis XVI",
+          "La Toma de la Bastilla el 14 de julio de 1789",
+          "El golpe de Estado de Napoleón en 1799",
+          "La proclamación del Imperio en 1804"
+        ],
+        correctIndex: 1,
+        explanation: "La Toma de la Bastilla el 14 de julio de 1789 simbolizó el fin del poder absoluto monárquico y es considerada el detonante de la Revolución Francesa.",
+        difficulty: "basico"
+      },
+      {
+        id: 5002,
+        question: "¿Quién lideró el Comité de Salvación Pública durante el Reinado del Terror (1793-1794)?",
+        options: [
+          "Napoleón Bonaparte",
+          "Louis Antoine de Saint-Just",
+          "Maximilien Robespierre",
+          "Georges Danton"
+        ],
+        correctIndex: 2,
+        explanation: "Robespierre presidió el Comité de Salvación Pública y ejecutó a miles de personas acusadas de ser enemigos de la Revolución durante el periodo conocido como el Terror.",
+        difficulty: "intermedio"
+      },
+      {
+        id: 5003,
+        question: "¿En qué aspecto fundamental difirieron la Revolución Francesa (1789) y la Revolución Americana (1776)?",
+        options: [
+          "La americana usó la violencia y la francesa fue pacífica",
+          "La francesa buscó transformar la estructura social interna, mientras la americana se centró en la soberanía política",
+          "La americana fue comunista y la francesa fue liberal",
+          "Ambas tuvieron las mismas consecuencias sociales"
+        ],
+        correctIndex: 1,
+        explanation: "La Revolución Americana buscó la independencia de una metrópoli extranjera, mientras la Revolución Francesa intentó reestructurar toda la sociedad del Antiguo Régimen, incluyendo clases sociales, religión y economía.",
+        difficulty: "avanzado"
+      }
+    ]
+  },
+  {
+    slug: "revoluciones-industriales",
+    tip: "La Revolución Industrial comenzó en Inglaterra (1760). Causas: carbón, hierro, máquina de vapor. Memoriza: Watt (vapor), Arkwright (hiladora), Stephenson (ferrocarril).",
+    theory: [
+      {
+        level: "basico",
+        title: "Origen e inventos de la Revolución Industrial",
+        lines: [
+          "La Revolución Industrial comenzó en Inglaterra hacia 1760 y transformó la producción artesanal en manufactura mecanizada.",
+          "Factores que explican su inicio en Inglaterra: abundancia de carbón y hierro, colonias como mercado, estabilidad política y Revolution Agrícola.",
+          "James Watt perfeccionó la máquina de vapor (1769), fuente de energía que reemplazó al agua y al viento en las fábricas.",
+          "Richard Arkwright inventó la hiladora hidráulica (1769), revolucionando la industria textil y concentrando a los trabajadores en fábricas.",
+          "George Stephenson construyó la primera locomotora de vapor (1814) y abrió la primera línea de ferrocarril pública (1825).",
+          "La mecanización del hilado (Jenny de Hargreaves, 1764) y del tejido (telar mecánico de Cartwright, 1785) transformaron la industria textil."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Consecuencias sociales: proletariado, burguesía y urbanización",
+        lines: [
+          "La industrialización creó dos nuevas clases sociales: la burguesía industrial (dueña de fábricas) y el proletariado (trabajadores asalariados).",
+          "Las condiciones laborales eran precarias: jornadas de 14-16 horas, salarios bajos, trabajo infantil y fábricas insalubres.",
+          "La urbanización acelerada generó hacinamiento, pobreza, epidemias de cólera y ausencia de servicios básicos en las ciudades industriales.",
+          "Manchester, Birmingham y Leeds crecieron descontroladamente; de ciudades pequeñas pasaron a enormes centros industriales en pocas décadas.",
+          "La respuesta obrera surgió con el movimiento cartista (reforma electoral) y los sindicatos (trade unions) en Inglaterra.",
+          "El socialismo utópico (Saint-Simon, Fourier, Owen) propuso modelos de cooperación como alternativa a la explotación capitalista."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Segunda Revolución Industrial e impacto global",
+        lines: [
+          "La Segunda Revolución Industrial (1870-1914) introdujo la electricidad, el acero, los productos químicos y los motores de combustión interna.",
+          "Thomas Edison (bombilla eléctrica), Benz y Daimler (automóvil) y la producción en masa de acero (proceso Bessemer) cambiaron la economía.",
+          "La industria petrolera (Rockefeller) y la siderúrgica (Carnegie) concentraron enormes capitales en trusts y monopolios.",
+          "La industrialización se expandió a Alemania, Francia, EE.UU., Japón (Meiji, 1868) y Rusia, reduciendo la ventaja británica inicial.",
+          "En América Latina, la industrialización fue tardía y dependiente, centrada en la exportación de materias primas (café, caucho, minerales).",
+          "El impacto global incluyó la desigualdad Norte-Sur, la demanda de materias primas coloniales y la transformación de las relaciones sociales."
+        ]
+      }
+    ],
+    illustrations: [
+      '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">',
+      '  <rect width="300" height="200" fill="#f8fafc" rx="12"/>',
+      '  <text x="150" y="25" text-anchor="middle" fill="#2563eb" font-size="12" font-weight="bold" font-family="sans-serif">Revolution Industrial (1760-1840)</text>',
+      '  <rect x="20" y="45" width="80" height="50" fill="#e0e7ff" rx="6"/>',
+      '  <text x="60" y="65" text-anchor="middle" fill="#3730a3" font-size="9" font-weight="bold" font-family="sans-serif">Máquina</text>',
+      '  <text x="60" y="78" text-anchor="middle" fill="#3730a3" font-size="9" font-family="sans-serif">de Vapor</text>',
+      '  <text x="60" y="89" text-anchor="middle" fill="#6366f1" font-size="8" font-family="sans-serif">Watt (1769)</text>',
+      '  <rect x="110" y="45" width="80" height="50" fill="#fef3c7" rx="6"/>',
+      '  <text x="150" y="65" text-anchor="middle" fill="#92400e" font-size="9" font-weight="bold" font-family="sans-serif">Hiladora</text>',
+      '  <text x="150" y="78" text-anchor="middle" fill="#92400e" font-size="9" font-family="sans-serif">Mecánica</text>',
+      '  <text x="150" y="89" text-anchor="middle" fill="#d97706" font-size="8" font-family="sans-serif">Arkwright (1769)</text>',
+      '  <rect x="200" y="45" width="80" height="50" fill="#dcfce7" rx="6"/>',
+      '  <text x="240" y="65" text-anchor="middle" fill="#166534" font-size="9" font-weight="bold" font-family="sans-serif">Ferrocarril</text>',
+      '  <text x="240" y="78" text-anchor="middle" fill="#166534" font-size="9" font-family="sans-serif">a Vapor</text>',
+      '  <text x="240" y="89" text-anchor="middle" fill="#22c55e" font-size="8" font-family="sans-serif">Stephenson (1825)</text>',
+      '  <line x1="60" y1="105" x2="60" y2="130" stroke="#6366f1" stroke-width="1.5"/>',
+      '  <line x1="150" y1="105" x2="150" y2="130" stroke="#d97706" stroke-width="1.5"/>',
+      '  <line x1="240" y1="105" x2="240" y2="130" stroke="#22c55e" stroke-width="1.5"/>',
+      '  <rect x="30" y="130" width="240" height="35" fill="#f1f5f9" rx="4" stroke="#cbd5e1"/>',
+      '  <text x="150" y="148" text-anchor="middle" fill="#1e293b" font-size="9" font-weight="bold" font-family="sans-serif">INGLATERRA: Carbón + Hierro + Capital + Colonias</text>',
+      '  <text x="150" y="160" text-anchor="middle" fill="#475569" font-size="8" font-family="sans-serif">→ Fábricas → Ciudad → Proletariado → Burguesía</text>',
+      '  <text x="150" y="190" text-anchor="middle" fill="#64748b" font-size="8" font-family="sans-serif">Origen: Inglaterra (1760) → Expansión global</text>',
+      '</svg>'
+    ],
+    exercises: [
+      {
+        id: 5010,
+        question: "¿Qué invento de James Watt fue fundamental para el desarrollo de la Revolución Industrial?",
+        options: [
+          "El telar mecánico",
+          "La locomotora de vapor",
+          "La máquina de vapor perfeccionada",
+          "El telégrafo eléctrico"
+        ],
+        correctIndex: 2,
+        explanation: "James Watt perfeccionó la máquina de vapor en 1769, proporcionando una fuente de energía mecánica que revolucionó la producción en fábricas y minas.",
+        difficulty: "basico"
+      },
+      {
+        id: 5011,
+        question: "¿Cuál fue una consecuencia social directa de la primera Revolución Industrial en las ciudades británicas?",
+        options: [
+          "La reducción de la jornada laboral a 8 horas",
+          "La urbanización acelerada con hacinamiento, insalubridad y pobreza",
+          "La creación del Estado de bienestar",
+          "La abolición del trabajo infantil"
+        ],
+        correctIndex: 1,
+        explanation: "La migración masiva del campo a la ciudad generó urbanización descontrolada con hacinamiento, epidemias, contaminación y condiciones laborales de explotación extrema.",
+        difficulty: "intermedio"
+      },
+      {
+        id: 5012,
+        question: "¿Qué elementos caracterizaron a la Segunda Revolución Industrial (1870-1914) y la diferenciaron de la primera?",
+        options: [
+          "El uso del carbón y la máquina de vapor como pilares",
+          "La introducción de la electricidad, el acero, los motores de combustión y los monopolios industriales",
+          "El predominio del sector textil como industria principal",
+          "La limitación del proceso a Inglaterra únicamente"
+        ],
+        correctIndex: 1,
+        explanation: "La Segunda Revolución Industrial incorporó la electricidad, el acero, los motores de combustión interna y la producción en masa, expandiéndose a Alemania, EE.UU. y Japón.",
+        difficulty: "avanzado"
+      }
+    ]
+  },
+  {
+    slug: "imperialismo-y-colonialismo",
+    tip: "El imperialismo (1870-1914) dividió África y Asia. Causas: materias primas, mercados, rivalidades. Memoriza: Conferencia de Berlín (1884), 'carga del hombre blanco'.",
+    theory: [
+      {
+        level: "basico",
+        title: "Qué fue el imperialismo y regiones afectadas",
+        lines: [
+          "El imperialismo fue el dominio político, económico y cultural de las potencias europeas sobre pueblos de África, Asia y Oceanía.",
+          "Se intensificó entre 1870 y 1914, cuando las potencias europeas competían por territorios en un proceso llamado 'reparto del mundo'.",
+          "Las principales potencias imperialistas fueron: Gran Bretaña, Francia, Alemania, Bélgica, Italia, Países Bajos y Portugal.",
+          "En África, el continente fue casi totalmente colonizado excepto Etiopía (que derrotó a Italia en Adwa, 1896) y Liberia.",
+          "En Asia, Gran Bretaña dominaba la India, Francia controlaba Indochina, y Holanda mantenido las Indias Orientales (actual Indonesia).",
+          "El imperialismo también se extendió a Oceanía (Australia, Nueva Zelanda, islas del Pacífico) y a América Latina (influencia económica)."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Causas económicas, políticas e ideológicas",
+        lines: [
+          "Causas económicas: búsqueda de materias primas (caucho, petróleo, minerales), mercados para productos manufacturados y destinos para inversiones.",
+          "Causas políticas: rivalidad entre potencias (Britania vs Francia en África del Norte), prestigio nacional y equilibrio de poder europeo.",
+          "Causas ideológicas: el darwinismo social justificaba la 'superioridad' de la raza blanca europea sobre otros pueblos.",
+          "Rudyard Kipling expresó la ideología imperialista con su poema 'La carga del hombre blanco' (1899), que legitimaba la colonización.",
+          "La Conferencia de Berlín (1884-1885) estableció las reglas para el reparto de África sin consultar a los pueblos africanos.",
+          "El avance tecnológico (fusiles, vapor, medicinas tropicales) hizo posible la conquista militar de territorios lejanos."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Resistencia anticolonial, legado e impacto en Perú",
+        lines: [
+          "La resistencia anticolonial incluyó la Rebelión de los Mahdistas en Sudán (1881-1898), la Rebelión Taiping en China (1850-1864) y la Revuelta India de 1857.",
+          "En África, movimientos como los zulúes, los ashanti y la resistencia etíope demostraron que la colonización enfrentó fuerte oposición.",
+          "El legado del colonialismo incluye: fronteras artificiales, explotación económica, pérdida cultural y conflictos étnicos que persisten hasta hoy.",
+          "En Perú, el imperialismo se manifestó como influencia económica británica y norteamericana, especialmente en la explotación minera y la Guerra del Pacífico (1879-1884).",
+          "La dependencia económica de Perú respecto a materias primas (guano, salitre, caucho) fue agravada por el imperialismo comercial.",
+          "El proceso de descolonización comenzó tras la Primera Guerra Mundial y culminó en las décadas de 1950-1960 con la independencia de numerosos países africanos y asiáticos."
+        ]
+      }
+    ],
+    illustrations: [
+      '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">',
+      '  <rect width="300" height="200" fill="#f8fafc" rx="12"/>',
+      '  <text x="150" y="25" text-anchor="middle" fill="#2563eb" font-size="12" font-weight="bold" font-family="sans-serif">Imperialismo y Colonialismo (1870-1914)</text>',
+      '  <ellipse cx="80" cy="105" rx="55" ry="60" fill="#fef3c7" stroke="#d97706" stroke-width="1"/>',
+      '  <text x="80" y="95" text-anchor="middle" fill="#92400e" font-size="9" font-weight="bold" font-family="sans-serif">ÁFRICA</text>',
+      '  <text x="80" y="108" text-anchor="middle" fill="#92400e" font-size="8" font-family="sans-serif">90% colonizada</text>',
+      '  <text x="80" y="120" text-anchor="middle" fill="#b45309" font-size="7" font-family="sans-serif">Berlín 1884</text>',
+      '  <ellipse cx="220" cy="105" rx="55" ry="60" fill="#dbeafe" stroke="#2563eb" stroke-width="1"/>',
+      '  <text x="220" y="95" text-anchor="middle" fill="#1e40af" font-size="9" font-weight="bold" font-family="sans-serif">ASIA</text>',
+      '  <text x="220" y="108" text-anchor="middle" fill="#1e40af" font-size="8" font-family="sans-serif">India, Indochina</text>',
+      '  <text x="220" y="120" text-anchor="middle" fill="#2563eb" font-size="7" font-family="sans-serif">Esferas de influencia</text>',
+      '  <line x1="135" y1="105" x2="165" y2="105" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="4,2"/>',
+      '  <rect x="25" y="170" width="60" height="18" fill="#fecaca" rx="3"/>',
+      '  <text x="55" y="182" text-anchor="middle" fill="#991b1b" font-size="7" font-weight="bold" font-family="sans-serif">GB: India</text>',
+      '  <rect x="95" y="170" width="60" height="18" fill="#bfdbfe" rx="3"/>',
+      '  <text x="125" y="182" text-anchor="middle" fill="#1e40af" font-size="7" font-weight="bold" font-family="sans-serif">Fr: Indochina</text>',
+      '  <rect x="165" y="170" width="60" height="18" fill="#bbf7d0" rx="3"/>',
+      '  <text x="195" y="182" text-anchor="middle" fill="#166534" font-size="7" font-weight="bold" font-family="sans-serif">Hol: Indonesia</text>',
+      '  <rect x="235" y="170" width="50" height="18" fill="#e9d5ff" rx="3"/>',
+      '  <text x="260" y="182" text-anchor="middle" fill="#6b21a8" font-size="7" font-weight="bold" font-family="sans-serif">Bel: Congo</text>',
+      '</svg>'
+    ],
+    exercises: [
+      {
+        id: 5020,
+        question: "¿En qué conferencia se establecieron las reglas para el reparto de África entre las potencias europeas?",
+        options: [
+          "Conferencia de Viena (1815)",
+          "Conferencia de Berlín (1884-1885)",
+          "Conferencia de París (1919)",
+          "Conferencia de Yalta (1945)"
+        ],
+        correctIndex: 1,
+        explanation: "La Conferencia de Berlín (1884-1885) estableció las normas para la colonización de África, fijando el principio de ocupación efectiva sin consultar a los pueblos africanos.",
+        difficulty: "basico"
+      },
+      {
+        id: 5021,
+        question: "¿Cuál de las siguientes fue una causa ideológica del imperialismo europeo del siglo XIX?",
+        options: [
+          "El marxismo revolucionario",
+          "El darwinismo social y la idea de 'carga del hombre blanco'",
+          "El movimiento abolicionista europeo",
+          "La Ilustración y los derechos humanos"
+        ],
+        correctIndex: 1,
+        explanation: "El darwinismo social aplicó teorías biológicas a la sociedad para justificar la 'superioridad' de la raza blanca europea, legitimando la colonización como misión civilizadora.",
+        difficulty: "intermedio"
+      },
+      {
+        id: 5022,
+        question: "¿Cómo se manifestó el imperialismo en Perú durante el siglo XIX?",
+        options: [
+          "Perú colonizó territorios africanos",
+          "Perú se benefició económicamente del reparto colonial",
+          "La influencia económica extranjera en la explotación minera y la Guerra del Pacífico agravaron la dependencia económica",
+          "Perú se mantuvo completamente ajeno al imperialismo"
+        ],
+        correctIndex: 2,
+        explanation: "En Perú, el imperialismo se reflejó en la dependencia de materias primas (guano, salitre), la inversión extranjera en minería y la pérdida territorial en la Guerra del Pacífico (1879-1884).",
+        difficulty: "avanzado"
+      }
+    ]
+  },
+  {
+    slug: "primera-guerra-mundial",
+    tip: "La Primera Guerra Mundial (1914-1918) involucró a todas las grandes potencias. Causas: nacionalismo, imperialismos, alianzas. Memoriza: Tratado de Versalles (1919), Liga de Naciones.",
+    theory: [
+      {
+        level: "basico",
+        title: "Causas, bandos y desarrollo de la Gran Guerra",
+        lines: [
+          "La Primera Guerra Mundial (1914-1918) enfrentó a las potencias europeas en el conflicto bélico más grande hasta entonces.",
+          "Causas: nacionalismo exacerbado, imperialismo competitivo, carrera armamentística y sistema de alianzas militares rígidas.",
+          "El detonante fue el asesinato del archiduque Francisco Fernando de Austria-Hungría en Sarajevo (28 junio 1914).",
+          "Bandos: Triple Entente (Francia, Gran Bretaña, Rusia) vs. Potencias Centrales (Alemania, Austria-Hungría, Imperio Otomano).",
+          "Italia inicialmente era de las Potencias Centrales pero cambió de bando en 1915 (Pacto de Londres) y se unió a la Entente.",
+          "EE.UU. entró en 1917 tras los ataques submarinos alemanes y el hundimiento del Lusitania (1915), decidiendo el resultado a favor de la Entente."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Batallas decisivas y nuevas tecnologías bélicas",
+        lines: [
+          "La Batalla del Marne (1914) detuvo la ofensiva alemana hacia París e inició la guerra de trincheras en el frente occidental.",
+          "La Batalla del Somme (1916) y la de Verdún (1916) fueron las más sangrientas, con más de un millón de bajas combinadas.",
+          "Se introdujeron nuevas armas mortales: ametralladoras, gas mostaza, tanques de guerra, aviones de combate y submarinos U-Boot.",
+          "La guerra de trincheras se extendió por 700 km, desde el Canal de la Mancha hasta la frontera suiza, sin avances significativos.",
+          "En el frente oriental, Rusia sufrió grandes derrotas, lo que contribuyó a la Revolución Rusa de 1917 y la salida de Rusia de la guerra.",
+          "El armisticio se firmó el 11 de noviembre de 1918, con un balance de 10 millones de muertos y 20 millones de heridos."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Tratado de Versalles y creación de la Sociedad de Naciones",
+        lines: [
+          "El Tratado de Versalles (1919) impuso a Alemania: pérdidas territoriales, desarme, cláusula de culpabilidad y enormes reparaciones de guerra.",
+          "Alemania perdió Alsacia y Lorena (a Francia), colonias en África y Oceanía, y se vio reducida militar y económicamente.",
+          "Woodrow Wilson impulsó la creación de la Sociedad de Naciones (1920), primera organización internacional de mantenimiento de la paz.",
+          "Irónicamente, EE.UU. no se unió a la Sociedad de Naciones por el rechazo del Senado, debilitando significativamente la organización.",
+          "El Tratado de Versalles reconfiguró el mapa europeo: nacieron Polonia, Checoslovaquia, Yugoslavia y los estados bálticos.",
+          "Las duras condiciones del tratado generó resentimiento en Alemania, facilitando el ascenso del nazismo y la Segunda Guerra Mundial."
+        ]
+      }
+    ],
+    illustrations: [
+      '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">',
+      '  <rect width="300" height="200" fill="#f8fafc" rx="12"/>',
+      '  <text x="150" y="22" text-anchor="middle" fill="#2563eb" font-size="12" font-weight="bold" font-family="sans-serif">Primera Guerra Mundial (1914-1918)</text>',
+      '  <rect x="15" y="40" width="120" height="55" fill="#dcfce7" rx="6"/>',
+      '  <text x="75" y="55" text-anchor="middle" fill="#166534" font-size="9" font-weight="bold" font-family="sans-serif">TRIPLE ENTENTE</text>',
+      '  <text x="75" y="68" text-anchor="middle" fill="#166534" font-size="8" font-family="sans-serif">Francia - GB - Rusia</text>',
+      '  <text x="75" y="80" text-anchor="middle" fill="#22c55e" font-size="8" font-family="sans-serif">+ Italia (1915) + EE.UU. (1917)</text>',
+      '  <rect x="165" y="40" width="120" height="55" fill="#fecaca" rx="6"/>',
+      '  <text x="225" y="55" text-anchor="middle" fill="#991b1b" font-size="9" font-weight="bold" font-family="sans-serif">POTENCIAS CENTRALES</text>',
+      '  <text x="225" y="68" text-anchor="middle" fill="#991b1b" font-size="8" font-family="sans-serif">Alemania - Austria-Hungría</text>',
+      '  <text x="225" y="80" text-anchor="middle" fill="#ef4444" font-size="8" font-family="sans-serif">+ Imperio Otomano</text>',
+      '  <line x1="135" y1="67" x2="165" y2="67" stroke="#dc2626" stroke-width="2"/>',
+      '  <text x="150" y="63" text-anchor="middle" fill="#dc2626" font-size="8" font-weight="bold" font-family="sans-serif">VS</text>',
+      '  <rect x="25" y="110" width="250" height="42" fill="#f1f5f9" rx="4" stroke="#cbd5e1"/>',
+      '  <text x="150" y="125" text-anchor="middle" fill="#1e293b" font-size="9" font-weight="bold" font-family="sans-serif">Batallas clave: Marne (1914) - Verdún (1916)</text>',
+      '  <text x="150" y="138" text-anchor="middle" fill="#475569" font-size="8" font-family="sans-serif">Somme (1916) - Nuevas armas: ametralladoras, gas, tanques</text>',
+      '  <rect x="25" y="160" width="250" height="28" fill="#e0e7ff" rx="4" stroke="#818cf8"/>',
+      '  <text x="150" y="178" text-anchor="middle" fill="#3730a3" font-size="9" font-weight="bold" font-family="sans-serif">Tratado de Versalles (1919) → Sociedad de Naciones</text>',
+      '</svg>'
+    ],
+    exercises: [
+      {
+        id: 5030,
+        question: "¿Cuál fue el detonante directo de la Primera Guerra Mundial?",
+        options: [
+          "La invasión de Polonia por Alemania",
+          "El asesinato del archiduque Francisco Fernando en Sarajevo (1914)",
+          "La Revolución Rusa de 1917",
+          "La caída del muro de Berlín"
+        ],
+        correctIndex: 1,
+        explanation: "El asesinato del archiduque Francisco Fernando de Austria-Hungría el 28 de junio de 1914 en Sarajevo desencadenó la cadena de declaraciones de guerra que inició el conflicto.",
+        difficulty: "basico"
+      },
+      {
+        id: 5031,
+        question: "¿Qué nuevas tecnologías bélicas se introdujeron durante la Primera Guerra Mundial y transformaron la guerra?",
+        options: [
+          "Espadas, arcos y catapultas",
+          "Ametralladoras, gas mostaza, tanques, aviones y submarinos",
+          "Armas nucleares y misiles balísticos",
+          "Drones y guerra cibernética"
+        ],
+        correctIndex: 1,
+        explanation: "La Primera Guerra Mundial introdujo armas como ametralladoras, gases tóxicos, tanques de guerra, aviones de combate y submarinos U-Boot, que incrementaron enormemente la devastación.",
+        difficulty: "intermedio"
+      },
+      {
+        id: 5032,
+        question: "¿Por qué la Sociedad de Naciones, creada tras la Primera Guerra Mundial, resultó débil e ineficaz?",
+        options: [
+          "Porque solo contaba con países asiáticos",
+          "Porque todas las potencias europeas se negaron a participar",
+          "Porque EE.UU. no se unió al organismo, debilitando su capacidad de acción y legitimidad",
+          "Porque fue reemplazada por la ONU antes de iniciar sus funciones"
+        ],
+        correctIndex: 2,
+        explanation: "EE.UU. no se integró a la Sociedad de Naciones por el rechazo del Senado estadounidense, privando a la organización del respaldo de la potencia emergente más poderosa del momento.",
+        difficulty: "avanzado"
+      }
+    ]
+  },
+  {
+    slug: "revolucion-rusa",
+    tip: "La Revolución Rusa (1917) fue comunista. Febrero: cae el Zar. Octubre: Lenin toma el poder. Memoriza: Lenin (1917-1924), Stalin (1924-1953), URSS (1922-1991).",
+    theory: [
+      {
+        level: "basico",
+        title: "Causas y las dos revoluciones de 1917",
+        lines: [
+          "El Imperio Ruso era una monarquía absoluta con profundas desigualdades: una nobleza terrateniente y una masa campesina empobrecida.",
+          "Nicolás II gobernaba de forma autocrática, sin parlamento efectivo, y entró en la Primera Guerra Mundial con graves derrotas.",
+          "En febrero de 1917, huelgas y manifestaciones en Petrogrado obligaron a Nicolás II a abdicar (Revolución de Febrero).",
+          "Se formó un Gobierno Provisional liderado primero por el príncipe Lvov y luego por Alexander Kérenski, que continuó en la guerra.",
+          "En octubre de 1917, Lenin y los bolcheviques tomaron el Palacio de Invierno mediante un golpe armado (Revolución de Octubre).",
+          "Lenin implementó los 'Dekretos de Paz y de Tierra', prometiendo retirada de la guerra y distribución de tierras entre los campesinos."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Lenin, guerra civil y ascenso de Stalin",
+        lines: [
+          "Lenin firmó el Tratado de Brest-Litovsk (1918) para sacar a Rusia de la Primera Guerra Mundial, cediendo enormes territorios.",
+          "La guerra civil (1918-1921) enfrentó al Ejército Rojo (bolcheviques) contra el Ejército Blanco (monárquicos, liberales, extranjeros).",
+          "El comunismo de guerra (1918-1921) nacionalizó industrias y confiscó cosechas, generando hambruna y crisis económica.",
+          "Lenin implementó la NEP (Nueva Política Económica, 1921), permitiendo pequeñas empresas privadas para recuperar la economía.",
+          "Tras la muerte de Lenin (1924), Stalin se consolidó en el poder mediante maniobras políticas, superando a Trotski y Bujarin.",
+          "Stalin instauró el terror estatal (Grandes Purgas, 1936-1938), eliminando rivales políticos y creando el sistema de gulags (campos de trabajo forzado)."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "La URSS, planificación económica e impacto mundial",
+        lines: [
+          "La URSS (Unión de Repúblicas Socialistas Soviéticas) se fundó en 1922 y existió hasta su disolución en 1991, con 15 repúblicas.",
+          "Stalin implementó planes quinquenales (desde 1928) para la industrialización forzada y la colectivización agraria obligatoria.",
+          "La colectivización forzada provocó la hambruna en Ucrania (Holodomor, 1932-1933), con millones de muertos.",
+          "El modelo soviético influyó en movimientos comunistas mundiales: China (1949), Cuba (1959), Vietnam y numerosos países africanos.",
+          "La URSS desafió la hegemonía estadounidense, iniciando la Guerra Fría (1947-1991), un enfrentamiento ideológico, político y militar sin guerra directa.",
+          "La URSS se disolvió en 1991 tras la perestroika de Gorbachov, marcando el fin del bloque socialista y el inicio de la unipolaridad estadounidense."
+        ]
+      }
+    ],
+    illustrations: [
+      '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">',
+      '  <rect width="300" height="200" fill="#f8fafc" rx="12"/>',
+      '  <text x="150" y="22" text-anchor="middle" fill="#2563eb" font-size="12" font-weight="bold" font-family="sans-serif">Revolución Rusa y URSS (1917-1991)</text>',
+      '  <rect x="15" y="40" width="85" height="55" fill="#fecaca" rx="6"/>',
+      '  <text x="57" y="55" text-anchor="middle" fill="#991b1b" font-size="9" font-weight="bold" font-family="sans-serif">FEBRERO</text>',
+      '  <text x="57" y="68" text-anchor="middle" fill="#991b1b" font-size="8" font-family="sans-serif">1917</text>',
+      '  <text x="57" y="80" text-anchor="middle" fill="#991b1b" font-size="7" font-family="sans-serif">Cae el Zar</text>',
+      '  <text x="57" y="89" text-anchor="middle" fill="#ef4444" font-size="7" font-family="sans-serif">Gov. Provisional</text>',
+      '  <rect x="110" y="40" width="85" height="55" fill="#bbf7d0" rx="6"/>',
+      '  <text x="152" y="55" text-anchor="middle" fill="#166534" font-size="9" font-weight="bold" font-family="sans-serif">OCTUBRE</text>',
+      '  <text x="152" y="68" text-anchor="middle" fill="#166534" font-size="8" font-family="sans-serif">1917</text>',
+      '  <text x="152" y="80" text-anchor="middle" fill="#166534" font-size="7" font-family="sans-serif">Lenin toma</text>',
+      '  <text x="152" y="89" text-anchor="middle" fill="#22c55e" font-size="7" font-family="sans-serif">el poder</text>',
+      '  <rect x="205" y="40" width="85" height="55" fill="#e0e7ff" rx="6"/>',
+      '  <text x="247" y="55" text-anchor="middle" fill="#3730a3" font-size="9" font-weight="bold" font-family="sans-serif">URSS</text>',
+      '  <text x="247" y="68" text-anchor="middle" fill="#3730a3" font-size="8" font-family="sans-serif">1922-1991</text>',
+      '  <text x="247" y="80" text-anchor="middle" fill="#3730a3" font-size="7" font-family="sans-serif">Stalin → Stalinismo</text>',
+      '  <text x="247" y="89" text-anchor="middle" fill="#6366f1" font-size="7" font-family="sans-serif">Planes quinquenales</text>',
+      '  <line x1="100" y1="67" x2="110" y2="67" stroke="#64748b" stroke-width="1.5"/>',
+      '  <polygon points="107,63 107,71 113,67" fill="#64748b"/>',
+      '  <line x1="195" y1="67" x2="205" y2="67" stroke="#64748b" stroke-width="1.5"/>',
+      '  <polygon points="192,63 192,71 198,67" fill="#64748b"/>',
+      '  <rect x="25" y="110" width="250" height="75" fill="#f1f5f9" rx="4" stroke="#cbd5e1"/>',
+      '  <text x="150" y="125" text-anchor="middle" fill="#1e293b" font-size="9" font-weight="bold" font-family="sans-serif">Línea del tiempo</text>',
+      '  <text x="150" y="140" text-anchor="middle" fill="#475569" font-size="8" font-family="sans-serif">1917 Lenin → 1922 URSS → 1924 Stalin → 1991 Disolución</text>',
+      '  <text x="150" y="155" text-anchor="middle" fill="#475569" font-size="8" font-family="sans-serif">Guerra civil (1918-21) → NEP → Planes quinquenales</text>',
+      '  <text x="150" y="170" text-anchor="middle" fill="#475569" font-size="8" font-family="sans-serif">Modelo soviético → Guerra Fría → Caída (1991)</text>',
+      '</svg>'
+    ],
+    exercises: [
+      {
+        id: 5040,
+        question: "¿Qué gobierno asumió el poder en Rusia tras la Revolución de Febrero de 1917?",
+        options: [
+          "El gobierno bolchevique de Lenin",
+          "Un gobierno republicano liderado por el Zar Nicolás II",
+          "Un Gobierno Provisional que continuó participando en la Primera Guerra Mundial",
+          "Un gobierno militar liderado por Stalin"
+        ],
+        correctIndex: 2,
+        explanation: "La Revolución de Febrero derrocó al Zar Nicolás II e instauró un Gobierno Provisional que, bajo el liderazgo de Kérenski, decidió mantener la participación rusa en la Primera Guerra Mundial.",
+        difficulty: "basico"
+      },
+      {
+        id: 5041,
+        question: "¿En qué consistió la NEP (Nueva Política Económica) implementada por Lenin en 1921?",
+        options: [
+          "La colectivización total de la agricultura y la industria",
+          "La apertura al comercio privado a pequeña escala para recuperar la economía tras el comunismo de guerra",
+          "La nacionalización de todas las tierras sin excepción",
+          "El establecimiento de un sistema capitalista pleno"
+        ],
+        correctIndex: 1,
+        explanation: "La NEP permitió la pequeña empresa privada y el comercio libre a pequeña escala, como medida pragmática para superar la crisis económica del comunismo de guerra (1918-1921).",
+        difficulty: "intermedio"
+      },
+      {
+        id: 5042,
+        question: "¿Qué impacto tuvo el modelo soviético en la política mundial del siglo XX?",
+        options: [
+          "Solo influyó en los países europeos",
+          "Influyó en movimientos comunistas globales (China, Cuba, Vietnam) y desencadenó la Guerra Fría contra EE.UU.",
+          "No tuvo ninguna influencia fuera de la URSS",
+          "Promovió únicamente la economía de mercado"
+        ],
+        correctIndex: 1,
+        explanation: "El modelo soviético inspiró revoluciones comunistas en Asia, África y América Latina, y su rivalidad con EE.UU. definió la dinámica de la Guerra Fría (1947-1991).",
+        difficulty: "avanzado"
+      }
+    ]
+  },
+  {
+    slug: "segunda-guerra-mundial",
+    tip: "La Segunda Guerra Mundial (1939-1945) fue la más grande. Bandos: Aliados vs Eje. Memoriza: Hitler (Alemania), Mussolini (Italia), Hiroshima (6 ago 1945).",
+    theory: [
+      {
+        level: "basico",
+        title: "Causas, bandos y principales batallas",
+        lines: [
+          "La Segunda Guerra Mundial (1939-1945) fue el conflicto más devastador de la historia, con más de 60 millones de muertos.",
+          "Causas: ascenso de los totalitarismos (fascismo y nazismo), fracaso de la política de apaciguamiento, Tratado de Versalles y Gran Depresión.",
+          "Bandos: Aliados (EE.UU., URSS, Gran Bretaña, Francia, China) vs. Eje (Alemania, Italia, Japón).",
+          "Alemania invadió Polonia el 1 de septiembre de 1939, dando inicio a la guerra en Europa. Francia cayó en junio de 1940.",
+          "La Batalla de Stalingrado (1942-1943) fue el punto de inflexión en el frente oriental, con la derrota alemana decisiva.",
+          "El Día D (6 junio 1944) fue el desembarco de Normandía, la mayor operación anfibia de la historia, que abrió el frente occidental."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Holocausto, bombas atómicas y juicios de Núremberg",
+        lines: [
+          "El Holocausto fue el genocidio sistemático de 6 millones de judíos, además de gitanos, homosexuales, discapacitados y opositores políticos.",
+          "Los campos de exterminio (Auschwitz, Treblinka, Dachau) implementaron la 'Solución Final' ordenada por Hitler en la Conferencia de Wannsee (1942).",
+          "En el Pacífico, EE.UU. lanzó bombas atómicas sobre Hiroshima (6 agosto 1945) y Nagasaki (9 agosto 1945), causando más de 200.000 muertes.",
+          "Japón se rindió el 2 de septiembre de 1945, poniendo fin a la Segunda Guerra Mundial.",
+          "Los Juicios de Núremberg (1945-1946) juzgaron a los principales líderes nazis por crímenes de guerra, crímenes contra la humanidad y genocidio.",
+          "Estos juicios sentaron las bases del derecho penal internacional y establecieron que 'obedecer órdenes' no exime de responsabilidad."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "ONU, Derechos Humanos, reconstrucción y bipolaridad",
+        lines: [
+          "La ONU (Organización de las Naciones Unidas) fue fundada en 1945 para mantener la paz mundial, con sede en Nueva York.",
+          "La Declaración Universal de los Derechos Humanos (1948, París) fue impulsada por Eleanor Roosevelt tras los horrores de la guerra.",
+          "El Plan Marshall (1948) de EE.UU. destinó 13.000 millones de dólares para la reconstrucción de Europa occidental.",
+          "Alemania fue dividida en dos: República Federal Alemana (occidental, capitalista) y República Democrática Alemana (oriental, socialista).",
+          "La guerra terminó con el inicio de la bipolaridad mundial: EE.UU. (capitalismo, OTAN) vs. URSS (comunismo, Pacto de Varsovia).",
+          "Japón fue ocupado por EE.UU., se democratizó bajo una nueva Constitución (1947) y se convirtió en potencia económica en la posguerra."
+        ]
+      }
+    ],
+    illustrations: [
+      '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">',
+      '  <rect width="300" height="200" fill="#f8fafc" rx="12"/>',
+      '  <text x="150" y="22" text-anchor="middle" fill="#2563eb" font-size="12" font-weight="bold" font-family="sans-serif">Segunda Guerra Mundial (1939-1945)</text>',
+      '  <rect x="15" y="40" width="120" height="55" fill="#dcfce7" rx="6"/>',
+      '  <text x="75" y="55" text-anchor="middle" fill="#166534" font-size="9" font-weight="bold" font-family="sans-serif">ALIADOS</text>',
+      '  <text x="75" y="68" text-anchor="middle" fill="#166534" font-size="7" font-family="sans-serif">EE.UU. - URSS - GB</text>',
+      '  <text x="75" y="80" text-anchor="middle" fill="#22c55e" font-size="7" font-family="sans-serif">Francia - China + otros</text>',
+      '  <text x="75" y="89" text-anchor="middle" fill="#166534" font-size="7" font-family="sans-serif">Victoria: mayo 1945 / sept 1945</text>',
+      '  <rect x="165" y="40" width="120" height="55" fill="#fecaca" rx="6"/>',
+      '  <text x="225" y="55" text-anchor="middle" fill="#991b1b" font-size="9" font-weight="bold" font-family="sans-serif">EJE</text>',
+      '  <text x="225" y="68" text-anchor="middle" fill="#991b1b" font-size="7" font-family="sans-serif">Hitler (Alemania)</text>',
+      '  <text x="225" y="80" text-anchor="middle" fill="#ef4444" font-size="7" font-family="sans-serif">Mussolini (Italia)</text>',
+      '  <text x="225" y="89" text-anchor="middle" fill="#991b1b" font-size="7" font-family="sans-serif">Tojo (Japón)</text>',
+      '  <line x1="135" y1="67" x2="165" y2="67" stroke="#dc2626" stroke-width="2"/>',
+      '  <text x="150" y="63" text-anchor="middle" fill="#dc2626" font-size="8" font-weight="bold" font-family="sans-serif">VS</text>',
+      '  <rect x="25" y="105" width="110" height="40" fill="#fef3c7" rx="4" stroke="#d97706"/>',
+      '  <text x="80" y="120" text-anchor="middle" fill="#92400e" font-size="8" font-weight="bold" font-family="sans-serif">Holocausto</text>',
+      '  <text x="80" y="132" text-anchor="middle" fill="#b45309" font-size="7" font-family="sans-serif">6M judíos asesinados</text>',
+      '  <rect x="145" y="105" width="110" height="40" fill="#e0e7ff" rx="4" stroke="#6366f1"/>',
+      '  <text x="200" y="120" text-anchor="middle" fill="#3730a3" font-size="8" font-weight="bold" font-family="sans-serif">Bomba Atómica</text>',
+      '  <text x="200" y="132" text-anchor="middle" fill="#6366f1" font-size="7" font-family="sans-serif">Hiroshima 6/ago/1945</text>',
+      '  <rect x="25" y="155" width="250" height="30" fill="#f1f5f9" rx="4" stroke="#cbd5e1"/>',
+      '  <text x="150" y="174" text-anchor="middle" fill="#1e293b" font-size="8" font-weight="bold" font-family="sans-serif">ONU (1945) → DDHH (1948) → Bipolaridad → Guerra Fría</text>',
+      '</svg>'
+    ],
+    exercises: [
+      {
+        id: 5050,
+        question: "¿Cuál fue el acontecimiento que inició la Segunda Guerra Mundial en Europa?",
+        options: [
+          "La invasión de Polonia por Alemania el 1 de septiembre de 1939",
+          "El ataque a Pearl Harbor el 7 de diciembre de 1941",
+          "La caída de Francia en junio de 1940",
+          "El desembarco de Normandía en junio de 1944"
+        ],
+        correctIndex: 0,
+        explanation: "Alemania invadió Polonia el 1 de septiembre de 1939, lo que provocó que Gran Bretaña y Francia le declararan la guerra, iniciando el conflicto en Europa.",
+        difficulty: "basico"
+      },
+      {
+        id: 5051,
+        question: "¿Qué significado histórico tuvieron los Juicios de Núremberg (1945-1946)?",
+        options: [
+          "Fueron acuerdos de paz entre Aliados y el Eje",
+          "Juzgaron a líderes nazis por crímenes de guerra y sentaron las bases del derecho penal internacional",
+          "Establecieron la creación de la OTAN",
+          "Redactaron la Constitución de la República Federal Alemana"
+        ],
+        correctIndex: 1,
+        explanation: "Los Juicios de Núremberg establecieron los principios del derecho penal internacional: los crímenes de guerra, contra la humanidad y el genocidio son punibles, y la obediencia a órdenes no exime de responsabilidad.",
+        difficulty: "intermedio"
+      },
+      {
+        id: 5052,
+        question: "¿Cómo contribuyó el Plan Marshall a la reconstrucción de Europa tras la Segunda Guerra Mundial y qué implicación geopolítica tuvo?",
+        options: [
+          "Fue un préstamo de la URSS a Europa del Este",
+          "EE.UU. destinó 13.000 millones de dólares para reconstruir Europa occidental, fortaleciendo el capitalismo y conteniendo la influencia soviética",
+          "Fue un acuerdo militar entre Gran Bretaña y Francia",
+          "Fue un plan de la ONU para la reconstrucción de Japón"
+        ],
+        correctIndex: 1,
+        explanation: "El Plan Marshall (1948) de EE.UU. ayudó a reconstruir Europa occidental, fortaleciendo la alianza capitalista y evitando que los países devastados cayeran bajo la influencia comunista soviética.",
+        difficulty: "avanzado"
+      }
+    ]
+  },
+  {
+    slug: "guerra-fria-y-globalizacion",
+    tip: "La Guerra Fría (1947-1991) fue EE.UU. vs URSS. Memoriza: Plan Marshall, OTAN, Pacto de Varsovia, caída del muro de Berlín (1989), disolución URSS (1991).",
+    theory: [
+      {
+        level: "basico",
+        title: "Qué fue la Guerra Fría, bandos y eventos clave",
+        lines: [
+          "La Guerra Fría (1947-1991) fue el enfrentamiento político, ideológico y militar entre EE.UU. (capitalismo) y URSS (comunismo) sin guerra directa.",
+          "Bandos: OTAN (1949, alianza occidental liderada por EE.UU.) vs. Pacto de Varsovia (1955, alianza socialista liderada por URSS).",
+          "La Doctrina Truman (1947) estableció la contención del comunismo como política exterior de EE.UU.",
+          "El Plan Marshall (1948) ayudó a reconstruir Europa occidental e impidió la expansión comunista en la región.",
+          "El Bloqueo de Berlín (1948-1949) fue la primera gran crisis: la URSS bloqueó el acceso terrestre a Berlín Occidental.",
+          "Los eventos clave incluyen: crisis de los misiles de Cuba (1962), caída del Muro de Berlín (1989) y disolución de la URSS (1991)."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Crisis de los misiles, carrera espacial y descolonización",
+        lines: [
+          "La Crisis de los misiles de Cuba (1962) fue el momento más peligroso: la URSS instaló misiles nucleares en Cuba, a 150 km de EE.UU.",
+          "Kennedy y Jrushchov negociaron la retirada de los misiles, evitando una guerra nuclear que habría devastado al mundo.",
+          "La carrera espacial simbolizó la rivalidad: Sputnik (URSS, 1957), Gagarin en el espacio (URSS, 1961), llegada a la Luna (EE.UU., 1969).",
+          "La descolonización (1945-1975) liberó decenas de países de África y Asia, pero muchos quedaron como zonas de influencia de EE.UU. o URSS.",
+          "Guerras proxy: Corea (1950-1953), Vietnam (1955-1975), Afganistán (1979-1989), donde las superpotencias apoyaron bandos enfrentados.",
+          "El Movimiento de los No Alineados (1961, Belgrado) intentó mantener la neutralidad entre las dos superpotencias, liderado por India, Egipto y Yugoslavia."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Globalización, organismos internacionales y multipolaridad",
+        lines: [
+          "La globalización se aceleró tras la caída de la URSS (1991): expansión del libre comercio, interconexión tecnológica y cultural a escala mundial.",
+          "Organismos internacionales clave: ONU (paz), OEA (Américas), UE (integración europea), OMC (comercio), FMI y Banco Mundial (economía).",
+          "La UE pasó de la CEE (1957) a la Unión Europea (1993), integrando economías, políticas y monedas de 27 países.",
+          "El mundo multipolar actual incluye potencias emergentes: China, India, Brasil, Rusia y la UE, desafiando la unipolaridad estadounidense.",
+          "Desafíos contemporáneos: terrorismo internacional (11-S, 2001), cambio climático, migraciones globales, desigualdad Norte-Sur y crisis alimentaria.",
+          "En América Latina, la globalización trajo oportunidades de integración comercial pero también dependencia económica y vulnerabilidad financiera."
+        ]
+      }
+    ],
+    illustrations: [
+      '<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">',
+      '  <rect width="300" height="200" fill="#f8fafc" rx="12"/>',
+      '  <text x="150" y="22" text-anchor="middle" fill="#2563eb" font-size="12" font-weight="bold" font-family="sans-serif">Guerra Fría y Globalización (1947-1991)</text>',
+      '  <rect x="15" y="40" width="120" height="60" fill="#dcfce7" rx="6"/>',
+      '  <text x="75" y="55" text-anchor="middle" fill="#166534" font-size="9" font-weight="bold" font-family="sans-serif">EE.UU. (Occidente)</text>',
+      '  <text x="75" y="68" text-anchor="middle" fill="#166534" font-size="8" font-family="sans-serif">Capitalismo liberal</text>',
+      '  <text x="75" y="80" text-anchor="middle" fill="#22c55e" font-size="7" font-family="sans-serif">OTAN (1949)</text>',
+      '  <text x="75" y="90" text-anchor="middle" fill="#166534" font-size="7" font-family="sans-serif">Plan Marshall</text>',
+      '  <rect x="165" y="40" width="120" height="60" fill="#fecaca" rx="6"/>',
+      '  <text x="225" y="55" text-anchor="middle" fill="#991b1b" font-size="9" font-weight="bold" font-family="sans-serif">URSS (Oriente)</text>',
+      '  <text x="225" y="68" text-anchor="middle" fill="#991b1b" font-size="8" font-family="sans-serif">Comunismo soviético</text>',
+      '  <text x="225" y="80" text-anchor="middle" fill="#ef4444" font-size="7" font-family="sans-serif">Pacto de Varsovia (1955)</text>',
+      '  <text x="225" y="90" text-anchor="middle" fill="#991b1b" font-size="7" font-family="sans-serif">Planes quinquenales</text>',
+      '  <line x1="135" y1="70" x2="165" y2="70" stroke="#dc2626" stroke-width="2"/>',
+      '  <text x="150" y="66" text-anchor="middle" fill="#dc2626" font-size="8" font-weight="bold" font-family="sans-serif">VS</text>',
+      '  <rect x="25" y="115" width="250" height="45" fill="#f1f5f9" rx="4" stroke="#cbd5e1"/>',
+      '  <text x="150" y="130" text-anchor="middle" fill="#1e293b" font-size="8" font-weight="bold" font-family="sans-serif">Eventos clave</text>',
+      '  <text x="150" y="142" text-anchor="middle" fill="#475569" font-size="7" font-family="sans-serif">Cuba 1962 → Espacio 1969 → Berlín 1989 → URSS 1991</text>',
+      '  <rect x="25" y="165" width="250" height="25" fill="#e0e7ff" rx="4" stroke="#818cf8"/>',
+      '  <text x="150" y="181" text-anchor="middle" fill="#3730a3" font-size="8" font-weight="bold" font-family="sans-serif">Post-1991: Globalización → ONU → OEA → UE → Multipolaridad</text>',
+      '</svg>'
+    ],
+    exercises: [
+      {
+        id: 5060,
+        question: "¿Qué organizaciones militares enfrentadas simbolizaron la división del mundo durante la Guerra Fría?",
+        options: [
+          "La ONU y la OEA",
+          "La OTAN y el Pacto de Varsovia",
+          "La OMC y el FMI",
+          "La Unión Europea y la Liga Árabe"
+        ],
+        correctIndex: 1,
+        explanation: "La OTAN (1949, liderada por EE.UU.) y el Pacto de Varsovia (1955, liderado por URSS) representaron la alianza militar de los dos bloques enfrentados durante la Guerra Fría.",
+        difficulty: "basico"
+      },
+      {
+        id: 5061,
+        question: "¿Qué conflictos bélicos fueron considerados 'guerras proxy' durante la Guerra Fría?",
+        options: [
+          "La Primera y Segunda Guerra Mundial",
+          "Las guerras de Corea, Vietnam y Afganistán, donde las superpotencias apoyaron bandos enfrentados",
+          "Las guerras napoleónicas del siglo XIX",
+          "Los conflictos en América del Sur del siglo XXI"
+        ],
+        correctIndex: 1,
+        explanation: "Las guerras proxy fueron conflictos donde EE.UU. y URSS apoyaron bandos opuestos sin enfrentarse directamente: Corea (1950-1953), Vietnam (1955-1975) y Afganistán (1979-1989).",
+        difficulty: "intermedio"
+      },
+      {
+        id: 5062,
+        question: "¿Cómo influyó la globalización en América Latina tras la caída de la URSS (1991)?",
+        options: [
+          "América Latina se aisló completamente del comercio mundial",
+          "La globalización trajo oportunidades de integración comercial pero también dependencia económica y vulnerabilidad financiera",
+          "Todos los países latinoamericanos se integraron a la Unión Europea",
+          "La globalización eliminó completamente la pobreza en la región"
+        ],
+        correctIndex: 1,
+        explanation: "La globalización en América Latina generó mayor acceso a mercados e inversiones, pero también incrementó la dependencia de materias primas, la vulnerabilidad financiera y la desigualdad interna.",
+        difficulty: "avanzado"
+      }
+    ]
+  }
+  ]
+};
