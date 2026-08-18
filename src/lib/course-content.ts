@@ -6268,4 +6268,4499 @@ const historiaModulesPart3: CourseModule[] = [
   }
 ];
 
-courseContent["historia"] = [...historiaModulesPart1, ...historiaModulesPart2, ...historiaModulesPart3];
+
+const historiaModulesPart4: CourseModule[] = [
+{
+    slug: "cultura-wari-tiahuanaco",
+    tip: "Wari y Tiwanaku fueron los primeros imperios expansionistas del mundo andino, anteriores a los incas.",
+    theory: [
+      {
+        level: "basico",
+        title: "Los dos grandes imperios tempranos",
+        lines: [
+          "El Imperio Wari se desarrolló entre los años 550 y 1000 d.C. en la sierra central del Perú.",
+          "Su capital se ubicaba en la ciudad de Wari, actualmente en el departamento de Ayacucho.",
+          "El Imperio Tiwanaku surgió en la meseta del Collao, cerca del lago Titicaca, en Bolivia.",
+          "Ambos imperios coexistieron durante varios siglos y dominaron vastos territorios.",
+          "Los Wari controlaron la costa, sierra y parte de la selva del antiguo Perú.",
+          "Tiwanaku extendió su influencia desde el sur de Perú hasta Bolivia, Chile y Argentina."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Administración y mitmaqkuna",
+        lines: [
+          "Wari implementó un sistema de colonización llamado mitmaqkuna para controlar los territorios conquistados.",
+          "Los mitmaqkuna eran poblaciones trasladadas forzosamente a regiones lejanas para pacificarlas.",
+          "Ambos imperios contaron con una red de centros administrativos distribuidos por su territorio.",
+          "Los Wari desarrollaron un complejo sistema de caminos que conectaba sus diversas ciudades.",
+          "Tiwanaku utilizó el sistema de terrazas agrícolas para alimentar a su extensa población.",
+          "La administración centralizada permitió a ambos imperios manejar grandes excedentes de alimentos."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Economía, arte y decadencia",
+        lines: [
+          "La economía Wari se basaba en la agricultura intensiva, la metalurgia y el comercio a larga distancia.",
+          "Los textiles Wari son considerados entre los más finos de la historia andina, con patrones complejos.",
+          "Tiwanaku desarrolló una agricultura especializada con camellones o waru waru en el altiplano.",
+          "Ambos imperios experimentaron un declive gradual alrededor del año 1000 d.C.",
+          "El cambio climático y las sequías prolongadas debilitaron las estructuras políticas imperiales.",
+          "La caída de estos imperios generó un período de señoríos regionales independientes en todo el territorio."
+        ]
+      }
+    ],
+    illustrations: [
+      `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+        <rect width="300" height="200" fill="#f8fafc"/>
+        <rect x="20" y="20" width="120" height="160" rx="8" fill="#2563eb" opacity="0.15"/>
+        <rect x="160" y="20" width="120" height="160" rx="8" fill="#dc2626" opacity="0.15"/>
+        <text x="80" y="45" text-anchor="middle" font-size="14" font-weight="bold" fill="#2563eb">WARI</text>
+        <text x="220" y="45" text-anchor="middle" font-size="14" font-weight="bold" fill="#dc2626">TIWANAKU</text>
+        <rect x="35" y="55" width="90" height="25" rx="4" fill="#2563eb"/>
+        <text x="80" y="72" text-anchor="middle" font-size="10" fill="white">550-1000 d.C.</text>
+        <rect x="175" y="55" width="90" height="25" rx="4" fill="#dc2626"/>
+        <text x="220" y="72" text-anchor="middle" font-size="10" fill="white">500-1000 d.C.</text>
+        <text x="80" y="105" text-anchor="middle" font-size="9" fill="#334155">Capital: Ayacucho</text>
+        <text x="80" y="120" text-anchor="middle" font-size="9" fill="#334155">Costa y Sierra</text>
+        <text x="80" y="135" text-anchor="middle" font-size="9" fill="#334155">Mitmaqkuna</text>
+        <text x="80" y="150" text-anchor="middle" font-size="9" fill="#334155">Textiles finos</text>
+        <text x="220" y="105" text-anchor="middle" font-size="9" fill="#334155">Capital: Lago Titicaca</text>
+        <text x="220" y="120" text-anchor="middle" font-size="9" fill="#334155">Altiplano y sur</text>
+        <text x="220" y="135" text-anchor="middle" font-size="9" fill="#334155">Waru waru</text>
+        <text x="220" y="150" text-anchor="middle" font-size="9" fill="#334155">Cerámica monumental</text>
+        <line x1="140" y1="90" x2="160" y2="90" stroke="#f59e0b" stroke-width="2" stroke-dasharray="4,3"/>
+        <text x="150" y="85" text-anchor="middle" font-size="8" fill="#f59e0b">COEX</text>
+      </svg>`
+    ],
+    exercises: [
+      {
+        id: 7001,
+        question: "¿En qué siglo se ubica el auge del Imperio Wari?",
+        options: ["Siglos III-V d.C.", "Siglos VI-X d.C.", "Siglos XI-XIII d.C.", "Siglos XIV-XV d.C."],
+        correctIndex: 1,
+        explanation: "El Imperio Wari se desarrolló entre los años 550 y 1000 d.C., es decir, durante los siglos VI al X.",
+        difficulty: "basico"
+      },
+      {
+        id: 7002,
+        question: "¿Qué eran los mitmaqkuna en el contexto del Imperio Wari?",
+        options: [
+          "Sacerdotes del templo principal",
+          "Poblaciones trasladadas forzosamente para controlar territorios",
+          "Soldados de élite del ejército Wari",
+          "Artesanos especializados en metalurgia"
+        ],
+        correctIndex: 1,
+        explanation: "Los mitmaqkuna eran grupos de personas desplazadas de sus comunidades originales y reubicadas en zonas conquistadas para pacificarlas y controlarlas.",
+        difficulty: "intermedio"
+      },
+      {
+        id: 7003,
+        question: "¿Cuál fue una de las principales causas de la caída de los imperios Wari y Tiwanaku?",
+        options: [
+          "Invasiones extranjeras desde la costa",
+          "Guerras internas por sucesión al trono",
+          "Cambio climático y sequías prolongadas",
+          "Terremotos que destruyeron sus ciudades"
+        ],
+        correctIndex: 2,
+        explanation: "El cambio climático, especialmente las sequías prolongadas alrededor del año 1000 d.C., debilitó las estructuras agrícolas y políticas de ambos imperios.",
+        difficulty: "avanzado"
+      }
+    ]
+  },
+  {
+    slug: "senorios-regionales",
+    tip: "Tras la caída de Wari y Tiwanaku, surgieron múltiples señoríos independientes que dominaron distintas regiones del Perú.",
+    theory: [
+      {
+        level: "basico",
+        title: "El período de los señoríos",
+        lines: [
+          "Entre los años 1000 y 1400 d.C., el territorio peruano se fragmentó en múltiples señoríos regionales.",
+          "Cada señorío controlaba un territorio específico y mantenía su propia organización política.",
+          "Los principales señoríos se ubicaban en la costa, sierra y valles intermedios del Perú.",
+          "Este período se conoce como el Horizonte Tardío o Intermedio Tardío.",
+          "Los señoríos competían por territorios, recursos y rutas comerciales entre sí.",
+          "La diversidad cultural de este período es una de las más ricas de la historia andina."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Los principales señoríos costeños",
+        lines: [
+          "Los Chanka dominaron el valle del Apurímac y son conocidos por su resistencia ante los incas.",
+          "El Señorío de Chincha controlaba la costa central y mantuvo activas rutas comerciales marítimas.",
+          "Los Ichma se asentaron en el valle de Lima, construyendo centros ceremoniales como Huaca Pucllana.",
+          "El Señorío de Lambayeque (o Sicán) dominó la costa norte con una gran tradición metalúrgica.",
+          "Los Tallán y los Piura se ubicaron en la zona noroccidental,靠近 el actual Piura.",
+          "Cada señorío tenía su propia élite gobernante, sistema de reciprocidad y organizaciones militares."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Conflictos y organización política",
+        lines: [
+          "Los Chanka fueron uno de los señoríos más poderosos y se enfrentaron directamente al Imperio Inca.",
+          "Según la crónica, los Chanka derrotaron a los incas antes de que Pachacútec tomara el poder.",
+          "El Señorío de Chincha poseía una flota de balsas que comerciaba con el actual Ecuador.",
+          "Los señoríos costeños desarrollaron sistemas de irrigación cada vez más complejos para la agricultura.",
+          "La elite de cada señorío legitimaba su poder a través de linajes ancestrales y ceremonias religiosas.",
+          "La caída de estos señoríos se produjo gradualmente bajo la expansión del Tahuantinsuyo."
+        ]
+      }
+    ],
+    illustrations: [
+      `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+        <rect width="300" height="200" fill="#f0fdf4"/>
+        <text x="150" y="25" text-anchor="middle" font-size="13" font-weight="bold" fill="#16a34a">SEÑORÍOS REGIONALES</text>
+        <text x="150" y="40" text-anchor="middle" font-size="9" fill="#334155">1000-1400 d.C.</text>
+        <rect x="15" y="50" width="55" height="35" rx="5" fill="#2563eb" opacity="0.8"/>
+        <text x="42" y="65" text-anchor="middle" font-size="8" fill="white" font-weight="bold">CHANKA</text>
+        <text x="42" y="77" text-anchor="middle" font-size="7" fill="#e0f2fe">Apurímac</text>
+        <rect x="80" y="50" width="55" height="35" rx="5" fill="#dc2626" opacity="0.8"/>
+        <text x="107" y="65" text-anchor="middle" font-size="8" fill="white" font-weight="bold">CHINCHA</text>
+        <text x="107" y="77" text-anchor="middle" font-size="7" fill="#fee2e2">Costa</text>
+        <rect x="145" y="50" width="55" height="35" rx="5" fill="#16a34a" opacity="0.8"/>
+        <text x="172" y="65" text-anchor="middle" font-size="8" fill="white" font-weight="bold">ICHMA</text>
+        <text x="172" y="77" text-anchor="middle" font-size="7" fill="#dcfce7">Lima</text>
+        <rect x="210" y="50" width="55" height="35" rx="5" fill="#f59e0b" opacity="0.8"/>
+        <text x="237" y="65" text-anchor="middle" font-size="8" fill="white" font-weight="bold">LAMBAYEQUE</text>
+        <text x="237" y="77" text-anchor="middle" font-size="7" fill="#fef3c7">Norte</text>
+        <line x1="42" y1="85" x2="42" y2="105" stroke="#2563eb" stroke-width="2"/>
+        <line x1="107" y1="85" x2="107" y2="105" stroke="#dc2626" stroke-width="2"/>
+        <line x1="172" y1="85" x2="172" y2="105" stroke="#16a34a" stroke-width="2"/>
+        <line x1="237" y1="85" x2="237" y2="105" stroke="#f59e0b" stroke-width="2"/>
+        <rect x="20" y="108" width="260" height="75" rx="6" fill="#f1f5f9"/>
+        <text x="150" y="128" text-anchor="middle" font-size="10" fill="#334155" font-weight="bold">Organización Política</text>
+        <text x="150" y="148" text-anchor="middle" font-size="9" fill="#475569">• Línea gobernante por cada señorío</text>
+        <text x="150" y="163" text-anchor="middle" font-size="9" fill="#475569">• Ejércitos propios y rituales religiosos</text>
+        <text x="150" y="178" text-anchor="middle" font-size="9" fill="#475569">• Comercio y guerra entre señoríos</text>
+      </svg>`
+    ],
+    exercises: [
+      {
+        id: 7004,
+        question: "¿En qué período se desarrolló la época de los señoríos regionales en el Perú?",
+        options: [
+          "200 a.C. al 200 d.C.",
+          "200 al 600 d.C.",
+          "1000 al 1400 d.C.",
+          "1470 al 1533 d.C."
+        ],
+        correctIndex: 2,
+        explanation: "Los señoríos regionales surgieron tras la caída de Wari y Tiwanaku, entre los años 1000 y 1400 d.C., durante el Intermedio Tardío.",
+        difficulty: "basico"
+      },
+      {
+        id: 7005,
+        question: "¿Qué señorío controlaba el valle del Apurímac y se enfrentó a los incas?",
+        options: ["Chincha", "Ichma", "Chanka", "Lambayeque"],
+        correctIndex: 2,
+        explanation: "Los Chanka dominaban el valle del Apurímac y son conocidos por haber derrotado a los incas antes del ascenso de Pachacútec al poder.",
+        difficulty: "intermedio"
+      },
+      {
+        id: 7006,
+        question: "¿Qué característica distinguía al Señorío de Chincha de otros señoríos costeños?",
+        options: [
+          "Poseía la mayor red de terrazas agrícolas",
+          "Mantenía una flota de balsas para el comercio marítimo",
+          "Era el más grande en extensión territorial",
+          "No tenía ejército propio"
+        ],
+        correctIndex: 1,
+        explanation: "El Señorío de Chincha se distinguía por mantener una activa flota de balsas que comerciaba a larga distancia, incluso con el actual Ecuador.",
+        difficulty: "avanzado"
+      }
+    ]
+  },
+  {
+    slug: "culturas-costeras-detalladas",
+    tip: "Las culturas costeñas desarrollaron obras monumentales como las Huacas de Moche y las Líneas de Nazca sin usar la rueda ni animales de tiro.",
+    theory: [
+      {
+        level: "basico",
+        title: "Las grandes culturas de la costa",
+        lines: [
+          "Los Moche habitaron la costa norte del Perú entre 100 y 700 d.C., construyendo las Huacas del Sol y de la Luna.",
+          "Los Nazca florecieron entre 100 a.C. y 800 d.C. en el valle del río Grande de Nazca.",
+          "Los Chimú dominaron la costa norte entre 900 y 1470 d.C., con su gran capital en Chan Chan.",
+          "Cada cultura desarrolló técnicas agrícolas y artísticas únicas adaptadas a su entorno.",
+          "Las huacas Moche eran estructuras de adobe de enormes dimensiones para ceremonias religiosas.",
+          "Los Nazca son mundialmente famosos por las Líneas y geoglífos del desierto de Nazca."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Obras e innovaciones destacadas",
+        lines: [
+          "Los Nazca construyeron los puquios, un sofisticado sistema de acueductos subterráneos para irrigación.",
+          "Los Cantonales Nazca eran estructuras ceremoniales vinculadas al calendario agrícola y religioso.",
+          "Los Moche realizaron sacrificios humanos rituales, como se evidencia en los hallazgos de Huaca de la Luna.",
+          "Los Chimú perfeccionaron la orfebrería con técnicas como el repujado y la soldadura.",
+          "Chan Chan fue la ciudad de adobe más grande del mundo, con 20 km² de extensión.",
+          "Los Chimú también desarrollaron ingeniería hidráulica con canales de varios kilómetros de longitud."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Religión, arte y legado",
+        lines: [
+          "El arte Moche retrataba escenas cotidianas y ceremoniales con gran realismo en su cerámica.",
+          "Las Líneas de Nazca representan animales, plantas y figuras geométricas visibles solo desde el aire.",
+          "Los Nazca utilizaban pigmentos minerales que resistían la intemperie durante siglos en la superficie.",
+          "La metalurgia Chimú incluía piezas de oro, plata y cobre con incrustaciones de piedras preciosas.",
+          "El sacrificio de los Siete Interpretantes de San José de Moro es un ejemplo del ritual Moche.",
+          "Todas estas culturas fueron finalmente absorbidas por el Imperio Inca en su expansión hacia el sur."
+        ]
+      }
+    ],
+    illustrations: [
+      `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+        <rect width="300" height="200" fill="#fef3c7"/>
+        <text x="150" y="22" text-anchor="middle" font-size="12" font-weight="bold" fill="#b45309">CULTURAS COSTEÑAS</text>
+        <rect x="10" y="35" width="85" height="150" rx="6" fill="#dc2626" opacity="0.15"/>
+        <rect x="107" y="35" width="85" height="150" rx="6" fill="#2563eb" opacity="0.15"/>
+        <rect x="205" y="35" width="85" height="150" rx="6" fill="#8b5cf6" opacity="0.15"/>
+        <text x="52" y="55" text-anchor="middle" font-size="11" font-weight="bold" fill="#dc2626">MOCHE</text>
+        <text x="150" y="55" text-anchor="middle" font-size="11" font-weight="bold" fill="#2563eb">NAZCA</text>
+        <text x="247" y="55" text-anchor="middle" font-size="11" font-weight="bold" fill="#8b5cf6">CHIMÚ</text>
+        <rect x="20" y="65" width="65" height="20" rx="3" fill="#dc2626"/>
+        <text x="52" y="79" text-anchor="middle" font-size="8" fill="white">100-700 d.C.</text>
+        <rect x="117" y="65" width="65" height="20" rx="3" fill="#2563eb"/>
+        <text x="150" y="79" text-anchor="middle" font-size="8" fill="white">100aC-800dC</text>
+        <rect x="215" y="65" width="65" height="20" rx="3" fill="#8b5cf6"/>
+        <text x="247" y="79" text-anchor="middle" font-size="8" fill="white">900-1470dC</text>
+        <text x="52" y="105" text-anchor="middle" font-size="8" fill="#475569">• Huacas de adobe</text>
+        <text x="52" y="118" text-anchor="middle" font-size="8" fill="#475569">• Sacrificios rituales</text>
+        <text x="52" y="131" text-anchor="middle" font-size="8" fill="#475569">• Cerámica realista</text>
+        <text x="150" y="105" text-anchor="middle" font-size="8" fill="#475569">• Líneas/Geoglífos</text>
+        <text x="150" y="118" text-anchor="middle" font-size="8" fill="#475569">• Puquios</text>
+        <text x="150" y="131" text-anchor="middle" font-size="8" fill="#475569">• Cantorales</text>
+        <text x="247" y="105" text-anchor="middle" font-size="8" fill="#475569">• Chan Chan</text>
+        <text x="247" y="118" text-anchor="middle" font-size="8" fill="#475569">• Orfebrería</text>
+        <text x="247" y="131" text-anchor="middle" font-size="8" fill="#475569">• Canales</text>
+        <line x1="52" y1="145" x2="150" y2="145" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="4,3"/>
+        <line x1="150" y1="145" x2="247" y2="145" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="4,3"/>
+        <text x="150" y="180" text-anchor="middle" font-size="8" fill="#92400e">Todas absorbidas por el Imperio Inca</text>
+      </svg>`
+    ],
+    exercises: [
+      {
+        id: 7007,
+        question: "¿Qué civilización construyó las Huacas del Sol y de la Luna?",
+        options: ["Nazca", "Moche", "Chimú", "Wari"],
+        correctIndex: 1,
+        explanation: "Los Moche construyeron las imponentes Huacas del Sol y de la Luna en la costa norte del Perú entre los años 100 y 700 d.C.",
+        difficulty: "basico"
+      },
+      {
+        id: 7008,
+        question: "¿Qué son los puquios de los Nazca?",
+        options: [
+          "Cerámicas decorativas ceremoniales",
+          "Sistema de acueductos subterráneos para irrigación",
+          "Templos construidos en el desierto",
+          "Canales de navegación marítima"
+        ],
+        correctIndex: 1,
+        explanation: "Los puquios eran un sofisticado sistema de acueductos subterráneos que los Nazca construyeron para transportar agua desde los ríos subterráneos hasta sus campos agrícolas.",
+        difficulty: "intermedio"
+      },
+      {
+        id: 7009,
+        question: "¿Qué técnica metalúrgica desarrollaron los Chimú que fue pionera en Sudamérica?",
+        options: [
+          "Fundición a la cera perdida sin aleaciones",
+          "Repujado y soldadura de metales preciosos",
+          "Uso exclusivo del oro puro sin mezclar",
+          "Trabajo con piedras semipreciosas solamente"
+        ],
+        correctIndex: 1,
+        explanation: "Los Chimú perfeccionaron técnicas como el repujado y la soldadura de metales, creando piezas de orfebrería de gran complejidad y calidad.",
+        difficulty: "avanzado"
+      }
+    ]
+  },
+  {
+    slug: "agricultura-andina",
+    tip: "Los antiguos peruanos domesticaron más de 3,000 variedades de papa y desarrollaron el chuño hace más de 2,000 años.",
+    theory: [
+      {
+        level: "basico",
+        title: "Bases de la agricultura andina",
+        lines: [
+          "Los andes son uno de los centros de origen de la agricultura mundial, con miles de años de desarrollo.",
+          "Los antiguos peruanos domesticaron la papa, la quinua, el maíz, la yuca y muchas otras plantas.",
+          "La ganadería de camélidos (llamas y alpacas) fue fundamental para la economía andina.",
+          "El sistema de andenes o terrazas agrícolas permitió cultivar en las empinadas laderas de los Andes.",
+          "El waru waru o camellón era un sistema de campos elevados rodeados de canales en zonas húmedas.",
+          "Estas técnicas permitieron producir excedentes para sostener grandes poblaciones en zonas difíciles."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Técnicas avanzadas de conservación",
+        lines: [
+          "El chuño es un producto deshidratado congelando las papas al aire libre durante las noches heladas.",
+          "El proceso de chuño se realiza exposureando las papas a temperaturas bajo cero y al sol alternadamente.",
+          "El chuño permite conservar las papas durante años, incluso décadas, sin estropearse.",
+          "Los andenes maximizaban el uso del agua de lluvia y la luz solar en diferentes alturas.",
+          "Los waru waru usaban el calor acumulado en los canales para proteger los cultivos de heladas.",
+          "La rotación de cultivos y el uso de fertilizantes naturales mejoraban la productividad del suelo."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Legado y diversidad agrícola",
+        lines: [
+          "Se estima que los antiguos peruanos domesticaron más de 3,000 variedades de papa en distintas regiones.",
+          "La quinua fue un alimento estratégico por su alto valor nutricional y resistencia a condiciones extremas.",
+          "Los camélidos proporcionaban lana, carne, cuero y servían como animales de carga en las caravanas.",
+          "El sistema de sayaña consistía en terrazas escalonadas que creaban microclimas favorables.",
+          "La agricultura vertical permitía a una comunidad tener productos de distintas alturas ecológicas.",
+          "El legado agrícola andino sigue vigente hoy, con comunidades que mantienen técnicas ancestrales."
+        ]
+      }
+    ],
+    illustrations: [
+      `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+        <rect width="300" height="200" fill="#f0fdf4"/>
+        <text x="150" y="22" text-anchor="middle" font-size="12" font-weight="bold" fill="#16a34a">AGRICULTURA ANDINA</text>
+        <path d="M 20 180 L 20 100 L 70 80 L 70 180" fill="#16a34a" opacity="0.3" stroke="#16a34a" stroke-width="1"/>
+        <path d="M 50 180 L 50 90 L 100 70 L 100 180" fill="#16a34a" opacity="0.4" stroke="#16a34a" stroke-width="1"/>
+        <path d="M 80 180 L 80 80 L 130 60 L 130 180" fill="#16a34a" opacity="0.5" stroke="#16a34a" stroke-width="1"/>
+        <text x="75" y="195" text-anchor="middle" font-size="9" fill="#334155" font-weight="bold">ANDENES</text>
+        <line x1="145" y1="40" x2="145" y2="180" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3,3"/>
+        <rect x="160" y="45" width="120" height="35" rx="5" fill="#2563eb" opacity="0.8"/>
+        <text x="220" y="60" text-anchor="middle" font-size="9" fill="white" font-weight="bold">CHUÑO</text>
+        <text x="220" y="72" text-anchor="middle" font-size="8" fill="#e0f2fe">Congelación al aire libre</text>
+        <rect x="160" y="90" width="120" height="35" rx="5" fill="#f59e0b" opacity="0.8"/>
+        <text x="220" y="105" text-anchor="middle" font-size="9" fill="white" font-weight="bold">WARU WARU</text>
+        <text x="220" y="117" text-anchor="middle" font-size="8" fill="#fef3c7">Campos + canales</text>
+        <rect x="160" y="135" width="120" height="35" rx="5" fill="#8b5cf6" opacity="0.8"/>
+        <text x="220" y="150" text-anchor="middle" font-size="9" fill="white" font-weight="bold">CAMELIDOS</text>
+        <text x="220" y="162" text-anchor="middle" font-size="8" fill="#ede9fe">Llamas y alpacas</text>
+        <text x="150" y="195" text-anchor="middle" font-size="8" fill="#16a34a">Más de 3,000 variedades de papa domesticadas</text>
+      </svg>`
+    ],
+    exercises: [
+      {
+        id: 7010,
+        question: "¿Qué es el chuño?",
+        options: [
+          "Un tipo de fertilizante natural andino",
+          "Papa deshidratada mediante ciclos de congelación al aire libre",
+          "Un canal de irrigación subterráneo",
+          "Una semilla ceremonial usada en rituales"
+        ],
+        correctIndex: 1,
+        explanation: "El chuño es papa deshidratada mediante ciclos alternos de congelación nocturna al aire libre y secado solar, permitiendo su conservación por años.",
+        difficulty: "basico"
+      },
+      {
+        id: 7011,
+        question: "¿Cómo funcionaba el sistema de waru waru para proteger los cultivos?",
+        options: [
+          "Usaban paredes de piedra para bloquear el viento",
+          "El calor acumulado en los canales protegía las plantas de heladas nocturnas",
+          "Sembraban solo en épocas de lluvia intensa",
+          "Usaban fuego continuo para calentar el suelo"
+        ],
+        correctIndex: 1,
+        explanation: "Los waru waru consistían en campos elevados rodeados de canales de agua que acumulaban calor durante el día y lo liberaban por la noche, protegiendo los cultivos del frío.",
+        difficulty: "intermedio"
+      },
+      {
+        id: 7012,
+        question: "¿Qué es la agricultura vertical en los Andes?",
+        options: [
+          "Cultivar en terrazas muy empinadas sin escaleras",
+          "Una comunidad controlando productos de distintas altitudes ecológicas",
+          "Usar semillas adaptadas solo a grandes alturas",
+          "Un sistema de riego por gravedad desde la cumbre"
+        ],
+        correctIndex: 1,
+        explanation: "La agricultura vertical permitía que una misma comunidad controlara recursos de distintas zonas altitudinales, desde la costa hasta la sierra alta, accediendo a productos diversos.",
+        difficulty: "avanzado"
+      }
+    ]
+  },
+  {
+    slug: "qhapaq-nan-caminos",
+    tip: "El Qhapaq Ñan tenía más de 30,000 km y conectaba desde Colombia hasta Chile, siendo una de las mayores obras de ingeniería de la antigüedad.",
+    theory: [
+      {
+        level: "basico",
+        title: "El camino incaico",
+        lines: [
+          "El Qhapaq Ñan era la red de caminos construida por el Imperio Inca que recorría todo el Tahuantinsuyo.",
+          "Su extensión total era de aproximadamente 30,000 kilómetros, desde Colombia hasta Chile.",
+          "El camino conectaba las principales ciudades, centros administrativos y zonas productivas del imperio.",
+          "Fue construido utilizando técnicas de ingeniería avanzada como puentes colgantes y túneles.",
+          "El Qhapaq Ñan permitía el desplazamiento rápido de ejércitos, mensajeros y caravanas de llamas.",
+          "Hoy está declarado Patrimonio Mundial de la Humanidad por la UNESCO desde 2014."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Tambos y chasquis",
+        lines: [
+          "Los tambos eran estaciones de descanso y aprovisionamiento distribuidas cada pocos kilómetros a lo largo del camino.",
+          "En los tambos se almacenaban alimentos, herramientas y suministros para viajeros y ejércitos.",
+          "Los chasquis eran mensajeros relé que transportaban información y objetos a gran velocidad por el camino.",
+          "Cada chasquis recorría tramos de aproximadamente 6 kilómetros, cambiando de corredor en cada tambo.",
+          "El sistema de chasquis permitía que un mensaje viajara más de 240 km en un solo día.",
+          "Los tambos más grandes funcionaban como centros administrativos y almacenes del estado."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Ingeniería y organización del camino",
+        lines: [
+          "Los caminos tenían anchos de 1 a 5 metros y estaban pavimentados con piedra en las zonas más importantes.",
+          "Se construyeron puentes colgantes de ichu y cuero sobre los ríos más caudalosos de los Andes.",
+          "El camino de la costa y el camino de la sierra eran las dos rutas principales del Qhapaq Ñan.",
+          "Los tzontes eran un sistema de cuerdas anudadas que servían para registrar información y transmitir datos.",
+          "La red incluía túneles excavados en roca y escaleras talladas en las laderas de las montañas.",
+          "La planificación del camino consideraba pendientes, drenaje de agua y estabilidad del terreno."
+        ]
+      }
+    ],
+    illustrations: [
+      `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+        <rect width="300" height="200" fill="#faf5ff"/>
+        <text x="150" y="20" text-anchor="middle" font-size="12" font-weight="bold" fill="#7c3aed">QHAPAQ ÑAN</text>
+        <text x="150" y="35" text-anchor="middle" font-size="9" fill="#334155">30,000 km de caminos incas</text>
+        <line x1="30" y1="70" x2="270" y2="70" stroke="#8b5cf6" stroke-width="3"/>
+        <circle cx="30" cy="70" r="6" fill="#dc2626"/>
+        <text x="30" y="92" text-anchor="middle" font-size="8" fill="#334155">Colombia</text>
+        <circle cx="90" cy="70" r="5" fill="#2563eb"/>
+        <text x="90" y="92" text-anchor="middle" font-size="8" fill="#334155">Quito</text>
+        <circle cx="150" cy="70" r="7" fill="#16a34a"/>
+        <text x="150" y="92" text-anchor="middle" font-size="8" fill="#334155" font-weight="bold">Cusco</text>
+        <circle cx="210" cy="70" r="5" fill="#f59e0b"/>
+        <text x="210" y="92" text-anchor="middle" font-size="8" fill="#334155">La Paz</text>
+        <circle cx="270" cy="70" r="6" fill="#dc2626"/>
+        <text x="270" y="92" text-anchor="middle" font-size="8" fill="#334155">Chile</text>
+        <rect x="30" y="108" width="240" height="78" rx="6" fill="#f1f5f9"/>
+        <text x="150" y="125" text-anchor="middle" font-size="10" fill="#334155" font-weight="bold">Componentes del sistema</text>
+        <rect x="45" y="133" width="60" height="42" rx="4" fill="#2563eb" opacity="0.15"/>
+        <text x="75" y="149" text-anchor="middle" font-size="8" fill="#2563eb" font-weight="bold">TAMBOS</text>
+        <text x="75" y="162" text-anchor="middle" font-size="7" fill="#475569">Almacenes</text>
+        <text x="75" y="172" text-anchor="middle" font-size="7" fill="#475569">Cada pocos km</text>
+        <rect x="120" y="133" width="60" height="42" rx="4" fill="#16a34a" opacity="0.15"/>
+        <text x="150" y="149" text-anchor="middle" font-size="8" fill="#16a34a" font-weight="bold">CHASQUIS</text>
+        <text x="150" y="162" text-anchor="middle" font-size="7" fill="#475569">Mensajeros</text>
+        <text x="150" y="172" text-anchor="middle" font-size="7" fill="#475569">240km/día</text>
+        <rect x="195" y="133" width="60" height="42" rx="4" fill="#f59e0b" opacity="0.15"/>
+        <text x="225" y="149" text-anchor="middle" font-size="8" fill="#f59e0b" font-weight="bold">PUENTES</text>
+        <text x="225" y="162" text-anchor="middle" font-size="7" fill="#475569">Colgantes</text>
+        <text x="225" y="172" text-anchor="middle" font-size="7" fill="#475569">Ichu y cuero</text>
+      </svg>`
+    ],
+    exercises: [
+      {
+        id: 7013,
+        question: "¿Cuál era la extensión aproximada del Qhapaq Ñan?",
+        options: ["5,000 km", "15,000 km", "30,000 km", "50,000 km"],
+        correctIndex: 2,
+        explanation: "El Qhapaq Ñan tenía una extensión de aproximadamente 30,000 kilómetros, conectando territorios desde Colombia hasta Chile.",
+        difficulty: "basico"
+      },
+      {
+        id: 7014,
+        question: "¿Qué función cumplían los chasquis en el sistema incaico?",
+        options: [
+          "Transportar grandes cargas de comercio",
+          "Servir como guías turísticos para viajeros",
+          "Relé de mensajeros que transmitían información rápidamente",
+          "Vigilar los caminos para evitar invasiones"
+        ],
+        correctIndex: 2,
+        explanation: "Los chasquis eran corredores relé que transportaban mensajes y objetos pequeños, cambiando de corredor en cada tambo, logrando cubrir más de 240 km por día.",
+        difficulty: "intermedio"
+      },
+      {
+        id: 7015,
+        question: "¿Qué eran los tzontes en el contexto de la red vial inca?",
+        options: [
+          "Marcadores de piedra que indicaban distancias",
+          "Sistema de cuerdas anudadas para registrar información",
+          "Túneles excavados en la roca para cruzar montañas",
+          "Puentes colgantes especialmente resistentes"
+        ],
+        correctIndex: 1,
+        explanation: "Los tzontes eran un sistema de cuerdas con nudos especiales que servían para registrar y transmitir información numérica y datos administrativos.",
+        difficulty: "avanzado"
+      }
+    ]
+  },
+  {
+    slug: "economia-incaica",
+    tip: "La economía inca no tenía mercados ni dinero: todo era administrado por el Estado bajo el principio de reciprocidad y redistribución.",
+    theory: [
+      {
+        level: "basico",
+        title: "Principios de la economía inca",
+        lines: [
+          "La economía inca se basaba en la propiedad colectiva de la tierra y los recursos.",
+          "No existían mercados ni dinero; el Estado controlaba toda la producción y distribución.",
+          "El principio de reciprocidad guiaba las relaciones económicas entre personas y comunidades.",
+          "La mit'a era un sistema de trabajo obligatorio que cada familia debía al Estado.",
+          "A cambio de la mit'a, el Estado proporcionaba protección, alimentos y servicios a la población.",
+          "Este sistema permitió grandes obras públicas como caminos, terrazas y templos."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Almacenamiento y redistribución",
+        lines: [
+          "Los qollqa eran almacenes estatales distribuidos por todo el imperio para guardar excedentes.",
+          "En los qollqa se almacenaban alimentos, textiles, armas y herramientas para uso futuro.",
+          "El sistema de redistribución significaba que el Estado repartía los alimentos en tiempos de escasez.",
+          "Las terrazas agrícolas del Estado producían grandes cantidades de alimentos para los almacenes.",
+          "Las acllas o escogidas trabajaban para el Estado produciendo chicha, alimentos y textiles.",
+          "Los campos del sol y del Inca eran tierras dedicadas al mantenimiento de sacerdotes y al Estado."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Organización económica y desafíos",
+        lines: [
+          "El sistema de mit'a establecía que cada familia contribuyera con trabajo según su capacidad.",
+          "La producción era planificada centralmente según las necesidades del imperio y sus poblaciones.",
+          "Las comunidades ayllu mantenían tierras comunales que eran distribuidas periódicamente entre sus miembros.",
+          "Los excedentes se destinaban al ejército, a las ceremonias religiosas y a los funcionarios estatales.",
+          "El control estatal total sobre la economía era una fortaleza organizativa pero también una vulnerabilidad.",
+          "Cuando los españoles llegaron, la destrucción del sistema inca provocó una crisis humanitaria generalizada."
+        ]
+      }
+    ],
+    illustrations: [
+      `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+        <rect width="300" height="200" fill="#fef2f2"/>
+        <text x="150" y="22" text-anchor="middle" font-size="12" font-weight="bold" fill="#dc2626">ECONOMÍA INCAICA</text>
+        <rect x="100" y="35" width="100" height="40" rx="6" fill="#dc2626" opacity="0.9"/>
+        <text x="150" y="52" text-anchor="middle" font-size="10" fill="white" font-weight="bold">ESTADO INCA</text>
+        <text x="150" y="66" text-anchor="middle" font-size="8" fill="#fee2e2">Control total</text>
+        <line x1="150" y1="75" x2="70" y2="100" stroke="#dc2626" stroke-width="2"/>
+        <line x1="150" y1="75" x2="230" y2="100" stroke="#dc2626" stroke-width="2"/>
+        <line x1="150" y1="75" x2="150" y2="100" stroke="#dc2626" stroke-width="2"/>
+        <rect x="30" y="100" width="80" height="35" rx="5" fill="#2563eb" opacity="0.8"/>
+        <text x="70" y="115" text-anchor="middle" font-size="8" fill="white" font-weight="bold">MIT'A</text>
+        <text x="70" y="126" text-anchor="middle" font-size="7" fill="#e0f2fe">Trabajo obligatorio</text>
+        <rect x="115" y="100" width="70" height="35" rx="5" fill="#16a34a" opacity="0.8"/>
+        <text x="150" y="115" text-anchor="middle" font-size="8" fill="white" font-weight="bold">QOLLQA</text>
+        <text x="150" y="126" text-anchor="middle" font-size="7" fill="#dcfce7">Almacenes</text>
+        <rect x="190" y="100" width="80" height="35" rx="5" fill="#f59e0b" opacity="0.8"/>
+        <text x="230" y="115" text-anchor="middle" font-size="8" fill="white" font-weight="bold">REDISTRIBUCIÓN</text>
+        <text x="230" y="126" text-anchor="middle" font-size="7" fill="#fef3c7">Reparto estatal</text>
+        <rect x="15" y="145" width="270" height="45" rx="6" fill="#f1f5f9"/>
+        <text x="150" y="162" text-anchor="middle" font-size="9" fill="#dc2626" font-weight="bold">NO EXISTÍAN:</text>
+        <text x="150" y="178" text-anchor="middle" font-size="9" fill="#475569">Mercados · Dinero · Comercio privado</text>
+      </svg>`
+    ],
+    exercises: [
+      {
+        id: 7016,
+        question: "¿Qué era la mit'a en el sistema económico inca?",
+        options: [
+          "Un impuesto pagado en oro",
+          "Un sistema de trabajo obligatorio al servicio del Estado",
+          "Un mercado donde se intercambiaban productos",
+          "Una celebración religiosa anual"
+        ],
+        correctIndex: 1,
+        explanation: "La mit'a era un sistema de trabajo colectivo obligatorio que cada familia debía prestar al Estado a cambio de protección y beneficios.",
+        difficulty: "basico"
+      },
+      {
+        id: 7017,
+        question: "¿Qué función cumplían los qollqa en la economía incaica?",
+        options: [
+          "Eran mercados donde se vendían productos",
+          "Eran almacenes estatales que guardaban excedentes para distribuirlos",
+          "Eran templos dedicados a los dioses de la cosecha",
+          "Eran escuelas donde se enseñaban técnicas agrícolas"
+        ],
+        correctIndex: 1,
+        explanation: "Los qollqa eran almacenes estatales distribuidos por todo el imperio donde se guardaban alimentos, textiles y herramientas para distribuirlos según las necesidades.",
+        difficulty: "intermedio"
+      },
+      {
+        id: 7018,
+        question: "¿Por qué la ausencia de mercados y dinero en el sistema inca fue una vulnerabilidad?",
+        options: [
+          "Porque los comerciantes extranjeros no podían participar",
+          "Porque la destrucción del sistema estatal provocó crisis humanitaria al llegar los españoles",
+          "Porque impedía el desarrollo de la agricultura",
+          "Porque limitaba el número de funcionarios del Estado"
+        ],
+        correctIndex: 1,
+        explanation: "Al no existir mercados ni dinero, la población dependía enteramente del sistema estatal; cuando los españoles lo destruyeron, no había mecanismos alternativos de subsistencia.",
+        difficulty: "avanzado"
+      }
+    ]
+  },
+  {
+    slug: "guerra-civil-atahualpa",
+    tip: "La guerra civil entre Huáscar y Atahualpa debilitó al Tahuantinsuyo justo antes de la llegada de los españoles, facilitando la conquista.",
+    theory: [
+      {
+        level: "basico",
+        title: "La sucesión incaica",
+        lines: [
+          "Tras la muerte de Huayna Capac en 1527, se desató una guerra civil por la sucesión al trono inca.",
+          "Huáscar, hijo legítimo, se enfrentó a su medio hermano Atahualpa, hijo de una princesa quiteña.",
+          "La guerra se desarrolló entre 1529 y 1532, enfrentando a dos ejércitos enormes del Tahuantinsuyo.",
+          "Atahualpa finalmente derrotó a Huáscar y tomó el control del imperio en 1532.",
+          "La guerra civil causó la muerte de cientos de miles de personas y debilitó profundamente al imperio.",
+          "Este debilitamiento permitió que Francisco Pizarro y sus hombres conquistaran el imperio con facilidad."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "La batalla de Quipaipán y sus consecuencias",
+        lines: [
+          "La batalla decisiva tuvo lugar en Quipaipán, cerca del Cusco, donde Atahualpa derrotó a Huáscar.",
+          "Tras su victoria, Atahualpa ordenó ejecutar a Huáscar y a gran parte de la nobleza cusqueña.",
+          "La crueldad de Atahualpa incluyó masacres de prisioneros y la eliminación sistemática de rivales.",
+          "El imperio quedó dividido: Atahualpa controlaba el norte y Huáscar el sur antes de su captura.",
+          "La población estaba profundamente dividida y resentida por los excesos de la guerra civil.",
+          "Muchos pueblos sometidos por los incas vieron la guerra como una oportunidad para rebelarse."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Impacto en la conquista española",
+        lines: [
+          "La guerra civil dejó al imperio sin un ejército unificado capaz de resistir la invasión española.",
+          "Muchos pueblos conquistados por los incas apoyaron a los españoles como venganza por su opresión.",
+          "El ceremonial de captura de Atahualpa en Cajamarca se facilitó por la desorganización del imperio.",
+          "Las élites incas estaban tan divididas que algunos colaboraron activamente con los conquistadores.",
+          "La distribución desigual del poder tras la guerra creó resentimientos que Pizarro explotó hábilmente.",
+          "Sin la guerra civil, el Tahuantinsuyo habría tenido más posibilidades de resistir la conquista."
+        ]
+      }
+    ],
+    illustrations: [
+      `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+        <rect width="300" height="200" fill="#fef2f2"/>
+        <text x="150" y="22" text-anchor="middle" font-size="12" font-weight="bold" fill="#991b1b">GUERRA CIVIL INCA</text>
+        <text x="150" y="36" text-anchor="middle" font-size="9" fill="#334155">Huáscar vs Atahualpa (1529-1532)</text>
+        <rect x="20" y="50" width="110" height="55" rx="6" fill="#2563eb" opacity="0.8"/>
+        <text x="75" y="70" text-anchor="middle" font-size="11" fill="white" font-weight="bold">HUÁSCAR</text>
+        <text x="75" y="85" text-anchor="middle" font-size="8" fill="#e0f2fe">Hijo legítimo</text>
+        <text x="75" y="96" text-anchor="middle" font-size="8" fill="#e0f2fe">Cusco / Sur</text>
+        <rect x="170" y="50" width="110" height="55" rx="6" fill="#dc2626" opacity="0.8"/>
+        <text x="225" y="70" text-anchor="middle" font-size="11" fill="white" font-weight="bold">ATAHUALPA</text>
+        <text x="225" y="85" text-anchor="middle" font-size="8" fill="#fee2e2">Hijo Quiteño</text>
+        <text x="225" y="96" text-anchor="middle" font-size="8" fill="#fee2e2">Norte / Quito</text>
+        <line x1="130" y1="77" x2="170" y2="77" stroke="#f59e0b" stroke-width="3"/>
+        <text x="150" y="74" text-anchor="middle" font-size="10" fill="#f59e0b">VS</text>
+        <rect x="100" y="115" width="100" height="25" rx="4" fill="#f59e0b"/>
+        <text x="150" y="132" text-anchor="middle" font-size="9" fill="white" font-weight="bold">QUIPAIPÁN 1532</text>
+        <line x1="150" y1="140" x2="150" y2="150" stroke="#dc2626" stroke-width="2"/>
+        <polygon points="145,148 155,148 150,155" fill="#dc2626"/>
+        <rect x="40" y="155" width="220" height="35" rx="5" fill="#f1f5f9"/>
+        <text x="150" y="170" text-anchor="middle" font-size="9" fill="#dc2626" font-weight="bold">Consecuencias:</text>
+        <text x="150" y="183" text-anchor="middle" font-size="8" fill="#475569">Imperio debilitado → Facilitó la conquista española</text>
+      </svg>`
+    ],
+    exercises: [
+      {
+        id: 7019,
+        question: "¿Cuándo se libró la guerra civil entre Huáscar y Atahualpa?",
+        options: ["1490-1500", "1510-1520", "1529-1532", "1540-1545"],
+        correctIndex: 2,
+        explanation: "La guerra civil inca se desarrolló entre 1529 y 1532, apenas unos años antes de la llegada de Francisco Pizarro al imperio.",
+        difficulty: "basico"
+      },
+      {
+        id: 7020,
+        question: "¿En qué batalla decisiva Huáscar fue derrotado definitivamente por Atahualpa?",
+        options: [
+          "Batalla de Cajamarca",
+          "Batalla de Quipaipán",
+          "Batalla de Yahuarpampa",
+          "Batalla de Ollantaytambo"
+        ],
+        correctIndex: 1,
+        explanation: "La batalla de Quipaipán, cerca del Cusco en 1532, fue la batalla decisiva donde Atahualpa derrotó finalmente a Huáscar y tomó el control del imperio.",
+        difficulty: "intermedio"
+      },
+      {
+        id: 7021,
+        question: "¿Por qué la guerra civil facilitó la conquista española del Tahuantinsuyo?",
+        options: [
+          "Porque los españoles tenían mejor tecnología militar",
+          "Porque el imperio quedó sin ejército unificado y la población estaba dividida",
+          "Porque los incas no conocían a los europeos",
+          "Porque la guerra eliminó a todos los guerreros incas"
+        ],
+        correctIndex: 1,
+        explanation: "La guerra civil dejó al imperio fragmentado, sin un ejército centralizado, y creó resentimientos que hicieron que muchos pueblos sometidos apoyaran a los españoles.",
+        difficulty: "avanzado"
+      }
+    ]
+  },
+  {
+    slug: "resistencia-manco-inca",
+    tip: "Manco Inca lideró la resistencia inca contra los españoles y fundó el Estado neoinca de Vilcabamba, que resistió hasta 1572.",
+    theory: [
+      {
+        level: "basico",
+        title: "La rebelión de Manco Inca",
+        lines: [
+          "Manco Inca fue nombrado Inca por los españoles tras la captura de Atahualpa en 1533.",
+          "Inicialmente colaboró con los españoles, pero pronto se dio cuenta de sus verdaderas intenciones.",
+          "En 1536, Manco Inca lideró una gran rebelión contra los españoles desde el Cusco.",
+          "Miles de guerreros incas se unieron a la rebelión y sitieron la ciudad del Cusco durante meses.",
+          "Aunque no logró recuperar el Cusco, Manco estableció un gobierno independiente en Vilcabamba.",
+          "La resistencia inca continuó desde Vilcabamba por casi 40 años más."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "El Estado neoinca de Vilcabamba",
+        lines: [
+          "Vilcabamba se convirtió en la capital del último estado inca independiente del dominio español.",
+          "Manco Inca estableció allí un gobierno con sus propios funcionarios, sacerdotes y ejército.",
+          "Los españoles organizaron varias expediciones para capturar a Manco, pero todas fracasaron.",
+          "Tras la muerte de Manco en 1544, sus sucesores Sayri Túpac, Titu Cusi y Túpac Amaru continuaron.",
+          "El Estado neoinca mantuvo relaciones diplomáticas con los españoles mientras resistía militarmente.",
+          "Los españoles finally conquistaron Vilcabamba en 1572, capturando al último inca, Túpac Amaru."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Legado de la resistencia inca",
+        lines: [
+          "La resistencia de Vilcabamba demostró que los incas no fueron simplemente 'conquistados' sin luchar.",
+          "Manco Inca logró reunir un ejército de más de 100,000 guerreros para su rebelión de 1536.",
+          "La caída del Cusco ante Manco obligó a Pizarro a enviar refuerzos desde España.",
+          "Laexecuteión de Túpac Amaru en 1572 marcó el fin simbólico del Imperio Inca.",
+          "El legado de la resistencia inspiró movimientos indígenas posteriores, incluyendo la rebelión de 1780.",
+          "Vilcabamba fue redescubierta en 1911 por Hiram Bingham, confirmando las crónicas históricas."
+        ]
+      }
+    ],
+    illustrations: [
+      `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+        <rect width="300" height="200" fill="#f5f3ff"/>
+        <text x="150" y="22" text-anchor="middle" font-size="12" font-weight="bold" fill="#7c3aed">RESISTENCIA INCA</text>
+        <text x="150" y="36" text-anchor="middle" font-size="9" fill="#334155">Manco Inca y Vilcabamba</text>
+        <rect x="30" y="50" width="80" height="45" rx="6" fill="#dc2626" opacity="0.8"/>
+        <text x="70" y="68" text-anchor="middle" font-size="9" fill="white" font-weight="bold">1533</text>
+        <text x="70" y="82" text-anchor="middle" font-size="7" fill="#fee2e2">Manco nombrado</text>
+        <text x="70" y="90" text-anchor="middle" font-size="7" fill="#fee2e2">Inca por Pizarro</text>
+        <line x1="110" y1="72" x2="130" y2="72" stroke="#f59e0b" stroke-width="2"/>
+        <polygon points="125,67 135,72 125,77" fill="#f59e0b"/>
+        <rect x="130" y="50" width="80" height="45" rx="6" fill="#dc2626" opacity="0.8"/>
+        <text x="170" y="68" text-anchor="middle" font-size="9" fill="white" font-weight="bold">1536</text>
+        <text x="170" y="82" text-anchor="middle" font-size="7" fill="#fee2e2">Gran rebelión</text>
+        <text x="170" y="90" text-anchor="middle" font-size="7" fill="#fee2e2">Sitio del Cusco</text>
+        <line x1="210" y1="72" x2="230" y2="72" stroke="#f59e0b" stroke-width="2"/>
+        <polygon points="225,67 235,72 225,77" fill="#f59e0b"/>
+        <rect x="230" y="50" width="55" height="45" rx="6" fill="#16a34a" opacity="0.8"/>
+        <text x="257" y="68" text-anchor="middle" font-size="9" fill="white" font-weight="bold">VILCA</text>
+        <text x="257" y="78" text-anchor="middle" font-size="9" fill="white" font-weight="bold">BAMBA</text>
+        <text x="257" y="90" text-anchor="middle" font-size="7" fill="#dcfce7">Estado Inca</text>
+        <rect x="25" y="110" width="250" height="80" rx="6" fill="#f1f5f9"/>
+        <text x="150" y="128" text-anchor="middle" font-size="10" fill="#7c3aed" font-weight="bold">GOBERNANTES DE VILCABAMBA</text>
+        <text x="70" y="148" text-anchor="middle" font-size="8" fill="#334155" font-weight="bold">Manco Inca</text>
+        <text x="70" y="160" text-anchor="middle" font-size="7" fill="#475569">1536-1544</text>
+        <text x="150" y="148" text-anchor="middle" font-size="8" fill="#334155" font-weight="bold">Sayri Túpac</text>
+        <text x="150" y="160" text-anchor="middle" font-size="7" fill="#475569">1545-1557</text>
+        <text x="230" y="148" text-anchor="middle" font-size="8" fill="#334155" font-weight="bold">Titu Cusi</text>
+        <text x="230" y="160" text-anchor="middle" font-size="7" fill="#475569">1557-1571</text>
+        <text x="150" y="180" text-anchor="middle" font-size="9" fill="#dc2626" font-weight="bold">Túpac Amaru → Capturado y ejecutado 1572</text>
+      </svg>`
+    ],
+    exercises: [
+      {
+        id: 7022,
+        question: "¿En qué año Manco Inca lideró la gran rebelión contra los españoles?",
+        options: ["1533", "1536", "1540", "1545"],
+        correctIndex: 1,
+        explanation: "Manco Inca inició su gran rebelión contra los españoles en 1536, logrando reunir un ejército de más de 100,000 guerreros.",
+        difficulty: "basico"
+      },
+      {
+        id: 7023,
+        question: "¿En qué ciudad se estableció el Estado neoinca independiente?",
+        options: ["Cusco", "Machu Picchu", "Vilcabamba", "Ollantaytambo"],
+        correctIndex: 2,
+        explanation: "Vilcabamba se convirtió en la capital del último estado inca independiente, desde donde resistieron los sucesores de Manco Inca.",
+        difficulty: "intermedio"
+      },
+      {
+        id: 7024,
+        question: "¿Qué evento marcó el fin definitivo del Imperio Inca?",
+        options: [
+          "La captura de Atahualpa en 1533",
+          "La rebelión de Manco Inca en 1536",
+          "La captura y ejecución de Túpac Amaru en 1572",
+          "La caída del Cusco en 1534"
+        ],
+        correctIndex: 2,
+        explanation: "Túpac Amaru, el último inca de Vilcabamba, fue capturado y ejecutado por los españoles en 1572, marcando el fin oficial del Imperio Inca.",
+        difficulty: "avanzado"
+      }
+    ]
+  },
+{
+    slug: "batalla-cajamarca",
+    tip: "La captura de Atahualpa en 1532 fue el momento decisivo que permitio la conquista espanola del Imperio Inca.",
+    theory: [
+      {
+        level: "basico",
+        title: "La Batalla de Cajamarca",
+        lines: [
+          "En noviembre de 1532, Francisco Pizarro llego a Cajamarca con 168 soldados espanoles.",
+          "Atahualpa estaba en Cajamarca tras vencer a Huascar en la guerra civil incaica.",
+          "Los espanoles tendieron una emboscada en la plaza de Cajamarca al atardecer.",
+          "Atahualpa llego sin escolta armada, confiando en su superioridad numerica.",
+          "Los espanoles atacaron por sorpresa, causando una masacre entre la escolta incaica.",
+          "El emperador Atahualpa fue capturado vivo por los espanoles esa noche."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "El Rescate y la Prision de Atahualpa",
+        lines: [
+          "Atahualpa ofrecio una habitacion llena de oro y dos de plata como rescate.",
+          "Los espanoles aceptaron y comenzaron a recolectar el tesoro desde todo el imperio.",
+          "La habitacion del rescate media aproximadamente 7 metros de largo por 5 de ancho.",
+          "Se reunieron 13.420 piezas de oro y 26.000 marcos de plata antes de ser llenada.",
+          "Pizarro recibio un gigantesco botin que lo convirtio en uno de los hombres mas ricos del mundo.",
+          "A pesar del pago, los espanoles no liberaron a Atahualpa y lo mantuvieron prisionero."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Juicio y Ejecucion de Atahualpa",
+        lines: [
+          "Los espanoles sometieron a Atahualpa a un juicio encabezado por el capitan Riquelme.",
+          "Se le acuso de idolatria, fratricidio de Huascar y conspiracion contra los espanoles.",
+          "El religioso Vicente de Valverde participo activamente en el proceso judicial.",
+          "Atahualpa fue condenado a muerte por la Inquisicion secular espanola.",
+          "Se ofrecio bautizarse a cambio de ser ejecutado por garrote en lugar de la hoguera.",
+          "Fue ejecutado el 26 de julio de 1533 en la plaza de Cajamarca a los 31 anios."
+        ]
+      }
+    ],
+    illustrations: [
+      `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+        <rect width="300" height="200" fill="#f8fafc"/>
+        <rect x="10" y="10" width="280" height="35" rx="4" fill="#dc2626"/>
+        <text x="150" y="33" text-anchor="middle" font-size="14" font-weight="bold" fill="white">Batalla de Cajamarca - 1532</text>
+        <rect x="20" y="60" width="110" height="55" rx="6" fill="#2563eb"/>
+        <text x="75" y="82" text-anchor="middle" font-size="11" font-weight="bold" fill="white">Pizarro</text>
+        <text x="75" y="98" text-anchor="middle" font-size="9" fill="#bfdbfe">168 soldados</text>
+        <rect x="170" y="60" width="110" height="55" rx="6" fill="#16a34a"/>
+        <text x="225" y="82" text-anchor="middle" font-size="11" font-weight="bold" fill="white">Atahualpa</text>
+        <text x="225" y="98" text-anchor="middle" font-size="9" fill="#bbf7d0">Ejercito inca</text>
+        <line x1="130" y1="87" x2="170" y2="87" stroke="#dc2626" stroke-width="3"/>
+        <text x="150" y="82" text-anchor="middle" font-size="8" font-weight="bold" fill="#dc2626">>>></text>
+        <rect x="20" y="130" width="260" height="55" rx="6" fill="#f59e0b"/>
+        <text x="150" y="150" text-anchor="middle" font-size="10" font-weight="bold" fill="#78350f">Habitacion del Rescate</text>
+        <text x="150" y="165" text-anchor="middle" font-size="9" fill="#92400e">13,420 piezas de oro | 26,000 marcos de plata</text>
+        <text x="150" y="178" text-anchor="middle" font-size="9" fill="#92400e">Ejecucion de Atahualpa: 26 julio 1533</text>
+      </svg>`
+    ],
+    exercises: [
+      {
+        id: 7025,
+        question: "En que ano ocurrio la Batalla de Cajamarca?",
+        options: ["1521", "1532", "1542", "1572"],
+        correctIndex: 1,
+        explanation: "La Batalla de Cajamarca ocurrio el 16 de noviembre de 1532, cuando Pizarro embosco y capture a Atahualpa.",
+        difficulty: "basico"
+      },
+      {
+        id: 7026,
+        question: "Que ofrecio Atahualpa a los espanoles a cambio de su libertad?",
+        options: ["Un ejercito de guerreros", "Una habitacion llena de oro y dos de plata", "Las tierras del Tahuantinsuyo", "La conversion de todos sus súbditos"],
+        correctIndex: 1,
+        explanation: "Atahualpa ofrecio llenar una habitacion de oro y dos de plata como rescate, un botin sin precedentes en la historia.",
+        difficulty: "basico"
+      },
+      {
+        id: 7027,
+        question: "Como fue ejecutado Atahualpa?",
+        options: ["Flechado por arqueros", "Decapitado con espada", "Por garrote tras bautizarse", "Envenenado por los espanoles"],
+        correctIndex: 2,
+        explanation: "Atahualpa se bautizo para evitar la hoguera y fue ejecutado por garrote el 26 de julio de 1533.",
+        difficulty: "intermedio"
+      }
+    ]
+  },
+  {
+    slug: "guerras-civiles-incas",
+    tip: "Las guerras civiles entre conquistadores debilitaron el control espanol y permitieron resistencias indigenas.",
+    theory: [
+      {
+        level: "basico",
+        title: "Conflictos entre Conquistadores",
+        lines: [
+          "Tras la conquista del Peru, los espanoles se enfrentaron entre si por el control del territorio.",
+          "Diego de Almagro reclamo el Cusco y entro en conflicto con Francisco Pizarro.",
+          "La Batalla de las Salinas en 1538 enfrento a los dos conquistadores.",
+          "Almagro fue derrotado y ejecutado por orden de Pizarro en el Cusco.",
+          "Hermanos y aliados de Almagro buscaron venganza contra Pizarro.",
+          "En 1541, Almagro el Mozo asesino a Pizarro en su palacio de Lima."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "La Rebelion de Gonzalo Pizarro",
+        lines: [
+          "Gonzalo Pizarro, hermano de Francisco, se sublevo contra la Corona espanola en 1544.",
+          "Se declaro gobernador del Peru y controlo Lima y las principales ciudades.",
+          "La rebelion surgió como respuesta a las Nuevas Leyes de 1542.",
+          "Gonzalo Pizarro busco el apoyo de los encomenderos que se oponian a las reformas.",
+          "La revuelta genero inestabilidad politica durante tres anos en todo el Peru.",
+          "Gonzalo fue finalmente capturado y ejecutado en la plaza de Cusco en 1548."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "La Pacificacion de La Gasca",
+        lines: [
+          "Pedro de La Gasca llego al Peru en 1546 como presidente de la Real Audiencia de Lima.",
+          "Se le encomendo pacificar el territorio y restaurar la autoridad de la Corona.",
+          "La Gasca uso diplomacia y promesas de amnistia para ganar aliados contra Gonzalo Pizarro.",
+          "Otorgo la Bula de la Cruzada y prometio perdon a los sublevados.",
+          "En la Batalla de Jaquijahuana en 1548, derroto definitivamente a Gonzalo Pizarro.",
+          "Su gobierno establecio un periodo de estabilidad y reformas administrativas en el Peru."
+        ]
+      }
+    ],
+    illustrations: [
+      `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+        <rect width="300" height="200" fill="#f8fafc"/>
+        <rect x="10" y="10" width="280" height="35" rx="4" fill="#8b5cf6"/>
+        <text x="150" y="33" text-anchor="middle" font-size="13" font-weight="bold" fill="white">Guerras Civiles de los Conquistadores</text>
+        <rect x="20" y="55" width="80" height="50" rx="5" fill="#2563eb"/>
+        <text x="60" y="75" text-anchor="middle" font-size="9" font-weight="bold" fill="white">Pizarro</text>
+        <text x="60" y="90" text-anchor="middle" font-size="8" fill="#bfdbfe">Gobierno</text>
+        <rect x="110" y="55" width="80" height="50" rx="5" fill="#dc2626"/>
+        <text x="150" y="75" text-anchor="middle" font-size="9" font-weight="bold" fill="white">Almagro</text>
+        <text x="150" y="90" text-anchor="middle" font-size="8" fill="#fecaca">Oposicion</text>
+        <rect x="200" y="55" width="80" height="50" rx="5" fill="#f59e0b"/>
+        <text x="240" y="75" text-anchor="middle" font-size="9" font-weight="bold" fill="white">La Gasca</text>
+        <text x="240" y="90" text-anchor="middle" font-size="8" fill="#fef3c7">Pacificador</text>
+        <line x1="100" y1="80" x2="110" y2="80" stroke="#dc2626" stroke-width="2"/>
+        <text x="105" y="73" text-anchor="middle" font-size="7" fill="#dc2626">vs</text>
+        <line x1="190" y1="80" x2="200" y2="80" stroke="#16a34a" stroke-width="2"/>
+        <text x="195" y="73" text-anchor="middle" font-size="7" fill="#16a34a">>>></text>
+        <rect x="20" y="120" width="260" height="65" rx="5" fill="#e0e7ff"/>
+        <text x="150" y="138" text-anchor="middle" font-size="9" font-weight="bold" fill="#3730a3">Cronologia de Conflictos</text>
+        <text x="150" y="153" text-anchor="middle" font-size="8" fill="#4338ca">1538 Batalla Salinas | 1541 Asesinato Pizarro</text>
+        <text x="150" y="168" text-anchor="middle" font-size="8" fill="#4338ca">1544 Rebelion Gonzalo | 1548 Jaquijahuana</text>
+        <text x="150" y="180" text-anchor="middle" font-size="8" fill="#4338ca">Pacificacion por La Gasca</text>
+      </svg>`
+    ],
+    exercises: [
+      {
+        id: 7028,
+        question: "En que batalla fue derrotado Diego de Almagro?",
+        options: ["Batalla de Cajamarca", "Batalla de las Salinas", "Batalla de Jaquijahuana", "Batalla de Chupas"],
+        correctIndex: 1,
+        explanation: "La Batalla de las Salinas (1538) enfrento a Pizarro contra Almagro por el control del Cusco.",
+        difficulty: "basico"
+      },
+      {
+        id: 7029,
+        question: "Contra que disposicion real se rebelo Gonzalo Pizarro en 1544?",
+        options: ["Las Leyes de Burgos", "Las Nuevas Leyes de 1542", "El Reglamento de Libre Comercio", "Las Reformas Borbonicas"],
+        correctIndex: 1,
+        explanation: "Las Nuevas Leyes de 1542 buscaban reducir el poder de los encomenderos, lo que provoco la rebelion de Gonzalo Pizarro.",
+        difficulty: "intermedio"
+      },
+      {
+        id: 7030,
+        question: "Quien pacifico el Peru tras la rebelion de Gonzalo Pizarro?",
+        options: ["Francisco Pizarro", "Diego de Almagro", "Pedro de La Gasca", "Blasco Nunez Vela"],
+        correctIndex: 2,
+        explanation: "Pedro de La Gasca llego como presidente de la Real Audiencia y uso estrategias diplomaticas para derrotar a Gonzalo Pizarro en 1548.",
+        difficulty: "basico"
+      }
+    ]
+  },
+  {
+    slug: "virreinato-temprano",
+    tip: "El Virreinato del Peru se creo en 1542 y Lima fue designada como su capital y centro administrativo.",
+    theory: [
+      {
+        level: "basico",
+        title: "Creacion del Virreinato",
+        lines: [
+          "El Virreinato del Peru fue creado por Real Decreto del 20 de noviembre de 1542.",
+          "Se establecio para governar los territorios espanoles en America del Sur.",
+          "Lima fue designada como la capital del virreinato por su ubicacion costera.",
+          "El primer virrey fue Blasco Nunez Vela, quien llego al Peru en 1544.",
+          "La Real Audiencia de Lima funciono como tribunal de justicia y gobierno.",
+          "El virrey representaba directamente al rey de España en los territorios americanos."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Sistema Administrativo Temprano",
+        lines: [
+          "El sistema de repartimiento distribuia indigenas entre los colonos españoles para trabajo.",
+          "La mita minera obligaba a los indigenas a trabajar en las minas de plata por turnos.",
+          "Las encomiendas otorgaban el derecho a recibir tributo de comunidades indigenas.",
+          "Los corregidores de indios administraban las provincias y recaudaban impuestos.",
+          "El Cabildo de Lima funciono como municipio colonial con autoridades electas.",
+          "La Iglesia catolica tenia un papel fundamental en la administracion colonial."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Consolidacion del Poder Virreinal",
+        lines: [
+          "El virrey Antonio de Mendoza (1551-1552) impulso la estabilidad administrativa del virreinato.",
+          "La Universidad de San Marcos se fundo en 1551 como la primera del Peru.",
+          "Los tributos indigenas financiaron la construccion de iglesias y edificios coloniales.",
+          "El sistema de cargos publicos se distribuyo entre la aristocracia criolla.",
+          "Las tensiones entre virreyes y oidores de la Real Audiencia generarion conflictos de poder.",
+          "La centralizacion en Lima genero rivalidades con ciudades como Cusco y Arequipa."
+        ]
+      }
+    ],
+    illustrations: [
+      `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+        <rect width="300" height="200" fill="#f8fafc"/>
+        <rect x="10" y="10" width="280" height="35" rx="4" fill="#2563eb"/>
+        <text x="150" y="33" text-anchor="middle" font-size="13" font-weight="bold" fill="white">Virreinato del Peru - Estructura Temprana</text>
+        <rect x="115" y="55" width="70" height="35" rx="5" fill="#dc2626"/>
+        <text x="150" y="77" text-anchor="middle" font-size="9" font-weight="bold" fill="white">REY</text>
+        <line x1="150" y1="90" x2="150" y2="105" stroke="#6b7280" stroke-width="2"/>
+        <rect x="110" y="105" width="80" height="35" rx="5" fill="#8b5cf6"/>
+        <text x="150" y="127" text-anchor="middle" font-size="8" font-weight="bold" fill="white">VIRREY</text>
+        <line x1="110" y1="122" x2="50" y2="155" stroke="#6b7280" stroke-width="1.5"/>
+        <line x1="150" y1="140" x2="150" y2="155" stroke="#6b7280" stroke-width="1.5"/>
+        <line x1="190" y1="122" x2="250" y2="155" stroke="#6b7280" stroke-width="1.5"/>
+        <rect x="15" y="155" width="70" height="35" rx="4" fill="#2563eb"/>
+        <text x="50" y="177" text-anchor="middle" font-size="8" font-weight="bold" fill="white">Audiencia</text>
+        <rect x="115" y="155" width="70" height="35" rx="4" fill="#16a34a"/>
+        <text x="150" y="177" text-anchor="middle" font-size="8" font-weight="bold" fill="white">Cabildo</text>
+        <rect x="215" y="155" width="70" height="35" rx="4" fill="#f59e0b"/>
+        <text x="250" y="177" text-anchor="middle" font-size="8" font-weight="bold" fill="#78350f">Iglesia</text>
+      </svg>`
+    ],
+    exercises: [
+      {
+        id: 7031,
+        question: "En que ano se creo el Virreinato del Peru?",
+        options: ["1532", "1542", "1572", "1600"],
+        correctIndex: 1,
+        explanation: "El Virreinato del Peru fue creado por Real Decreto del 20 de noviembre de 1542 para governar los territorios sudamericanos.",
+        difficulty: "basico"
+      },
+      {
+        id: 7032,
+        question: "Cual fue la primera ciudad en ser capital del Virreinato del Peru?",
+        options: ["Cusco", "Quito", "Lima", "Bogota"],
+        correctIndex: 2,
+        explanation: "Lima fue designada capital del Virreinato por su ubicacion costera estratégica y su puerto.",
+        difficulty: "basico"
+      },
+      {
+        id: 7033,
+        question: "Que funcion cumplia la Real Audiencia de Lima?",
+        options: ["Solo recaudaba impuestos", "Era tribunal de justicia y gobierno", "Comandaba el ejercito", "Gobernaba las minas"],
+        correctIndex: 1,
+        explanation: "La Real Audiencia de Lima funciono como tribunal de justicia superior y como organo de gobierno colonial.",
+        difficulty: "intermedio"
+      }
+    ]
+  },
+  {
+    slug: "encomienda-repartimiento",
+    tip: "La encomienda y el repartimiento fueron los principales sistemas de explotacion laboral indigena en el Peru colonial.",
+    theory: [
+      {
+        level: "basico",
+        title: "El Sistema de Encomienda",
+        lines: [
+          "La encomienda era un sistema donde un espanol recibia el derecho a cobrar tributo a indigenas.",
+          "A cambio, el encomendero debia proteger a los indigenas y evangelizarlos.",
+          "En la practica, la encomienda se convirtio en un instrumento de explotacion laboral.",
+          "Los indigenas eran forzados a trabajar en haciendas, minas y obras publicas.",
+          "Las encomiendas se heredaban dentro de las familias de los conquistadores.",
+          "Los abusos contra los indigenas generaron protestas y resistencia indigena."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "El Repartimiento de Trabajo",
+        lines: [
+          "El repartimiento era un sistema de trabajo forzado rotativo para indigenas libres.",
+          "Los indigenas eran seleccionados por los corregidores para trabajar temporalmente.",
+          "Se usaba principalmente en minas, obrajes y haciendas agricolas.",
+          "El trabajo duraba semanas o meses antes de ser reemplazado por otro grupo.",
+          "El repartimiento generaba profunda desorganizacion en las comunidades indigenas.",
+          "Bartolome de las Casas denuncio los abusos de ambos sistemas ante la Corona."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Resistencia y Reformas",
+        lines: [
+          "Las Leyes Nuevas de 1542 intentaron limitar el poder de los encomenderos.",
+          "Las comunidades indigenas usaron estrategias legales ante la Justicia para defenderse.",
+          "El Kuraka (lider indigena) mediaba entre las comunidades y las autoridades coloniales.",
+          "El Taki Onqoy fue un movimiento religioso indigena que rechazaba la dominacion española.",
+          "Las mitimaes (reubicaciones forzadas) desarticulaban las comunidades rebeldes.",
+          "A pesar de las reformas, la explotacion laboral persistio durante todo el periodo colonial."
+        ]
+      }
+    ],
+    illustrations: [
+      `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+        <rect width="300" height="200" fill="#f8fafc"/>
+        <rect x="10" y="10" width="280" height="35" rx="4" fill="#16a34a"/>
+        <text x="150" y="33" text-anchor="middle" font-size="13" font-weight="bold" fill="white">Encomienda y Repartimiento</text>
+        <rect x="20" y="55" width="120" height="60" rx="5" fill="#2563eb"/>
+        <text x="80" y="75" text-anchor="middle" font-size="10" font-weight="bold" fill="white">ENCOMIENDA</text>
+        <text x="80" y="90" text-anchor="middle" font-size="8" fill="#bfdbfe">Tributo permanente</text>
+        <text x="80" y="102" text-anchor="middle" font-size="8" fill="#bfdbfe">Hereditaria</text>
+        <rect x="160" y="55" width="120" height="60" rx="5" fill="#dc2626"/>
+        <text x="220" y="75" text-anchor="middle" font-size="10" font-weight="bold" fill="white">REPARTIMIENTO</text>
+        <text x="220" y="90" text-anchor="middle" font-size="8" fill="#fecaca">Trabajo rotativo</text>
+        <text x="220" y="102" text-anchor="middle" font-size="8" fill="#fecaca">Temporal</text>
+        <line x1="140" y1="85" x2="160" y2="85" stroke="#6b7280" stroke-width="2" stroke-dasharray="3"/>
+        <rect x="20" y="130" width="260" height="60" rx="5" fill="#f59e0b"/>
+        <text x="150" y="148" text-anchor="middle" font-size="9" font-weight="bold" fill="#78350f">Impacto en las Comunidades</text>
+        <text x="150" y="163" text-anchor="middle" font-size="8" fill="#92400e">Desarticulacion social | Trabajo forzado</text>
+        <text x="150" y="178" text-anchor="middle" font-size="8" fill="#92400e">Resistencia indigena y protestas</text>
+      </svg>`
+    ],
+    exercises: [
+      {
+        id: 7034,
+        question: "En que se diferenciaba la encomienda del repartimiento?",
+        options: ["La encomienda era temporal y el repartimiento era permanente", "La encomienda era permanente y el repartimiento era rotativo", "Ambos sistemas eran identicos", "El repartimiento solo existia en las minas"],
+        correctIndex: 1,
+        explanation: "La encomienda era un derecho permanente y hereditario de cobrar tributo, mientras que el repartimiento era un trabajo forzado rotativo.",
+        difficulty: "basico"
+      },
+      {
+        id: 7035,
+        question: "Que movimiento religioso indigena rechazo la dominacion española?",
+        options: ["La Rebelion de Tupac Amaru", "El Taki Onqoy", "La Revolucion de Gonzalo Pizarro", "El levantamiento de Manco Inca"],
+        correctIndex: 1,
+        explanation: "El Taki Onqoy fue un movimiento religioso indigena del siglo XVI que rechazaba los sacramentos catolicos y la dominacion española.",
+        difficulty: "intermedio"
+      },
+      {
+        id: 7036,
+        question: "Quienes medaban entre las comunidades indigenas y las autoridades coloniales?",
+        options: ["Los misioneros", "Los kurakas", "Los encomenderos", "Los virreyes"],
+        correctIndex: 1,
+        explanation: "Los kurakas eran lideres indigenas que funcionaban como intermediarios entre las comunidades y el sistema colonial.",
+        difficulty: "intermedio"
+      }
+    ]
+  },
+  {
+    slug: "economia-colonial-mineria",
+    tip: "La mina de Potosi y el Cerro Rico fueron el motor economico del Imperio Español durante tres siglos.",
+    theory: [
+      {
+        level: "basico",
+        title: "El Cerro Rico de Potosi",
+        lines: [
+          "El Cerro Rico de Potosi fue descubierto en 1545 y se convirtio en la mina mas importante del mundo.",
+          "Potosi era una de las ciudades mas grandes y ricas de America en el siglo XVI.",
+          "La plata extraida de Potosi financio el imperio español durante tres siglos.",
+          "Se estima que Potosi produjo mas de 45.000 toneladas de plata en su historia.",
+          "La mineria fue la actividad economica mas lucrativa de la colonia.",
+          "Las condiciones de trabajo en las minas eran extremadamente peligrosas y mortales."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Tecnicas de Extraccion y Comercio",
+        lines: [
+          "El metodo de amalgamacion con mercurio permitio extraer mas plata de los minerales.",
+          "El mercurio era traído desde las minas de Huancavelica para procesar la plata.",
+          "Las flotas de plata transportaban el metal precioso de America a España.",
+          "El Cobre de Potosi era el centro comercial donde se intercambiaban bienes.",
+          "La Real Caja de Potosi recaudaba los impuestos del quinto real del rey.",
+          "El comercio de plata conecto a America con mercados de Asia y Europa."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "El Sistema de Mita Minera",
+        lines: [
+          "La mita minera era un sistema de trabajo forzado rotatorio inspirado en la mita incaica.",
+          "Los indigenas de las comunidades andinas eran obligados a trabajar en las minas.",
+          "El virrey Francisco de Toledo reorganizo la mita minera en 1572 para Potosi.",
+          "Los indigenas debian trabajar cuatro meses al año en condiciones subterraneas.",
+          "Las muertes por derrumbes, intoxicacion por mercurio y enfermedades eran frecuentes.",
+          "La mita minera genero profunda migracion indigena y despoblamiento de comunidades."
+        ]
+      }
+    ],
+    illustrations: [
+      `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+        <rect width="300" height="200" fill="#f8fafc"/>
+        <rect x="10" y="10" width="280" height="35" rx="4" fill="#f59e0b"/>
+        <text x="150" y="33" text-anchor="middle" font-size="13" font-weight="bold" fill="#78350f">Economia Colonial: La Plata de Potosi</text>
+        <polygon points="150,55 200,110 100,110" fill="#8b5cf6"/>
+        <text x="150" y="90" text-anchor="middle" font-size="9" font-weight="bold" fill="white">Cerro Rico</text>
+        <text x="150" y="103" text-anchor="middle" font-size="8" fill="#ddd6fe">Potosi</text>
+        <rect x="20" y="120" width="80" height="35" rx="4" fill="#2563eb"/>
+        <text x="60" y="142" text-anchor="middle" font-size="8" font-weight="bold" fill="white">Mercurio</text>
+        <text x="60" y="165" text-anchor="middle" font-size="7" fill="#6b7280">Huancavelica</text>
+        <line x1="100" y1="137" x2="120" y2="110" stroke="#2563eb" stroke-width="1.5"/>
+        <rect x="110" y="120" width="80" height="35" rx="4" fill="#16a34a"/>
+        <text x="150" y="142" text-anchor="middle" font-size="8" font-weight="bold" fill="white">Plata</text>
+        <text x="150" y="165" text-anchor="middle" font-size="7" fill="#6b7280">45,000 toneladas</text>
+        <line x1="190" y1="137" x2="210" y2="137" stroke="#dc2626" stroke-width="2"/>
+        <rect x="210" y="120" width="75" height="35" rx="4" fill="#dc2626"/>
+        <text x="247" y="142" text-anchor="middle" font-size="8" font-weight="bold" fill="white">Espana</text>
+        <text x="247" y="165" text-anchor="middle" font-size="7" fill="#6b7280">Flota de Indias</text>
+        <rect x="20" y="175" width="260" height="20" rx="3" fill="#1e293b"/>
+        <text x="150" y="189" text-anchor="middle" font-size="8" fill="white">Mita minera: trabajo forzado rotatorio en las minas</text>
+      </svg>`
+    ],
+    exercises: [
+      {
+        id: 7037,
+        question: "En que ano fue descubierto el Cerro Rico de Potosi?",
+        options: ["1532", "1545", "1572", "1600"],
+        correctIndex: 1,
+        explanation: "El Cerro Rico de Potosi fue descubierto en 1545 y se convirtio en la mina de plata mas importante del mundo colonial.",
+        difficulty: "basico"
+      },
+      {
+        id: 7038,
+        question: "Desde donde se traia el mercurio para procesar la plata?",
+        options: ["Huancavelica", "Puno", "Cusco", "Arequipa"],
+        correctIndex: 0,
+        explanation: "Las minas de Huancavelica proporcionaban el mercurio necesario para el proceso de amalgamacion de la plata en Potosi.",
+        difficulty: "basico"
+      },
+      {
+        id: 7039,
+        question: "Que sistema de trabajo forzado reorganizo el virrey Francisco de Toledo para Potosi?",
+        options: ["La encomienda", "El repartimiento", "La mita minera", "La mita agricola"],
+        correctIndex: 2,
+        explanation: "El virrey Francisco de Toledo reorganizo la mita minera en 1572, obligando a indigenas a trabajar en las minas por turnos rotativos.",
+        difficulty: "intermedio"
+      }
+    ]
+  },
+  {
+    slug: "sociedad-colonial-castas",
+    tip: "La sociedad colonial se organizaba en un estricto sistema de castas basado en el origen racial y la jerarquia social.",
+    theory: [
+      {
+        level: "basico",
+        title: "El Sistema de Castas",
+        lines: [
+          "La sociedad colonial peruana se organizaba en un sistema jerarquico de castas raciales.",
+          "Los espanoles peninsulares ocupaban la cima de la piramide social y politica.",
+          "Los criollos (hijos de espanoles nacidos en America) estaban en el segundo escalon.",
+          "Los mestizos (mezcla de espanol e indigena) formaban una clase intermedia.",
+          "Los indigenas y los esclavos africanos ocupaban los estratos inferiores de la sociedad.",
+          "El color de piel determinaba los derechos y oportunidades de cada persona."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Mujeres en la Sociedad Colonial",
+        lines: [
+          "Las mujeres coloniales tenian roles muy restringidos por las normas sociales y religiosas.",
+          "Las mujeres criollas administraban haciendas y negocios cuando los maridos viajaban.",
+          "Las mestizas e indigenas trabajaban en textiles, comercio y agricultura.",
+          "Las esclavas africanas trabajaban en hogares, haciendas y obrajes textiles.",
+          "La Iglesia controlaba la educacion femenina y los espacios de convivencia social.",
+          "Existian casonas y beaterios como espacios exclusivos para mujeres coloniales."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Mobility Social y Tensiones",
+        lines: [
+          "El sistema de castas era teoricamente rigido pero en la practica existia movilidad social.",
+          "Los mestizos podian ascender economicamente mediante el comercio y la artesania.",
+          "Las pinturas de castas documentaban las multiples combinaciones raciales posibles.",
+          "Los zambos (mezcla de indigena y africano) estaban en la base de la jerarquia.",
+          "Los quilombos o palenques eran comunidades de esclavos fugitivos que resistian el sistema.",
+          "Las tensiones de castas alimentaron los movimientos independentistas del siglo XIX."
+        ]
+      }
+    ],
+    illustrations: [
+      `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+        <rect width="300" height="200" fill="#f8fafc"/>
+        <rect x="10" y="10" width="280" height="35" rx="4" fill="#1e293b"/>
+        <text x="150" y="33" text-anchor="middle" font-size="13" font-weight="bold" fill="white">Sistema de Castas Colonial</text>
+        <polygon points="150,52 220,90 80,90" fill="#dc2626"/>
+        <text x="150" y="80" text-anchor="middle" font-size="8" font-weight="bold" fill="white">Peninsulares</text>
+        <polygon points="100,90 200,90 215,115 85,115" fill="#2563eb"/>
+        <text x="150" y="108" text-anchor="middle" font-size="8" font-weight="bold" fill="white">Criollos</text>
+        <polygon points="85,115 215,115 230,140 70,140" fill="#8b5cf6"/>
+        <text x="150" y="133" text-anchor="middle" font-size="8" font-weight="bold" fill="white">Mestizos</text>
+        <polygon points="70,140 230,140 250,165 50,165" fill="#16a34a"/>
+        <text x="150" y="158" text-anchor="middle" font-size="8" font-weight="bold" fill="white">Indigenas</text>
+        <polygon points="50,165 250,165 270,190 30,190" fill="#f59e0b"/>
+        <text x="150" y="183" text-anchor="middle" font-size="8" font-weight="bold" fill="#78350f">Esclavos Africanos</text>
+      </svg>`
+    ],
+    exercises: [
+      {
+        id: 7040,
+        question: "Quienes ocupaban la cima de la piramide social en la colonia?",
+        options: ["Los criollos", "Los mestizos", "Los espanoles peninsulares", "Los indigenas"],
+        correctIndex: 2,
+        explanation: "Los espanoles peninsulares (nacidos en España) ocupaban la cima de la piramide social y detentaban los cargos de mayor poder.",
+        difficulty: "basico"
+      },
+      {
+        id: 7041,
+        question: "Como se llamaban las comunidades de esclavos fugitivos?",
+        options: ["Encomiendas", "Quilombos o palenques", "Mitimaes", "Corregimientos"],
+        correctIndex: 1,
+        explanation: "Los quilombos o palenques eran comunidades fundadas por esclavos africanos fugitivos que resistian el sistema esclavista.",
+        difficulty: "intermedio"
+      },
+      {
+        id: 7042,
+        question: "Que grupo social formaba la clase intermedia en la piramide colonial?",
+        options: ["Los peninsulares", "Los indigenas", "Los mestizos", "Los esclavos"],
+        correctIndex: 2,
+        explanation: "Los mestizos (hijos de espanol e indigena) formaban una clase intermedia entre los espanoles y los grupos indigenas y africanos.",
+        difficulty: "basico"
+      }
+    ]
+  },
+  {
+    slug: "contrabando-colonial",
+    tip: "El contrabando europeo debilito los ingresos de la Corona española y fomento economias ilegales en America.",
+    theory: [
+      {
+        level: "basico",
+        title: "El Comercio Ilegal en America",
+        lines: [
+          "El comercio colonial estaba reservado exclusivamente para España por las Leyes de Indias.",
+          "Los paises europeos como Holanda, Inglaterra y Portugal realizaron contrabando en America.",
+          "El contrabando se realizaba a traves de puertos no autorizados en las costas americanas.",
+          "Los productos extranjeros llegaban a precios mas bajos que los productos españoles.",
+          "El contrabando era generalizado y contaba con la complicidad de funcionarios coloniales.",
+          "La Corona española intento combater el contrabando pero sin exito significativo."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Actores del Contrabando",
+        lines: [
+          "Los holandeses establecieron bases de contrabando en el Caribe y la costa atlantica.",
+          "Los ingleses usaron colonias como Jamaica y Barbados para operar comercio ilegal.",
+          "Los portugueses desde el Brasil comerciaban con el Peru a traves de rutas secretas.",
+          "Los bucaneros y piratas ingleses atacaban flotas españolas para robar la plata.",
+          "Comerciantes locales compraban productos de contrabando para revenderlos en el interior.",
+          "Guayaquil fue un centro importante de operaciones de contrabando en el Pacifico."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Impacto Economico y Politico",
+        lines: [
+          "El contrabando redujo significativamente los ingresos del quinto real de la Corona.",
+          "La plata america circulaba ilegalmente hacia las factorias holandesas e inglesas.",
+          "El mercado negro de textiles y metales compitio con los monopolios españoles oficiales.",
+          "Los puertos de Nombre de Dios y Portobelo eran puntos clave del trafico ilegal.",
+          "El comercio ilicito debilito la economia española y acelero su decadencia imperial.",
+          "A pesar de las patrullas navales, el contrabando fue imposible de erradicar completamente."
+        ]
+      }
+    ],
+    illustrations: [
+      `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+        <rect width="300" height="200" fill="#f8fafc"/>
+        <rect x="10" y="10" width="280" height="35" rx="4" fill="#0369a1"/>
+        <text x="150" y="33" text-anchor="middle" font-size="13" font-weight="bold" fill="white">Rutas de Contrabando Colonial</text>
+        <rect x="20" y="60" width="70" height="40" rx="4" fill="#16a34a"/>
+        <text x="55" y="84" text-anchor="middle" font-size="8" font-weight="bold" fill="white">Europa</text>
+        <rect x="210" y="60" width="75" height="40" rx="4" fill="#f59e0b"/>
+        <text x="247" y="84" text-anchor="middle" font-size="8" font-weight="bold" fill="#78350f">America</text>
+        <line x1="90" y1="75" x2="120" y2="75" stroke="#dc2626" stroke-width="2" stroke-dasharray="4"/>
+        <text x="105" y="68" text-anchor="middle" font-size="7" fill="#dc2626">Ruta Ilegal</text>
+        <line x1="185" y1="75" x2="210" y2="75" stroke="#dc2626" stroke-width="2" stroke-dasharray="4"/>
+        <rect x="120" y="55" width="65" height="30" rx="3" fill="#dc2626"/>
+        <text x="152" y="74" text-anchor="middle" font-size="7" font-weight="bold" fill="white">CONTRABANDO</text>
+        <rect x="20" y="110" width="260" height="75" rx="5" fill="#e0f2fe"/>
+        <text x="55" y="128" text-anchor="middle" font-size="8" font-weight="bold" fill="#0369a1">Actores</text>
+        <text x="55" y="142" text-anchor="middle" font-size="7" fill="#075985">Holanda</text>
+        <text x="55" y="154" text-anchor="middle" font-size="7" fill="#075985">Inglaterra</text>
+        <text x="55" y="166" text-anchor="middle" font-size="7" fill="#075985">Portugal</text>
+        <text x="152" y="128" text-anchor="middle" font-size="8" font-weight="bold" fill="#0369a1">Productos</text>
+        <text x="152" y="142" text-anchor="middle" font-size="7" fill="#075985">Textiles</text>
+        <text x="152" y="154" text-anchor="middle" font-size="7" fill="#075985">Metales</text>
+        <text x="152" y="166" text-anchor="middle" font-size="7" fill="#075985">Armas</text>
+        <text x="247" y="128" text-anchor="middle" font-size="8" font-weight="bold" fill="#0369a1">Puertos</text>
+        <text x="247" y="142" text-anchor="middle" font-size="7" fill="#075985">Guayaquil</text>
+        <text x="247" y="154" text-anchor="middle" font-size="7" fill="#075985">Nombre de Dios</text>
+        <text x="247" y="166" text-anchor="middle" font-size="7" fill="#075985">Portobelo</text>
+      </svg>`
+    ],
+    exercises: [
+      {
+        id: 7043,
+        question: "Que paises europeos principales realizaron contrabando en America?",
+        options: ["Solo Francia", "Holanda, Inglaterra y Portugal", "Rusia y Alemania", "España y Portugal"],
+        correctIndex: 1,
+        explanation: "Holanda, Inglaterra y Portugal fueron los principales paises que realizaron contrabando en America colonial.",
+        difficulty: "basico"
+      },
+      {
+        id: 7044,
+        question: "Que puerto del Pacifico fue centro de operaciones de contrabando?",
+        options: ["Callao", "Guayaquil", "Valparaiso", "Cartagena"],
+        correctIndex: 1,
+        explanation: "Guayaquil fue un centro importante de operaciones de contrabando en la region del Pacifico americano.",
+        difficulty: "intermedio"
+      },
+      {
+        id: 7045,
+        question: "Como afectaba el contrabando a la economia de la Corona española?",
+        options: ["Aumentaba los ingresos del quinto real", "Debilitaba significativamente los ingresos de la Corona", "No tenia ningun impacto economico", "Solo afectaba a los comerciantes locales"],
+        correctIndex: 1,
+        explanation: "El contrabando redujo significativamente los ingresos del quinto real, debilitando la economia española y acelerando su decadencia imperial.",
+        difficulty: "basico"
+      }
+    ]
+  },
+  {
+    slug: "reformas-borbonicas",
+    tip: "Las Reformas Borbonicas (1750-1800) transformaron la administracion colonial y despertaron el sentimiento independentista.",
+    theory: [
+      {
+        level: "basico",
+        title: "Reformas Administrativas",
+        lines: [
+          "Las Reformas Borbonicas fueron un conjunto de cambios implementados por la dinastia Borbon en Espana.",
+          "Se crearon las intendencias para mejorar la recaudacion de impuestos en America.",
+          "El comercio libre reemplazo el monopolio comercial, permitiendo mas intercambio comercial.",
+          "Se expulso a los jesuitas de America en 1767, confiscando sus propiedades.",
+          "Se fortalecio el poder del virrey y se redujo la influencia de las Audiencias.",
+          "Las reformas buscaron modernizar la administracion colonial para maximizar las ganancias."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Impacto en la Sociedad Colonial",
+        lines: [
+          "Las reformas generaron descontento entre los criollos que perdieron privilegios.",
+          "El aumento de impuestos afecto a comerciantes, agricultores y mineros coloniales.",
+          "La expulsion de los jesuitas dejo sin educacion a miles de indigenas y criollos.",
+          "La apertura del comercio beneficio a los espanoles peninsulares en desmedro de los criollos.",
+          "El Despertar Borbonico fue un movimiento intelectual que cuestiono el sistema colonial.",
+          "Las ideas de la Ilustracion francesa infiltraron el pensamiento criollo colonial."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Camino a la Independencia",
+        lines: [
+          "Las reformas crearon las condiciones que llevaron a los movimientos independentistas.",
+          "Los criollos, antes leales a la Corona, comenzaron a cuestionar el dominio español.",
+          "La creacion de nuevas intendencias centralizo el poder pero genero resistencias locales.",
+          "El comercio libre expuso a los colonos a ideas de libertad y autonomia economica.",
+          "La expulsion de los jesuitas dejo un vacio de poder que fue llenado por ideas ilustradas.",
+          "Las tensiones acumuladas explotaron en las revoluciones independentistas de 1810 en adelante."
+        ]
+      }
+    ],
+    illustrations: [
+      `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+        <rect width="300" height="200" fill="#f8fafc"/>
+        <rect x="10" y="10" width="280" height="35" rx="4" fill="#7c3aed"/>
+        <text x="150" y="33" text-anchor="middle" font-size="13" font-weight="bold" fill="white">Reformas Borbonicas 1750-1800</text>
+        <rect x="20" y="55" width="120" height="55" rx="5" fill="#2563eb"/>
+        <text x="80" y="73" text-anchor="middle" font-size="9" font-weight="bold" fill="white">Intendencias</text>
+        <text x="80" y="87" text-anchor="middle" font-size="7" fill="#bfdbfe">Nueva division</text>
+        <text x="80" y="99" text-anchor="middle" font-size="7" fill="#bfdbfe">administrativa</text>
+        <rect x="160" y="55" width="120" height="55" rx="5" fill="#16a34a"/>
+        <text x="220" y="73" text-anchor="middle" font-size="9" font-weight="bold" fill="white">Libre Comercio</text>
+        <text x="220" y="87" text-anchor="middle" font-size="7" fill="#bbf7d0">Apertura del</text>
+        <text x="220" y="99" text-anchor="middle" font-size="7" fill="#bbf7d0">mercado colonial</text>
+        <rect x="20" y="120" width="120" height="55" rx="5" fill="#dc2626"/>
+        <text x="80" y="138" text-anchor="middle" font-size="9" font-weight="bold" fill="white">Expulsion Jesuitas</text>
+        <text x="80" y="152" text-anchor="middle" font-size="7" fill="#fecaca">Confiscacion de</text>
+        <text x="80" y="164" text-anchor="middle" font-size="7" fill="#fecaca">propiedades 1767</text>
+        <rect x="160" y="120" width="120" height="55" rx="5" fill="#f59e0b"/>
+        <text x="220" y="138" text-anchor="middle" font-size="9" font-weight="bold" fill="#78350f">Despertar Borbonico</text>
+        <text x="220" y="152" text-anchor="middle" font-size="7" fill="#92400e">Ideas ilustradas</text>
+        <text x="220" y="164" text-anchor="middle" font-size="7" fill="#92400e">Independencia</text>
+        <line x1="80" y1="110" x2="80" y2="120" stroke="#6b7280" stroke-width="1.5"/>
+        <line x1="220" y1="110" x2="220" y2="120" stroke="#6b7280" stroke-width="1.5"/>
+      </svg>`
+    ],
+    exercises: [
+      {
+        id: 7046,
+        question: "En que ano se expulso a los jesuitas de America?",
+        options: ["1750", "1767", "1780", "1800"],
+        correctIndex: 1,
+        explanation: "Los jesuitas fueron expulsados de America en 1767 por orden del rey Carlos III, y sus propiedades fueron confiscadas.",
+        difficulty: "basico"
+      },
+      {
+        id: 7047,
+        question: "Que sistema reemplazo el monopolio comercial durante las Reformas Borbonicas?",
+        options: ["El sistema de mita", "El comercio libre", "La encomienda", "El repartimiento"],
+        correctIndex: 1,
+        explanation: "Las Reformas Borbonicas implementaron el comercio libre, permitiendo el intercambio comercial fuera del monopolio español.",
+        difficulty: "basico"
+      },
+      {
+        id: 7048,
+        question: "Como se llamo el movimiento intelectual que cuestiono el sistema colonial durante las reformas?",
+        options: ["El Taki Onqoy", "El Despertar Borbonico", "La Rebelion de Tupac Amaru", "La Revolucion Francesa"],
+        correctIndex: 1,
+        explanation: "El Despertar Borbonico fue un movimiento intelectual criollo que cuestiono el sistema colonial e incorporo ideas de la Ilustracion.",
+        difficulty: "intermedio"
+      }
+    ]
+  },
+{
+    slug: "rebelion-tupac-amaru-ii",
+    tip: "Túpac Amaru II inició la rebelión indígena más grande contra el dominio español en los Andes.",
+    theory: [
+      {
+        level: "basico",
+        title: "José Gabriel Condorcanqui",
+        lines: [
+          "José Gabriel Condorcanqui adoptó el nombre de Túpac Amaru II en honor al último inca.",
+          "Era un cacique educado de Tinta, en la provincia de Canchis, con posición económica.",
+          "El 4 de noviembre de 1780 proclamó la rebelión en la plaza de Tinta contra los españoles.",
+          "Su principal reclamo fue la abolición de las mitas y los abusos de los corregidores.",
+          "La rebelión rápidamente se extendió por todo el sur del Perú y el Alto Perú.",
+          "Llegó a comandar un ejército de más de 60.000 indígenas y mestizos unidos."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "El sitio del Cusco",
+        lines: [
+          "Túpac Amaru II sitió la ciudad del Cusco, centro symbolic del poder español en los Andes.",
+          "El sitio duró varios meses y las fuerzas realistas resistieron con recursos desde Lima.",
+          "El cura Miguel Tiliano, antiguo aliado, traicionó a Túpac Amaru y facilitó la contraofensiva.",
+          "La rebelión se debilitó por divergencias internas entre los líderes indígenas.",
+          "La在 Field de Rumiñahui organizó la resistencia en el centro del movimiento.",
+          "El sitio del Cusco fracasó y marcó el inicio del retroceso militar rebelde."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Captura, ejecución e impacto",
+        lines: [
+          "Túpac Amaru II fue capturado el 6 de abril de 1781 en la quebrada de Langui.",
+          "Fue ejecutado públicamente en la plaza de Armas del Cusco el 25 de mayo de 1781.",
+          "Se le descuartizó con caballos y su cuerpo fue exhibido como escarmiento a los rebeldes.",
+          "Su esposa Micaela Bastidas fue también ejecutada en la plaza de Tinta.",
+          "La rebelión tuvo impacto en las reformas borbónicas y en la conciencia criolla.",
+          "El movimiento inspiró futuras luchas independentistas en todo América Latina."
+        ]
+      }
+    ],
+    illustrations: [
+      `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="200" fill="#1e1b4b"/>
+  <polygon points="150,20 180,80 120,80" fill="#dc2626"/>
+  <rect x="140" y="80" width="20" height="60" fill="#dc2626"/>
+  <line x1="100" y1="140" x2="200" y2="140" stroke="#f59e0b" stroke-width="3"/>
+  <text x="150" y="170" text-anchor="middle" fill="#f59e0b" font-size="14">1780-1781</text>
+  <polygon points="50,100 70,100 60,70" fill="#2563eb"/>
+  <polygon points="250,100 230,100 240,70" fill="#2563eb"/>
+  <text x="150" y="190" text-anchor="middle" fill="#ffffff" font-size="10">Rebelión de Túpac Amaru II</text>
+</svg>`
+    ],
+    exercises: [
+      {
+        id: 7049,
+        question: "¿Cómo se llamaba originalmente el líder de la rebelión de 1780?",
+        options: ["Túpac Amaru I", "José Gabriel Condorcanqui", "Manuel Inca", "Cahuide"],
+        correctIndex: 1,
+        explanation: "José Gabriel Condorcanqui adoptó el nombre Túpac Amaru II para legitimar su liderazgo indígena.",
+        difficulty: "basico"
+      },
+      {
+        id: 7050,
+        question: "¿Cuál fue el destino final de Túpac Amaru II tras su captura?",
+        options: ["Fue exiliado a España", "Fue ejecutado en la plaza del Cusco", "Se rindió y recibió perdón", "Murió en batalla"],
+        correctIndex: 1,
+        explanation: "Fue ejecutado públicamente en la plaza de Armas del Cusco el 25 de mayo de 1781.",
+        difficulty: "intermedio"
+      },
+      {
+        id: 7051,
+        question: "¿Qué traición fue decisiva para el fracaso del sitio del Cusco?",
+        options: ["La traición del cura Miguel Tiliano", "La defección de los españoles", "La intervención francesa", "El abandono de los incas"],
+        correctIndex: 0,
+        explanation: "El cura Miguel Tiliano, antiguo aliado, traicionó a Túpac Amaru y facilitó la contraofensiva.",
+        difficulty: "avanzado"
+      }
+    ]
+  },
+  {
+    slug: "rebeliones-coloniales",
+    tip: "Antes de Túpac Amaru II hubo múltiples rebeliones indígenas contra el dominio español en el Perú.",
+    theory: [
+      {
+        level: "basico",
+        title: "Juan Santos Atahualpa",
+        lines: [
+          "Juan Santos Atahualpa lideró una rebelión en la selva central del Perú en 1742.",
+          "Se proclamó descendiente de los incas y buscó expulsar a los españoles de la región.",
+          "Estableció un gobierno propio en el Cerro de la Sal, en la selva de Jauja.",
+          "La rebelión se extendió por las montañas de Tarma y Jauja durante más de diez años.",
+          "Los españoles nunca lograron capturarlo, ya que se refugió en la selva profunda.",
+          "Es considerado un héroe de la resistencia indígena en la Amazonía peruana."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Túpac Amaru I y Paria",
+        lines: [
+          "Túpac Amaru I fue el último inca que lideró una rebelión desde Vilcabamba en 1572.",
+          "Fue capturado por el virrey Toledo y ejecutado públicamente en la plaza del Cusco.",
+          "Su muerte marcó el fin definitivo de la resistencia incaica organizada contra España.",
+          "En 1731, Juan Santos Cauri lideró la rebelión de Paria en el Alto Perú.",
+          "La rebelión de Paria demandaba la restitución de tierras comunales a los indígenas.",
+          "Ambos movimientos mostraron la resistencia continuada contra la explotación colonial."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Rebeliones en Puno",
+        lines: [
+          "Puno fue escenario de múltiples levantamientos indígenas durante los siglos XVII y XVIII.",
+          "La rebelión de 1781 en Puno se vinculó directamente con la de Túpac Amaru II.",
+          "Los levantamientos en Puno incluyeron el ataque a la ciudad y la expulsión de autoridades.",
+          "La zona altiplánica tenía una fuerte identidad cultural quechua y aimara resistente.",
+          "Las rebeliones en Puno continuaron hasta principios del siglo XIX con fuerza.",
+          "Estos movimientos fueron fundamentales para la conciencia de identidad regional."
+        ]
+      }
+    ],
+    illustrations: [
+      `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="200" fill="#0f172a"/>
+  <path d="M50,150 Q100,50 150,150 Q200,50 250,150" fill="none" stroke="#16a34a" stroke-width="3"/>
+  <circle cx="80" cy="100" r="15" fill="#dc2626"/>
+  <circle cx="150" cy="70" r="15" fill="#dc2626"/>
+  <circle cx="220" cy="100" r="15" fill="#dc2626"/>
+  <text x="80" y="130" text-anchor="middle" fill="#f59e0b" font-size="9">Paria 1731</text>
+  <text x="150" y="100" text-anchor="middle" fill="#f59e0b" font-size="9">Atahualpa</text>
+  <text x="220" y="130" text-anchor="middle" fill="#f59e0b" font-size="9">Puno</text>
+  <text x="150" y="185" text-anchor="middle" fill="#ffffff" font-size="11">Rebeliones Coloniales</text>
+</svg>`
+    ],
+    exercises: [
+      {
+        id: 7052,
+        question: "¿Quién lideró la rebelión en la selva central del Perú en 1742?",
+        options: ["Túpac Amaru I", "Juan Santos Atahualpa", "José Gabriel Condorcanqui", "Manuel Inca"],
+        correctIndex: 1,
+        explanation: "Juan Santos Atahualpa lideró una rebelión en la selva central desde el Cerro de la Sal.",
+        difficulty: "basico"
+      },
+      {
+        id: 7053,
+        question: "¿En qué año fue capturado y ejecutado Túpac Amaru I?",
+        options: ["1572", "1780", "1742", "1731"],
+        correctIndex: 0,
+        explanation: "Túpac Amaru I, último inca rebelde, fue capturado en 1572 por orden del virrey Toledo.",
+        difficulty: "intermedio"
+      },
+      {
+        id: 7054,
+        question: "¿Qué factor unificó las rebeliones en Puno durante el siglo XVIII?",
+        options: ["El deseo de independencia total", "La defensa de tierras comunales e identidad cultural", "El apoyo de los criollos", "La influencia de la Ilustración"],
+        correctIndex: 1,
+        explanation: "Los levantamientos en Puno estaban motivados por la restitución de tierras y la identidad cultural.",
+        difficulty: "avanzado"
+      }
+    ]
+  },
+  {
+    slug: "san-martin-bolivar",
+    tip: "La Conferencia de Guayaquil entre San Martín y Bolívar fue un punto de inflexión en la independencia sudamericana.",
+    theory: [
+      {
+        level: "basico",
+        title: "Cruce de los Andes",
+        lines: [
+          "José de San Martín cruzó los Andes desde Chile en 1820 para liberar al Perú.",
+          "El Ejército de los Andes fue preparado durante dos años en la ciudad de Mendoza.",
+          "El cruce fue una hazaña militar comparable a la de Aníbal por los Alpes europeos.",
+          "San Martín desembarcó en la costa peruana y avanzó estratégicamente hacia Lima.",
+          "Proclamó la independencia del Perú el 28 de julio de 1821 en la capital.",
+          "Se nombró a sí mismo Protector del Perú y gobernó hasta su partida en 1822."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "La Conferencia de Guayaquil",
+        lines: [
+          "La Conferencia de Guayaquil se realizó el 26 y 27 de julio de 1822.",
+          "Se reunieron San Martín del Sur y Bolívar del Norte para coordinar la independencia.",
+          "No existen actas oficiales de la conferencia, solo relatos y cartas posteriores.",
+          "Se discutió el destino político de Guayaquil y la estrategia contra los realistas.",
+          "Bolívar insistió en que debía haber un solo líder supremo para la causa.",
+          "San Martín decidió retirarse voluntariamente para evitar una guerra entre patriotas."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Bolívar en el Perú",
+        lines: [
+          "Tras la partida de San Martín, Bolívar asumió el control total de la campaña libertadora.",
+          "Bolívar llegó a Lima en septiembre de 1823 invitado por el Congreso peruano.",
+          "Se declaró Libertador y asumió poderes extraordinarios para dirigir la guerra.",
+          "Reorganizó el ejército patriota y preparó la campaña final contra los realistas.",
+          "La victoria en Ayacucho en 1824 selló la independencia del Perú y del continente.",
+          "Bolívar soñó con una gran federación sudamericana que nunca se concretó exitosamente."
+        ]
+      }
+    ],
+    illustrations: [
+      `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="200" fill="#0c0a09"/>
+  <circle cx="100" cy="100" r="40" fill="none" stroke="#2563eb" stroke-width="3"/>
+  <circle cx="200" cy="100" r="40" fill="none" stroke="#dc2626" stroke-width="3"/>
+  <line x1="140" y1="100" x2="160" y2="100" stroke="#f59e0b" stroke-width="4"/>
+  <text x="100" y="105" text-anchor="middle" fill="#2563eb" font-size="10">San Martín</text>
+  <text x="200" y="105" text-anchor="middle" fill="#dc2626" font-size="10">Bolívar</text>
+  <text x="150" y="175" text-anchor="middle" fill="#16a34a" font-size="12">Guayaquil 1822</text>
+</svg>`
+    ],
+    exercises: [
+      {
+        id: 7055,
+        question: "¿En qué año cruzó San Martín los Andes para llegar al Perú?",
+        options: ["1819", "1820", "1821", "1822"],
+        correctIndex: 1,
+        explanation: "San Martín cruzó los Andes en 1820 con el Ejército de los Andes partiendo desde Mendoza.",
+        difficulty: "basico"
+      },
+      {
+        id: 7056,
+        question: "¿Qué decisión tomó San Martín tras la Conferencia de Guayaquil?",
+        options: ["Se retiró voluntariamente de la política", "Se proclamó rey del Perú", "Atacó a Bolívar militarmente", "Firmó una alianza con España"],
+        correctIndex: 0,
+        explanation: "San Martín decidió retirarse para evitar una guerra entre patriotas y ceder la causa a Bolívar.",
+        difficulty: "intermedio"
+      },
+      {
+        id: 7057,
+        question: "¿Qué batalla selló definitivamente la independencia del Perú bajo el mando de Bolívar?",
+        options: ["Batalla de Junín", "Batalla de Ayacucho", "Batalla de Chacabuco", "Batalla de Boyacá"],
+        correctIndex: 1,
+        explanation: "La Batalla de Ayacucho el 9 de diciembre de 1824 selló la independencia del Perú.",
+        difficulty: "avanzado"
+      }
+    ]
+  },
+  {
+    slug: "batallas-independencia",
+    tip: "Las batallas de Junín y Ayacucho fueron decisivas para la independencia del Perú y de toda Sudamérica.",
+    theory: [
+      {
+        level: "basico",
+        title: "Junín y Ayacucho",
+        lines: [
+          "La Batalla de Junín se libró el 6 de agosto de 1824 en el altiplano del centro del Perú.",
+          "Fue una carga de caballería sin disparo de arma de fuego, durando solo 45 minutos.",
+          "La victoria patriota en Junín impulsó la campaña del mariscal Sucre hacia el sur.",
+          "La Batalla de Ayacucho tuvo lugar el 9 de diciembre de 1824 en la pampa de la Quinua.",
+          "Fue la batalla definitiva que puso fin al dominio español en todo el continente.",
+          "El virrey La Serna se rindió y se firmó el Acta de Capitulación de Ayacucho."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Pichincha y Boyacá",
+        lines: [
+          "La Batalla de Pichincha se libró el 24 de mayo de 1822 en las faldas del volcán en Quito.",
+          "Antonio José de Sucre lideró las fuerzas patriotas y liberó el territorio ecuatoriano.",
+          "El triunfo en Pichincha completó la liberación de la antigua Presidencia de Quito.",
+          "La Batalla de Boyacá tuvo lugar el 7 de agosto de 1819 en territorio de la actual Colombia.",
+          "Bolívar dirigió la carga patriota que derrotó al ejército realista en pocas horas.",
+          "Boyacá fue decisiva para la liberación del virreinato de Nueva Granada."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Chacabuco y campañas finales",
+        lines: [
+          "La Batalla de Chacabuco se libró el 12 de febrero de 1817 en los valles de Chile.",
+          "San Martín y Bernardo O'Higgins lideraron la campaña que derrotó a los realistas.",
+          "Chacabuco fue el preludio para la independencia definitiva de Chile en 1818.",
+          "Las campañas finales de 1824 incluyeron el sitio del Callao que resistió hasta 1826.",
+          "El último foco realista se rindió en el Real Felipe del Callao en enero de 1826.",
+          "Estas batallas demostraron la superioridad estratégica de los ejércitos independentistas."
+        ]
+      }
+    ],
+    illustrations: [
+      `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="200" fill="#1e1b4b"/>
+  <polygon points="50,150 80,80 110,150" fill="#2563eb"/>
+  <polygon points="120,150 150,60 180,150" fill="#dc2626"/>
+  <polygon points="190,150 220,80 250,150" fill="#16a34a"/>
+  <text x="80" y="170" text-anchor="middle" fill="#f59e0b" font-size="8">Junín</text>
+  <text x="150" y="170" text-anchor="middle" fill="#f59e0b" font-size="8">Ayacucho</text>
+  <text x="220" y="170" text-anchor="middle" fill="#f59e0b" font-size="8">Pichincha</text>
+  <line x1="50" y1="185" x2="250" y2="185" stroke="#f59e0b" stroke-width="2"/>
+  <text x="150" y="198" text-anchor="middle" fill="#ffffff" font-size="9">Batallas de la Independencia</text>
+</svg>`
+    ],
+    exercises: [
+      {
+        id: 7058,
+        question: "¿Qué características tuvo la Batalla de Junín?",
+        options: ["Batalla naval en el Pacífico", "Carga de caballería sin armas de fuego", "Sitio prolongado de una ciudad", "Guerra de guerrillas en la selva"],
+        correctIndex: 1,
+        explanation: "Junín fue una carga de caballería que duró solo 45 minutos sin disparos de arma de fuego.",
+        difficulty: "basico"
+      },
+      {
+        id: 7059,
+        question: "¿En qué fecha se libró la Batalla de Ayacucho?",
+        options: ["6 de agosto de 1824", "9 de diciembre de 1824", "24 de mayo de 1822", "7 de agosto de 1819"],
+        correctIndex: 1,
+        explanation: "La Batalla de Ayacucho tuvo lugar el 9 de diciembre de 1824 en la pampa de la Quinua.",
+        difficulty: "intermedio"
+      },
+      {
+        id: 7060,
+        question: "¿Qué batalla fue clave para la liberación del virreinato de Nueva Granada?",
+        options: ["Chacabuco", "Boyacá", "Junín", "Pichincha"],
+        correctIndex: 1,
+        explanation: "La Batalla de Boyacá el 7 de agosto de 1819 permitió la liberación de Nueva Granada.",
+        difficulty: "avanzado"
+      }
+    ]
+  },
+  {
+    slug: "constituciones-primitivas",
+    tip: "Perú tuvo múltiples constituciones en sus primeros años, reflejando la inestabilidad política de la república.",
+    theory: [
+      {
+        level: "basico",
+        title: "Primeras constituciones",
+        lines: [
+          "La primera constitución peruana fue promulgada en 1823 por el Congreso Constituyente.",
+          "La Constitución de 1826 fue redactada por Simón Bolívar con tendencia centralista.",
+          "Establecía un sistema presidencial vitalicio con un Senado hereditario designado.",
+          "La Constitución de 1828, bajo José de La Mar, restableció el sistema representativo.",
+          "Fue más liberal y limitó los poderes del presidente en comparación con la anterior.",
+          "Estas constituciones reflejaban la lucha constante entre centralismo y federalismo."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Constituciones del siglo XIX",
+        lines: [
+          "La Constitución de 1834 fue promulgada durante el gobierno del presidente Orbegoso.",
+          "Estableció un sistema republicano con separación de poderes entre los tres poderes del Estado.",
+          "La Constitución de 1836 creó la Confederación Perú-Boliviana con Santa Cruz.",
+          "Tuvo corta duración debido a la guerra con la Confederación Argentina y Chile.",
+          "La Constitución de 1867 fue promulgada por el presidente Mariano Ignacio Prado.",
+          "Esta constitución buscó modernizar las instituciones republicanas del país."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "La Constitución de 1979",
+        lines: [
+          "La Constitución de 1979 fue aprobada por la Asamblea Constituyente presidida por Luis Alberto Sánchez.",
+          "Estableció garantías individuales y derechos sociales para todos los ciudadanos peruanos.",
+          "Creó el Tribunal de Garantías Constitucionales para proteger los derechos fundamentales.",
+          "Permitió la retorno a la democracia tras el gobierno militar de Morales Bermúdez.",
+          "Fue derogada en 1993 por el gobierno de Alberto Fujimori tras el autogolpe.",
+          "La Constitución de 1979 es considerada una de las más progresistas de América Latina."
+        ]
+      }
+    ],
+    illustrations: [
+      `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="200" fill="#0f172a"/>
+  <rect x="80" y="30" width="140" height="120" rx="5" fill="none" stroke="#2563eb" stroke-width="2"/>
+  <line x1="100" y1="60" x2="200" y2="60" stroke="#f59e0b" stroke-width="2"/>
+  <line x1="100" y1="80" x2="200" y2="80" stroke="#f59e0b" stroke-width="2"/>
+  <line x1="100" y1="100" x2="200" y2="100" stroke="#f59e0b" stroke-width="2"/>
+  <line x1="100" y1="120" x2="170" y2="120" stroke="#f59e0b" stroke-width="2"/>
+  <circle cx="150" cy="45" r="8" fill="#dc2626"/>
+  <text x="150" y="170" text-anchor="middle" fill="#16a34a" font-size="11">Constituciones del Perú</text>
+  <text x="150" y="190" text-anchor="middle" fill="#8b5cf6" font-size="9">1823 - 1979</text>
+</svg>`
+    ],
+    exercises: [
+      {
+        id: 7061,
+        question: "¿Quién redactó la Constitución de 1826 con tendencia centralista?",
+        options: ["José de La Mar", "Simón Bolívar", "Agustín Gamarra", "Luis José de Orbegoso"],
+        correctIndex: 1,
+        explanation: "Simón Bolívar redactó la Constitución de 1826 estableciendo un sistema presidencial vitalicio.",
+        difficulty: "basico"
+      },
+      {
+        id: 7062,
+        question: "¿Qué constitución creó la Confederación Perú-Boliviana?",
+        options: ["Constitución de 1823", "Constitución de 1834", "Constitución de 1836", "Constitución de 1867"],
+        correctIndex: 2,
+        explanation: "La Constitución de 1836 estableció la Confederación Perú-Boliviana bajo el liderazgo de Santa Cruz.",
+        difficulty: "intermedio"
+      },
+      {
+        id: 7063,
+        question: "¿En qué año fue derogada la Constitución de 1979?",
+        options: ["1980", "1985", "1990", "1993"],
+        correctIndex: 3,
+        explanation: "La Constitución de 1979 fue derogada en 1993 tras el autogolpe de Alberto Fujimori.",
+        difficulty: "avanzado"
+      }
+    ]
+  },
+  {
+    slug: "consolidacion-republicana",
+    tip: "Los primeros años de la república peruana estuvieron marcados por guerras civiles y luchas por el poder.",
+    theory: [
+      {
+        level: "basico",
+        title: "Agustín Gamarra",
+        lines: [
+          "Agustín Gamarra fue presidente del Perú en dos períodos: 1829-1833 y 1838-1841.",
+          "Era partidario del centralismo y se opuso a la Confederación Perú-Boliviana.",
+          "En su primer gobierno consolidó las fronteras del sur contra influencias bolivianas.",
+          "Impulsó la educación pública y la creación de colegios nacionales en la capital.",
+          "En su segundo período presidió la restauración de la Confederación con victoria militar.",
+          "Murió en batalla en la Guerra contra Bolivia en 1841 en la batalla de Ingavi."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Orbegoso, Benavente y Salaverry",
+        lines: [
+          "Luis José de Orbegoso fue presidente de 1834 a 1835, promoviendo la Constitución de 1834.",
+          "Enfrentó la rebelión de Felipe Santiago Salaverry que lo depuso del poder en 1835.",
+          "Salaverry se autoproclamó Jefe Supremo pero su gobierno fue breve y autoritario.",
+          "Fue derrotado por Andrés de Santa Cruz en la batalla de Socabaya en 1836.",
+          "Mariano Ignacio Benavente fue presidente del Congreso Constituyente de 1834.",
+          "Su gobierno representó el período de transición entre la confederación y la restauración."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Las primeras décadas republicanas",
+        lines: [
+          "El Perú republicano enfrentó la difícil tarea de construir instituciones desde cero.",
+          "La lucha entre caudillos militares definió la política en las primeras décadas.",
+          "El centralismo limeño se enfrentó constantemente con las demandas provinciales.",
+          "La economía dependía del comercio y la agricultura antes del descubrimiento del guano.",
+          "La influencia extranjera fue constante en los asuntos internos del país durante este período.",
+          "La consolidación republicana tomó décadas y requirió múltiples guerras y conflictos internos."
+        ]
+      }
+    ],
+    illustrations: [
+      `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="200" fill="#1c1917"/>
+  <rect x="30" y="40" width="50" height="80" rx="3" fill="#2563eb"/>
+  <rect x="90" y="40" width="50" height="80" rx="3" fill="#dc2626"/>
+  <rect x="150" y="40" width="50" height="80" rx="3" fill="#16a34a"/>
+  <rect x="210" y="40" width="50" height="80" rx="3" fill="#8b5cf6"/>
+  <text x="55" y="150" text-anchor="middle" fill="#f59e0b" font-size="7">Gamarra</text>
+  <text x="115" y="150" text-anchor="middle" fill="#f59e0b" font-size="7">Orbegoso</text>
+  <text x="175" y="150" text-anchor="middle" fill="#f59e0b" font-size="7">Salaverry</text>
+  <text x="235" y="150" text-anchor="middle" fill="#f59e0b" font-size="7">Benavente</text>
+  <line x1="30" y1="170" x2="260" y2="170" stroke="#f59e0b" stroke-width="2"/>
+  <text x="150" y="190" text-anchor="middle" fill="#ffffff" font-size="10">Consolidación Republicana</text>
+</svg>`
+    ],
+    exercises: [
+      {
+        id: 7064,
+        question: "¿En qué batalla murió Agustín Gamarra en 1841?",
+        options: ["Batalla de Ayacucho", "Batalla de Ingavi", "Batalla de Junín", "Batalla de Socabaya"],
+        correctIndex: 1,
+        explanation: "Gamarra murió en la Batalla de Ingavi durante la guerra contra Bolivia en 1841.",
+        difficulty: "basico"
+      },
+      {
+        id: 7065,
+        question: "¿Quién depuso a Orbegoso del poder en 1835?",
+        options: ["Andrés de Santa Cruz", "Agustín Gamarra", "Felipe Santiago Salaverry", "Ramón Castilla"],
+        correctIndex: 2,
+        explanation: "Felipe Santiago Salaverry lideró una rebelión que depuso a Orbegoso y se autoproclamó Jefe Supremo.",
+        difficulty: "intermedio"
+      },
+      {
+        id: 7066,
+        question: "¿Cuál fue la principal característica política de las primeras décadas republicanas?",
+        options: ["Estabilidad institucional plena", "Lucha entre caudillos militares", "Gobierno democrático permanente", "Paz social sin conflictos"],
+        correctIndex: 1,
+        explanation: "La lucha entre caudillos militares definió la política del Perú republicano en sus primeras décadas.",
+        difficulty: "avanzado"
+      }
+    ]
+  },
+  {
+    slug: "guerras-civiles-xix",
+    tip: "Las guerras civiles del siglo XIX peruano fueron causadas por disputas entre centralistas y federales.",
+    theory: [
+      {
+        level: "basico",
+        title: "La Mar vs Gamarra",
+        lines: [
+          "La guerra entre José de La Mar y Agustín Gamarra fue por el control del gobierno en 1829.",
+          "Gamarra derrotó a La Mar en la batalla de Portete de Tarqui el 21 de febrero de 1829.",
+          "La Mar fue depuesto y exiliado al Ecuador donde murió poco después de la derrota.",
+          "Gamarra asumió la presidencia y consolidó su poder mediante la fuerza militar.",
+          "Este conflicto estableció el patrón de luchas entre caudillos militares en la república.",
+          "La guerra mostró la fragilidad de las instituciones recién creadas en el Perú."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Guerra contra la Confederación Perú-Boliviana",
+        lines: [
+          "La Guerra contra la Confederación Perú-Boliviana se libró entre 1836 y 1839.",
+          "Chile y los peruanos restauradores se aliaron para derrocar a Andrés de Santa Cruz.",
+          "La Batalla de Yungay el 20 de enero de 1839 fue decisiva para la victoria aliada.",
+          "Santa Cruz se exilió y la confederación se disolvió oficialmente tras la derrota.",
+          "Agustín Gamarra recuperó la presidencia tras la caída de la Confederación.",
+          "La guerra mostró que la unión entre Perú y Bolivia era inviable políticamente."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Salaverry vs Santa Cruz",
+        lines: [
+          "Felipe Santiago Salaverry se rebeló contra Orbegoso en 1835 con ambiciones de poder.",
+          "Se autoproclamó Jefe Supremo del Perú e inició una campaña militar agresiva.",
+          "Santa Cruz, presidente de Bolivia, invadió el Perú para apoyar a Orbegoso.",
+          "La Batalla de Socabaya el 3 de febrero de 1836 fue la derrota decisiva de Salaverry.",
+          "Salaverry fue capturado y ejecutado orden de Santa Cruz en la plaza de Arequipa.",
+          "Esta guerra dio origen a la Confederación Perú-Boliviana que duró hasta 1839."
+        ]
+      }
+    ],
+    illustrations: [
+      `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="200" fill="#1a1a2e"/>
+  <polygon points="70,50 120,120 20,120" fill="#dc2626"/>
+  <polygon points="230,50 180,120 280,120" fill="#2563eb"/>
+  <line x1="120" y1="120" x2="180" y2="120" stroke="#f59e0b" stroke-width="4"/>
+  <text x="70" y="145" text-anchor="middle" fill="#dc2626" font-size="9">Centralistas</text>
+  <text x="230" y="145" text-anchor="middle" fill="#2563eb" font-size="9">Confederación</text>
+  <text x="150" y="175" text-anchor="middle" fill="#16a34a" font-size="11">Guerras Civiles del Siglo XIX</text>
+  <text x="150" y="195" text-anchor="middle" fill="#8b5cf6" font-size="8">1829 - 1839</text>
+</svg>`
+    ],
+    exercises: [
+      {
+        id: 7067,
+        question: "¿En qué batalla derrotó Gamarra a José de La Mar?",
+        options: ["Batalla de Ayacucho", "Batalla de Portete de Tarqui", "Batalla de Yungay", "Batalla de Socabaya"],
+        correctIndex: 1,
+        explanation: "Gamarra derrotó a La Mar en la Batalla de Portete de Tarqui el 21 de febrero de 1829.",
+        difficulty: "basico"
+      },
+      {
+        id: 7068,
+        question: "¿Qué batalla fue decisiva para la caída de la Confederación Perú-Boliviana?",
+        options: ["Batalla de Ingavi", "Batalla de Yungay", "Batalla de Junín", "Batalla de Chacabuco"],
+        correctIndex: 1,
+        explanation: "La Batalla de Yungay el 20 de enero de 1839 fue decisiva para la victoria contra la Confederación.",
+        difficulty: "intermedio"
+      },
+      {
+        id: 7069,
+        question: "¿Qué acontecimiento dio origen a la Confederación Perú-Boliviana?",
+        options: ["La victoria de Gamarra en Portete", "La derrota de Salaverry en Socabaya", "La Conferencia de Guayaquil", "La Batalla de Ayacucho"],
+        correctIndex: 1,
+        explanation: "La derrota de Salaverry en Socabaya permitió a Santa Cruz crear la Confederación Perú-Boliviana.",
+        difficulty: "avanzado"
+      }
+    ]
+  },
+  {
+    slug: "economia-guanera",
+    tip: "La economía guanera fue la principal fuente de riqueza del Perú entre 1840 y 1880.",
+    theory: [
+      {
+        level: "basico",
+        title: "Los depósitos de guano",
+        lines: [
+          "El guano era el excremento de aves marinas acumulado durante siglos en las islas costeras.",
+          "Perú poseía las mayores reservas de guano del mundo en las Islas de Chincha y otras islas.",
+          "El guano era un fertilizante natural de altísima calidad para la agricultura europea.",
+          "La explotación del guano comenzó de manera intensiva a partir de 1840.",
+          "Los depósitos generaron enormes ingresos fiscales para el Estado peruano.",
+          "El guano transformó temporalmente la economía del Perú y financió grandes obras públicas."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Contratos fantasma y diplomacia del guano",
+        lines: [
+          "Los contratos fantasmas eran acuerdos secretos entre el gobierno y comerciantes extranjeros.",
+          "Estos contratos permitían la exportación de guano a precios muy por debajo del mercado.",
+          "Los intermediarios como Grillo y Farina acumularon enormes fortunas personales.",
+          "La diplomacia del guano buscaba mantener buenas relaciones con potencias compradoras.",
+          "Inglaterra, Francia y España fueron los principales compradores de guano peruano.",
+          "El guano dio al Perú influencia diplomática pero también dependencia económica peligrosa."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Contrato Bonin-Bonsselens",
+        lines: [
+          "El contrato Bonin-Bonsselens de 1853 fue uno de los más polémicos de la era guanera.",
+          "Establecía que el guano se vendería a través de agentes europeos con comisiones altas.",
+          "Los intermediarios recibían una parte significativa de las ganancias del guano.",
+          "El contrato fue criticado por las enormes pérdidas que generaba al fisco peruano.",
+          "Muchos historiadores lo consideran un ejemplo de corrupción en la gestión del guano.",
+          "La explotación abusiva del guano condujo a su agotamiento progresivo hacia 1880."
+        ]
+      }
+    ],
+    illustrations: [
+      `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="200" fill="#0c4a6e"/>
+  <ellipse cx="150" cy="140" rx="120" ry="40" fill="#f59e0b"/>
+  <ellipse cx="150" cy="130" rx="100" ry="30" fill="#fbbf24"/>
+  <path d="M100,80 Q120,60 140,80 Q160,60 180,80 Q200,60 220,80" fill="none" stroke="#ffffff" stroke-width="2"/>
+  <circle cx="120" cy="70" r="5" fill="#16a34a"/>
+  <circle cx="160" cy="65" r="5" fill="#16a34a"/>
+  <circle cx="200" cy="70" r="5" fill="#16a34a"/>
+  <line x1="150" y1="140" x2="150" y2="180" stroke="#2563eb" stroke-width="2"/>
+  <text x="150" y="195" text-anchor="middle" fill="#ffffff" font-size="10">Economía Guanera 1840-1880</text>
+</svg>`
+    ],
+    exercises: [
+      {
+        id: 7070,
+        question: "¿Qué material自然资源 era la principal fuente de riqueza del Perú entre 1840 y 1880?",
+        options: ["El petróleo", "El guano de las islas", "La plata de Cerro de Pasco", "El caucho amazónico"],
+        correctIndex: 1,
+        explanation: "El guano de las islas fue el principal recurso económico del Perú durante ese período.",
+        difficulty: "basico"
+      },
+      {
+        id: 7071,
+        question: "¿Qué eran los contratos fantasmas en la era guanera?",
+        options: ["Contratos públicos transparentes", "Acuerdos secretos con intermediarios extranjeros", "Tratados de libre comercio", "Convenios con sindicatos"],
+        correctIndex: 1,
+        explanation: "Los contratos fantasmas eran acuerdos secretos que permitían la exportación a precios bajos.",
+        difficulty: "intermedio"
+      },
+      {
+        id: 7072,
+        question: "¿Qué contrato de 1853 fue considerado uno de los más polémicos de la era guanera?",
+        options: ["Contrato Dreyfus", "Contrato Bonin-Bonsselens", "Contrato Grace", "Contrato Prado"],
+        correctIndex: 1,
+        explanation: "El contrato Bonin-Bonsselens de 1853 estableció comisiones muy altas para intermediarios.",
+        difficulty: "avanzado"
+      }
+    ]
+  },
+{
+    slug: "guerra-pacifico",
+    tip: "La Guerra del Pacífico (1879-1883) enfrentó a Perú y Bolivia contra Chile por el control del salitre en el desierto de Atacama.",
+    theory: [
+      {
+        level: "basico",
+        title: "Causas de la Guerra del Pacífico",
+        lines: [
+          "La Guerra del Pacífico se libró entre 1879 y 1883 principalmente por el control de los depósitos de salitre y guano.",
+          "Bolivia impuso un impuesto de 10 centavos por quintal de salitre a la empresa chilena Compañía de Salitres de Antofagasta.",
+          "Chile respondió militarmente invadiendo el puerto boliviano de Antofagasta en febrero de 1879.",
+          "Perú se unió al conflicto debido al Tratado de Alianza Defensiva firmado con Bolivia en 1873.",
+          "El desierto de Atacama contenía valiosos yacimientos de salitre que eran la principal fuente de ingresos de la región.",
+          "La riqueza del guano y el salitre atrajo la ambición de las potencias europeas y de Chile hacia el territorio."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Batallas navales y terrestres",
+        lines: [
+          "La Batalla de Iquique el 21 de mayo de 1879 marcó el inicio del conflicto naval entre las dos naciones.",
+          "El monitor Huáscar fue capturado por Chile en la Batalla de Angamos, dejando a Perú sin su principal buque de guerra.",
+          "La Batalla de Arica del 7 de junio de 1880 significó la caída de la Plaza Fuerte de Arica y la pérdida de un bastión defensivo clave.",
+          "El Combate de Los Ángeles mostró la resistencia peruana en los valles altos del sur del país.",
+          "Las fuerzas chilenas avanzaron por tierra hacia el norte del Perú tras controlar el litoral.",
+          "La artillería peruana demostró valentía pero no pudo compensar la superioridad logística y numérica del ejército chileno."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Tratado de Ancón y fin del conflicto",
+        lines: [
+          "El Tratado de Ancón se firmó el 20 de octubre de 1883 y puso fin oficialmente a la Guerra del Pacífico.",
+          "Perú cedió la provincia de Tarapacá a Chile de forma permanente mediante el Tratado de Ancón.",
+          "Las provincias de Arica y Tacna quedaron bajo administración chilena por un período de diez años con plebiscito posterior.",
+          "El conflicto causó la muerte de más de 10.000 soldados peruanos y la devastación económica del sur del país.",
+          "El Tratado de Lima de 1929 resolvió la disputa por Tacna, devolviéndola al Perú mientras Arica quedó para Chile.",
+          "La guerra dejó secuelas políticas profundas que desestabilizaron los gobiernos civiles peruanos durante décadas."
+        ]
+      }
+    ],
+    illustrations: [
+      `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+        <rect width="300" height="200" fill="#f0e6d3"/>
+        <text x="150" y="25" font-size="14" font-weight="bold" text-anchor="middle" fill="#4a3728">Guerra del Pacífico 1879-1883</text>
+        <rect x="20" y="45" width="120" height="70" fill="#b8860b" rx="3"/>
+        <text x="80" y="70" font-size="10" text-anchor="middle" fill="#fff">Salitre</text>
+        <text x="80" y="85" font-size="10" text-anchor="middle" fill="#fff">Desierto de Atacama</text>
+        <rect x="160" y="45" width="120" height="70" fill="#1e90ff" rx="3"/>
+        <text x="220" y="70" font-size="10" text-anchor="middle" fill="#fff">Batalla Naval</text>
+        <text x="220" y="85" font-size="10" text-anchor="middle" fill="#fff">Iquique 1879</text>
+        <line x1="140" y1="80" x2="160" y2="80" stroke="#c0392b" stroke-width="2" marker-end="url(#arrow)"/>
+        <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#c0392b"/></marker></defs>
+        <rect x="20" y="130" width="260" height="55" fill="#d4a574" rx="3"/>
+        <text x="150" y="150" font-size="10" text-anchor="middle" fill="#4a3728">Tratado de Ancón (1883)</text>
+        <text x="150" y="165" font-size="9" text-anchor="middle" fill="#4a3728">Perú cede Tarapacá • Tacna y Arica bajo administración chilena</text>
+        <text x="150" y="180" font-size="9" text-anchor="middle" fill="#4a3728">Pérdida territorial irreparable para el Perú</text>
+      </svg>`
+    ],
+    exercises: [
+      {
+        id: 7073,
+        question: "¿Cuál fue la causa principal de la Guerra del Pacífico?",
+        options: [
+          "El control del río Amazonas",
+          "El control del salitre en el desierto de Atacama",
+          "La disputa por la isla de Pascua",
+          "El comercio de coca y hojas de coca"
+        ],
+        correctIndex: 1,
+        explanation: "La principal causa fue el control de los yacimientos de salitre en el desierto de Atacama, un recurso altamente valioso para la agricultura europea.",
+        difficulty: "basico"
+      },
+      {
+        id: 7074,
+        question: "¿En qué fecha ocurrió la Batalla de Arica y qué significó para el Perú?",
+        options: [
+          "7 de junio de 1879, inicio de la guerra",
+          "7 de junio de 1880, caída de la Plaza Fuerte de Arica",
+          "21 de mayo de 1879, victoria peruana en el mar",
+          "20 de octubre de 1883, firma del Tratado"
+        ],
+        correctIndex: 1,
+        explanation: "La Batalla de Arica del 7 de junio de 1880 significó la caída de la Plaza Fuerte de Arica, un bastión defensivo estratégico del Perú.",
+        difficulty: "intermedio"
+      },
+      {
+        id: 7075,
+        question: "¿Qué estableció el Tratado de Ancón de 1883?",
+        options: [
+          "La alianza permanente entre Perú y Bolivia",
+          "La cesión de la provincia de Tarapacá a Chile de forma permanente",
+          "La devolución de Tacna al Perú inmediatamente",
+          "La independencia total de Chile del Reino Unido"
+        ],
+        correctIndex: 1,
+        explanation: "El Tratado de Ancón estableció la cesión permanente de la provincia de Tarapacá a Chile y la administración temporal de Arica y Tacna.",
+        difficulty: "avanzado"
+      }
+    ]
+  },
+  {
+    slug: "guerra-pacifico-consecuencias",
+    tip: "Las consecuencias de la Guerra del Pacífico devastaron al Perú: perdió Tarapacá, sufrió ocupación y tardó décadas en recuperarse económicamente.",
+    theory: [
+      {
+        level: "basico",
+        title: "Pérdidas territoriales del Perú",
+        lines: [
+          "Perú perdió la provincia de Tarapacá de forma permanente tras la firma del Tratado de Ancón en 1883.",
+          "La región sur del país quedó devastada por las batallas y la ocupación militar chilena.",
+          "Arica y Tacna quedaron bajo administración chilena durante más de 40 años antes de resolverse el conflicto.",
+          "El Plebiscito de Tacna fue demorado por ambas naciones durante décadas sin llegar a una solución.",
+          "El Tratado de Lima de 1929 finalmente devolvió Tacna al Perú pero Arica quedó definitivamente en manos chilenas.",
+          "La pérdida territorial significó también la pérdida de importantes recursos mineros y de la riqueza del salitre."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Consecuencias económicas y sociales",
+        lines: [
+          "La ocupación chilena de Lima duró tres años y provocó el saqueo de archivos, museos y la Biblioteca Nacional.",
+          "La economía peruana quedó devastada al perder las principales fuentes de riqueza del guano y el salitre.",
+          "Muchos campos destruidos y ciudades arrasadas obligaron a una reconstrucción lenta y costosa.",
+          "La deuda externa del Perú aumentó dramáticamente para financiar la reconstrucción del país.",
+          "La confiscación de bienes peruanos durante la ocupación generó un profundo resentimiento nacional.",
+          "La guerra provocó un éxodo masivo de la población del sur hacia Lima y otras regiones del país."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Reconstrucción y legado",
+        lines: [
+          "El gobierno de Nicolás de Piérola inició la reconstrucción del Estado peruano tras la devastación de la guerra.",
+          "La Guerra del Pacífico marcó el fin de la era del guano y obligó al Perú a diversificar su economía.",
+          "El resentimiento nacional chileno-peruano se mantuvo como un tema central de la política exterior peruana.",
+          "La pérdida del salitre impulsó al Perú a buscar nuevas fuentes de riqueza en la minería de otros minerales.",
+          "La reconstrucción moral y política del país tomó más de una generación y transformó la identidad nacional.",
+          "El conflicto dejó una huella profunda en la literatura, el arte y la memoria colectiva del Perú."
+        ]
+      }
+    ],
+    illustrations: [
+      `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+        <rect width="300" height="200" fill="#f5f0e8"/>
+        <text x="150" y="25" font-size="14" font-weight="bold" text-anchor="middle" fill="#4a3728">Consecuencias de la Guerra del Pacífico</text>
+        <rect x="20" y="45" width="130" height="55" fill="#c0392b" rx="3"/>
+        <text x="85" y="65" font-size="10" text-anchor="middle" fill="#fff">Pérdida territorial</text>
+        <text x="85" y="80" font-size="9" text-anchor="middle" fill="#fff">Tarapacá cedida permanentemente</text>
+        <rect x="160" y="45" width="120" height="55" fill="#2980b9" rx="3"/>
+        <text x="220" y="65" font-size="10" text-anchor="middle" fill="#fff">Economía devastada</text>
+        <text x="220" y="80" font-size="9" text-anchor="middle" fill="#fff">Pérdida del guano y salitre</text>
+        <rect x="20" y="115" width="260" height="70" fill="#27ae60" rx="3"/>
+        <text x="150" y="135" font-size="10" text-anchor="middle" fill="#fff">Reconstrucción nacional</text>
+        <text x="150" y="150" font-size="9" text-anchor="middle" fill="#fff">Piérola inicia la recuperación del Estado</text>
+        <text x="150" y="165" font-size="9" text-anchor="middle" fill="#fff">Tratado de Lima 1929: Tacna vuelve al Perú</text>
+        <text x="150" y="180" font-size="9" text-anchor="middle" fill="#fff">Arica permanece bajo soberanía chilena</text>
+      </svg>`
+    ],
+    exercises: [
+      {
+        id: 7076,
+        question: "¿Qué provincia perdió el Perú de forma permanente tras el Tratado de Ancón?",
+        options: [
+          "Tacna",
+          "Arica",
+          "Tarapacá",
+          "Moquegua"
+        ],
+        correctIndex: 2,
+        explanation: "La provincia de Tarapacá fue cedida a Chile de forma permanente mediante el Tratado de Ancón de 1883.",
+        difficulty: "basico"
+      },
+      {
+        id: 7077,
+        question: "¿Cuándo se firmó el Tratado de Lima que resolvió la disputa por Tacna?",
+        options: [
+          "1883",
+          "1890",
+          "1910",
+          "1929"
+        ],
+        correctIndex: 3,
+        explanation: "El Tratado de Lima se firmó en 1929, devolviendo Tacna al Perú mientras Arica quedó bajo soberanía chilena.",
+        difficulty: "intermedio"
+      },
+      {
+        id: 7078,
+        question: "¿Qué impacto económico tuvo la ocupación chilena de Lima sobre el Perú?",
+        options: [
+          "La economía peruana mejoró gracias al comercio con Chile",
+          "Se produjo el saqueo de archivos, museos y la Biblioteca Nacional",
+          "Chile invirtió en infraestructura peruana",
+          "La población peruana se benefició de nuevas tecnologías chilenas"
+        ],
+        correctIndex: 1,
+        explanation: "La ocupación de Lima por tres años provocó el saqueo de archivos, museos y la Biblioteca Nacional, además de la confiscación de bienes.",
+        difficulty: "avanzado"
+      }
+    ]
+  },
+  {
+    slug: "generacion-900",
+    tip: "La Generación del 900 fue un movimiento intelectual y político que surgió contra la oligarquía y el sistema de gobierno de la República Aristocrática.",
+    theory: [
+      {
+        level: "basico",
+        title: "Manuel González Prada y el movimiento",
+        lines: [
+          "Manuel González Prada fue el principal líder intelectual de la Generación del 900 en el Perú.",
+          "Este movimiento intelectual surgió a principios del siglo XX como respuesta a la oligarquía gobernante.",
+          "González Prada criticó duramente la corrupción del gobierno y la explotación de los trabajadores.",
+          "El movimiento buscaba una reforma social profunda que incluyera derechos para los indígenas.",
+          "Las ideas de la Generación del 900 influyeron en movimientos posteriores como el Aprismo.",
+          "González Prada utilizó su pluma para denunciar la injusticia social y la opresión del pueblo."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Anarquismo y movimientos sociales",
+        lines: [
+          "El anarquismo llegó al Perú a través de inmigrantes italianos y españoles que formaron sociedades de resistencia.",
+          "Los sindicatos anarquistas organizaron las primeras huelgas obreras en Lima y los centros mineros del sur.",
+          "La Sociedad de Artesanos-Unión Brión fundada en 1896 fue una de las primeras organizaciones obreras importantes.",
+          "Los periódicos anarquistas como El Obrero o La Humanidad difundieron las ideas de emancipación del trabajador.",
+          "El gobierno oligárquico respondió con represión brutal a las protestas obreras y campesinas.",
+          "Estos movimientos sentaron las bases para la organización sindical moderna en el Perú."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Reformas y legado",
+        lines: [
+          "González Prada propuso la educación laica, gratuita y obligatoria como pilar de la transformación social.",
+          "El movimiento insistió en la necesidad de Reforma Agraria para dar tierras a los campesinos indígenas.",
+          "Las ideas de la Generación del 900 se conectaron con el Aprismo de Haya de la Torre en los años 20.",
+          "La lucha contra la oligarquía terrateniente se convirtió en el eje central de la política peruana del siglo XX.",
+          "El legado de González Prada inspiró a generaciones posteriores de intelectuales y políticos progresistas.",
+          "El movimiento marcó el inicio de la conciencia de clase en la sociedad peruana y el despertar político."
+        ]
+      }
+    ],
+    illustrations: [
+      `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+        <rect width="300" height="200" fill="#f0f0f0"/>
+        <text x="150" y="25" font-size="14" font-weight="bold" text-anchor="middle" fill="#333">Generación del 900</text>
+        <circle cx="75" cy="85" r="35" fill="#8b4513"/>
+        <text x="75" y="80" font-size="8" text-anchor="middle" fill="#fff">González</text>
+        <text x="75" y="92" font-size="8" text-anchor="middle" fill="#fff">Prada</text>
+        <rect x="135" y="50" width="70" height="70" fill="#8b0000" rx="3"/>
+        <text x="170" y="75" font-size="8" text-anchor="middle" fill="#fff">Anarquismo</text>
+        <text x="170" y="88" font-size="8" text-anchor="middle" fill="#fff">y Sindicatos</text>
+        <text x="170" y="100" font-size="8" text-anchor="middle" fill="#fff">Huelgas</text>
+        <rect x="215" y="50" width="70" height="70" fill="#006400" rx="3"/>
+        <text x="250" y="75" font-size="8" text-anchor="middle" fill="#fff">Reformas</text>
+        <text x="250" y="88" font-size="8" text-anchor="middle" fill="#fff">Sociales</text>
+        <text x="250" y="100" font-size="8" text-anchor="middle" fill="#fff">Educación</text>
+        <line x1="110" y1="85" x2="135" y2="85" stroke="#333" stroke-width="2"/>
+        <line x1="205" y1="85" x2="215" y2="85" stroke="#333" stroke-width="2"/>
+        <rect x="20" y="135" width="260" height="50" fill="#daa520" rx="3"/>
+        <text x="150" y="155" font-size="10" text-anchor="middle" fill="#333">Legado: Conciencia de clase y despertar político</text>
+        <text x="150" y="170" font-size="9" text-anchor="middle" fill="#333">Reforma Agraria • Educación laica • Derechos indígenas</text>
+      </svg>`
+    ],
+    exercises: [
+      {
+        id: 7079,
+        question: "¿Quién fue el principal líder intelectual de la Generación del 900 en el Perú?",
+        options: [
+          "Víctor Raúl Haya de la Torre",
+          "Manuel González Prada",
+          "Jos Carlos Mariátegui",
+          "Nicolás de Piérola"
+        ],
+        correctIndex: 1,
+        explanation: "Manuel González Prada fue el principal líder intelectual de la Generación del 900, usando su pluma para criticar la oligarquía.",
+        difficulty: "basico"
+      },
+      {
+        id: 7080,
+        question: "¿Qué movimiento político surgió en el Perú a través de inmigrantes italianos y españoles?",
+        options: [
+          "El socialismo",
+          "El liberalismo",
+          "El anarquismo",
+          "El aprismo"
+        ],
+        correctIndex: 2,
+        explanation: "El anarquismo llegó al Perú con inmigrantes italianos y españoles que formaron sociedades de resistencia y organizaron huelgas.",
+        difficulty: "intermedio"
+      },
+      {
+        id: 7081,
+        question: "¿Cuál fue una de las principales propuestas de González Prada para la transformación del Perú?",
+        options: [
+          "La creación de un ejército permanente",
+          "La educación laica, gratuita y obligatoria",
+          "El fortalecimiento de la Iglesia Católica",
+          "La centralización total del gobierno en Lima"
+        ],
+        correctIndex: 1,
+        explanation: "González Prada propuso la educación laica, gratuita y obligatoria como pilar fundamental de la transformación social del Perú.",
+        difficulty: "avanzado"
+      }
+    ]
+  },
+  {
+    slug: "oligarquia-exportadora",
+    tip: "La República Aristocrática (1895-1930) fue una etapa de dominio de la oligarquía exportadora que modernizó la economía pero excluyó a las mayorías.",
+    theory: [
+      {
+        level: "basico",
+        title: "La paz civil de Piérola",
+        lines: [
+          "Nicolás de Piérola asumió el poder en 1895 tras la Revolución Civil de 1894 contra el gobierno de Cáceres.",
+          "Piérola estableció la paz civil y puso fin a las guerras internas que habían plagado al Perú desde la Guerra del Pacífico.",
+          "Su gobierno modernizó la administración pública y estableció un sistema tributario más eficiente.",
+          "Piérola creó la Corte de Cuentas y profesionalizó la recaudación de impuestos del Estado.",
+          "Su gestión sentó las bases para el crecimiento económico que viviría el Perú en las primeras décadas del siglo XX.",
+          "La oligarquía costeña comenzó a dominar la política nacional a partir de la estabilidad alcanzada con Piérola."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Modernización económica",
+        lines: [
+          "La economía peruana creció significativamente gracias a las exportaciones de azúcar, algodón y caucho.",
+          "El Banco de Perú y Londres fue fundado en 1897 y se convirtió en una de las principales instituciones financieras.",
+          "La construcción del ferrocarril central andino conectó la sierra con la costa y facilitó el comercio.",
+          "La inversión extranjera, especialmente británica, fluyó hacia las minas y las plantaciones costeñas.",
+          "La modernización económica benefició principalmente a la oligarquía terrateniente de la costa.",
+          "El crecimiento del comercio internacional posicionó al Perú como exportador de materias primas estratégicas."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "El Oncenio de Leguía",
+        lines: [
+          "Augusto Bernardino Leguía gobernó por segunda vez de 1919 a 1930, un período conocido como el Oncenio.",
+          "Leguía implementó reformas modernizadoras como la Ley de Consagración de Haciendas que benefició a la oligarquía.",
+          "El Oncenio significó una centralización extrema del poder con el cierre del Congreso y la concentración de facultades.",
+          "Leguía construyó obras públicas importantes como edificios, carreteras y sistemas de riego en todo el país.",
+          "Su gobierno terminó con la crisis económica de 1929 y una revolución que lo derrocó en agosto de 1930.",
+          "El Oncenio marcó el apogeo y la caída de la República Aristocrática como sistema político dominante."
+        ]
+      }
+    ],
+    illustrations: [
+      `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+        <rect width="300" height="200" fill="#f8f4e8"/>
+        <text x="150" y="25" font-size="13" font-weight="bold" text-anchor="middle" fill="#4a3728">República Aristocrática (1895-1930)</text>
+        <rect x="20" y="45" width="120" height="60" fill="#4169e1" rx="3"/>
+        <text x="80" y="65" font-size="9" text-anchor="middle" fill="#fff">Paz Civil</text>
+        <text x="80" y="78" font-size="8" text-anchor="middle" fill="#fff">Piérola 1895</text>
+        <text x="80" y="90" font-size="8" text-anchor="middle" fill="#fff">Estabilidad política</text>
+        <rect x="160" y="45" width="120" height="60" fill="#228b22" rx="3"/>
+        <text x="220" y="65" font-size="9" text-anchor="middle" fill="#fff">Economía exportadora</text>
+        <text x="220" y="78" font-size="8" text-anchor="middle" fill="#fff">Azúcar, algodón, caucho</text>
+        <text x="220" y="90" font-size="8" text-anchor="middle" fill="#fff">Banco de Perú y Londres</text>
+        <rect x="20" y="120" width="260" height="65" fill="#8b4513" rx="3"/>
+        <text x="150" y="140" font-size="10" text-anchor="middle" fill="#fff">Oncenio de Leguía (1919-1930)</text>
+        <text x="150" y="155" font-size="9" text-anchor="middle" fill="#fff">Modernización • Centralización del poder • Obras públicas</text>
+        <text x="150" y="170" font-size="9" text-anchor="middle" fill="#fff">Crisis económica 1929 • Derrocamiento 1930</text>
+      </svg>`
+    ],
+    exercises: [
+      {
+        id: 7082,
+        question: "¿Qué presidente estableció la paz civil en el Perú en 1895 tras la Revolución Civil?",
+        options: [
+          "Augusto Bernardino Leguía",
+          "Nicolás de Piérola",
+          "Andrés Avelino Cáceres",
+          "Manuel Prado"
+        ],
+        correctIndex: 1,
+        explanation: "Nicolás de Piérola asumió el poder en 1895 y estableció la paz civil, poniendo fin a las guerras internas.",
+        difficulty: "basico"
+      },
+      {
+        id: 7083,
+        question: "¿Cuáles fueron los principales productos de exportación de la República Aristocrática?",
+        options: [
+          "Petróleo, cobre y zinc",
+          "Azúcar, algodón y caucho",
+          "Oro, plata y estaño",
+          "Café, cacao y tabaco"
+        ],
+        correctIndex: 1,
+        explanation: "La economía exportadora de la República Aristocrática se basó principalmente en azúcar, algodón y caucho.",
+        difficulty: "intermedio"
+      },
+      {
+        id: 7084,
+        question: "¿Cómo se conoce el segundo gobierno de Leguía y por qué terminó?",
+        options: [
+          "La Convención, por conflicto con el Congreso",
+          "El Oncenio, por la crisis económica de 1929 y una revolución",
+          "La República Nueva, por elecciones libres",
+          "El Consulado, por muerte natural"
+        ],
+        correctIndex: 1,
+        explanation: "El Oncenio (1919-1930) terminó con la crisis económica de 1929 y una revolución que derrocó a Leguía en agosto de 1930.",
+        difficulty: "avanzado"
+      }
+    ]
+  },
+  {
+    slug: "crisis-1929",
+    tip: "La crisis de 1929 golpeó duramente al Perú: cayeron las exportaciones, aumentó el desempleo y surgieron nuevos movimientos políticos como el APRA.",
+    theory: [
+      {
+        level: "basico",
+        title: "Impacto de la Gran Depresión en el Perú",
+        lines: [
+          "La Gran Depresión de 1929 afectó gravemente la economía peruana al caer la demanda internacional de sus productos de exportación.",
+          "Los precios del algodón, azúcar y caucho se desplomaron, causando quiebras de empresas y desempleo masivo.",
+          "Las exportaciones peruanas se redujeron a la mitad en apenas dos años, devastando la economía nacional.",
+          "El desempleo se disparó en las ciudades costeñas, especialmente en Lima, Callao y Trujillo.",
+          "Los campesinos y obreros fueron los más afectados por la crisis económica y la caída de los salarios.",
+          "La crisis expuso las debilidades de un modelo económico dependiente de la exportación de materias primas."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Inestabilidad política y social",
+        lines: [
+          "La crisis de 1929 provocó la caída del gobierno de Leguía en agosto de 1930 mediante una revolución liderada por Sánchez Cerro.",
+          "Luis Miguel Sánchez Cerro asumió el poder prometiendo restaurar la democracia y mejorar las condiciones del pueblo.",
+          "El descontento social creció rápidamente entre los trabajadores urbanos y los campesinos de la sierra.",
+          "Los partidos políticos de izquierda ganaron influencia entre las masas descontentas por la crisis económica.",
+          "La inestabilidad política se manifestó en constantes cambios de gobierno y conspiraciones militares.",
+          "La crisis impulsó la organización de sindicatos y partidos políticos que representaban a los trabajadores."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Surgimiento del APRA y el Socialismo",
+        lines: [
+          "Víctor Raúl Haya de la Torre fundó el APRA en 1930 como respuesta a la crisis y al modelo oligárquico.",
+          "El Partido Socialista peruano, liderado por José Carlos Mariátegui, también ganó fuerza durante la crisis de 1929.",
+          "Mariátegui publicó los Siete Ensayos de Interpretación de la Realidad Peruana en 1928, analizando la sociedad peruana.",
+          "Ambos movimientos buscaban una transformación profunda del sistema político y económico del Perú.",
+          "La crisis de 1929 demostró que el modelo oligárquico era insostenible y necesitaba reformas estructurales.",
+          "El surgimiento de nuevas fuerzas políticas marcó el fin de la República Aristocrática y el inicio de una nueva era."
+        ]
+      }
+    ],
+    illustrations: [
+      `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+        <rect width="300" height="200" fill="#f5f5f5"/>
+        <text x="150" y="25" font-size="14" font-weight="bold" text-anchor="middle" fill="#333">Crisis de 1929 en el Perú</text>
+        <rect x="20" y="45" width="260" height="55" fill="#8b0000" rx="3"/>
+        <text x="150" y="65" font-size="10" text-anchor="middle" fill="#fff">Gran Depresión: Caída de exportaciones</text>
+        <text x="150" y="80" font-size="9" text-anchor="middle" fill="#fff">Algodón, azúcar, caucho: precios desplomados</text>
+        <text x="150" y="93" font-size="9" text-anchor="middle" fill="#fff">Desempleo masivo y quiebras empresariales</text>
+        <rect x="20" y="115" width="120" height="55" fill="#4169e1" rx="3"/>
+        <text x="80" y="135" font-size="9" text-anchor="middle" fill="#fff">APRA 1930</text>
+        <text x="80" y="150" font-size="8" text-anchor="middle" fill="#fff">Haya de la Torre</text>
+        <text x="80" y="162" font-size="8" text-anchor="middle" fill="#fff">Reformismo social</text>
+        <rect x="160" y="115" width="120" height="55" fill="#228b22" rx="3"/>
+        <text x="220" y="135" font-size="9" text-anchor="middle" fill="#fff">Socialismo</text>
+        <text x="220" y="150" font-size="8" text-anchor="middle" fill="#fff">Mariátegui</text>
+        <text x="220" y="162" font-size="8" text-anchor="middle" fill="#fff">Siete Ensayos</text>
+        <rect x="20" y="178" width="260" height="15" fill="#333" rx="2"/>
+        <text x="150" y="190" font-size="9" text-anchor="middle" fill="#fff">Fin de la República Aristocrática</text>
+      </svg>`
+    ],
+    exercises: [
+      {
+        id: 7085,
+        question: "¿Cómo afectó la crisis de 1929 a las exportaciones peruanas?",
+        options: [
+          "Las exportaciones aumentaron un 50%",
+          "Las exportaciones se redujeron a la mitad en dos años",
+          "No hubo efecto en las exportaciones",
+          "Las exportaciones se diversificaron hacia Europa"
+        ],
+        correctIndex: 1,
+        explanation: "La crisis de 1929 causó una reducción del 50% en las exportaciones peruanas en apenas dos años por la caída de precios internacionales.",
+        difficulty: "basico"
+      },
+      {
+        id: 7086,
+        question: "¿Qué partido político surgió como respuesta a la crisis de 1929?",
+        options: [
+          "El Partido Civil",
+          "El Partido Constitucional",
+          "El APRA",
+          "El Partido Demócrata"
+        ],
+        correctIndex: 2,
+        explanation: "El APRA fue fundado por Víctor Raúl Haya de la Torre en 1930 como respuesta a la crisis y al modelo oligárquico.",
+        difficulty: "intermedio"
+      },
+      {
+        id: 7087,
+        question: "¿Qué obra escribió José Carlos Mariátegui que analizaba la realidad peruana?",
+        options: [
+          "El Capital en el Perú",
+          "Los Siete Ensayos de Interpretación de la Realidad Peruana",
+          "La Historia de la República del Perú",
+          "El Manifiesto Comunista Peruano"
+        ],
+        correctIndex: 1,
+        explanation: "Mariátegui publicó los Siete Ensayos de Interpretación de la Realidad Peruana en 1928, una obra fundamental del pensamiento social latinoamericano.",
+        difficulty: "avanzado"
+      }
+    ]
+  },
+  {
+    slug: "segundo-ingenieros",
+    tip: "El APRA se fundó en 1930 y la Revolución de Trujillo de 1932 fue un intento fallido de Haya de la Torre de tomar el poder por la fuerza.",
+    theory: [
+      {
+        level: "basico",
+        title: "Víctor Raúl Haya de la Torre",
+        lines: [
+          "Víctor Raúl Haya de la Torre fue el fundador del APRA y una de las figuras políticas más importantes del siglo XX peruano.",
+          "Haya de la Torre fundó el Partido Aprista Peruano en 1930 durante su exilio en México.",
+          "El APRA se presentó como un movimiento antiimperialista y de liberación nacional para las Américas.",
+          "Haya de la Torre propuso la unión de los países latinoamericanos frente al imperialismo estadounidense.",
+          "El APRA ganó rápidamente apoyo entre los estudiantes, obreros y sectores medios urbanos.",
+          "La ideología aprista combinaba elementos del socialismo democrático con el nacionalismo latinoamericano."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "La Revolución de Trujillo de 1932",
+        lines: [
+          "En julio de 1932, los apristas lanzaron una revolución armada en Trujillo contra el gobierno de Sánchez Cerro.",
+          "Los rebeldes tomaron la ciudad de Trujillo y proclamaron la revolución aprista contra el régimen militar.",
+          "El ejército peruano respondió con una represión brutal que sofocó la rebelión en apenas tres días.",
+          "La represión militar dejó miles de muertos y prisioneros, incluyendo ejecuciones sumarias de prisioneros apristas.",
+          "La batalla de Chanchoco fue el enfrentamiento decisivo que terminó con la revolución trujillana.",
+          "Haya de la Torre se asiló en la embajada colombiana durante varios años para evitar ser ejecutado."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Consecuencias políticas",
+        lines: [
+          "La Revolución de Trujillo marcó al APRA como partido perseguido y prohibido durante varios gobiernos militares.",
+          "Sánchez Cerro fue asesinado en 1933, lo que desencadenó una ola de violencia política en el país.",
+          "El gobierno de Oscar R. Benavides (1933-1939) proscribió al APRA y persiguió a sus dirigentes.",
+          "Haya de la Torre no pudo asumir la presidencia hasta 1962, cuando ganó las elecciones pero fue derrocado por un golpe militar.",
+          "La tragedia de Trujillo dejó una cicatriz profunda en la historia del APRA y en la política peruana.",
+          "El partido aprista se convirtió en una de las fuerzas políticas más importantes y持久 de América Latina."
+        ]
+      }
+    ],
+    illustrations: [
+      `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+        <rect width="300" height="200" fill="#f0f8ff"/>
+        <text x="150" y="25" font-size="14" font-weight="bold" text-anchor="middle" fill="#00008b">APRA y Revolución de Trujillo</text>
+        <circle cx="70" cy="85" r="35" fill="#8b0000"/>
+        <text x="70" y="75" font-size="7" text-anchor="middle" fill="#fff">Haya de la</text>
+        <text x="70" y="85" font-size="7" text-anchor="middle" fill="#fff">Torre</text>
+        <text x="70" y="95" font-size="7" text-anchor="middle" fill="#fff">1930</text>
+        <rect x="130" y="50" width="150" height="70" fill="#4169e1" rx="3"/>
+        <text x="205" y="70" font-size="9" text-anchor="middle" fill="#fff">Fundación APRA 1930</text>
+        <text x="205" y="85" font-size="8" text-anchor="middle" fill="#fff">Antiimperialismo</text>
+        <text x="205" y="97" font-size="8" text-anchor="middle" fill="#fff">Liberación Nacional</text>
+        <text x="205" y="110" font-size="8" text-anchor="middle" fill="#fff">Socialismo Democrático</text>
+        <rect x="20" y="135" width="260" height="55" fill="#8b0000" rx="3"/>
+        <text x="150" y="155" font-size="10" text-anchor="middle" fill="#fff">Revolución de Trujillo - Julio 1932</text>
+        <text x="150" y="170" font-size="9" text-anchor="middle" fill="#fff">Insurrección armada • Represión militar brutal</text>
+        <text x="150" y="183" font-size="9" text-anchor="middle" fill="#fff">Miles de muertos • Haya asilado en embajada</text>
+      </svg>`
+    ],
+    exercises: [
+      {
+        id: 7088,
+        question: "¿En qué año se fundó el Partido Aprista Peruano?",
+        options: [
+          "1928",
+          "1929",
+          "1930",
+          "1932"
+        ],
+        correctIndex: 2,
+        explanation: "El Partido Aprista Peruano fue fundado por Víctor Raúl Haya de la Torre en 1930 durante su exilio en México.",
+        difficulty: "basico"
+      },
+      {
+        id: 7089,
+        question: "¿Qué ocurrió durante la Revolución de Trujillo de 1932?",
+        options: [
+          "Los apristas tomaron Lima y establecieron un gobierno",
+          "Los rebeldes tomaron Trujillo pero fueron derrotados en tres días por el ejército",
+          "El gobierno derrotó una rebelión en Arequipa",
+          "Haya de la Torre asumió la presidencia del país"
+        ],
+        correctIndex: 1,
+        explanation: "La revolución aprista en Trujillo fue sofocada por el ejército en tres días, con miles de muertos y prisioneros ejecutados.",
+        difficulty: "intermedio"
+      },
+      {
+        id: 7090,
+        question: "¿Qué pasó con Haya de la Torre tras la Revolución de Trujillo?",
+        options: [
+          "Fue ejecutado inmediatamente por el ejército",
+          "Se exilió a Europa y no regresó al Perú",
+          "Se asiló en la embajada colombiana durante años",
+          "Fue encarcelado en el penal del Callao"
+        ],
+        correctIndex: 2,
+        explanation: "Haya de la Torre se asiló en la embajada colombiana en Lima durante varios años para evitar ser ejecutado por el gobierno militar.",
+        difficulty: "avanzado"
+      }
+    ]
+  },
+  {
+    slug: "gobierno-del-45",
+    tip: "El gobierno de José Luis Bustamante y Rivero (1945-1948) intentó equilibrar la democracia con la influencia del APRA, pero terminó en un golpe militar.",
+    theory: [
+      {
+        level: "basico",
+        title: "Elección de Bustamante y Rivero",
+        lines: [
+          "José Luis Bustamante y Rivero fue elegido presidente en 1945 con el apoyo del Partido Aprista Peruano.",
+          "El APRA junto con el Frente Democrático Nacional ganaron las elecciones contra la coalición conservadora.",
+          "Bustamante era un diplomático de carrera que buscaba gobrar de forma moderada y conciliadora.",
+          "Su gobierno inició con la esperanza de una nueva etapa de estabilidad política y reformas sociales.",
+          "El estilo moderado de Bustamante contrastaba con las demandas radicales del APRA y la oligarquía.",
+          "El nuevo gobierno enfrentó la difícil tarea de conciliar los intereses de sectores opuestos."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Alianza y conflicto con el APRA",
+        lines: [
+          "El APRA esperaba que Bustamante implementara reformas sociales profundas y favoreciera a los trabajadores.",
+          "Bustamante se negó a legalizar el Partido Aprista y mantuvo la proscripción impuesta por gobiernos anteriores.",
+          "El conflicto entre el gobierno y el APRA se intensificó a medida que avanzaba el mandato presidencial.",
+          "El APRA organizó huelgas y protestas contra el gobierno que Bustamante reprimió con fuerza.",
+          "La corrupción administrativa y la inestabilidad económica debilitaron aún más al gobierno de Bustamante.",
+          "La alianza inicial entre el gobierno y el APRA se rompió definitivamente en 1947."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Golpe militar de 1948",
+        lines: [
+          "El 29 de octubre de 1948, el general Manuel A. Odría lideró un golpe militar que derrocó a Bustamante y Rivero.",
+          "El golpe fue apoyado por la oligarquía, los militares conservadores y sectores anticomunistas del país.",
+          "El pretexto del golpe fue la supuesta influencia comunista en el gobierno y la incapacidad de mantener el orden.",
+          "Bustamante se exilió en Argentina donde vivió hasta su muerte en 1989.",
+          "El golpe de Odría inició una dictadura militar que duraría ocho años (1948-1956).",
+          "El gobierno de Bustamante fue el último intento exitoso de democracia civil antes del militarismo de mediados del siglo XX."
+        ]
+      }
+    ],
+    illustrations: [
+      `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+        <rect width="300" height="200" fill="#fafafa"/>
+        <text x="150" y="25" font-size="13" font-weight="bold" text-anchor="middle" fill="#333">Gobierno de Bustamante y Rivero</text>
+        <text x="150" y="42" font-size="10" text-anchor="middle" fill="#666">(1945-1948)</text>
+        <rect x="20" y="55" width="120" height="65" fill="#228b22" rx="3"/>
+        <text x="80" y="75" font-size="9" text-anchor="middle" fill="#fff">Elección 1945</text>
+        <text x="80" y="88" font-size="8" text-anchor="middle" fill="#fff">Apoyo del APRA</text>
+        <text x="80" y="100" font-size="8" text-anchor="middle" fill="#fff">Democracia moderada</text>
+        <rect x="160" y="55" width="120" height="65" fill="#daa520" rx="3"/>
+        <text x="220" y="75" font-size="9" text-anchor="middle" fill="#333">Conflicto APRA</text>
+        <text x="220" y="88" font-size="8" text-anchor="middle" fill="#333">Proscripción del partido</text>
+        <text x="220" y="100" font-size="8" text-anchor="middle" fill="#333">Huelgas y represión</text>
+        <rect x="20" y="135" width="260" height="50" fill="#8b0000" rx="3"/>
+        <text x="150" y="155" font-size="10" text-anchor="middle" fill="#fff">Golpe Militar 29 de octubre de 1948</text>
+        <text x="150" y="170" font-size="9" text-anchor="middle" fill="#fff">Gen. Manuel A. Odría derroca a Bustamante</text>
+        <text x="150" y="183" font-size="9" text-anchor="middle" fill="#fff">Inicio de la dictadura odrísta (1948-1956)</text>
+      </svg>`
+    ],
+    exercises: [
+      {
+        id: 7091,
+        question: "¿Quién fue elegido presidente del Perú en 1945 con el apoyo del APRA?",
+        options: [
+          "Manuel A. Odría",
+          "Luis Miguel Sánchez Cerro",
+          "José Luis Bustamante y Rivero",
+          "Manuel Prado"
+        ],
+        correctIndex: 2,
+        explanation: "José Luis Bustamante y Rivero fue elegido en 1945 con el apoyo del Partido Aprista Peruano y el Frente Democrático Nacional.",
+        difficulty: "basico"
+      },
+      {
+        id: 7092,
+        question: "¿Por qué se rompió la alianza entre Bustamante y el APRA?",
+        options: [
+          "Bustamante implementó todas las reformas apristas",
+          "Bustamante se negó a legalizar el Partido Aprista y reprimió sus protestas",
+          "El APRA apoyó al gobierno conservador",
+          "Bustamante exilió a todos los miembros del APRA"
+        ],
+        correctIndex: 1,
+        explanation: "La alianza se rompió cuando Bustamante mantuvo la proscripción del APRA y reprimió las huelgas y protestas organizadas por el partido.",
+        difficulty: "intermedio"
+      },
+      {
+        id: 7093,
+        question: "¿Qué evento puso fin al gobierno democrático de Bustamante y Rivero?",
+        options: [
+          "Una elección democrática en 1948",
+          "Un golpe militar liderado por Manuel A. Odría en octubre de 1948",
+          "Una revolución popular en 1947",
+          "La muerte natural del presidente"
+        ],
+        correctIndex: 1,
+        explanation: "El golpe militar del 29 de octubre de 1948 liderado por Odría derrocó a Bustamante e inició una dictadura de ocho años.",
+        difficulty: "avanzado"
+      }
+    ]
+  },
+  {
+    slug: "dictadura-odria",
+    tip: "La dictadura de Manuel A. Odría (1948-1956) se caracterizó por la represión política, el crecimiento económico y el exilio de sus opositores.",
+    theory: [
+      {
+        level: "basico",
+        title: "La Junta Militar y la represión",
+        lines: [
+          "Manuel A. Odría gobernó el Perú de 1948 a 1956 mediante una dictadura militar represiva.",
+          "La Junta Militar gobernó inicialmente antes de que Odría fuera elegido en elecciones amañadas en 1950.",
+          "Odría persiguió a los opositores políticos, especialmente a los apristas y los comunistas.",
+          "El penal del Callao se llenó de prisioneros políticos durante los primeros años de la dictadura.",
+          "Muchos intelectuales, artistas y políticos se exiliaron en México, Europa y otros países de América.",
+          "La prensa fue censurada y los partidos políticos fueron prohibidos durante el gobierno de Odría."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Crecimiento económico y obras públicas",
+        lines: [
+          "Paradójicamente, la dictadura de Odría coincidió con un período de crecimiento económico significativo.",
+          "El precio del algodón y otros productos de exportación subió internacionalmente, beneficiando al Perú.",
+          "Odría impulsó grandes obras públicas como edificios, carreteras, hospitales y sistemas de riego.",
+          "El gobierno fomentó la inversión extranjera en la industria minera y petrolera del país.",
+          "La bonanza económica permitió al régimen mantener el apoyo de sectores empresariales y militares.",
+          "El crecimiento económico se concentró en las ciudades costeñas, perpetuando la desigualdad regional."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "El bonapartismo y el fin de la dictadura",
+        lines: [
+          "El gobierno de Odría fue denominado bonapartismo por combinar represión política con populismo económico.",
+          "Odría realizó una gira internacional en 1953 que lo posicionó como candidato presidencial para el período 1956-1962.",
+          "La oposición se organizó en la Coalición Nacional Unida liderada por Manuel Prado para competir en las elecciones.",
+          "Las elecciones de 1956 se realizaron con una participación limitada y bajo presión del régimen.",
+          "Odría terminó su mandato en 1956 y fue sucedido por Manuel Prado tras un período de transición.",
+          "La dictadura dejó una huella de represión pero también de crecimiento económico que marcó al Perú."
+        ]
+      }
+    ],
+    illustrations: [
+      `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+        <rect width="300" height="200" fill="#f5f5f5"/>
+        <text x="150" y="25" font-size="14" font-weight="bold" text-anchor="middle" fill="#333">Dictadura de Odría (1948-1956)</text>
+        <rect x="20" y="45" width="120" height="65" fill="#8b0000" rx="3"/>
+        <text x="80" y="65" font-size="9" text-anchor="middle" fill="#fff">Represión</text>
+        <text x="80" y="78" font-size="8" text-anchor="middle" fill="#fff">Junta Militar</text>
+        <text x="80" y="90" font-size="8" text-anchor="middle" fill="#fff">Penal del Callao</text>
+        <text x="80" y="102" font-size="8" text-anchor="middle" fill="#fff">Exilio forzado</text>
+        <rect x="160" y="45" width="120" height="65" fill="#228b22" rx="3"/>
+        <text x="220" y="65" font-size="9" text-anchor="middle" fill="#fff">Crecimiento</text>
+        <text x="220" y="78" font-size="8" text-anchor="middle" fill="#fff">Obras públicas</text>
+        <text x="220" y="90" font-size="8" text-anchor="middle" fill="#fff">Inversión extranjera</text>
+        <text x="220" y="102" font-size="8" text-anchor="middle" fill="#fff">Bonanza algodonera</text>
+        <rect x="20" y="125" width="260" height="60" fill="#4169e1" rx="3"/>
+        <text x="150" y="145" font-size="10" text-anchor="middle" fill="#fff">Bonapartismo: Represión + Populismo económico</text>
+        <text x="150" y="160" font-size="9" text-anchor="middle" fill="#fff">Elecciones amañadas 1950 • Censura de prensa</text>
+        <text x="150" y="175" font-size="9" text-anchor="middle" fill="#fff">Transición 1956: Manuel Prado asume el gobierno</text>
+      </svg>`
+    ],
+    exercises: [
+      {
+        id: 7094,
+        question: "¿Cómo se caracterizó principalmente la dictadura de Manuel A. Odría?",
+        options: [
+          "Por la democracia plena y las libertades civiles",
+          "Por la represión política y la persecución de opositores",
+          "Por la nacionalización de todas las empresas extranjeras",
+          "Por la abolición del ejército peruano"
+        ],
+        correctIndex: 1,
+        explanation: "La dictadura de Odría se caracterizó por la represión política, la censura de prensa y la persecución de opositores políticos.",
+        difficulty: "basico"
+      },
+      {
+        id: 7095,
+        question: "¿Qué fenómeno económico benefició al régimen de Odría a pesar de su represión?",
+        options: [
+          "La caída del precio del algodón",
+          "El crecimiento de la industria textil nacional",
+          "La bonanza económica por alza de precios internacionales de exportación",
+          "La reducción de la deuda externa del Perú"
+        ],
+        correctIndex: 2,
+        explanation: "El régimen se benefició del alza de precios internacionales de productos como el algodón, lo que permitió crecimiento económico y obras públicas.",
+        difficulty: "intermedio"
+      },
+      {
+        id: 7096,
+        question: "¿Quién sucedió a Odría en la presidencia del Perú en 1956?",
+        options: [
+          "Manuel Prado",
+          "Víctor Raúl Haya de la Torre",
+          "Ricardo Pérez Godoy",
+          "Fernando Belaúnde"
+        ],
+        correctIndex: 0,
+        explanation: "Manuel Prado fue elegido en las elecciones de 1956 y sucedió a Odría en la presidencia del Perú tras el fin de la dictadura.",
+        difficulty: "avanzado"
+      }
+    ]
+  },
+{
+    slug: "segundo-belaunder",
+    tip: "El segundo gobierno de Belaunde (1963-1968) continuo el proyecto modernizador del primer periodo, impulsado por la Alianza para el Progreso, pero fue derrocado por un golpe militar encabezado por el general Juan Velasco Alvarado.",
+    theory: [
+      {
+        level: "basico",
+        title: "La Alianza para el Progreso",
+        lines: [
+          "La Alianza para el Progreso fue un programa de cooperacion economica entre Estados Unidos y America Latina.",
+          "Fue lanzada en 1961 por el presidente John F. Kennedy como respuesta a la Revolucion Cubana.",
+          "Su objetivo principal era promover el desarrollo economico y social para evitar nuevas revoluciones.",
+          "Peru recibio importantes prestamos y ayuda tecnica bajo este programa durante el gobierno de Belaunde.",
+          "Se financiaron obras de infraestructura como carreteras, puentes y centros de salud en todo el pais.",
+          "Sin embargo, muchos criticos senalaron que los beneficios no llegaron equitativamente a toda la poblacion."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Las Escuelas Nacionales Unificadas (ENU)",
+        lines: [
+          "Las Escuelas Nacionales Unificadas fueron un ambicioso proyecto de reforma educativa impulsado en 1972.",
+          "Su objetivo era crear un sistema educativo unico que unificara la ensenanza en todo el pais.",
+          "Se buscaba integrar las teorias de aprendizaje de psicologos como Piaget, Ausubel y Bruner.",
+          "El proyecto pretendia formar ciudadanos comprometidos con el desarrollo nacional y la justicia social.",
+          "La implementacion genero controversia por su enfoque ideologico y sus implicancias politico-pedagogicas.",
+          "El proyecto fue abandonado tras el cambio de gobierno en 1975, siendo parcialmente retomado despues."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "El golpe de Estado de Velasco Alvarado",
+        lines: [
+          "El 3 de octubre de 1968, las fuerzas armadas derrocaron al presidente Fernando Belaunde Terry.",
+          "El golpe fue encabezado por el general Juan Velasco Alvarado, quien asumio la presidencia.",
+          "Las causas inmediatas incluyeron tensiones con el gobierno sobre el contrato con la International Petroleum Company.",
+          "La toma de la refineria de Talara y la expropiacion del petroleo maritimo desencadenaron la accion militar.",
+          "El golpe conto con apoyo de sectores nacionalistas que veian al gobierno como dependiente de intereses extranjeros.",
+          "Este hecho marco el inicio de un periodo de reformas estructurales radicales en la historia peruana."
+        ]
+      }
+    ],
+    illustrations: [
+      "<svg viewBox=\"0 0 300 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"300\" height=\"200\" fill=\"#E8F5E9\" rx=\"8\"/><text x=\"150\" y=\"25\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"bold\" fill=\"#1B5E20\">Segundo Gobierno de Belaunde</text><rect x=\"20\" y=\"40\" width=\"120\" height=\"60\" fill=\"#C8E6C9\" stroke=\"#2E7D32\" rx=\"4\"/><text x=\"80\" y=\"60\" text-anchor=\"middle\" font-size=\"9\" fill=\"#1B5E20\">Alianza para</text><text x=\"80\" y=\"75\" text-anchor=\"middle\" font-size=\"9\" fill=\"#1B5E20\">el Progreso</text><text x=\"80\" y=\"90\" text-anchor=\"middle\" font-size=\"8\" fill=\"#2E7D32\">1961-1970</text><rect x=\"160\" y=\"40\" width=\"120\" height=\"60\" fill=\"#C8E6C9\" stroke=\"#2E7D32\" rx=\"4\"/><text x=\"220\" y=\"60\" text-anchor=\"middle\" font-size=\"9\" fill=\"#1B5E20\">Educacion</text><text x=\"220\" y=\"75\" text-anchor=\"middle\" font-size=\"9\" fill=\"#1B5E20\">Nacional</text><text x=\"220\" y=\"90\" text-anchor=\"middle\" font-size=\"8\" fill=\"#2E7D32\">ENU 1972</text><path d=\"M140 70 L160 70\" stroke=\"#D32F2F\" stroke-width=\"2\"/><rect x=\"40\" y=\"115\" width=\"220\" height=\"70\" fill=\"#FFCDD2\" stroke=\"#C62828\" rx=\"4\"/><text x=\"150\" y=\"140\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\" fill=\"#B71C1C\">Golpe de Estado - 3 Octubre 1968</text><text x=\"150\" y=\"160\" text-anchor=\"middle\" font-size=\"9\" fill=\"#C62828\">Gral. Juan Velasco Alvarado</text><text x=\"150\" y=\"175\" text-anchor=\"middle\" font-size=\"8\" fill=\"#C62828\">Derroca a Belaunde Terry</text></svg>"
+    ],
+    exercises: [
+      {
+        id: 7097,
+        question: "Cual fue el principal objetivo de la Alianza para el Progreso?",
+        options: [
+          "Expropiar empresas extranjeras en America Latina",
+          "Promover el desarrollo economico para prevenir revoluciones comunistas",
+          "Unificar los sistemas educativos de todos los paises latinoamericanos",
+          "Crear una fuerza militar conjunta contra Cuba"
+        ],
+        correctIndex: 1,
+        explanation: "La Alianza para el Progreso fue un programa de cooperacion economica lanzado por EE.UU. en 1961 como respuesta a la Revolucion Cubana, buscando promover desarrollo economico y social para evitar nuevas revoluciones.",
+        difficulty: "basico"
+      },
+      {
+        id: 7098,
+        question: "Que problema especifico desencadeno el golpe de Estado contra Belaunde en 1968?",
+        options: [
+          "La crisis economica provocada por la caida del precio del cobre",
+          "Las tensiones con la International Petroleum Company y la toma de la refineria de Talara",
+          "La resistencia campesina contra la reforma agraria propuesta por el gobierno",
+          "El conflicto diplomatico con Brasil por la frontera amazonica"
+        ],
+        correctIndex: 1,
+        explanation: "El golpe se desencadeno por las tensiones entre el gobierno y la International Petroleum Company, especialmente tras la toma de la refineria de Talara y la nacionalizacion del petroleo maritimo.",
+        difficulty: "intermedio"
+      },
+      {
+        id: 7099,
+        question: "En que anio se implemento el proyecto de las Escuelas Nacionales Unificadas (ENU)?",
+        options: [
+          "1965",
+          "1968",
+          "1972",
+          "1976"
+        ],
+        correctIndex: 2,
+        explanation: "Las Escuelas Nacionales Unificadas fueron implementadas en 1972 bajo el gobierno militar de Velasco Alvarado como parte de una reforma educativa integral.",
+        difficulty: "basico"
+      }
+    ]
+  },
+  {
+    slug: "velasco-reformismo-militar",
+    tip: "El gobierno de Velasco Alvarado (1968-1975) implemento reformas estructurales radicales: reforma agraria, nacionalizacion de minas, petroleo y banca, y una profunda transformacion del sistema educativo peruano.",
+    theory: [
+      {
+        level: "basico",
+        title: "La Reforma Agraria de Velasco",
+        lines: [
+          "La reforma agraria fue una de las medidas mas importantes del gobierno de Velasco Alvarado.",
+          "Se promulgo la Ley de Reforma Agraria el 24 de junio de 1969 mediante el Decreto Ley No. 17716.",
+          "Se expropiaron las grandes haciendas agricolas para redistribuirlas entre los campesinos.",
+          "Se crearon las Cooperativas Agrarias de Produccion y las Sociedades Agricolas de Interes Social.",
+          "La reforma transformo la estructura de propiedad de la tierra en las zonas costeras y valles intermedios.",
+          "Sin embargo, muchas unidades productivas carecieron de asistencia tecnica y recursos financieros adecuados."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Nacionalizacion de Recursos Estrategicos",
+        lines: [
+          "El gobierno de Velasco nacionalizo sectores clave de la economia peruana durante su gestion.",
+          "Se creo la Empresa Nacional de Comercializacion de Minerales (ENCOMIN) para controlar el comercio de minerales.",
+          "La Compania Peruana de Petroleos absorbio a la International Petroleum Company en 1969.",
+          "Se nacionalizaron los bancos privados mediante la creacion de la Banca Estatal de Desarrollo.",
+          "Estas medidas buscaban reducir la dependencia de capitales extranjeros y fortalecer la economia nacional.",
+          "La inversion estatal en sectores estrategicos aumento significativamente durante este periodo."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "La Reforma Educativa Integral",
+        lines: [
+          "La Ley General de Educacion No. 19326 promulgada en 1972 transformo el sistema educativo peruano.",
+          "Se establecio un sistema de educacion unificada con acceso universal desde la educacion inicial hasta la superior.",
+          "Se creo la Universidad Nacional de Educacion (UNAE) para formar profesores bajo el nuevo modelo.",
+          "La reforma buscaba integrar la educacion con el desarrollo productivo y los valores de justicia social.",
+          "Se implementaron programas de educacion bilingue para las comunidades indigenas del pais.",
+          "El proyecto genero controversia por su enfoque politico-ideologico y su falta de participacion social en el diseno."
+        ]
+      }
+    ],
+    illustrations: [
+      "<svg viewBox=\"0 0 300 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"300\" height=\"200\" fill=\"#FFF3E0\" rx=\"8\"/><text x=\"150\" y=\"25\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#E65100\">Reformas de Velasco Alvarado</text><rect x=\"15\" y=\"40\" width=\"85\" height=\"75\" fill=\"#FFE0B2\" stroke=\"#E65100\" rx=\"4\"/><text x=\"57\" y=\"58\" text-anchor=\"middle\" font-size=\"8\" font-weight=\"bold\" fill=\"#BF360C\">Reforma</text><text x=\"57\" y=\"70\" text-anchor=\"middle\" font-size=\"8\" font-weight=\"bold\" fill=\"#BF360C\">Agraria</text><text x=\"57\" y=\"85\" text-anchor=\"middle\" font-size=\"7\" fill=\"#E65100\">Ley 17716</text><text x=\"57\" y=\"97\" text-anchor=\"middle\" font-size=\"7\" fill=\"#E65100\">1969</text><rect x=\"107\" y=\"40\" width=\"85\" height=\"75\" fill=\"#FFE0B2\" stroke=\"#E65100\" rx=\"4\"/><text x=\"150\" y=\"58\" text-anchor=\"middle\" font-size=\"8\" font-weight=\"bold\" fill=\"#BF360C\">Nacionalizacion</text><text x=\"150\" y=\"70\" text-anchor=\"middle\" font-size=\"8\" font-weight=\"bold\" fill=\"#BF360C\">Petroleo</text><text x=\"150\" y=\"85\" text-anchor=\"middle\" font-size=\"7\" fill=\"#E65100\">IPC absorbida</text><text x=\"150\" y=\"97\" text-anchor=\"middle\" font-size=\"7\" fill=\"#E65100\">1969</text><rect x=\"200\" y=\"40\" width=\"85\" height=\"75\" fill=\"#FFE0B2\" stroke=\"#E65100\" rx=\"4\"/><text x=\"242\" y=\"58\" text-anchor=\"middle\" font-size=\"8\" font-weight=\"bold\" fill=\"#BF360C\">Banca</text><text x=\"242\" y=\"70\" text-anchor=\"middle\" font-size=\"8\" font-weight=\"bold\" fill=\"#BF360C\">Nacionalizada</text><text x=\"242\" y=\"85\" text-anchor=\"middle\" font-size=\"7\" fill=\"#E65100\">Bancos privados</text><text x=\"242\" y=\"97\" text-anchor=\"middle\" font-size=\"7\" fill=\"#E65100\">Estado</text><rect x=\"15\" y=\"130\" width=\"130\" height=\"60\" fill=\"#FFCC80\" stroke=\"#E65100\" rx=\"4\"/><text x=\"80\" y=\"150\" text-anchor=\"middle\" font-size=\"8\" font-weight=\"bold\" fill=\"#BF360C\">Educacion</text><text x=\"80\" y=\"165\" text-anchor=\"middle\" font-size=\"7\" fill=\"#E65100\">Ley 19326 - UNAE</text><text x=\"80\" y=\"180\" text-anchor=\"middle\" font-size=\"7\" fill=\"#E65100\">Sistema unificado 1972</text><rect x=\"155\" y=\"130\" width=\"130\" height=\"60\" fill=\"#FFCC80\" stroke=\"#E65100\" rx=\"4\"/><text x=\"220\" y=\"150\" text-anchor=\"middle\" font-size=\"8\" font-weight=\"bold\" fill=\"#BF360C\">Petroleos del Estado</text><text x=\"220\" y=\"165\" text-anchor=\"middle\" font-size=\"7\" fill=\"#E65100\">Sociedad Petrolera</text><text x=\"220\" y=\"180\" text-anchor=\"middle\" font-size=\"7\" fill=\"#E65100\">Peruana (SPP) 1969</text></svg>"
+    ],
+    exercises: [
+      {
+        id: 7100,
+        question: "Que fecha y decreto establecieron la Reforma Agraria en el gobierno de Velasco?",
+        options: [
+          "12 de octubre de 1968, Decreto Ley No. 16938",
+          "24 de junio de 1969, Decreto Ley No. 17716",
+          "3 de octubre de 1970, Decreto Ley No. 18325",
+          "1 de mayo de 1971, Decreto Ley No. 19486"
+        ],
+        correctIndex: 1,
+        explanation: "La Ley de Reforma Agraria fue promulgada el 24 de junio de 1969 mediante el Decreto Ley No. 17716, estableciendo la expropiacion de grandes haciendas agricolas.",
+        difficulty: "basico"
+      },
+      {
+        id: 7101,
+        question: "Cual fue la empresa que absorbio a la International Petroleum Company durante la nacionalizacion petrolera?",
+        options: [
+          "Empresa Nacional de Petroleos del Peru (PETROPERU)",
+          "Compania Peruana de Petroleos",
+          "Empresa Nacional de Comercializacion de Minerales",
+          "Sociedad Petrolera Peruana (SPP)"
+        ],
+        correctIndex: 1,
+        explanation: "La Compania Peruana de Petroleos absorbio a la International Petroleum Company en 1969 como parte del proceso de nacionalizacion del sector petrolero.",
+        difficulty: "intermedio"
+      },
+      {
+        id: 7102,
+        question: "Que ley establecio la reforma educativa integral durante el gobierno de Velasco Alvarado?",
+        options: [
+          "Ley General de Educacion No. 18601",
+          "Ley General de Educacion No. 19326",
+          "Ley de Reforma Educativa No. 20232",
+          "Ley Organica de Educacion No. 21054"
+        ],
+        correctIndex: 1,
+        explanation: "La Ley General de Educacion No. 19326 promulgada en 1972 transformo el sistema educativo peruano, estableciendo un sistema unificado de educacion.",
+        difficulty: "intermedio"
+      }
+    ]
+  },
+  {
+    slug: "velasco-consecuencias",
+    tip: "Las reformas de Velasco transformaron la estructura social peruana, creando nuevos sectores sociales, pero tambien generaron tensiones internas en las fuerzas armadas que llevaron a su reemplazo por Morales Bermudez en 1975.",
+    theory: [
+      {
+        level: "basico",
+        title: "Nuevos Sectores Sociales",
+        lines: [
+          "Las reformas de Velasco Alvarado generaron la aparicion de nuevos sectores sociales en el Peru.",
+          "Los campesinos que recibieron tierras se organizaron en cooperativas y comunidades campesinas.",
+          "La clase media crecio con la expansion del empleo publico y la inversion estatal en servicios.",
+          "Los sectores obreros fortalecieron su organizacion sindical bajo el amparo de las reformas laborales.",
+          "La reforma educativa permitio el acceso masivo de estudiantes de sectores populares a la educacion superior.",
+          "Estos cambios transformaron el panorama social peruano durante las decadas de 1970 y 1980."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "El Rol Militar en la Economia",
+        lines: [
+          "El gobierno militar de Velasco asumio un rol directo en la gestion economica del pais.",
+          "Se crearon empresas estatales para administrar sectores estrategicos como la mineria y el petroleo.",
+          "Los militares ocuparon puestos directivos en empresas del Estado y organismos publicos.",
+          "Se implemento un modelo de desarrollo sustitutivo de importaciones con fuerte intervencion estatal.",
+          "La burocracia estatal crecio significativamente, generando problemas de eficiencia y corrupcion.",
+          "Este modelo fue cuestionado por economistas liberales que abogaban por una mayor apertura del mercado."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Velasco vs Morales Bermudez",
+        lines: [
+          "Las tensiones internas entre los sectores militares llevaron al reemplazo de Velasco en 1975.",
+          "El general Francisco Morales Bermudez sucedio a Velasco el 29 de agosto de 1975.",
+          "Morales Bermudez busco un retorno gradual a la democracia y corrigio algunas politicas economicas.",
+          "Se mantuvieron las nacionalizaciones pero se flexibilizo la inversion privada en otros sectores.",
+          "El nuevo gobierno enfrento una grave crisis economica que se agravacion en los anos siguientes.",
+          "La transicion marco el fin del reformismo militar y el inicio del retorno a la democracia formal."
+        ]
+      }
+    ],
+    illustrations: [
+      "<svg viewBox=\"0 0 300 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"300\" height=\"200\" fill=\"#E3F2FD\" rx=\"8\"/><text x=\"150\" y=\"22\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#0D47A1\">Consecuencias del Reformismo Militar</text><rect x=\"15\" y=\"35\" width=\"130\" height=\"65\" fill=\"#BBDEFB\" stroke=\"#1565C0\" rx=\"4\"/><text x=\"80\" y=\"53\" text-anchor=\"middle\" font-size=\"9\" font-weight=\"bold\" fill=\"#0D47A1\">Nuevos Sectores</text><text x=\"80\" y=\"68\" text-anchor=\"middle\" font-size=\"8\" fill=\"#1565C0\">Campesinos organizados</text><text x=\"80\" y=\"80\" text-anchor=\"middle\" font-size=\"8\" fill=\"#1565C0\">Clase media ampliada</text><text x=\"80\" y=\"92\" text-anchor=\"middle\" font-size=\"8\" fill=\"#1565C0\">Obreros sindicalizados</text><rect x=\"155\" y=\"35\" width=\"130\" height=\"65\" fill=\"#BBDEFB\" stroke=\"#1565C0\" rx=\"4\"/><text x=\"220\" y=\"53\" text-anchor=\"middle\" font-size=\"9\" font-weight=\"bold\" fill=\"#0D47A1\">Rol Militar</text><text x=\"220\" y=\"68\" text-anchor=\"middle\" font-size=\"8\" fill=\"#1565C0\">Empresas estatales</text><text x=\"220\" y=\"80\" text-anchor=\"middle\" font-size=\"8\" fill=\"#1565C0\">Gestion directa</text><text x=\"220\" y=\"92\" text-anchor=\"middle\" font-size=\"8\" fill=\"#1565C0\">Modelo sustitutivo</text><rect x=\"15\" y=\"110\" width=\"270\" height=\"80\" fill=\"#90CAF9\" stroke=\"#1565C0\" rx=\"4\"/><text x=\"150\" y=\"130\" text-anchor=\"middle\" font-size=\"9\" font-weight=\"bold\" fill=\"#0D47A1\">Transicion de Poder</text><text x=\"80\" y=\"155\" text-anchor=\"middle\" font-size=\"8\" fill=\"#0D47A1\">Velasco Alvarado</text><text x=\"80\" y=\"168\" text-anchor=\"middle\" font-size=\"8\" fill=\"#1565C0\">1968-1975</text><path d=\"M125 155 L170 155\" stroke=\"#1565C0\" stroke-width=\"2\"/><text x=\"220\" y=\"155\" text-anchor=\"middle\" font-size=\"8\" fill=\"#0D47A1\">Morales Bermudez</text><text x=\"220\" y=\"168\" text-anchor=\"middle\" font-size=\"8\" fill=\"#1565C0\">1975-1980</text></svg>"
+    ],
+    exercises: [
+      {
+        id: 7103,
+        question: "Cual fue uno de los principales efectos sociales de las reformas agrarias de Velasco?",
+        options: [
+          "La disminucion de la organizacion campesina",
+          "La creacion de cooperativas agrarias y comunidades campesinas fuertes",
+          "El exodo masivo de campesinos hacia las ciudades sin organizacion",
+          "El debilitamiento de los sindicatos obreros"
+        ],
+        correctIndex: 1,
+        explanation: "La reforma agraria permitio la creacion de cooperativas agrarias de produccion y sociedades agricolas de interes social, fortaleciendo la organizacion campesina.",
+        difficulty: "basico"
+      },
+      {
+        id: 7104,
+        question: "Que problema principal enfrento el modelo de gestion militar en la economia peruana?",
+        options: [
+          "La falta de inversion extranjera directa",
+          "El excesivo crecimiento de la burocracia estatal y problemas de eficiencia",
+          "La dependencia absoluta de las exportaciones agricolas",
+          "La ausencia total de empresas estatales en sectores estrategicos"
+        ],
+        correctIndex: 1,
+        explanation: "El modelo militar de gestion economica genero un crecimiento excesivo de la burocracia estatal, con consecuentes problemas de eficiencia administrativa y corrupcion.",
+        difficulty: "intermedio"
+      },
+      {
+        id: 7105,
+        question: "En que fecha fue reemplazado Velasco Alvarado por Morales Bermudez?",
+        options: [
+          "3 de octubre de 1973",
+          "29 de agosto de 1975",
+          "12 de octubre de 1976",
+          "1 de enero de 1977"
+        ],
+        correctIndex: 1,
+        explanation: "El general Francisco Morales Bermudez sucedio a Velasco Alvarado el 29 de agosto de 1975, marcando el inicio de un proceso de transicion hacia la democracia.",
+        difficulty: "basico"
+      }
+    ]
+  },
+  {
+    slug: "morales-bermudez",
+    tip: "El gobierno de Morales Bermudez (1975-1980) enfrento una grave crisis economica con hiperinflacion, presiones sociales crecientes y el inicio de la insurgencia senderista que marcaria la historia del pais.",
+    theory: [
+      {
+        level: "basico",
+        title: "La Crisis Economica",
+        lines: [
+          "El gobierno de Morales Bermudez heredo una economia en crisis tras las reformas de Velasco.",
+          "Los precios internacionales del petroleo y otros productos de exportacion cayeron dramaticamente.",
+          "La deuda externa peruana crecio de manera alarmante durante este periodo.",
+          "Se implementaron programas de ajuste estructural respaldados por el Fondo Monetario Internacional.",
+          "La inflacion se acelero alcanzando niveles preocupantes para la estabilidad economica del pais.",
+          "Los salarios reales de los trabajadores se deterioraron significativamente durante la decada de 1970."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "El Giro a la Izquierda",
+        lines: [
+          "A pesar de ser un gobierno militar, Morales Bermudez implemento politicas de apertura politica.",
+          "Se convoco una Asamblea Constituyente que redacto la Constitucion de 1979.",
+          "Se permitio la participacion de partidos politicos de izquierda en la vida publica del pais.",
+          "Los movimientos estudiantiles y sindicales ganaron fuerza durante este periodo de transicion.",
+          "El gobierno enfrento presiones tanto de sectores conservadores como de movimientos radicales.",
+          "Esta apertura politica sin control genero un clima de inestabilidad que facilito el surgimiento de grupos insurgentes."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "El Inicio de la Insurgencia",
+        lines: [
+          "Durante el gobierno de Morales Bermudez surgieron los primeros grupos insurgentes significativos.",
+          "El Partido Comunista del Peru Bandera Roja fue uno de los primeros en iniciar la lucha armada.",
+          "En Ayacucho, Abimael Guzman consolidaba su movimiento maoista conocido como Sendero Luminoso.",
+          "Los primeros atentados y emboscadas contra fuerzas del orden se registraron a finales de la decada de 1970.",
+          "El gobierno militar sousestimo la amenaza insurgente, concentrando sus esfuerzos en la transicion politica.",
+          "La debilidad institucional del periodo de transicion permitio el crecimiento de las organizaciones subversivas."
+        ]
+      }
+    ],
+    illustrations: [
+      "<svg viewBox=\"0 0 300 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"300\" height=\"200\" fill=\"#FCE4EC\" rx=\"8\"/><text x=\"150\" y=\"22\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#880E4F\">Morales Bermudez (1975-1980)</text><rect x=\"15\" y=\"35\" width=\"85\" height=\"65\" fill=\"#F8BBD0\" stroke=\"#AD1457\" rx=\"4\"/><text x=\"57\" y=\"55\" text-anchor=\"middle\" font-size=\"8\" font-weight=\"bold\" fill=\"#880E4F\">Crisis</text><text x=\"57\" y=\"68\" text-anchor=\"middle\" font-size=\"8\" font-weight=\"bold\" fill=\"#880E4F\">Economica</text><text x=\"57\" y=\"82\" text-anchor=\"middle\" font-size=\"7\" fill=\"#AD1457\">Deuda externa</text><text x=\"57\" y=\"93\" text-anchor=\"middle\" font-size=\"7\" fill=\"#AD1457\">Inflacion alta</text><rect x=\"107\" y=\"35\" width=\"85\" height=\"65\" fill=\"#F8BBD0\" stroke=\"#AD1457\" rx=\"4\"/><text x=\"150\" y=\"55\" text-anchor=\"middle\" font-size=\"8\" font-weight=\"bold\" fill=\"#880E4F\">Apertura</text><text x=\"150\" y=\"68\" text-anchor=\"middle\" font-size=\"8\" font-weight=\"bold\" fill=\"#880E4F\">Politica</text><text x=\"150\" y=\"82\" text-anchor=\"middle\" font-size=\"7\" fill=\"#AD1457\">Constitucion 1979</text><text x=\"150\" y=\"93\" text-anchor=\"middle\" font-size=\"7\" fill=\"#AD1457\">Partidos legales</text><rect x=\"200\" y=\"35\" width=\"85\" height=\"65\" fill=\"#F8BBD0\" stroke=\"#AD1457\" rx=\"4\"/><text x=\"242\" y=\"55\" text-anchor=\"middle\" font-size=\"8\" font-weight=\"bold\" fill=\"#880E4F\">Insurgencia</text><text x=\"242\" y=\"68\" text-anchor=\"middle\" font-size=\"8\" font-weight=\"bold\" fill=\"#880E4F\">Emergente</text><text x=\"242\" y=\"82\" text-anchor=\"middle\" font-size=\"7\" fill=\"#AD1457\">Bandera Roja</text><text x=\"242\" y=\"93\" text-anchor=\"middle\" font-size=\"7\" fill=\"#AD1457\">Sendero Luminoso</text><rect x=\"15\" y=\"115\" width=\"270\" height=\"75\" fill=\"#F48FB1\" stroke=\"#AD1457\" rx=\"4\"/><text x=\"150\" y=\"135\" text-anchor=\"middle\" font-size=\"9\" font-weight=\"bold\" fill=\"#880E4F\">Legado del Periodo</text><text x=\"150\" y=\"152\" text-anchor=\"middle\" font-size=\"8\" fill=\"#AD1457\">Retorno a la democracia - Elecciones 1980</text><text x=\"150\" y=\"168\" text-anchor=\"middle\" font-size=\"8\" fill=\"#AD1457\">Economia debilitada y grupos subversivos en crecimiento</text></svg>"
+    ],
+    exercises: [
+      {
+        id: 7106,
+        question: "Que dejo el gobierno de Morales Bermudez como principal problema economico?",
+        options: [
+          "La industrializacion acelerada del pais",
+          "Una grave crisis economica con deuda externa creciente e inflacion",
+          "El superavit fiscal que permitio grandes inversiones",
+          "La reduccion exitosa de la inflacion a niveles internacionales"
+        ],
+        correctIndex: 1,
+        explanation: "El gobierno de Morales Bermudez dejo una economia en profunda crisis, con una deuda externa alarmante e inflacion creciente que afecto la calidad de vida de la poblacion.",
+        difficulty: "basico"
+      },
+      {
+        id: 7107,
+        question: "Que documento fundamental se redacto durante el periodo de Morales Bermudez?",
+        options: [
+          "El Codigo Civil de 1984",
+          "La Constitucion de 1979",
+          "El Plan Nacional de Desarrollo 1980-1985",
+          "El Tratado de Libre Comercio con Estados Unidos"
+        ],
+        correctIndex: 1,
+        explanation: "Durante el gobierno de Morales Bermudez se convoco una Asamblea Constituyente que redacto la Constitucion de 1979, marco juridico del retorno a la democracia.",
+        difficulty: "basico"
+      },
+      {
+        id: 7108,
+        question: "Que grupos insurgentes comenzaron a manifestarse durante el periodo de Morales Bermudez?",
+        options: [
+          "Los Montoneros y las FARC peruanas",
+          "Sendero Luminoso y el Partido Comunista del Peru Bandera Roja",
+          "El Movimiento Revolucionario Tupac Amaru y el Ejercito de Liberacion Nacional",
+          "Los comandos de autodefensa y las rondas campesinas"
+        ],
+        correctIndex: 1,
+        explanation: "Durante el gobierno de Morales Bermudez surgieron y se consolidaron los primeros grupos insurgentes significativos, incluyendo Sendero Luminoso y Bandera Roja.",
+        difficulty: "intermedio"
+      }
+    ]
+  },
+  {
+    slug: "sendero-origenes",
+    tip: "Sendero Luminoso se origino en la Universidad Nacional de San Cristobal de Huamanga de Ayacucho, donde Abimael Guzman (Presidente Gonzalo) desarrollo su ideologia maoista durante las decadas de 1960 y 1970.",
+    theory: [
+      {
+        level: "basico",
+        title: "Abimael Guzman y el Maoismo",
+        lines: [
+          "Abimael Guzman Reynoso fue un profesor universitario nacido en 1934 en Arequipa.",
+          "Se unio al Partido Comunista Peruano en la decada de 1960 y adopto el maoismo como ideologia.",
+          "El maoismo es una interpretacion del marxismo-leninismo basada en las ideas de Mao Zedong.",
+          "Guzman creia que una revolucion agraria liderada por el campesinado podia transformar Peru.",
+          "Encontro en la Universidad de Huamanga (Ayacucho) un terreno fertil para difundir sus ideas.",
+          "Sus seguidores lo llamaban Presidente Gonzalo y lo consideraban la cuarta espada del comunismo."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "La Universidad de Huamanga",
+        lines: [
+          "La Universidad Nacional de San Cristobal de Huamanga fue reabierta en 1959 despues de cerrarse en 1823.",
+          "Esta universidad se convirtio en un centro de radicalismo politico y pensamiento de izquierda.",
+          "Guzman fue decano de la facultad de derecho y ciencias politicas, donde difundio el maoismo.",
+          "El movimiento estudiantil en Huamanga estaba profundamente influenciado por las ideas radicales.",
+          "En 1969, los estudiantes de Huamanga lideraron un movimiento por la gratuidad de la educacion superior.",
+          "Este movimiento de gratuidad marco un punto de inflexion en la politica universitaria del pais."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Formacion del Partido Comunista del Peru (Sendero Luminoso)",
+        lines: [
+          "En 1969 se fundo el Partido Comunista del Peru (Bandera Roja) como escision del PCP.",
+          "El movimiento paso por varias fases de reorganizacion antes de adoptar el nombre Sendero Luminoso.",
+          "El nombre provino de una frase de Jose Carlos Mariategui sobre la revolucion como sendero luminoso.",
+          "El partido se organizo en la region de Ayacucho antes de expandirse a otras zonas del pais.",
+          "La ideologia del Partido combinaba el maoismo con elementos del pensamiento de Mariategui.",
+          "Para 1975, el movimiento tenia una estructura clandestina bien consolidada en el sur del Peru."
+        ]
+      }
+    ],
+    illustrations: [
+      "<svg viewBox=\"0 0 300 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"300\" height=\"200\" fill=\"#FFF8E1\" rx=\"8\"/><text x=\"150\" y=\"22\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#F57F17\">Origenes de Sendero Luminoso</text><rect x=\"15\" y=\"35\" width=\"130\" height=\"60\" fill=\"#FFECB3\" stroke=\"#FF8F00\" rx=\"4\"/><text x=\"80\" y=\"55\" text-anchor=\"middle\" font-size=\"8\" font-weight=\"bold\" fill=\"#E65100\">Abimael Guzman</text><text x=\"80\" y=\"70\" text-anchor=\"middle\" font-size=\"7\" fill=\"#F57F17\">Profesor de Derecho</text><text x=\"80\" y=\"82\" text-anchor=\"middle\" font-size=\"7\" fill=\"#F57F17\">Maoismo radical</text><rect x=\"155\" y=\"35\" width=\"130\" height=\"60\" fill=\"#FFECB3\" stroke=\"#FF8F00\" rx=\"4\"/><text x=\"220\" y=\"55\" text-anchor=\"middle\" font-size=\"8\" font-weight=\"bold\" fill=\"#E65100\">Univ. Huamanga</text><text x=\"220\" y=\"70\" text-anchor=\"middle\" font-size=\"7\" fill=\"#F57F17\">Reabierta 1959</text><text x=\"220\" y=\"82\" text-anchor=\"middle\" font-size=\"7\" fill=\"#F57F17\">Centro radical</text><rect x=\"15\" y=\"105\" width=\"130\" height=\"60\" fill=\"#FFE082\" stroke=\"#FF8F00\" rx=\"4\"/><text x=\"80\" y=\"125\" text-anchor=\"middle\" font-size=\"8\" font-weight=\"bold\" fill=\"#E65100\">Gratuidad 1969</text><text x=\"80\" y=\"140\" text-anchor=\"middle\" font-size=\"7\" fill=\"#F57F17\">Movimiento estudiantil</text><text x=\"80\" y=\"152\" text-anchor=\"middle\" font-size=\"7\" fill=\"#F57F17\">Punto de inflexion</text><rect x=\"155\" y=\"105\" width=\"130\" height=\"60\" fill=\"#FFE082\" stroke=\"#FF8F00\" rx=\"4\"/><text x=\"220\" y=\"125\" text-anchor=\"middle\" font-size=\"8\" font-weight=\"bold\" fill=\"#E65100\">PCP - Bandera Roja</text><text x=\"220\" y=\"140\" text-anchor=\"middle\" font-size=\"7\" fill=\"#F57F17\">Fundado 1969</text><text x=\"220\" y=\"152\" text-anchor=\"middle\" font-size=\"7\" fill=\"#F57F17\">Escision del PCP</text><rect x=\"40\" y=\"175\" width=\"220\" height=\"20\" fill=\"#FFC107\" stroke=\"#FF8F00\" rx=\"4\"/><text x=\"150\" y=\"189\" text-anchor=\"middle\" font-size=\"7\" font-weight=\"bold\" fill=\"#E65100\">Sendero Luminoso: ideologia maoista + Mariategui</text></svg>"
+    ],
+    exercises: [
+      {
+        id: 7109,
+        question: "Quien fue el lider ideologico de Sendero Luminoso?",
+        options: [
+          "Victor Raul Haya de la Torre",
+          "Abimael Guzman Reynoso (Presidente Gonzalo)",
+          "Alfonso Barrantes Lingan",
+          "Luis de la Puente Uceda"
+        ],
+        correctIndex: 1,
+        explanation: "Abimael Guzman Reynoso, conocido como Presidente Gonzalo, fue el lider ideologico y fundador de Sendero Luminoso, un profesor de derecho de la Universidad de Huamanga.",
+        difficulty: "basico"
+      },
+      {
+        id: 7110,
+        question: "En que ano se fundo el Partido Comunista del Peru (Bandera Roja)?",
+        options: [
+          "1963",
+          "1966",
+          "1969",
+          "1972"
+        ],
+        correctIndex: 2,
+        explanation: "El Partido Comunista del Peru (Bandera Roja) fue fundado en 1969 como escision del Partido Comunista Peruano, bajo la influencia del maoismo.",
+        difficulty: "intermedio"
+      },
+      {
+        id: 7111,
+        question: "Que movimiento estudiantil tuvo lugar en la Universidad de Huamanga en 1969?",
+        options: [
+          "La huelga por el derecho a voto estudiantil",
+          "El movimiento por la gratuidad de la educacion superior",
+          "La protesta contra la reforma agraria del gobierno militar",
+          "La ocupacion de la universidad en demanda de autonomia"
+        ],
+        correctIndex: 1,
+        explanation: "En 1969, los estudiantes de la Universidad de Huamanga lideraron un movimiento nacional por la gratuidad de la educacion superior, marcando un punto de inflexion en la politica universitaria.",
+        difficulty: "basico"
+      }
+    ]
+  },
+  {
+    slug: "sendero-expansion",
+    tip: "Sendero Luminoso inicio su campana violenta en 1980 con el ataque a Chuschi, cometio la masacre de Lucanamarca en 1983 y desato una guerra terrorista contra el Estado peruano con atentados de bomba en las principales ciudades.",
+    theory: [
+      {
+        level: "basico",
+        title: "El Ataque a Chuschi (1980)",
+        lines: [
+          "El 17 de mayo de 1980, Sendero Luminoso realizo su primer ataque en Chuschi, Ayacucho.",
+          "Los subversivos quemaron las cajas electorales el dia de las elecciones presidenciales.",
+          "Este acto simbolico marco el inicio oficial de la lucha armada del grupo terrorista.",
+          "El gobierno del primer Belaunde subestimo la amenaza y califico los hechos como un incidente menor.",
+          "Chuschi fue elegido como escenario por ser proximo a la Universidad de Huamanga, centro de la ideologia senderista.",
+          "Este primer acto de violencia paso desapercibido para la mayoria de la opinion publica nacional."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "La Masacre de Lucanamarca (1983)",
+        lines: [
+          "El 3 de abril de 1983, Sendero Luminoso masacro a 69 campesinos en Lucanamarca, Ayacucho.",
+          "La masacre fue una represalia contra los habitantes del pueblo por no apoyar al movimiento subversivo.",
+          "Los victimas incluyeron mujeres, ancianos y ninos que no tenian relacion con ningun grupo politico.",
+          "Este fue el ataque mas brutal de Sendero Luminoso en los primeros anos de la insurgencia.",
+          "La masacre conmociono al pais y marco el inicio de una escalada de violencia sin precedentes.",
+          "Los autores de la masacre nunca fueron completamente juzgados por la justicia peruana."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "La Guerra Contra el Estado",
+        lines: [
+          "Sendero Luminoso inicio una campana de violencia urbana con atentados de coche-bomba en las principales ciudades.",
+          "El atentado de Tarata en Lima (1992) fue uno de los mas devastadores de toda la campana terrorista.",
+          "El grupo utilizo tacticas de guerrilla rural en los Andes y atentados terroristas en las ciudades.",
+          "La lucha contra Sendero involucro a las fuerzas armadas, policiales y a las rondas campesinas.",
+          "La guerra interna dejo mas de 69,000 muertos y desaparecidos segun la Comision de la Verdad.",
+          "La captura de Abimael Guzman en 1992 marco el inicio del debilitamiento definitivo de la organizacion."
+        ]
+      }
+    ],
+    illustrations: [
+      "<svg viewBox=\"0 0 300 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"300\" height=\"200\" fill=\"#FFEBEE\" rx=\"8\"/><text x=\"150\" y=\"22\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#B71C1C\">Expansion de Sendero Luminoso</text><rect x=\"15\" y=\"35\" width=\"130\" height=\"60\" fill=\"#FFCDD2\" stroke=\"#C62828\" rx=\"4\"/><text x=\"80\" y=\"55\" text-anchor=\"middle\" font-size=\"8\" font-weight=\"bold\" fill=\"#B71C1C\">Chuschi 1980</text><text x=\"80\" y=\"70\" text-anchor=\"middle\" font-size=\"7\" fill=\"#C62828\">Primer ataque</text><text x=\"80\" y=\"82\" text-anchor=\"middle\" font-size=\"7\" fill=\"#C62828\">Cajas electorales</text><rect x=\"155\" y=\"35\" width=\"130\" height=\"60\" fill=\"#FFCDD2\" stroke=\"#C62828\" rx=\"4\"/><text x=\"220\" y=\"55\" text-anchor=\"middle\" font-size=\"8\" font-weight=\"bold\" fill=\"#B71C1C\">Lucanamarca 1983</text><text x=\"220\" y=\"70\" text-anchor=\"middle\" font-size=\"7\" fill=\"#C62828\">69 victimas</text><text x=\"220\" y=\"82\" text-anchor=\"middle\" font-size=\"7\" fill=\"#C62828\">Masacre masiva</text><rect x=\"15\" y=\"105\" width=\"130\" height=\"60\" fill=\"#EF9A9A\" stroke=\"#C62828\" rx=\"4\"/><text x=\"80\" y=\"125\" text-anchor=\"middle\" font-size=\"8\" font-weight=\"bold\" fill=\"#B71C1C\">Guerra Rural</text><text x=\"80\" y=\"140\" text-anchor=\"middle\" font-size=\"7\" fill=\"#C62828\">Andes del Sur</text><text x=\"80\" y=\"152\" text-anchor=\"middle\" font-size=\"7\" fill=\"#C62828\">Guerrilla campesina</text><rect x=\"155\" y=\"105\" width=\"130\" height=\"60\" fill=\"#EF9A9A\" stroke=\"#C62828\" rx=\"4\"/><text x=\"220\" y=\"125\" text-anchor=\"middle\" font-size=\"8\" font-weight=\"bold\" fill=\"#B71C1C\">Terror Urbano</text><text x=\"220\" y=\"140\" text-anchor=\"middle\" font-size=\"7\" fill=\"#C62828\">Coche-bombas</text><text x=\"220\" y=\"152\" text-anchor=\"middle\" font-size=\"7\" fill=\"#C62828\">Tarata 1992</text><rect x=\"40\" y=\"175\" width=\"220\" height=\"20\" fill=\"#FFCDD2\" stroke=\"#C62828\" rx=\"4\"/><text x=\"150\" y=\"189\" text-anchor=\"middle\" font-size=\"7\" font-weight=\"bold\" fill=\"#B71C1C\">69,000 muertos y desaparecidos</text></svg>"
+    ],
+    exercises: [
+      {
+        id: 7112,
+        question: "Que simbolico acto realizo Sendero Luminoso en Chuschi el 17 de mayo de 1980?",
+        options: [
+          "La toma de la municipalidad local",
+          "La quema de las cajas electorales el dia de las elecciones",
+          "El asesinato de un importante lider politico regional",
+          "La toma de una base militar cercana a Ayacucho"
+        ],
+        correctIndex: 1,
+        explanation: "El 17 de mayo de 1980, Sendero Luminoso quemo las cajas electorales en Chuschi, Ayacucho, simbolizando el inicio de su lucha armada contra el Estado peruano.",
+        difficulty: "basico"
+      },
+      {
+        id: 7113,
+        question: "Cuantas personas murieron en la masacre de Lucanamarca el 3 de abril de 1983?",
+        options: [
+          "12 personas",
+          "35 personas",
+          "69 personas",
+          "120 personas"
+        ],
+        correctIndex: 2,
+        explanation: "La masacre de Lucanamarca fue una de las peores atrocidades de Sendero Luminoso, con 69 victimas entre ellas mujeres, ancianos y ninos.",
+        difficulty: "basico"
+      },
+      {
+        id: 7114,
+        question: "Que atentado urbano de Sendero Luminoso conmociono a Lima en 1992?",
+        options: [
+          "El atentado en el Mercado de Surquillo",
+          "La bomba en la calle Tarata, Miraflores",
+          "El atentado en el Centro Civico de Lima",
+          "La explosion en el Aeropuerto Internacional"
+        ],
+        correctIndex: 1,
+        explanation: "El atentado de Tarata en Miraflores (1992) fue uno de los mas devastadores de la campana terrorista urbana de Sendero Luminoso en Lima.",
+        difficulty: "intermedio"
+      }
+    ]
+  },
+  {
+    slug: "crisis-80s",
+    tip: "La decada de 1980 represento una de las peores crisis de la historia peruana: hiperinflacion descontrolada, guerra interna contra Sendero Luminoso y un desastre economico sin precedentes bajo el gobierno de Alan Garcia (1985-1990).",
+    theory: [
+      {
+        level: "basico",
+        title: "Hiperinflacion y Colapso Economico",
+        lines: [
+          "La inflacion en el Peru alcanzo niveles estratosfericos durante la decada de 1980.",
+          "En 1989, la inflacion anual supero el 3,000 por ciento, destruyendo los ahorros de la poblacion.",
+          "El sol peruano fue reemplazado por el inti y luego por el sol de oro como intento de estabilizacion.",
+          "Los precios subian diariamente, y los ciudadanos tenian que cambiar su dinero lo mas rapido posible.",
+          "La escasez de alimentos y productos basicos se volvio una situacion cotidiana para los peruanos.",
+          "La economia informal crecio enormemente como respuesta a la crisis del sistema financiero formal."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "El Gobierno de Alan Garcia (1985-1990)",
+        lines: [
+          "Alan Garcia gano las elecciones de 1985 con un discurso populista y nacionalista joven.",
+          "Su gobierno implemento politicas economicas heterodoxas que incluyeron la restriccion de pagos de la deuda.",
+          "El限制 externo del 10% sobre los ingresos por exportaciones provoco una crisis de confianza internacional.",
+          "La incapacidad para controlar la inflacion y la corrupcion generalizada debilitaron profundamente su gobierno.",
+          "La guerra contra Sendero Luminoso continuo sin estrategia clara, con graves violaciones de derechos humanos.",
+          "Garcias termino su mandato con una aprobacion record negativa, la mas baja de la historia peruana."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Dimensiones de la Crisis",
+        lines: [
+          "La crisis de los 80s combino factores economicos, sociales y de seguridad interna sin precedentes.",
+          "El conflicto armado interno dejo mas de 25,000 muertos solo durante el gobierno de Garcia.",
+          "La fuga de capitales y la destruccion del sistema financiero llevaron al colapso del sector bancario.",
+          "El PIB per capita cayo dramaticamente, situando al Peru como uno de los paises mas afectados de America Latina.",
+          "La crisis social genero migraciones masivas del campo a la ciudad y del Peru hacia otros paises.",
+          "La combinacion de hiperinflacion, terrorismo y corrupcion configs una de las etapas mas oscuras de la historia republicana."
+        ]
+      }
+    ],
+    illustrations: [
+      "<svg viewBox=\"0 0 300 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"300\" height=\"200\" fill=\"#EDE7F6\" rx=\"8\"/><text x=\"150\" y=\"22\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#311B92\">Crisis de los Anos 80</text><rect x=\"15\" y=\"35\" width=\"85\" height=\"60\" fill=\"#D1C4E9\" stroke=\"#4527A0\" rx=\"4\"/><text x=\"57\" y=\"55\" text-anchor=\"middle\" font-size=\"8\" font-weight=\"bold\" fill=\"#311B92\">Hiperinflacion</text><text x=\"57\" y=\"68\" text-anchor=\"middle\" font-size=\"7\" fill=\"#4527A0\">3,000% anual</text><text x=\"57\" y=\"80\" text-anchor=\"middle\" font-size=\"7\" fill=\"#4527A0\">1989</text><rect x=\"107\" y=\"35\" width=\"85\" height=\"60\" fill=\"#D1C4E9\" stroke=\"#4527A0\" rx=\"4\"/><text x=\"150\" y=\"55\" text-anchor=\"middle\" font-size=\"8\" font-weight=\"bold\" fill=\"#311B92\">Guerra Interna</text><text x=\"150\" y=\"68\" text-anchor=\"middle\" font-size=\"7\" fill=\"#4527A0\">25,000+</text><text x=\"150\" y=\"80\" text-anchor=\"middle\" font-size=\"7\" fill=\"#4527A0\">muertos</text><rect x=\"200\" y=\"35\" width=\"85\" height=\"60\" fill=\"#D1C4E9\" stroke=\"#4527A0\" rx=\"4\"/><text x=\"242\" y=\"55\" text-anchor=\"middle\" font-size=\"8\" font-weight=\"bold\" fill=\"#311B92\">Corrupcion</text><text x=\"242\" y=\"68\" text-anchor=\"middle\" font-size=\"7\" fill=\"#4527A0\">Sistema bancario</text><text x=\"242\" y=\"80\" text-anchor=\"middle\" font-size=\"7\" fill=\"#4527A0\">destruido</text><rect x=\"15\" y=\"105\" width=\"270\" height=\"85\" fill=\"#B39DDB\" stroke=\"#4527A0\" rx=\"4\"/><text x=\"150\" y=\"125\" text-anchor=\"middle\" font-size=\"9\" font-weight=\"bold\" fill=\"#311B92\">Gobierno de Alan Garcia (1985-1990)</text><text x=\"150\" y=\"145\" text-anchor=\"middle\" font-size=\"8\" fill=\"#4527A0\">Politicas heterodoxas y restriccion de pago de deuda</text><text x=\"150\" y=\"162\" text-anchor=\"middle\" font-size=\"8\" fill=\"#4527A0\">Crisis de confianza internacional</text><text x=\"150\" y=\"179\" text-anchor=\"middle\" font-size=\"8\" fill=\"#4527A0\">Aprobacion historica mas baja</text></svg>"
+    ],
+    exercises: [
+      {
+        id: 7115,
+        question: "Cual fue la tasa de inflacion anual aproximada alcanzada en el Peru en 1989?",
+        options: [
+          "500 por ciento anual",
+          "1,000 por ciento anual",
+          "3,000 por ciento anual",
+          "50 por ciento anual"
+        ],
+        correctIndex: 2,
+        explanation: "En 1989, la inflacion anual en el Peru supero el 3,000 por ciento, una de las mas altas de la historia latinoamericana, destruyendo los ahorros y el poder adquisitivo de la poblacion.",
+        difficulty: "basico"
+      },
+      {
+        id: 7116,
+        question: "Que moneda se uso como intento de estabilizar la economia peruana en los anos 80?",
+        options: [
+          "El peso peruano",
+          "El inti y luego el sol de oro",
+          "El dolar peruano",
+          "La libra peruana"
+        ],
+        correctIndex: 1,
+        explanation: "Durante la crisis inflacionaria de los anos 80, se sucedieron varios cambios de moneda: del sol al inti y luego al sol de oro, como intentos fallidos de estabilizar la economia.",
+        difficulty: "basico"
+      },
+      {
+        id: 7117,
+        question: "Que politica controversia implemento Alan Garcia respecto a la deuda externa?",
+        options: [
+          "El aumento de las tasas de interes internas",
+          "La restriccion del pago de la deuda al 10% de los ingresos por exportaciones",
+          "La renegociacion bilateral con todos los acreedores internacionales",
+          "La suspension total de pagos y declaracion de impago"
+        ],
+        correctIndex: 1,
+        explanation: "Alan Garcia restrinjo el pago de la deuda externa al 10% de los ingresos por exportaciones, una medida controvertida que genero la desconfianza de los mercados internacionales y agravacion la crisis.",
+        difficulty: "intermedio"
+      }
+    ]
+  },
+  {
+    slug: "fujimori-dictadura",
+    tip: "Alberto Fujimori goberno el Peru de 1990 a 2000, iniciando con un autogolpe en 1992, implementando el Plan Verde de estabilizacion economica, capturando a Abimael Guzman, y finalmente cayendo tras el escandalo de los vladivideos.",
+    theory: [
+      {
+        level: "basico",
+        title: "El Autogolpe de 1992",
+        lines: [
+          "El 5 de abril de 1992, Alberto Fujimori disolvio el Congreso de la Republica y asumio poderes extraordinarios.",
+          "Este accion fue conocida como el autogolpe, ya que el presidente desmantelo las instituciones democraticas.",
+          "Fujimori argumento que el Congreso impedia las reformas necesarias para enfrentar la crisis.",
+          "El autogolpe fue respaldado por sectores de la poblacion cansados de la inestabilidad politica.",
+          "Se intervenio el poder judicial y se establecio un regimen de gobierno por decreto.",
+          "El autogolpe fue condenado internacionalmente pero aceptado pragmaticamente por importantes sectores del pais."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "El Plan Verde y Estabilizacion Economica",
+        lines: [
+          "El Plan Verde fue un programa secreto de estabilizacion economica preparado por asesores militares.",
+          "Se implementaron medidas de shock economico incluyendo la liberalizacion de precios y tipos de cambio.",
+          "La inflacion fue controlada drasticamente, pasando de niveles hiperinflacionarios a cifras de un dígito.",
+          "Se privatizaron empresas del Estado y se abrio la economia a la inversion extranjera.",
+          "El modelo economico de Fujimori fue conocido como fujishock por su efecto inmediato pero doloroso.",
+          "La estabilizacion macroeconomica lograda fue considerada un exito tecnico pero con altos costos sociales."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Captura de Guzman y Caida del Regimen",
+        lines: [
+          "En septiembre de 1992, las fuerzas especiales capturaron a Abimael Guzman en una casa de Lima.",
+          "La captura del lider de Sendero Luminoso fue el mayor golpe contra la insurgencia en la historia del conflicto.",
+          "Guzman fue sentenciado a cadena perpetua y su captura debilito significativamente a la organizacion subversiva.",
+          "El regimen de Fujimori se mantuvo en el poder hasta el escandalo de los vladivideos en el ano 2000.",
+          "La diffusion de videos que mostraban a Fujimori y su asesor Vladimiro Montesinos sobornando funcionarios provoco su caida.",
+          "Fujimori huyo del Peru y fue luego extraditado, siendo juzgado y sentenciado por violaciones de derechos humanos."
+        ]
+      }
+    ],
+    illustrations: [
+      "<svg viewBox=\"0 0 300 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"300\" height=\"200\" fill=\"#E0F2F1\" rx=\"8\"/><text x=\"150\" y=\"22\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"bold\" fill=\"#004D40\">Fujimori (1990-2000)</text><rect x=\"15\" y=\"35\" width=\"85\" height=\"60\" fill=\"#B2DFDB\" stroke=\"#00695C\" rx=\"4\"/><text x=\"57\" y=\"55\" text-anchor=\"middle\" font-size=\"8\" font-weight=\"bold\" fill=\"#004D40\">Autogolpe</text><text x=\"57\" y=\"68\" text-anchor=\"middle\" font-size=\"7\" fill=\"#00695C\">5 Abril 1992</text><text x=\"57\" y=\"80\" text-anchor=\"middle\" font-size=\"7\" fill=\"#00695C\">Disolucion del</text><text x=\"57\" y=\"88\" text-anchor=\"middle\" font-size=\"7\" fill=\"#00695C\">Congreso</text><rect x=\"107\" y=\"35\" width=\"85\" height=\"60\" fill=\"#B2DFDB\" stroke=\"#00695C\" rx=\"4\"/><text x=\"150\" y=\"55\" text-anchor=\"middle\" font-size=\"8\" font-weight=\"bold\" fill=\"#004D40\">Plan Verde</text><text x=\"150\" y=\"68\" text-anchor=\"middle\" font-size=\"7\" fill=\"#00695C\">Estabilizacion</text><text x=\"150\" y=\"80\" text-anchor=\"middle\" font-size=\"7\" fill=\"#00695C\">Fujishock</text><text x=\"150\" y=\"88\" text-anchor=\"middle\" font-size=\"7\" fill=\"#00695C\">Privatizaciones</text><rect x=\"200\" y=\"35\" width=\"85\" height=\"60\" fill=\"#B2DFDB\" stroke=\"#00695C\" rx=\"4\"/><text x=\"242\" y=\"55\" text-anchor=\"middle\" font-size=\"8\" font-weight=\"bold\" fill=\"#004D40\">Caida 2000</text><text x=\"242\" y=\"68\" text-anchor=\"middle\" font-size=\"7\" fill=\"#00695C\">Vladivideos</text><text x=\"242\" y=\"80\" text-anchor=\"middle\" font-size=\"7\" fill=\"#00695C\">Fuga del pais</text><text x=\"242\" y=\"88\" text-anchor=\"middle\" font-size=\"7\" fill=\"#00695C\">Extradicion</text><rect x=\"15\" y=\"105\" width=\"270\" height=\"85\" fill=\"#80CBC4\" stroke=\"#00695C\" rx=\"4\"/><text x=\"150\" y=\"125\" text-anchor=\"middle\" font-size=\"9\" font-weight=\"bold\" fill=\"#004D40\">Captura de Abimael Guzman</text><text x=\"150\" y=\"145\" text-anchor=\"middle\" font-size=\"8\" fill=\"#00695C\">Septiembre 1992 - Lima</text><text x=\"150\" y=\"162\" text-anchor=\"middle\" font-size=\"8\" fill=\"#00695C\">Mayor golpe contra Sendero Luminoso</text><text x=\"150\" y=\"179\" text-anchor=\"middle\" font-size=\"8\" fill=\"#00695C\">Cadena perpetua - Fin de la amenaza principal</text></svg>"
+    ],
+    exercises: [
+      {
+        id: 7118,
+        question: "Que accion politica tomo Fujimori el 5 de abril de 1992?",
+        options: [
+          "Firmo un tratado de paz con Sendero Luminoso",
+          "Disolvio el Congreso en un autogolpe de Estado",
+          "Anuncio una nueva Constitucion nacional",
+          "Declaro el estado de sitio en todo el pais"
+        ],
+        correctIndex: 1,
+        explanation: "El 5 de abril de 1992, Alberto Fujimori disolvio el Congreso de la Republica en un autogolpe, asumiendo poderes extraordinarios y desmantelando las instituciones democraticas.",
+        difficulty: "basico"
+      },
+      {
+        id: 7119,
+        question: "Que programa de estabilizacion economica implemento el gobierno de Fujimori?",
+        options: [
+          "El Plan Inca de desarrollo rural",
+          "El Plan Verde de estabilizacion economica",
+          "El Plan Nacional de Industrializacion",
+          "El Plan de Integracion Andina"
+        ],
+        correctIndex: 1,
+        explanation: "El Plan Verde fue un programa secreto de estabilizacion economica preparado por asesores militares, implementado como fujishock para controlar la hiperinflacion.",
+        difficulty: "basico"
+      },
+      {
+        id: 7120,
+        question: "En que ano y por que evento cayo finalmente el gobierno de Fujimori?",
+        options: [
+          "En 1998 por una crisis economica internacional",
+          "En 1999 por una revuelta popular",
+          "En 2000 por el escandalo de los vladivideos",
+          "En 2001 por una intervention militar"
+        ],
+        correctIndex: 2,
+        explanation: "El gobierno de Fujimori cayo en el 2000 tras la diffusion de los vladivideos que mostraban actos de corrupcion, lo que provoco su huida del pais y posterior extradicion.",
+        difficulty: "intermedio"
+      }
+    ]
+  },
+{
+    slug: "corrupcion-colonial",
+    tip: "La corrupcion en el sistema colonial era estructural: los cargos se compraban y vendian (venalidad), lo que garantizaba que el funcionario buscara recuperar su inversion mediante sobornos y malversaciones.",
+    theory: [
+      {
+        level: "basico",
+        title: "La venalidad de cargos en el Imperio Espanol",
+        lines: [
+          "La venalidad era el sistema mediante el cual los cargos publicos en Indias se compraban y vendian libremente.",
+          "Un funcionario pagaba al rey por el derecho a ocupar un puesto, y luego buscaba recuperar esa inversion cobrando sobornos.",
+          "Esto creaba un circulo vicioso: el precio de los cargos subia, la corrupcion aumentaba y la administracion se volvia ineficiente.",
+          "Los visitadores enviados para auditar a los funcionarios corruptos a menudo eran sobornados tambien.",
+          "Los indigenas y mestizos eran las principales victimas de esta corrupcion sistematica.",
+          "La corrupcion colonial es un antecedente directo de los patrones de corrupcion que persisten en el Peru actual."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "El caso Quezada (1613): un escandalo colonial",
+        lines: [
+          "En 1613 se destapo el caso de Fernando de Quezada, corregidor de Chancay, acusado de extorsionar sistematicamente a la poblacion indigena.",
+          "Quezada cobraba impuestos ilegales, confiscaba propiedades y utilizaba el sistema de mita para enriquecerse personalmente.",
+          "El caso llego al Consejo de Indias y genero un escandalo que expuso la corrupcion generalizada en el sistema de corregimientos.",
+          "Las victimas presentaron pruebas documentales detalladas, incluyendo testamentos falsificados y partidas de defuncion sospechosas.",
+          "A pesar de las pruebas, Quezado logro evadir la justicia durante anios mediante sobornos a funcionarios intermedios.",
+          "El caso Quezada ilustra como la corrupcion era un fenomeno sistemico, no casos aislados, en la administracion colonial."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Corrupcion virreinal y fraudes fiscales",
+        lines: [
+          "La corrupcion virreinal se extendia desde el virrey hasta los funcionarios menores, afectando todos los niveles de la administracion.",
+          "Los virreyes a menudo utilizaban su cargo para enriquecerse mediante la compraventa de tierras y la explotacion de mano de obra indigena.",
+          "El sistema de repartimientos y mitimaes era frecuentemente manipulado para beneficio personal de los corregidores.",
+          "Los fraudes fiscales incluian la falsificacion de documentos de cobro, la manipulacion de los tributos indigenas y el contrabando.",
+          "La corrupcion afecto gravemente la economia colonial, provocando la fuga de metales preciosos y la degradacion de la administracion publica.",
+          "Los intentos de reforma, como las Ordenanzas de 1571 y 1619, fueron sistematicamente evadidos por los propios funcionarios encargados de implementarlas."
+        ]
+      }
+    ],
+    illustrations: [
+      "<svg viewBox=\"0 0 300 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"300\" height=\"200\" fill=\"#f5e6d3\"/><rect x=\"20\" y=\"30\" width=\"260\" height=\"140\" fill=\"#fff\" stroke=\"#8B4513\" stroke-width=\"2\"/><text x=\"150\" y=\"55\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#8B4513\">CORRUPCION COLONIAL</text><rect x=\"30\" y=\"70\" width=\"70\" height=\"40\" fill=\"#fff3cd\" stroke=\"#856404\" stroke-width=\"1\"/><text x=\"65\" y=\"94\" text-anchor=\"middle\" font-size=\"9\" fill=\"#856404\">CARGO COMPRADO</text><rect x=\"115\" y=\"70\" width=\"70\" height=\"40\" fill=\"#fff3cd\" stroke=\"#856404\" stroke-width=\"1\"/><text x=\"150\" y=\"94\" text-anchor=\"middle\" font-size=\"9\" fill=\"#856404\">SOBORNO</text><rect x=\"200\" y=\"70\" width=\"70\" height=\"40\" fill=\"#fff3cd\" stroke=\"#856404\" stroke-width=\"1\"/><text x=\"235\" y=\"94\" text-anchor=\"middle\" font-size=\"9\" fill=\"#856404\">FRAUDE</text><line x1=\"100\" y1=\"90\" x2=\"115\" y2=\"90\" stroke=\"#8B4513\" stroke-width=\"1.5\"/><line x1=\"185\" y1=\"90\" x2=\"200\" y2=\"90\" stroke=\"#8B4513\" stroke-width=\"1.5\"/><text x=\"150\" y=\"135\" text-anchor=\"middle\" font-size=\"10\" fill=\"#333\">Caso Quezada 1613</text><rect x=\"40\" y=\"145\" width=\"220\" height=\"15\" fill=\"#e8d5b7\" stroke=\"#8B4513\" stroke-width=\"1\"/><text x=\"150\" y=\"157\" text-anchor=\"middle\" font-size=\"9\" fill=\"#8B4513\">Victimas - Funcionarios - Rey</text></svg>"
+    ],
+    exercises: [
+      {
+        id: 7121,
+        question: "Que era la venalidad de cargos en el Imperio Espanol?",
+        options: [
+          "Un sistema donde los cargos publicos se obtenian por merito y examen",
+          "Un sistema donde los cargos publicos se compraban y vendian libremente",
+          "Un sistema de eleccion democratica de funcionarios",
+          "Un sistema de nombramiento directo por el Papa"
+        ],
+        correctIndex: 1,
+        explanation: "La venalidad era el sistema por el cual los cargos publicos se compraban y vendian, lo que garantizaba que los funcionarios buscaran recuperar su inversion mediante corrupcion.",
+        difficulty: "basico"
+      },
+      {
+        id: 7122,
+        question: "Que expuso el caso Quezada de 1613?",
+        options: [
+          "La explotacion minera en los Andes",
+          "La extorsion sistematica a la poblacion indigena por parte de corregidores",
+          "El contrabando de especias desde Asia",
+          "La rebelion de comunidades nativas contra la corona"
+        ],
+        correctIndex: 1,
+        explanation: "El caso Quezada expuso la corrupcion generalizada en el sistema de corregimientos, donde Fernando de Quezada extorsionaba sistematicamente a la poblacion indigena de Chancay.",
+        difficulty: "intermedio"
+      },
+      {
+        id: 7123,
+        question: "Por que los intentos de reforma colonial contra la corrupcion fracasaron sistematicamente?",
+        options: [
+          "Porque el pueblo no apoyaba las reformas",
+          "Porque los propios funcionarios encargados de implementarlas las evadian",
+          "Porque faltaban recursos economicos para ejecutarlas",
+          "Porque la Iglesia se oponia a cualquier cambio"
+        ],
+        correctIndex: 1,
+        explanation: "Las reformas como las Ordenanzas de 1571 y 1619 fueron sistematicamente evadidas por los propios funcionarios encargados de implementarlas, perpetuando el sistema de corrupcion.",
+        difficulty: "avanzado"
+      }
+    ]
+  },
+  {
+    slug: "corrupcion-republicana",
+    tip: "La corrupcion republicana tiene raices en la independencia: el saqueo patriota de las arcas coloniales y la deuda externa fraudulenta sentaron las bases de un sistema que privilegiaba a las elites sobre el pueblo.",
+    theory: [
+      {
+        level: "basico",
+        title: "El saqueo patriota y la deuda externa fraudulenta",
+        lines: [
+          "Al inicio de la Republica, las elites criollas saquearon las arcas coloniales sin rendir cuentas a la poblacion.",
+          "La deuda externa se utilizo como mecanismo de enriquecimiento: se contrajeron prestamos con condiciones leoninas que beneficiaban a banqueros extranjeros y locales.",
+          "Los contratos de deuda incluian comisiones ocultas que iban directamente a los bolsillos de los politicos que los firmaban.",
+          "El pueblo peruano pago esta deuda durante decadas sin recibir beneficios significativos a cambio.",
+          "La corrupcion se convirtio en un elemento central del sistema politico republicano.",
+          "Los caudillos militares a menudo gobernaban para enriquecerse personalmente, no para servir al pais."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "El gobierno de Pierola y el Consorcio Franco-Peruano",
+        lines: [
+          "Nicolas de Pierola, como ministro de Hacienda, implemento reformas fiscales que incluyeron la creacion de monopolios estatales.",
+          "El monopolio de salitreras y guaneros genero enormes ingresos que fueron desviados hacia fines politicos y personales.",
+          "El Consorcio Franco-Peruano de 1889 fue un acuerdo fraudulento que transfirio la explotacion de guano y salitre a inversores franceses.",
+          "El contrato incluyo condiciones extremadamente favorables para el consorcio, incluyendo exenciones fiscales y garantias gubernamentales.",
+          "La corrupcion en la gestion de estos recursos provoco la perdida de soberania economica del Peru.",
+          "Estos antecedentes sentaron las bases para la dependencia economica que marco al Peru durante todo el siglo XX."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Corrupcion republicana y captura institucional",
+        lines: [
+          "La corrupcion republicana se institucionalizo mediante la captura del Estado por elites economicas y politicas.",
+          "El sistema de gamonalismo perpetuo la corrupcion a nivel local, donde los hacendados controlaban la justicia y la administracion.",
+          "La corrupcion en las elecciones se hizo sistematica mediante el fraude electoral, la compra de votos y la manipulacion de registros civicos.",
+          "Los contratos publicos se adjudicaban a empresas afines, creando un sistema de clientelismo politico que se perpetuo por decadas.",
+          "La corrupcion republicana tuvo consecuencias devastadoras: deuda externa insostenible, perdida de territorios y empobrecimiento de la poblacion.",
+          "Los intentos de reforma, como el Movimiento Reformista de 1889, fueron sistematicamente bloqueados por las elites beneficiadas por el sistema corrupto."
+        ]
+      }
+    ],
+    illustrations: [
+      "<svg viewBox=\"0 0 300 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"300\" height=\"200\" fill=\"#e8f0f8\"/><rect x=\"20\" y=\"30\" width=\"260\" height=\"140\" fill=\"#fff\" stroke=\"#2c5f8a\" stroke-width=\"2\"/><text x=\"150\" y=\"55\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#2c5f8a\">CORRUPCION REPUBLICANA</text><circle cx=\"80\" cy=\"100\" r=\"30\" fill=\"#ffcccc\" stroke=\"#cc0000\" stroke-width=\"1.5\"/><text x=\"80\" y=\"95\" text-anchor=\"middle\" font-size=\"8\" fill=\"#cc0000\">SAQUEO</text><text x=\"80\" y=\"107\" text-anchor=\"middle\" font-size=\"8\" fill=\"#cc0000\">PATRIOTA</text><circle cx=\"220\" cy=\"100\" r=\"30\" fill=\"#ccffcc\" stroke=\"#00aa00\" stroke-width=\"1.5\"/><text x=\"220\" y=\"95\" text-anchor=\"middle\" font-size=\"8\" fill=\"#00aa00\">DEUDA</text><text x=\"220\" y=\"107\" text-anchor=\"middle\" font-size=\"8\" fill=\"#00aa00\">FRAUDULENTA</text><rect x=\"125\" y=\"80\" width=\"50\" height=\"40\" fill=\"#ffffcc\" stroke=\"#cc9900\" stroke-width=\"1.5\"/><text x=\"150\" y=\"100\" text-anchor=\"middle\" font-size=\"7\" fill=\"#cc9900\">PIEROLA 1879</text><text x=\"150\" y=\"145\" text-anchor=\"middle\" font-size=\"9\" fill=\"#333\">Consorcio Franco-Peruano 1889</text><rect x=\"40\" y=\"150\" width=\"220\" height=\"15\" fill=\"#e0e8f0\" stroke=\"#2c5f8a\" stroke-width=\"1\"/><text x=\"150\" y=\"162\" text-anchor=\"middle\" font-size=\"8\" fill=\"#2c5f8a\">Guaneros - Salitreros - Banqueros</text></svg>"
+    ],
+    exercises: [
+      {
+        id: 7124,
+        question: "Que fue el saqueo patriota al inicio de la Republica?",
+        options: [
+          "La destruccion de templos coloniales por parte de los patriotas",
+          "El despojo sistematico de las arcas coloniales por las elites criollas",
+          "La confiscacion de tierras indigenas por el Estado republicano",
+          "La destruccion de archivos coloniales para ocultar la corrupcion"
+        ],
+        correctIndex: 1,
+        explanation: "El saqueo patriota se refiere al despojo de las arcas coloniales por parte de las elites criollas al inicio de la Republica, sin rendir cuentas a la poblacion.",
+        difficulty: "basico"
+      },
+      {
+        id: 7125,
+        question: "Que fue el Consorcio Franco-Peruano de 1889?",
+        options: [
+          "Un acuerdo de cooperacion cultural entre Francia y Peru",
+          "Un contrato fraudulento que transfirio la explotacion de guano y salitre a inversores franceses",
+          "Un tratado de libre comercio entre ambos paises",
+          "Un prestamo del gobierno frances para la reconstrucion post-guerra"
+        ],
+        correctIndex: 1,
+        explanation: "El Consorcio Franco-Peruano fue un acuerdo fraudulento que transfirio la explotacion de guano y salitre a inversores franceses con condiciones extremadamente favorables para el consorcio.",
+        difficulty: "intermedio"
+      },
+      {
+        id: 7126,
+        question: "Como se institucionalizo la corrupcion en la Republica mediante el gamonalismo?",
+        options: [
+          "Los hacendados controlaban las elecciones nacionales desde Lima",
+          "Los hacendados a nivel local controlaban la justicia y la administracion perpetuando el sistema corrupto",
+          "El gamonalismo era un sistema de redistribucion de tierras",
+          "El gamonalismo elimino la corrupcion al descentralizar el poder"
+        ],
+        correctIndex: 1,
+        explanation: "El gamonalismo perpetuo la corrupcion a nivel local, donde los hacendados controlaban la justicia y la administracion, creando un sistema de clientelismo que se perpetuo por decadas.",
+        difficulty: "avanzado"
+      }
+    ]
+  },
+  {
+    slug: "historia-economica-peru",
+    tip: "La economia peruana ha oscilado entre periodos de bonanza extractiva (guano, salitre, minerales) y crisis profundas, sin lograr una diversificacion productiva sostenible.",
+    theory: [
+      {
+        level: "basico",
+        title: "La era del guano y el salitre",
+        lines: [
+          "Entre 1840 y 1880, el Peru vivio una epoca de bonanza economica gracias a la exportacion de guano de islas y salitre del desierto de Atacama.",
+          "El guano, utilizado como fertilizante, genero enormes ingresos que financiaron la modernizacion del pais.",
+          "El salitre, rico en nitratos, era esencial para la agricultura y la fabricacion de polvora.",
+          "Sin embargo, la mala gestion de estos recursos provoco que la mayoria de la riqueza beneficiara a una elite reducida.",
+          "La Guerra del Pacifico (1879-1884) marco el fin de esta era, con la perdida de los territorios salitreros.",
+          "Peru quedo endeudado y sin sus principales fuentes de ingreso, lo que desencadeno una profunda crisis economica."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Sustitucion de importaciones y reformas neoliberales",
+        lines: [
+          "En la decada de 1950, Peru implemento un modelo de sustitucion de importaciones para reducir la dependencia del exterior.",
+          "El Estado creo industrias nacionales, protegio el mercado interno y promovio la industrializacion.",
+          "Sin embargo, este modelo genero ineficiencia, corrupcion estatal y dependencia de importaciones de capital.",
+          "En los anos 1990, el gobierno de Fujimori implemento reformas neoliberales radicales: privatizaciones, apertura comercial y reduccion del Estado.",
+          "Estas reformas estabilizaron la macroeconomia pero aumentaron la desigualdad social y la informalidad laboral.",
+          "El modelo extractivista se consolido, convirtiendo al Peru en exportador de materias primas sin valor agregado."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Extractivismo y sus consecuencias estructurales",
+        lines: [
+          "El extractivismo, basado en la explotacion intensiva de recursos naturales, se ha convertido en el eje de la economia peruana.",
+          "El modelo genera altos ingresos en periodos de bonanza pero es vulnerable a la volatilidad de los precios internacionales.",
+          "Las comunidades locales son afectadas por la contaminacion ambiental, la perdida de tierras y la destruccion de sus medios de vida.",
+          "El gobierno central depende de las regalias mineras, lo que limita la inversion en diversificacion economica y desarrollo social.",
+          "El conflicto social generado por la mineria ha provocado multiples crisis politicas y sociales en las ultimas decadas.",
+          "La transicion hacia un modelo de desarrollo sostenible sigue siendo un desafio pendiente que requiere una discusion nacional profunda."
+        ]
+      }
+    ],
+    illustrations: [
+      "<svg viewBox=\"0 0 300 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"300\" height=\"200\" fill=\"#f0f7f0\"/><rect x=\"20\" y=\"30\" width=\"260\" height=\"140\" fill=\"#fff\" stroke=\"#2d7a2d\" stroke-width=\"2\"/><text x=\"150\" y=\"55\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#2d7a2d\">HISTORIA ECONOMICA</text><rect x=\"30\" y=\"70\" width=\"55\" height=\"45\" fill=\"#ffeb99\" stroke=\"#cc9900\" stroke-width=\"1\"/><text x=\"57\" y=\"90\" text-anchor=\"middle\" font-size=\"8\" fill=\"#cc9900\">GUANO</text><text x=\"57\" y=\"102\" text-anchor=\"middle\" font-size=\"8\" fill=\"#cc9900\">1840-1880</text><rect x=\"95\" y=\"70\" width=\"55\" height=\"45\" fill=\"#ffe0e0\" stroke=\"#cc0000\" stroke-width=\"1\"/><text x=\"122\" y=\"90\" text-anchor=\"middle\" font-size=\"8\" fill=\"#cc0000\">SALITRE</text><text x=\"122\" y=\"102\" text-anchor=\"middle\" font-size=\"8\" fill=\"#cc0000\">1879</text><rect x=\"160\" y=\"70\" width=\"55\" height=\"45\" fill=\"#e0e0ff\" stroke=\"#0000cc\" stroke-width=\"1\"/><text x=\"187\" y=\"90\" text-anchor=\"middle\" font-size=\"8\" fill=\"#0000cc\">INDUSTRIA</text><text x=\"187\" y=\"102\" text-anchor=\"middle\" font-size=\"8\" fill=\"#0000cc\">1950s</text><rect x=\"225\" y=\"70\" width=\"55\" height=\"45\" fill=\"#e0ffe0\" stroke=\"#00aa00\" stroke-width=\"1\"/><text x=\"252\" y=\"90\" text-anchor=\"middle\" font-size=\"8\" fill=\"#00aa00\">MINERIA</text><text x=\"252\" y=\"102\" text-anchor=\"middle\" font-size=\"8\" fill=\"#00aa00\">HOY</text><text x=\"150\" y=\"140\" text-anchor=\"middle\" font-size=\"9\" fill=\"#333\">Modelo Extractivista Dependiente</text><rect x=\"60\" y=\"145\" width=\"180\" height=\"15\" fill=\"#d5e8d5\" stroke=\"#2d7a2d\" stroke-width=\"1\"/><text x=\"150\" y=\"157\" text-anchor=\"middle\" font-size=\"8\" fill=\"#2d7a2d\">Bonanza - Crisis - Bonanza - Crisis</text></svg>"
+    ],
+    exercises: [
+      {
+        id: 7127,
+        question: "Que recursos generaron la bonanza economica del Peru entre 1840 y 1880?",
+        options: [
+          "Oro y plata de los Andes",
+          "Guano de islas y salitre del desierto de Atacama",
+          "Cafe y cacao de la selva",
+          "Pesca y productos marinos"
+        ],
+        correctIndex: 1,
+        explanation: "Entre 1840 y 1880, el Peru vivio una epoca de bonanza economica gracias a la exportacion de guano de islas y salitre del desierto de Atacama.",
+        difficulty: "basico"
+      },
+      {
+        id: 7128,
+        question: "Cual fue el principal problema del modelo de sustitucion de importaciones en Peru?",
+        options: [
+          "Genero inflacion controlada y crecimiento estable",
+          "Creo industrias eficientes y competitivas",
+          "Genero ineficiencia, corrupcion estatal y dependencia de importaciones de capital",
+          "Elimino la dependencia del exterior completamente"
+        ],
+        correctIndex: 2,
+        explanation: "El modelo de sustitucion de importaciones genero ineficiencia, corrupcion estatal y dependencia de importaciones de capital, ya que las industrias protegidas no desarrollaron competitividad real.",
+        difficulty: "intermedio"
+      },
+      {
+        "id": 7129,
+        question: "Por que el extractivismo es considerado un modelo economicamente vulnerable?",
+        options: [
+          "Porque genera demasiados empleos estables",
+          "Porque depende de la volatilidad de precios internacionales y genera conflictos sociales locales",
+          "Porque invierte demasiado en diversificacion economica",
+          "Porque reduce la dependencia de commodities"
+        ],
+        correctIndex: 1,
+        explanation: "El extractivismo es vulnerable porque genera altos ingresos en bonanza pero depende de precios internacionales volatiles, genera conflictos sociales por contaminacion y perdida de tierras, y limita la diversificacion economica.",
+        difficulty: "avanzado"
+      }
+    ]
+  },
+  {
+    slug: "historia-educacion-peru",
+    tip: "La educacion en el Peru ha sido historicamente un privilegio de elites. La universidad colonial excluia a indigenas y mestizos, y la brecha educativa persiste hasta hoy.",
+    theory: [
+      {
+        level: "basico",
+        title: "Universidades coloniales y expansion republicana",
+        lines: [
+          "La primera universidad del Peru fue la Universidad Nacional Mayor de San Marcos, fundada en 1551 por cedula real.",
+          "Las universidades coloniales estaban reservadas para la elite criolla y europea, excluyendo a indigenas y mestizos.",
+          "Durante la Republica, la educacion se expandio lentamente, pero seguia siendo un privilegio de las clases altas.",
+          "La educacion publica se consolido con la Reforma de 1920, que establecio la educacion primaria gratuita y obligatoria.",
+          "Sin embargo, la implementacion efectiva de estas reformas fue lenta y desigual entre las regiones.",
+          "La brecha educativa entre Lima y las provincias se mantuvo como un problema estructural durante todo el siglo XX."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "SUNEDU y la crisis de calidad educativa",
+        lines: [
+          "En 1990 se creo la Superintendencia Nacional de Educacion Universitaria (SUNEDU) para regular el sistema de educacion superior.",
+          "La SUNEDU implemento el sistema de licenciamiento obligatorio para garantizar estandares minimos de calidad.",
+          "Sin embargo, muchas universidades persistieron con problemas graves: curriculos obsoletos, profesores poco calificados e infraestructura deficiente.",
+          "La masificacion de universidades privadas en los anos 2000 genero una crisis de calidad sin precedentes.",
+          "El Clasificador de Universidades evidencio que la mayoria de instituciones no cumplian estandares minimos de excelencia.",
+          "El debate sobre educacion gratuita vs. de calidad sigue vigente, con implicaciones profundas para el desarrollo del pais."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Desafios estructurales de la educacion peruana",
+        lines: [
+          "La inversion en educacion en Peru historicamente ha sido una de las mas bajas de America Latina, raramente superando el 3% del PBI.",
+          "El sistema educativo peruano presenta una segmentacion extrema: educacion publica empobrecida vs. educacion privada de elite.",
+          "La formacion docente ha sido cronica mente deficiente, afectando directamente la calidad del aprendizaje.",
+          "El curriculo nacional ha cambiado frecuentemente sin mejorar los resultados de aprendizaje, generando inestabilidad institucional.",
+          "La tecnologia educativa y la alfabetizacion digital siguen siendo desafios pendientes en regiones rurales y amazonicas.",
+          "La educacion intercultural bilingue sigue siendo insuficiente para atender la diversidad cultural del pais, perpetuando desigualdades."
+        ]
+      }
+    ],
+    illustrations: [
+      "<svg viewBox=\"0 0 300 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"300\" height=\"200\" fill=\"#f5f0ff\"/><rect x=\"20\" y=\"30\" width=\"260\" height=\"140\" fill=\"#fff\" stroke=\"#6a0dad\" stroke-width=\"2\"/><text x=\"150\" y=\"55\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#6a0dad\">HISTORIA EDUCACION</text><rect x=\"30\" y=\"70\" width=\"70\" height=\"40\" fill=\"#e8d5f5\" stroke=\"#6a0dad\" stroke-width=\"1\"/><text x=\"65\" y=\"87\" text-anchor=\"middle\" font-size=\"8\" fill=\"#6a0dad\">COLONIAL</text><text x=\"65\" y=\"100\" text-anchor=\"middle\" font-size=\"8\" fill=\"#6a0dad\">1551</text><rect x=\"115\" y=\"70\" width=\"70\" height=\"40\" fill=\"#d5e0f5\" stroke=\"#3366cc\" stroke-width=\"1\"/><text x=\"150\" y=\"87\" text-anchor=\"middle\" font-size=\"8\" fill=\"#3366cc\">REPUBLICANA</text><text x=\"150\" y=\"100\" text-anchor=\"middle\" font-size=\"8\" fill=\"#3366cc\">1920</text><rect x=\"200\" y=\"70\" width=\"70\" height=\"40\" fill=\"#f5d5d5\" stroke=\"#cc3333\" stroke-width=\"1\"/><text x=\"235\" y=\"87\" text-anchor=\"middle\" font-size=\"8\" fill=\"#cc3333\">SUNEDU</text><text x=\"235\" y=\"100\" text-anchor=\"middle\" font-size=\"8\" fill=\"#cc3333\">1990</text><text x=\"150\" y=\"135\" text-anchor=\"middle\" font-size=\"9\" fill=\"#333\">Brecha: Elite vs. Pueblo</text><rect x=\"40\" y=\"140\" width=\"220\" height=\"20\" fill=\"#ece0f5\" stroke=\"#6a0dad\" stroke-width=\"1\"/><text x=\"150\" y=\"155\" text-anchor=\"middle\" font-size=\"8\" fill=\"#6a0dad\">Privilegio - Exclusion - Desigualdad</text></svg>"
+    ],
+    exercises: [
+      {
+        id: 7130,
+        question: "En que ano se fundo la primera universidad del Peru?",
+        options: [
+          "1492",
+          "1532",
+          "1551",
+          "1600"
+        ],
+        correctIndex: 2,
+        explanation: "La Universidad Nacional Mayor de San Marcos fue fundada en 1551 por cedula real, siendo la primera universidad del Peru y una de las mas antiguas de America.",
+        difficulty: "basico"
+      },
+      {
+        "id": 7131,
+        question: "Que problema principal genero la masificacion de universidades privadas en los anos 2000?",
+        options: [
+          "Mejoro significativamente la calidad educativa",
+          "Genero una crisis de calidad sin precedentes en el sistema de educacion superior",
+          "Elimino la brecha entre educacion publica y privada",
+          "Reducio los costos de matricula universalmente"
+        ],
+        correctIndex: 1,
+        explanation: "La masificacion de universidades privadas genero una crisis de calidad, con curriculos obsoletos, profesores poco calificados e infraestructura deficiente en muchas instituciones.",
+        difficulty: "intermedio"
+      },
+      {
+        "id": 7132,
+        question: "Cual es el principal desafio estructural de la educacion peruana en relacion con la inversion?",
+        options: [
+          "El Peru invierte demasiado en educacion comparado con sus vecinos",
+          "La inversion historicamente ha sido una de las mas bajas de America Latina, raramente superando el 3% del PBI",
+          "El problema no es la inversion sino la gestion privada",
+          "La inversion es adecuada pero esta mal distribuida geograficamente"
+        ],
+        correctIndex: 1,
+        explanation: "La inversion en educacion en Peru historicamente ha sido una de las mas bajas de America Latina, raramente superando el 3% del PBI, lo que limita gravemente la calidad del sistema educativo.",
+        difficulty: "avanzado"
+      }
+    ]
+  },
+  {
+    slug: "historia-mineria-peru",
+    tip: "La mineria ha sido el motor economico del Peru durante siglos, pero tambien la fuente de mayores conflictos sociales y ambientales. Potosi alimento al imperio espanol, mientras que hoy la mineria moderna genera debate nacional.",
+    theory: [
+      {
+        level: "basico",
+        title: "Potosi y la explotacion colonial de la plata",
+        lines: [
+          "El Cerro Rico de Potosi, en el actual Bolivia, fue la mina de plata mas importante del mundo durante el siglo XVI.",
+          "Millones de indigenas fueron forzados a trabajar en las minas bajo el sistema de mita, una forma de trabajo forzado colonial.",
+          "La plata extraida de Potosi financia el imperio espanol y transformo la economia mundial.",
+          "Las condiciones laborales eran extremadamente peligrosas: derrumbes, intoxicacion por mercurio y enfermedades pulmonares.",
+          "Se estima que mas de ocho millones de indigenas murieron en las minas de Potosi durante el periodo colonial.",
+          "Potosi es un simbolo de la explotacion colonial y de los costos humanos del capitalismo temprano."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Mercurio, plata y la metalurgia colonial",
+        lines: [
+          "El mercurio era esencial para el proceso de amalgamacion utilizado para extraer la plata de los minerales.",
+          "La mina de Huancavelica, conocida como la Berrueca, fue la principal fuente de mercurio del imperio espanol.",
+          "Los trabajadores de Huancavelica sufrían envenenamiento cronico por mercurio, una enfermedad conocida como el mal de los mineros.",
+          "El sistema de repartimientos forzaba a las comunidades indigenas a enviar trabajadores a las minas.",
+          "La metalurgia colonial era primitiva e ineficiente, desperdiciando gran parte del mineral extraido.",
+          "La tecnologia minera colonial no cambio significativamente durante tres siglos, perpetuando la explotacion y la ineficiencia."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Mineria moderna, Cerro de Pasco y conflictos sociales",
+        lines: [
+          "Cerro de Pasco, una de las ciudades mas altas del mundo, ha sido un centro minero desde la epoca colonial hasta la actualidad.",
+          "La mineria moderna en Peru utiliza tecnologia avanzada pero genera importantes conflictos por contaminacion ambiental.",
+          "El caso de la laguna de La Rinconada en Puno es emblematico: una ciudad minera sin servicios basicos ni regulacion ambiental efectiva.",
+          "Los conflictos sociales por la mineria han incluido tragedias como Bagua (2009) y las luchas contra la mineria en Conga y Tia Maria.",
+          "La industria minera aporta mas del 60% de las exportaciones del Peru pero genera solo el 2% del empleo formal.",
+          "El debate sobre el modelo extractivista vs. desarrollo sostenible sigue siendo uno de los desafios mas complejos del Peru contemporaneo."
+        ]
+      }
+    ],
+    illustrations: [
+      "<svg viewBox=\"0 0 300 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"300\" height=\"200\" fill=\"#f0ebe0\"/><rect x=\"20\" y=\"30\" width=\"260\" height=\"140\" fill=\"#fff\" stroke=\"#8B7355\" stroke-width=\"2\"/><text x=\"150\" y=\"55\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#8B7355\">HISTORIA MINERA</text><polygon points=\"150,65 180,110 120,110\" fill=\"#c0c0c0\" stroke=\"#666\" stroke-width=\"1.5\"/><text x=\"150\" y=\"100\" text-anchor=\"middle\" font-size=\"8\" fill=\"#333\">CERRO</text><rect x=\"40\" y=\"115\" width=\"60\" height=\"30\" fill=\"#fff3cd\" stroke=\"#856404\" stroke-width=\"1\"/><text x=\"70\" y=\"135\" text-anchor=\"middle\" font-size=\"7\" fill=\"#856404\">POTOSI</text><rect x=\"120\" y=\"115\" width=\"60\" height=\"30\" fill=\"#d5e0f5\" stroke=\"#3366cc\" stroke-width=\"1\"/><text x=\"150\" y=\"135\" text-anchor=\"middle\" font-size=\"7\" fill=\"#3366cc\">HUANCAVELICA</text><rect x=\"200\" y=\"115\" width=\"60\" height=\"30\" fill=\"#f5d5d5\" stroke=\"#cc3333\" stroke-width=\"1\"/><text x=\"230\" y=\"135\" text-anchor=\"middle\" font-size=\"7\" fill=\"#cc3333\">CERRO PASCO</text><text x=\"150\" y=\"165\" text-anchor=\"middle\" font-size=\"9\" fill=\"#333\">Plata - Mercurio - Conflictos</text></svg>"
+    ],
+    exercises: [
+      {
+        id: 7133,
+        question: "Cual fue la mina de plata mas importante del mundo durante el siglo XVI?",
+        options: [
+          "La mina de Huancavelica",
+          "El Cerro Rico de Potosi",
+          "Cerro de Pasco",
+          "La mina de Yanacocha"
+        ],
+        correctIndex: 1,
+        explanation: "El Cerro Rico de Potosi, en el actual Bolivia, fue la mina de plata mas importante del mundo durante el siglo XVI, financiando el imperio espanol.",
+        difficulty: "basico"
+      },
+      {
+        "id": 7134,
+        question: "Para que se utilizaba el mercurio extraido de Huancavelica en el proceso minero colonial?",
+        options: [
+          "Para alimentar las maquinas de extraccion",
+          "Para el proceso de amalgamacion que extraia la plata de los minerales",
+          "Para fabricar monedas de plata directamente",
+          "Para purificar el agua que usaban los mineros"
+        ],
+        correctIndex: 1,
+        explanation: "El mercurio era esencial para el proceso de amalgamacion, una tecnica utilizada para extraer la plata de los minerales, aunque causaba envenenamiento cronico en los trabajadores.",
+        difficulty: "intermedio"
+      },
+      {
+        "id": 7135,
+        question: "Por que la mineria moderna en Peru genera un debate sobre su modelo de desarrollo?",
+        options: [
+          "Porque no genera ningun beneficio economico al pais",
+          "Porque aporta el 60% de exportaciones pero solo el 2% del empleo formal, generando desigualdad",
+          "Porque utiliza tecnologia obsoleta que debe ser reemplazada",
+          "Porque produce exclusivamente para el mercado interno"
+        ],
+        correctIndex: 1,
+        explanation: "La mineria moderna aporta mas del 60% de las exportaciones pero genera solo el 2% del empleo formal, creando un modelo de crecimiento economico que no se traduce en desarrollo social equitativo.",
+        difficulty: "avanzado"
+      }
+    ]
+  },
+  {
+    slug: "movimientos-sociales-peru",
+    tip: "Los movimientos sociales en el Peru han sido la principal fuerza de resistencia contra la exclusion y la injusticia. Desde las federaciones campesinas hasta la Marcha de los 4 Suyos, el pueblo ha protagonizado la historia.",
+    theory: [
+      {
+        level: "basico",
+        title: "Federacion Campesina del Peru",
+        lines: [
+          "La Federacion Campesina del Peru (FCP) fue fundada en 1930 como la primera organizacion que representaba los intereses de los agricultores.",
+          "La FCP lucho por la reforma agraria, la distribucion de tierras y los derechos laborales de los campesinos.",
+          "Durante los anos 1950 y 1960, la federacion se convirtio en un actor clave en la lucha por la justicia social.",
+          "La FCP promovio la educacion rural y la organizacion comunal como herramientas de empoderamiento.",
+          "Sin embargo, el gobierno la reprimio en varias ocasiones, especialmente durante los gobiernos militares.",
+          "La FCP sento las bases para el movimiento campesino peruano que seguiria luchando por decadas."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "CONFAIE, CONVEAG y organizaciones regionales",
+        lines: [
+          "La Confederacion Nacional Agraria (CONFAIE) surgio como representante de los agricultores a nivel nacional en los anos 1980.",
+          "La CONFAIE articulo las demandas de las comunidades campesinas frente a las politicas neoliberales del gobierno de Fujimori.",
+          "La CONVEAG (Confederacion Nacional de Comunidades Agrarias) represento a las comunidades campesinas en la lucha por sus tierras.",
+          "Estas organizaciones enfrentaron la imposicion de megaproyectos mineros que amenazaban sus territorios y formas de vida.",
+          "La resistencia campesina incluyo huelgas, marchas, ocupaciones de tierras y bloqueos de carreteras.",
+          "Estos movimientos lograron importantes conquistas, como el reconocimiento de derechos territoriales y la proteccion ambiental."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "La Marcha de los 4 Suyos (2000)",
+        lines: [
+          "La Marcha de los 4 Suyos fue una de las manifestaciones mas importantes de la historia reciente del Peru, impulsada por el Movimiento Etnoacumunacional Tupac Amaru (MRTA).",
+          "La marcha partio de las cuatro regiones del imperio inca (Chinchaysuyu, Antisuyu, Kuntisuyu y Qullasuyu) hacia Lima.",
+          "El objetivo era protestar contra el gobierno autoritario de Alberto Fujimori y exigir elecciones libres y democracia.",
+          "La marcha reuno a miles de campesinos, indigenas y simpatizantes que caminaron semanas para llegar a la capital.",
+          "La protesta tuvo un impacto internacional significativo, visibilizando la crisis democratica del Peru.",
+          "La Marcha de los 4 Suyos demostro la capacidad de organizacion del pueblo peruano y su compromiso con la democracia."
+        ]
+      }
+    ],
+    illustrations: [
+      "<svg viewBox=\"0 0 300 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"300\" height=\"200\" fill=\"#fff8f0\"/><rect x=\"20\" y=\"30\" width=\"260\" height=\"140\" fill=\"#fff\" stroke=\"#cc6600\" stroke-width=\"2\"/><text x=\"150\" y=\"55\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#cc6600\">MOVIMIENTOS SOCIALES</text><circle cx=\"70\" cy=\"95\" r=\"25\" fill=\"#ffcccc\" stroke=\"#cc0000\" stroke-width=\"1.5\"/><text x=\"70\" y=\"90\" text-anchor=\"middle\" font-size=\"7\" fill=\"#cc0000\">FCP</text><text x=\"70\" y=\"100\" text-anchor=\"middle\" font-size=\"7\" fill=\"#cc0000\">1930</text><circle cx=\"150\" cy=\"95\" r=\"25\" fill=\"#ccffcc\" stroke=\"#00aa00\" stroke-width=\"1.5\"/><text x=\"150\" y=\"90\" text-anchor=\"middle\" font-size=\"7\" fill=\"#00aa00\">CONFAIE</text><text x=\"150\" y=\"100\" text-anchor=\"middle\" font-size=\"7\" fill=\"#00aa00\">1980</text><circle cx=\"230\" cy=\"95\" r=\"25\" fill=\"#ffffcc\" stroke=\"#cc9900\" stroke-width=\"1.5\"/><text x=\"230\" y=\"90\" text-anchor=\"middle\" font-size=\"6\" fill=\"#cc9900\">4 SUYOS</text><text x=\"230\" y=\"100\" text-anchor=\"middle\" font-size=\"7\" fill=\"#cc9900\">2000</text><text x=\"150\" y=\"135\" text-anchor=\"middle\" font-size=\"9\" fill=\"#333\">Resistencia - Organizacion - Protesta</text><rect x=\"50\" y=\"140\" width=\"200\" height=\"20\" fill=\"#fff0e0\" stroke=\"#cc6600\" stroke-width=\"1\"/><text x=\"150\" y=\"155\" text-anchor=\"middle\" font-size=\"8\" fill=\"#cc6600\">Del campo a la ciudad: lucha por justicia</text></svg>"
+    ],
+    exercises: [
+      {
+        id: 7136,
+        question: "En que ano se fundo la Federacion Campesina del Peru (FCP)?",
+        options: [
+          "1920",
+          "1930",
+          "1940",
+          "1950"
+        ],
+        correctIndex: 1,
+        explanation: "La Federacion Campesina del Peru fue fundada en 1930 como la primera organizacion que representaba los intereses de los agricultores del pais.",
+        difficulty: "basico"
+      },
+      {
+        "id": 7137,
+        question: "Que organismo represento a las comunidades campesinas en la lucha por sus tierras frente a megaproyectos mineros?",
+        options: [
+          "La CONFAIE",
+          "La CONVEAG (Confederacion Nacional de Comunidades Agrarias)",
+          "El MRTA",
+          "El Partido Comunista Peruano"
+        ],
+        correctIndex: 1,
+        explanation: "La CONVEAG represento a las comunidades campesinas en la lucha por sus tierras frente a la imposicion de megaproyectos mineros que amenazaban sus territorios.",
+        difficulty: "intermedio"
+      },
+      {
+        "id": 7138,
+        question: "Cual fue el objetivo principal de la Marcha de los 4 Suyos en el ano 2000?",
+        options: [
+          "Exigir mayor inversion en agricultura",
+          "Protestar contra el gobierno autoritario de Fujimori y exigir elecciones libres y democracia",
+          "Reivindicar derechos territoriales ancestrales",
+          "Demandar mejoras salariales para los trabajadores agricolas"
+        ],
+        correctIndex: 1,
+        explanation: "La Marcha de los 4 Suyos busco protestar contra el gobierno autoritario de Alberto Fujimori y exigir elecciones libres y democracia, reuniendo a miles de campesinos e indigenas.",
+        difficulty: "avanzado"
+      }
+    ]
+  },
+  {
+    slug: "derechos-humanos-historia",
+    tip: "El informe de la Comision de la Verdad y Reconciliacion documento mas de 69,000 victimas del conflicto armado interno (1980-2000), revelando la magnitud de las violaciones de derechos humanos en el Peru.",
+    theory: [
+      {
+        level: "basico",
+        title: "El informe de la CVR y sus hallazgos",
+        lines: [
+          "La Comision de la Verdad y Reconciliacion (CVR) fue creada en 2000 para investigar el conflicto armado interno entre 1980 y 2000.",
+          "El informe final, presentado en 2003, documento mas de 69,000 victimas, la mayoria de ellas campesinos indigenas.",
+          "Se establecio que Sendero Luminoso fue responsable del 54% de las victimas, mientras que las fuerzas del Estado del 37%.",
+          "La CVR recomendo justicia, reparaciones y reformas institucionales para prevenir que la historia se repita.",
+          "El informe revelo que la violencia afecto desproporcionadamente a las poblaciones rurales y amazonicas.",
+          "La CVR marco un hito en la defensa de derechos humanos en el Peru, aunque muchas de sus recomendaciones no se cumplieron."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "La Cantuta, Barrios Altos y la justicia pendiente",
+        lines: [
+          "El caso de La Cantuta (1992) involucro el secuestro y asesinato de 9 estudiantes y un profesor de la Universidad La Cantuta por el equipo Colina.",
+          "Los autores eran miembros del Grupo Colina, un escuadron de la muerte vinculado al gobierno de Fujimori.",
+          "El caso de Barrios Altos (1991) involucro la masacre de 15 civiles por parte de miembros del Grupo Colina.",
+          "Ambos casos fueron juzgados por la Corte Interamericana de Derechos Humanos, que condeno al Estado peruano.",
+          "Las sentencias de la Corte IDH ordenaron reparaciones, investigaciones y reformas en las fuerzas armadas.",
+          "La justicia en estos casos fue lenta y dificil, revelando la impunidad que rodea las violaciones de derechos humanos en el Peru."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Esterilizaciones forzadas y procesos de justicia",
+        lines: [
+          "Durante el gobierno de Fujimori (1996-2000), se esterilizo forzosamente a mas de 300,000 mujeres, principalmente indigenas y campesinas.",
+          "El programa de planificacion familiar se implemento con metodos coercitivos, sin consentimiento informado ni informacion adecuada.",
+          "Las victimas sufrieron complicaciones medicas graves, incluyendo infecciones, infertilidad y muerte.",
+          "Los procesos de justicia han sido extremadamente lentos: las primeras condenas no llegaron hasta 2021, mas de 20 anos despues.",
+          "El caso de las esterilizaciones forzadas revela la vulnerabilidad de las mujeres indigenas frente al poder estatal.",
+          "La lucha de las victimas por justicia y reparaciones continua, siendo un ejemplo de resistencia frente a la impunidad."
+        ]
+      }
+    ],
+    illustrations: [
+      "<svg viewBox=\"0 0 300 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"300\" height=\"200\" fill=\"#f5f0f5\"/><rect x=\"20\" y=\"30\" width=\"260\" height=\"140\" fill=\"#fff\" stroke=\"#990000\" stroke-width=\"2\"/><text x=\"150\" y=\"55\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#990000\">DERECHOS HUMANOS</text><rect x=\"30\" y=\"70\" width=\"75\" height=\"40\" fill=\"#ffe0e0\" stroke=\"#cc0000\" stroke-width=\"1\"/><text x=\"67\" y=\"87\" text-anchor=\"middle\" font-size=\"7\" fill=\"#cc0000\">CVR</text><text x=\"67\" y=\"97\" text-anchor=\"middle\" font-size=\"7\" fill=\"#cc0000\">69,000 victimas</text><rect x=\"112\" y=\"70\" width=\"75\" height=\"40\" fill=\"#ffe0e0\" stroke=\"#cc0000\" stroke-width=\"1\"/><text x=\"150\" y=\"87\" text-anchor=\"middle\" font-size=\"7\" fill=\"#cc0000\">CANTUTA</text><text x=\"150\" y=\"97\" text-anchor=\"middle\" font-size=\"7\" fill=\"#cc0000\">1992</text><rect x=\"195\" y=\"70\" width=\"75\" height=\"40\" fill=\"#ffe0e0\" stroke=\"#cc0000\" stroke-width=\"1\"/><text x=\"232\" y=\"87\" text-anchor=\"middle\" font-size=\"7\" fill=\"#cc0000\">BARRIOS ALTOS</text><text x=\"232\" y=\"97\" text-anchor=\"middle\" font-size=\"7\" fill=\"#cc0000\">1991</text><text x=\"150\" y=\"130\" text-anchor=\"middle\" font-size=\"9\" fill=\"#333\">Grupo Colina: terrorismo de Estado</text><rect x=\"40\" y=\"135\" width=\"220\" height=\"25\" fill=\"#f0e0e0\" stroke=\"#990000\" stroke-width=\"1\"/><text x=\"150\" y=\"150\" text-anchor=\"middle\" font-size=\"8\" fill=\"#990000\">Esterilizaciones forzadas: 300,000 mujeres</text><text x=\"150\" y=\"162\" text-anchor=\"middle\" font-size=\"8\" fill=\"#990000\">Justicia pendiente: condenas desde 2021</text></svg>"
+    ],
+    exercises: [
+      {
+        id: 7139,
+        question: "Cuantas victimas documento el informe de la Comision de la Verdad y Reconciliacion (CVR)?",
+        options: [
+          "Mas de 10,000 victimas",
+          "Mas de 30,000 victimas",
+          "Mas de 69,000 victimas",
+          "Mas de 100,000 victimas"
+        ],
+        correctIndex: 2,
+        explanation: "El informe final de la CVR documento mas de 69,000 victimas del conflicto armado interno (1980-2000), la mayoria de ellas campesinos indigenas.",
+        difficulty: "basico"
+      },
+      {
+        "id": 7140,
+        question: "Que fue el caso de La Cantuta y por que es emblematico?",
+        options: [
+          "Un caso de corrupcion en la educacion publica",
+          "El secuestro y asesinato de 9 estudiantes y un profesor por el equipo Colina, vinculado al gobierno de Fujimori",
+          "Una masacre de campesinos en la selva amazonica",
+          "Un caso de desaparicion forzada de trabajadores mineros"
+        ],
+        correctIndex: 1,
+        explanation: "El caso de La Cantuta involucro el secuestro y asesinato de 9 estudiantes y un profesor por miembros del equipo Colina, un escuadron de la muerte vinculado al gobierno de Fujimori.",
+        difficulty: "intermedio"
+      },
+      {
+        "id": 7141,
+        question: "Que revela la demora en los procesos de justicia por las esterilizaciones forzadas sobre el sistema de derechos humanos en Peru?",
+        options: [
+          "Que el sistema judicial es eficiente y rapido en resolver casos complejos",
+          "Que la impunidad persiste y las victimas enfrentan obstaculos enormes para obtener justicia",
+          "Que no existen pruebas suficientes para juzgar a los responsables",
+          "Que la sociedad peruana no considera este un tema relevante"
+        ],
+        correctIndex: 1,
+        explanation: "Las primeras condenas por las esterilizaciones forzadas no llegaron hasta 2021, mas de 20 anos despues, revelando la impunidad y los obstaculos que enfrentan las victimas para obtener justicia.",
+        difficulty: "avanzado"
+      }
+    ]
+  },
+  {
+    slug: "peru-contemporaneo-problemas",
+    tip: "El Peru contemporaneo enfrenta una paradoja: tiene crecimiento economico sostenido pero una de las mayores desigualdades de America Latina, con una democracia fragil y corrupcion sistemica.",
+    theory: [
+      {
+        level: "basico",
+        title: "Democracia y corrupcion en el Peru actual",
+        lines: [
+          "El Peru ha transitado de regimenes autoritarios a una democracia formal, pero con graves deficiencias institucionales.",
+          "La corrupcion sigue siendo un problema endemico: practicamente todos los expresidentes de las ultimas decadas han sido investigados.",
+          "La desconfianza ciudadana en las instituciones politicas es una de las mas altas de America Latina.",
+          "El sistema electoral ha generado inestabilidad, con presidencias cortas y constantes crisis politicas.",
+          "La decentralizacion, implementada en los anos 2000, no logro reducir las brechas regionales significativamente.",
+          "El Peru contemporaneo enfrenta el desafio de fortalecer sus instituciones democraticas sin caer en autoritarismos."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Crecimiento economico vs. desigualdad social",
+        lines: [
+          "El Peru experimento un periodo de crecimiento economico sostenido entre 2002 y 2013, con tasas superiores al 6% anual.",
+          "Sin embargo, este crecimiento no se tradujo en mejoras significativas para la mayoria de la poblacion.",
+          "La desigualdad persiste: el 10% mas rico concentra el 40% del ingreso nacional mientras el 30% mas pobre vive en pobreza.",
+          "El crecimiento se concentro en los sectores extractivos (mineria, gas) y no en la agricultura o industria que generan mas empleo.",
+          "La informalidad afecta al 70% de los trabajadores, privandolos de derechos laborales basicos y seguridad social.",
+          "La brecha entre el crecimiento macroeconomico y las condiciones de vida de la poblacion sigue siendo el principal desafio del modelo."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "Desafios del Peru del siglo XXI",
+        lines: [
+          "El Peru del siglo XXI enfrenta la necesidad de diversificar su economia para reducir la dependencia de las materias primas.",
+          "La corrupcion sistematica debilita la confianza en las instituciones y dificulta la implementacion de reformas profundas.",
+          "El cambio climatico amenaza los glaciares andinos, la agricultura y la disponibilidad de agua en las costas.",
+          "La migracion interna y externa ha transformado la composicion social y cultural del pais de manera acelerada.",
+          "El fortalecimiento del Estado de derecho y la independencia judicial son condiciones necesarias para un desarrollo sostenible.",
+          "El Peru necesita una discusion nacional sobre su modelo de desarrollo que incluya a todos los sectores sociales y regiones."
+        ]
+      }
+    ],
+    illustrations: [
+      "<svg viewBox=\"0 0 300 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"300\" height=\"200\" fill=\"#f0f5ff\"/><rect x=\"20\" y=\"30\" width=\"260\" height=\"140\" fill=\"#fff\" stroke=\"#336699\" stroke-width=\"2\"/><text x=\"150\" y=\"55\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#336699\">PERU CONTEMPORANEO</text><rect x=\"30\" y=\"70\" width=\"75\" height=\"40\" fill=\"#d5f0d5\" stroke=\"#00aa00\" stroke-width=\"1\"/><text x=\"67\" y=\"87\" text-anchor=\"middle\" font-size=\"7\" fill=\"#00aa00\">CRECIMIENTO</text><text x=\"67\" y=\"97\" text-anchor=\"middle\" font-size=\"7\" fill=\"#00aa00\">+6%</text><rect x=\"112\" y=\"70\" width=\"75\" height=\"40\" fill=\"#f5d5d5\" stroke=\"#cc0000\" stroke-width=\"1\"/><text x=\"150\" y=\"87\" text-anchor=\"middle\" font-size=\"7\" fill=\"#cc0000\">DESIGUALDAD</text><text x=\"150\" y=\"97\" text-anchor=\"middle\" font-size=\"7\" fill=\"#cc0000\">30% pobreza</text><rect x=\"195\" y=\"70\" width=\"75\" height=\"40\" fill=\"#ffffd5\" stroke=\"#cc9900\" stroke-width=\"1\"/><text x=\"232\" y=\"87\" text-anchor=\"middle\" font-size=\"7\" fill=\"#cc9900\">CORRUPCION</text><text x=\"232\" y=\"97\" text-anchor=\"middle\" font-size=\"7\" fill=\"#cc9900\">ENDÉMICA</text><text x=\"150\" y=\"135\" text-anchor=\"middle\" font-size=\"9\" fill=\"#333\">Democracia Fragil, Desigualdad Persistente</text><rect x=\"40\" y=\"140\" width=\"220\" height=\"20\" fill=\"#e0e8f5\" stroke=\"#336699\" stroke-width=\"1\"/><text x=\"150\" y=\"155\" text-anchor=\"middle\" font-size=\"8\" fill=\"#336699\">Formalidad 30% - Informalidad 70%</text></svg>"
+    ],
+    exercises: [
+      {
+        id: 7142,
+        question: "Cual es la principal paradoja del Peru contemporaneo en terminos economicos?",
+        options: [
+          "Tiene bajo crecimiento economico pero alta calidad de vida",
+          "Tiene crecimiento economico sostenido pero una de las mayores desigualdades de America Latina",
+          "Tiene baja inflacion pero alto desempleo",
+          "Tiene superavit fiscal pero deuda externa insostenible"
+        ],
+        correctIndex: 1,
+        explanation: "El Peru presenta la paradoja de tener crecimiento economico sostenido (superior al 6% anual en epocas de bonanza) pero sin mejorar significativamente las condiciones de vida de la mayoria de la poblacion.",
+        difficulty: "basico"
+      },
+      {
+        "id": 7143,
+        question: "Que porcentaje de trabajadores peruanos se encuentra en la informalidad?",
+        options: [
+          "El 30% de los trabajadores",
+          "El 50% de los trabajadores",
+          "El 70% de los trabajadores",
+          "El 90% de los trabajadores"
+        ],
+        correctIndex: 2,
+        explanation: "La informalidad afecta al 70% de los trabajadores peruanos, privandolos de derechos laborales basicos como seguridad social, vacaciones y prestaciones.",
+        difficulty: "intermedio"
+      },
+      {
+        "id": 7144,
+        question: "Que condicion considera el analisis como necesaria para un desarrollo sostenible en el Peru?",
+        options: [
+          "Aumentar la mineria para generar mas ingresos fiscales",
+          "Fortalecer el Estado de derecho y la independencia judicial",
+          "Reducir la inversion publica para disminuir el deficit fiscal",
+          "Eliminartodos los impuestos a las empresas mineras"
+        ],
+        correctIndex: 1,
+        explanation: "El fortalecimiento del Estado de derecho y la independencia judicial son condiciones necesarias para un desarrollo sostenible, ya que sin instituciones fuertes no es posible implementar reformas profundas.",
+        difficulty: "avanzado"
+      }
+    ]
+  },
+  {
+    slug: "bicentenario-identidad",
+    tip: "En 2021 el Peru celebro sus 200 anos de independencia, pero la fecha expuso una crisis de identidad nacional: que significa ser peruano hoy? Como construir un pais inclusivo tras dos siglos de exclusion?",
+    theory: [
+      {
+        level: "basico",
+        title: "El Bicentenario y la debate sobre la identidad nacional",
+        lines: [
+          "El 28 de julio de 2021, el Peru celebro sus 200 anos de independencia, marcando un momento historico para la nacion.",
+          "Sin embargo, la fecha expuso profundas divisiones sociales, economicas y politicas que persisten desde la fundacion de la Republica.",
+          "El debate sobre la identidad nacional incluyo preguntas fundamentales: que nos une como peruanos?",
+          "La diversidad cultural del pais, con 55 pueblos indigenas, 48 lenguas y multiples tradiciones, es tanto una fortaleza como un desafio.",
+          "El Bicentenario genero discusiones sobre la necesidad de construir una narrativa nacional mas inclusiva y representativa.",
+          "Las celebraciones oficiales contrastaron con la realidad de millones de peruanos que siguen en pobreza y exclusion."
+        ]
+      },
+      {
+        level: "intermedio",
+        title: "Que significa la independencia hoy",
+        lines: [
+          "La independencia de 1821 fue liderada por elites criollas que no incluyeron a la mayoria indigena y mestiza del pais.",
+          "Dos siglos despues, el Peru sigue siendo un pais donde las elites economicas controlan el poder politico y los recursos.",
+          "La independencia real requiere no solo soberania politica sino tambien justicia social, economica y cultural.",
+          "El concepto de ciudadania plena sigue siendo una aspiracion para millones de peruanos excluidos del desarrollo.",
+          "La memoria historica, incluyendo el conflicto armado y las violaciones de derechos humanos, es fundamental para construir el futuro.",
+          "El Peru necesita reconciliarse con su pasado colonial y republicano para avanzar hacia una sociedad mas justa."
+        ]
+      },
+      {
+        level: "avanzado",
+        title: "El futuro del Peru: desafios y oportunidades",
+        lines: [
+          "El Peru del tercer siglo enfrenta el desafio de construir una democracia verdaderamente inclusiva y representativa.",
+          "La crisis climatica amenaza la seguridad alimentaria y del agua, especialmente en las comunidades andinas y amazonicas.",
+          "La transicion energetica hacia fuentes renovables es una oportunidad para diversificar la economia y reducir la dependencia extractivista.",
+          "El fortalecimiento del tejido social y la confianza institucional son condicion esenciales para el desarrollo sostenible.",
+          "La juventud peruana, que representa mas del 30% de la poblacion, es la principal esperanza para un cambio profundo.",
+          "El futuro del Peru depende de su capacidad para construir un proyecto nacional que incluya a todos sus ciudadanos sin distincion de origen, etnia o condicion social."
+        ]
+      }
+    ],
+    illustrations: [
+      "<svg viewBox=\"0 0 300 200\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"300\" height=\"200\" fill=\"#fff5f0\"/><rect x=\"20\" y=\"30\" width=\"260\" height=\"140\" fill=\"#fff\" stroke=\"#cc3300\" stroke-width=\"2\"/><text x=\"150\" y=\"55\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"bold\" fill=\"#cc3300\">BICENTENARIO 2021</text><rect x=\"30\" y=\"70\" width=\"75\" height=\"40\" fill=\"#ffe0cc\" stroke=\"#cc6600\" stroke-width=\"1\"/><text x=\"67\" y=\"87\" text-anchor=\"middle\" font-size=\"7\" fill=\"#cc6600\">1821</text><text x=\"67\" y=\"97\" text-anchor=\"middle\" font-size=\"7\" fill=\"#cc6600\">INDEPENDENCIA</text><rect x=\"112\" y=\"70\" width=\"75\" height=\"40\" fill=\"#ffe0cc\" stroke=\"#cc6600\" stroke-width=\"1\"/><text x=\"150\" y=\"87\" text-anchor=\"middle\" font-size=\"7\" fill=\"#cc6600\">IDENTIDAD</text><text x=\"150\" y=\"97\" text-anchor=\"middle\" font-size=\"7\" fill=\"#cc6600\">NACIONAL</text><rect x=\"195\" y=\"70\" width=\"75\" height=\"40\" fill=\"#ffe0cc\" stroke=\"#cc6600\" stroke-width=\"1\"/><text x=\"232\" y=\"87\" text-anchor=\"middle\" font-size=\"7\" fill=\"#cc6600\">FUTURO</text><text x=\"232\" y=\"97\" text-anchor=\"middle\" font-size=\"7\" fill=\"#cc6600\">PERU</text><text x=\"150\" y=\"135\" text-anchor=\"middle\" font-size=\"9\" fill=\"#333\">200 anos: De la exclusion a la inclusion</text><rect x=\"40\" y=\"140\" width=\"220\" height=\"20\" fill=\"#ffe5d5\" stroke=\"#cc3300\" stroke-width=\"1\"/><text x=\"150\" y=\"155\" text-anchor=\"middle\" font-size=\"8\" fill=\"#cc3300\">El Peru que viene: diverso, justo, sostenible</text></svg>"
+    ],
+    exercises: [
+      {
+        "id": 7145,
+        "question": "Que expuso el Bicentenario del Peru en 2021?",
+        "options": [
+          "La unidad nacional y el desarrollo alcanzado",
+          "Profundas divisiones sociales, economicas y politicas que persisten desde la fundacion de la Republica",
+          "El exito del modelo economico peruano",
+          "La resolucion definitiva del conflicto interno"
+        ],
+        correctIndex: 1,
+        explanation: "El Bicentenario expuso las profundas divisiones sociales, economicas y politicas que persisten desde la fundacion de la Republica, contrastando las celebraciones oficiales con la realidad de exclusion de millones de peruanos.",
+        difficulty: "basico"
+      },
+      {
+        "id": 7146,
+        "question": "Que implica la independencia real segun el analisis historico?",
+        "options": [
+          "Solo la soberania politica frente a potencias extranjeras",
+          "Soberania politica mas justicia social, economica y cultural para todos los ciudadanos",
+          "La eliminacion total de la influencia cultural europea",
+          "El aislamiento internacional del pais"
+        ],
+        "correctIndex": 1,
+        "explanation": "La independencia real requiere no solo soberania politica sino tambien justicia social, economica y cultural, ya que dos siglos despues las elites siguen controlando el poder y los recursos.",
+        "difficulty": "intermedio"
+      },
+      {
+        "id": 7147,
+        "question": "Cual es el principal recurso humano para el futuro del Peru segun el analisis?",
+        "options": [
+          "Las empresas mineras que generan empleo",
+          "La juventud peruana, que representa mas del 30% de la poblacion",
+          "Los funcionarios publicos del Estado",
+          "Los inversionistas extranjeros"
+        ],
+        "correctIndex": 1,
+        "explanation": "La juventud peruana, que representa mas del 30% de la poblacion, es considerada la principal esperanza para un cambio profundo hacia una sociedad mas justa e inclusiva.",
+        "difficulty": "avanzado"
+      }
+    ]
+  }
+];
+
+courseContent["historia"] = [...historiaModulesPart1, ...historiaModulesPart2, ...historiaModulesPart3, ...historiaModulesPart4];
