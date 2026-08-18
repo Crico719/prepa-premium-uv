@@ -8,6 +8,7 @@ import {
   Landmark,
   Leaf,
   MessageSquareText,
+  Triangle,
   type LucideIcon,
 } from "lucide-react";
 
@@ -156,6 +157,19 @@ export const courses: Course[] = [
     icon: Brain,
     tone: "deep",
   },
+  {
+    slug: "geometria",
+    name: "Geometría",
+    description: "Geometría plana y del espacio para exámenes de admisión",
+    teacher: "Didy Ricra Osorio (Ed. Cuzcano)",
+    level: "Intermedio",
+    progress: 0,
+    lessons: 17,
+    completedLessons: 0,
+    hoursLeft: 35,
+    icon: Triangle,
+    tone: "primary",
+  },
 ];
 
 export const lessons = [
@@ -191,6 +205,25 @@ export const courseLessons: Record<string, { title: string; state: "Completado" 
     { title: "Áreas Sombreadas y Perímetros", state: "Pendiente", minutes: 28 },
     { title: "Análisis Combinatorio", state: "Pendiente", minutes: 30 },
     { title: "Probabilidades", state: "Pendiente", minutes: 25 },
+  ],
+  "geometria": [
+    { title: "Línea Recta y Ángulos", state: "Pendiente", minutes: 20 },
+    { title: "Triángulos", state: "Pendiente", minutes: 25 },
+    { title: "Polígonos", state: "Pendiente", minutes: 22 },
+    { title: "Cuadriláteros", state: "Pendiente", minutes: 20 },
+    { title: "Circunferencia", state: "Pendiente", minutes: 28 },
+    { title: "Puntos Notables", state: "Pendiente", minutes: 25 },
+    { title: "Proporcionalidad y Semejanza", state: "Pendiente", minutes: 30 },
+    { title: "Relaciones Métricas", state: "Pendiente", minutes: 22 },
+    { title: "Polígonos Regulares", state: "Pendiente", minutes: 20 },
+    { title: "Áreas", state: "Pendiente", minutes: 25 },
+    { title: "Rectas y Planos", state: "Pendiente", minutes: 28 },
+    { title: "Prisma y Cilindro", state: "Pendiente", minutes: 22 },
+    { title: "Pirámide y Cono", state: "Pendiente", minutes: 22 },
+    { title: "Esfera", state: "Pendiente", minutes: 18 },
+    { title: "La Recta", state: "Pendiente", minutes: 15 },
+    { title: "Circunferencia y Parábola", state: "Pendiente", minutes: 25 },
+    { title: "Elipse e Hipérbola", state: "Pendiente", minutes: 25 },
   ],
 };
 
