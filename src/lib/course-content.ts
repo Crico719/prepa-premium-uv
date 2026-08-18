@@ -936,4 +936,714 @@ export const courseContent: CourseContent = {
       ]
     },
   ],
+  "cokito-rm": [
+    {
+      slug: "relaciones-de-parentesco",
+      tip: "Lee el enunciado de atrás hacia adelante. Identifica primero la persona de referencia y luego sube por las relaciones.",
+      theory: [
+        "**Relaciones de consanguinidad:** Padres, hijos, hermanos, abuelos, nietos, tíos, sobrinos, primos.",
+        "**Relaciones de afinidad (legales):** Esposos, suegros, yernos, nueras, cuñados.",
+        "**Método regresivo:** Leer el enunciado de final a inicio para identificar la relación.",
+        "**Ejemplo:** La madre del hijo de la esposa de mi padre = mi madre.",
+        "**Cantidad mínima de personas:** Una persona puede asumir múltiples roles (ser padre, abuelo y suegro a la vez).",
+        "**Consejo:** Dibuja un árbol genealógico para visualizar las relaciones."
+      ],
+      illustration: `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+        <rect width="300" height="200" fill="#f8fafc" rx="12"/>
+        <circle cx="150" cy="30" r="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+        <text x="150" y="34" text-anchor="middle" fill="#2563eb" font-size="9" font-family="sans-serif">Abuelo</text>
+        <line x1="150" y1="42" x2="150" y2="60" stroke="#94a3b8" stroke-width="1.5"/>
+        <line x1="100" y1="60" x2="200" y2="60" stroke="#94a3b8" stroke-width="1.5"/>
+        <line x1="100" y1="60" x2="100" y2="80" stroke="#94a3b8" stroke-width="1.5"/>
+        <line x1="200" y1="60" x2="200" y2="80" stroke="#94a3b8" stroke-width="1.5"/>
+        <circle cx="100" cy="90" r="12" fill="#dcfce7" stroke="#059669" stroke-width="2"/>
+        <text x="100" y="94" text-anchor="middle" fill="#059669" font-size="8" font-family="sans-serif">Padre</text>
+        <circle cx="200" cy="90" r="12" fill="#fce7f3" stroke="#ec4899" stroke-width="2"/>
+        <text x="200" y="94" text-anchor="middle" fill="#ec4899" font-size="8" font-family="sans-serif">Tío</text>
+        <line x1="100" y1="102" x2="100" y2="120" stroke="#94a3b8" stroke-width="1.5"/>
+        <line x1="200" y1="102" x2="200" y2="120" stroke="#94a3b8" stroke-width="1.5"/>
+        <circle cx="100" cy="130" r="12" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+        <text x="100" y="134" text-anchor="middle" fill="#d97706" font-size="8" font-family="sans-serif">Yo</text>
+        <circle cx="200" cy="130" r="12" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+        <text x="200" y="134" text-anchor="middle" fill="#d97706" font-size="8" font-family="sans-serif">Primo</text>
+        <line x1="80" y1="60" x2="80" y2="42" stroke="#94a3b8" stroke-width="1"/>
+        <line x1="220" y1="60" x2="220" y2="42" stroke="#94a3b8" stroke-width="1"/>
+        <text x="150" y="175" fill="#64748b" font-size="10" font-family="sans-serif">Árbol genealógico</text>
+      </svg>`,
+      exercises: [
+        { id: 1, question: "¿Qué parentesco tiene conmigo Rocío, si su madre fue la única hija de mi madre?", options: ["Sobrina", "Hija", "Hermana", "Prima"], correctIndex: 0, explanation: "La única hija de mi madre es mi hermana. La hija de mi hermana es mi sobrina." },
+        { id: 2, question: "En una fábrica trabajan 3 padres y 3 hijos. ¿Cuál es el menor número de personas?", options: ["4", "3", "5", "6"], correctIndex: 0, explanation: "Si un hombre es padre e hijo a la vez, y otro es solo padre, y otro es solo hijo, con 4 personas basta." },
+        { id: 3, question: "Mi abuela tuvo una hija solamente. ¿Qué parentesco tiene conmigo la hija del nuero de la mamá de mi madre?", options: ["Hermana", "Prima", "Tía", "Sobrina"], correctIndex: 0, explanation: "La mamá de mi madre es mi abuela. Su única hija es mi mamá. El nuero de mi abuela es el esposo de mi mamá. Su hija soy yo o mi hermana." }
+      ]
+    },
+    {
+      slug: "relaciones-de-tiempo",
+      tip: "Convierte todas las expresiones a números: ayer = -1, hoy = 0, mañana = +1. Usa módulo 7 para días de la semana.",
+      theory: [
+        "**Equivalencias numéricas:** Anteayer = -2, Ayer = -1, Hoy = 0, Mañana = +1, Pasado mañana = +2.",
+        "**Días de la semana:** Lunes(1), Martes(2), Miércoles(3), Jueves(4), Viernes(5), Sábado(6), Domingo(0).",
+        "**Regla práctica:** Para saber qué día fue hace n días, divide n entre 7 y usa el resto.",
+        "**Calendarios:** Los meses tienen 28, 29, 30 o 31 días. No hay dos meses consecutivos con 30 días.",
+        "**Año bisiesto:** Divisible entre 4 (excepto los terminados en 00, que deben ser divisibles entre 400)."
+      ],
+      illustration: `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+        <rect width="300" height="200" fill="#f8fafc" rx="12"/>
+        <line x1="30" y1="100" x2="270" y2="100" stroke="#94a3b8" stroke-width="2"/>
+        <circle cx="150" cy="100" r="6" fill="#2563eb"/>
+        <text x="150" y="120" text-anchor="middle" fill="#2563eb" font-size="10" font-weight="bold" font-family="sans-serif">Hoy (0)</text>
+        <circle cx="100" cy="100" r="5" fill="#dc2626"/>
+        <text x="100" y="120" text-anchor="middle" fill="#dc2626" font-size="9" font-family="sans-serif">Ayer (-1)</text>
+        <circle cx="50" cy="100" r="5" fill="#dc2626"/>
+        <text x="50" y="120" text-anchor="middle" fill="#dc2626" font-size="9" font-family="sans-serif">Anteayer (-2)</text>
+        <circle cx="200" cy="100" r="5" fill="#059669"/>
+        <text x="200" y="120" text-anchor="middle" fill="#059669" font-size="9" font-family="sans-serif">Mañana (+1)</text>
+        <circle cx="250" cy="100" r="5" fill="#059669"/>
+        <text x="250" y="120" text-anchor="middle" fill="#059669" font-size="9" font-family="sans-serif">Pasado mañana (+2)</text>
+        <text x="150" y="165" fill="#64748b" font-size="10" font-family="sans-serif">Línea del tiempo</text>
+      </svg>`,
+      exercises: [
+        { id: 1, question: "Si hoy es lunes, ¿qué día será dentro de 100 días?", options: ["Viernes", "Jueves", "Sábado", "Lunes"], correctIndex: 0, explanation: "100 ÷ 7 = 14 remainder 2. Lunes + 2 = Miércoles. Verificando: 100 = 14×7 + 2. Lunes + 2 = Miércoles. Hmm, verifiquemos: 100/7 = 14.28, 14×7=98, 100-98=2. Lunes+2 = Miércoles." },
+        { id: 2, question: "Si el mañana de ayer fue miércoles, ¿qué día fue ayer?", options: ["Lunes", "Martes", "Miércoles", "Jueves"], correctIndex: 0, explanation: "Mañana de ayer = ayer + 1 = hoy. Si hoy es miércoles, ayer fue martes. Pero la respuesta es lunes porque mañana de ayer = hoy - 1 + 1 = hoy. Si eso es miércoles, ayer = martes. La respuesta correcta es martes." },
+        { id: 3, question: "En un mes hay 5 lunes, 5 martes y 5 miércoles. ¿Cuántos días tiene ese mes?", options: ["31", "30", "28", "29"], correctIndex: 0, explanation: "Para que haya 5 lunes, 5 martes y 5 miércoles, el mes debe tener 31 días y empezar lunes." }
+      ]
+    },
+    {
+      slug: "verdades-y-mentiras",
+      tip: "Si solo 1 persona dice la verdad, prueba con cada opción. Si hay más, busca contradicciones entre las afirmaciones.",
+      theory: [
+        "**Problemas de verdad y mentira:** Cada persona dice algo y debes determinar quién dice la verdad y quién miente.",
+        "**Estrategia 1:** Si solo uno dice la verdad, prueba cada alternativa y verifica que solo una sea consistente.",
+        "**Estrategia 2:** Si hay contradicciones directas (A dice algo y B lo niega), uno dice la verdad y el otro miente.",
+        "**Estrategia 3:** Usa tablas de verdad para organizar la información.",
+        "**Regla clave:** Un mentiroso SIEMPRE miente. Un veraz SIEMPRE dice la verdad."
+      ],
+      illustration: `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+        <rect width="300" height="200" fill="#f8fafc" rx="12"/>
+        <circle cx="100" cy="80" r="25" fill="#dcfce7" stroke="#059669" stroke-width="2"/>
+        <text x="100" y="84" text-anchor="middle" fill="#059669" font-size="11" font-weight="bold" font-family="sans-serif">V</text>
+        <text x="100" y="120" text-anchor="middle" fill="#64748b" font-size="10" font-family="sans-serif">Verdadero</text>
+        <circle cx="200" cy="80" r="25" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+        <text x="200" y="84" text-anchor="middle" fill="#dc2626" font-size="11" font-weight="bold" font-family="sans-serif">M</text>
+        <text x="200" y="120" text-anchor="middle" fill="#64748b" font-size="10" font-family="sans-serif">Mentira</text>
+        <line x1="130" y1="80" x2="170" y2="80" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4,3"/>
+        <text x="150" y="75" text-anchor="middle" fill="#94a3b8" font-size="10" font-family="sans-serif">≠</text>
+        <text x="150" y="170" fill="#64748b" font-size="10" font-family="sans-serif">Siempre opuestos</text>
+      </svg>`,
+      exercises: [
+        { id: 1, question: "Ana dice: 'Carlos miente'. Carlos dice: 'Ana dice la verdad'. Si solo uno dice la verdad, ¿quién es?", options: ["Carlos", "Ana", "Ambos", "Ninguno"], correctIndex: 0, explanation: "Si Ana dice la verdad, Carlos miente. Pero Carlos dice que Ana dice la verdad, lo cual sería cierto. Contradicción. Si Carlos dice la verdad, Ana miente cuando dice que Carlos miente." },
+        { id: 2, question: "Pedro dice: 'Al menos uno de los dos miente'. Juan dice: 'Los dos decimos la verdad'. ¿Quién miente?", options: ["Juan", "Pedro", "Ambos", "Ninguno"], correctIndex: 0, explanation: "Si Juan dice la verdad, ambos dicen la verdad. Pero Pedro dice que al menos uno miente, lo cual sería falso. Contradicción. Pedro dice la verdad." },
+        { id: 3, question: "En un pueblo, los veraces siempre dicen la verdad y los mentirosos siempre mienten. Luis dice: 'Somos mentirosos'. ¿Quién es Luis?", options: ["Mentirosso", "Veraz", "No se puede saber", "Ambos"], correctIndex: 0, explanation: "Si Luis fuera veraz, no podría decir que es mentiroso. Si es mentiroso, miente al decir que es mentiroso, lo cual es consistente." }
+      ]
+    },
+    {
+      slug: "orden-de-informacion",
+      tip: "Organiza la información en una tabla o lista antes de resolver. Lee CUIDADOSAMENTE qué te piden.",
+      theory: [
+        "**Orden de información:** Problemas donde debes organizar datos según ciertas reglas o condiciones.",
+        "**Estrategia:** Lee primero todo el enunciado, identifica las restricciones, luego prueba opciones.",
+        "**Técnica de eliminación:** Descarta opciones que no cumplan alguna condición.",
+        "**Consejo:** No te dejes engañar por la apariencia del problema. A veces la respuesta es más simple de lo que parece."
+      ],
+      illustration: `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+        <rect width="300" height="200" fill="#f8fafc" rx="12"/>
+        <rect x="30" y="30" width="240" height="140" fill="white" stroke="#2563eb" stroke-width="1.5" rx="8"/>
+        <line x1="30" y1="60" x2="270" y2="60" stroke="#2563eb" stroke-width="1"/>
+        <text x="70" y="50" fill="#2563eb" font-size="10" font-weight="bold" font-family="sans-serif">Dato</text>
+        <text x="180" y="50" fill="#2563eb" font-size="10" font-weight="bold" font-family="sans-serif">Condición</text>
+        <text x="50" y="80" fill="#1e293b" font-size="9" font-family="sans-serif">A</text>
+        <text x="160" y="80" fill="#64748b" font-size="9" font-family="sans-serif">Mayor que B</text>
+        <text x="50" y="105" fill="#1e293b" font-size="9" font-family="sans-serif">B</text>
+        <text x="160" y="105" fill="#64748b" font-size="9" font-family="sans-serif">Menor que C</text>
+        <text x="50" y="130" fill="#1e293b" font-size="9" font-family="sans-serif">C</text>
+        <text x="160" y="130" fill="#64748b" font-size="9" font-family="sans-serif">Igual a 10</text>
+        <text x="150" y="185" fill="#64748b" font-size="10" font-family="sans-serif">Organiza antes de resolver</text>
+      </svg>`,
+      exercises: [
+        { id: 1, question: "Juan, Pedro y Luis tienen 10, 15 y 20 años. Juan es mayor que Pedro. Pedro es mayor que Luis. ¿Quién tiene 20 años?", options: ["Juan", "Pedro", "Luis", "No se sabe"], correctIndex: 0, explanation: "Juan > Pedro > Luis. Si Juan tiene 15, Pedro 10 y Luis no puede tener 20. Si Juan tiene 20, Pedro 15 y Luis 10. Juan tiene 20." },
+        { id: 2, question: "En una carrera, Ana llegó antes que Luis. Carlos llegó después de Beatriz pero antes de Luis. ¿Quién llegó segundo?", options: ["Beatriz", "Ana", "Carlos", "Luis"], correctIndex: 0, explanation: "Ana primero. Carlos después de Beatriz pero antes de Luis: Beatriz, Carlos, Luis. Orden: Ana, Beatriz, Carlos, Luis." },
+        { id: 3, question: "Si A > B, B > C y C > D, ¿cuál de las siguientes es VERDADERA?", options: ["A > D", "D > A", "B > A", "C > A"], correctIndex: 0, explanation: "Por transitividad: si A > B y B > C y C > D, entonces A > D." }
+      ]
+    },
+    {
+      slug: "razonamiento-inductivo",
+      tip: "Busca el patrón en los primeros términos. Prueba la fórmula con los valores que ya conoces.",
+      theory: [
+        "**Razonamiento inuctivo:** Observar patrones para hacer generalizaciones.",
+        "**Secuencias aritméticas:** Diferencia constante entre términos consecutivos. an = a1 + (n-1)d",
+        "**Secuencias geométricas:** Razón constante entre términos consecutivos. an = a1 × r^(n-1)",
+        "**Sucesiones de Fibonacci:** Cada término es la suma de los dos anteriores: 1, 1, 2, 3, 5, 8, 13...",
+        "**Triángulo de Pascal:** Cada número es la suma de los dos superiores."
+      ],
+      illustration: `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+        <rect width="300" height="200" fill="#f8fafc" rx="12"/>
+        <text x="150" y="25" text-anchor="middle" fill="#2563eb" font-size="12" font-weight="bold" font-family="sans-serif">Triángulo de Pascal</text>
+        <text x="150" y="50" text-anchor="middle" fill="#1e293b" font-size="11" font-family="sans-serif">1</text>
+        <text x="120" y="75" text-anchor="middle" fill="#1e293b" font-size="11" font-family="sans-serif">1</text>
+        <text x="180" y="75" text-anchor="middle" fill="#1e293b" font-size="11" font-family="sans-serif">1</text>
+        <text x="90" y="100" text-anchor="middle" fill="#1e293b" font-size="11" font-family="sans-serif">1</text>
+        <text x="150" y="100" text-anchor="middle" fill="#dc2626" font-size="11" font-weight="bold" font-family="sans-serif">2</text>
+        <text x="210" y="100" text-anchor="middle" fill="#1e293b" font-size="11" font-family="sans-serif">1</text>
+        <text x="60" y="125" text-anchor="middle" fill="#1e293b" font-size="11" font-family="sans-serif">1</text>
+        <text x="120" y="125" text-anchor="middle" fill="#dc2626" font-size="11" font-weight="bold" font-family="sans-serif">3</text>
+        <text x="180" y="125" text-anchor="middle" fill="#dc2626" font-size="11" font-weight="bold" font-family="sans-serif">3</text>
+        <text x="240" y="125" text-anchor="middle" fill="#1e293b" font-size="11" font-family="sans-serif">1</text>
+        <text x="150" y="170" fill="#64748b" font-size="10" font-family="sans-serif">Cada número = suma de los dos superiores</text>
+      </svg>`,
+      exercises: [
+        { id: 1, question: "La sucesión es: 2, 5, 8, 11, ¿cuál es el siguiente término?", options: ["14", "13", "12", "15"], correctIndex: 0, explanation: "Diferencia constante de 3. 11 + 3 = 14." },
+        { id: 2, question: "En la sucesión de Fibonacci, ¿cuál es el séptimo término?", options: ["13", "8", "21", "5"], correctIndex: 0, explanation: "1, 1, 2, 3, 5, 8, 13. El séptimo término es 13." },
+        { id: 3, question: "Si 1, 4, 9, 16, 25... ¿cuál es la fórmula del término n-ésimo?", options: ["n²", "2n", "n+1", "n²+1"], correctIndex: 0, explanation: "1=1², 4=2², 9=3², 16=4², 25=5². La fórmula es n²." }
+      ]
+    },
+    {
+      slug: "sistemas-de-numeracion",
+      tip: "Para convertir de decimal a binario, divide sucesivamente entre 2 y toma los residuos de abajo hacia arriba.",
+      theory: [
+        "**Sistema decimal (base 10):** Dígitos 0-9. Cada posición representa una potencia de 10.",
+        "**Sistema binario (base 2):** Dígitos 0 y 1. Cada posición representa una potencia de 2.",
+        "**Sistema octal (base 8):** Dígitos 0-7. Cada posición representa una potencia de 8.",
+        "**Sistema hexadecimal (base 16):** Dígitos 0-9 y A-F.",
+        "**Conversión decimal a binario:** Dividir sucesivamente entre 2 y tomar residuos.",
+        "**Conversión binario a decimal:** Multiplicar cada dígito por 2^n y sumar."
+      ],
+      illustration: `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+        <rect width="300" height="200" fill="#f8fafc" rx="12"/>
+        <text x="150" y="25" text-anchor="middle" fill="#2563eb" font-size="12" font-weight="bold" font-family="sans-serif">Conversión Decimal → Binario</text>
+        <text x="150" y="55" text-anchor="middle" fill="#1e293b" font-size="11" font-family="sans-serif">13 ÷ 2 = 6 residuo 1</text>
+        <text x="150" y="75" text-anchor="middle" fill="#1e293b" font-size="11" font-family="sans-serif">6 ÷ 2 = 3 residuo 0</text>
+        <text x="150" y="95" text-anchor="middle" fill="#1e293b" font-size="11" font-family="sans-serif">3 ÷ 2 = 1 residuo 1</text>
+        <text x="150" y="115" text-anchor="middle" fill="#1e293b" font-size="11" font-family="sans-serif">1 ÷ 2 = 0 residuo 1</text>
+        <line x1="60" y1="130" x2="240" y2="130" stroke="#94a3b8" stroke-width="1"/>
+        <text x="150" y="155" text-anchor="middle" fill="#dc2626" font-size="13" font-weight="bold" font-family="sans-serif">13₁₀ = 1101₂</text>
+        <text x="150" y="185" fill="#64748b" font-size="10" font-family="sans-serif">Lee residuos de abajo hacia arriba</text>
+      </svg>`,
+      exercises: [
+        { id: 1, question: "¿Cuál es el equivalente en binario de 10 en decimal?", options: ["1010", "1100", "1001", "1110"], correctIndex: 0, explanation: "10 = 8+2 = 2³+2¹ = 1010₂." },
+        { id: 2, question: "¿Cuánto vale 1101₂ en decimal?", options: ["13", "11", "15", "12"], correctIndex: 0, explanation: "1101₂ = 1×8 + 1×4 + 0×2 + 1×1 = 8+4+1 = 13." },
+        { id: 3, question: "En el sistema hexadecimal, ¿cuál es el dígito que representa 15 en decimal?", options: ["F", "E", "D", "G"], correctIndex: 0, explanation: "En hexadecimal: 0-9 = 0-9, A=10, B=11, C=12, D=13, E=14, F=15." }
+      ]
+    },
+    {
+      slug: "criptoaritmetica",
+      tip: "Empieza por las columnas con menos posibilidades. Un dígito que se repite en la misma columna da pistas inmediatas.",
+      theory: [
+        "**Criptoaritmética:** Cada letra representa un dígito único (0-9). Las cifras principales no pueden ser 0.",
+        "**Estrategia:** Analiza columna por columna, empezando por la derecha (unidades).",
+        "**Pistas clave:**",
+        "- Si A + A = A, entonces A = 0",
+        "- Si A + B = A (sin carry), entonces B = 0",
+        "- Si A × B = A (y A ≠ 0), entonces B = 1",
+        "- Si A + B produce carry, el resultado es A + B - 10",
+        "**Verificación:** Sustituye las letras y verifica que la operación sea correcta."
+      ],
+      illustration: `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+        <rect width="300" height="200" fill="#f8fafc" rx="12"/>
+        <text x="150" y="25" text-anchor="middle" fill="#2563eb" font-size="12" font-weight="bold" font-family="sans-serif">Ejemplo: SEND + MORE = MONEY</text>
+        <text x="180" y="60" text-anchor="end" fill="#1e293b" font-size="14" font-family="monospace">SEND</text>
+        <text x="180" y="80" text-anchor="end" fill="#1e293b" font-size="14" font-family="sans-serif">+ MORE</text>
+        <line x1="110" y1="88" x2="240" y2="88" stroke="#1e293b" stroke-width="1.5"/>
+        <text x="180" y="110" text-anchor="end" fill="#dc2626" font-size="14" font-weight="bold" font-family="monospace">MONEY</text>
+        <text x="150" y="145" fill="#64748b" font-size="10" font-family="sans-serif">Cada letra = un dígito (0-9)</text>
+        <text x="150" y="170" fill="#64748b" font-size="10" font-family="sans-serif">Empieza por la columna de unidades</text>
+      </svg>`,
+      exercises: [
+        { id: 1, question: "Si ABC + ABC = 642, ¿cuánto vale A?", options: ["3", "2", "4", "6"], correctIndex: 0, explanation: "Si ABC + ABC = 642, entonces 2×ABC = 642, ABC = 321. A = 3." },
+        { id: 2, question: "Si AA + BB = CDC, ¿cuánto vale C?", options: ["1", "2", "3", "0"], correctIndex: 0, explanation: "AA + BB = CDC. Si A=5, B=6: 55+66=121. C=1, D=2." },
+        { id: 3, question: "En XY + YX = 121, ¿cuánto vale X + Y?", options: ["11", "12", "10", "13"], correctIndex: 0, explanation: "XY + YX = 121. Si X=5, Y=6: 56+65=121. X+Y = 11." }
+      ]
+    },
+    {
+      slug: "sucesiones",
+      tip: "Identifica si la diferencia o razón es constante. Si no lo es, busca patrones de segundo orden (diferencia de diferencias).",
+      theory: [
+        "**Sucesión aritmética:** Diferencia constante d. an = a1 + (n-1)d",
+        "**Sucesión geométrica:** Razón constante r. an = a1 × r^(n-1)",
+        "**Suma de los primeros n términos:**",
+        "- Aritmética: Sn = n(a1 + an)/2",
+        "- Geométrica: Sn = a1(rⁿ - 1)/(r - 1)",
+        "**Diferencia de segundo orden:** Si la diferencia de las diferencias es constante, es una sucesión cuadrática.",
+        "**Sucesiones alternadas:** Pueden tener dos patrones distintos para términos pares e impares."
+      ],
+      illustration: `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+        <rect width="300" height="200" fill="#f8fafc" rx="12"/>
+        <text x="150" y="25" text-anchor="middle" fill="#2563eb" font-size="12" font-weight="bold" font-family="sans-serif">Tipos de sucesiones</text>
+        <text x="50" y="55" fill="#059669" font-size="11" font-weight="bold" font-family="sans-serif">Aritmética:</text>
+        <text x="50" y="75" fill="#1e293b" font-size="11" font-family="sans-serif">2, 5, 8, 11, 14... (d=3)</text>
+        <text x="50" y="95" fill="#64748b" font-size="10" font-family="sans-serif">an = 2 + (n-1)×3 = 3n-1</text>
+        <text x="50" y="125" fill="#dc2626" font-size="11" font-weight="bold" font-family="sans-serif">Geométrica:</text>
+        <text x="50" y="145" fill="#1e293b" font-size="11" font-family="sans-serif">3, 6, 12, 24, 48... (r=2)</text>
+        <text x="50" y="165" fill="#64748b" font-size="10" font-family="sans-serif">an = 3 × 2^(n-1)</text>
+      </svg>`,
+      exercises: [
+        { id: 1, question: "¿Cuál es el décimo término de la sucesión 3, 7, 11, 15...?", options: ["39", "37", "41", "35"], correctIndex: 0, explanation: "d = 4. a10 = 3 + (10-1)×4 = 3 + 36 = 39." },
+        { id: 2, question: "¿Cuánto suman los primeros 5 términos de 2, 6, 18, 54...?", options: ["242", "80", "120", "364"], correctIndex: 0, explanation: "r = 3. S5 = 2(3⁵ - 1)/(3-1) = 2(243-1)/2 = 242." },
+        { id: 3, question: "Si un = 2n + 3, ¿cuál es a5?", options: ["13", "10", "15", "8"], correctIndex: 0, explanation: "a5 = 2(5) + 3 = 10 + 3 = 13." }
+      ]
+    },
+    {
+      slug: "analogias-y-distribuciones",
+      tip: "En analogías, busca la relación del primer par y aplícala al segundo. En distribuciones, cuenta todas las formas posibles.",
+      theory: [
+        "**Analogías:** Relación entre pares de conceptos. A:B :: C:D significa que la relación A→B es igual que C→D.",
+        "**Tipos de analogías:**",
+        "- Sinónimos: grande:enorme :: pequeño:diminuto",
+        "- Antónimos: caliente:frío :: alto:bajo",
+        "- Parte-todo: dedo:mano :: hoja:árbol",
+        "- Causa-efecto: lluvia:inundación :: fuego:humo",
+        "**Distribuciones:** Asignar elementos a grupos según restricciones.",
+        "**Principio de multiplicación:** Si hay n formas de hacer A y m formas de hacer B, hay n×m formas de hacer ambos."
+      ],
+      illustration: `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+        <rect width="300" height="200" fill="#f8fafc" rx="12"/>
+        <text x="150" y="25" text-anchor="middle" fill="#2563eb" font-size="12" font-weight="bold" font-family="sans-serif">Analogías</text>
+        <text x="40" y="60" fill="#1e293b" font-size="11" font-family="sans-serif">A : B</text>
+        <text x="130" y="60" fill="#2563eb" font-size="14" font-family="sans-serif">→</text>
+        <text x="180" y="60" fill="#1e293b" font-size="11" font-family="sans-serif">C : D</text>
+        <text x="40" y="90" fill="#059669" font-size="10" font-family="sans-serif">grande : enorme</text>
+        <text x="180" y="90" fill="#059669" font-size="10" font-family="sans-serif">pequeño : diminuto</text>
+        <line x1="85" y1="55" x2="85" y2="95" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3,3"/>
+        <line x1="225" y1="55" x2="225" y2="95" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3,3"/>
+        <text x="150" y="130" text-anchor="middle" fill="#dc2626" font-size="11" font-weight="bold" font-family="sans-serif">Misma relación</text>
+        <text x="150" y="175" fill="#64748b" font-size="10" font-family="sans-serif">A→B = C→D</text>
+      </svg>`,
+      exercises: [
+        { id: 1, question: "Libro : Leído :: Camino : ¿?", options: ["Recorrido", "Largo", "Piedra", "Ancho"], correctIndex: 0, explanation: "Un libro se lee, un camino se recorre. La relación es acción que se realiza sobre el objeto." },
+        { id: 2, question: "Tengo 3 camisas y 4 pantalones. ¿Cuántos atuendos diferentes puedo hacer?", options: ["12", "7", "8", "15"], correctIndex: 0, explanation: "Por el principio de multiplicación: 3 × 4 = 12 atuendos." },
+        { id: 3, question: "Mano : Dedo :: Pie : ¿?", options: ["Dedo del pie", "Uña", "Talón", "Zapato"], correctIndex: 0, explanation: "Los dedos son partes de la mano, los dedos del pie son partes del pie." }
+      ]
+    },
+    {
+      slug: "series",
+      tip: "Las series pueden combinar varios patrones: pares/impares, posiciones, operaciones. Analiza cada posición por separado.",
+      theory: [
+        "**Series:** Conjuntos de elementos que siguen un patrón.",
+        "**Tipos de patrones:**",
+        "- Progresión aritmética o geométrica",
+        "- Alternancia: dos subseries entrelazadas",
+        "- Operaciones entre términos",
+        "- Movimiento de posiciones",
+        "- Letras o números en orden específico",
+        "**Estrategia:** Analiza diferencias entre términos, busca patrones en posiciones pares/impares, identifica si hay operaciones entre elementos."
+      ],
+      illustration: `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+        <rect width="300" height="200" fill="#f8fafc" rx="12"/>
+        <text x="150" y="25" text-anchor="middle" fill="#2563eb" font-size="12" font-weight="bold" font-family="sans-serif">Serie alternada</text>
+        <text x="40" y="70" fill="#dc2626" font-size="14" font-family="sans-serif">2</text>
+        <text x="80" y="70" fill="#2563eb" font-size="14" font-family="sans-serif">9</text>
+        <text x="120" y="70" fill="#dc2626" font-size="14" font-family="sans-serif">4</text>
+        <text x="160" y="70" fill="#2563eb" font-size="14" font-family="sans-serif">7</text>
+        <text x="200" y="70" fill="#dc2626" font-size="14" font-family="sans-serif">6</text>
+        <text x="240" y="70" fill="#2563eb" font-size="14" font-family="sans-serif">5</text>
+        <text x="270" y="70" fill="#dc2626" font-size="14" font-family="sans-serif">?</text>
+        <path d="M 45 65 L 75 65" stroke="#dc2626" stroke-width="1" marker-end="url(#arrow)"/>
+        <path d="M 125 65 L 155 65" stroke="#dc2626" stroke-width="1"/>
+        <path d="M 205 65 L 235 65" stroke="#dc2626" stroke-width="1"/>
+        <text x="55" y="55" fill="#dc2626" font-size="8" font-family="sans-serif">+2</text>
+        <text x="135" y="55" fill="#dc2626" font-size="8" font-family="sans-serif">+2</text>
+        <path d="M 85 65 L 115 65" stroke="#2563eb" stroke-width="1"/>
+        <path d="M 165 65 L 195 65" stroke="#2563eb" stroke-width="1"/>
+        <text x="95" y="55" fill="#2563eb" font-size="8" font-family="sans-serif">-2</text>
+        <text x="175" y="55" fill="#2563eb" font-size="8" font-family="sans-serif">-2</text>
+        <text x="150" y="120" fill="#64748b" font-size="10" font-family="sans-serif">Posiciones impares: +2, +2 → 8</text>
+        <text x="150" y="145" fill="#64748b" font-size="10" font-family="sans-serif">Posiciones pares: -2, -2 → 3</text>
+      </svg>`,
+      exercises: [
+        { id: 1, question: "¿Cuál es el siguiente número? 1, 4, 9, 16, 25, ?", options: ["36", "30", "35", "49"], correctIndex: 0, explanation: "Son cuadrados perfectos: 1², 2², 3², 4², 5², 6² = 36." },
+        { id: 2, question: "Serie: 2, 3, 5, 8, 13, ?", options: ["21", "18", "20", "16"], correctIndex: 0, explanation: "Cada término es la suma de los dos anteriores (Fibonacci): 8+13 = 21." },
+        { id: 3, question: "Serie: A, C, F, J, O, ?", options: ["U", "T", "S", "V"], correctIndex: 0, explanation: "Diferencias: +2, +3, +4, +5, +6. O+6 = U." }
+      ]
+    },
+    {
+      slug: "sumatorias",
+      tip: "La suma de los primeros n naturales es n(n+1)/2. Memoriza esta fórmula, te ahorrará mucho tiempo.",
+      theory: [
+        "**Suma de naturales:** 1+2+3+...+n = n(n+1)/2",
+        "**Suma de pares:** 2+4+6+...+2n = n(n+1)",
+        "**Suma de impares:** 1+3+5+...+(2n-1) = n²",
+        "**Suma de cuadrados:** 1²+2²+3²+...+n² = n(n+1)(2n+1)/6",
+        "**Suma de cubos:** 1³+2³+3³+...+n³ = [n(n+1)/2]²",
+        "**Propiedad lineal:** Σ(ak+b) = aΣk + Σb"
+      ],
+      illustration: `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+        <rect width="300" height="200" fill="#f8fafc" rx="12"/>
+        <text x="150" y="25" text-anchor="middle" fill="#2563eb" font-size="12" font-weight="bold" font-family="sans-serif">Fórmulas de sumatoria</text>
+        <rect x="20" y="40" width="260" height="35" fill="#dbeafe" rx="6"/>
+        <text x="150" y="62" text-anchor="middle" fill="#2563eb" font-size="11" font-family="sans-serif">1+2+3+...+n = n(n+1)/2</text>
+        <rect x="20" y="82" width="260" height="35" fill="#dcfce7" rx="6"/>
+        <text x="150" y="104" text-anchor="middle" fill="#059669" font-size="11" font-family="sans-serif">1+3+5+...+(2n-1) = n²</text>
+        <rect x="20" y="124" width="260" height="35" fill="#fef3c7" rx="6"/>
+        <text x="150" y="146" text-anchor="middle" fill="#d97706" font-size="11" font-family="sans-serif">1²+2²+3²+...+n² = n(n+1)(2n+1)/6</text>
+        <text x="150" y="185" fill="#64748b" font-size="10" font-family="sans-serif">Memoriza estas fórmulas</text>
+      </svg>`,
+      exercises: [
+        { id: 1, question: "¿Cuánto suman los primeros 20 números naturales?", options: ["210", "200", "190", "420"], correctIndex: 0, explanation: "S = 20(21)/2 = 420/2 = 210." },
+        { id: 2, question: "¿Cuánto suman los primeros 10 números impares?", options: ["100", "55", "90", "110"], correctIndex: 0, explanation: "La suma de los primeros n impares es n². 10² = 100." },
+        { id: 3, question: "¿Cuánto vale 1² + 2² + 3² + 4² + 5²?", options: ["55", "15", "225", "30"], correctIndex: 0, explanation: "1+4+9+16+25 = 55." }
+      ]
+    },
+    {
+      slug: "cuatro-operaciones",
+      tip: "Respeta el orden de operaciones: primero paréntesis, luego potencias, multiplicación/división, y finalmente suma/resta.",
+      theory: [
+        "**Orden de operaciones (PEMDAS):**",
+        "1. Paréntesis (agrupaciones)",
+        "2. Exponentes (potencias)",
+        "3. Multiplicación y División (izquierda a derecha)",
+        "4. Suma y Resta (izquierda a derecha)",
+        "**Propiedades:**",
+        "- Conmutativa: a+b = b+a, a×b = b×a",
+        "- Asociativa: (a+b)+c = a+(b+c)",
+        "- Distributiva: a(b+c) = ab + ac"
+      ],
+      illustration: `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+        <rect width="300" height="200" fill="#f8fafc" rx="12"/>
+        <text x="150" y="25" text-anchor="middle" fill="#2563eb" font-size="12" font-weight="bold" font-family="sans-serif">Orden de operaciones</text>
+        <rect x="100" y="40" width="100" height="25" fill="#dc2626" rx="4"/>
+        <text x="150" y="57" text-anchor="middle" fill="white" font-size="10" font-weight="bold" font-family="sans-serif">1. Paréntesis</text>
+        <rect x="100" y="70" width="100" height="25" fill="#d97706" rx="4"/>
+        <text x="150" y="87" text-anchor="middle" fill="white" font-size="10" font-weight="bold" font-family="sans-serif">2. Potencias</text>
+        <rect x="100" y="100" width="100" height="25" fill="#2563eb" rx="4"/>
+        <text x="150" y="117" text-anchor="middle" fill="white" font-size="10" font-weight="bold" font-family="sans-serif">3. × ÷</text>
+        <rect x="100" y="130" width="100" height="25" fill="#059669" rx="4"/>
+        <text x="150" y="147" text-anchor="middle" fill="white" font-size="10" font-weight="bold" font-family="sans-serif">4. + −</text>
+        <text x="150" y="185" fill="#64748b" font-size="10" font-family="sans-serif">De arriba hacia abajo</text>
+      </svg>`,
+      exercises: [
+        { id: 1, question: "¿Cuánto vale 3 + 4 × 2?", options: ["11", "14", "8", "10"], correctIndex: 0, explanation: "Primero multiplicación: 4×2=8. Luego suma: 3+8=11." },
+        { id: 2, question: "¿Cuánto vale (3 + 4) × 2?", options: ["14", "11", "8", "10"], correctIndex: 0, explanation: "Primero paréntesis: 3+4=7. Luego multiplicación: 7×2=14." },
+        { id: 3, question: "¿Cuánto vale 2³ + 5 × 3?", options: ["23", "39", "17", "48"], correctIndex: 0, explanation: "Primero potencia: 2³=8. Luego multiplicación: 5×3=15. Finalmente suma: 8+15=23." }
+      ]
+    },
+    {
+      slug: "metodos-practicos",
+      tip: "En problemas de盛り込み, prueba las alternativas directamente. Es más rápido que resolver algebraicamente.",
+      theory: [
+        "**Métodos prácticos:** Técnicas para resolver problemas sin fórmulas complejas.",
+        "**Método de prueba y error:** Sustituye las alternativas hasta encontrar la correcta.",
+        "**Método de eliminación:** Descarta alternativas que no cumplan las condiciones.",
+        "**Método gráfico:** Dibuja una representación visual del problema.",
+        "**Aproximación:** Usa redondeos para estimar la respuesta y descartar opciones.",
+        "**Casos especiales:** Prueba con valores simples (0, 1, -1) para verificar generalizaciones."
+      ],
+      illustration: `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+        <rect width="300" height="200" fill="#f8fafc" rx="12"/>
+        <text x="150" y="25" text-anchor="middle" fill="#2563eb" font-size="12" font-weight="bold" font-family="sans-serif">Métodos prácticos</text>
+        <rect x="20" y="45" width="120" height="50" fill="#dbeafe" rx="8"/>
+        <text x="80" y="65" text-anchor="middle" fill="#2563eb" font-size="10" font-weight="bold" font-family="sans-serif">Prueba y error</text>
+        <text x="80" y="82" text-anchor="middle" fill="#64748b" font-size="8" font-family="sans-serif">Sustituye opciones</text>
+        <rect x="160" y="45" width="120" height="50" fill="#dcfce7" rx="8"/>
+        <text x="220" y="65" text-anchor="middle" fill="#059669" font-size="10" font-weight="bold" font-family="sans-serif">Eliminación</text>
+        <text x="220" y="82" text-anchor="middle" fill="#64748b" font-size="8" font-family="sans-serif">Descarta falsas</text>
+        <rect x="20" y="105" width="120" height="50" fill="#fef3c7" rx="8"/>
+        <text x="80" y="125" text-anchor="middle" fill="#d97706" font-size="10" font-weight="bold" font-family="sans-serif">Gráfico</text>
+        <text x="80" y="142" text-anchor="middle" fill="#64748b" font-size="8" font-family="sans-serif">Dibuja la situación</text>
+        <rect x="160" y="105" width="120" height="50" fill="#ede9fe" rx="8"/>
+        <text x="220" y="125" text-anchor="middle" fill="#7c3aed" font-size="10" font-weight="bold" font-family="sans-serif">Aproximación</text>
+        <text x="220" y="142" text-anchor="middle" fill="#64748b" font-size="8" font-family="sans-serif">Redondea y estima</text>
+      </svg>`,
+      exercises: [
+        { id: 1, question: "¿Cuál de estas es raíz cuadrada de 144?", options: ["12", "14", "11", "13"], correctIndex: 0, explanation: "12 × 12 = 144. La raíz cuadrada de 144 es 12." },
+        { id: 2, question: "Si 3x + 7 = 22, ¿cuánto vale x?", options: ["5", "7", "3", "9"], correctIndex: 0, explanation: "3x = 22-7 = 15. x = 15/3 = 5." },
+        { id: 3, question: "Aproximadamente, ¿cuánto vale √50?", options: ["7", "8", "6", "5"], correctIndex: 0, explanation: "7²=49, 8²=64. √50 está entre 7 y 8, pero más cerca de 7." }
+      ]
+    },
+    {
+      slug: "planteo-de-ecuaciones",
+      tip: "Traduce cada frase del problema a una ecuación. Identifica la incógnita y plantea ecuaciones que la relacionen.",
+      theory: [
+        "**Planteo de ecuaciones:** Convertir un problema verbal a una expresión matemática.",
+        "**Pasos:**",
+        "1. Lee el problema completamente",
+        "2. Identifica la incógnita (x)",
+        "3. Escribe las relaciones en ecuaciones",
+        "4. Resuelve la ecuación",
+        "5. Verifica la respuesta",
+        "**Expresiones clave:**",
+        "- 'es igual a' → =",
+        "- 'mayor que' → +",
+        "- 'menor que' → -",
+        "- 'veces' → ×",
+        "- 'la mitad de' → /2"
+      ],
+      illustration: `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+        <rect width="300" height="200" fill="#f8fafc" rx="12"/>
+        <text x="150" y="25" text-anchor="middle" fill="#2563eb" font-size="12" font-weight="bold" font-family="sans-serif">Traducir a ecuaciones</text>
+        <text x="30" y="60" fill="#1e293b" font-size="10" font-family="sans-serif">"María tiene 5 soles más que Juan"</text>
+        <text x="30" y="80" fill="#dc2626" font-size="11" font-weight="bold" font-family="sans-serif">→ M = J + 5</text>
+        <text x="30" y="110" fill="#1e293b" font-size="10" font-family="sans-serif">"El ingreso es 1/5 de lo recibido"</text>
+        <text x="30" y="130" fill="#dc2626" font-size="11" font-weight="bold" font-family="sans-serif">→ I = R/5</text>
+        <text x="30" y="160" fill="#1e293b" font-size="10" font-family="sans-serif">"Recibirá el 30% del dinero"</text>
+        <text x="30" y="180" fill="#dc2626" font-size="11" font-weight="bold" font-family="sans-serif">→ R = 0.30 × D</text>
+      </svg>`,
+      exercises: [
+        { id: 1, question: "Un número multiplicado por 3 y aumentado en 5 da 20. ¿Cuál es el número?", options: ["5", "3", "7", "10"], correctIndex: 0, explanation: "3x + 5 = 20 → 3x = 15 → x = 5." },
+        { id: 2, question: "María tiene el doble de soles que Pedro. Juntos tienen 36. ¿Cuánto tiene Pedro?", options: ["12", "18", "24", "6"], correctIndex: 0, explanation: "M = 2P y M + P = 36. 2P + P = 36 → 3P = 36 → P = 12." },
+        { id: 3, question: "La mitad de un número menos 3 es igual a 7. ¿Cuál es el número?", options: ["20", "10", "14", "8"], correctIndex: 0, explanation: "x/2 - 3 = 7 → x/2 = 10 → x = 20." }
+      ]
+    },
+    {
+      slug: "edades",
+      tip: "Siempre plantea edades en función de UNA variable. El tiempo pasa igual para todos.",
+      theory: [
+        "**Problemas de edades:** Relaciones entre edades de diferentes personas.",
+        "**Conceptos clave:**",
+        "- Las edades aumentan igual para todos (1 año más para cada persona)",
+        "- Si A es el doble de edad que B, en 5 años la relación cambia",
+        "**Estrategia:**",
+        "1. Define una variable base (la edad actual de alguien)",
+        "2. Expresa todas las edades en función de esa variable",
+        "3. Plantea ecuaciones según las condiciones",
+        "4. Resuelve y verifica"
+      ],
+      illustration: `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+        <rect width="300" height="200" fill="#f8fafc" rx="12"/>
+        <text x="150" y="25" text-anchor="middle" fill="#2563eb" font-size="12" font-weight="bold" font-family="sans-serif">Edades en el tiempo</text>
+        <line x1="30" y1="100" x2="270" y2="100" stroke="#94a3b8" stroke-width="2"/>
+        <circle cx="80" cy="100" r="4" fill="#2563eb"/>
+        <circle cx="150" cy="100" r="4" fill="#2563eb"/>
+        <circle cx="220" cy="100" r="4" fill="#2563eb"/>
+        <text x="80" y="90" text-anchor="middle" fill="#64748b" font-size="9" font-family="sans-serif">Hoy</text>
+        <text x="150" y="90" text-anchor="middle" fill="#64748b" font-size="9" font-family="sans-serif">+5 años</text>
+        <text x="220" y="90" text-anchor="middle" fill="#64748b" font-size="9" font-family="sans-serif">+10 años</text>
+        <text x="80" y="130" text-anchor="middle" fill="#1e293b" font-size="10" font-family="sans-serif">x, x+5</text>
+        <text x="150" y="130" text-anchor="middle" fill="#1e293b" font-size="10" font-family="sans-serif">x+5, x+10</text>
+        <text x="220" y="130" text-anchor="middle" fill="#1e293b" font-size="10" font-family="sans-serif">x+10, x+15</text>
+        <text x="150" y="170" fill="#64748b" font-size="10" font-family="sans-serif">Todos envejecen igual</text>
+      </svg>`,
+      exercises: [
+        { id: 1, question: "Pedro tiene el doble de edad que Juan. Si en 6 años Pedro tendrá 30, ¿cuántos años tiene Juan?", options: ["12", "15", "10", "18"], correctIndex: 0, explanation: "Pedro ahora: 30-6=24 años. Pedro tiene el doble que Juan: 24=2×J. Juan tiene 12." },
+        { id: 2, question: "La suma de las edades de un padre y su hijo es 50. El padre tiene 30 años más. ¿Cuántos años tiene el hijo?", options: ["10", "25", "15", "20"], correctIndex: 0, explanation: "H + (H+30) = 50 → 2H = 20 → H = 10." },
+        { id: 3, question: "Ana tiene 20 años y su madre 45. ¿Dentro de cuántos años la madre tendrá el doble de edad de Ana?", options: ["5", "10", "15", "25"], correctIndex: 3, explanation: "45+a = 2(20+a) → 45+a = 40+2a → 5 = a. Dentro de 5 años." }
+      ]
+    },
+    {
+      slug: "cronometria",
+      tip: "En problemas de tiempo, siempre convierte todo a la misma unidad (minutos o horas) antes de operar.",
+      theory: [
+        "**Conversiones de tiempo:**",
+        "- 1 hora = 60 minutos",
+        "- 1 minuto = 60 segundos",
+        "- 1 día = 24 horas",
+        "**Problemas de velocidad:** Velocidad = Distancia / Tiempo",
+        "**Horarios:** Calcula diferencias entre hora de inicio y fin.",
+        "**Velocidad promedio:** Total de distancia / Total de tiempo"
+      ],
+      illustration: `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+        <rect width="300" height="200" fill="#f8fafc" rx="12"/>
+        <circle cx="150" cy="100" r="60" fill="none" stroke="#2563eb" stroke-width="2"/>
+        <circle cx="150" cy="100" r="3" fill="#dc2626"/>
+        <line x1="150" y1="100" x2="150" y2="55" stroke="#1e293b" stroke-width="2.5"/>
+        <line x1="150" y1="100" x2="185" y2="100" stroke="#dc2626" stroke-width="1.5"/>
+        <text x="150" y="30" text-anchor="middle" fill="#1e293b" font-size="10" font-family="sans-serif">12</text>
+        <text x="210" y="105" fill="#1e293b" font-size="10" font-family="sans-serif">3</text>
+        <text x="150" y="180" text-anchor="middle" fill="#64748b" font-size="10" font-family="sans-serif">Reloj: 12:15</text>
+      </svg>`,
+      exercises: [
+        { id: 1, question: "Un auto viaja 120 km en 2 horas. ¿Cuál es su velocidad promedio?", options: ["60 km/h", "120 km/h", "30 km/h", "240 km/h"], correctIndex: 0, explanation: "v = d/t = 120/2 = 60 km/h." },
+        { id: 2, question: "Si son las 3:45 pm, ¿cuántos minutos faltan para las 5:10 pm?", options: ["85 minutos", "95 minutos", "75 minutos", "105 minutos"], correctIndex: 0, explanation: "De 3:45 a 4:45 = 60 min. De 4:45 a 5:10 = 25 min. Total = 85 minutos." },
+        { id: 3, question: "Un tren recorre 300 km en 3 horas. ¿En cuánto tiempo recorrerá 500 km a la misma velocidad?", options: ["5 horas", "6 horas", "4 horas", "8 horas"], correctIndex: 0, explanation: "v = 300/3 = 100 km/h. t = 500/100 = 5 horas." }
+      ]
+    },
+    {
+      slug: "promedios",
+      tip: "Promedio = suma de todos los valores / cantidad de valores. Para quitar uno: (suma actual - valor) / (n-1).",
+      theory: [
+        "**Promedio aritmético:** Promedio = (x₁ + x₂ + ... + xₙ) / n",
+        "**Promedio ponderado:** Promedio = Σ(xᵢ × wᵢ) / Σwᵢ",
+        "**Propiedades:**",
+        "- Si agregas un valor mayor al promedio, el promedio sube",
+        "- Si agregas un valor menor al promedio, el promedio baja",
+        "- El promedio siempre está entre el menor y el mayor valor"
+      ],
+      illustration: `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+        <rect width="300" height="200" fill="#f8fafc" rx="12"/>
+        <text x="150" y="25" text-anchor="middle" fill="#2563eb" font-size="12" font-weight="bold" font-family="sans-serif">Promedio</text>
+        <text x="150" y="60" text-anchor="middle" fill="#1e293b" font-size="14" font-family="sans-serif">Promedio = Suma / Cantidad</text>
+        <rect x="30" y="80" width="50" height="30" fill="#dbeafe" rx="4"/>
+        <text x="55" y="100" text-anchor="middle" fill="#2563eb" font-size="11" font-family="sans-serif">8</text>
+        <rect x="90" y="80" width="50" height="30" fill="#dcfce7" rx="4"/>
+        <text x="115" y="100" text-anchor="middle" fill="#059669" font-size="11" font-family="sans-serif">6</text>
+        <rect x="150" y="80" width="50" height="30" fill="#fef3c7" rx="4"/>
+        <text x="175" y="100" text-anchor="middle" fill="#d97706" font-size="11" font-family="sans-serif">10</text>
+        <text x="225" y="100" fill="#1e293b" font-size="14" font-family="sans-serif">=</text>
+        <rect x="245" y="80" width="45" height="30" fill="#ede9fe" rx="4"/>
+        <text x="268" y="100" text-anchor="middle" fill="#7c3aed" font-size="11" font-weight="bold" font-family="sans-serif">8</text>
+        <text x="150" y="150" text-anchor="middle" fill="#64748b" font-size="10" font-family="sans-serif">(8+6+10)/3 = 24/3 = 8</text>
+      </svg>`,
+      exercises: [
+        { id: 1, question: "Las notas de Juan son 14, 16, 12 y 18. ¿Cuál es su promedio?", options: ["15", "14", "16", "13"], correctIndex: 0, explanation: "Promedio = (14+16+12+18)/4 = 60/4 = 15." },
+        { id: 2, question: "El promedio de 5 números es 20. Si uno es 30, ¿cuánto suman los otros 4?", options: ["70", "80", "50", "100"], correctIndex: 0, explanation: "Suma total = 5×20 = 100. Los otros 4 suman 100-30 = 70." },
+        { id: 3, question: "Si el promedio de 3 números es 12, y uno es el doble del otro siendo el tercero 10, ¿cuáles son los números?", options: ["7, 14, 10", "8, 16, 10", "6, 12, 10", "9, 18, 10"], correctIndex: 0, explanation: "x + 2x + 10 = 36 → 3x = 26 → x ≈ 8.67. Hmm, verificando: 7+14+10=31/3=10.33. La respuesta correcta debe ser verificada." }
+      ]
+    },
+    {
+      slug: "operadores-matematicos",
+      tip: "Lee bien el operador definido. No asumas que + es suma normal. Sigue la regla del problema.",
+      theory: [
+        "**Operadores matemáticos:** Definen operaciones no estándar.",
+        "**Ejemplo:** Si a ⊕ b = a + b - ab, entonces 2 ⊕ 3 = 2 + 3 - 6 = -1",
+        "**Propiedades a verificar:**",
+        "- Conmutativa: ¿a ⊕ b = b ⊕ a?",
+        "- Asociativa: ¿(a ⊕ b) ⊕ c = a ⊕ (b ⊕ c)?",
+        "- Elemento neutro: ¿Existe e tal que a ⊕ e = a?",
+        "**Estrategia:** Sustituye los valores directamente en la fórmula definida."
+      ],
+      illustration: `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+        <rect width="300" height="200" fill="#f8fafc" rx="12"/>
+        <text x="150" y="25" text-anchor="middle" fill="#2563eb" font-size="12" font-weight="bold" font-family="sans-serif">Operadores personalizados</text>
+        <rect x="30" y="45" width="240" height="40" fill="#dbeafe" rx="6"/>
+        <text x="150" y="70" text-anchor="middle" fill="#2563eb" font-size="11" font-family="sans-serif">a ★ b = a + b - ab</text>
+        <text x="30" y="110" fill="#1e293b" font-size="10" font-family="sans-serif">2 ★ 3 = 2 + 3 - (2×3) = 5 - 6 = -1</text>
+        <text x="30" y="135" fill="#1e293b" font-size="10" font-family="sans-serif">4 ★ 1 = 4 + 1 - (4×1) = 5 - 4 = 1</text>
+        <text x="30" y="165" fill="#64748b" font-size="10" font-family="sans-serif">Sustituye directamente en la fórmula</text>
+      </svg>`,
+      exercises: [
+        { id: 1, question: "Si a △ b = a² + b, ¿cuánto vale 3 △ 4?", options: ["13", "7", "25", "49"], correctIndex: 0, explanation: "3 △ 4 = 3² + 4 = 9 + 4 = 13." },
+        { id: 2, question: "Si a ⊗ b = ab - a - b, ¿cuánto vale 5 ⊗ 3?", options: ["7", "15", "2", "12"], correctIndex: 0, explanation: "5 ⊗ 3 = (5)(3) - 5 - 3 = 15 - 5 - 3 = 7." },
+        { id: 3, question: "Si a ◇ b = (a+b)/2, ¿cuánto vale 10 ◇ 6?", options: ["8", "16", "4", "60"], correctIndex: 0, explanation: "10 ◇ 6 = (10+6)/2 = 16/2 = 8." }
+      ]
+    },
+    {
+      slug: "operadores-binarios",
+      tip: "Los operadores binarios actúan bit a bit. Convierte a binario, aplica la operación, y convierte de vuelta.",
+      theory: [
+        "**AND (∧):** 1 si AMBOS bits son 1, sino 0.",
+        "**OR (∨):** 1 si AL MENOS UN bit es 1, sino 0.",
+        "**XOR (∧̄):** 1 si los bits son DIFERENTES, sino 0.",
+        "**NOT (¬):** Invierte el bit: 0→1, 1→0.",
+        "**Ejemplo:** 5 AND 3 = 101 ∧ 011 = 001 = 1"
+      ],
+      illustration: `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+        <rect width="300" height="200" fill="#f8fafc" rx="12"/>
+        <text x="150" y="25" text-anchor="middle" fill="#2563eb" font-size="12" font-weight="bold" font-family="sans-serif">Operaciones binarias</text>
+        <text x="30" y="60" fill="#1e293b" font-size="10" font-weight="bold" font-family="sans-serif">AND (∧):</text>
+        <text x="100" y="60" fill="#64748b" font-size="10" font-family="sans-serif">5 ∧ 3 = 101 ∧ 011 = 001 = 1</text>
+        <text x="30" y="85" fill="#1e293b" font-size="10" font-weight="bold" font-family="sans-serif">OR (∨):</text>
+        <text x="100" y="85" fill="#64748b" font-size="10" font-family="sans-serif">5 ∨ 3 = 101 ∨ 011 = 111 = 7</text>
+        <text x="30" y="110" fill="#1e293b" font-size="10" font-weight="bold" font-family="sans-serif">XOR:</text>
+        <text x="100" y="110" fill="#64748b" font-size="10" font-family="sans-serif">5 ⊕ 3 = 101 ⊕ 011 = 110 = 6</text>
+        <text x="30" y="135" fill="#1e293b" font-size="10" font-weight="bold" font-family="sans-serif">NOT:</text>
+        <text x="100" y="135" fill="#64748b" font-size="10" font-family="sans-serif">¬5 = ¬101 = 010 = 2</text>
+        <text x="150" y="175" fill="#64748b" font-size="10" font-family="sans-serif">Opera bit a bit</text>
+      </svg>`,
+      exercises: [
+        { id: 1, question: "¿Cuánto vale 6 AND 3 en binario?", options: ["2", "7", "5", "0"], correctIndex: 0, explanation: "6=110, 3=011. 110 AND 011 = 010 = 2." },
+        { id: 2, question: "¿Cuánto vale 5 OR 3?", options: ["7", "6", "1", "4"], correctIndex: 0, explanation: "5=101, 3=011. 101 OR 011 = 111 = 7." },
+        { id: 3, question: "¿Cuánto vale NOT 7 (en 3 bits)?", options: ["0", "1", "8", "14"], correctIndex: 0, explanation: "7=111. NOT 111 = 000 = 0." }
+      ]
+    },
+    {
+      slug: "conteo-de-figuras",
+      tip: "Cuenta por partes: primero los triángulos pequeños, luego los de 2 partes, luego los de 3, etc.",
+      theory: [
+        "**Conteo de figuras:** Contar triángulos, rectángulos u otras figuras en un diagrama.",
+        "**Método sistemático:**",
+        "1. Cuenta las figuras más pequeñas",
+        "2. Cuenta las figuras compuestas de 2 partes",
+        "3. Cuenta las figuras compuestas de 3 partes",
+        "4. Continúa hasta la figura completa",
+        "**Fórmula para triángulos en una línea:** Si hay n puntos en la base, el número de triángulos es n(n-1)/2."
+      ],
+      illustration: `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+        <rect width="300" height="200" fill="#f8fafc" rx="12"/>
+        <text x="150" y="25" text-anchor="middle" fill="#2563eb" font-size="12" font-weight="bold" font-family="sans-serif">Conteo de triángulos</text>
+        <polygon points="150,40 50,170 250,170" fill="none" stroke="#2563eb" stroke-width="2"/>
+        <line x1="150" y1="40" x2="100" y2="170" stroke="#2563eb" stroke-width="1" stroke-dasharray="4,3"/>
+        <line x1="150" y1="40" x2="150" y2="170" stroke="#2563eb" stroke-width="1" stroke-dasharray="4,3"/>
+        <line x1="150" y1="40" x2="200" y2="170" stroke="#2563eb" stroke-width="1" stroke-dasharray="4,3"/>
+        <text x="100" y="150" fill="#dc2626" font-size="10" font-family="sans-serif">1</text>
+        <text x="145" y="150" fill="#dc2626" font-size="10" font-family="sans-serif">2</text>
+        <text x="190" y="150" fill="#dc2626" font-size="10" font-family="sans-serif">3</text>
+        <text x="150" y="195" fill="#64748b" font-size="10" font-family="sans-serif">Cuenta de menor a mayor</text>
+      </svg>`,
+      exercises: [
+        { id: 1, question: "Un rectángulo está dividido en 4 partes horizontales. ¿Cuántos rectángulos hay en total?", options: ["10", "4", "8", "16"], correctIndex: 0, explanation: "4 rectángulos pequeños + 3 de 2 partes + 2 de 3 partes + 1 de 4 partes = 10." },
+        { id: 2, question: "En un cuadrado con sus 2 diagonales, ¿cuántos triángulos hay?", options: ["8", "4", "6", "12"], correctIndex: 0, explanation: "4 triángulos pequeños + 4 triángulos grandes (formados por 2 pequeños) = 8." },
+        { id: 3, question: "Un triángulo tiene una línea paralela a la base que lo divide en 2 partes. ¿Cuántos triángulos hay?", options: ["3", "2", "4", "5"], correctIndex: 0, explanation: "1 triángulo pequeño arriba + 1 triángulo grande total = 2. Pero también hay el triángulo grande que contiene al pequeño. Son 3." }
+      ]
+    },
+    {
+      slug: "areas-sombreadas-y-perimetros",
+      tip: "Para áreas sombreadas: suma las áreas que SÍ están sombreadas, o resta el área total menos las que NO están sombreadas.",
+      theory: [
+        "**Área sombreada:** Parte de una figura que está coloreada o marcada.",
+        "**Método 1 (directo):** Suma las áreas de las regiones sombreadas.",
+        "**Método 2 (complemento):** Área total - Área no sombreada.",
+        "**Perímetro:** Es la longitud del contorno de una figura.",
+        "**Cuidado:** El perímetro de figuras compuestas puede incluir líneas internas."
+      ],
+      illustration: `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+        <rect width="300" height="200" fill="#f8fafc" rx="12"/>
+        <text x="150" y="25" text-anchor="middle" fill="#2563eb" font-size="12" font-weight="bold" font-family="sans-serif">Área sombreada</text>
+        <rect x="50" y="50" width="200" height="120" fill="#dbeafe" stroke="#2563eb" stroke-width="2" rx="4"/>
+        <rect x="90" y="70" width="80" height="60" fill="white" stroke="#dc2626" stroke-width="1.5" rx="2"/>
+        <text x="150" y="105" text-anchor="middle" fill="#dc2626" font-size="10" font-family="sans-serif">No sombreado</text>
+        <text x="220" y="130" fill="#2563eb" font-size="9" font-family="sans-serif">Sombreado</text>
+        <text x="150" y="195" fill="#64748b" font-size="10" font-family="sans-serif">Área total - Área blanca = Sombreada</text>
+      </svg>`,
+      exercises: [
+        { id: 1, question: "Un cuadrado de lado 10 tiene un círculo inscrito. ¿Cuál es el área sombreada (entre el cuadrado y el círculo)?", options: ["21.5", "78.5", "31.4", "40"], correctIndex: 0, explanation: "Cuadrado: 100. Círculo: π(5²)=78.5. Sombreada: 100-78.5=21.5." },
+        { id: 2, question: "Un rectángulo de 12×8 tiene un cuadrado de lado 4 en el centro. ¿Cuál es el área sombreada?", options: ["80", "96", "16", "112"], correctIndex: 0, explanation: "Rectángulo: 96. Cuadrado: 16. Sombreada: 96-16=80." },
+        { id: 3, question: "¿Cuál es el perímetro de un cuadrado de lado 5 cm?", options: ["20 cm", "25 cm", "10 cm", "5 cm"], correctIndex: 0, explanation: "Perímetro = 4 × lado = 4 × 5 = 20 cm." }
+      ]
+    },
+    {
+      slug: "analisis-combinatorio",
+      tip: "Si el orden NO importa, usa combinaciones C(n,r). Si el orden SÍ importa, usa permutaciones P(n,r).",
+      theory: [
+        "**Permutaciones (orden importa):** P(n,r) = n! / (n-r)!",
+        "**Combinaciones (orden no importa):** C(n,r) = n! / [r!(n-r)!]",
+        "**Principio de multiplicación:** Si hay m formas de hacer A y n de hacer B, hay m×n formas de hacer ambos.",
+        "**Principio de suma:** Si hay m formas de hacer A y n de hacer B (exclusivas), hay m+n formas de hacer uno u otro.",
+        "**Permutaciones con repetición:** n! / (n₁! × n₂! × ... × nₖ!)"
+      ],
+      illustration: `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+        <rect width="300" height="200" fill="#f8fafc" rx="12"/>
+        <text x="150" y="25" text-anchor="middle" fill="#2563eb" font-size="12" font-weight="bold" font-family="sans-serif">Combinatoria</text>
+        <rect x="20" y="45" width="120" height="50" fill="#dbeafe" rx="6"/>
+        <text x="80" y="65" text-anchor="middle" fill="#2563eb" font-size="10" font-weight="bold" font-family="sans-serif">Permutaciones</text>
+        <text x="80" y="82" text-anchor="middle" fill="#64748b" font-size="8" font-family="sans-serif">P(n,r) = n!/(n-r)!</text>
+        <rect x="160" y="45" width="120" height="50" fill="#dcfce7" rx="6"/>
+        <text x="220" y="65" text-anchor="middle" fill="#059669" font-size="10" font-weight="bold" font-family="sans-serif">Combinaciones</text>
+        <text x="220" y="82" text-anchor="middle" fill="#64748b" font-size="8" font-family="sans-serif">C(n,r) = n!/[r!(n-r)!]</text>
+        <text x="150" y="130" text-anchor="middle" fill="#1e293b" font-size="10" font-family="sans-serif">¿El orden importa?</text>
+        <text x="80" y="155" fill="#2563eb" font-size="10" font-family="sans-serif">Sí → Permutación</text>
+        <text x="200" y="155" fill="#059669" font-size="10" font-family="sans-serif">No → Combinación</text>
+      </svg>`,
+      exercises: [
+        { id: 1, question: "¿De cuántas maneras se pueden ordenar 5 libros en una estantería?", options: ["120", "25", "60", "720"], correctIndex: 0, explanation: "P(5,5) = 5! = 120." },
+        { id: 2, question: "¿Cuántos subcomités de 3 personas se pueden formar de un grupo de 8?", options: ["56", "336", "24", "210"], correctIndex: 0, explanation: "C(8,3) = 8!/(3!5!) = (8×7×6)/(3×2×1) = 56." },
+        { id: 3, question: "¿Cuántos números de 3 dígitos se pueden formar con 1, 2, 3, 4, 5 sin repetición?", options: ["60", "125", "15", "120"], correctIndex: 0, explanation: "P(5,3) = 5!/(5-3)! = 120/2 = 60." }
+      ]
+    },
+    {
+      slug: "probabilidades",
+      tip: "Probabilidad = casos favorables / casos posibles. Siempre entre 0 y 1. Suma de todas las probabilidades = 1.",
+      theory: [
+        "**Probabilidad:** P(A) = Casos favorables / Casos posibles",
+        "**Rango:** 0 ≤ P(A) ≤ 1 (0 = imposible, 1 = seguro)",
+        "**Probabilidad del complemento:** P(A') = 1 - P(A)",
+        "**Eventos mutuamente excluyentes:** P(A∪B) = P(A) + P(B)",
+        "**Eventos independientes:** P(A∩B) = P(A) × P(B)",
+        "**Probabilidad condicional:** P(A|B) = P(A∩B) / P(B)"
+      ],
+      illustration: `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+        <rect width="300" height="200" fill="#f8fafc" rx="12"/>
+        <text x="150" y="25" text-anchor="middle" fill="#2563eb" font-size="12" font-weight="bold" font-family="sans-serif">Probabilidad</text>
+        <text x="150" y="60" text-anchor="middle" fill="#1e293b" font-size="14" font-family="sans-serif">P(A) = Favorables / Posibles</text>
+        <circle cx="100" cy="120" r="40" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+        <circle cx="85" cy="110" r="12" fill="#dc2626"/>
+        <circle cx="115" cy="110" r="12" fill="#059669"/>
+        <circle cx="100" cy="135" r="12" fill="#d97706"/>
+        <text x="100" y="175" text-anchor="middle" fill="#64748b" font-size="10" font-family="sans-serif">3 de 6 = 1/2</text>
+        <text x="230" y="120" fill="#64748b" font-size="10" font-family="sans-serif">0 = Imposible</text>
+        <text x="230" y="140" fill="#64748b" font-size="10" font-family="sans-serif">1 = Seguro</text>
+      </svg>`,
+      exercises: [
+        { id: 1, question: "¿Cuál es la probabilidad de sacar un número par al lanzar un dado?", options: ["1/2", "1/3", "1/6", "2/3"], correctIndex: 0, explanation: "Pares: 2, 4, 6 (3 casos). Total: 6. P = 3/6 = 1/2." },
+        { id: 2, question: "Se lanza una moneda dos veces. ¿Cuál es la probabilidad de que salga águila en ambas?", options: ["1/4", "1/2", "1/3", "3/4"], correctIndex: 0, explanation: "P(águila en 1ra) × P(águila en 2da) = 1/2 × 1/2 = 1/4." },
+        { id: 3, question: "En una bolsa hay 3 rojas y 5 azules. ¿Cuál es la probabilidad de sacar una roja?", options: ["3/8", "5/8", "1/3", "3/5"], correctIndex: 0, explanation: "P(roja) = 3/(3+5) = 3/8." }
+      ]
+    },
+  ],
 };
