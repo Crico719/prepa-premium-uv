@@ -103,7 +103,7 @@ function Home() {
   };
   const examDates = universities
     .map((u) => {
-      const [day, month] = u.date.split(" ");
+      const [day = "1", month = ""] = u.date.split(" ");
       const examDate = new Date(today.getFullYear(), monthMap[month] ?? 0, parseInt(day));
       if (examDate < today) examDate.setFullYear(today.getFullYear() + 1);
       const daysLeft = Math.ceil((examDate.getTime() - today.getTime()) / 86400000);

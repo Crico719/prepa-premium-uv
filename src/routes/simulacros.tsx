@@ -27,9 +27,9 @@ function Simulacros() {
   const [showResult, setShowResult] = useState(false);
   const [timer, setTimer] = useState(0);
 
-  const exam = selectedExam || exams[0];
+  const exam = selectedExam || exams[0]!;
   const questions = exam.questions;
-  const question = questions[currentQ];
+  const question = questions[currentQ]!;
   const totalCorrect = answers.filter((a) => a.isCorrect).length;
   const totalAnswered = answers.length;
 
