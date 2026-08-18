@@ -5111,9 +5111,7 @@ const historiaModulesPart2: CourseModule[] = [
       { id: 4012, question: "¿Cuál fue el legado más significativo del Ochenio para la democracia peruana?", options: ["Consolidó un modelo de gobierno autoritario-militar repetible", "Estableció una constitución democrática duradera", "Impulsó la industrialización completa del país", "Eliminó la corrupción política"], correctIndex: 0, explanation: "El Ochenio consolidó un patrón de gobierno autoritario-militar que se repetiría en la historia peruana posterior.", difficulty: "avanzado" }
     ]
   },
-"@
 
-$part2 = @"
   {
     slug: "primer-belaunde",
     tip: "Belaúnde (1963-1968) promovió la democracia y la industrialización. Fue derrocado por Velasco en 1968. Memoria: Reforma agraria anunciada, contradicción con la izquierda.",
@@ -5246,9 +5244,7 @@ $part2 = @"
       { id: 4032, question: "¿Qué modelo económico implementó Morales Bermúdez tras derrocar a Velasco?", options: ["Modelo de liberalización económica", "Modelo estatista más radical", "Modelo de economía planificada", "Modelo de autarquía económica"], correctIndex: 0, explanation: "Morales Bermúdez implementó un modelo de liberalización económica, abriendo el mercado a la inversión privada tras el estatismo de Velasco.", difficulty: "avanzado" }
     ]
   },
-"@
 
-$part3 = @"
   {
     slug: "terrorismo-y-dictadura",
     tip: "El terrorismo (1980-2000) mató a más de 69,000 personas. Fujimori dio el autogolpe en 1992. Memoriza: Sendero Luminoso (Abimael Guzmán), MRTA, Comisión de la Verdad.",
@@ -5312,9 +5308,7 @@ $part3 = @"
       { id: 4042, question: "¿Qué caso emblemático de derechos humanos involucró la masacre de Barrios Altos?", options: ["Grupo Colina y operaciones de inteligencia", "El MRTA y la embajada de Japón", "Sendero Luminoso y comunidades campesinas", "El ejército y zonas rurales"], correctIndex: 0, explanation: "La masacre de Barrios Altos (1991) fue perpetrada por el Grupo Colina, unidad de inteligencia vinculada al régimen de Fujimori.", difficulty: "avanzado" }
     ]
   },
-"@
 
-$part4 = @"
   {
     slug: "transicion-democratica",
     tip: "La transición (2001-2016) fue difícil: Paniagua limpió, Toledo creció, Humala moderó. Memoriza: Comisión de la Verdad, crisis 2008, corrupción generalizada.",
@@ -5383,9 +5377,7 @@ $part4 = @"
       { id: 4052, question: "¿Qué actor social se fortaleció como defensor de la democracia durante la transición?", options: ["La sociedad civil organizada", "Las fuerzas armadas", "La Iglesia Católica", "Los medios de comunicación"], correctIndex: 0, explanation: "La sociedad civil peruana se fortaleció como actor clave en la defensa de la democracia, los derechos humanos y la lucha contra la corrupción.", difficulty: "avanzado" }
     ]
   },
-"@
 
-$part5 = @"
   {
     slug: "peru-contemporaneo",
     tip: "El Perú contemporáneo (2016-2025) tiene crisis políticas frecuentes: Kuczynski renunció, Vizcarra fue vacado, Castillo fue vacado y arrestado.",
@@ -5457,9 +5449,7 @@ $part5 = @"
       { id: 4062, question: "¿Qué reveló la crisis política contemporánea sobre el sistema institucional peruano?", options: ["Debilidades estructurales del modelo post-Fujimori", "Fortaleza del sistema de contrapesos", "Éxito de la descentralización", "Consolidación del Estado de derecho"], correctIndex: 0, explanation: "La crisis contemporánea evidenció las debilidades estructurales del sistema político peruano, incluyendo la falta de equilibrio entre poderes y ausencia de cultura democrática.", difficulty: "avanzado" }
     ]
   },
-"@
 
-$part6 = @"
   {
     slug: "derechos-humanos",
     tip: "La Comisión de la Verdad (2001-2003) documentó 69,280 muertos. El caso de los penales fue emblemático. Memoriza: Comisión de la Verdad, informe final, reparaciones.",
