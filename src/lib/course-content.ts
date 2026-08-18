@@ -3970,7 +3970,7 @@ export const courseContent: CourseContent = {
       }
     ]
   },
-export const cokitoRMModules17to22: CourseModule[] = [
+
   {
     slug: "operadores-matematicos",
     tip: "Lee siempre el **enunciado completo** antes de calcular. Identifica la fórmula del operador, sustituye paso a paso y respeta el orden de operaciones.",
