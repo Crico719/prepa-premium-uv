@@ -143,6 +143,19 @@ export const courses: Course[] = [
     icon: Globe2,
     tone: "primary",
   },
+  {
+    slug: "cokito-rm",
+    name: "Razonamiento Matemático - Cokito RM",
+    description: "23 temas de razonamiento matemático para exámenes de admisión",
+    teacher: "John Mamani M. (Academia GAUUS)",
+    level: "Intermedio",
+    progress: 0,
+    lessons: 23,
+    completedLessons: 0,
+    hoursLeft: 45,
+    icon: Brain,
+    tone: "deep",
+  },
 ];
 
 export const lessons = [
@@ -152,6 +165,34 @@ export const lessons = [
   { title: "Aplicaciones en problemas", state: "Pendiente" as const, minutes: 22 },
   { title: "Repaso y autoevaluación", state: "Pendiente" as const, minutes: 30 },
 ];
+
+export const courseLessons: Record<string, { title: string; state: "Completado" | "En progreso" | "Pendiente"; minutes: number }[]> = {
+  "cokito-rm": [
+    { title: "Relaciones de Parentesco", state: "Pendiente", minutes: 25 },
+    { title: "Relaciones de Tiempo", state: "Pendiente", minutes: 20 },
+    { title: "Verdades y Mentiras", state: "Pendiente", minutes: 22 },
+    { title: "Orden de Información", state: "Pendiente", minutes: 18 },
+    { title: "Razonamiento Inductivo", state: "Pendiente", minutes: 30 },
+    { title: "Sistemas de Numeración", state: "Pendiente", minutes: 28 },
+    { title: "Criptoaritmética", state: "Pendiente", minutes: 25 },
+    { title: "Sucesiones", state: "Pendiente", minutes: 22 },
+    { title: "Analogías y Distribuciones", state: "Pendiente", minutes: 20 },
+    { title: "Series", state: "Pendiente", minutes: 35 },
+    { title: "Sumatorias", state: "Pendiente", minutes: 30 },
+    { title: "Cuatro Operaciones", state: "Pendiente", minutes: 20 },
+    { title: "Métodos Prácticos", state: "Pendiente", minutes: 25 },
+    { title: "Planteo de Ecuaciones", state: "Pendiente", minutes: 28 },
+    { title: "Edades", state: "Pendiente", minutes: 22 },
+    { title: "Cronometría", state: "Pendiente", minutes: 18 },
+    { title: "Promedios", state: "Pendiente", minutes: 20 },
+    { title: "Operadores Matemáticos", state: "Pendiente", minutes: 25 },
+    { title: "Operadores Binarios", state: "Pendiente", minutes: 22 },
+    { title: "Conteo de Figuras", state: "Pendiente", minutes: 20 },
+    { title: "Áreas Sombreadas y Perímetros", state: "Pendiente", minutes: 28 },
+    { title: "Análisis Combinatorio", state: "Pendiente", minutes: 30 },
+    { title: "Probabilidades", state: "Pendiente", minutes: 25 },
+  ],
+};
 
 export const upcoming = [
   {

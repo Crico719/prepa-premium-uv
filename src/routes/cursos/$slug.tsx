@@ -11,7 +11,7 @@ import {
   Play,
 } from "lucide-react";
 import { IconTile, Pill, ProgressBar, Surface } from "@/components/kit";
-import { courses, lessons } from "@/lib/data";
+import { courses, lessons, courseLessons } from "@/lib/data";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export const Route = createFileRoute("/cursos/$slug")({
@@ -40,6 +40,7 @@ export const Route = createFileRoute("/cursos/$slug")({
 function Leccion() {
   const { slug } = Route.useParams();
   const course = courses.find((c) => c.slug === slug)!;
+  const courseSpecificLessons = courseLessons[slug] || lessons;
 
   return (
     <div className="space-y-6">
@@ -158,7 +159,7 @@ function Leccion() {
           <Surface className="p-0">
             <h2 className="p-6 pb-3 font-semibold">Lecciones</h2>
             <ul className="divide-y divide-border">
-              {lessons.map((l, i) => (
+              {courseSpecificLessons.map((l, i) => (
                 <li key={l.title} className="flex items-center gap-3 p-4">
                   <IconTile
                     icon={
