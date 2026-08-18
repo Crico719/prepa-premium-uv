@@ -828,7 +828,7 @@ export const courseContent: CourseContent = {
         "- Ecuación (foco en eje Y): x² = 4py",
         "**Elementos de la parábola:**",
         "- **Foco (F)**: punto interior de la parábola",
-        - **Directriz (d)**: recta exterior",
+        "- **Directriz (d)**: recta exterior",
         "- **Vértice (V)**: punto medio entre foco y directriz",
         "- **Eje**: recta que pasa por el foco y es perpendicular a la directriz",
         "- **Parámetro (p)**: distancia del vértice al foco",
