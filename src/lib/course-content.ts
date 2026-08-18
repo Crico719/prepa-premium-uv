@@ -483,8 +483,8 @@ export const courseContent: CourseContent = {
           id: 3,
           question: "¿Cuántos lados tiene un polígono cuyo ángulo interno mide 156°?",
           options: ["30", "15", "20", "24"],
-          correctIndex: 3,
-          explanation: "156 = (n-2)×180/n → 156n = 180n - 360 → 24n = 360 → n = 15. Pero verificando: (15-2)×180/15 = 156°. La respuesta correcta es 15. Hmm, verifiquemos: 156n = 180(n-2) = 180n - 360 → 360 = 24n → n = 15."
+          correctIndex: 1,
+          explanation: "156 = (n-2)×180/n → 156n = 180n - 360 → 24n = 360 → n = 15 lados."
         }
       ]
     },
@@ -538,6 +538,400 @@ export const courseContent: CourseContent = {
           options: ["El cuadrado", "El círculo", "Son iguales", "No se puede saber"],
           correctIndex: 1,
           explanation: "Cuadrado: 4² = 16 cm². Círculo: π(4²) = 50.27 cm². El círculo tiene mayor área."
+        }
+      ]
+    },
+    {
+      slug: "rectas-y-planos",
+      tip: "En espacio, dos rectas pueden ser paralelas, secantes o mixtas. Dibuja siempre una representación 3D.",
+      theory: [
+        "En **geometría del espacio**, las rectas y planos pueden tener distintas posiciones relativas.",
+        "**Posiciones relativas entre rectas:**",
+        "- **Paralelas**: no se cortan y están en un mismo plano",
+        "- **Secantes**: se cortan en un punto",
+        "- **Mixtas**: no se cortan y no están en un mismo plano",
+        "**Posiciones entre rectas y planos:**",
+        "- **Recta contenida** en el plano",
+        "- **Recta paralela** al plano (no toca el plano)",
+        "- **Recta secante** al plano (corta al plano en un punto)",
+        "- **Recta perpendicular** al plano (forma 90° con todas las rectas del plano)",
+        "**Posiciones entre planos:**",
+        "- **Paralelos**: no tienen puntos en común",
+        "- **Secantes**: se cortan en una recta",
+        "- **Perpendiculares**: forman 90°"
+      ],
+      illustration: `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+        <rect width="300" height="200" fill="#f8fafc" rx="12"/>
+        <polygon points="40,120 150,60 260,120 150,140" fill="#dbeafe" fill-opacity="0.3" stroke="#2563eb" stroke-width="1.5"/>
+        <text x="145" y="52" fill="#2563eb" font-size="11" font-family="sans-serif">Plano α</text>
+        <line x1="80" y1="40" x2="220" y2="170" stroke="#dc2626" stroke-width="2"/>
+        <circle cx="150" cy="105" r="3" fill="#dc2626"/>
+        <text x="158" y="100" fill="#dc2626" font-size="10" font-family="sans-serif">P</text>
+        <text x="225" y="175" fill="#64748b" font-size="10" font-family="sans-serif">Recta r</text>
+        <line x1="60" y1="160" x2="240" y2="80" stroke="#059669" stroke-width="1.5" stroke-dasharray="5,3"/>
+        <text x="245" y="75" fill="#059669" font-size="10" font-family="sans-serif">Recta s</text>
+        <text x="60" y="195" fill="#64748b" font-size="10" font-family="sans-serif">r y s: mixtas</text>
+      </svg>`,
+      exercises: [
+        {
+          id: 1,
+          question: "¿Cuántas posiciones relativas pueden tener dos rectas en el espacio?",
+          options: ["3 (paralelas, secantes, mixtas)", "2 (paralelas y secantes)", "4", "Solo 2"],
+          correctIndex: 0,
+          explanation: "En el espacio, dos rectas pueden ser paralelas, secantes o mixtas (no coplanarias)."
+        },
+        {
+          id: 2,
+          question: "Una recta corta a un plano. ¿En cuántos puntos se intersectan?",
+          options: ["1 punto", "2 puntos", "Infinitos", "Ninguno"],
+          correctIndex: 0,
+          explanation: "Una recta secante a un plano siempre lo corta en exactamente un punto."
+        },
+        {
+          id: 3,
+          question: "Dos planos paralelos son cortados por una recta. ¿En cuántos puntos se intersecta la recta con cada plano?",
+          options: ["1 punto con cada uno", "2 puntos con cada uno", "1 punto total", "Infinitos"],
+          correctIndex: 0,
+          explanation: "La recta corta a cada plano en un punto distinto, resultando 2 puntos de intersección en total."
+        }
+      ]
+    },
+    {
+      slug: "prisma-y-cilindro",
+      tip: "Volumen = Área base × altura. Para prisma, la base es un polígono. Para cilindro, la base es un círculo.",
+      theory: [
+        "**Prisma**: sólido con dos bases paralelas e iguales (polígonos) y caras laterales (rectángulos).",
+        "**Tipos de prismas:**",
+        "- **Regular**: base es un polígono regular",
+        "- **Recto**: caras laterales perpendiculares a la base",
+        "- **Oblicuo**: caras laterales inclinadas",
+        "**Fórmulas del prisma:**",
+        "- Volumen: V = Ab × h (Ab = área de la base)",
+        "- Área lateral: Al = Perímetro base × altura",
+        "- Área total: At = Al + 2 × Ab",
+        "**Cilindro**: sólido con dos bases circulares paralelas e iguales.",
+        "**Fórmulas del cilindro:**",
+        "- Volumen: V = πr²h",
+        "- Área lateral: Al = 2πrh",
+        "- Área total: At = 2πr² + 2πrh = 2πr(r + h)"
+      ],
+      illustration: `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+        <rect width="300" height="200" fill="#f8fafc" rx="12"/>
+        <ellipse cx="90" cy="50" rx="40" ry="12" fill="none" stroke="#2563eb" stroke-width="2"/>
+        <line x1="50" y1="50" x2="50" y2="150" stroke="#2563eb" stroke-width="2"/>
+        <line x1="130" y1="50" x2="130" y2="150" stroke="#2563eb" stroke-width="2"/>
+        <ellipse cx="90" cy="150" rx="40" ry="12" fill="#dbeafe" fill-opacity="0.3" stroke="#2563eb" stroke-width="2"/>
+        <text x="80" y="40" fill="#2563eb" font-size="11" font-family="sans-serif">Prisma</text>
+        <ellipse cx="230" cy="50" rx="35" ry="12" fill="none" stroke="#7c3aed" stroke-width="2"/>
+        <line x1="195" y1="50" x2="195" y2="150" stroke="#7c3aed" stroke-width="2"/>
+        <line x1="265" y1="50" x2="265" y2="150" stroke="#7c3aed" stroke-width="2"/>
+        <ellipse cx="230" cy="150" rx="35" ry="12" fill="#ede9fe" fill-opacity="0.3" stroke="#7c3aed" stroke-width="2"/>
+        <text x="215" y="40" fill="#7c3aed" font-size="11" font-family="sans-serif">Cilindro</text>
+        <text x="95" y="105" fill="#64748b" font-size="10" font-family="sans-serif">h</text>
+        <text x="235" y="105" fill="#64748b" font-size="10" font-family="sans-serif">h</text>
+      </svg>`,
+      exercises: [
+        {
+          id: 1,
+          question: "Un prisma tiene base de área 20 cm² y altura 8 cm. ¿Cuál es su volumen?",
+          options: ["160 cm³", "28 cm³", "48 cm³", "120 cm³"],
+          correctIndex: 0,
+          explanation: "V = Ab × h = 20 × 8 = 160 cm³."
+        },
+        {
+          id: 2,
+          question: "Un cilindro tiene radio 5 cm y altura 10 cm. ¿Cuál es su volumen? (π ≈ 3.14)",
+          options: ["785 cm³", "157 cm³", "314 cm³", "50 cm³"],
+          correctIndex: 0,
+          explanation: "V = πr²h = 3.14 × 25 × 10 = 785 cm³."
+        },
+        {
+          id: 3,
+          question: "Un cilindro tiene radio 3 cm y altura 7 cm. ¿Cuál es su área lateral? (π ≈ 3.14)",
+          options: ["131.88 cm²", "19.78 cm²", "65.94 cm²", "42 cm²"],
+          correctIndex: 0,
+          explanation: "Al = 2πrh = 2 × 3.14 × 3 × 7 = 131.88 cm²."
+        }
+      ]
+    },
+    {
+      slug: "piramide-y-cono",
+      tip: "El volumen de una pirámide/cono es 1/3 del prisma/cilindro con la misma base y altura.",
+      theory: [
+        "**Pirámide**: sólido con una base poligonal y caras laterales triangulares que se encuentran en un vértice (ápice).",
+        "**Tipos de pirámides:**",
+        "- **Regular**: base es un polígono regular y el ápice está sobre el centro de la base",
+        "- **Recta**: el ápice está perpendicular al centro de la base",
+        "**Fórmulas de la pirámide:**",
+        "- Volumen: V = (Ab × h) / 3",
+        "- Área lateral: suma de áreas de caras triangulares",
+        "**Cono**: sólido con una base circular y un vértice (ápice).",
+        "**Fórmulas del cono:**",
+        "- Volumen: V = (πr²h) / 3",
+        "- Área lateral: Al = πrg (g = generatriz)",
+        "- Área total: At = πr² + πrg",
+        "La **generatriz** (g) es la distancia del ápice a cualquier punto de la circunferencia base: g² = r² + h²"
+      ],
+      illustration: `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+        <rect width="300" height="200" fill="#f8fafc" rx="12"/>
+        <polygon points="90,30 50,140 130,140" fill="none" stroke="#2563eb" stroke-width="2"/>
+        <ellipse cx="90" cy="140" rx="40" ry="10" fill="#dbeafe" fill-opacity="0.3" stroke="#2563eb" stroke-width="1.5"/>
+        <text x="80" y="22" fill="#2563eb" font-size="11" font-family="sans-serif">Pirámide</text>
+        <line x1="90" y1="30" x2="90" y2="140" stroke="#dc2626" stroke-width="1" stroke-dasharray="4,3"/>
+        <text x="95" y="90" fill="#dc2626" font-size="10" font-family="sans-serif">h</text>
+        <polygon points="230,30 195,140 265,140" fill="none" stroke="#7c3aed" stroke-width="2"/>
+        <ellipse cx="230" cy="140" rx="35" ry="10" fill="#ede9fe" fill-opacity="0.3" stroke="#7c3aed" stroke-width="1.5"/>
+        <text x="218" y="22" fill="#7c3aed" font-size="11" font-family="sans-serif">Cono</text>
+        <line x1="230" y1="30" x2="230" y2="140" stroke="#dc2626" stroke-width="1" stroke-dasharray="4,3"/>
+        <text x="235" y="90" fill="#dc2626" font-size="10" font-family="sans-serif">h</text>
+        <text x="60" y="195" fill="#64748b" font-size="10" font-family="sans-serif">V = Ab×h/3</text>
+      </svg>`,
+      exercises: [
+        {
+          id: 1,
+          question: "Una pirámide tiene base de área 30 cm² y altura 9 cm. ¿Cuál es su volumen?",
+          options: ["90 cm³", "270 cm³", "39 cm³", "180 cm³"],
+          correctIndex: 0,
+          explanation: "V = (Ab × h)/3 = (30 × 9)/3 = 270/3 = 90 cm³."
+        },
+        {
+          id: 2,
+          question: "Un cono tiene radio 4 cm y altura 6 cm. ¿Cuál es su volumen? (π ≈ 3.14)",
+          options: ["100.48 cm³", "301.44 cm³", "75.36 cm³", "24 cm³"],
+          correctIndex: 0,
+          explanation: "V = (πr²h)/3 = (3.14 × 16 × 6)/3 = 301.44/3 = 100.48 cm³."
+        },
+        {
+          id: 3,
+          question: "Un cono tiene radio 5 cm y altura 12 cm. ¿Cuánto mide la generatriz?",
+          options: ["13 cm", "17 cm", "7 cm", "60 cm"],
+          correctIndex: 0,
+          explanation: "g² = r² + h² = 25 + 144 = 169. g = 13 cm."
+        }
+      ]
+    },
+    {
+      slug: "esfera",
+      tip: "La esfera es la única superficie de revolución donde todos los puntos están a la misma distancia del centro.",
+      theory: [
+        "**Esfera**: superficie formada por todos los puntos que están a una distancia fija (radio) de un punto fijo (centro).",
+        "**Elementos:**",
+        "- **Radio (r)**: distancia del centro a la superficie",
+        "- **Diámetro (d)**: pasa por el centro. d = 2r",
+        "- **Gran círculo**: circunferencia de intersección con un plano que pasa por el centro",
+        "- **Círculo máximo**: tiene la misma área que el gran círculo",
+        "**Fórmulas de la esfera:**",
+        "- Área: A = 4πr²",
+        "- Volumen: V = (4/3)πr³",
+        "**Relación con el cilindro circunscrito:**",
+        "La esfera inscrita en un cilindro tiene: Área esfera = Área lateral cilindro y Volumen esfera = (2/3) volumen cilindro."
+      ],
+      illustration: `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+        <rect width="300" height="200" fill="#f8fafc" rx="12"/>
+        <circle cx="150" cy="100" r="65" fill="none" stroke="#2563eb" stroke-width="2"/>
+        <ellipse cx="150" cy="100" rx="65" ry="20" fill="none" stroke="#2563eb" stroke-width="1" stroke-dasharray="4,3"/>
+        <ellipse cx="150" cy="100" rx="20" ry="65" fill="none" stroke="#2563eb" stroke-width="1" stroke-dasharray="4,3"/>
+        <circle cx="150" cy="100" r="3" fill="#dc2626"/>
+        <text x="155" y="98" fill="#dc2626" font-size="11" font-weight="bold" font-family="sans-serif">O</text>
+        <line x1="150" y1="100" x2="215" y2="100" stroke="#059669" stroke-width="2"/>
+        <text x="178" y="95" fill="#059669" font-size="12" font-weight="bold" font-family="sans-serif">r</text>
+        <text x="100" y="195" fill="#64748b" font-size="11" font-family="sans-serif">A = 4πr² | V = (4/3)πr³</text>
+      </svg>`,
+      exercises: [
+        {
+          id: 1,
+          question: "Una esfera tiene radio 6 cm. ¿Cuál es su área? (π ≈ 3.14)",
+          options: ["452.16 cm²", "113.04 cm²", "904.32 cm²", "36 cm²"],
+          correctIndex: 0,
+          explanation: "A = 4πr² = 4 × 3.14 × 36 = 452.16 cm²."
+        },
+        {
+          id: 2,
+          question: "Una esfera tiene radio 3 cm. ¿Cuál es su volumen? (π ≈ 3.14)",
+          options: ["113.04 cm³", "339.12 cm³", "28.26 cm³", "56.52 cm³"],
+          correctIndex: 0,
+          explanation: "V = (4/3)πr³ = (4/3) × 3.14 × 27 = 113.04 cm³."
+        },
+        {
+          id: 3,
+          question: "El diámetro de una esfera mide 10 cm. ¿Cuánto mide su radio?",
+          options: ["5 cm", "10 cm", "20 cm", "2.5 cm"],
+          correctIndex: 0,
+          explanation: "Radio = diámetro / 2 = 10 / 2 = 5 cm."
+        }
+      ]
+    },
+    {
+      slug: "la-recta",
+      tip: "La ecuación de la recta es y = mx + b. m es la pendiente (inclinación) y b es la intersección con el eje Y.",
+      theory: [
+        "La **recta** es un conjunto de puntos que se extienden en ambas direcciones sin fin.",
+        "**Ecuación de la recta en el plano:**",
+        "- **Forma general**: Ax + By + C = 0",
+        "- **Forma pendiente-intersección**: y = mx + b",
+        "- **Forma punto-pendiente**: y - y₁ = m(x - x₁)",
+        "- **Forma dos puntos**: (y - y₁)/(x - x₁) = (y₂ - y₁)/(x₂ - x₁)",
+        "**Pendiente (m):** m = (y₂ - y₁)/(x₂ - x₁) = Δy/Δx",
+        "- Si m > 0: la recta sube de izquierda a derecha",
+        "- Si m < 0: la recta baja de izquierda a derecha",
+        "- Si m = 0: recta horizontal",
+        "- Si m es indefinida: recta vertical",
+        "**Posiciones relativas entre rectas:**",
+        "- **Paralelas**: misma pendiente (m₁ = m₂)",
+        "- **Perpendiculares**: m₁ × m₂ = -1"
+      ],
+      illustration: `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+        <rect width="300" height="200" fill="#f8fafc" rx="12"/>
+        <line x1="30" y1="100" x2="270" y2="100" stroke="#94a3b8" stroke-width="1"/>
+        <line x1="150" y1="10" x2="150" y2="190" stroke="#94a3b8" stroke-width="1"/>
+        <text x="275" y="105" fill="#94a3b8" font-size="10" font-family="sans-serif">x</text>
+        <text x="155" y="12" fill="#94a3b8" font-size="10" font-family="sans-serif">y</text>
+        <line x1="30" y1="170" x2="270" y2="30" stroke="#2563eb" stroke-width="2"/>
+        <text x="200" y="55" fill="#2563eb" font-size="11" font-family="sans-serif">y = mx + b</text>
+        <circle cx="150" cy="100" r="3" fill="#dc2626"/>
+        <text x="155" y="95" fill="#dc2626" font-size="10" font-family="sans-serif">b</text>
+        <text x="100" y="195" fill="#64748b" font-size="10" font-family="sans-serif">m = pendiente | b = intersección Y</text>
+      </svg>`,
+      exercises: [
+        {
+          id: 1,
+          question: "¿Cuál es la pendiente de la recta que pasa por (2, 3) y (6, 11)?",
+          options: ["2", "4", "1/2", "-2"],
+          correctIndex: 0,
+          explanation: "m = (11-3)/(6-2) = 8/4 = 2."
+        },
+        {
+          id: 2,
+          question: "La ecuación y = 3x - 5 tiene pendiente e intersección con el eje Y iguales a:",
+          options: ["m=3, b=-5", "m=-5, b=3", "m=3, b=5", "m=5, b=-3"],
+          correctIndex: 0,
+          explanation: "En y = mx + b, m es la pendiente (3) y b es la intersección con Y (-5)."
+        },
+        {
+          id: 3,
+          question: "¿Dos rectas con pendientes m₁ = 2 y m₂ = -1/2 son paralelas, perpendiculares o secantes?",
+          options: ["Perpendiculares", "Paralelas", "Secantes", "Mixtas"],
+          correctIndex: 0,
+          explanation: "m₁ × m₂ = 2 × (-1/2) = -1. Si el producto es -1, son perpendiculares."
+        }
+      ]
+    },
+    {
+      slug: "circunferencia-y-parabola",
+      tip: "La parábola tiene un foco y una directriz. Todo punto de la parábola está igual de lejos del foco que de la directriz.",
+      theory: [
+        "**Circunferencia**: conjunto de puntos a distancia r de un centro (h, k).",
+        "- Ecuación: (x-h)² + (y-k)² = r²",
+        "- Centro en origen: x² + y² = r²",
+        "**Parábola**: conjunto de puntos equidistantes de un foco F y una directriz d.",
+        "- Ecuación (foco en eje X): y² = 4px",
+        "- Ecuación (foco en eje Y): x² = 4py",
+        "**Elementos de la parábola:**",
+        "- **Foco (F)**: punto interior de la parábola",
+        - **Directriz (d)**: recta exterior",
+        "- **Vértice (V)**: punto medio entre foco y directriz",
+        "- **Eje**: recta que pasa por el foco y es perpendicular a la directriz",
+        "- **Parámetro (p)**: distancia del vértice al foco",
+        "**Propiedad**: la tangente en un punto de la parábola biseca el ángulo entre el radio focal y la paralela al eje."
+      ],
+      illustration: `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+        <rect width="300" height="200" fill="#f8fafc" rx="12"/>
+        <path d="M 150 170 Q 80 100 150 30 Q 220 100 150 170" fill="none" stroke="#2563eb" stroke-width="2.5"/>
+        <circle cx="150" cy="100" r="3" fill="#dc2626"/>
+        <text x="155" y="103" fill="#dc2626" font-size="11" font-weight="bold" font-family="sans-serif">F</text>
+        <line x1="40" y1="30" x2="40" y2="170" stroke="#059669" stroke-width="1.5" stroke-dasharray="5,3"/>
+        <text x="25" y="25" fill="#059669" font-size="10" font-family="sans-serif">d</text>
+        <circle cx="150" cy="30" r="3" fill="#7c3aed"/>
+        <text x="155" y="28" fill="#7c3aed" font-size="10" font-family="sans-serif">V</text>
+        <line x1="150" y1="30" x2="150" y2="170" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3,3"/>
+        <text x="160" y="68" fill="#64748b" font-size="10" font-family="sans-serif">p</text>
+        <text x="80" y="195" fill="#64748b" font-size="10" font-family="sans-serif">y² = 4px</text>
+      </svg>`,
+      exercises: [
+        {
+          id: 1,
+          question: "La ecuación de una circunferencia es x² + y² = 25. ¿Cuál es su radio?",
+          options: ["5", "25", "10", "12.5"],
+          correctIndex: 0,
+          explanation: "x² + y² = r². Si r² = 25, entonces r = 5."
+        },
+        {
+          id: 2,
+          question: "Una parábola tiene foco en (0, 2) y directriz y = -2. ¿Cuál es la ecuación?",
+          options: ["x² = 8y", "y² = 8x", "x² = 4y", "y² = 4x"],
+          correctIndex: 0,
+          explanation: "El vértice está en (0,0) y p = 2. La ecuación es x² = 4py = 4(2)y = 8y."
+        },
+        {
+          id: 3,
+          question: "¿Cuántos puntos de intersección puede tener una recta con una parábola?",
+          options: ["0, 1 o 2", "Siempre 2", "Siempre 1", "Solo 0"],
+          correctIndex: 0,
+          explanation: "Una recta puede no cortar la parábola (0), ser tangente (1) o cortarla en 2 puntos."
+        }
+      ]
+    },
+    {
+      slug: "elipse-e-hiperbola",
+      tip: "En la elipse, la suma de distancias a los focos es constante. En la hipérbola, la diferencia es constante.",
+      theory: [
+        "**Elipse**: conjunto de puntos donde la suma de distancias a dos focos es constante.",
+        "- Ecuación: x²/a² + y²/b² = 1 (a > b)",
+        "- **Semieje mayor (a)**: distancia del centro al vértice",
+        "- **Semieje menor (b)**: distancia del centro al extremo del eje menor",
+        "- **Excentricidad**: e = c/a (0 < e < 1)",
+        "- Relación: a² = b² + c²",
+        "**Hipérbola**: conjunto de puntos donde la diferencia de distancias a dos focos es constante.",
+        "- Ecuación: x²/a² - y²/b² = 1",
+        "- **Semieje real (a)**: distancia del centro al vértice",
+        "- **Excentricidad**: e = c/a (e > 1)",
+        "- Relación: c² = a² + b²",
+        "**Asíntotas** de la hipérbola: y = ±(b/a)x",
+        "**Elementos comunes:**",
+        "- Focos: puntos interiores",
+        "- Vértices: puntos de intersección con el eje principal",
+        "- Centro: punto medio entre los focos"
+      ],
+      illustration: `<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+        <rect width="300" height="200" fill="#f8fafc" rx="12"/>
+        <ellipse cx="100" cy="100" rx="50" ry="30" fill="none" stroke="#2563eb" stroke-width="2"/>
+        <circle cx="80" cy="100" r="2.5" fill="#dc2626"/>
+        <circle cx="120" cy="100" r="2.5" fill="#dc2626"/>
+        <text x="75" y="95" fill="#dc2626" font-size="9" font-family="sans-serif">F₁</text>
+        <text x="125" y="95" fill="#dc2626" font-size="9" font-family="sans-serif">F₂</text>
+        <text x="80" y="30" fill="#2563eb" font-size="11" font-family="sans-serif">Elipse</text>
+        <path d="M 190,70 Q 250,100 190,130" fill="none" stroke="#7c3aed" stroke-width="2"/>
+        <path d="M 290,70 Q 230,100 290,130" fill="none" stroke="#7c3aed" stroke-width="2"/>
+        <circle cx="220" cy="100" r="2.5" fill="#dc2626"/>
+        <circle cx="260" cy="100" r="2.5" fill="#dc2626"/>
+        <text x="215" y="95" fill="#dc2626" font-size="9" font-family="sans-serif">F₁</text>
+        <text x="265" y="95" fill="#dc2626" font-size="9" font-family="sans-serif">F₂</text>
+        <text x="215" y="30" fill="#7c3aed" font-size="11" font-family="sans-serif">Hipérbola</text>
+        <line x1="180" y1="40" x2="300" y2="160" stroke="#94a3b8" stroke-width="0.8" stroke-dasharray="3,3"/>
+        <line x1="180" y1="160" x2="300" y2="40" stroke="#94a3b8" stroke-width="0.8" stroke-dasharray="3,3"/>
+        <text x="200" y="195" fill="#64748b" font-size="10" font-family="sans-serif">Asíntotas</text>
+      </svg>`,
+      exercises: [
+        {
+          id: 1,
+          question: "En una elipse x²/25 + y²/9 = 1, ¿cuánto mide el semieje mayor?",
+          options: ["5", "3", "25", "4"],
+          correctIndex: 0,
+          explanation: "a² = 25, entonces a = 5 (semieje mayor)."
+        },
+        {
+          id: 2,
+          question: "En una elipse, a = 5 y c = 3. ¿Cuánto mide b?",
+          options: ["4", "8", "16", "2"],
+          correctIndex: 0,
+          explanation: "a² = b² + c² → 25 = b² + 9 → b² = 16 → b = 4."
+        },
+        {
+          id: 3,
+          question: "Una hipérbola tiene ecuación x²/9 - y²/16 = 1. ¿Cuál es su excentricidad?",
+          options: ["5/3", "3/5", "4/3", "5/4"],
+          correctIndex: 0,
+          explanation: "c² = a² + b² = 9 + 16 = 25. c = 5. e = c/a = 5/3."
         }
       ]
     },
