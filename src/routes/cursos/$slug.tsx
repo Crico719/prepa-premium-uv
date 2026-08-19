@@ -77,7 +77,7 @@ function TheorySectionBlock({ section }: { section: TheorySection }) {
 type IllustrationPanelProps = {
   svg: string;
   index: number;
-  summary?: string;
+  summary?: string | undefined;
   theory: TheorySection[];
   tip: string;
   isOpen: boolean;
