@@ -1972,8 +1972,7 @@ export const courseContent: CourseContent = {
       }
     ]
   }
-  ],
-] = [
+  },
   {
     slug: "pitagoras-y-aplicaciones",
     tip: "Verifica siempre si los datos forman una terna pitagórica conocida antes de calcular raíces; en la PUCP, las ternas (3,4,5), (5,12,13) y (8,15,17) aparecen con frecuencia.",
