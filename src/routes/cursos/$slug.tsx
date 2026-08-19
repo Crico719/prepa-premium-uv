@@ -77,22 +77,12 @@ function TheorySectionBlock({ section }: { section: TheorySection }) {
 type IllustrationPanelProps = {
   svg: string;
   index: number;
-  summary?: string | undefined;
-  theory: TheorySection[];
-  tip: string;
+  summary?: string;
   isOpen: boolean;
   onToggle: () => void;
 };
 
-function IllustrationPanel({ svg, index, summary, theory, tip, isOpen, onToggle }: IllustrationPanelProps) {
-  const basicoLines = theory.find(s => s.level === "basico")?.lines || [];
-  const intermedioLines = theory.find(s => s.level === "intermedio")?.lines || [];
-  const avanzadoLines = theory.find(s => s.level === "avanzado")?.lines || [];
-
-  const formulas = [...basicoLines, ...intermedioLines, ...avanzadoLines]
-    .filter(l => l.includes("**") && (l.includes("=") || l.includes("²") || l.includes("×") || l.includes("÷") || l.includes("√")))
-    .slice(0, 4);
-
+function IllustrationPanel({ svg, index, summary, isOpen, onToggle }: IllustrationPanelProps) {
   return (
     <div className={`rounded-[16px] border overflow-hidden transition-all duration-300 ${isOpen ? "border-primary shadow-lg" : "border-border hover:border-primary/50"}`}>
       <button
@@ -115,7 +105,7 @@ function IllustrationPanel({ svg, index, summary, theory, tip, isOpen, onToggle 
         <div className="border-t border-border bg-gradient-to-b from-card to-background">
           <div className="p-4">
             <div
-              className="flex aspect-video items-center justify-center rounded-xl bg-gradient-to-br from-primary-deep/90 to-primary/90 p-4 mb-4"
+              className="flex aspect-video items-center justify-center rounded-xl bg-gradient-to-br from-primary-deep/90 to-primary/90 p-4"
               style={{ perspective: "1200px" }}
             >
               <div
@@ -127,57 +117,6 @@ function IllustrationPanel({ svg, index, summary, theory, tip, isOpen, onToggle 
                 }}
                 dangerouslySetInnerHTML={{ __html: svg }}
               />
-            </div>
-
-            {summary && (
-              <div className="mb-4 p-3 rounded-xl bg-blue-50 dark:bg-blue-950/50 border border-blue-100 dark:border-blue-900">
-                <div className="flex items-start gap-2">
-                  <Info className="size-4 mt-0.5 shrink-0 text-blue-600" />
-                  <p className="text-xs text-blue-700 dark:text-blue-300 leading-relaxed">{summary}</p>
-                </div>
-              </div>
-            )}
-
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-              <div className="rounded-xl border border-green-200 dark:border-green-800 bg-green-50 dark:bg-green-950/50 p-3">
-                <div className="flex items-center gap-1.5 mb-2">
-                  <BookOpen className="size-3.5 text-green-600" />
-                  <p className="text-xs font-bold text-green-700 dark:text-green-300">Conceptos Básicos</p>
-                </div>
-                <ul className="space-y-1">
-                  {basicoLines.slice(0, 3).map((line, i) => (
-                    <li key={i} className="text-[10px] text-green-600 dark:text-green-400 leading-tight"
-                      dangerouslySetInnerHTML={{ __html: line.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>").substring(0, 80) + (line.length > 80 ? "..." : "") }}
-                    />
-                  ))}
-                </ul>
-              </div>
-
-              <div className="rounded-xl border border-amber-200 dark:border-amber-800 bg-amber-50 dark:bg-amber-950/50 p-3">
-                <div className="flex items-center gap-1.5 mb-2">
-                  <Zap className="size-3.5 text-amber-600" />
-                  <p className="text-xs font-bold text-amber-700 dark:text-amber-300">Fórmulas Clave</p>
-                </div>
-                <ul className="space-y-1">
-                  {formulas.length > 0 ? formulas.map((line, i) => (
-                    <li key={i} className="text-[10px] text-amber-600 dark:text-amber-400 leading-tight"
-                      dangerouslySetInnerHTML={{ __html: line.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>").substring(0, 80) + (line.length > 80 ? "..." : "") }}
-                    />
-                  )) : intermedioLines.slice(0, 3).map((line, i) => (
-                    <li key={i} className="text-[10px] text-amber-600 dark:text-amber-400 leading-tight"
-                      dangerouslySetInnerHTML={{ __html: line.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>").substring(0, 80) + (line.length > 80 ? "..." : "") }}
-                    />
-                  ))}
-                </ul>
-              </div>
-
-              <div className="rounded-xl border border-red-200 dark:border-red-800 bg-red-50 dark:bg-red-950/50 p-3">
-                <div className="flex items-center gap-1.5 mb-2">
-                  <Target className="size-3.5 text-red-600" />
-                  <p className="text-xs font-bold text-red-700 dark:text-red-300">Tip de Examen</p>
-                </div>
-                <p className="text-[10px] text-red-600 dark:text-red-400 leading-tight">{tip.substring(0, 120)}{tip.length > 120 ? "..." : ""}</p>
-              </div>
             </div>
           </div>
         </div>
@@ -289,8 +228,6 @@ function Leccion() {
                         svg={svg}
                         index={i}
                         summary={i === 0 ? currentContent?.illustrationSummary : undefined}
-                        theory={theorySections}
-                        tip={currentContent?.tip || ""}
                         isOpen={openPanel === i}
                         onToggle={() => setOpenPanel(openPanel === i ? null : i)}
                       />
