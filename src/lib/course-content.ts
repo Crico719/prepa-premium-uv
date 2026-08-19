@@ -1971,7 +1971,6 @@ export const courseContent: CourseContent = {
         difficulty: "avanzado"
       }
     ]
-  }
   },
   {
     slug: "pitagoras-y-aplicaciones",
