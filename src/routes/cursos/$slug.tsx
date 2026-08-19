@@ -150,8 +150,18 @@ function Leccion() {
                   <div className="relative">
                     <div
                       className="flex aspect-video items-center justify-center rounded-t-[24px] bg-gradient-to-br from-primary-deep/90 to-primary/90 p-6"
-                      dangerouslySetInnerHTML={{ __html: illustrations[activeIllustration] || illustrations[0]! }}
-                    />
+                      style={{ perspective: "1200px" }}
+                    >
+                      <div
+                        className="w-full h-full flex items-center justify-center"
+                        style={{
+                          transform: "rotateX(2deg) rotateY(-1deg)",
+                          transformStyle: "preserve-3d",
+                          transition: "transform 0.4s ease"
+                        }}
+                        dangerouslySetInnerHTML={{ __html: illustrations[activeIllustration] || illustrations[0]! }}
+                      />
+                    </div>
                     {illustrations.length > 1 && (
                       <div className="absolute bottom-3 left-1/2 flex -translate-x-1/2 gap-2">
                         {illustrations.map((_, i) => (
@@ -164,6 +174,18 @@ function Leccion() {
                         ))}
                       </div>
                     )}
+                  </div>
+                )}
+                {currentContent?.illustrationSummary && (
+                  <div className="px-6 py-3 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-950/50 dark:to-indigo-950/50 border-t border-blue-100 dark:border-blue-900">
+                    <div className="flex items-start gap-2">
+                      <svg className="size-4 mt-0.5 shrink-0 text-blue-600" viewBox="0 0 20 20" fill="currentColor">
+                        <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+                      </svg>
+                      <p className="text-xs text-blue-700 dark:text-blue-300 leading-relaxed">
+                        {currentContent.illustrationSummary}
+                      </p>
+                    </div>
                   </div>
                 )}
                 <Tabs defaultValue="teoria" className="p-6">

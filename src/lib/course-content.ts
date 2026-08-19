@@ -20,6 +20,7 @@ export type CourseModule = {
   tip: string;
   theory: TheorySection[];
   illustrations: string[];
+  illustrationSummary?: string;
   exercises: CourseExercise[];
 };
 
@@ -29,6 +30,7 @@ export const courseContent: CourseContent = {
   "geometria": [
   {
     slug: "linea-recta-y-angulos",
+    illustrationSummary: "Diagrama de dos rectas que se cortan formando ángulos. Se muestran los ángulos complementarios (suman 90°), suplementarios (suman 180°) y opuestos por el vértice (iguales). Los colores identifican cada tipo de ángulo.",
     tip: "Para identificar ángulos complementarios, recuerda que suman 90°; los suplementarios suman 180°. En el examen, verifica siempre si el problema implica ángulos adyacentes, verticales o alternos internos antes de resolver.",
     theory: [
       {
@@ -127,6 +129,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "triangulos",
+    illustrationSummary: "Representación de un triángulo con sus tres vértices, lados y ángulos internos. Se marca la altura, la mediana y los puntos notables. Los colores distinguen cada elemento geométrico.",
     tip: "En todo triángulo, la suma de sus ángulos internos siempre es 180°. Usa esta propiedad para encontrar ángulos faltantes rápidamente. En el examen, identifica primero el tipo de triángulo antes de aplicar fórmulas específicas.",
     theory: [
       {
@@ -229,6 +232,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "poligonos",
+    illustrationSummary: "Figuras geométricas con múltiples lados: triángulo, cuadrilátero, pentágono y hexágono. Se muestran los ángulos internos y la relación con el número de lados.",
     tip: "La fórmula general para la suma de ángulos internos de un polígono de n lados es (n−2)×180°. Memoriza esta fórmula y úsala para resolver rápidamente cualquier problema sobre ángulos de polígonos regulares en el examen.",
     theory: [
       {
@@ -324,6 +328,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "cuadrilateros",
+    illustrationSummary: "Diagrama comparativo de cuadriláteros: rectángulo, rombo, trapecio y cuadrilátero general. Cada figura muestra sus propiedades de lados paralelos y ángulos.",
     tip: "Memoriza las propiedades específicas de cada cuadrilátero: el paralelogramo tiene lados opuestos paralelos e iguales, el rectángulo añade ángulos de 90°, el rombo añade lados iguales, y el cuadrado combina ambas propiedades. En el examen, identifica primero el tipo de cuadrilátero.",
     theory: [
       {
@@ -421,6 +426,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "circumferencia",
+    illustrationSummary: "Diagrama geométrico que ilustra el concepto de Circumferencia. Se muestran las figuras, ángulos y relaciones con colores diferenciados para facilitar la comprensión visual.",
     tip: "Recuerda siempre las relaciones clave: C = 2πr, A = πr², y que el ángulo central es igual al arco que intercepta. Para problemas de sectores, usa A = (θ/360°)πr². En el examen, verifica si el problema pide longitud de arco (L = rθ en radianes) o área de sector.",
     theory: [
       {
@@ -520,6 +526,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "puntos-notables",
+    illustrationSummary: "Triángulo con sus cuatro puntos notables: ortocentro (H), baricentro (G), circuncentro (O) e incentro (I). La recta de Euler conecta tres de ellos.",
     tip: "Los 4 puntos notables del triángulo (incentro, baricentro, ortocentro y circuncentro) siempre están alineados en la Recta de Euler. En un triángulo equilátero, los cuatro puntos coinciden. Memoriza: el baricentro divide a cada mediana en relación 2:1 desde el vértice.",
     theory: [
       {
@@ -662,6 +669,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "prop-y-semejanza",
+    illustrationSummary: "Dos triángulos semejantes con sus lados proporcionales. Se muestra la razón de semejanza k y la relación entre ángulos correspondientes.",
     tip: "En semejanza, identifica SIEMPRE el vértice común y el orden correcto de los polígonos. Muchos errores vienen de no respetar la correspondencia de vértices al plantear las proporciones.",
     theory: [
       {
@@ -782,6 +790,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "relaciones-metricas",
+    illustrationSummary: "Triángulo rectángulo con las relaciones métricas: cateto = hipotenusa × seno del ángulo opuesto. Se marcan las proyecciones y la altura.",
     tip: "En relaciones métricas del triángulo rectángulo, memoriza solo 3 fórmulas: a² = c·m, b² = c·n y h² = m·n. El teorema de Pitágoras se deduce de ellas: a² + b² = c·m + c·n = c(m+n) = c².",
     theory: [
       {
@@ -894,6 +903,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "poligonos-regulares",
+    illustrationSummary: "Pentágono y hexágono regulares con radios de circunferencias circunscrita e inscrita. Se muestran los apotemas y la fórmula del área.",
     tip: "Para hallar el área de un polígono regular, multiplica el perímetro por el apotema y divide entre 2: A = (P × a)/2. El apotema siempre es menor que el radio. En exámenes, memoriza: hexágono regular → lado = radio.",
     theory: [
       {
@@ -1023,6 +1033,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "areas",
+    illustrationSummary: "Comparación visual de áreas: triángulo, rectángulo, trapecio y circunferencia. Cada figura muestra su fórmula de área correspondiente.",
     tip: "Cuando un problema pide el área de una figura compuesta, siempre descomponla en figuras simples (triángulos, rectángulos, trapecios). Identifica qué se suma y qué se resta. Lee bien si piden área lateral o total.",
     theory: [
       {
@@ -1144,6 +1155,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "rectas-y-planos",
+    illustrationSummary: "Representación 3D de rectas y planos en el espacio. Se muestran las relaciones: paralelas, que se cortan y oblicuas.",
     tip: "En problemas de rectas y planos en el espacio, dibuja siempre una figura de referencia (cubo o prisma). Para identificar si dos rectas son paralelas, se cortan o son inclinadas, verifica: ¿comparten un plano? Si sí y no son paralelas, se cortan.",
     theory: [
       {
@@ -1276,6 +1288,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "prisma-y-cilindro",
+    illustrationSummary: "Prisma hexagonal y cilindro con sus dimensiones: altura, radio, arista. Se muestran las áreas de las bases y laterales.",
     tip: "Para calcular el área total de prismas y cilindros, siempre suma: 2 × área_base + perímetro_base × altura. En cilindro, recuerda que el lateral es un rectángulo 'desenrollado' de base 2πr y altura h.",
     theory: [
       {
@@ -1399,6 +1412,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "piramide-y-cono",
+    illustrationSummary: "Pirámide cuadrangular y cono con sus vértices, aristas y alturas. Se marca la relación entre la altura y el apotema.",
     tip: "En el examen, distingue siempre entre la altura (h) y la apotema o generatriz (g). La altura cae perpendicular desde el vértice al centro de la base; la generatriz va del vértice al borde de la base. Muchos errores ocurren por confundir ambas. Memoriza: V_pirámide = (1/3)·A_base·h y V_cono = (1/3)·π·r²·h.",
     theory: [
       {
@@ -1510,6 +1524,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "esfera",
+    illustrationSummary: "Esfera con centro O, radio R, y puntos sobre la superficie. Se muestran los círculos máximos y la fórmula del volumen.",
     tip: "La fórmula de la esfera V = (4/3)πr³ debe memorizarse perfectamente. En el examen, cuidado: muchos preguntan el diámetro y no el radio. También recuerda que A = 4πr². Un atajo: el área de la esfera es exactamente la derivada del volumen respecto a r: dV/dr = 4πr².",
     theory: [
       {
@@ -1619,6 +1634,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "la-recta",
+    illustrationSummary: "Recta en el plano cartesiano con pendiente m, punto de intersección con el eje Y y ángulo de inclinación.",
     tip: "Dominar las tres formas de ecuación de la recta (pendiente-intersección, punto-pendiente y general) es clave. En el examen, identifica primero qué te dan: si te dan dos puntos usa m=(y₂−y₁)/(x₂−x₁) y luego punto-pendiente. La ecuación general Ax+By+C=0 es la más versátil para calcular distancias y ángulos.",
     theory: [
       {
@@ -1736,6 +1752,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "circunferencia-y-parabola",
+    illustrationSummary: "Circunferencia y parábola superpuestas. Se muestran los focos, vértices y ejes de simetría de cada curva.",
     tip: "Para la circunferencia: identifica rápidamente el centro (h,k) y radio r de la ecuación general completando cuadrados. Para la parábola: siempre identifica si abre hacia arriba/abajo (eje vertical) o derecha/izquierda (eje horizontal). El foco y la directriz están a distancia p del vértice, y p = 1/(4|a|) en la forma y = ax².",
     theory: [
       {
@@ -1850,6 +1867,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "elipse-e-hiperbola",
+    illustrationSummary: "Elipse con focos F₁, F₂ y ejes mayores/menores. Al lado, hipérbola con sus asíntotas y focos.",
     tip: "La clave para resolver ejercicios de cónicas rápidamente es memorizar la relación c² = a² − b² (elipse) vs c² = a² + b² (hiperbola). Identifica siempre cuál es a, b y c, y ubica los focos sobre el eje mayor. El excentricidad e te dice la forma: 0 < e < 1 (elipse), e > 1 (hiperbola). A mayor e, más alargada la figura.",
     theory: [
       {
@@ -1974,6 +1992,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "pitagoras-y-aplicaciones",
+    illustrationSummary: "Triángulo rectángulo con catetos a, b e hipotenusa c. Se muestra la relación a² + b² = c² con cuadrados sobre cada lado.",
     tip: "Verifica siempre si los datos forman una terna pitagórica conocida antes de calcular raíces; en la PUCP, las ternas (3,4,5), (5,12,13) y (8,15,17) aparecen con frecuencia.",
     theory: [
       {
@@ -2036,6 +2055,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "teorema-de-tales",
+    illustrationSummary: "Triángulo con una recta paralela a la base que corta los lados en proporción. Se marcan los segmentos proporcionales.",
     tip: "Cuando veas rectas paralelas cortando lados de un triángulo, aplica Tales de inmediato; si hay rectas paralelas iguales, los segmentos cortados en un lado son iguales a los del otro.",
     theory: [
       {
@@ -2098,6 +2118,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "semejanza-avanzada",
+    illustrationSummary: "Dos triángulos semejantes con la razón de semejanza k. Se muestra la relación entre áreas (k²) y perímetros (k).",
     tip: "Recuerda que en triángulos semejantes la razón de áreas es k² y la de perímetros es k; si te dan una relación de lados, eleva al cuadrado para áreas.",
     theory: [
       {
@@ -2162,6 +2183,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "criterios-de-congruencia",
+    illustrationSummary: "Pares de triángulos congruentes con los criterios LAL, LAA y ASA. Cada par muestra los elementos iguales.",
     tip: "No confundas congruencia con semejanza: AAA nunca da congruencia. En la PUCP, identifica rápidamente qué elementos te dan para elegir el criterio correcto.",
     theory: [
       {
@@ -2234,6 +2256,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "area-triangulos-avanzado",
+    illustrationSummary: "Triángulo con diferentes métodos de cálculo de área: base-altura, semiperímetro de Herón y coordenadas.",
     tip: "Domina las tres fórmulas de área (base-altura, Herón y coordenadas) y elige según los datos: si tienes tres lados usa Herón, si tienes vértices usa coordenadas.",
     theory: [
       {
@@ -2297,6 +2320,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "circunferencia-circunscrita-inscrita",
+    illustrationSummary: "Triángulo con sus tres circunferencias notables: circunscrita (pasa por vértices), inscrita (toca lados) y los radios correspondientes.",
     tip: "Memoriza: circuncentro = mediatrices, incentro = bisectrices. En rectángulos el circuncentro es el punto medio de la hipotenusa, eso ahorra cálculos.",
     theory: [
       {
@@ -2360,6 +2384,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "potencia-de-un-punto",
+    illustrationSummary: "Punto exterior a una circunferencia con secantes y tangentes. Se muestra la fórmula de potencia: PA × PB = PT².",
     tip: "La potencia de un punto es la misma para cualquier secante que pase por él: usa PA × PB = PC × PD para resolver rápidamente sin calcular distancias al centro.",
     theory: [
       {
@@ -2429,6 +2454,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "angulos-inscritos-centrales",
+    illustrationSummary: "Circunferencia con ángulo central e inscrito que subtenden el mismo arco. Se marca la relación: central = 2 × inscrito.",
     tip: "El ángulo inscrito siempre vale la mitad del arco; memoriza que un ángulo inscrito en semicírculo es 90°, esto aparece mucho en la PUCP.",
     theory: [
       {
@@ -2499,6 +2525,7 @@ export const courseContent: CourseContent = {
 ,
   {
     slug: "transformaciones-isometricas",
+    illustrationSummary: "Figura original con sus transformaciones: traslación, rotación y reflexión. Cada transformación se muestra en un color diferente.",
     tip: "En isometrías el área y las distancias se conservan. Verifica que la orientación se invierta en reflexiones pero no en traslaciones ni rotaciones.",
     theory: [
       { level: "basico", title: "Traslación", lines: [
@@ -2548,6 +2575,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "simetria-ejes-y-puntos",
+    illustrationSummary: "Figuras con ejes de simetría axial y centro de simetría. Se marcan los puntos correspondientes.",
     tip: "Una figura tiene simetría axial si al doblarla por el eje las partes coinciden. Un cuadrado tiene 4 ejes, un rectángulo solo 2.",
     theory: [
       { level: "basico", title: "Simetría Axial", lines: [
@@ -2599,6 +2627,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "homotecia",
+    illustrationSummary: "Dos figuras semejantes relacionadas por homotecia con centro O y razón k. Se muestran las rectas concurrentes.",
     tip: "En una homotecia las distancias se multiplican por |k| y las áreas por k². Si k es negativo la figura se invierte respecto al centro.",
     theory: [
       { level: "basico", title: "Definición de Homotecia", lines: [
@@ -2650,6 +2679,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "coordenadas-cartesianas",
+    illustrationSummary: "Plano cartesiano con puntos A(x₁,y₁) y B(x₂,y₂). Se muestra la distancia entre ellos y el punto medio.",
     tip: "Para calcular la distancia usa d = √((x₂-x₁)² + (y₂-y₁)²). El punto medio se obtiene promediando cada coordenada por separado.",
     theory: [
       { level: "basico", title: "El Plano Cartesiano", lines: [
@@ -2702,6 +2732,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "area-coordenadas",
+    illustrationSummary: "Polígono en el plano cartesiano con el método de las coordenadas (shoelace) para calcular su área.",
     tip: "El método Shoelace calcula el área de un polígono con vértices en coordenadas: multiplica diagonalmente, suma los productos y aplica valor absoluto sobre 2.",
     theory: [
       { level: "basico", title: "Método de las Coordenadas", lines: [
@@ -2757,6 +2788,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "recta-en-coordenadas",
+    illustrationSummary: "Recta en el plano cartesiano con su ecuación y = mx + b, pendiente m y punto de corte con el eje Y.",
     tip: "Para hallar la ecuación de una recta por dos puntos primero calcula la pendiente m = (y₂-y₁)/(x₂-x₁) y luego usa punto-pendiente.",
     theory: [
       { level: "basico", title: "Formas de la Ecuación de una Recta", lines: [
@@ -2810,6 +2842,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "circunferencia-coordenadas",
+    illustrationSummary: "Circunferencia en el plano cartesiano con centro (h,k) y radio r. Se muestra la ecuación canónica.",
     tip: "La ecuación canónica (x-a)² + (y-b)² = r² identifica directamente centro y radio. Para hallar la ecuación general completa el cuadrado de x e y.",
     theory: [
       { level: "basico", title: "Ecuación Canónica", lines: [
@@ -2861,6 +2894,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "distancia-punto-recta",
+    illustrationSummary: "Punto P y recta r en el plano. Se muestra la distancia perpendicular y la fórmula de cálculo.",
     tip: "La distancia del punto (x₀,y₀) a Ax+By+C=0 es |Ax₀+By₀+C|/√(A²+B²). Si el numerador es cero, el punto está sobre la recta.",
     theory: [
       { level: "basico", title: "Distancia Punto-Reta", lines: [
@@ -2912,6 +2946,7 @@ export const courseContent: CourseContent = {
 ,
   {
     slug: "razones-trigonometricas",
+    illustrationSummary: "Triángulo rectángulo con los ángulos y los lados. Se muestran las razones: seno, coseno y tangente.",
     tip: "En triángulos rectángulos, memoriza SOH-CAH-TOA: Seno = Opuesto/Hipotenusa, Coseno = Adyacente/Hipotenusa, Tangente = Opuesto/Adyacente.",
     theory: [
       {
@@ -3001,6 +3036,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "identidades-trigonometricas",
+    illustrationSummary: "Círculo trigonométrico con las identidades fundamentales: pitágorica, tangente y de doble ángulo.",
     tip: "La identidad pitagórica más usada es sen²θ + cos²θ = 1. De ella se derivan las otras dos: 1 + tan²θ = sec²θ y 1 + cot²θ = csc²θ.",
     theory: [
       {
@@ -3087,6 +3123,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "suma-diferencia-trig",
+    illustrationSummary: "Diagrama de las fórmulas de suma y diferencia para seno y coseno. Se muestran los ángulos α y β.",
     tip: "Las fórmulas de suma y diferencia se aplican para calcular sen/cos de ángulos no estándar como 75° = 45° + 30°. Memoriza el patrón: cos cambia el signo, sen mantiene.",
     theory: [
       {
@@ -3169,6 +3206,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "ley-de-senos",
+    illustrationSummary: "Triángulo general con los lados a, b, c y ángulos A, B, C. Se muestra la relación a/sen(A) = b/sen(B) = c/sen(C).",
     tip: "La ley de senos funciona con cualquier triángulo: a/senA = b/senB = c/senC. Úsala cuando conoces un lado y su ángulo opuesto, y buscas otro lado o ángulo.",
     theory: [
       {
@@ -3254,6 +3292,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "ley-de-cosenos",
+    illustrationSummary: "Triángulo con dos lados y el ángulo comprendido. Se muestra la fórmula del coseno para el tercer lado.",
     tip: "La ley de cosenos es como una extensión del teorema de Pitágoras: a² = b² + c² - 2bc·cos(A). Úsala cuando conoces dos lados y el ángulo incluido (LAL).",
     theory: [
       {
@@ -3339,6 +3378,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "area-con-trigonometria",
+    illustrationSummary: "Triángulo con dos lados y el ángulo entre ellos. Se muestra la fórmula A = ½ab·sen(C).",
     tip: "La fórmula del área con trigonometría es: Área = ½ab·sin(C). Solo necesitas dos lados y el ángulo que forma entre ellos, sin importar si el triángulo es rectángulo o no.",
     theory: [
       {
@@ -3424,6 +3464,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "ecuaciones-trigonometricas",
+    illustrationSummary: "Gráfica de seno y coseno con las soluciones de ecuaciones trigonométricas marcadas.",
     tip: "Para resolver ecuaciones trigonométricas, primero aísla la función trigonométrica. Luego usa el arco inverso y recuerda que hay infinitas soluciones: θ + 360°n.",
     theory: [
       {
@@ -3512,6 +3553,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "aplicaciones-trigonometricas",
+    illustrationSummary: "Problema práctico: avión con ángulo de elevación y distancia. Se muestra la aplicación de razones trigonométricas.",
     tip: "Para problemas de alturas inaccesibles, dibuja el diagrama con dos triángulos rectángulos que comparten la misma base. La diferencia de cotangentes te da la altura.",
     theory: [
       {
@@ -3601,6 +3643,7 @@ export const courseContent: CourseContent = {
 ,
   {
     slug: "vectores-en-el-plano",
+    illustrationSummary: "Vectores en el plano cartesiano con componentes, magnitud y dirección. Se muestran los ejes X e Y.",
     tip: "Un vector se define por su magnitud y dirección. Siempre representa desplazamiento, no posición.",
     theory: [
       {
@@ -3692,6 +3735,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "operaciones-vectores",
+    illustrationSummary: "Vectores sumados por el método del paralelogramo y la resta por el método del triángulo.",
     tip: "La suma de vectores se puede hacer con la regla del paralelogramo o componente a componente.",
     theory: [
       {
@@ -3781,6 +3825,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "producto-escalar",
+    illustrationSummary: "Dos vectores con el ángulo θ entre ellos. Se muestra la fórmula del producto escalar: a·b = |a||b|cos(θ).",
     tip: "Si el producto escalar es cero, los vectores son perpendiculares. Es la clave para resolver ortogonalidad.",
     theory: [
       {
@@ -3871,6 +3916,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "rectas-vectorial",
+    illustrationSummary: "Recta con vector director y punto. Se muestran las ecuaciones paramétricas y vectorial.",
     tip: "Una recta se define con un punto y un vector director. La forma paramétrica es clave para resolver intersecciones.",
     theory: [
       {
@@ -3962,6 +4008,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "elipse-analitica",
+    illustrationSummary: "Elipse con ejes mayor y menor, focos F₁, F₂ y excentricidad. Se muestra la ecuación estándar.",
     tip: "En la elipse la suma de distancias a los focos es constante e igual a 2a. Memoriza c²=a²−b².",
     theory: [
       {
@@ -4062,6 +4109,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "hiperbola-analitica",
+    illustrationSummary: "Hipérbola con sus dos ramas, asíntotas y focos. Se marca la relación c² = a² + b².",
     tip: "En la hipérbola la diferencia de distancias a los focos es constante. Las asíntotas son claves para graficar.",
     theory: [
       {
@@ -4161,6 +4209,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "parabola-analitica",
+    illustrationSummary: "Parábola con foco F, directriz y vértice. Se muestra la ecuación y² = 4px.",
     tip: "La parábola es el lugar de puntos equidistantes del foco y la directriz. Memoriza p = distancia foco-directriz/2.",
     theory: [
       {
@@ -4255,6 +4304,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "locus-geometrico",
+    illustrationSummary: "Lugar geométrico formado por puntos que cumplen una condición. Se muestran ejemplos: circunferencia, elipse, hipérbola.",
     tip: "Un locus es el conjunto de puntos que cumplen una condición. Identifica la condición geométrica antes de ecuar.",
     theory: [
       {
@@ -4350,6 +4400,7 @@ export const courseContent: CourseContent = {
 ,
   {
     slug: "tangentes-circunferencia",
+    illustrationSummary: "Punto exterior con dos tangentes a una circunferencia. Se marca el ángulo rectángulo con el radio.",
     tip: "En todo problema de tangente desde punto exterior, recuerda que el radio es perpendicular a la tangente, formando un triángulo rectángulo donde la hipotenusa es la distancia del punto al centro.",
     theory: [
       {
@@ -4439,6 +4490,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "poligonos-inscritos-circunscritos",
+    illustrationSummary: "Polígono regular inscrito y circunscrito en una circunferencia. Se muestran los radios.",
     tip: "Para polígonos regulares inscritos, el lado se relaciona con el radio de la circunferencia mediante seno: L = 2R·sen(180°/n). Memoriza los valores para n = 3, 4, 5, 6.",
     theory: [
       {
@@ -4524,6 +4576,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "solidos-compostos",
+    illustrationSummary: "Combinación de prismas y cilindros. Se muestran las dimensiones de cada sólido.",
     tip: "Para sólidos compuestos, identifica cada sólido simple que lo forma y aplica las fórmulas por separado. El volumen total es la suma o resta de los volúmenes individuales.",
     theory: [
       {
@@ -4606,6 +4659,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "secciones-solidos",
+    illustrationSummary: "Prisma y cono cortados por planos. Se muestran las secciones resultantes.",
     tip: "La sección de un cono por un plano paralelo a la base es siempre un círculo. Si el plano es oblicuo, la sección puede ser una elipse. Memoriza las secciones cónicas básicas.",
     theory: [
       {
@@ -4691,6 +4745,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "areas-superficiales-avanzado",
+    illustrationSummary: "Sólidos con sus áreas superficiales desglosadas: bases, lateral y total.",
     tip: "La superficie total de un sólido compuesto NO es siempre la suma de superficies individuales. Las caras internas donde se unen los sólidos NO se cuentan. Resta siempre 2 veces el área de la cara compartida.",
     theory: [
       {
@@ -4776,6 +4831,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "volumenes-avanzados",
+    illustrationSummary: "Sólidos de revolución y compuestos con sus fórmulas de volumen.",
     tip: "Para volúmenes de sólidos irregulares, usa el método de secciones conocidas o descompón en sólidos simples. El volumen de un sólido de revolución se calcula con integrales: V = π∫[f(x)]²dx.",
     theory: [
       {
@@ -4860,6 +4916,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "recta-plano-espacio",
+    illustrationSummary: "Recta y plano en el espacio tridimensional con sus relaciones: paralela, que corta y contenida.",
     tip: "En espacio tridimensional, dos rectas pueden ser paralelas, concurrentes (se cruzan en un punto) o escalas (no se cortan y no son paralelas). Dos planos pueden ser paralelos o cortarse en una recta.",
     theory: [
       {
@@ -4945,6 +5002,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "angulos-en-el-espacio",
+    illustrationSummary: "Ángulos diedros entre planos y ángulos entre rectas y planos en el espacio.",
     tip: "El ángulo diedro se mide entre dos semiplanos que forman una arista. Se calcula midiendo el ángulo entre las normales de los planos. Para ángulos entre rectas y planos usa el seno.",
     theory: [
       {
@@ -5031,6 +5089,7 @@ export const courseContent: CourseContent = {
 ,
   {
     slug: "teorema-ptolomeo",
+    illustrationSummary: "Cuadrilátero cíclico con diagonales y lados. Se muestra la relación: AC × BD = AB × CD + AD × BC.",
     tip: "En un cuadrilátero cíclico, el producto de las diagonales es igual a la suma de los productos de los lados opuestos: AC·BD = AB·CD + BC·AD.",
     theory: [
       {
@@ -5138,6 +5197,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "teorema-stewart",
+    illustrationSummary: "Triángulo con una ceviana. Se muestra la relación entre la ceviana y los lados del triángulo.",
     tip: "Si M es un punto sobre BC en un triángulo ABC, entonces: AB²·MC + AC²·BM = AM²·BC + BM·MC·BC.",
     theory: [
       {
@@ -5243,6 +5303,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "circunferencia-nueve-puntos",
+    illustrationSummary: "Triángulo con los 9 puntos notables: puntos medios, pies de alturas y puntos de Euler.",
     tip: "La circunferencia de los nueve puntos pasa por los 3 puntos medios de los lados, los 3 pies de las alturas y los 3 puntos medios de los segmentos del ortocentro a cada vértice.",
     theory: [
       {
@@ -5352,6 +5413,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "triangulo-de-euler",
+    illustrationSummary: "Triángulo con la recta de Euler que conecta el ortocentro, baricentro y circuncentro.",
     tip: "El baricentro G divide cada mediana en razón 2:1 desde el vértice. En la recta de Euler: HG = 2·GO donde H es el ortocentro y O el circuncentro.",
     theory: [
       {
@@ -5460,6 +5522,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "inversiva-geometria",
+    illustrationSummary: "Inversión respecto a una circunferencia. Se muestran puntos y sus inversos.",
     tip: "La inversión respecto a una circunferencia transforma circunferencias en circunferencias (o líneas), preserva ángulos entre curvas y mantiene la tangencia.",
     theory: [
       {
@@ -5565,6 +5628,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "numeros-complejos-geometria",
+    illustrationSummary: "Plano complejo con números complejos representados como vectores. Se muestra la rotación.",
     tip: "Un número complejo z = a + bi representa el punto (a, b) en el plano. El módulo |z| es la distancia al origen y el argumento es el ángulo con el eje real. Las rotaciones se multiplican por e^(iθ).",
     theory: [
       {
@@ -5672,6 +5736,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "coordenadas-polares",
+    illustrationSummary: "Punto en coordenadas polares (r, θ) y su conversión al sistema cartesiano.",
     tip: "Las coordenadas polares (r, θ) se relacionan con las cartesianas (x, y) mediante: x = r·cos θ, y = r·sen θ. Son ideales para curvas con simetría circular.",
     theory: [
       {
@@ -5777,6 +5842,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "curvas-notables",
+    illustrationSummary: "Espiral de Arquímedes, cardioide y lemniscata con sus ecuaciones polares.",
     tip: "La espiral de Arquímedes tiene r = aθ (crecimiento lineal), el cardioide r = a(1+cosθ) (corazón), la lemniscata r² = a²cos2θ (infinito) y las trisectrices resuelven la trisección del ángulo.",
     theory: [
       {
@@ -5890,6 +5956,7 @@ export const courseContent: CourseContent = {
 ,
   {
     slug: "metodos-resolucion-geometrica",
+    illustrationSummary: "Diagrama de flujo mostrando los métodos de resolución: coordinados, trigonométricos y clásicos.",
     tip: "En el examen de admisión, identifica primero el método más eficiente: coordenadas para figuras en el plano, vectores para paralelismo y perpendicularidad, y trigonometría para ángulos y distancias no convencionales.",
     theory: [
       {
@@ -5979,6 +6046,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "problemas-compuestos-geometrica",
+    illustrationSummary: "Problema que combina múltiples conceptos geométricos: triángulos, circunferencias y áreas.",
     tip: "Los problemas compuestos evalúan tu capacidad de descomponer una figura compleja en partes más simples. Dibuja siempre una figura clara y etiqueta todas las medidas antes de calcular.",
     theory: [
       {
@@ -6064,6 +6132,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "optimizacion-geometrica",
+    illustrationSummary: "Figuras con áreas o perímetros máximos/mínimos bajo restricciones.",
     tip: "En problemas de optimización geométrica, la derivada igualada a cero siempre encuentra extremos. Recuerda que el cuadrado maximiza el área entre todos los rectángulos con perímetro fijo.",
     theory: [
       {
@@ -6149,6 +6218,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "fractales-introduccion",
+    illustrationSummary: "Conjunto de Mandelbrot y triángulo de Sierpinski mostrando autosimilitud.",
     tip: "Los fractales no son comunes en el examen de admisión, pero entender autosimilitud y dimensiones fractales te da ventaja en problemas de patrones geométricos recursivos y series infinitas.",
     theory: [
       {
@@ -6235,6 +6305,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "estimacion-geometrica",
+    illustrationSummary: "Métodos de estimación de áreas por aproximación de figuras conocidas.",
     tip: "En el examen, cuando un problema pide estimar un área irregular, compárala con figuras conocidas de referencia. Aproximar un círculo como un cuadrado de lado igual al diámetro da un sobreestimado útil.",
     theory: [
       {
@@ -6328,6 +6399,7 @@ export const courseContent: CourseContent = {
   "cokito-rm": [
   {
     slug: "relaciones-de-parentesco",
+    illustrationSummary: "Árbol genealógico con las relaciones de parentesco: directo, colateral y por matrimonio.",
     tip: "Dibuja el árbol genealógico completo antes de responder. Identifica primero el punto de referencia y luego ve subiendo y bajando generaciones. Los errores más comunes son confundir cuñado con cuñada o tío político con tío carnal.",
     theory: [
       {
@@ -6455,6 +6527,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "relaciones-de-tiempo",
+    illustrationSummary: "Línea de tiempo con fechas, intervalos y operaciones temporales.",
     tip: "En problemas de tiempo, convierte siempre todo a la misma unidad (minutos o horas) antes de operar. Los errores más frecuentes son mezclar unidades. Dibuja una línea de tiempo para visualizar el problema.",
     theory: [
       {
@@ -6574,6 +6647,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "verdades-y-mentiras",
+    illustrationSummary: "Tabla lógica con proposiciones verdaderas y falsas. Se muestran las reglas de deducción.",
     tip: "Siempre construye la tabla de verdad completa. Cuando hay 3 o más personas, prueba caso por caso: primero asume que A dice la verdad y ve si hay contradicción. La clave es encontrar SIEMPRE una contradicción en al menos un caso.",
     theory: [
       {
@@ -6710,6 +6784,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "orden-de-informacion",
+    illustrationSummary: "Secuencia de eventos con el orden lógico establecido por las premisas.",
     tip: "Dibuja una tabla de ordenamiento con las restricciones. Coloca primero los elementos que tienen más restricciones (los que aparecen en más pistas). Si una restricción dice \"A antes que B\", dibuja una flecha A → B.",
     theory: [
       {
@@ -6856,6 +6931,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "razonamiento-inductivo",
+    illustrationSummary: "Patrón numérico con casos específicos que llevan a una generalización.",
     tip: "Para hallar el patrón, calcula las diferencias entre términos consecutivos. Si las diferencias son constantes → progresión aritmética. Si las razones son constantes → progresión geométrica. Si no, busca en las segundas diferencias.",
     theory: [
       {
@@ -6978,6 +7054,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "sistemas-de-numeracion",
+    illustrationSummary: "Comparación de sistemas: decimal, binario, hexadecimal y sus conversiones.",
     tip: "Memoriza las potencias de 2 (hasta 2¹⁰=1024) y de 16 (hasta 16³=4096). Para convertir de binario a decimal multiplica cada dígito por 2 elevado a su posición (desde 0 a la derecha). Para convertir de decimal a binario divide sucesivamente entre 2.",
     theory: [
       {
@@ -7110,6 +7187,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "criptoaritmetica",
+    illustrationSummary: "Operación aritmética donde cada letra representa un dígito diferente.",
     tip: "Para resolver criptoaritmética, empieza analizando la columna de la derecha (unidades) porque ahí no hay acarreo inicial. Luego busca letras que se repiten mucho o que aparecen en la primera posición de números de dos dígitos (nunca pueden ser 0).",
     theory: [
       {
@@ -7214,6 +7292,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "sucesiones",
+    illustrationSummary: "Secuencia numérica con la regla de formación y los primeros términos.",
     tip: "Cuando veas una sucesión, SIEMPRE calcula primero las diferencias entre términos consecutivos. Si las primeras diferencias son constantes → aritmética. Si no lo son, calcula las segundas diferencias. Si esas son constantes → cuadrática (aₙ = an² + bn + c).",
     theory: [
       {
@@ -7365,6 +7444,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "analogias-y-distribuciones",
+    illustrationSummary: "Relaciones de correspondencia entre elementos de dos conjuntos.",
     tip: "En analogías, identifica primero el **tipo de relación** entre el primer par de palabras. Luego aplica esa misma relación al segundo par. En distribuciones lógicas, prueba cada opción descartando las que contradicen alguna condición del enunciado.",
     theory: [
       {
@@ -7467,6 +7547,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "series",
+    illustrationSummary: "Suma de términos de una sucesión con las propiedades de convergencia.",
     tip: "Identifica siempre la **diferencia** o **razón** entre términos consecutivos. Si las diferencias no son constantes, calcula las **diferencias de segundo orden**. Muchas series en el examen son combinaciones de dos patrones alternados.",
     theory: [
       {
@@ -7568,6 +7649,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "sumatorias",
+    illustrationSummary: "Notación sigma con las propiedades de las sumatorias.",
     tip: "Memoriza las fórmulas básicas: **∑k = n(n+1)/2**, **∑k² = n(n+1)(2n+1)/6**, **∑k³ = [n(n+1)/2]²**. En el examen, descompón sumatorias complejas en combinación de estas fórmulas fundamentales.",
     theory: [
       {
@@ -7669,6 +7751,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "cuatro-operaciones",
+    illustrationSummary: "Operaciones aritméticas fundamentales con propiedades y trucos de cálculo.",
     tip: "Aplica siempre el **orden PEMDAS**: Paréntesis, Exponentes, Multiplicación/División (izq. a der.), Adición/Sustracción (izq. a der.). Muchos errores en el examen provienen de no respetar este orden.",
     theory: [
       {
@@ -7770,6 +7853,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "metodos-practicos",
+    illustrationSummary: "Técnicas de cálculo rápido: redondeo, distribución y factorización.",
     tip: "Los métodos prácticos son **atajos** que ahorran tiempo en el examen. Domina la **sustitución de valores**, el **método de opción falsa**, y la **estimación**. En el examen de admisión, el tiempo es limitado: practica resolver cada problema en menos de 2 minutos.",
     theory: [
       {
@@ -7880,6 +7964,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "planteo-de-ecuaciones",
+    illustrationSummary: "Traducción de problemas verbales a ecuaciones matemáticas.",
     tip: "Lee el enunciado **varias veces** y subraya las cantidades desconocidas. Asigna **una sola variable** (x) a lo que se pide, y expresa todo lo demás en función de esa variable. Verifica que la ecuación resultante tenga sentido con un caso simple.",
     theory: [
       {
@@ -7992,6 +8077,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "edades",
+    illustrationSummary: "Problemas de edades con relaciones entre personas.",
     tip: "Define SIEMPRE la **edad actual** de la persona mayor o principal como x. Expresa las demás edades en función de x. Recuerda que **todas las personas envejecen la misma cantidad** de años. Si el enunciado dice 'hace 5 años', TODOS tenían 5 años menos.",
     theory: [
       {
@@ -8108,6 +8194,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "cronometria",
+    illustrationSummary: "Problemas de tiempo: duración, inicio, final y zonas horarias.",
     tip: "En problemas de **tiempo**, convierte todo a una misma unidad (minutos o segundos). Para **velocidad**: distancia = velocidad × tiempo. Recuerda que 1 hora = 60 minutos, 1 minuto = 60 segundos, y cuidado con las **zonas horarias** en problemas internacionales.",
     theory: [
       {
@@ -8226,6 +8313,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "promedios",
+    illustrationSummary: "Cálculo de media, mediana y moda con datos agrupados.",
     tip: "El promedio se calcula sumando todos los valores y dividiendo por la cantidad. Para quitar uno: (suma actual - valor) / (n-1). Para agregar uno: (suma actual + valor) / (n+1).",
     theory: [
       {
@@ -8325,6 +8413,7 @@ export const courseContent: CourseContent = {
 
   {
     slug: "operadores-matematicos",
+    illustrationSummary: "Símbolos y operadores: +, -, ×, ÷, potencia, raíz.",
     tip: "Lee siempre el **enunciado completo** antes de calcular. Identifica la fórmula del operador, sustituye paso a paso y respeta el orden de operaciones.",
     theory: [
       {
@@ -8397,6 +8486,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "operadores-binarios",
+    illustrationSummary: "Operaciones en sistema binario: AND, OR, NOT, XOR.",
     tip: "Los operadores binarios suelen definirse por **tabla o fórmula**. Si es tabla, constrúyela completa antes de responder. Si es fórmula, verifica con valores dados para confirmar tu interpretación.",
     theory: [
       {
@@ -8469,6 +8559,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "conteo-de-figuras",
+    illustrationSummary: "Figuras geométricas superpuestas con técnicas de conteo.",
     tip: "Para contar figuras en cuadrículas usa **fórmulas directas**: cuadrados en n×n = n(n+1)(2n+1)/6; rectángulos en m×n = C(m+1,2)·C(n+1,2). Empieza siempre por las figuras más pequeñas.",
     theory: [
       {
@@ -8541,6 +8632,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "areas-sombreadas-y-perimetros",
+    illustrationSummary: "Figuras con áreas sombreadas y cálculo de perímetros.",
     tip: "Para áreas sombreadas usa **resta de áreas**: calcula el área total y resta las partes no sombreadas. Identifica primero las figuras que componen el dibujo.",
     theory: [
       {
@@ -8613,6 +8705,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "analisis-combinatorio",
+    illustrationSummary: "Permutaciones, combinaciones y el principio de conteo.",
     tip: "Domina: **P(n,r) = n!/(n−r)!** y **C(n,r) = n!/(r!(n−r)!)**. Pregunta siempre si el orden importa. Si hay restricciones, usa el principio multiplicativo paso a paso.",
     theory: [
       {
@@ -8685,6 +8778,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "probabilidades",
+    illustrationSummary: "Eventos con probabilidades calculadas por frecuencia y classical.",
     tip: "Probabilidad = **casos favorables / casos posibles**. Para eventos compuestos: **independientes** se multiplican, **dependientes** ajusta el denominador. Los **árboles de probabilidad** son tu mejor aliado para múltiples etapas.",
     theory: [
       {
@@ -8757,6 +8851,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "teoria-de-conjuntos",
+    illustrationSummary: "Diagrama de Venn con operaciones de conjuntos: unión, intersección, complemento y diferencia.",
     tip: "En el examen, identifica primero los conjuntos dados antes de calcular operaciones. Dibuja un diagrama para verificar tu respuesta.",
     theory: [
       {
@@ -8838,6 +8933,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "diagramas-de-venn",
+    illustrationSummary: "Representación visual de 2 y 3 conjuntos con las regiones sombreadas.",
     tip: "Lee siempre el enunciado cuidadosamente: los números en un Venn representan la cantidad de elementos en cada región, no los elementos mismos.",
     theory: [
       {
@@ -8923,6 +9019,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "algebra-booleana",
+    illustrationSummary: "Circuitos lógicos con operadores AND, OR, NOT y sus equivalentes.",
     tip: "Memoriza las leyes de De Morgan y de absorción; aparecen frecuentemente en el examen y simplifican mucho las expresiones.",
     theory: [
       {
@@ -9008,6 +9105,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "tablas-de-verdad",
+    illustrationSummary: "Tabla de verdad para proposiciones compuestas con todas las combinaciones.",
     tip: "Construye la tabla paso a paso, evaluando primero las expresiones entre paréntesis y aplicando la precedencia de operadores.",
     theory: [
       {
@@ -9110,6 +9208,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "logica-condicional",
+    illustrationSummary: "Diagrama de flujo del condicional: si P entonces Q, contrapositiva, inversa.",
     tip: "La única forma de que 'si P entonces Q' sea falsa es cuando P es verdadero y Q es falso. No confundas con la recíproca.",
     theory: [
       {
@@ -9207,6 +9306,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "logica-bicondicional",
+    illustrationSummary: "Equivalencia lógica: si y solo si. Tabla de verdad y propiedades.",
     tip: "P ↔ Q es verdadero solo cuando P y Q tienen el mismo valor de verdad. Verifica ambos sentidos de la implicación.",
     theory: [
       {
@@ -9299,6 +9399,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "cuantificadores-logica",
+    illustrationSummary: "Cuantificador universal (∀) y existencial (∃) con sus negaciones.",
     tip: "La negación de 'todo X cumple P' es 'existe un X que no cumple P', y viceversa. Cambia siempre el cuantificador al negar.",
     theory: [
       {
@@ -9403,6 +9504,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "paradojas-logicas",
+    illustrationSummary: "Representación del mentiroso y otras paradojas lógicas clásicas.",
     tip: "En el examen, identifica la auto-referencia como fuente de la paradoja y busca la interpretación formal, no filosófica.",
     theory: [
       {
@@ -9498,6 +9600,7 @@ export const courseContent: CourseContent = {
 ,
   {
     slug: "divisibilidad-residuos",
+    illustrationSummary: "Tabla de residuos y criterios de divisibilidad para 2, 3, 5, 7, 11.",
     tip: "Si un número es divisible por 2 y por 3, también es divisible por 6. Aprende a identificar patrones de residuos para resolver divisiones sin calcular directamente.",
     theory: [
       {
@@ -9579,6 +9682,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "mcm-mcd",
+    illustrationSummary: "MCM y MCD calculados por el método de Euclides y por factorización.",
     tip: "Recuerda la fórmula clave: a × b = MCM(a,b) × MCD(a,b). Esto te permite calcular uno si conoces el otro y los dos números.",
     theory: [
       {
@@ -9662,6 +9766,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "congruencias-modulares",
+    illustrationSummary: "Recta numérica con congruencias módulo n y residuos.",
     tip: "Las congruencias modulares son como 'relojes': si la hora es 15:00, en un reloj de 12 horas son las 3. En congruencias: 15 ≡ 3 (mod 12).",
     theory: [
       {
@@ -9745,6 +9850,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "primalidad-factorizacion",
+    illustrationSummary: "Criba de Eratóstenes y descomposición en factores primos.",
     tip: "Para verificar si un número n es primo, solo necesitas probar divisibilidad por primos hasta √n. Para n = 127, √127 ≈ 11.27, así que prueba con 2, 3, 5, 7 y 11.",
     theory: [
       {
@@ -9881,6 +9987,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "propiedades-potencias",
+    illustrationSummary: "Leyes de exponentes con ejemplos: multiplicación, división, potencia de potencia.",
     tip: "Cuando multiplican potencias de igual base, suman exponentes. Cuando elevan una potencia a otra, multiplican exponentes. Memoria: multiplican=SUMAR, potencia=MULTIPLICAR.",
     theory: [
       {
@@ -9967,6 +10074,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "igualdades-notables",
+    illustrationSummary: "Identidades algebraicas: (a+b)², (a-b)², (a+b)(a-b), a³+b³.",
     tip: "Memoriza: (a+b)² = a²+2ab+b², (a-b)² = a²-2ab+b², y (a+b)³ = a³+3a²b+3ab²+b³. El truco: los coefficientes de (a+b)ⁿ siguen el triángulo de Pascal.",
     theory: [
       {
@@ -10060,6 +10168,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "desigualdades-elementales",
+    illustrationSummary: "Desigualdad triangular y AM-GM en el plano cartesiano.",
     tip: "La desigualdad AM-GM: el promedio aritmético siempre es mayor o igual al promedio geométrico. Se aplica cuando buscas el mínimo o máximo de expresiones con productos o sumas.",
     theory: [
       {
@@ -10146,6 +10255,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "raices-y-radicales",
+    illustrationSummary: "Simplificación y racionalización de expresiones con radicales.",
     tip: "Para racionalizar un denominador con √a - √b, multiplica por √a + √b. Esto usa la diferencia de cuadrados: (√a - √b)(√a + √b) = a - b.",
     theory: [
       {
@@ -10231,6 +10341,7 @@ export const courseContent: CourseContent = {
 ,
   {
     slug: "problemas-mezclas",
+    illustrationSummary: "Diagrama de mezclas con concentraciones iniciales y finales.",
     tip: "En problemas de mezclas, identifica siempre las cantidades de soluto y solvente. La concentración es soluto/total × 100%. Al mezclar, el soluto total se conserva: usa la ecuación C₁V₁ + C₂V₂ = C_fV_f.",
     theory: [
       {
@@ -10320,6 +10431,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "problemas-trabajo-tiempo",
+    illustrationSummary: "Tasas de trabajo combinadas de múltiples trabajadores.",
     tip: "La tasa de trabajo es el trabajo completado por unidad de tiempo. Si A tarda 'a' horas y B tarda 'b' horas, juntos completan el trabajo en ab/(a+b). Recuerda: trabajo = tasa × tiempo.",
     theory: [
       {
@@ -10405,6 +10517,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "problemas-velocidad",
+    illustrationSummary: "Diagrama de movimiento: distancia, velocidad y tiempo con corriente.",
     tip: "Recuerda la fórmula base: Velocidad = Distancia / Tiempo. En problemas de río, suma o resta la velocidad del agua según si vas a favor o en contra. Siempre verifica las unidades antes de resolver.",
     theory: [
       {
@@ -10496,6 +10609,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "problemas-financieros",
+    illustrationSummary: "Gráfica de interés simple vs compuesto con el tiempo.",
     tip: "En interés simple, los intereses se calculan SIEMPRE sobre el capital inicial. En interés compuesto, se calculan sobre el capital acumulado. Memoriza: I = C×r×t y M = C(1+r)^t.",
     theory: [
       {
@@ -10589,6 +10703,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "porcentajes-tantos",
+    illustrationSummary: "Diagrama de descuentos, aumentos y variación porcentual.",
     tip: "Si algo sube 20% y luego baja 20%, NO vuelves al precio original (quedas en 96%). Para calcular el porcentaje de cambio usa: (nuevo − original)/original × 100%.",
     theory: [
       {
@@ -10679,6 +10794,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "proporcionalidad",
+    illustrationSummary: "Gráficas de proporcionalidad directa e inversa.",
     tip: "En proporcionalidad directa, ambos términos crecen juntos (y/x = k). En inversa, uno sube cuando el otro baja (x×y = k). Identifica primero el tipo antes de plantear la regla de tres.",
     theory: [
       {
@@ -10774,6 +10890,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "problemas-densidad",
+    illustrationSummary: "Relación masa-volumen-densidad con ejemplos prácticos.",
     tip: "La densidad es masa entre volumen: ρ = m/V. Si conoces dos de las tres variables, despeja la tercera. Recuerda: 1 mL = 1 cm³ y la densidad del agua es 1 g/cm³. Un objeto flota si su densidad es menor que la del líquido.",
     theory: [
       {
@@ -10865,6 +10982,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "problemas-edad-avanzados",
+    illustrationSummary: "Línea de tiempo con edades de múltiples personas en diferentes momentos.",
     tip: "En problemas de edades, define la edad de UNA persona como variable base y expresa las demás en función de ella. Recuerda que la diferencia de edad entre dos personas NUNCA cambia con el tiempo.",
     theory: [
       {
@@ -10961,6 +11079,7 @@ export const courseContent: CourseContent = {
 ,
   {
     slug: "sucesiones-aritmeticas",
+    illustrationSummary: "Gráfica de una progresión aritmética con razón constante.",
     tip: "Identifica rápidamente la razón restando dos términos consecutivos; luego usa aₙ = a₁ + (n−1)d para cualquier término.",
     theory: [
       {
@@ -11036,6 +11155,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "sucesiones-geometricas",
+    illustrationSummary: "Gráfica de una progresión geométrica con razón y suma infinita.",
     tip: "En una GP, multiplica el primer término por q^(n−1) para el término n; para la suma infinita verifica que |q| < 1 antes de usar S = a₁/(1−q).",
     theory: [
       {
@@ -11105,6 +11225,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "sucesiones-recursivas",
+    illustrationSummary: "Definición recursiva de Fibonacci con los primeros términos.",
     tip: "En definiciones recursivas, identifica siempre los casos base (primeros términos dados) antes de calcular cualquier término posterior.",
     theory: [
       {
@@ -11181,6 +11302,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "sucesiones-recurrentes",
+    illustrationSummary: "Relación de recurrencia con solución paso a paso.",
     tip: "Para relaciones de recurrencia, sustituye valores conocidos uno por uno; si la relación es lineal, busca el patrón o usa la ecuación característica.",
     theory: [
       {
@@ -11251,6 +11373,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "patrones-numericos",
+    illustrationSummary: "Secuencia con patrón visible y fórmula general.",
     tip: "Calcula las diferencias entre términos consecutivos; si son constantes es AP, si los cocientes son constantes es GP, si las diferencias varían prueba cuadráticas.",
     theory: [
       {
@@ -11322,6 +11445,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "conjeturas-induccion",
+    illustrationSummary: "Verificación de casos y formulación de hipótesis.",
     tip: "Para conjeturas, verifica al menos 3 casos; para demostrar por inducción, necesitas caso base + paso inductivo (asumir para k, probar para k+1).",
     theory: [
       {
@@ -11390,6 +11514,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "secuencias-dos-variables",
+    illustrationSummary: "Dos sucesiones acopladas con sus relaciones.",
     tip: "Cuando cada término depende de dos anteriores, identifica si son independientes o acopladas; calcula término a término sin intentar fórmulas cerradas.",
     theory: [
       {
@@ -11469,6 +11594,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "progresiones-avanzadas",
+    illustrationSummary: "Diferencias parciales y progresiones polinómicas.",
     tip: "Si las diferencias no son constantes, calcula diferencias de segundo o tercer orden; las diferencias parciales revelan el grado del polinomio que genera la sucesión.",
     theory: [
       {
@@ -11533,6 +11659,7 @@ export const courseContent: CourseContent = {
 ,
   {
     slug: "permutaciones-simples",
+    illustrationSummary: "Elementos ordenados con la fórmula P(n) = n! y ejemplos.",
     tip: "Memoriza P(n)=n! y verifica si hay restricciones: elementos fijos, prohibidos o junto. En exámenes, si un elemento NO puede ir en cierta posición, usa restas o el principio de inclusión-exclusión.",
     theory: [
       {
@@ -11622,6 +11749,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "combinaciones-simples",
+    illustrationSummary: "Selección de elementos sin orden con C(n,k) y triángulo de Pascal.",
     tip: "Usa C(n,k) cuando NO importa el orden: 'elegir un grupo', 'formar un comité', 'selección'. Si dice 'elegir y ordenar', es permutación. Si pregunta '¿cuántos subgrupos?', es combinación.",
     theory: [
       {
@@ -11720,6 +11848,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "permutaciones-repeticion",
+    illustrationSummary: "Distribución de elementos con repetición: nᵏ.",
     tip: "Cuando distributes n objetos en k cajas (con repetición permitida), la respuesta es nᵏ. Ej: 3 colores para pintar 4 casas = 3⁴ = 81 formas. No confundir con combinaciones con repetición.",
     theory: [
       {
@@ -11814,6 +11943,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "combinaciones-repeticion",
+    illustrationSummary: "Método de barras y barras para combinaciones con repetición.",
     tip: "La fórmula clave es C(n+k-1, k) = combinatoria con repetición. Úsala cuando: 'elegir k objetos de n tipos con repetición', 'repartir k objetos idénticos en n cajas', 'barras y barras'.",
     theory: [
       {
@@ -11904,6 +12034,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "inclusion-exclusion",
+    illustrationSummary: "Diagrama de Venn de 3 conjuntos con la fórmula de inclusión-exclusión.",
     tip: "Para dos conjuntos: |A∪B| = |A|+|B|-|A∩B|. Para tres: suma todos, resta intersecciones de 2, suma intersección de 3. Siempre lee bien: ¿te piden 'al menos uno', 'solo uno', o 'todos'?",
     theory: [
       {
@@ -11987,6 +12118,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "principio-casos",
+    illustrationSummary: "Diagrama de flujo con casos excluyentes y el principio de suma/producto.",
     tip: "Principio de la suma: si un evento puede ocurrir de m maneras O de n maneras (sin superposición), total = m+n. Principio del producto: si paso 1 tiene m opciones Y paso 2 tiene n opciones, total = m×n.",
     theory: [
       {
@@ -12072,6 +12204,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "problemas-colocacion",
+    illustrationSummary: "Objetos en posiciones con restricciones y sus soluciones.",
     tip: "Cuando colocas objetos en posiciones con restricciones, usa un 'casillero mental': llena primero las posiciones más restringidas. Si un objeto no puede ir en cierta posición, multiplica opciones disponibles menos una.",
     theory: [
       {
@@ -12168,6 +12301,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "polinomios-generadores",
+    illustrationSummary: "Función generadora con coeficientes que representan una secuencia.",
     tip: "La función generadora codifica una secuencia en los coeficientes de un polinomio. Para elegir k elementos de n tipos con repetición: el coeficiente de xᵏ en (1+x+x²+...)^n = C(n+k-1, k).",
     theory: [
       {
@@ -12249,6 +12383,7 @@ export const courseContent: CourseContent = {
 ,
   {
     slug: "media-mediana-moda",
+    illustrationSummary: "Gráfica de barras con media, mediana y moda marcadas.",
     tip: "La media se afecta por valores extremos; la mediana y la moda son más robustas ante datos atípicos.",
     theory: [
       {
@@ -12349,6 +12484,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "varianza-desviacion",
+    illustrationSummary: "Distribución con varianza baja y alta, mostrando la dispersión.",
     tip: "La desviación estándar mide qué tan dispersos están los datos respecto a la media. Un valor alto indica mucha variabilidad.",
     theory: [
       {
@@ -12452,6 +12588,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "percentiles-cuartiles",
+    illustrationSummary: "Diagrama de caja con Q1, Q2, Q3 y valores atípicos.",
     tip: "El diagrama de caja muestra la mediana, Q1, Q3 y los valores atípicos. Domina el cálculo de posiciones.",
     theory: [
       {
@@ -12545,6 +12682,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "razonamiento-verbal-avanzado",
+    illustrationSummary: "Silogismo con premisas y conclusión lógica.",
     tip: "Para deducir el correcto, prueba cada opción y verifica si contradice la premisa. La respuesta siempre se sigue lógicamente.",
     theory: [
       {
@@ -12648,6 +12786,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "razonamiento-abstracto",
+    illustrationSummary: "Secuencia de figuras con patrón de incremento.",
     tip: "Busca el patrón: número de lados, rotación, simetría, color o posición. Compara siempre entre elementos consecutivos.",
     theory: [
       {
@@ -12743,6 +12882,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "razonamiento-espacial",
+    illustrationSummary: "Rotación mental de un cubo y plegado de papel.",
     tip: "Imagina que sostienes el objeto. Para plegados, sigue cada cara. Para rotaciones, mantén una marca de referencia.",
     theory: [
       {
@@ -12843,6 +12983,7 @@ export const courseContent: CourseContent = {
   },
   {
     slug: "problemas-compuestos-rm",
+    illustrationSummary: "Problema que combina lógica, combinatoria y aritmética.",
     tip: "Descompón el problema en partes: identifica qué conoces, qué buscas y qué operación necesitas para cada paso.",
     theory: [
       {
@@ -12942,6 +13083,7 @@ export const courseContent: CourseContent = {
 const historiaModulesPart1: CourseModule[] = [
   {
     slug: "civilizaciones-preincaicas",
+    illustrationSummary: "Línea de tiempo de las civilizaciones preincaicas: Chavín, Paracas, Nazca, Moche, Wari, Chimú.",
     tip: "En el examen, memoriza la ubicaci\u00f3n geogr\u00e1fica y caracter\u00edstica principal de cada civilizaci\u00f3n: Nazca=L\u00edneas, Moche=cer\u00e1mica, Wari=imperio temprano, Chim\u00fa=Chan Chan.",
     theory: [
       {
@@ -13010,6 +13152,7 @@ const historiaModulesPart1: CourseModule[] = [
   },
   {
     slug: "tahuantinsuyo",
+    illustrationSummary: "Mapa del Tahuantinsuyo con sus cuatro suyos: Chinchaysuyu, Antisuyu, Collasuyu, Cuntisuyu.",
     tip: "Pachac\u00fatec expandi\u00f3 el imperio, T\u00fapac Inca lo consolid\u00f3, Atahualpa lo perdi\u00f3. Memoriza la estructura social: Sapa Inca \u2192 Curacas \u2192 Hatun Runa \u2192 Yanakuna.",
     theory: [
       {
@@ -13073,6 +13216,7 @@ const historiaModulesPart1: CourseModule[] = [
   },
   {
     slug: "conquista-espanola",
+    illustrationSummary: "Cronología de la conquista española: Cajamarca, guerras civiles, resistencia incaica.",
     tip: "La batalla de Cajamarca (1532) fue decisiva. Solo 168 espa\u00f1oles capturaron al Inca. Memoriza fechas: 1532-conquista, 1533-ejecuci\u00f3n de Atahualpa, 1535-fundaci\u00f3n de Lima.",
     theory: [
       {
@@ -13146,6 +13290,7 @@ const historiaModulesPart1: CourseModule[] = [
   },
   {
     slug: "virreinato-del-peru",
+    illustrationSummary: "Mapa del Virreinato del Perú con sus divisiones administrativas y ciudades principales.",
     tip: "El Virreinato del Per\u00fa abarcaba casi toda Sudam\u00e9rica. Los virreyes m\u00e1s importantes: Toledo (reformas), Lima (expansi\u00f3n), Amat (ilustraci\u00f3n).",
     theory: [
       {
@@ -13220,6 +13365,7 @@ const historiaModulesPart1: CourseModule[] = [
   },
   {
     slug: "independencia-del-peru",
+    illustrationSummary: "Línea de tiempo de la independencia: Túpac Amaru II, San Martín, Bolívar, Batalla de Ayacucho.",
     tip: "San Mart\u00edn proclam\u00f3 la independencia el 28 de julio de 1821. Bol\u00edvar la consolid\u00f3 en 1824. La batalla de Ayacucho (1824) fue la definitiva.",
     theory: [
       {
@@ -13291,6 +13437,7 @@ const historiaModulesPart1: CourseModule[] = [
   },
   {
     slug: "republica-temprana",
+    illustrationSummary: "Gobiernos de la República temprana: Balboa, Gamarra, Castilla y la consolidación del Estado.",
     tip: "La Rep\u00fablica temprana (1826-1872) fue inestable: caudillos, guerras con Colombia y Bolivia. Memoriza: Guerra con Colombia (1828-1829), Guerra del Pac\u00edfico (1879-1883).",
     theory: [
       {
@@ -13365,6 +13512,7 @@ const historiaModulesPart1: CourseModule[] = [
   },
   {
     slug: "guano-y-salitre",
+    illustrationSummary: "Económía guanera y salitrera: exportaciones, guerras y el conflicto con Chile.",
     tip: "El guano generó fortunas (1840-1880). La Guerra del Pacífico (1879-1883) contra Chile nos costó Tarapacá, Arica y Tacna. Memoriza: Batalla de San Francisco, Batalla de Angamos.",
     theory: [
       {
@@ -13441,6 +13589,7 @@ const historiaModulesPart1: CourseModule[] = [
   },
   {
     slug: "oncenio-y-guerra",
+    illustrationSummary: "Gobierno de Leguía y el inicio de la Guerra del Pacífico.",
     tip: "El Oncenio de Leguía (1919-1930) modernizó Lima pero fue autoritario. La Gran Depresión de 1929 lo derrocó. Memoriza: Nuevo Civilismo, Leguía, Sánchez Cerro.",
     theory: [
       {
@@ -13515,6 +13664,7 @@ const historiaModulesPart1: CourseModule[] = [
 const historiaModulesPart2: CourseModule[] = [
   {
     slug: "aprismo-y-guerra",
+    illustrationSummary: "APRA, Sánchez Cerro y la Guerra con Ecuador de 1941.",
     tip: "APRA (Alianza Popular Revolucionaria Americana) fue fundado en 1924. Sánchez Cerro derrocó a Leguía (1930) y enfrentó al aprismo. La Guerra con Ecuador fue en 1941.",
     theory: [
       {
@@ -13579,6 +13729,7 @@ const historiaModulesPart2: CourseModule[] = [
   },
   {
     slug: "segundo-militarismo",
+    illustrationSummary: "Segundo gobierno militar: Odría, reorganización y modernización.",
     tip: "Odría gobernó 1948-1956. Su esposa Manuelita gobernó de facto 1950-1955. Memoriza: 1948-golpe, 1950-Manuelita, 1955-revolución libertadora.",
     theory: [
       {
@@ -13647,6 +13798,7 @@ const historiaModulesPart2: CourseModule[] = [
 
   {
     slug: "primer-belaunde",
+    illustrationSummary: "Línea de tiempo o mapa histórico del tema Primer Belaunde. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "Belaúnde (1963-1968) promovió la democracia y la industrialización. Fue derrocado por Velasco en 1968. Memoria: Reforma agraria anunciada, contradicción con la izquierda.",
     theory: [
       {
@@ -13714,6 +13866,7 @@ const historiaModulesPart2: CourseModule[] = [
   },
   {
     slug: "velasco-y-reforma",
+    illustrationSummary: "Gobierno de Velasco: reforma agraria, nacionalizaciones y cambios sociales.",
     tip: "Velasco (1968-1975) hizo la reforma agraria más grande de América Latina. Expropió haciendas y las repartió a campesinos. Fue derrocado por Morales Bermúdez.",
     theory: [
       {
@@ -13780,6 +13933,7 @@ const historiaModulesPart2: CourseModule[] = [
 
   {
     slug: "terrorismo-y-dictadura",
+    illustrationSummary: "Sendero Luminoso, MRTA y la dictadura de Fujimori.",
     tip: "El terrorismo (1980-2000) mató a más de 69,000 personas. Fujimori dio el autogolpe en 1992. Memoriza: Sendero Luminoso (Abimael Guzmán), MRTA, Comisión de la Verdad.",
     theory: [
       {
@@ -13844,6 +13998,7 @@ const historiaModulesPart2: CourseModule[] = [
 
   {
     slug: "transicion-democratica",
+    illustrationSummary: "Transición a la democracia: Kuczynski, Toledo, García.",
     tip: "La transición (2001-2016) fue difícil: Paniagua limpió, Toledo creció, Humala moderó. Memoriza: Comisión de la Verdad, crisis 2008, corrupción generalizada.",
     theory: [
       {
@@ -13913,6 +14068,7 @@ const historiaModulesPart2: CourseModule[] = [
 
   {
     slug: "peru-contemporaneo",
+    illustrationSummary: "Perú contemporáneo: crecimiento económico, desafíos sociales.",
     tip: "El Perú contemporáneo (2016-2025) tiene crisis políticas frecuentes: Kuczynski renunció, Vizcarra fue vacado, Castillo fue vacado y arrestado.",
     theory: [
       {
@@ -13985,6 +14141,7 @@ const historiaModulesPart2: CourseModule[] = [
 
   {
     slug: "derechos-humanos",
+    illustrationSummary: "Comisión de la Verdad y Reconciliación, derechos humanos en el Perú.",
     tip: "La Comisión de la Verdad (2001-2003) documentó 69,280 muertos. El caso de los penales fue emblemático. Memoriza: Comisión de la Verdad, informe final, reparaciones.",
     theory: [
       {
@@ -14051,6 +14208,7 @@ const historiaModulesPart2: CourseModule[] = [
 const historiaModulesPart3: CourseModule[] = [
   {
     slug: "revolucion-francesa",
+    illustrationSummary: "Cronología de la Revolución Francesa: toma de la Bastilla, terror, imperio napoleónico.",
     tip: "La Revolución Francesa (1789) cambió el mundo. Causas: desigualdad social, Ilustración, crisis económica. Memoriza: Toma de la Bastilla (14 jul 1789), Declaración de Derechos del Hombre.",
     theory: [
       {
@@ -14155,6 +14313,7 @@ const historiaModulesPart3: CourseModule[] = [
   },
   {
     slug: "revoluciones-industriales",
+    illustrationSummary: "Primera y segunda revolución industrial: vapor, electricidad, fábricas.",
     tip: "La Revolución Industrial comenzó en Inglaterra (1760). Causas: carbón, hierro, máquina de vapor. Memoriza: Watt (vapor), Arkwright (hiladora), Stephenson (ferrocarril).",
     theory: [
       {
@@ -14263,6 +14422,7 @@ const historiaModulesPart3: CourseModule[] = [
   },
   {
     slug: "imperialismo-y-colonialismo",
+    illustrationSummary: "Imperialismo europeo en África y Asia, colonias y dependencia.",
     tip: "El imperialismo (1870-1914) dividió África y Asia. Causas: materias primas, mercados, rivalidades. Memoriza: Conferencia de Berlín (1884), 'carga del hombre blanco'.",
     theory: [
       {
@@ -14369,6 +14529,7 @@ const historiaModulesPart3: CourseModule[] = [
   },
   {
     slug: "primera-guerra-mundial",
+    illustrationSummary: "Causas, desarrollo y consecuencias de la Primera Guerra Mundial.",
     tip: "La Primera Guerra Mundial (1914-1918) involucró a todas las grandes potencias. Causas: nacionalismo, imperialismos, alianzas. Memoriza: Tratado de Versalles (1919), Liga de Naciones.",
     theory: [
       {
@@ -14473,6 +14634,7 @@ const historiaModulesPart3: CourseModule[] = [
   },
   {
     slug: "revolucion-rusa",
+    illustrationSummary: "Revolución Rusa de 1917: bolcheviques, leninismo, URSS.",
     tip: "La Revolución Rusa (1917) fue comunista. Febrero: cae el Zar. Octubre: Lenin toma el poder. Memoriza: Lenin (1917-1924), Stalin (1924-1953), URSS (1922-1991).",
     theory: [
       {
@@ -14586,6 +14748,7 @@ const historiaModulesPart3: CourseModule[] = [
   },
   {
     slug: "segunda-guerra-mundial",
+    illustrationSummary: "Causas, frentes y consecuencias de la Segunda Guerra Mundial.",
     tip: "La Segunda Guerra Mundial (1939-1945) fue la más grande. Bandos: Aliados vs Eje. Memoriza: Hitler (Alemania), Mussolini (Italia), Hiroshima (6 ago 1945).",
     theory: [
       {
@@ -14695,6 +14858,7 @@ const historiaModulesPart3: CourseModule[] = [
   },
   {
     slug: "guerra-fria-y-globalizacion",
+    illustrationSummary: "Guerra Fría: OTAN vs Pacto de Varsovia, caída del muro, globalización.",
     tip: "La Guerra Fría (1947-1991) fue EE.UU. vs URSS. Memoriza: Plan Marshall, OTAN, Pacto de Varsovia, caída del muro de Berlín (1989), disolución URSS (1991).",
     theory: [
       {
@@ -14805,6 +14969,7 @@ const historiaModulesPart3: CourseModule[] = [
 const historiaModulesPart4: CourseModule[] = [
 {
     slug: "cultura-wari-tiahuanaco",
+    illustrationSummary: "Línea de tiempo o mapa histórico del tema Cultura Wari Tiahuanaco. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "Wari y Tiwanaku fueron los primeros imperios expansionistas del mundo andino, anteriores a los incas.",
     theory: [
       {
@@ -14906,6 +15071,7 @@ const historiaModulesPart4: CourseModule[] = [
   },
   {
     slug: "senorios-regionales",
+    illustrationSummary: "Línea de tiempo o mapa histórico del tema Senorios Regionales. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "Tras la caída de Wari y Tiwanaku, surgieron múltiples señoríos independientes que dominaron distintas regiones del Perú.",
     theory: [
       {
@@ -15012,6 +15178,7 @@ const historiaModulesPart4: CourseModule[] = [
   },
   {
     slug: "culturas-costeras-detalladas",
+    illustrationSummary: "Línea de tiempo o mapa histórico del tema Culturas Costeras Detalladas. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "Las culturas costeñas desarrollaron obras monumentales como las Huacas de Moche y las Líneas de Nazca sin usar la rueda ni animales de tiro.",
     theory: [
       {
@@ -15120,6 +15287,7 @@ const historiaModulesPart4: CourseModule[] = [
   },
   {
     slug: "agricultura-andina",
+    illustrationSummary: "Línea de tiempo o mapa histórico del tema Agricultura Andina. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "Los antiguos peruanos domesticaron más de 3,000 variedades de papa y desarrollaron el chuño hace más de 2,000 años.",
     theory: [
       {
@@ -15224,6 +15392,7 @@ const historiaModulesPart4: CourseModule[] = [
   },
   {
     slug: "qhapaq-nan-caminos",
+    illustrationSummary: "Línea de tiempo o mapa histórico del tema Qhapaq Nan Caminos. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "El Qhapaq Ñan tenía más de 30,000 km y conectaba desde Colombia hasta Chile, siendo una de las mayores obras de ingeniería de la antigüedad.",
     theory: [
       {
@@ -15334,6 +15503,7 @@ const historiaModulesPart4: CourseModule[] = [
   },
   {
     slug: "economia-incaica",
+    illustrationSummary: "Línea de tiempo o mapa histórico del tema Economia Incaica. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "La economía inca no tenía mercados ni dinero: todo era administrado por el Estado bajo el principio de reciprocidad y redistribución.",
     theory: [
       {
@@ -15441,6 +15611,7 @@ const historiaModulesPart4: CourseModule[] = [
   },
   {
     slug: "guerra-civil-atahualpa",
+    illustrationSummary: "Línea de tiempo o mapa histórico del tema Guerra Civil Atahualpa. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "La guerra civil entre Huáscar y Atahualpa debilitó al Tahuantinsuyo justo antes de la llegada de los españoles, facilitando la conquista.",
     theory: [
       {
@@ -15543,6 +15714,7 @@ const historiaModulesPart4: CourseModule[] = [
   },
   {
     slug: "resistencia-manco-inca",
+    illustrationSummary: "Línea de tiempo o mapa histórico del tema Resistencia Manco Inca. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "Manco Inca lideró la resistencia inca contra los españoles y fundó el Estado neoinca de Vilcabamba, que resistió hasta 1572.",
     theory: [
       {
@@ -15648,6 +15820,7 @@ const historiaModulesPart4: CourseModule[] = [
   },
 {
     slug: "batalla-cajamarca",
+    illustrationSummary: "Línea de tiempo o mapa histórico del tema Batalla Cajamarca. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "La captura de Atahualpa en 1532 fue el momento decisivo que permitio la conquista espanola del Imperio Inca.",
     theory: [
       {
@@ -15735,6 +15908,7 @@ const historiaModulesPart4: CourseModule[] = [
   },
   {
     slug: "guerras-civiles-incas",
+    illustrationSummary: "Línea de tiempo o mapa histórico del tema Guerras Civiles Incas. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "Las guerras civiles entre conquistadores debilitaron el control espanol y permitieron resistencias indigenas.",
     theory: [
       {
@@ -15828,6 +16002,7 @@ const historiaModulesPart4: CourseModule[] = [
   },
   {
     slug: "virreinato-temprano",
+    illustrationSummary: "Línea de tiempo o mapa histórico del tema Virreinato Temprano. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "El Virreinato del Peru se creo en 1542 y Lima fue designada como su capital y centro administrativo.",
     theory: [
       {
@@ -15917,6 +16092,7 @@ const historiaModulesPart4: CourseModule[] = [
   },
   {
     slug: "encomienda-repartimiento",
+    illustrationSummary: "Línea de tiempo o mapa histórico del tema Encomienda Repartimiento. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "La encomienda y el repartimiento fueron los principales sistemas de explotacion laboral indigena en el Peru colonial.",
     theory: [
       {
@@ -16005,6 +16181,7 @@ const historiaModulesPart4: CourseModule[] = [
   },
   {
     slug: "economia-colonial-mineria",
+    illustrationSummary: "Línea de tiempo o mapa histórico del tema Economia Colonial Mineria. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "La mina de Potosi y el Cerro Rico fueron el motor economico del Imperio Español durante tres siglos.",
     theory: [
       {
@@ -16096,6 +16273,7 @@ const historiaModulesPart4: CourseModule[] = [
   },
   {
     slug: "sociedad-colonial-castas",
+    illustrationSummary: "Línea de tiempo o mapa histórico del tema Sociedad Colonial Castas. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "La sociedad colonial se organizaba en un estricto sistema de castas basado en el origen racial y la jerarquia social.",
     theory: [
       {
@@ -16181,6 +16359,7 @@ const historiaModulesPart4: CourseModule[] = [
   },
   {
     slug: "contrabando-colonial",
+    illustrationSummary: "Línea de tiempo o mapa histórico del tema Contrabando Colonial. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "El contrabando europeo debilito los ingresos de la Corona española y fomento economias ilegales en America.",
     theory: [
       {
@@ -16278,6 +16457,7 @@ const historiaModulesPart4: CourseModule[] = [
   },
   {
     slug: "reformas-borbonicas",
+    illustrationSummary: "Línea de tiempo o mapa histórico del tema Reformas Borbonicas. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "Las Reformas Borbonicas (1750-1800) transformaron la administracion colonial y despertaron el sentimiento independentista.",
     theory: [
       {
@@ -16371,6 +16551,7 @@ const historiaModulesPart4: CourseModule[] = [
   },
 {
     slug: "rebelion-tupac-amaru-ii",
+    illustrationSummary: "Línea de tiempo o mapa histórico del tema Rebelion Tupac Amaru Ii. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "Túpac Amaru II inició la rebelión indígena más grande contra el dominio español en los Andes.",
     theory: [
       {
@@ -16451,6 +16632,7 @@ const historiaModulesPart4: CourseModule[] = [
   },
   {
     slug: "rebeliones-coloniales",
+    illustrationSummary: "Línea de tiempo o mapa histórico del tema Rebeliones Coloniales. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "Antes de Túpac Amaru II hubo múltiples rebeliones indígenas contra el dominio español en el Perú.",
     theory: [
       {
@@ -16532,6 +16714,7 @@ const historiaModulesPart4: CourseModule[] = [
   },
   {
     slug: "san-martin-bolivar",
+    illustrationSummary: "Línea de tiempo o mapa histórico del tema San Martin Bolivar. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "La Conferencia de Guayaquil entre San Martín y Bolívar fue un punto de inflexión en la independencia sudamericana.",
     theory: [
       {
@@ -16611,6 +16794,7 @@ const historiaModulesPart4: CourseModule[] = [
   },
   {
     slug: "batallas-independencia",
+    illustrationSummary: "Línea de tiempo o mapa histórico del tema Batallas Independencia. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "Las batallas de Junín y Ayacucho fueron decisivas para la independencia del Perú y de toda Sudamérica.",
     theory: [
       {
@@ -16692,6 +16876,7 @@ const historiaModulesPart4: CourseModule[] = [
   },
   {
     slug: "constituciones-primitivas",
+    illustrationSummary: "Línea de tiempo o mapa histórico del tema Constituciones Primitivas. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "Perú tuvo múltiples constituciones en sus primeros años, reflejando la inestabilidad política de la república.",
     theory: [
       {
@@ -16773,6 +16958,7 @@ const historiaModulesPart4: CourseModule[] = [
   },
   {
     slug: "consolidacion-republicana",
+    illustrationSummary: "Línea de tiempo o mapa histórico del tema Consolidacion Republicana. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "Los primeros años de la república peruana estuvieron marcados por guerras civiles y luchas por el poder.",
     theory: [
       {
@@ -16856,6 +17042,7 @@ const historiaModulesPart4: CourseModule[] = [
   },
   {
     slug: "guerras-civiles-xix",
+    illustrationSummary: "Línea de tiempo o mapa histórico del tema Guerras Civiles Xix. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "Las guerras civiles del siglo XIX peruano fueron causadas por disputas entre centralistas y federales.",
     theory: [
       {
@@ -16936,6 +17123,7 @@ const historiaModulesPart4: CourseModule[] = [
   },
   {
     slug: "economia-guanera",
+    illustrationSummary: "Línea de tiempo o mapa histórico del tema Economia Guanera. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "La economía guanera fue la principal fuente de riqueza del Perú entre 1840 y 1880.",
     theory: [
       {
@@ -17017,6 +17205,7 @@ const historiaModulesPart4: CourseModule[] = [
   },
 {
     slug: "guerra-pacifico",
+    illustrationSummary: "Línea de tiempo o mapa histórico del tema Guerra Pacifico. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "La Guerra del Pacífico (1879-1883) enfrentó a Perú y Bolivia contra Chile por el control del salitre en el desierto de Atacama.",
     theory: [
       {
@@ -17118,6 +17307,7 @@ const historiaModulesPart4: CourseModule[] = [
   },
   {
     slug: "guerra-pacifico-consecuencias",
+    illustrationSummary: "Línea de tiempo o mapa histórico del tema Guerra Pacifico Consecuencias. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "Las consecuencias de la Guerra del Pacífico devastaron al Perú: perdió Tarapacá, sufrió ocupación y tardó décadas en recuperarse económicamente.",
     theory: [
       {
@@ -17218,6 +17408,7 @@ const historiaModulesPart4: CourseModule[] = [
   },
   {
     slug: "generacion-900",
+    illustrationSummary: "Línea de tiempo o mapa histórico del tema Generacion 900. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "La Generación del 900 fue un movimiento intelectual y político que surgió contra la oligarquía y el sistema de gobierno de la República Aristocrática.",
     theory: [
       {
@@ -17323,6 +17514,7 @@ const historiaModulesPart4: CourseModule[] = [
   },
   {
     slug: "oligarquia-exportadora",
+    illustrationSummary: "Línea de tiempo o mapa histórico del tema Oligarquia Exportadora. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "La República Aristocrática (1895-1930) fue una etapa de dominio de la oligarquía exportadora que modernizó la economía pero excluyó a las mayorías.",
     theory: [
       {
@@ -17424,6 +17616,7 @@ const historiaModulesPart4: CourseModule[] = [
   },
   {
     slug: "crisis-1929",
+    illustrationSummary: "Línea de tiempo o mapa histórico del tema Crisis 1929. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "La crisis de 1929 golpeó duramente al Perú: cayeron las exportaciones, aumentó el desempleo y surgieron nuevos movimientos políticos como el APRA.",
     theory: [
       {
@@ -17527,6 +17720,7 @@ const historiaModulesPart4: CourseModule[] = [
   },
   {
     slug: "segundo-ingenieros",
+    illustrationSummary: "Línea de tiempo o mapa histórico del tema Segundo Ingenieros. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "El APRA se fundó en 1930 y la Revolución de Trujillo de 1932 fue un intento fallido de Haya de la Torre de tomar el poder por la fuerza.",
     theory: [
       {
@@ -17629,6 +17823,7 @@ const historiaModulesPart4: CourseModule[] = [
   },
   {
     slug: "gobierno-del-45",
+    illustrationSummary: "Línea de tiempo o mapa histórico del tema Gobierno Del 45. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "El gobierno de José Luis Bustamante y Rivero (1945-1948) intentó equilibrar la democracia con la influencia del APRA, pero terminó en un golpe militar.",
     theory: [
       {
@@ -17731,6 +17926,7 @@ const historiaModulesPart4: CourseModule[] = [
   },
   {
     slug: "dictadura-odria",
+    illustrationSummary: "Línea de tiempo o mapa histórico del tema Dictadura Odria. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "La dictadura de Manuel A. Odría (1948-1956) se caracterizó por la represión política, el crecimiento económico y el exilio de sus opositores.",
     theory: [
       {
@@ -17834,6 +18030,7 @@ const historiaModulesPart4: CourseModule[] = [
   },
 {
     slug: "segundo-belaunder",
+    illustrationSummary: "Línea de tiempo o mapa histórico del tema Segundo Belaunder. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "El segundo gobierno de Belaunde (1963-1968) continuo el proyecto modernizador del primer periodo, impulsado por la Alianza para el Progreso, pero fue derrocado por un golpe militar encabezado por el general Juan Velasco Alvarado.",
     theory: [
       {
@@ -17920,6 +18117,7 @@ const historiaModulesPart4: CourseModule[] = [
   },
   {
     slug: "velasco-reformismo-militar",
+    illustrationSummary: "Línea de tiempo o mapa histórico del tema Velasco Reformismo Militar. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "El gobierno de Velasco Alvarado (1968-1975) implemento reformas estructurales radicales: reforma agraria, nacionalizacion de minas, petroleo y banca, y una profunda transformacion del sistema educativo peruano.",
     theory: [
       {
@@ -18006,6 +18204,7 @@ const historiaModulesPart4: CourseModule[] = [
   },
   {
     slug: "velasco-consecuencias",
+    illustrationSummary: "Línea de tiempo o mapa histórico del tema Velasco Consecuencias. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "Las reformas de Velasco transformaron la estructura social peruana, creando nuevos sectores sociales, pero tambien generaron tensiones internas en las fuerzas armadas que llevaron a su reemplazo por Morales Bermudez en 1975.",
     theory: [
       {
@@ -18092,6 +18291,7 @@ const historiaModulesPart4: CourseModule[] = [
   },
   {
     slug: "morales-bermudez",
+    illustrationSummary: "Línea de tiempo o mapa histórico del tema Morales Bermudez. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "El gobierno de Morales Bermudez (1975-1980) enfrento una grave crisis economica con hiperinflacion, presiones sociales crecientes y el inicio de la insurgencia senderista que marcaria la historia del pais.",
     theory: [
       {
@@ -18178,6 +18378,7 @@ const historiaModulesPart4: CourseModule[] = [
   },
   {
     slug: "sendero-origenes",
+    illustrationSummary: "Línea de tiempo o mapa histórico del tema Sendero Origenes. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "Sendero Luminoso se origino en la Universidad Nacional de San Cristobal de Huamanga de Ayacucho, donde Abimael Guzman (Presidente Gonzalo) desarrollo su ideologia maoista durante las decadas de 1960 y 1970.",
     theory: [
       {
@@ -18264,6 +18465,7 @@ const historiaModulesPart4: CourseModule[] = [
   },
   {
     slug: "sendero-expansion",
+    illustrationSummary: "Línea de tiempo o mapa histórico del tema Sendero Expansion. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "Sendero Luminoso inicio su campana violenta en 1980 con el ataque a Chuschi, cometio la masacre de Lucanamarca en 1983 y desato una guerra terrorista contra el Estado peruano con atentados de bomba en las principales ciudades.",
     theory: [
       {
@@ -18350,6 +18552,7 @@ const historiaModulesPart4: CourseModule[] = [
   },
   {
     slug: "crisis-80s",
+    illustrationSummary: "Línea de tiempo o mapa histórico del tema Crisis 80s. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "La decada de 1980 represento una de las peores crisis de la historia peruana: hiperinflacion descontrolada, guerra interna contra Sendero Luminoso y un desastre economico sin precedentes bajo el gobierno de Alan Garcia (1985-1990).",
     theory: [
       {
@@ -18436,6 +18639,7 @@ const historiaModulesPart4: CourseModule[] = [
   },
   {
     slug: "fujimori-dictadura",
+    illustrationSummary: "Línea de tiempo o mapa histórico del tema Fujimori Dictadura. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "Alberto Fujimori goberno el Peru de 1990 a 2000, iniciando con un autogolpe en 1992, implementando el Plan Verde de estabilizacion economica, capturando a Abimael Guzman, y finalmente cayendo tras el escandalo de los vladivideos.",
     theory: [
       {
@@ -18522,6 +18726,7 @@ const historiaModulesPart4: CourseModule[] = [
   },
 {
     slug: "corrupcion-colonial",
+    illustrationSummary: "Línea de tiempo o mapa histórico del tema Corrupcion Colonial. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "La corrupcion en el sistema colonial era estructural: los cargos se compraban y vendian (venalidad), lo que garantizaba que el funcionario buscara recuperar su inversion mediante sobornos y malversaciones.",
     theory: [
       {
@@ -18608,6 +18813,7 @@ const historiaModulesPart4: CourseModule[] = [
   },
   {
     slug: "corrupcion-republicana",
+    illustrationSummary: "Línea de tiempo o mapa histórico del tema Corrupcion Republicana. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "La corrupcion republicana tiene raices en la independencia: el saqueo patriota de las arcas coloniales y la deuda externa fraudulenta sentaron las bases de un sistema que privilegiaba a las elites sobre el pueblo.",
     theory: [
       {
@@ -18694,6 +18900,7 @@ const historiaModulesPart4: CourseModule[] = [
   },
   {
     slug: "historia-economica-peru",
+    illustrationSummary: "Línea de tiempo o mapa histórico del tema Historia Economica Peru. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "La economia peruana ha oscilado entre periodos de bonanza extractiva (guano, salitre, minerales) y crisis profundas, sin lograr una diversificacion productiva sostenible.",
     theory: [
       {
@@ -18780,6 +18987,7 @@ const historiaModulesPart4: CourseModule[] = [
   },
   {
     slug: "historia-educacion-peru",
+    illustrationSummary: "Línea de tiempo o mapa histórico del tema Historia Educacion Peru. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "La educacion en el Peru ha sido historicamente un privilegio de elites. La universidad colonial excluia a indigenas y mestizos, y la brecha educativa persiste hasta hoy.",
     theory: [
       {
@@ -18866,6 +19074,7 @@ const historiaModulesPart4: CourseModule[] = [
   },
   {
     slug: "historia-mineria-peru",
+    illustrationSummary: "Línea de tiempo o mapa histórico del tema Historia Mineria Peru. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "La mineria ha sido el motor economico del Peru durante siglos, pero tambien la fuente de mayores conflictos sociales y ambientales. Potosi alimento al imperio espanol, mientras que hoy la mineria moderna genera debate nacional.",
     theory: [
       {
@@ -18952,6 +19161,7 @@ const historiaModulesPart4: CourseModule[] = [
   },
   {
     slug: "movimientos-sociales-peru",
+    illustrationSummary: "Línea de tiempo o mapa histórico del tema Movimientos Sociales Peru. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "Los movimientos sociales en el Peru han sido la principal fuerza de resistencia contra la exclusion y la injusticia. Desde las federaciones campesinas hasta la Marcha de los 4 Suyos, el pueblo ha protagonizado la historia.",
     theory: [
       {
@@ -19038,6 +19248,7 @@ const historiaModulesPart4: CourseModule[] = [
   },
   {
     slug: "derechos-humanos-historia",
+    illustrationSummary: "Línea de tiempo o mapa histórico del tema Derechos Humanos Historia. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "El informe de la Comision de la Verdad y Reconciliacion documento mas de 69,000 victimas del conflicto armado interno (1980-2000), revelando la magnitud de las violaciones de derechos humanos en el Peru.",
     theory: [
       {
@@ -19124,6 +19335,7 @@ const historiaModulesPart4: CourseModule[] = [
   },
   {
     slug: "peru-contemporaneo-problemas",
+    illustrationSummary: "Línea de tiempo o mapa histórico del tema Peru Contemporaneo Problemas. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "El Peru contemporaneo enfrenta una paradoja: tiene crecimiento economico sostenido pero una de las mayores desigualdades de America Latina, con una democracia fragil y corrupcion sistemica.",
     theory: [
       {
@@ -19210,6 +19422,7 @@ const historiaModulesPart4: CourseModule[] = [
   },
   {
     slug: "bicentenario-identidad",
+    illustrationSummary: "Línea de tiempo o mapa histórico del tema Bicentenario Identidad. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "En 2021 el Peru celebro sus 200 anos de independencia, pero la fecha expuso una crisis de identidad nacional: que significa ser peruano hoy? Como construir un pais inclusivo tras dos siglos de exclusion?",
     theory: [
       {
