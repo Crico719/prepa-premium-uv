@@ -33,20 +33,7 @@ export const courseContent: CourseContent = {
     slug: "linea-recta-y-angulos",
     illustrationSummary: "Diagrama de dos rectas que se cortan formando ángulos. Se muestran los ángulos complementarios (suman 90°), suplementarios (suman 180°) y opuestos por el vértice (iguales). Los colores identifican cada tipo de ángulo.",
     tip: "Para identificar ángulos complementarios, recuerda que suman 90°; los suplementarios suman 180°. En el examen, verifica siempre si el problema implica ángulos adyacentes, verticales o alternos internos antes de resolver.",
-    theory: [
-      {
-        level: "basico",
-        title: "Conceptos fundamentales",
-        lines: [
-          "Una **línea recta** es una sucesión infinita de puntos que se extiende en ambas direcciones sin curvatura.",
-          "Un **segmento de recta** es la porción de una recta comprendida entre dos puntos llamados extremos.",
-          "Una **semirrecta** (o rayo) parte de un punto y se extiende indefinidamente en una dirección.",
-          "Un **ángulo** es la figura formada por dos semirrectas que comparten un mismo vértice.",
-          "Las semirrectas que forman el ángulo se llaman **lados** del ángulo, y el punto común es el **vértice**.",
-          "Los ángulos se clasifican por su medida: **agudo** (< 90°), **recto** (= 90°), **obtuso** (90° < α < 180°), **llano** (= 180°) y **cónico** (> 180°)."
-        ]
-      ,
-  studyGuide: `## Línea Recta y Ángulos
+    studyGuide: `## Línea Recta y Ángulos
 
 ### Conceptos Fundamentales
 Una línea recta es el lugar geométrico de todos los puntos que se encuentran en una dirección determinada, extendiéndose indefinidamente en ambos sentidos. Un rayo tiene un origen y se extiende infinitamente en una dirección. Un segmento tiene dos extremos bien definidos.
@@ -82,7 +69,20 @@ Aplicamos: tan θ = |(-1/3 - 3) / (1 + 3·(-1/3))| = |(-10/3) / (0)| → Las rec
 La pendiente de la recta dada es m₁ = 2. Para la perpendicular: m₂ = -1/m₁ = -1/2.
 Usando la forma punto-pendiente: y - 3 = (-1/2)(x - 2).
 Desarrollando: y - 3 = -x/2 + 1, entonces y = -x/2 + 4.
-Verificación: m₁ · m₂ = 2 · (-1/2) = -1 ✓. Sustituyendo x = 2: y = -1 + 4 = 3 ✓.`},
+Verificación: m₁ · m₂ = 2 · (-1/2) = -1 ✓. Sustituyendo x = 2: y = -1 + 4 = 3 ✓.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "Una **línea recta** es una sucesión infinita de puntos que se extiende en ambas direcciones sin curvatura.",
+          "Un **segmento de recta** es la porción de una recta comprendida entre dos puntos llamados extremos.",
+          "Una **semirrecta** (o rayo) parte de un punto y se extiende indefinidamente en una dirección.",
+          "Un **ángulo** es la figura formada por dos semirrectas que comparten un mismo vértice.",
+          "Las semirrectas que forman el ángulo se llaman **lados** del ángulo, y el punto común es el **vértice**.",
+          "Los ángulos se clasifican por su medida: **agudo** (< 90°), **recto** (= 90°), **obtuso** (90° < α < 180°), **llano** (= 180°) y **cónico** (> 180°)."
+        ]
+      },
       {
         level: "intermedio",
         title: "Fórmulas y propiedades",
@@ -213,20 +213,7 @@ Verificación: m₁ · m₂ = 2 · (-1/2) = -1 ✓. Sustituyendo x = 2: y = -1 +
     slug: "triangulos",
     illustrationSummary: "Representación de un triángulo con sus tres vértices, lados y ángulos internos. Se marca la altura, la mediana y los puntos notables. Los colores distinguen cada elemento geométrico.",
     tip: "En todo triángulo, la suma de sus ángulos internos siempre es 180°. Usa esta propiedad para encontrar ángulos faltantes rápidamente. En el examen, identifica primero el tipo de triángulo antes de aplicar fórmulas específicas.",
-    theory: [
-      {
-        level: "basico",
-        title: "Conceptos fundamentales",
-        lines: [
-          "Un **triángulo** es un polígono formado por tres segmentos de recta (lados) que se encuentran en tres vértices.",
-          "Los **ángulos internos** de cualquier triángulo suman siempre **180°**.",
-          "Los triángulos se clasifican por sus ángulos: **acutángulo** (todos agudos), **rectángulo** (un ángulo recto) y **obtusángulo** (un ángulo obtuso).",
-          "Por sus lados: **equilátero** (3 lados iguales), **isósceles** (2 lados iguales) y **escalenos** (3 lados diferentes).",
-          "La **altura** de un triángulo es el segmento perpendicular desde un vértice al lado opuesto (o su prolongación).",
-          "El **perímetro** de un triángulo es la suma de la longitud de sus tres lados: **P = a + b + c**."
-        ]
-      ,
-  studyGuide: `## Triángulos
+    studyGuide: `## Triángulos
 
 ### Conceptos Fundamentales
 Un triángulo es un polígono de tres lados y tres vértices. Clasificación por lados: equilátero (tres lados iguales), isósceles (dos lados iguales) y escaleno (tres lados diferentes). Clasificación por ángulos: acutángulo (tres ángulos agudos), rectángulo (un ángulo recto) y obtusángulo (un ángulo obtuso).
@@ -265,7 +252,20 @@ Verificación de Pitágoras: 5² + 12² = 25 + 144 = 169 = 13². Es un triángul
 Área: A = (5 · 12)/2 = 30.
 Semi-perímetro: s = (5 + 12 + 13)/2 = 15.
 Radio circunscrito: R = abc/(4A) = (5·12·13)/(4·30) = 780/120 = 6.5.
-En un triángulo rectángulo, R siempre equivale a la mitad de la hipotenusa: 13/2 = 6.5 ✓.`},
+En un triángulo rectángulo, R siempre equivale a la mitad de la hipotenusa: 13/2 = 6.5 ✓.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "Un **triángulo** es un polígono formado por tres segmentos de recta (lados) que se encuentran en tres vértices.",
+          "Los **ángulos internos** de cualquier triángulo suman siempre **180°**.",
+          "Los triángulos se clasifican por sus ángulos: **acutángulo** (todos agudos), **rectángulo** (un ángulo recto) y **obtusángulo** (un ángulo obtuso).",
+          "Por sus lados: **equilátero** (3 lados iguales), **isósceles** (2 lados iguales) y **escalenos** (3 lados diferentes).",
+          "La **altura** de un triángulo es el segmento perpendicular desde un vértice al lado opuesto (o su prolongación).",
+          "El **perímetro** de un triángulo es la suma de la longitud de sus tres lados: **P = a + b + c**."
+        ]
+      },
       {
         level: "intermedio",
         title: "Fórmulas y propiedades",
@@ -378,20 +378,7 @@ En un triángulo rectángulo, R siempre equivale a la mitad de la hipotenusa: 13
     slug: "poligonos",
     illustrationSummary: "Figuras geométricas con múltiples lados: triángulo, cuadrilátero, pentágono y hexágono. Se muestran los ángulos internos y la relación con el número de lados.",
     tip: "La fórmula general para la suma de ángulos internos de un polígono de n lados es (n−2)×180°. Memoriza esta fórmula y úsala para resolver rápidamente cualquier problema sobre ángulos de polígonos regulares en el examen.",
-    theory: [
-      {
-        level: "basico",
-        title: "Conceptos fundamentales",
-        lines: [
-          "Un **polígono** es una figura plana cerrada formada por segmentos de recta (lados) que se unen en vértices.",
-          "Un polígono es **regular** si todos sus lados son iguales y todos sus ángulos internos son iguales.",
-          "Un polígono es **irregular** si sus lados o ángulos no son todos iguales.",
-          "Los polígonos se clasifican por el número de lados: **triángulo** (3), **cuadrilátero** (4), **pentágono** (5), **hexágono** (6), etc.",
-          "Un polígono es **convexo** si todos sus ángulos internos son menores que 180°, y **cóncavo** si al menos uno es mayor.",
-          "El **perímetro** de un polígono es la suma de las longitudes de todos sus lados."
-        ]
-      ,
-  studyGuide: `## Polígonos
+    studyGuide: `## Polígonos
 
 ### Conceptos Fundamentales
 Un polígono es una figura plana cerrada formada por segmentos de recta (lados) que se encuentran en sus extremos (vértices). Clasificación: convexos (todos los ángulos internos menores de 180°) y cóncavos (al menos un ángulo interno mayor de 180°). Un polígono es regular si todos sus lados son iguales y todos sus ángulos internos son iguales.
@@ -433,7 +420,20 @@ Para n = 8: r = a/(2·tan(π/8)). Despejando a: a = 2r·tan(π/8) = 2(10)·tan(2
 tan(22.5°) = √2 - 1 ≈ 0.4142, entonces a = 20(√2 - 1) ≈ 8.28 cm.
 Perímetro: P = 8 · 8.28 = 66.24 cm.
 Área: A = (P · r)/2 = (66.24 · 10)/2 = 331.2 cm².
-Verificación con la fórmula directa: A = (8 · (8.28)² · cot(22.5°))/4 ≈ 331.2 cm² ✓.`},
+Verificación con la fórmula directa: A = (8 · (8.28)² · cot(22.5°))/4 ≈ 331.2 cm² ✓.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "Un **polígono** es una figura plana cerrada formada por segmentos de recta (lados) que se unen en vértices.",
+          "Un polígono es **regular** si todos sus lados son iguales y todos sus ángulos internos son iguales.",
+          "Un polígono es **irregular** si sus lados o ángulos no son todos iguales.",
+          "Los polígonos se clasifican por el número de lados: **triángulo** (3), **cuadrilátero** (4), **pentágono** (5), **hexágono** (6), etc.",
+          "Un polígono es **convexo** si todos sus ángulos internos son menores que 180°, y **cóncavo** si al menos uno es mayor.",
+          "El **perímetro** de un polígono es la suma de las longitudes de todos sus lados."
+        ]
+      },
       {
         level: "intermedio",
         title: "Fórmulas y propiedades",
@@ -557,20 +557,7 @@ Verificación con la fórmula directa: A = (8 · (8.28)² · cot(22.5°))/4 ≈ 
     slug: "cuadrilateros",
     illustrationSummary: "Diagrama comparativo de cuadriláteros: rectángulo, rombo, trapecio y cuadrilátero general. Cada figura muestra sus propiedades de lados paralelos y ángulos.",
     tip: "Memoriza las propiedades específicas de cada cuadrilátero: el paralelogramo tiene lados opuestos paralelos e iguales, el rectángulo añade ángulos de 90°, el rombo añade lados iguales, y el cuadrado combina ambas propiedades. En el examen, identifica primero el tipo de cuadrilátero.",
-    theory: [
-      {
-        level: "basico",
-        title: "Conceptos fundamentales",
-        lines: [
-          "Un **cuadrilátero** es un polígono con 4 lados y 4 vértices. La suma de sus ángulos internos es **360°**.",
-          "Un **paralelogramo** es un cuadrilátero con ambos pares de lados opuestos paralelos.",
-          "Un **rectángulo** es un paralelogramo con los cuatro ángulos internos iguales a 90°.",
-          "Un **rombo** es un paralelogramo con los cuatro lados de igual longitud.",
-          "Un **cuadrado** es un rectángulo que también es rombo: tiene 4 lados iguales y 4 ángulos rectos.",
-          "Un **trapecio** es un cuadrilátero con al menos un par de lados opuestos paralelos (llamados **bases**)."
-        ]
-      ,
-  studyGuide: `## Cuadriláteros
+    studyGuide: `## Cuadriláteros
 
 ### Conceptos Fundamentales
 Un cuadrilátero es un polígono de cuatro lados y cuatro vértices. La suma de sus ángulos internos es siempre 360° (se deriva de (4-2)·180° = 360°).
@@ -621,7 +608,20 @@ d₂² = 337 → d₂ = √337.
 Usamos la fórmula de área con semiperímetro de los triángulos: Aplicando la ley de los cosenos en el triángulo con lados 10, 17 y 21:
 cos θ = (10² + 17² - 21²)/(2·10·17) = (100 + 289 - 441)/340 = -52/340 = -13/85.
 Área = 10 · 17 · sen θ, donde sen θ = √(1 - (13/85)²) = √(1 - 169/7225) = √(7056/7225) = 84/85.
-Área = 170 · (84/85) = 168 cm².`},
+Área = 170 · (84/85) = 168 cm².`,
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "Un **cuadrilátero** es un polígono con 4 lados y 4 vértices. La suma de sus ángulos internos es **360°**.",
+          "Un **paralelogramo** es un cuadrilátero con ambos pares de lados opuestos paralelos.",
+          "Un **rectángulo** es un paralelogramo con los cuatro ángulos internos iguales a 90°.",
+          "Un **rombo** es un paralelogramo con los cuatro lados de igual longitud.",
+          "Un **cuadrado** es un rectángulo que también es rombo: tiene 4 lados iguales y 4 ángulos rectos.",
+          "Un **trapecio** es un cuadrilátero con al menos un par de lados opuestos paralelos (llamados **bases**)."
+        ]
+      },
       {
         level: "intermedio",
         title: "Fórmulas y propiedades",
@@ -748,20 +748,7 @@ cos θ = (10² + 17² - 21²)/(2·10·17) = (100 + 289 - 441)/340 = -52/340 = -1
     slug: "circumferencia",
     illustrationSummary: "Diagrama geométrico que ilustra el concepto de Circumferencia. Se muestran las figuras, ángulos y relaciones con colores diferenciados para facilitar la comprensión visual.",
     tip: "Recuerda siempre las relaciones clave: C = 2πr, A = πr², y que el ángulo central es igual al arco que intercepta. Para problemas de sectores, usa A = (θ/360°)πr². En el examen, verifica si el problema pide longitud de arco (L = rθ en radianes) o área de sector.",
-    theory: [
-      {
-        level: "basico",
-        title: "Conceptos fundamentales",
-        lines: [
-          "Una **circunferencia** es el lugar geométrico de todos los puntos de un plano que están a una distancia fija (radio) de un punto fijo (centro).",
-          "El **radio** (r) es el segmento que va del centro a cualquier punto de la circunferencia.",
-          "El **diámetro** (d) es el segmento que pasa por el centro y une dos puntos opuestos: **d = 2r**.",
-          "La **longitud** de la circunferencia (perímetro) es: **C = 2πr = πd**.",
-          "Una **cuerda** es un segmento que une dos puntos de la circunferencia sin pasar por el centro.",
-          "Un **arco** es una porción de la circunferencia comprendida entre dos puntos."
-        ]
-      ,
-  studyGuide: `## Circunferencia
+    studyGuide: `## Circunferencia
 
 ### Conceptos Fundamentales
 La circunferencia es el lugar geométrico de todos los puntos del plano que están a una distancia constante (radio r) de un punto fijo (centro O). El círculo es la región del plano delimitada por la circunferencia.
@@ -808,7 +795,20 @@ La distancia del centro a la cuerda (distancia perpendicular): d = √(r² - (c/
 El ángulo central: cos(θ/2) = d/r = 3/5, entonces θ/2 = arccos(0.6) ≈ 53.13° y θ ≈ 106.26° = 1.855 rad.
 Área del sector: A_s = (5² · 1.855)/2 = 23.19 m².
 Área del triángulo: A_t = (1/2) · 8 · 3 = 12 m².
-Área del segmento: A = 23.19 - 12 = 11.19 m².`},
+Área del segmento: A = 23.19 - 12 = 11.19 m².`,
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "Una **circunferencia** es el lugar geométrico de todos los puntos de un plano que están a una distancia fija (radio) de un punto fijo (centro).",
+          "El **radio** (r) es el segmento que va del centro a cualquier punto de la circunferencia.",
+          "El **diámetro** (d) es el segmento que pasa por el centro y une dos puntos opuestos: **d = 2r**.",
+          "La **longitud** de la circunferencia (perímetro) es: **C = 2πr = πd**.",
+          "Una **cuerda** es un segmento que une dos puntos de la circunferencia sin pasar por el centro.",
+          "Un **arco** es una porción de la circunferencia comprendida entre dos puntos."
+        ]
+      },
       {
         level: "intermedio",
         title: "Fórmulas y propiedades",
@@ -938,20 +938,7 @@ El ángulo central: cos(θ/2) = d/r = 3/5, entonces θ/2 = arccos(0.6) ≈ 53.13
     slug: "puntos-notables",
     illustrationSummary: "Triángulo con sus cuatro puntos notables: ortocentro (H), baricentro (G), circuncentro (O) e incentro (I). La recta de Euler conecta tres de ellos.",
     tip: "Los 4 puntos notables del triángulo (incentro, baricentro, ortocentro y circuncentro) siempre están alineados en la Recta de Euler. En un triángulo equilátero, los cuatro puntos coinciden. Memoriza: el baricentro divide a cada mediana en relación 2:1 desde el vértice.",
-    theory: [
-      {
-        level: "basico",
-        title: "Conceptos fundamentales",
-        lines: [
-          "Los **puntos notables** de un triángulo son puntos especiales que se obtienen al trazar líneas específicas desde los vértices o lados.",
-          "El **incentro** (I) es el punto de intersección de las tres **bisectrices** del triángulo. Es el centro de la circunferencia inscrita.",
-          "El **baricentro** (G) es el punto de intersección de las tres **medianas** del triángulo. Es el centro de gravedad.",
-          "El **ortocentro** (H) es el punto de intersección de las tres **alturas** del triángulo.",
-          "El **circuncentro** (O) es el punto de intersección de las tres **mediatrices** de los lados. Es el centro de la circunferencia circunscrita.",
-          "En un triángulo **equilátero**, los cuatro puntos notables coinciden en un solo punto."
-        ]
-      ,
-  studyGuide: `## Puntos Notables del Triángulo
+    studyGuide: `## Puntos Notables del Triángulo
 
 ### Conceptos Fundamentales
 Los puntos notables son puntos de intersección de elementos constructivos de un triángulo. Cada uno tiene propiedades geométricas y algebraicas fundamentales.
@@ -1004,7 +991,20 @@ Altura: h = 6·(√3/2) = 3√3.
 El baricentro divide la mediana (que es también la altura) en razón 2:1.
 Distancia a un vértice (circunradius): R = (2/3)h = 2√3 ≈ 3.46 cm.
 Distancia a un lado (inradius): r = (1/3)h = √3 ≈ 1.73 cm.
-Verificación: R + r = 3√3 = h ✓ y R = 2r ✓.`},
+Verificación: R + r = 3√3 = h ✓ y R = 2r ✓.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "Los **puntos notables** de un triángulo son puntos especiales que se obtienen al trazar líneas específicas desde los vértices o lados.",
+          "El **incentro** (I) es el punto de intersección de las tres **bisectrices** del triángulo. Es el centro de la circunferencia inscrita.",
+          "El **baricentro** (G) es el punto de intersección de las tres **medianas** del triángulo. Es el centro de gravedad.",
+          "El **ortocentro** (H) es el punto de intersección de las tres **alturas** del triángulo.",
+          "El **circuncentro** (O) es el punto de intersección de las tres **mediatrices** de los lados. Es el centro de la circunferencia circunscrita.",
+          "En un triángulo **equilátero**, los cuatro puntos notables coinciden en un solo punto."
+        ]
+      },
       {
         level: "intermedio",
         title: "Fórmulas y propiedades",
@@ -1156,20 +1156,7 @@ Verificación: R + r = 3√3 = h ✓ y R = 2r ✓.`},
     slug: "prop-y-semejanza",
     illustrationSummary: "Dos triángulos semejantes con sus lados proporcionales. Se muestra la razón de semejanza k y la relación entre ángulos correspondientes.",
     tip: "En semejanza, identifica SIEMPRE el vértice común y el orden correcto de los polígonos. Muchos errores vienen de no respetar la correspondencia de vértices al plantear las proporciones.",
-    theory: [
-      {
-        level: "basico",
-        title: "Conceptos fundamentales",
-        lines: [
-          "**Proporcionalidad**: Dos razones son **proporcionales** si el cociente de sus términos es igual.",
-          "**Razón de semejanza (k)**: Factor que relaciona las longitudes correspondientes de dos figuras semejantes.",
-          "Dos polígonos son **semejantes** si sus ángulos correspondientes son iguales y sus lados correspondientes son **proporcionales**.",
-          "**Teorema de Tales**: Si una paralela corta a dos rectas concurrentes, determina segmentos **proporcionales**.",
-          "Las figuras semejantes conservan la **forma** pero no necesariamente el **tamaño**.",
-          "La relación de semejanza se escribe como **k = L₂/L₁**, donde L son longitudes correspondientes.",
-        ],
-      ,
-  studyGuide: `## Proporcionalidad y Semejanza
+    studyGuide: `## Proporcionalidad y Semejanza
 
 ### Conceptos Fundamentales
 **Teorema de Tales:** Si una recta paralela a un lado de un triángulo corta a los otros dos lados, los segmentos formados son proporcionales. Consecuencia: un triángulo formado por una línea paralela a una base es semejante al triángulo original.
@@ -1220,7 +1207,20 @@ AE = k · AC = (1/3) · 15 = 5.
 DE = k · BC = (1/3) · 18 = 6.
 Perímetro de ADE = 4 + 5 + 6 = 15.
 Perímetro de ABC = 12 + 18 + 15 = 45.
-Verificación: 15 = (1/3) · 45 ✓.`},
+Verificación: 15 = (1/3) · 45 ✓.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "**Proporcionalidad**: Dos razones son **proporcionales** si el cociente de sus términos es igual.",
+          "**Razón de semejanza (k)**: Factor que relaciona las longitudes correspondientes de dos figuras semejantes.",
+          "Dos polígonos son **semejantes** si sus ángulos correspondientes son iguales y sus lados correspondientes son **proporcionales**.",
+          "**Teorema de Tales**: Si una paralela corta a dos rectas concurrentes, determina segmentos **proporcionales**.",
+          "Las figuras semejantes conservan la **forma** pero no necesariamente el **tamaño**.",
+          "La relación de semejanza se escribe como **k = L₂/L₁**, donde L son longitudes correspondientes.",
+        ],
+      },
       {
         level: "intermedio",
         title: "Fórmulas y propiedades",
@@ -1371,20 +1371,7 @@ Verificación: 15 = (1/3) · 45 ✓.`},
     slug: "relaciones-metricas",
     illustrationSummary: "Triángulo rectángulo con las relaciones métricas: cateto = hipotenusa × seno del ángulo opuesto. Se marcan las proyecciones y la altura.",
     tip: "En relaciones métricas del triángulo rectángulo, memoriza solo 3 fórmulas: a² = c·m, b² = c·n y h² = m·n. El teorema de Pitágoras se deduce de ellas: a² + b² = c·m + c·n = c(m+n) = c².",
-    theory: [
-      {
-        level: "basico",
-        title: "Conceptos fundamentales",
-        lines: [
-          "En un **triángulo rectángulo**, la **altura** trazada desde el vértice del ángulo recto a la hipotenusa genera **dos triángulos semejantes** entre sí y con el original.",
-          "**Hipotenusa (c)**: lado opuesto al ángulo recto. Es el lado **más largo** del triángulo rectángulo.",
-          "**Catetos (a, b)**: los dos lados que forman el ángulo recto.",
-          "**Proyección**: los segmentos en que la altura **divide la hipotenusa** se llaman **m** y **n** (proyecciones de los catetos).",
-          "**Teorema de Pitágoras**: En todo triángulo rectángulo, **a² + b² = c²**.",
-          "La **altura (h)** es perpendicular a la hipotenusa y se mide desde el vértice del ángulo recto.",
-        ],
-      ,
-  studyGuide: `## Relaciones Métricas en el Triángulo Rectángulo
+    studyGuide: `## Relaciones Métricas en el Triángulo Rectángulo
 
 ### Conceptos Fundamentales
 En un triángulo rectángulo, la altura trazada desde el vértice del ángulo recto a la hipotenusa genera dos triángulos que son semejantes entre sí y semejantes al triángulo original. Estas semejanza producen las relaciones métricas fundamentales.
@@ -1444,7 +1431,20 @@ b² = c · p = 15 · 3 = 45 → b = √45 = 3√5 ≈ 6.71 cm.
 Verificaciones:
 Pitágoras: (6√5)² + (3√5)² = 180 + 45 = 225 = 15² ✓.
 Producto: a · b = 6√5 · 3√5 = 90 = 15 · 6 = c · h ✓.
-Relación armónica: 1/6² = 1/180 + 1/45 → 1/36 = 1/180 + 4/180 = 5/180 = 1/36 ✓.`},
+Relación armónica: 1/6² = 1/180 + 1/45 → 1/36 = 1/180 + 4/180 = 5/180 = 1/36 ✓.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "En un **triángulo rectángulo**, la **altura** trazada desde el vértice del ángulo recto a la hipotenusa genera **dos triángulos semejantes** entre sí y con el original.",
+          "**Hipotenusa (c)**: lado opuesto al ángulo recto. Es el lado **más largo** del triángulo rectángulo.",
+          "**Catetos (a, b)**: los dos lados que forman el ángulo recto.",
+          "**Proyección**: los segmentos en que la altura **divide la hipotenusa** se llaman **m** y **n** (proyecciones de los catetos).",
+          "**Teorema de Pitágoras**: En todo triángulo rectángulo, **a² + b² = c²**.",
+          "La **altura (h)** es perpendicular a la hipotenusa y se mide desde el vértice del ángulo recto.",
+        ],
+      },
       {
         level: "intermedio",
         title: "Fórmulas y propiedades",
@@ -1585,20 +1585,7 @@ Relación armónica: 1/6² = 1/180 + 1/45 → 1/36 = 1/180 + 4/180 = 5/180 = 1/3
     slug: "poligonos-regulares",
     illustrationSummary: "Pentágono y hexágono regulares con radios de circunferencias circunscrita e inscrita. Se muestran los apotemas y la fórmula del área.",
     tip: "Para hallar el área de un polígono regular, multiplica el perímetro por el apotema y divide entre 2: A = (P × a)/2. El apotema siempre es menor que el radio. En exámenes, memoriza: hexágono regular → lado = radio.",
-    theory: [
-      {
-        level: "basico",
-        title: "Conceptos fundamentales",
-        lines: [
-          "Un **polígono regular** tiene todos sus **lados iguales** y todos sus **ángulos internos iguales**.",
-          "**Número de diagonales**: Para un polígono de n lados, tiene **n(n−3)/2 diagonales**.",
-          "La suma de los ángulos internos de un polígono de n lados es **(n−2) × 180°**.",
-          "Cada ángulo interno de un polígono regular de n lados mide **(n−2) × 180°/n**.",
-          "Cada ángulo externo de un polígono regular mide **360°/n**.",
-          "El **apotema** es la distancia del centro al punto medio de un lado (perpendicular al lado).",
-        ],
-      ,
-  studyGuide: `## Polígonos Regulares
+    studyGuide: `## Polígonos Regulares
 ### Definición y propiedades
 Un polígono regular es un polígono cuyos lados son todos de igual longitud y cuyos ángulos interiores son todos congruentes. Los polígonos regulares poseen simetría rotacional de orden n, donde n es el número de lados, y también simetría axial con n ejes de simetría. Entre los más estudiados se encuentran el triángulo equilátero, el cuadrado, el pentágono regular y el hexágono regular. La suma de los ángulos interiores de cualquier polígono de n lados se calcula con la fórmula:
 
@@ -1646,7 +1633,20 @@ Alternativamente, podemos usar la fórmula directa para el área de un hexágono
 A = (3 × 1.7321 / 2) × 36 = (5.1963 / 2) × 36 = 2.5981 × 36 ≈ 93.53 cm²
 
 ### Polígonos regulares conjugados y estrellados
-Un polígono regular estrellado se obtiene uniendo cada vértice con otros vértices saltándose un número fijo de puntos intermedios. Lanotación de Schläfli {n/k} describe un polígono regular con n vértices conectados cada k posiciones. Cuando k = 1 se obtiene el polígono convexo ordinario. Para un pentágono regular estrellado {5/2}, el pentagrama, cada ángulo interior en los vértices del triángulo resultante mide 36°. El área de un pentagrama se puede calcular dividiéndolo en un pentágono central más cinco triángulos isósceles. Estos polígonos estrellados aparecen frecuentemente en diseños arquitectónicos y en la naturaleza, particularmente en la estructura de algunas flores y cristales. La comprensión de sus propiedades geométricas resulta fundamental para el diseño de rosetas, vitrales y patrones decorativos de distintas tradiciones culturales.`},
+Un polígono regular estrellado se obtiene uniendo cada vértice con otros vértices saltándose un número fijo de puntos intermedios. Lanotación de Schläfli {n/k} describe un polígono regular con n vértices conectados cada k posiciones. Cuando k = 1 se obtiene el polígono convexo ordinario. Para un pentágono regular estrellado {5/2}, el pentagrama, cada ángulo interior en los vértices del triángulo resultante mide 36°. El área de un pentagrama se puede calcular dividiéndolo en un pentágono central más cinco triángulos isósceles. Estos polígonos estrellados aparecen frecuentemente en diseños arquitectónicos y en la naturaleza, particularmente en la estructura de algunas flores y cristales. La comprensión de sus propiedades geométricas resulta fundamental para el diseño de rosetas, vitrales y patrones decorativos de distintas tradiciones culturales.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "Un **polígono regular** tiene todos sus **lados iguales** y todos sus **ángulos internos iguales**.",
+          "**Número de diagonales**: Para un polígono de n lados, tiene **n(n−3)/2 diagonales**.",
+          "La suma de los ángulos internos de un polígono de n lados es **(n−2) × 180°**.",
+          "Cada ángulo interno de un polígono regular de n lados mide **(n−2) × 180°/n**.",
+          "Cada ángulo externo de un polígono regular mide **360°/n**.",
+          "El **apotema** es la distancia del centro al punto medio de un lado (perpendicular al lado).",
+        ],
+      },
       {
         level: "intermedio",
         title: "Fórmulas y propiedades",
@@ -1785,20 +1785,7 @@ Un polígono regular estrellado se obtiene uniendo cada vértice con otros vért
     slug: "areas",
     illustrationSummary: "Comparación visual de áreas: triángulo, rectángulo, trapecio y circunferencia. Cada figura muestra su fórmula de área correspondiente.",
     tip: "Cuando un problema pide el área de una figura compuesta, siempre descomponla en figuras simples (triángulos, rectángulos, trapecios). Identifica qué se suma y qué se resta. Lee bien si piden área lateral o total.",
-    theory: [
-      {
-        level: "basico",
-        title: "Conceptos fundamentales",
-        lines: [
-          "**Área**: Es la medida de la **superficie** que ocupa una figura plana, expresada en unidades cuadradas.",
-          "**Triángulo**: **A = (b × h)/2**, donde b es la base y h es la altura (perpendicular a la base).",
-          "**Rectángulo**: **A = base × altura = b × h**.",
-          "**Paralelogramo**: **A = base × altura = b × h** (la altura es perpendicular a la base).",
-          "**Círculo**: **A = π × r²**, donde r es el radio.",
-          "La unidad de medida del área es la **unidad cuadrada** (cm², m², etc.).",
-        ],
-      ,
-  studyGuide: `## Áreas de Figuras Planas
+    studyGuide: `## Áreas de Figuras Planas
 ### Conceptos fundamentales
 El área de una figura plana es la medida de la extensión de su superficie bidimensional, expresada en unidades cuadradas. Para calcular áreas se emplean fórmulas específicas según la forma geométrica. Las unidades estándar incluyen centímetros cuadrados (cm²), metros cuadrados (m²) y kilómetros cuadrados (km²). La conversión entre unidades se realiza aplicando factores de escala al cuadrado: 1 m² = 10 000 cm² y 1 km² = 1 000 000 m².
 
@@ -1859,7 +1846,20 @@ Un sector tiene un radio de 10 cm y un ángulo central de 72°:
 
 A_sector = (72/360) × π × 10² = (1/5) × 100π = 20π ≈ 62.83 cm²
 
-La precisión en el cálculo de áreas es fundamental en ingeniería civil, arquitectura y disciplinas del diseño.`},
+La precisión en el cálculo de áreas es fundamental en ingeniería civil, arquitectura y disciplinas del diseño.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "**Área**: Es la medida de la **superficie** que ocupa una figura plana, expresada en unidades cuadradas.",
+          "**Triángulo**: **A = (b × h)/2**, donde b es la base y h es la altura (perpendicular a la base).",
+          "**Rectángulo**: **A = base × altura = b × h**.",
+          "**Paralelogramo**: **A = base × altura = b × h** (la altura es perpendicular a la base).",
+          "**Círculo**: **A = π × r²**, donde r es el radio.",
+          "La unidad de medida del área es la **unidad cuadrada** (cm², m², etc.).",
+        ],
+      },
       {
         level: "intermedio",
         title: "Fórmulas y propiedades",
@@ -1990,20 +1990,7 @@ La precisión en el cálculo de áreas es fundamental en ingeniería civil, arqu
     slug: "rectas-y-planos",
     illustrationSummary: "Representación 3D de rectas y planos en el espacio. Se muestran las relaciones: paralelas, que se cortan y oblicuas.",
     tip: "En problemas de rectas y planos en el espacio, dibuja siempre una figura de referencia (cubo o prisma). Para identificar si dos rectas son paralelas, se cortan o son inclinadas, verifica: ¿comparten un plano? Si sí y no son paralelas, se cortan.",
-    theory: [
-      {
-        level: "basico",
-        title: "Conceptos fundamentales",
-        lines: [
-          "Una **recta** es una línea **infinita** que se extiende en ambas direcciones sin grosor.",
-          "Un **plano** es una superficie **infinita** y **plana** que contiene infinitas rectas.",
-          "Dos rectas en el espacio pueden ser: **paralelas**, **concurrentes** (se cortan) o **inclinadas** (no paralelas y no se cortan).",
-          "**Rectas paralelas**: No se cortan y están en el **mismo plano**.",
-          "**Rectas inclinadas (skew)**: No se cortan y **no** están en el mismo plano. Solo existen en **3D**.",
-          "Dos planos pueden ser: **paralelos** (no se cortan) o **secantes** (se cortan en una recta).",
-        ],
-      ,
-  studyGuide: `## Rectas y Planos en el Espacio
+    studyGuide: `## Rectas y Planos en el Espacio
 ### Rectas en el espacio tridimensional
 Una recta en el espacio se puede representar mediante su ecuación paramétrica, simétrica o vectorial. La forma paramétrica más común usa un punto P₀(x₀, y₀, z₀) y un vector director **v** = (a, b, c):
 
@@ -2052,7 +2039,20 @@ Calcular la distancia del punto (2, 3, -1) al plano 3x - 2y + z - 1 = 0:
 
 d = |3(2) - 2(3) + 1(-1) - 1| / √(9 + 4 + 1) = |6 - 6 - 1 - 1| / √14 = |-2| / √14 = 2/√14 ≈ 0.5345
 
-La intersección de rectas y planos es clave en cálculo vectorial, óptica geométrica y modelado computacional tridimensional.`},
+La intersección de rectas y planos es clave en cálculo vectorial, óptica geométrica y modelado computacional tridimensional.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "Una **recta** es una línea **infinita** que se extiende en ambas direcciones sin grosor.",
+          "Un **plano** es una superficie **infinita** y **plana** que contiene infinitas rectas.",
+          "Dos rectas en el espacio pueden ser: **paralelas**, **concurrentes** (se cortan) o **inclinadas** (no paralelas y no se cortan).",
+          "**Rectas paralelas**: No se cortan y están en el **mismo plano**.",
+          "**Rectas inclinadas (skew)**: No se cortan y **no** están en el mismo plano. Solo existen en **3D**.",
+          "Dos planos pueden ser: **paralelos** (no se cortan) o **secantes** (se cortan en una recta).",
+        ],
+      },
       {
         level: "intermedio",
         title: "Fórmulas y propiedades",
@@ -2195,20 +2195,7 @@ La intersección de rectas y planos es clave en cálculo vectorial, óptica geom
     slug: "prisma-y-cilindro",
     illustrationSummary: "Prisma hexagonal y cilindro con sus dimensiones: altura, radio, arista. Se muestran las áreas de las bases y laterales.",
     tip: "Para calcular el área total de prismas y cilindros, siempre suma: 2 × área_base + perímetro_base × altura. En cilindro, recuerda que el lateral es un rectángulo 'desenrollado' de base 2πr y altura h.",
-    theory: [
-      {
-        level: "basico",
-        title: "Conceptos fundamentales",
-        lines: [
-          "Un **prisma** es un sólido con **dos bases paralelas e iguales** y caras laterales que son **paralelogramos**.",
-          "Un **cilindro** es un sólido con **dos bases circulares paralelas e iguales** y una superficie lateral **curva**.",
-          "Prismas se nombran por la forma de su base: **triangular, rectangular, hexagonal**, etc.",
-          "La **altura** es la distancia perpendicular entre las dos bases.",
-          "Las **aristas laterales** de un prisma son todas iguales y paralelas entre sí.",
-          "Un cilindro se puede obtener rotando un **rectángulo** alrededor de uno de sus lados.",
-        ],
-      ,
-  studyGuide: `## Prisma y Cilindro
+    studyGuide: `## Prisma y Cilindro
 ### Prisma: definición y tipos
 Un prisma es un sólido geométrico delimitado por dos bases poligonales congruentes y paralelas, unidas por caras laterales que son paralelogramos. Los prismas se clasifican según la forma de su base (triangular, rectangular, hexagonal, etc.) y según la orientación de las aristas laterales respecto a las bases. Un prisma es recto cuando las aristas laterales son perpendiculares a las bases, y oblicuo en caso contrario. El volumen de cualquier prisma es:
 
@@ -2259,7 +2246,20 @@ Superficie lateral: SL = 2π × 5 × 12 = 120π ≈ 376.99 cm²
 Superficie total: ST = 120π + 2π × 25 = 120π + 50π = 170π ≈ 534.07 cm²
 
 ### Aplicaciones prácticas
-Los prismas y cilindros aparecen frecuentemente en la ingeniería y la arquitectura. Las vigas de construcción suelen tener forma de prisma rectangular, y los tanques de almacenamiento son cilindros. El cálculo del volumen es esencial para determinar la capacidad de recipientes, mientras que la superficie se necesita para calcular materiales de revestimiento. En el caso de un cilindro oblicuo, el volumen sigue siendo V = Ab × h, donde h es la distancia perpendicular entre planos de las bases, no la longitud de las aristas laterales.`},
+Los prismas y cilindros aparecen frecuentemente en la ingeniería y la arquitectura. Las vigas de construcción suelen tener forma de prisma rectangular, y los tanques de almacenamiento son cilindros. El cálculo del volumen es esencial para determinar la capacidad de recipientes, mientras que la superficie se necesita para calcular materiales de revestimiento. En el caso de un cilindro oblicuo, el volumen sigue siendo V = Ab × h, donde h es la distancia perpendicular entre planos de las bases, no la longitud de las aristas laterales.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "Un **prisma** es un sólido con **dos bases paralelas e iguales** y caras laterales que son **paralelogramos**.",
+          "Un **cilindro** es un sólido con **dos bases circulares paralelas e iguales** y una superficie lateral **curva**.",
+          "Prismas se nombran por la forma de su base: **triangular, rectangular, hexagonal**, etc.",
+          "La **altura** es la distancia perpendicular entre las dos bases.",
+          "Las **aristas laterales** de un prisma son todas iguales y paralelas entre sí.",
+          "Un cilindro se puede obtener rotando un **rectángulo** alrededor de uno de sus lados.",
+        ],
+      },
       {
         level: "intermedio",
         title: "Fórmulas y propiedades",
@@ -2393,21 +2393,7 @@ Los prismas y cilindros aparecen frecuentemente en la ingeniería y la arquitect
     slug: "piramide-y-cono",
     illustrationSummary: "Pirámide cuadrangular y cono con sus vértices, aristas y alturas. Se marca la relación entre la altura y el apotema.",
     tip: "En el examen, distingue siempre entre la altura (h) y la apotema o generatriz (g). La altura cae perpendicular desde el vértice al centro de la base; la generatriz va del vértice al borde de la base. Muchos errores ocurren por confundir ambas. Memoriza: V_pirámide = (1/3)·A_base·h y V_cono = (1/3)·π·r²·h.",
-    theory: [
-      {
-        level: "basico",
-        title: "Conceptos fundamentales",
-        lines: [
-          "Una **pirámide** es un sólido cuya base es un polígono y cuyas caras laterales son triángulos que convergen en un punto llamado **vértice**.",
-          "Un **cono** es un sólido cuya base es un círculo y cuya superficie lateral se curva desde el borde de la base hasta un punto llamado **vértice** o **ápice**.",
-          "La **altura (h)** de una pirámide o cono es el segmento perpendicular que va desde el vértice hasta el plano de la base.",
-          "La **apotema de la pirámide** o **generatriz del cono (g)** es la distancia desde el vértice hasta un punto del borde de la base, midiendo sobre la superficie lateral.",
-          "Una pirámide se denomina **regular** cuando su base es un polígono regular y su vértice se proyecta sobre el centro de la base.",
-          "El cono se llama **recto** cuando su eje es perpendicular al plano de la base.",
-          "La **altura de un tronco** (pirámide o cono truncado) es la distancia perpendicular entre las dos bases paralelas."
-        ]
-      ,
-  studyGuide: `## Pirámide y Cono
+    studyGuide: `## Pirámide y Cono
 ### Pirámide: definición
 Una pirámide es un sólido geométrico formado por una base poligonal y caras laterales triangulares que convergen en un vértice común llamado ápice. Se clasifica según su base (triangular, cuadrada, pentagonal, etc.) y puede ser recta cuando el ápice está perpendicularmente sobre el centro de la base, u oblicua en caso contrario. La altura de la pirámide es la distancia perpendicular desde el ápice hasta el plano de la base.
 
@@ -2467,7 +2453,21 @@ Un cono truncado (o frustrum) se obtiene al cortar un cono con un plano paralelo
 
 **V = (πh/3)(R² + Rr + r²)**
 
-donde R es el radio de la base mayor, r el de la menor y h la altura del tronco. Esta figura aparece en embudos, vasos y diversas piezas mecánicas.`},
+donde R es el radio de la base mayor, r el de la menor y h la altura del tronco. Esta figura aparece en embudos, vasos y diversas piezas mecánicas.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "Una **pirámide** es un sólido cuya base es un polígono y cuyas caras laterales son triángulos que convergen en un punto llamado **vértice**.",
+          "Un **cono** es un sólido cuya base es un círculo y cuya superficie lateral se curva desde el borde de la base hasta un punto llamado **vértice** o **ápice**.",
+          "La **altura (h)** de una pirámide o cono es el segmento perpendicular que va desde el vértice hasta el plano de la base.",
+          "La **apotema de la pirámide** o **generatriz del cono (g)** es la distancia desde el vértice hasta un punto del borde de la base, midiendo sobre la superficie lateral.",
+          "Una pirámide se denomina **regular** cuando su base es un polígono regular y su vértice se proyecta sobre el centro de la base.",
+          "El cono se llama **recto** cuando su eje es perpendicular al plano de la base.",
+          "La **altura de un tronco** (pirámide o cono truncado) es la distancia perpendicular entre las dos bases paralelas."
+        ]
+      },
       {
         level: "intermedio",
         title: "Fórmulas y propiedades",
@@ -2588,21 +2588,7 @@ donde R es el radio de la base mayor, r el de la menor y h la altura del tronco.
     slug: "esfera",
     illustrationSummary: "Esfera con centro O, radio R, y puntos sobre la superficie. Se muestran los círculos máximos y la fórmula del volumen.",
     tip: "La fórmula de la esfera V = (4/3)πr³ debe memorizarse perfectamente. En el examen, cuidado: muchos preguntan el diámetro y no el radio. También recuerda que A = 4πr². Un atajo: el área de la esfera es exactamente la derivada del volumen respecto a r: dV/dr = 4πr².",
-    theory: [
-      {
-        level: "basico",
-        title: "Conceptos fundamentales",
-        lines: [
-          "Una **esfera** es el conjunto de todos los puntos del espacio que están a una distancia igual (radio **r**) de un punto fijo llamado **centro**.",
-          "Un **semiesfera** es la mitad de una esfera, cortada por un plano que pasa por su centro. La intersección se llama **ecuador** o **círculo máximo**.",
-          "Un **casquete esférico** es la porción de esfera cortada por un plano que no necesariamente pasa por el centro.",
-          "El **radio (r)** es la distancia del centro a cualquier punto de la superficie. El **diámetro (d)** vale d = 2r.",
-          "Un **gran círculo** es la intersección de la esfera con un plano que pasa por su centro. Es el círculo de mayor radio posible en la esfera (radio = r).",
-          "Los **polos** de una esfera son dos puntos opuestos sobre un eje, y la **distancia polar** es la distancia entre ambos polos a lo largo de la superficie.",
-          "Una **zona esférica** es la superficie lateral de la esfera entre dos planos paralelos que la cortan."
-        ]
-      ,
-  studyGuide: `## Esfera
+    studyGuide: `## Esfera
 ### Definición y propiedades fundamentales
 Una esfera es el conjunto de todos los puntos del espacio que están a una distancia igual (radio r) de un punto fijo llamado centro. Es la superficie de revolución generada al rotar una semicircunferencia alrededor de su diámetro. La esfera es la única superficie cerrada que tiene la propiedad de que todos los puntos de su superficie están equidistantes del centro. La ecuación cartesiana de una esfera centrada en el origen es:
 
@@ -2655,7 +2641,21 @@ r₁² = r² - (r - h)² = 100 - 36 = 64 → r₁ = 8 cm
 V = (π × 4/6)(3 × 64 + 3 × 100 + 16) = (2π/3)(192 + 300 + 16) = (2π/3)(508) ≈ 1064.58 cm³
 
 ### Volumen de una esfera con una taladra
-Si se perfora un cilindro coaxial de radio a a través de una esfera de radio r, el volumen restante (aro esférico o anillo de Viviani) se puede calcular restando el volumen del cilindro más los dos casquetes del volumen total de la esfera. Estas figuras aparecen en aplicaciones de ingeniería mecánica y diseño de componentes esféricos.`},
+Si se perfora un cilindro coaxial de radio a a través de una esfera de radio r, el volumen restante (aro esférico o anillo de Viviani) se puede calcular restando el volumen del cilindro más los dos casquetes del volumen total de la esfera. Estas figuras aparecen en aplicaciones de ingeniería mecánica y diseño de componentes esféricos.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "Una **esfera** es el conjunto de todos los puntos del espacio que están a una distancia igual (radio **r**) de un punto fijo llamado **centro**.",
+          "Un **semiesfera** es la mitad de una esfera, cortada por un plano que pasa por su centro. La intersección se llama **ecuador** o **círculo máximo**.",
+          "Un **casquete esférico** es la porción de esfera cortada por un plano que no necesariamente pasa por el centro.",
+          "El **radio (r)** es la distancia del centro a cualquier punto de la superficie. El **diámetro (d)** vale d = 2r.",
+          "Un **gran círculo** es la intersección de la esfera con un plano que pasa por su centro. Es el círculo de mayor radio posible en la esfera (radio = r).",
+          "Los **polos** de una esfera son dos puntos opuestos sobre un eje, y la **distancia polar** es la distancia entre ambos polos a lo largo de la superficie.",
+          "Una **zona esférica** es la superficie lateral de la esfera entre dos planos paralelos que la cortan."
+        ]
+      },
       {
         level: "intermedio",
         title: "Fórmulas y propiedades",
@@ -2774,21 +2774,7 @@ Si se perfora un cilindro coaxial de radio a a través de una esfera de radio r,
     slug: "la-recta",
     illustrationSummary: "Recta en el plano cartesiano con pendiente m, punto de intersección con el eje Y y ángulo de inclinación.",
     tip: "Dominar las tres formas de ecuación de la recta (pendiente-intersección, punto-pendiente y general) es clave. En el examen, identifica primero qué te dan: si te dan dos puntos usa m=(y₂−y₁)/(x₂−x₁) y luego punto-pendiente. La ecuación general Ax+By+C=0 es la más versátil para calcular distancias y ángulos.",
-    theory: [
-      {
-        level: "basico",
-        title: "Conceptos fundamentales",
-        lines: [
-          "Una **recta** en el plano es el lugar geométrico de todos los puntos que satisfacen una ecuación de primer grado en x e y.",
-          "La **pendiente (m)** de una recta mide la inclinación de la recta y se calcula como: m = (y₂ − y₁) / (x₂ − x₁).",
-          "Si m > 0 la recta sube de izquierda a derecha; si m < 0 la recta baja; si m = 0 la recta es horizontal.",
-          "Una recta **vertical** no tiene pendiente definida (división por cero) y su ecuación es x = k (constante).",
-          "El **intersección con el eje y** (o ordenada al origen, b) es el valor de y cuando x = 0.",
-          "El **intersección con el eje x** (o abcisa) es el valor de x cuando y = 0.",
-          "Dos rectas son **paralelas** si tienen la misma pendiente. Son **perpendiculares** si el producto de sus pendientes es −1."
-        ]
-      ,
-  studyGuide: `## La Recta
+    studyGuide: `## La Recta
 ### Definición y elementos
 Una recta es un conjunto de puntos que se extiende indefinidamente en ambas direcciones, siendo la figura geométrica unidimensional más básica. Los elementos fundamentales que definen una recta son sus puntos y la dirección que determina. En geometría analítica, una recta se describe completamente mediante su pendiente y un punto por el que pasa, o mediante dos puntos distintos.
 
@@ -2856,7 +2842,21 @@ tan θ = |(√3 - 1) / (1 + √3)| = |(√3 - 1) / (1 + √3)|
 
 Racionalizando: (√3 - 1)² / (3 - 1) = (4 - 2√3) / 2 = 2 - √3 ≈ 0.2679 → θ = 15°
 
-La comprensión profunda de las propiedades de las rectas es el fundamento de la geometría analítica y del cálculo diferencial.`},
+La comprensión profunda de las propiedades de las rectas es el fundamento de la geometría analítica y del cálculo diferencial.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "Una **recta** en el plano es el lugar geométrico de todos los puntos que satisfacen una ecuación de primer grado en x e y.",
+          "La **pendiente (m)** de una recta mide la inclinación de la recta y se calcula como: m = (y₂ − y₁) / (x₂ − x₁).",
+          "Si m > 0 la recta sube de izquierda a derecha; si m < 0 la recta baja; si m = 0 la recta es horizontal.",
+          "Una recta **vertical** no tiene pendiente definida (división por cero) y su ecuación es x = k (constante).",
+          "El **intersección con el eje y** (o ordenada al origen, b) es el valor de y cuando x = 0.",
+          "El **intersección con el eje x** (o abcisa) es el valor de x cuando y = 0.",
+          "Dos rectas son **paralelas** si tienen la misma pendiente. Son **perpendiculares** si el producto de sus pendientes es −1."
+        ]
+      },
       {
         level: "intermedio",
         title: "Fórmulas y propiedades",
@@ -2983,21 +2983,7 @@ La comprensión profunda de las propiedades de las rectas es el fundamento de la
     slug: "circunferencia-y-parabola",
     illustrationSummary: "Circunferencia y parábola superpuestas. Se muestran los focos, vértices y ejes de simetría de cada curva.",
     tip: "Para la circunferencia: identifica rápidamente el centro (h,k) y radio r de la ecuación general completando cuadrados. Para la parábola: siempre identifica si abre hacia arriba/abajo (eje vertical) o derecha/izquierda (eje horizontal). El foco y la directriz están a distancia p del vértice, y p = 1/(4|a|) en la forma y = ax².",
-    theory: [
-      {
-        level: "basico",
-        title: "Conceptos fundamentales",
-        lines: [
-          "Una **circunferencia** es el lugar geométrico de todos los puntos que están a una distancia fija (**radio r**) de un punto fijo (**centro**).",
-          "Una **parábola** es el lugar geométrico de todos los puntos que están a igual distancia de un punto fijo (**foco**) y una recta fija (**directriz**).",
-          "El **vértice** de una parábola es el punto donde la parábola cruza su eje de simetría. Está a mitad de camino entre el foco y la directriz.",
-          "La **distancia focal** (o parámetro **p**) es la distancia del vértice al foco (y también del vértice a la directriz).",
-          "El **eje** de la parábola es la recta que pasa por el foco y es perpendicular a la directriz.",
-          "Un **corte** de una parábola (la **latus rectum**) es el segmento que pasa por el foco, es paralelo a la directriz y termina en la parábola.",
-          "En una circunferencia, una **cuerda** es un segmento que une dos puntos de la circunferencia. Un **diámetro** es la cuerda que pasa por el centro."
-        ]
-      ,
-  studyGuide: `## Circunferencia y Parábola
+    studyGuide: `## Circunferencia y Parábola
 ### Circunferencia: definición y ecuaciones
 La circunferencia es el lugar geométrico de los puntos del plano que están a una distancia constante r (radio) de un punto fijo C(h, k) llamado centro. Su ecuación cartesiana es:
 
@@ -3066,7 +3052,21 @@ Para y² = 16x (p = 4, foco en (4, 0)), una cuerda focal con pendiente 1 es y = 
 
 Las soluciones son x = 12 ± √128 = 12 ± 8√2, dando los puntos (12 + 8√2, 8 + 8√2) y (12 - 8√2, -8 + 8√2).
 
-La circunferencia y la parábola son curvas cónicas fundamentales con amplias aplicaciones en óptica, telecomunicaciones y trayectorias balísticas.`},
+La circunferencia y la parábola son curvas cónicas fundamentales con amplias aplicaciones en óptica, telecomunicaciones y trayectorias balísticas.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "Una **circunferencia** es el lugar geométrico de todos los puntos que están a una distancia fija (**radio r**) de un punto fijo (**centro**).",
+          "Una **parábola** es el lugar geométrico de todos los puntos que están a igual distancia de un punto fijo (**foco**) y una recta fija (**directriz**).",
+          "El **vértice** de una parábola es el punto donde la parábola cruza su eje de simetría. Está a mitad de camino entre el foco y la directriz.",
+          "La **distancia focal** (o parámetro **p**) es la distancia del vértice al foco (y también del vértice a la directriz).",
+          "El **eje** de la parábola es la recta que pasa por el foco y es perpendicular a la directriz.",
+          "Un **corte** de una parábola (la **latus rectum**) es el segmento que pasa por el foco, es paralelo a la directriz y termina en la parábola.",
+          "En una circunferencia, una **cuerda** es un segmento que une dos puntos de la circunferencia. Un **diámetro** es la cuerda que pasa por el centro."
+        ]
+      },
       {
         level: "intermedio",
         title: "Fórmulas y propiedades",
@@ -3190,21 +3190,7 @@ La circunferencia y la parábola son curvas cónicas fundamentales con amplias a
     slug: "elipse-e-hiperbola",
     illustrationSummary: "Elipse con focos F₁, F₂ y ejes mayores/menores. Al lado, hipérbola con sus asíntotas y focos.",
     tip: "La clave para resolver ejercicios de cónicas rápidamente es memorizar la relación c² = a² − b² (elipse) vs c² = a² + b² (hiperbola). Identifica siempre cuál es a, b y c, y ubica los focos sobre el eje mayor. El excentricidad e te dice la forma: 0 < e < 1 (elipse), e > 1 (hiperbola). A mayor e, más alargada la figura.",
-    theory: [
-      {
-        level: "basico",
-        title: "Conceptos fundamentales",
-        lines: [
-          "Una **elipse** es el lugar geométrico de todos los puntos del plano tales que la **suma** de las distancias a dos puntos fijos (**focos**) es constante e igual a **2a**.",
-          "Una **hiperbola** es el lugar geométrico de todos los puntos del plano tales que la **diferencia** de las distancias a dos puntos fijos (**focos**) es constante e igual a **2a**.",
-          "El **centro** de la elipse e hiperbola es el punto medio entre los dos focos.",
-          "El **eje mayor** es el segmento de longitud 2a que une los dos **vértices** de la elipse o hiperbola.",
-          "En la elipse, el **eje menor** tiene longitud 2b, con b < a.",
-          "La **excentricidad (e)** mide la forma de la cónica: para la elipse 0 < e < 1, para la hiperbola e > 1.",
-          "Las **assíntotas** de la hiperbola son dos rectas que se cruzan en el centro y que la hiperbola se aproxima infinitamente sin cruzarlas."
-        ]
-      ,
-  studyGuide: `## Elipse e Hiperbola
+    studyGuide: `## Elipse e Hiperbola
 
 ### Definición de la Elipse
 
@@ -3282,7 +3268,21 @@ El punto satisface la ecuación, por lo tanto pertenece a la elipse.
 
 ### Propiedades Fundamentales
 
-La distancia focal de un punto $P$ sobre la elipse a un foco se calcula como $d = a - ex_0$ o $d = a + ex_0$ donde $x_0$ es la coordenada $x$ del punto. Para la hiperbola, las distancias focales son $|a - ex_0|$ y $|a + ex_0|$. El recta directriz tiene ecuación $x = \\\\pm a/e$.`},
+La distancia focal de un punto $P$ sobre la elipse a un foco se calcula como $d = a - ex_0$ o $d = a + ex_0$ donde $x_0$ es la coordenada $x$ del punto. Para la hiperbola, las distancias focales son $|a - ex_0|$ y $|a + ex_0|$. El recta directriz tiene ecuación $x = \\\\pm a/e$.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "Una **elipse** es el lugar geométrico de todos los puntos del plano tales que la **suma** de las distancias a dos puntos fijos (**focos**) es constante e igual a **2a**.",
+          "Una **hiperbola** es el lugar geométrico de todos los puntos del plano tales que la **diferencia** de las distancias a dos puntos fijos (**focos**) es constante e igual a **2a**.",
+          "El **centro** de la elipse e hiperbola es el punto medio entre los dos focos.",
+          "El **eje mayor** es el segmento de longitud 2a que une los dos **vértices** de la elipse o hiperbola.",
+          "En la elipse, el **eje menor** tiene longitud 2b, con b < a.",
+          "La **excentricidad (e)** mide la forma de la cónica: para la elipse 0 < e < 1, para la hiperbola e > 1.",
+          "Las **assíntotas** de la hiperbola son dos rectas que se cruzan en el centro y que la hiperbola se aproxima infinitamente sin cruzarlas."
+        ]
+      },
       {
         level: "intermedio",
         title: "Fórmulas y propiedades",
@@ -3438,20 +3438,7 @@ La distancia focal de un punto $P$ sobre la elipse a un foco se calcula como $d 
     slug: "pitagoras-y-aplicaciones",
     illustrationSummary: "Triángulo rectángulo con catetos a, b e hipotenusa c. Se muestra la relación a² + b² = c² con cuadrados sobre cada lado.",
     tip: "Verifica siempre si los datos forman una terna pitagórica conocida antes de calcular raíces; en la PUCP, las ternas (3,4,5), (5,12,13) y (8,15,17) aparecen con frecuencia.",
-    theory: [
-      {
-        level: "basico",
-        title: "Enunciado del Teorema de Pitágoras",
-        lines: [
-          "En un triángulo rectángulo, el cuadrado de la hipotenusa es igual a la suma de los cuadrados de los catetos: a² + b² = c².",
-          "La hipotenusa es el lado más largo, opuesto al ángulo recto de 90°.",
-          "Si conocemos dos lados, podemos hallar el tercero despejando la fórmula.",
-          "Para hallar la hipotenusa: c = √(a² + b²), donde a y b son los catetos.",
-          "Para hallar un cateto: a = √(c² - b²), donde c es la hipotenusa.",
-          "Los triángulos con lados en proporción 3:4:5 son siempre rectángulos."
-        ]
-      ,
-  studyGuide: `## Pitágoras y Aplicaciones
+    studyGuide: `## Pitágoras y Aplicaciones
 
 ### El Teorema de Pitágoras
 
@@ -3521,7 +3508,20 @@ Esto se demuestra notando que el punto medio de la hipotenusa es equidistante de
 
 ### Aplicación en Coordenadas
 
-El teorema de Pitágoras permite definir la métrica euclidiana. La distancia entre dos puntos $(x_1, y_1)$ y $(x_2, y_2)$ es la longitud del segmento que los une, calculada mediante la diferencia en cada coordenada. Esta métrica se extiende a tres dimensiones con $d = \\\\sqrt{(x_2-x_1)^2 + (y_2-y_1)^2 + (z_2-z_1)^2}$.`},
+El teorema de Pitágoras permite definir la métrica euclidiana. La distancia entre dos puntos $(x_1, y_1)$ y $(x_2, y_2)$ es la longitud del segmento que los une, calculada mediante la diferencia en cada coordenada. Esta métrica se extiende a tres dimensiones con $d = \\\\sqrt{(x_2-x_1)^2 + (y_2-y_1)^2 + (z_2-z_1)^2}$.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Enunciado del Teorema de Pitágoras",
+        lines: [
+          "En un triángulo rectángulo, el cuadrado de la hipotenusa es igual a la suma de los cuadrados de los catetos: a² + b² = c².",
+          "La hipotenusa es el lado más largo, opuesto al ángulo recto de 90°.",
+          "Si conocemos dos lados, podemos hallar el tercero despejando la fórmula.",
+          "Para hallar la hipotenusa: c = √(a² + b²), donde a y b son los catetos.",
+          "Para hallar un cateto: a = √(c² - b²), donde c es la hipotenusa.",
+          "Los triángulos con lados en proporción 3:4:5 son siempre rectángulos."
+        ]
+      },
       {
         level: "intermedio",
         title: "Ternas Pitagóricas y Aplicaciones",
@@ -3616,20 +3616,7 @@ El teorema de Pitágoras permite definir la métrica euclidiana. La distancia en
     slug: "teorema-de-tales",
     illustrationSummary: "Triángulo con una recta paralela a la base que corta los lados en proporción. Se marcan los segmentos proporcionales.",
     tip: "Cuando veas rectas paralelas cortando lados de un triángulo, aplica Tales de inmediato; si hay rectas paralelas iguales, los segmentos cortados en un lado son iguales a los del otro.",
-    theory: [
-      {
-        level: "basico",
-        title: "Enunciado del Teorema de Tales",
-        lines: [
-          "El Teorema de Tales establece que una recta paralela a un lado de un triángulo corta a los otros dos lados en proporción.",
-          "Si D está en AB y E está en AC con DE paralela a BC, entonces AD/DB = AE/EC.",
-          "También se cumple que AD/AB = AE/AC = DE/BC, manteniendo la proporción.",
-          "La recta paralela genera un triángulo más pequeño semejante al triángulo original.",
-          "Si la recta pasa por el punto medio de un lado, también pasa por el punto medio del otro.",
-          "Este teorema es fundamental para resolver problemas de proporcionalidad geométrica."
-        ]
-      ,
-  studyGuide: `## Teorema de Tales
+    studyGuide: `## Teorema de Tales
 
 ### Enunciado del Teorema
 
@@ -3694,7 +3681,20 @@ Si $A(x_1, y_1)$ y $B(x_2, y_2)$, el punto $P$ que divide al segmento $AB$ en ra
 
 $$P = \\\\left(\\\\frac{mx_2 + nx_1}{m+n}, \\\\frac{my_2 + ny_1}{m+n}\\\\right)$$
 
-Esta fórmula es una consecuencia directa del teorema de Tales aplicado a los ejes coordenados.`},
+Esta fórmula es una consecuencia directa del teorema de Tales aplicado a los ejes coordenados.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Enunciado del Teorema de Tales",
+        lines: [
+          "El Teorema de Tales establece que una recta paralela a un lado de un triángulo corta a los otros dos lados en proporción.",
+          "Si D está en AB y E está en AC con DE paralela a BC, entonces AD/DB = AE/EC.",
+          "También se cumple que AD/AB = AE/AC = DE/BC, manteniendo la proporción.",
+          "La recta paralela genera un triángulo más pequeño semejante al triángulo original.",
+          "Si la recta pasa por el punto medio de un lado, también pasa por el punto medio del otro.",
+          "Este teorema es fundamental para resolver problemas de proporcionalidad geométrica."
+        ]
+      },
       {
         level: "intermedio",
         title: "Aplicaciones del Teorema de Tales",
@@ -3767,20 +3767,7 @@ Esta fórmula es una consecuencia directa del teorema de Tales aplicado a los ej
     slug: "semejanza-avanzada",
     illustrationSummary: "Dos triángulos semejantes con la razón de semejanza k. Se muestra la relación entre áreas (k²) y perímetros (k).",
     tip: "Recuerda que en triángulos semejantes la razón de áreas es k² y la de perímetros es k; si te dan una relación de lados, eleva al cuadrado para áreas.",
-    theory: [
-      {
-        level: "basico",
-        title: "Definición de Semejanza",
-        lines: [
-          "Dos triángulos son semejantes si tienen los mismos ángulos y sus lados correspondientes son proporcionales.",
-          "La notación ΔABC ~ ΔDEF indica que los triángulos ABC y DEF son semejantes.",
-          "Si son semejantes, AB/DE = BC/EF = AC/DF = k, donde k es la razón de semejanza.",
-          "Los ángulos correspondientes son iguales: ∠A = ∠D, ∠B = ∠E, ∠C = ∠F.",
-          "Si la razón de semejanza es k, la de perímetros es k y la de áreas es k².",
-          "Todo triángulo equilátero es semejante a cualquier otro triángulo equilátero."
-        ]
-      ,
-  studyGuide: `## Semejanza Avanzada
+    studyGuide: `## Semejanza Avanzada
 
 ### Criterios de Semejanza
 
@@ -3842,7 +3829,20 @@ $$k = \\\\frac{AD}{AB} = \\\\frac{AE}{AC} = \\\\frac{DE}{BC}$$
 
 ### Semejanza y Cocientes Trigonométricos
 
-En un triángulo rectángulo, las razones trigonométricas se definen por la semejanza. Los catetos opuesto y adyacente a un ángulo determinado son proporcionales en todos los triángulos rectángulos con ese mismo ángulo, lo que fundamenta las funciones seno, coseno y tangente.`},
+En un triángulo rectángulo, las razones trigonométricas se definen por la semejanza. Los catetos opuesto y adyacente a un ángulo determinado son proporcionales en todos los triángulos rectángulos con ese mismo ángulo, lo que fundamenta las funciones seno, coseno y tangente.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Definición de Semejanza",
+        lines: [
+          "Dos triángulos son semejantes si tienen los mismos ángulos y sus lados correspondientes son proporcionales.",
+          "La notación ΔABC ~ ΔDEF indica que los triángulos ABC y DEF son semejantes.",
+          "Si son semejantes, AB/DE = BC/EF = AC/DF = k, donde k es la razón de semejanza.",
+          "Los ángulos correspondientes son iguales: ∠A = ∠D, ∠B = ∠E, ∠C = ∠F.",
+          "Si la razón de semejanza es k, la de perímetros es k y la de áreas es k².",
+          "Todo triángulo equilátero es semejante a cualquier otro triángulo equilátero."
+        ]
+      },
       {
         level: "intermedio",
         title: "Criterios de Semejanza",
@@ -3939,20 +3939,7 @@ En un triángulo rectángulo, las razones trigonométricas se definen por la sem
     slug: "criterios-de-congruencia",
     illustrationSummary: "Pares de triángulos congruentes con los criterios LAL, LAA y ASA. Cada par muestra los elementos iguales.",
     tip: "No confundas congruencia con semejanza: AAA nunca da congruencia. En la PUCP, identifica rápidamente qué elementos te dan para elegir el criterio correcto.",
-    theory: [
-      {
-        level: "basico",
-        title: "Congruencia de Triángulos",
-        lines: [
-          "Dos triángulos son congruentes si tienen exactamente la misma forma y el mismo tamaño.",
-          "La notación ΔABC ≅ ΔDEF indica que ambos triángulos son congruentes.",
-          "Los lados y ángulos correspondientes de triángulos congruentes son todos iguales.",
-          "El criterio LAL requiere dos lados y el ángulo comprendido entre ellos iguales.",
-          "El criterio LAA requiere dos ángulos y un lado correspondiente iguales.",
-          "El criterio ALA requiere dos ángulos y el lado comprendido entre ellos iguales."
-        ]
-      ,
-  studyGuide: `## Criterios de Congruencia
+    studyGuide: `## Criterios de Congruencia
 
 ### Definición de Congruencia
 
@@ -4015,7 +4002,20 @@ El criterio ASS (dos lados y un ángulo no comprendido) no es válido en general
 
 ### Congruencia de Triángulos Rectángulos
 
-Para triángulos rectángulos existen criterios especiales: el criterio de hipotenusa-cateto (HL) establece que si la hipotenusa y un cateto de un triángulo rectángulo son iguales a los de otro, los triángulos son congruentes. Este es un caso especial del criterio ASS que funciona porque el ángulo es de 90°.`},
+Para triángulos rectángulos existen criterios especiales: el criterio de hipotenusa-cateto (HL) establece que si la hipotenusa y un cateto de un triángulo rectángulo son iguales a los de otro, los triángulos son congruentes. Este es un caso especial del criterio ASS que funciona porque el ángulo es de 90°.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Congruencia de Triángulos",
+        lines: [
+          "Dos triángulos son congruentes si tienen exactamente la misma forma y el mismo tamaño.",
+          "La notación ΔABC ≅ ΔDEF indica que ambos triángulos son congruentes.",
+          "Los lados y ángulos correspondientes de triángulos congruentes son todos iguales.",
+          "El criterio LAL requiere dos lados y el ángulo comprendido entre ellos iguales.",
+          "El criterio LAA requiere dos ángulos y un lado correspondiente iguales.",
+          "El criterio ALA requiere dos ángulos y el lado comprendido entre ellos iguales."
+        ]
+      },
       {
         level: "intermedio",
         title: "Los Cuatro Criterios Principales",
@@ -4098,20 +4098,7 @@ Para triángulos rectángulos existen criterios especiales: el criterio de hipot
     slug: "area-triangulos-avanzado",
     illustrationSummary: "Triángulo con diferentes métodos de cálculo de área: base-altura, semiperímetro de Herón y coordenadas.",
     tip: "Domina las tres fórmulas de área (base-altura, Herón y coordenadas) y elige según los datos: si tienes tres lados usa Herón, si tienes vértices usa coordenadas.",
-    theory: [
-      {
-        level: "basico",
-        title: "Fórmula Base por Altura",
-        lines: [
-          "El área de un triángulo se calcula: A = (base × altura) / 2.",
-          "La base es cualquier lado del triángulo y la altura es la perpendicular desde el vértice opuesto.",
-          "La altura puede caer fuera del triángulo si el ángulo correspondiente es obtuso.",
-          "Un triángulo con base b y altura h tiene área igual a la mitad de un rectángulo bh.",
-          "La fórmula se escribe como A = bh/2, equivalente a la mitad del producto base por altura.",
-          "En un triángulo rectángulo, los dos catetos pueden usarse como base y altura."
-        ]
-      ,
-  studyGuide: `## Área de Triángulos Avanzado
+    studyGuide: `## Área de Triángulos Avanzado
 
 ### Fórmula General del Área
 
@@ -4192,7 +4179,20 @@ Los triángulos $ABD$ y $ACD$ tienen la misma altura respecto a $BC$, por lo que
 
 ### Máxima Área de un Triángulo
 
-Para un triángulo con dos lados dados $a$ y $b$, el área es máxima cuando el ángulo comprendido es de 90°. Esto se deduce de $A = \\\\frac{1}{2}ab\\\\sin C$ ya que $\\sin C$ alcanza su máximo值en $C = 90°$.`},
+Para un triángulo con dos lados dados $a$ y $b$, el área es máxima cuando el ángulo comprendido es de 90°. Esto se deduce de $A = \\\\frac{1}{2}ab\\\\sin C$ ya que $\\sin C$ alcanza su máximo值en $C = 90°$.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Fórmula Base por Altura",
+        lines: [
+          "El área de un triángulo se calcula: A = (base × altura) / 2.",
+          "La base es cualquier lado del triángulo y la altura es la perpendicular desde el vértice opuesto.",
+          "La altura puede caer fuera del triángulo si el ángulo correspondiente es obtuso.",
+          "Un triángulo con base b y altura h tiene área igual a la mitad de un rectángulo bh.",
+          "La fórmula se escribe como A = bh/2, equivalente a la mitad del producto base por altura.",
+          "En un triángulo rectángulo, los dos catetos pueden usarse como base y altura."
+        ]
+      },
       {
         level: "intermedio",
         title: "Fórmula de Herón y Coordenadas",
@@ -4266,20 +4266,7 @@ Para un triángulo con dos lados dados $a$ y $b$, el área es máxima cuando el 
     slug: "circunferencia-circunscrita-inscrita",
     illustrationSummary: "Triángulo con sus tres circunferencias notables: circunscrita (pasa por vértices), inscrita (toca lados) y los radios correspondientes.",
     tip: "Memoriza: circuncentro = mediatrices, incentro = bisectrices. En rectángulos el circuncentro es el punto medio de la hipotenusa, eso ahorra cálculos.",
-    theory: [
-      {
-        level: "basico",
-        title: "Circunferencias Asociadas al Triángulo",
-        lines: [
-          "La circunferencia circunscrita de un triángulo pasa exactamente por sus tres vértices.",
-          "El centro de esta circunferencia se llama circuncentro y se obtiene con las mediatrices.",
-          "El radio de la circunferencia circunscrita se representa con la letra R.",
-          "La circunferencia inscrita es tangente a los tres lados del triángulo por dentro.",
-          "El centro de la inscrita se llama incentro y se halla con las bisectrices de los ángulos.",
-          "El radio de la circunferencia inscrita se representa con la letra r."
-        ]
-      ,
-  studyGuide: `## Circunferencia Circunscrita e Inscrita
+    studyGuide: `## Circunferencia Circunscrita e Inscrita
 
 ### Circunferencia Circunscrita
 
@@ -4359,7 +4346,20 @@ Se verifica que $R = 2r$ para el triángulo equilátero.
 
 ### Relaciones Fundamentales
 
-El incentro siempre está dentro del triángulo. La distancia del circuncentro a cada vértice es $R$. Los puntos de tangencia de la circunferencia inscrita con los lados determinan segmentos iguales desde cada vértice: si los lados son $a$, $b$, $c$, los segmentos son $s-a$, $s-b$, $s-c$.`},
+El incentro siempre está dentro del triángulo. La distancia del circuncentro a cada vértice es $R$. Los puntos de tangencia de la circunferencia inscrita con los lados determinan segmentos iguales desde cada vértice: si los lados son $a$, $b$, $c$, los segmentos son $s-a$, $s-b$, $s-c$.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Circunferencias Asociadas al Triángulo",
+        lines: [
+          "La circunferencia circunscrita de un triángulo pasa exactamente por sus tres vértices.",
+          "El centro de esta circunferencia se llama circuncentro y se obtiene con las mediatrices.",
+          "El radio de la circunferencia circunscrita se representa con la letra R.",
+          "La circunferencia inscrita es tangente a los tres lados del triángulo por dentro.",
+          "El centro de la inscrita se llama incentro y se halla con las bisectrices de los ángulos.",
+          "El radio de la circunferencia inscrita se representa con la letra r."
+        ]
+      },
       {
         level: "intermedio",
         title: "Ubicación y Cálculo de los Radios",
@@ -4433,20 +4433,7 @@ El incentro siempre está dentro del triángulo. La distancia del circuncentro a
     slug: "potencia-de-un-punto",
     illustrationSummary: "Punto exterior a una circunferencia con secantes y tangentes. Se muestra la fórmula de potencia: PA × PB = PT².",
     tip: "La potencia de un punto es la misma para cualquier secante que pase por él: usa PA × PB = PC × PD para resolver rápidamente sin calcular distancias al centro.",
-    theory: [
-      {
-        level: "basico",
-        title: "Concepto de Potencia de un Punto",
-        lines: [
-          "La potencia de un punto P respecto a una circunferencia mide su posición relativa al círculo.",
-          "Si P está fuera, la potencia es positiva: P(P) = d² − R², donde d es la distancia al centro.",
-          "Si P está dentro, la potencia es negativa, también con la fórmula P(P) = d² − R².",
-          "Si P está sobre la circunferencia, su potencia es exactamente igual a cero.",
-          "Para un punto exterior con una secante PAB, la potencia es PA × PB.",
-          "Para un punto interior con una cuerda que pasa por él, la potencia también es PA × PB."
-        ]
-      ,
-  studyGuide: `## Potencia de un Punto
+    studyGuide: `## Potencia de un Punto
 
 ### Definición de Potencia
 
@@ -4521,7 +4508,20 @@ Dados dos circunferencias $\\\\Gamma_1$ y $\\\\Gamma_2$, el eje radical es la re
 
 ### Recta Tangente Común
 
-Cuando se trazan tangentes desde un punto exterior a dos circunferencias, los puntos de tangencia determinan rectas que están relacionadas por la potencia. Las tangentes comunes externas se encuentran en el eje radical, y su longitud se calcula mediante las potencias respectivas.`},
+Cuando se trazan tangentes desde un punto exterior a dos circunferencias, los puntos de tangencia determinan rectas que están relacionadas por la potencia. Las tangentes comunes externas se encuentran en el eje radical, y su longitud se calcula mediante las potencias respectivas.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Concepto de Potencia de un Punto",
+        lines: [
+          "La potencia de un punto P respecto a una circunferencia mide su posición relativa al círculo.",
+          "Si P está fuera, la potencia es positiva: P(P) = d² − R², donde d es la distancia al centro.",
+          "Si P está dentro, la potencia es negativa, también con la fórmula P(P) = d² − R².",
+          "Si P está sobre la circunferencia, su potencia es exactamente igual a cero.",
+          "Para un punto exterior con una secante PAB, la potencia es PA × PB.",
+          "Para un punto interior con una cuerda que pasa por él, la potencia también es PA × PB."
+        ]
+      },
       {
         level: "intermedio",
         title: "Relaciones de Potencia",
@@ -4601,20 +4601,7 @@ Cuando se trazan tangentes desde un punto exterior a dos circunferencias, los pu
     slug: "angulos-inscritos-centrales",
     illustrationSummary: "Circunferencia con ángulo central e inscrito que subtenden el mismo arco. Se marca la relación: central = 2 × inscrito.",
     tip: "El ángulo inscrito siempre vale la mitad del arco; memoriza que un ángulo inscrito en semicírculo es 90°, esto aparece mucho en la PUCP.",
-    theory: [
-      {
-        level: "basico",
-        title: "Ángulos Centrales e Inscritos",
-        lines: [
-          "Un ángulo central tiene su vértice en el centro de la circunferencia y lados que son radios.",
-          "Un ángulo inscrito tiene su vértice sobre la circunferencia y lados que son cuerdas.",
-          "El ángulo inscrito siempre mide la mitad del arco que intercepta sobre la circunferencia.",
-          "El ángulo central mide exactamente igual que el arco que intercepta en la circunferencia.",
-          "Por tanto, un ángulo inscrito es la mitad del ángulo central que subtiende el mismo arco.",
-          "Si dos ángulos inscritos interceptan el mismo arco, necesariamente son iguales entre sí."
-        ]
-      ,
-  studyGuide: `## Angulos Inscritos y Centrales
+    studyGuide: `## Angulos Inscritos y Centrales
 
 ### Definicion
 
@@ -4662,7 +4649,20 @@ Solucion: El diametro divide la circunferencia en dos arcos de 180 grados cada u
 
 ### Aplicaciones
 
-Los angulos inscritos y centrales son fundamentales en geometria circular, navegacion, astronomia y diseno arquitectonico. Se utilizan para calcular posiciones en circulos, resolver problemas de trayectorias circulares y construir figuras geometricas dentro de circunferencias.`},
+Los angulos inscritos y centrales son fundamentales en geometria circular, navegacion, astronomia y diseno arquitectonico. Se utilizan para calcular posiciones en circulos, resolver problemas de trayectorias circulares y construir figuras geometricas dentro de circunferencias.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Ángulos Centrales e Inscritos",
+        lines: [
+          "Un ángulo central tiene su vértice en el centro de la circunferencia y lados que son radios.",
+          "Un ángulo inscrito tiene su vértice sobre la circunferencia y lados que son cuerdas.",
+          "El ángulo inscrito siempre mide la mitad del arco que intercepta sobre la circunferencia.",
+          "El ángulo central mide exactamente igual que el arco que intercepta en la circunferencia.",
+          "Por tanto, un ángulo inscrito es la mitad del ángulo central que subtiende el mismo arco.",
+          "Si dos ángulos inscritos interceptan el mismo arco, necesariamente son iguales entre sí."
+        ]
+      },
       {
         level: "intermedio",
         title: "Relaciones Fundamentales",
@@ -5732,20 +5732,7 @@ Esta fórmula se utiliza en optimización de rutas, cálculo de áreas de trián
     slug: "razones-trigonometricas",
     illustrationSummary: "Triángulo rectángulo con los ángulos y los lados. Se muestran las razones: seno, coseno y tangente.",
     tip: "En triángulos rectángulos, memoriza SOH-CAH-TOA: Seno = Opuesto/Hipotenusa, Coseno = Adyacente/Hipotenusa, Tangente = Opuesto/Adyacente.",
-    theory: [
-      {
-        level: "basico",
-        title: "Definición de razones trigonométricas",
-        lines: [
-          "En un triángulo rectángulo, el seno de un ángulo es la razón entre el cateto opuesto y la hipotenusa.",
-          "El coseno es la razón entre el cateto adyacente al ángulo y la hipotenusa.",
-          "La tangente es la razón entre el cateto opuesto y el cateto adyacente.",
-          "Se denotan como sen(θ), cos(θ) y tan(θ) respectivamente.",
-          "La hipotenusa siempre es el lado más largo y está frente al ángulo recto.",
-          "SOH-CAH-TOA es una mnemotecnia para recordar estas tres definiciones."
-        ]
-      ,
-  studyGuide: `## Razones Trigonométricas
+    studyGuide: `## Razones Trigonométricas
 
 ### Definición en Triángulos Rectángulos
 
@@ -5815,7 +5802,20 @@ Entonces $\\\\tan \\\\theta = \\\\dfrac{\\\\sin \\\\theta}{\\\\cos \\\\theta} = 
 
 ### Aplicaciones Prácticas
 
-Las razones trigonométricas son esenciales en navegación para calcular distancias y rutas, en ingeniería para el análisis de fuerzas, en astronomía para medir distancias estelares, y en física para descomponer vectores en sus componentes. También son la base del análisis armónico y las señales periódicas.`},
+Las razones trigonométricas son esenciales en navegación para calcular distancias y rutas, en ingeniería para el análisis de fuerzas, en astronomía para medir distancias estelares, y en física para descomponer vectores en sus componentes. También son la base del análisis armónico y las señales periódicas.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Definición de razones trigonométricas",
+        lines: [
+          "En un triángulo rectángulo, el seno de un ángulo es la razón entre el cateto opuesto y la hipotenusa.",
+          "El coseno es la razón entre el cateto adyacente al ángulo y la hipotenusa.",
+          "La tangente es la razón entre el cateto opuesto y el cateto adyacente.",
+          "Se denotan como sen(θ), cos(θ) y tan(θ) respectivamente.",
+          "La hipotenusa siempre es el lado más largo y está frente al ángulo recto.",
+          "SOH-CAH-TOA es una mnemotecnia para recordar estas tres definiciones."
+        ]
+      },
       {
         level: "intermedio",
         title: "Relaciones entre razones trigonométricas",
@@ -5914,20 +5914,7 @@ Las razones trigonométricas son esenciales en navegación para calcular distanc
     slug: "identidades-trigonometricas",
     illustrationSummary: "Círculo trigonométrico con las identidades fundamentales: pitágorica, tangente y de doble ángulo.",
     tip: "La identidad pitagórica más usada es sen²θ + cos²θ = 1. De ella se derivan las otras dos: 1 + tan²θ = sec²θ y 1 + cot²θ = csc²θ.",
-    theory: [
-      {
-        level: "basico",
-        title: "Identidad pitagórica fundamental",
-        lines: [
-          "La identidad pitagórica más importante es: sen²(θ) + cos²(θ) = 1.",
-          "Se obtiene aplicando el teorema de Pitágoras a un triángulo rectángulo con hipotenusa 1.",
-          "Si el cateto opuesto es sen(θ) y el adyacente es cos(θ), entonces sen²(θ) + cos²(θ) = 1² = 1.",
-          "Esta identidad es válida para cualquier valor de θ.",
-          "Se puede reescribir como: sen²(θ) = 1 - cos²(θ) o cos²(θ) = 1 - sen²(θ).",
-          "Es la base para demostrar todas las demás identidades trigonométricas."
-        ]
-      ,
-  studyGuide: `## Identidades Trigonométricas
+    studyGuide: `## Identidades Trigonométricas
 
 ### Identidades Pitagóricas
 
@@ -5999,7 +5986,20 @@ $$\\\\frac{1 - \\\\cos 2\\\\theta}{\\\\sin 2\\\\theta} = \\\\frac{2\\\\sin^2 \\\
 
 ### Estrategias de Simplificación
 
-Para simplificar expresiones trigonométricas se recomienda: convertir todo a seno y coseno, factorizar cuando sea posible, aplicar identidades pitagóricas para reducir órdenes, y buscar patrones de ángulo doble o mitad. Practicar con múltiples problemas desarrolla la intuición para识别 which identity es más conveniente en cada caso.`},
+Para simplificar expresiones trigonométricas se recomienda: convertir todo a seno y coseno, factorizar cuando sea posible, aplicar identidades pitagóricas para reducir órdenes, y buscar patrones de ángulo doble o mitad. Practicar con múltiples problemas desarrolla la intuición para识别 which identity es más conveniente en cada caso.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Identidad pitagórica fundamental",
+        lines: [
+          "La identidad pitagórica más importante es: sen²(θ) + cos²(θ) = 1.",
+          "Se obtiene aplicando el teorema de Pitágoras a un triángulo rectángulo con hipotenusa 1.",
+          "Si el cateto opuesto es sen(θ) y el adyacente es cos(θ), entonces sen²(θ) + cos²(θ) = 1² = 1.",
+          "Esta identidad es válida para cualquier valor de θ.",
+          "Se puede reescribir como: sen²(θ) = 1 - cos²(θ) o cos²(θ) = 1 - sen²(θ).",
+          "Es la base para demostrar todas las demás identidades trigonométricas."
+        ]
+      },
       {
         level: "intermedio",
         title: "Identidades derivadas y de tangente",
@@ -6096,20 +6096,7 @@ Para simplificar expresiones trigonométricas se recomienda: convertir todo a se
     slug: "suma-diferencia-trig",
     illustrationSummary: "Diagrama de las fórmulas de suma y diferencia para seno y coseno. Se muestran los ángulos α y β.",
     tip: "Las fórmulas de suma y diferencia se aplican para calcular sen/cos de ángulos no estándar como 75° = 45° + 30°. Memoriza el patrón: cos cambia el signo, sen mantiene.",
-    theory: [
-      {
-        level: "basico",
-        title: "Fórmulas de suma para seno y coseno",
-        lines: [
-          "sen(A + B) = sen(A)·cos(B) + cos(A)·sen(B).",
-          "sen(A - B) = sen(A)·cos(B) - cos(A)·sen(B).",
-          "cos(A + B) = cos(A)·cos(B) - sen(A)·sen(B).",
-          "cos(A - B) = cos(A)·cos(B) + sen(A)·sen(B).",
-          "Nota el patrón: para seno el signo se mantiene, para coseno el signo cambia.",
-          "Estas fórmulas permiten calcular funciones de ángulos como 75°, 15°, etc."
-        ]
-      ,
-  studyGuide: `## Suma y Diferencia de Ángulos Trigonométricos
+    studyGuide: `## Suma y Diferencia de Ángulos Trigonométricos
 
 ### Fórmulas de Suma
 
@@ -6185,7 +6172,20 @@ Corrigiendo: el resultado es $\\\\sqrt{3}$, no 1. Esto demuestra la importancia 
 
 ### Consejos de Estudio
 
-Memorizar las fórmulas de suma y diferencia es esencial. Una estrategia efectiva es recordar que el seno mantiene el orden del signo mientras que el coseno lo invierte. Practicar con ángulos como $15°, 75°, 105°, 165°$ fortalece la comprensión de su aplicación práctica.`},
+Memorizar las fórmulas de suma y diferencia es esencial. Una estrategia efectiva es recordar que el seno mantiene el orden del signo mientras que el coseno lo invierte. Practicar con ángulos como $15°, 75°, 105°, 165°$ fortalece la comprensión de su aplicación práctica.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Fórmulas de suma para seno y coseno",
+        lines: [
+          "sen(A + B) = sen(A)·cos(B) + cos(A)·sen(B).",
+          "sen(A - B) = sen(A)·cos(B) - cos(A)·sen(B).",
+          "cos(A + B) = cos(A)·cos(B) - sen(A)·sen(B).",
+          "cos(A - B) = cos(A)·cos(B) + sen(A)·sen(B).",
+          "Nota el patrón: para seno el signo se mantiene, para coseno el signo cambia.",
+          "Estas fórmulas permiten calcular funciones de ángulos como 75°, 15°, etc."
+        ]
+      },
       {
         level: "intermedio",
         title: "Aplicación de las fórmulas de suma",
@@ -6276,20 +6276,7 @@ Memorizar las fórmulas de suma y diferencia es esencial. Una estrategia efectiv
     slug: "ley-de-senos",
     illustrationSummary: "Triángulo general con los lados a, b, c y ángulos A, B, C. Se muestra la relación a/sen(A) = b/sen(B) = c/sen(C).",
     tip: "La ley de senos funciona con cualquier triángulo: a/senA = b/senB = c/senC. Úsala cuando conoces un lado y su ángulo opuesto, y buscas otro lado o ángulo.",
-    theory: [
-      {
-        level: "basico",
-        title: "Enunciado de la ley de senos",
-        lines: [
-          "En cualquier triángulo, el cociente entre un lado y el seno de su ángulo opuesto es constante.",
-          "La fórmula es: a/sen(A) = b/sen(B) = c/sen(C).",
-          "Aquí a, b, c son los lados y A, B, C son los ángulos opuestos respectivamente.",
-          "También se escribe como: a/senA = b/senB = c/senC = 2R, donde R es el radio de la circunferencia circunscrita.",
-          "Es útil cuando se conoce un par lado-ángulo y se busca otro lado o ángulo.",
-          "Se aplica en triángulos agudos, rectángulos y obtusos por igual."
-        ]
-      ,
-  studyGuide: `## Ley de Senos
+    studyGuide: `## Ley de Senos
 
 ### Enunciado y Fórmula
 
@@ -6365,7 +6352,20 @@ Cuando se tienen dos lados y un ángulo opuesto a uno de ellos, se calcula $\\\\
 
 ### Aplicaciones Prácticas
 
-La Ley de Senos se aplica en topografía para medir distancias inaccesibles, en navegación para calcular rutas entre puntos, en astronomía para determinar distancias entre cuerpos celestes, y en arquitectura para el diseño de estructuras trianguladas. Es una herramienta indispensable en cualquier campo que requiera mediciones angulares y lineales.`},
+La Ley de Senos se aplica en topografía para medir distancias inaccesibles, en navegación para calcular rutas entre puntos, en astronomía para determinar distancias entre cuerpos celestes, y en arquitectura para el diseño de estructuras trianguladas. Es una herramienta indispensable en cualquier campo que requiera mediciones angulares y lineales.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Enunciado de la ley de senos",
+        lines: [
+          "En cualquier triángulo, el cociente entre un lado y el seno de su ángulo opuesto es constante.",
+          "La fórmula es: a/sen(A) = b/sen(B) = c/sen(C).",
+          "Aquí a, b, c son los lados y A, B, C son los ángulos opuestos respectivamente.",
+          "También se escribe como: a/senA = b/senB = c/senC = 2R, donde R es el radio de la circunferencia circunscrita.",
+          "Es útil cuando se conoce un par lado-ángulo y se busca otro lado o ángulo.",
+          "Se aplica en triángulos agudos, rectángulos y obtusos por igual."
+        ]
+      },
       {
         level: "intermedio",
         title: "Aplicación de la ley de senos",
@@ -6460,20 +6460,7 @@ La Ley de Senos se aplica en topografía para medir distancias inaccesibles, en 
     slug: "ley-de-cosenos",
     illustrationSummary: "Triángulo con dos lados y el ángulo comprendido. Se muestra la fórmula del coseno para el tercer lado.",
     tip: "La ley de cosenos es como una extensión del teorema de Pitágoras: a² = b² + c² - 2bc·cos(A). Úsala cuando conoces dos lados y el ángulo incluido (LAL).",
-    theory: [
-      {
-        level: "basico",
-        title: "Enunciado de la ley de cosenos",
-        lines: [
-          "En cualquier triángulo: a² = b² + c² - 2bc·cos(A).",
-          "De forma equivalente: b² = a² + c² - 2ac·cos(B).",
-          "Y: c² = a² + b² - 2ab·cos(C).",
-          "Cuando el ángulo es 90°, cos(90°) = 0 y se reduce al teorema de Pitágoras.",
-          "Es útil para encontrar un lado cuando conoces dos lados y el ángulo incluido.",
-          "También se usa para encontrar un ángulo cuando conoces los tres lados."
-        ]
-      ,
-  studyGuide: `## Ley de Cosenos
+    studyGuide: `## Ley de Cosenos
 
 ### Enunciado y Fórmula
 
@@ -6563,7 +6550,20 @@ La Ley de Cosenos es preferible cuando se conoce el ángulo comprendido entre do
 
 ### Aplicaciones Prácticas
 
-La Ley de Cosenos tiene amplias aplicaciones en geodesia para medir distancias entre puntos en la superficie terrestre, en ingeniería civil para el cálculo de estructuras, en física para el análisis de movimiento oblicuo, y en GPS para determinar posiciones mediante trilateración. Su capacidad para trabajar con triángulos generales la convierte en una herramienta versátil en múltiples disciplinas.`},
+La Ley de Cosenos tiene amplias aplicaciones en geodesia para medir distancias entre puntos en la superficie terrestre, en ingeniería civil para el cálculo de estructuras, en física para el análisis de movimiento oblicuo, y en GPS para determinar posiciones mediante trilateración. Su capacidad para trabajar con triángulos generales la convierte en una herramienta versátil en múltiples disciplinas.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Enunciado de la ley de cosenos",
+        lines: [
+          "En cualquier triángulo: a² = b² + c² - 2bc·cos(A).",
+          "De forma equivalente: b² = a² + c² - 2ac·cos(B).",
+          "Y: c² = a² + b² - 2ab·cos(C).",
+          "Cuando el ángulo es 90°, cos(90°) = 0 y se reduce al teorema de Pitágoras.",
+          "Es útil para encontrar un lado cuando conoces dos lados y el ángulo incluido.",
+          "También se usa para encontrar un ángulo cuando conoces los tres lados."
+        ]
+      },
       {
         level: "intermedio",
         title: "Hallar lados con la ley de cosenos",
@@ -6658,20 +6658,7 @@ La Ley de Cosenos tiene amplias aplicaciones en geodesia para medir distancias e
     slug: "area-con-trigonometria",
     illustrationSummary: "Triángulo con dos lados y el ángulo entre ellos. Se muestra la fórmula A = ½ab·sen(C).",
     tip: "La fórmula del área con trigonometría es: Área = ½ab·sin(C). Solo necesitas dos lados y el ángulo que forma entre ellos, sin importar si el triángulo es rectángulo o no.",
-    theory: [
-      {
-        level: "basico",
-        title: "Fórmula del área con seno",
-        lines: [
-          "El área de un triángulo se puede calcular como: Área = ½ · base · altura.",
-          "Si no conoces la altura directamente, puedes usar: Área = ½ · a · b · sen(C).",
-          "Donde a y b son dos lados y C es el ángulo incluido entre ellos.",
-          "Esta fórmula funciona para cualquier triángulo: agudo, rectángulo u obtuso.",
-          "Es especialmente útil cuando no conoces la altura pero sí dos lados y su ángulo.",
-          "Ejemplo: a = 10, b = 8, C = 30° → Área = ½(10)(8)sen(30°) = 20."
-        ]
-      ,
-  studyGuide: `## Área de Triángulos con Trigonometría
+    studyGuide: `## Área de Triángulos con Trigonometría
 
 ### Fórmula Fundamental del Área
 
@@ -6759,7 +6746,20 @@ El área de un triángulo con dos lados fijos es máxima cuando el ángulo compr
 
 ### Aplicaciones Prácticas
 
-El cálculo de áreas con trigonometría es fundamental en topografía para medir superficies irregulares, en agricultura para calcular extensiones de terreno, en arquitectura para el diseño de plantas con formas triangulares, y en ingeniería para el cálculo de secciones transversales de vigas y estructuras. También se aplica en computación gráfica para el renderizado de superficies trianguladas en modelado 3D.`},
+El cálculo de áreas con trigonometría es fundamental en topografía para medir superficies irregulares, en agricultura para calcular extensiones de terreno, en arquitectura para el diseño de plantas con formas triangulares, y en ingeniería para el cálculo de secciones transversales de vigas y estructuras. También se aplica en computación gráfica para el renderizado de superficies trianguladas en modelado 3D.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Fórmula del área con seno",
+        lines: [
+          "El área de un triángulo se puede calcular como: Área = ½ · base · altura.",
+          "Si no conoces la altura directamente, puedes usar: Área = ½ · a · b · sen(C).",
+          "Donde a y b son dos lados y C es el ángulo incluido entre ellos.",
+          "Esta fórmula funciona para cualquier triángulo: agudo, rectángulo u obtuso.",
+          "Es especialmente útil cuando no conoces la altura pero sí dos lados y su ángulo.",
+          "Ejemplo: a = 10, b = 8, C = 30° → Área = ½(10)(8)sen(30°) = 20."
+        ]
+      },
       {
         level: "intermedio",
         title: "Aplicaciones de la fórmula de área",
@@ -6872,20 +6872,7 @@ El cálculo de áreas con trigonometría es fundamental en topografía para medi
     slug: "ecuaciones-trigonometricas",
     illustrationSummary: "Gráfica de seno y coseno con las soluciones de ecuaciones trigonométricas marcadas.",
     tip: "Para resolver ecuaciones trigonométricas, primero aísla la función trigonométrica. Luego usa el arco inverso y recuerda que hay infinitas soluciones: θ + 360°n.",
-    theory: [
-      {
-        level: "basico",
-        title: "Ecuaciones trigonométricas básicas",
-        lines: [
-          "Una ecuación trigonométrica contiene una o más funciones trigonométricas de la variable.",
-          "Para resolver sen(θ) = k, se usa θ = arcsen(k) + 360°n o θ = 180° - arcsen(k) + 360°n.",
-          "Para resolver cos(θ) = k, se usa θ = arccos(k) + 360°n o θ = -arccos(k) + 360°n.",
-          "Para resolver tan(θ) = k, se usa θ = arctan(k) + 180°n, donde n es un entero.",
-          "Si se pide solución en [0°, 360°), solo se listan los valores de n que dan ángulos en ese rango.",
-          "Siempre verifica las soluciones sustituyendo en la ecuación original."
-        ]
-      ,
-  studyGuide: `## Ecuaciones Trigonométricas
+    studyGuide: `## Ecuaciones Trigonométricas
 
 ### Concepto y Clasificación
 
@@ -6983,7 +6970,20 @@ Es indispensable verificar las soluciones en la ecuación original, especialment
 
 ### Aplicaciones Prácticas
 
-Las ecuaciones trigonométricas aparecen en el análisis de señales periódicas, oscilaciones mecánicas, circuitos eléctricos de corriente alterna, procesamiento de audio y video, y en la resolución de problemas de interferencia de ondas. Su dominio es esencial para cualquier campo que involucre fenómenos cíclicos o periódicos.`},
+Las ecuaciones trigonométricas aparecen en el análisis de señales periódicas, oscilaciones mecánicas, circuitos eléctricos de corriente alterna, procesamiento de audio y video, y en la resolución de problemas de interferencia de ondas. Su dominio es esencial para cualquier campo que involucre fenómenos cíclicos o periódicos.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Ecuaciones trigonométricas básicas",
+        lines: [
+          "Una ecuación trigonométrica contiene una o más funciones trigonométricas de la variable.",
+          "Para resolver sen(θ) = k, se usa θ = arcsen(k) + 360°n o θ = 180° - arcsen(k) + 360°n.",
+          "Para resolver cos(θ) = k, se usa θ = arccos(k) + 360°n o θ = -arccos(k) + 360°n.",
+          "Para resolver tan(θ) = k, se usa θ = arctan(k) + 180°n, donde n es un entero.",
+          "Si se pide solución en [0°, 360°), solo se listan los valores de n que dan ángulos en ese rango.",
+          "Siempre verifica las soluciones sustituyendo en la ecuación original."
+        ]
+      },
       {
         level: "intermedio",
         title: "Ecuaciones con cuadrados y identidades",
@@ -7060,20 +7060,7 @@ Las ecuaciones trigonométricas aparecen en el análisis de señales periódicas
     slug: "aplicaciones-trigonometricas",
     illustrationSummary: "Problema práctico: avión con ángulo de elevación y distancia. Se muestra la aplicación de razones trigonométricas.",
     tip: "Para problemas de alturas inaccesibles, dibuja el diagrama con dos triángulos rectángulos que comparten la misma base. La diferencia de cotangentes te da la altura.",
-    theory: [
-      {
-        level: "basico",
-        title: "Problemas de alturas inaccesibles",
-        lines: [
-          "Para medir la altura de un objeto inaccesible (edificio, montaña), se usan ángulos de elevación.",
-          "Desde un punto A, se mide el ángulo de elevación α hacia la cima.",
-          "Se camina una distancia conocida d hasta un punto B y se mide el ángulo β.",
-          "La altura h se calcula usando tangente: h = d / (1/tan(β) - 1/tan(α)).",
-          "Si el punto B está más cerca, β > α, y la fórmula funciona igual.",
-          "Se requiere una línea base horizontal y dos mediciones de ángulos."
-        ]
-      ,
-  studyGuide: `
+    studyGuide: `
 ## Aplicaciones Trigonometricas
 
 ### Introducción
@@ -7139,7 +7126,20 @@ $$c \\\\approx 5.67$$
 | Triángulo rectángulo | Razones trigonométricas básicas |
 | Área de un triángulo | $A = \\\\frac{1}{2}ab\\\\sin C$ |
 | Distancia entre dos puntos | $d = \\\\sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}$ |
-`},
+`,
+    theory: [
+      {
+        level: "basico",
+        title: "Problemas de alturas inaccesibles",
+        lines: [
+          "Para medir la altura de un objeto inaccesible (edificio, montaña), se usan ángulos de elevación.",
+          "Desde un punto A, se mide el ángulo de elevación α hacia la cima.",
+          "Se camina una distancia conocida d hasta un punto B y se mide el ángulo β.",
+          "La altura h se calcula usando tangente: h = d / (1/tan(β) - 1/tan(α)).",
+          "Si el punto B está más cerca, β > α, y la fórmula funciona igual.",
+          "Se requiere una línea base horizontal y dos mediciones de ángulos."
+        ]
+      },
       {
         level: "intermedio",
         title: "Problemas de distancia",
@@ -7237,20 +7237,7 @@ $$c \\\\approx 5.67$$
     slug: "vectores-en-el-plano",
     illustrationSummary: "Vectores en el plano cartesiano con componentes, magnitud y dirección. Se muestran los ejes X e Y.",
     tip: "Un vector se define por su magnitud y dirección. Siempre representa desplazamiento, no posición.",
-    theory: [
-      {
-        level: "basico",
-        title: "Definición de vector",
-        lines: [
-          "Un vector es un segmento orientado entre dos puntos.",
-          "Se denota como AB⃗ o simplemente v⃗ con una flecha.",
-          "El punto de inicio se llama origen y el final, extremo.",
-          "Dos vectores son iguales si tienen misma magnitud y dirección.",
-          "El vector nulo tiene magnitud cero y no tiene dirección.",
-          "Los vectores libres se pueden trasladar sin cambiar su identidad."
-        ]
-      ,
-  studyGuide: `
+    studyGuide: `
 ## Vectores en el Plano
 
 ### Concepto de Vector
@@ -7325,7 +7312,20 @@ Comprobamos: $(-6, 3) = k(2, -1)$. Entonces $-6 = 2k$ y $3 = -k$, de donde $k = 
 | Punto medio | $M = \\\\left(\\\\frac{x_1+x_2}{2}, \\\\frac{y_1+y_2}{2}\\\\right)$ |
 | Ángulo con eje X | $\\\\theta = \\\\arctan(b/a)$ |
 | Colinealidad | $\\\\vec{u} = k\\\\vec{v}$ |
-`},
+`,
+    theory: [
+      {
+        level: "basico",
+        title: "Definición de vector",
+        lines: [
+          "Un vector es un segmento orientado entre dos puntos.",
+          "Se denota como AB⃗ o simplemente v⃗ con una flecha.",
+          "El punto de inicio se llama origen y el final, extremo.",
+          "Dos vectores son iguales si tienen misma magnitud y dirección.",
+          "El vector nulo tiene magnitud cero y no tiene dirección.",
+          "Los vectores libres se pueden trasladar sin cambiar su identidad."
+        ]
+      },
       {
         level: "intermedio",
         title: "Representación y componentes",
@@ -7426,20 +7426,7 @@ Comprobamos: $(-6, 3) = k(2, -1)$. Entonces $-6 = 2k$ y $3 = -k$, de donde $k = 
     slug: "operaciones-vectores",
     illustrationSummary: "Vectores sumados por el método del paralelogramo y la resta por el método del triángulo.",
     tip: "La suma de vectores se puede hacer con la regla del paralelogramo o componente a componente.",
-    theory: [
-      {
-        level: "basico",
-        title: "Suma y resta de vectores",
-        lines: [
-          "La suma de dos vectores se realiza componente a componente.",
-          "Si u⃗ = (a₁, b₁) y v⃗ = (a₂, b₂), entonces u⃗ + v⃗ = (a₁+a₂, b₁+b₂).",
-          "La resta u⃗ − v⃗ = (a₁−a₂, b₁−b₂) reste componente a componente.",
-          "Geométricamente, u⃗ + v⃗ se forma con la regla del paralelogramo.",
-          "La suma es conmutativa: u⃗ + v⃗ = v⃗ + u⃗.",
-          "El vector opuesto −v⃗ invierte la dirección manteniendo la magnitud."
-        ]
-      ,
-  studyGuide: `
+    studyGuide: `
 ## Operaciones con Vectores
 
 ### Suma de Vectores
@@ -7525,7 +7512,20 @@ $$\\\\vec{v} = 4\\\\hat{i} - 3\\\\hat{j}$$
 | Escalar | $(ka, \\\\; kb)$ |
 | Norma | $\\\\sqrt{a^2+b^2}$ |
 | Opuesto | $(-a, \\\\; -b)$ |
-`},
+`,
+    theory: [
+      {
+        level: "basico",
+        title: "Suma y resta de vectores",
+        lines: [
+          "La suma de dos vectores se realiza componente a componente.",
+          "Si u⃗ = (a₁, b₁) y v⃗ = (a₂, b₂), entonces u⃗ + v⃗ = (a₁+a₂, b₁+b₂).",
+          "La resta u⃗ − v⃗ = (a₁−a₂, b₁−b₂) reste componente a componente.",
+          "Geométricamente, u⃗ + v⃗ se forma con la regla del paralelogramo.",
+          "La suma es conmutativa: u⃗ + v⃗ = v⃗ + u⃗.",
+          "El vector opuesto −v⃗ invierte la dirección manteniendo la magnitud."
+        ]
+      },
       {
         level: "intermedio",
         title: "Multiplicación por escalar",
@@ -7624,20 +7624,7 @@ $$\\\\vec{v} = 4\\\\hat{i} - 3\\\\hat{j}$$
     slug: "producto-escalar",
     illustrationSummary: "Dos vectores con el ángulo θ entre ellos. Se muestra la fórmula del producto escalar: a·b = |a||b|cos(θ).",
     tip: "Si el producto escalar es cero, los vectores son perpendiculares. Es la clave para resolver ortogonalidad.",
-    theory: [
-      {
-        level: "basico",
-        title: "Definición de producto escalar",
-        lines: [
-          "El producto escalar de u⃗ = (a₁, b₁) y v⃗ = (a₂, b₂) es un número.",
-          "Se calcula como u⃗ · v⃗ = a₁·a₂ + b₁·b₂.",
-          "El resultado es un escalar, no un vector.",
-          "El producto escalar es conmutativo: u⃗ · v⃗ = v⃗ · u⃗.",
-          "Es distributivo: u⃗ · (v⃗ + w⃗) = u⃗ · v⃗ + u⃗ · w⃗.",
-          "El producto de un vector por sí mismo es |v⃗|²."
-        ]
-      ,
-  studyGuide: `
+    studyGuide: `
 ## Producto Escalar
 
 ### Definición
@@ -7724,7 +7711,20 @@ $$\\\\text{proy}_{\\\\vec{v}} \\\\vec{u} = \\\\frac{23}{5} = 4.6$$
 | Ángulo | $\\\\arccos(\\\\vec{u} \\\\cdot \\\\vec{v} / |\\\\vec{u}||\\\\vec{v}|)$ |
 | Perpendicularidad | $\\\\vec{u} \\\\cdot \\\\vec{v} = 0$ |
 | Proyección | $(\\\\vec{u} \\\\cdot \\\\vec{v}) / |\\\\vec{v}|$ |
-`},
+`,
+    theory: [
+      {
+        level: "basico",
+        title: "Definición de producto escalar",
+        lines: [
+          "El producto escalar de u⃗ = (a₁, b₁) y v⃗ = (a₂, b₂) es un número.",
+          "Se calcula como u⃗ · v⃗ = a₁·a₂ + b₁·b₂.",
+          "El resultado es un escalar, no un vector.",
+          "El producto escalar es conmutativo: u⃗ · v⃗ = v⃗ · u⃗.",
+          "Es distributivo: u⃗ · (v⃗ + w⃗) = u⃗ · v⃗ + u⃗ · w⃗.",
+          "El producto de un vector por sí mismo es |v⃗|²."
+        ]
+      },
       {
         level: "intermedio",
         title: "Ángulo entre vectores",
@@ -7823,20 +7823,7 @@ $$\\\\text{proy}_{\\\\vec{v}} \\\\vec{u} = \\\\frac{23}{5} = 4.6$$
     slug: "rectas-vectorial",
     illustrationSummary: "Recta con vector director y punto. Se muestran las ecuaciones paramétricas y vectorial.",
     tip: "Una recta se define con un punto y un vector director. La forma paramétrica es clave para resolver intersecciones.",
-    theory: [
-      {
-        level: "basico",
-        title: "Ecuación vectorial de la recta",
-        lines: [
-          "Una recta se define por un punto P₀ y un vector director d⃗.",
-          "La ecuación vectorial es r⃗(t) = OP₀⃗ + t·d⃗ donde t es real.",
-          "Cada valor de t determina un punto distinto de la recta.",
-          "El vector d⃗ indica la dirección pero no la posición.",
-          "Un vector director puede ser cualquier vector no nulo paralelo.",
-          "La recta pasa por todos los puntos de la forma P₀ + t·d⃗."
-        ]
-      ,
-  studyGuide: `
+    studyGuide: `
 ## Rectas en Forma Vectorial
 
 ### Ecuación Vectorial de una Recta
@@ -7938,7 +7925,20 @@ Forma general: $3x + 4y - 17 = 0$.
 | Paramétrica | $x = x_0 + at$, $y = y_0 + bt$ |
 | Canónica | $\\\\frac{x-x_0}{a} = \\\\frac{y-y_0}{b}$ |
 | General | $Ax + By + C = 0$ |
-`},
+`,
+    theory: [
+      {
+        level: "basico",
+        title: "Ecuación vectorial de la recta",
+        lines: [
+          "Una recta se define por un punto P₀ y un vector director d⃗.",
+          "La ecuación vectorial es r⃗(t) = OP₀⃗ + t·d⃗ donde t es real.",
+          "Cada valor de t determina un punto distinto de la recta.",
+          "El vector d⃗ indica la dirección pero no la posición.",
+          "Un vector director puede ser cualquier vector no nulo paralelo.",
+          "La recta pasa por todos los puntos de la forma P₀ + t·d⃗."
+        ]
+      },
       {
         level: "intermedio",
         title: "Forma paramétrica y cartesiana",
@@ -8037,20 +8037,7 @@ Forma general: $3x + 4y - 17 = 0$.
     slug: "elipse-analitica",
     illustrationSummary: "Elipse con ejes mayor y menor, focos F₁, F₂ y excentricidad. Se muestra la ecuación estándar.",
     tip: "En la elipse la suma de distancias a los focos es constante e igual a 2a. Memoriza c²=a²−b².",
-    theory: [
-      {
-        level: "basico",
-        title: "Definición y ecuación",
-        lines: [
-          "Una elipse es el lugar de puntos cuya suma de distancias a dos focos es constante.",
-          "La ecuación con centro en el origen es x²/a² + y²/b² = 1.",
-          "El valor a es la semieje mayor y b el semieje menor.",
-          "Si a > b la elipse es horizontal, si b > a es vertical.",
-          "Los vértices están en (±a, 0) o (0, ±b) según la orientación.",
-          "Los extremos del eje menor son (0, ±b) o (±b, 0)."
-        ]
-      ,
-  studyGuide: `
+    studyGuide: `
 ## Elipse en el Análisis Cartesiano
 
 ### Definición
@@ -8148,7 +8135,20 @@ El punto pertenece a la elipse.
 | Radio vector | $r_1 = a + ex$ |
 | Tangente | $\\\\frac{xx_0}{a^2} + \\\\frac{yy_0}{b^2} = 1$ |
 | Área | $A = \\\\pi a b$ |
-`},
+`,
+    theory: [
+      {
+        level: "basico",
+        title: "Definición y ecuación",
+        lines: [
+          "Una elipse es el lugar de puntos cuya suma de distancias a dos focos es constante.",
+          "La ecuación con centro en el origen es x²/a² + y²/b² = 1.",
+          "El valor a es la semieje mayor y b el semieje menor.",
+          "Si a > b la elipse es horizontal, si b > a es vertical.",
+          "Los vértices están en (±a, 0) o (0, ±b) según la orientación.",
+          "Los extremos del eje menor son (0, ±b) o (±b, 0)."
+        ]
+      },
       {
         level: "intermedio",
         title: "Focos y excentricidad",
@@ -8258,20 +8258,7 @@ El punto pertenece a la elipse.
     slug: "hiperbola-analitica",
     illustrationSummary: "Hipérbola con sus dos ramas, asíntotas y focos. Se marca la relación c² = a² + b².",
     tip: "En la hipérbola la diferencia de distancias a los focos es constante. Las asíntotas son claves para graficar.",
-    theory: [
-      {
-        level: "basico",
-        title: "Definición y ecuación",
-        lines: [
-          "Una hipérbola es el lugar de puntos cuya diferencia de distancias a dos focos es constante.",
-          "La ecuación con centro en origen es x²/a² − y²/b² = 1 (horizontal).",
-          "Si es vertical la ecuación es y²/a² − x²/b² = 1.",
-          "La hipérbola tiene dos ramas separadas.",
-          "Los vértices están en (±a, 0) para la horizontal.",
-          "Los focos están en (±c, 0) donde c² = a² + b²."
-        ]
-      ,
-  studyGuide: `
+    studyGuide: `
 ## Hipérbola en el Análisis Cartesiano
 
 ### Definición
@@ -8377,7 +8364,20 @@ $$\\\\frac{(x-1)^2}{16} - \\\\frac{(y+2)^2}{9} = 1$$
 | Asíntotas (centro en origen) | $y = \\\\pm \\\\frac{b}{a}x$ |
 | Tangente | $\\\\frac{xx_0}{a^2} - \\\\frac{yy_0}{b^2} = 1$ |
 | Área de rectángulo | $4ab$ |
-`},
+`,
+    theory: [
+      {
+        level: "basico",
+        title: "Definición y ecuación",
+        lines: [
+          "Una hipérbola es el lugar de puntos cuya diferencia de distancias a dos focos es constante.",
+          "La ecuación con centro en origen es x²/a² − y²/b² = 1 (horizontal).",
+          "Si es vertical la ecuación es y²/a² − x²/b² = 1.",
+          "La hipérbola tiene dos ramas separadas.",
+          "Los vértices están en (±a, 0) para la horizontal.",
+          "Los focos están en (±c, 0) donde c² = a² + b²."
+        ]
+      },
       {
         level: "intermedio",
         title: "Asíntotas y excentricidad",
@@ -8485,20 +8485,7 @@ $$\\\\frac{(x-1)^2}{16} - \\\\frac{(y+2)^2}{9} = 1$$
     slug: "parabola-analitica",
     illustrationSummary: "Parábola con foco F, directriz y vértice. Se muestra la ecuación y² = 4px.",
     tip: "La parábola es el lugar de puntos equidistantes del foco y la directriz. Memoriza p = distancia foco-directriz/2.",
-    theory: [
-      {
-        level: "basico",
-        title: "Definición y ecuación",
-        lines: [
-          "Una parábola es el lugar de puntos equidistantes de un foco y una directriz.",
-          "La ecuación con vértice en el origen y eje horizontal es y² = 4px.",
-          "Si p > 0 la parábola abre a la derecha, si p < 0 a la izquierda.",
-          "Si el eje es vertical la ecuación es x² = 4py.",
-          "El vértice es el punto más cercano del foco a la directriz.",
-          "La distancia del vértice al foco es p, llamada parámetro focal."
-        ]
-      ,
-  studyGuide: `
+    studyGuide: `
 ## Parábola en el Análisis Cartesiano
 
 ### Definición
@@ -8608,7 +8595,20 @@ Foco: $(1, 7)$.
 | Izquierda | $y^2 = -4px$ | $(-p, 0)$ | $x = p$ |
 | Arriba | $x^2 = 4py$ | $(0, p)$ | $y = -p$ |
 | Abajo | $x^2 = -4py$ | $(0, -p)$ | $y = p$ |
-`},
+`,
+    theory: [
+      {
+        level: "basico",
+        title: "Definición y ecuación",
+        lines: [
+          "Una parábola es el lugar de puntos equidistantes de un foco y una directriz.",
+          "La ecuación con vértice en el origen y eje horizontal es y² = 4px.",
+          "Si p > 0 la parábola abre a la derecha, si p < 0 a la izquierda.",
+          "Si el eje es vertical la ecuación es x² = 4py.",
+          "El vértice es el punto más cercano del foco a la directriz.",
+          "La distancia del vértice al foco es p, llamada parámetro focal."
+        ]
+      },
       {
         level: "intermedio",
         title: "Foco, directriz y parámetro",
@@ -8712,20 +8712,7 @@ Foco: $(1, 7)$.
     slug: "locus-geometrico",
     illustrationSummary: "Lugar geométrico formado por puntos que cumplen una condición. Se muestran ejemplos: circunferencia, elipse, hipérbola.",
     tip: "Un locus es el conjunto de puntos que cumplen una condición. Identifica la condición geométrica antes de ecuar.",
-    theory: [
-      {
-        level: "basico",
-        title: "Definición de locus",
-        lines: [
-          "Un locus es el conjunto de todos los puntos que satisfacen una condición.",
-          "El círculo es un locus: puntos a distancia constante de un centro.",
-          "La mediatriz es un locus: puntos equidistantes de dos puntos fijos.",
-          "La bisectriz es el locus de puntos equidistantes de dos rectas.",
-          "Una recta es un locus de puntos que cumplen una ecuación lineal.",
-          "El plano puede dividirse en regiones por el locus de una condición."
-        ]
-      ,
-  studyGuide: `## Locus Geométrico
+    studyGuide: `## Locus Geométrico
 
 Un **locus geométrico** es el conjunto de todos los puntos del plano que satisfacen una condición dada. Es fundamental conocer los loci más comunes para resolver problemas de construcción y localización.
 
@@ -8806,7 +8793,20 @@ $$(x)^2 + y^2 = 4 \\\\quad \\\\text{(excepto los puntos } A \\\\text{ y } B\\\\t
 | Equidistante de dos rectas paralelas | Recta paralela intermedia |
 | Equidistante de dos rectas concurrentes | Bisectrices |
 | Distancia constante a un punto | Circunferencia |
-| Distancia constante a una recta | Paralelas a la recta |`},
+| Distancia constante a una recta | Paralelas a la recta |`,
+    theory: [
+      {
+        level: "basico",
+        title: "Definición de locus",
+        lines: [
+          "Un locus es el conjunto de todos los puntos que satisfacen una condición.",
+          "El círculo es un locus: puntos a distancia constante de un centro.",
+          "La mediatriz es un locus: puntos equidistantes de dos puntos fijos.",
+          "La bisectriz es el locus de puntos equidistantes de dos rectas.",
+          "Una recta es un locus de puntos que cumplen una ecuación lineal.",
+          "El plano puede dividirse en regiones por el locus de una condición."
+        ]
+      },
       {
         level: "intermedio",
         title: "Locus comunes en el plano",
@@ -8924,20 +8924,7 @@ $$(x)^2 + y^2 = 4 \\\\quad \\\\text{(excepto los puntos } A \\\\text{ y } B\\\\t
     slug: "tangentes-circunferencia",
     illustrationSummary: "Punto exterior con dos tangentes a una circunferencia. Se marca el ángulo rectángulo con el radio.",
     tip: "En todo problema de tangente desde punto exterior, recuerda que el radio es perpendicular a la tangente, formando un triángulo rectángulo donde la hipotenusa es la distancia del punto al centro.",
-    theory: [
-      {
-        level: "basico",
-        title: "Definición de tangente a una circunferencia",
-        lines: [
-          "Una recta es tangente a una circunferencia cuando la toca en un solo punto.",
-          "La distancia del centro de la circunferencia a la tangente es igual al radio.",
-          "Si una recta es tangente, el radio trazado al punto de contacto es perpendicular a la recta.",
-          "Desde un punto exterior a la circunferencia se pueden trazar exactamente dos tangentes.",
-          "Las dos tangentes trazadas desde un punto exterior tienen la misma longitud.",
-          "El punto de tangencia es el punto donde la recta tangente toca a la circunferencia."
-        ]
-      ,
-  studyGuide: `## Tangentes a una Circunferencia
+    studyGuide: `## Tangentes a una Circunferencia
 
 Una **recta tangente** a una circunferencia la toca en exactamente un punto y es perpendicular al radio en el punto de contacto.
 
@@ -9024,7 +9011,20 @@ $$\\\\alpha = 2 \\\\arctan\\\\left(\\\\frac{r}{\\\\sqrt{d^2 - r^2}}\\\\right)$$
 - La tangente es perpendicular al radio en el punto de contacto
 - Los dos segmentos tangentes desde un punto exterior son iguales
 - El ángulo entre una tangente y una cuerda iguala al ángulo en el segmento alternativo
-- El centro está sobre la bisectriz del ángulo formado por las dos tangentes`},
+- El centro está sobre la bisectriz del ángulo formado por las dos tangentes`,
+    theory: [
+      {
+        level: "basico",
+        title: "Definición de tangente a una circunferencia",
+        lines: [
+          "Una recta es tangente a una circunferencia cuando la toca en un solo punto.",
+          "La distancia del centro de la circunferencia a la tangente es igual al radio.",
+          "Si una recta es tangente, el radio trazado al punto de contacto es perpendicular a la recta.",
+          "Desde un punto exterior a la circunferencia se pueden trazar exactamente dos tangentes.",
+          "Las dos tangentes trazadas desde un punto exterior tienen la misma longitud.",
+          "El punto de tangencia es el punto donde la recta tangente toca a la circunferencia."
+        ]
+      },
       {
         level: "intermedio",
         title: "Triángulo rectángulo en tangentes",
@@ -9122,20 +9122,7 @@ $$\\\\alpha = 2 \\\\arctan\\\\left(\\\\frac{r}{\\\\sqrt{d^2 - r^2}}\\\\right)$$
     slug: "poligonos-inscritos-circunscritos",
     illustrationSummary: "Polígono regular inscrito y circunscrito en una circunferencia. Se muestran los radios.",
     tip: "Para polígonos regulares inscritos, el lado se relaciona con el radio de la circunferencia mediante seno: L = 2R·sen(180°/n). Memoriza los valores para n = 3, 4, 5, 6.",
-    theory: [
-      {
-        level: "basico",
-        title: "Polígonos inscritos y circunscritos",
-        lines: [
-          "Un polígono es inscrito en una circunferencia si todos sus vértices están sobre ella.",
-          "Un polígono es circunscrito a una circunferencia si todos sus lados son tangentes a ella.",
-          "El radio de la circunferencia circunscrita al polígono inscrito se llama radio mayor.",
-          "El radio de la circunferencia inscrita en el polígono circunscrito se llama radio menor.",
-          "Un polígono regular tiene todos sus lados iguales y todos sus ángulos iguales.",
-          "Todo triángulo se puede inscribir y circunscribir en una circunferencia."
-        ]
-      ,
-  studyGuide: `## Polígonos Inscritos y Circunscritos
+    studyGuide: `## Polígonos Inscritos y Circunscritos
 
 ### Polígono inscrito en una circunferencia
 
@@ -9224,7 +9211,20 @@ $$r = \\\\frac{60}{20} = 3, \\\\quad R = \\\\frac{17}{2} = 8.5$$
 
 - Para un triángulo inscrito: $R \\\\geq 2r$ (desigualdad de Euler)
 - La altura de un triángulo inscrito con un lado como diámetro es máxima cuando el tercer vértice está en la parte superior
-- La relación entre área y radios: $A = rs = \\\\frac{abc}{4R}$`},
+- La relación entre área y radios: $A = rs = \\\\frac{abc}{4R}$`,
+    theory: [
+      {
+        level: "basico",
+        title: "Polígonos inscritos y circunscritos",
+        lines: [
+          "Un polígono es inscrito en una circunferencia si todos sus vértices están sobre ella.",
+          "Un polígono es circunscrito a una circunferencia si todos sus lados son tangentes a ella.",
+          "El radio de la circunferencia circunscrita al polígono inscrito se llama radio mayor.",
+          "El radio de la circunferencia inscrita en el polígono circunscrito se llama radio menor.",
+          "Un polígono regular tiene todos sus lados iguales y todos sus ángulos iguales.",
+          "Todo triángulo se puede inscribir y circunscribir en una circunferencia."
+        ]
+      },
       {
         level: "intermedio",
         title: "Relaciones métricas en polígonos regulares",
@@ -9318,20 +9318,7 @@ $$r = \\\\frac{60}{20} = 3, \\\\quad R = \\\\frac{17}{2} = 8.5$$
     slug: "solidos-compostos",
     illustrationSummary: "Combinación de prismas y cilindros. Se muestran las dimensiones de cada sólido.",
     tip: "Para sólidos compuestos, identifica cada sólido simple que lo forma y aplica las fórmulas por separado. El volumen total es la suma o resta de los volúmenes individuales.",
-    theory: [
-      {
-        level: "basico",
-        title: "Formas de combinar sólidos",
-        lines: [
-          "Un sólido compuesto se forma al unir dos o más sólidos simples.",
-          "Los sólidos más comunes en combinación son: prismas, cilindros, pirámides, conos y esferas.",
-          "Al sumar sólidos, el volumen total es la suma de los volúmenes individuales.",
-          "Al restar (taladrar), se resta el volumen del hueco al volumen del sólido exterior.",
-          "La superficie total del compuesto es la suma de las superficies menos las caras internas pegadas.",
-          "Un semicilindro es un cilindro cortado por un plano que pasa por su eje."
-        ]
-      ,
-  studyGuide: `## Sólidos Compuestos
+    studyGuide: `## Sólidos Compuestos
 
 Un **sólido compuesto** se forma combinando dos o más sólidos geométricos elementales (prismas, cilindros, pirámides, conos, esferas) mediante sumas o restas.
 
@@ -9409,7 +9396,20 @@ $$V_{total} = 64\\\\pi + \\\\frac{32\\\\pi}{3} = \\\\frac{224\\\\pi}{3} \\\\appr
 - Al restar sólidos, las superficies de contacto no se incluyen en el área exterior
 - Los sólidos compuestos simétricos permiten simplificaciones
 - Siempre verificar que las dimensiones sean compatibles (el sólido hueco no puede ser mayor que el sólido exterior)
-- Unir un cilindro a una esfera produce formas como la de una cápsula`},
+- Unir un cilindro a una esfera produce formas como la de una cápsula`,
+    theory: [
+      {
+        level: "basico",
+        title: "Formas de combinar sólidos",
+        lines: [
+          "Un sólido compuesto se forma al unir dos o más sólidos simples.",
+          "Los sólidos más comunes en combinación son: prismas, cilindros, pirámides, conos y esferas.",
+          "Al sumar sólidos, el volumen total es la suma de los volúmenes individuales.",
+          "Al restar (taladrar), se resta el volumen del hueco al volumen del sólido exterior.",
+          "La superficie total del compuesto es la suma de las superficies menos las caras internas pegadas.",
+          "Un semicilindro es un cilindro cortado por un plano que pasa por su eje."
+        ]
+      },
       {
         level: "intermedio",
         title: "Fórmulas para sólidos compuestos",
@@ -9501,20 +9501,7 @@ $$V_{total} = 64\\\\pi + \\\\frac{32\\\\pi}{3} = \\\\frac{224\\\\pi}{3} \\\\appr
     slug: "secciones-solidos",
     illustrationSummary: "Prisma y cono cortados por planos. Se muestran las secciones resultantes.",
     tip: "La sección de un cono por un plano paralelo a la base es siempre un círculo. Si el plano es oblicuo, la sección puede ser una elipse. Memoriza las secciones cónicas básicas.",
-    theory: [
-      {
-        level: "basico",
-        title: "Secciones de sólidos regulares",
-        lines: [
-          "Una sección es la intersección de un sólido con un plano.",
-          "La sección de un prisma paralela a la base es congruente a la base.",
-          "La sección de un cilindro paralela a la base es un círculo igual a la base.",
-          "La sección de una pirámide paralela a la base es un polígono semejante a la base.",
-          "La sección de un cono paralela a la base es un círculo más pequeño.",
-          "La sección de una esfera con cualquier plano es siempre un círculo."
-        ]
-      ,
-  studyGuide: `## Secciones de Sólidos
+    studyGuide: `## Secciones de Sólidos
 
 Una **sección** es la intersección de un sólido con un plano. La forma de la sección depende de la orientación del plano respecto al sólido.
 
@@ -9601,7 +9588,20 @@ $$A = \\\\pi R^2 - \\\\pi r^2 = \\\\pi(16 - 4) = 12\\\\pi \\\\approx 37.70$$
 Las secciones oblicuas de un cono producen las tres **cónicas**:
 - **Elipse:** plano corta ambas mitades del cono
 - **Parábola:** plano paralelo a una generatriz
-- **Hipérbola:** plano paralelo al eje o corta ambas mitades del cono doble`},
+- **Hipérbola:** plano paralelo al eje o corta ambas mitades del cono doble`,
+    theory: [
+      {
+        level: "basico",
+        title: "Secciones de sólidos regulares",
+        lines: [
+          "Una sección es la intersección de un sólido con un plano.",
+          "La sección de un prisma paralela a la base es congruente a la base.",
+          "La sección de un cilindro paralela a la base es un círculo igual a la base.",
+          "La sección de una pirámide paralela a la base es un polígono semejante a la base.",
+          "La sección de un cono paralela a la base es un círculo más pequeño.",
+          "La sección de una esfera con cualquier plano es siempre un círculo."
+        ]
+      },
       {
         level: "intermedio",
         title: "Secciones inclinadas y proporciones",
@@ -9696,20 +9696,7 @@ Las secciones oblicuas de un cono producen las tres **cónicas**:
     slug: "areas-superficiales-avanzado",
     illustrationSummary: "Sólidos con sus áreas superficiales desglosadas: bases, lateral y total.",
     tip: "La superficie total de un sólido compuesto NO es siempre la suma de superficies individuales. Las caras internas donde se unen los sólidos NO se cuentan. Resta siempre 2 veces el área de la cara compartida.",
-    theory: [
-      {
-        level: "basico",
-        title: "Superficies de sólidos simples",
-        lines: [
-          "La superficie lateral de un prisma es: P·h, donde P es el perímetro de la base y h la altura.",
-          "La superficie total de un prisma es: S lateral + 2·B (base superior e inferior).",
-          "La superficie lateral de un cilindro es: 2·π·r·h.",
-          "La superficie total de un cilindro es: 2π·r·h + 2π·r² = 2π·r(h + r).",
-          "La superficie lateral de un cono es: π·r·l, donde l es la generatriz: l = √(r²+h²).",
-          "La superficie total de un cono es: π·r·l + π·r² = π·r(l + r)."
-        ]
-      ,
-  studyGuide: `## Áreas y Superficies Avanzadas
+    studyGuide: `## Áreas y Superficies Avanzadas
 
 El cálculo de áreas superficiales de sólidos complejos requiere combinar las fórmulas básicas y adaptarlas a cada geometría específica.
 
@@ -9809,7 +9796,20 @@ $$A = 2\\\\pi (6400)(6400) = 81{,}920{,}000\\\\pi \\\\approx 257{,}359{,}270 \\\
 | Cono | $\\\\pi r l + \\\\pi r^2$ |
 | Cilindro | $2\\\\pi r h + 2\\\\pi r^2$ |
 | Zona esférica | $2\\\\pi R h$ |
-| Tronco de cono | $\\\\pi(R+r)l + \\\\pi R^2 + \\\\pi r^2$ |`},
+| Tronco de cono | $\\\\pi(R+r)l + \\\\pi R^2 + \\\\pi r^2$ |`,
+    theory: [
+      {
+        level: "basico",
+        title: "Superficies de sólidos simples",
+        lines: [
+          "La superficie lateral de un prisma es: P·h, donde P es el perímetro de la base y h la altura.",
+          "La superficie total de un prisma es: S lateral + 2·B (base superior e inferior).",
+          "La superficie lateral de un cilindro es: 2·π·r·h.",
+          "La superficie total de un cilindro es: 2π·r·h + 2π·r² = 2π·r(h + r).",
+          "La superficie lateral de un cono es: π·r·l, donde l es la generatriz: l = √(r²+h²).",
+          "La superficie total de un cono es: π·r·l + π·r² = π·r(l + r)."
+        ]
+      },
       {
         level: "intermedio",
         title: "Superficies de pirámides y esferas",
@@ -9904,20 +9904,7 @@ $$A = 2\\\\pi (6400)(6400) = 81{,}920{,}000\\\\pi \\\\approx 257{,}359{,}270 \\\
     slug: "volumenes-avanzados",
     illustrationSummary: "Sólidos de revolución y compuestos con sus fórmulas de volumen.",
     tip: "Para volúmenes de sólidos irregulares, usa el método de secciones conocidas o descompón en sólidos simples. El volumen de un sólido de revolución se calcula con integrales: V = π∫[f(x)]²dx.",
-    theory: [
-      {
-        level: "basico",
-        title: "Volúmenes fundamentales",
-        lines: [
-          "V_prisma = Área de base × altura = B·h.",
-          "V_cilindro = π·r²·h.",
-          "V_pirámide = (B·h)/3 = (1/3)·V_prisma de mismas dimensiones.",
-          "V_cono = (π·r²·h)/3 = (1/3)·V_cilindro de mismas dimensiones.",
-          "V_esfera = (4/3)·π·r³.",
-          "V_cubo = lado³."
-        ]
-      ,
-  studyGuide: `## Volúmenes Avanzados
+    studyGuide: `## Volúmenes Avanzados
 
 El cálculo de volúmenes de sólidos complejos se apoya en fórmulas elementales, el método de discos/arandelas, el método de capas cilíndricas y el principio de Cavalieri.
 
@@ -10003,7 +9990,20 @@ $$V = \\\\pi \\\\int_0^{\\\\pi} \\\\sin^2 x \\\\, dx = \\\\pi \\\\int_0^{\\\\pi}
 
 - **Capas cilíndricas** son ideales cuando la rotación es alrededor de un eje distinto al de integración
 - Los métodos de discos y arandelas funcionan mejor cuando la función está resuelta en función de $x$
-- El principio de Cavalieri justifica por qué un cilindro con un cono removedo tiene volumen $\\\\frac{2}{3}\\\\pi r^2 h$`},
+- El principio de Cavalieri justifica por qué un cilindro con un cono removedo tiene volumen $\\\\frac{2}{3}\\\\pi r^2 h$`,
+    theory: [
+      {
+        level: "basico",
+        title: "Volúmenes fundamentales",
+        lines: [
+          "V_prisma = Área de base × altura = B·h.",
+          "V_cilindro = π·r²·h.",
+          "V_pirámide = (B·h)/3 = (1/3)·V_prisma de mismas dimensiones.",
+          "V_cono = (π·r²·h)/3 = (1/3)·V_cilindro de mismas dimensiones.",
+          "V_esfera = (4/3)·π·r³.",
+          "V_cubo = lado³."
+        ]
+      },
       {
         level: "intermedio",
         title: "Sólidos de revolución",
@@ -10097,20 +10097,7 @@ $$V = \\\\pi \\\\int_0^{\\\\pi} \\\\sin^2 x \\\\, dx = \\\\pi \\\\int_0^{\\\\pi}
     slug: "recta-plano-espacio",
     illustrationSummary: "Recta y plano en el espacio tridimensional con sus relaciones: paralela, que corta y contenida.",
     tip: "En espacio tridimensional, dos rectas pueden ser paralelas, concurrentes (se cruzan en un punto) o escalas (no se cortan y no son paralelas). Dos planos pueden ser paralelos o cortarse en una recta.",
-    theory: [
-      {
-        level: "basico",
-        title: "Elementos fundamentales del espacio",
-        lines: [
-          "Una recta en el espacio se representa con una ecuación paramétrica o simétrica.",
-          "Un plano en el espacio se representa con la ecuación Ax + By + Cz + D = 0.",
-          "Dos rectas en el espacio pueden ser: paralelas, concurrentes o escalas.",
-          "Una recta es paralela a un plano si no tiene puntos en común con él.",
-          "Una recta es perpendicular a un plano si es perpendicular a todas las rectas del plano.",
-          "Dos planos son paralelos si no tienen rectas en común."
-        ]
-      ,
-  studyGuide: `## Recta y Plano en el Espacio
+    studyGuide: `## Recta y Plano en el Espacio
 
 La geometría tridimensional estudia las relaciones entre rectas, planos y puntos en el espacio.
 
@@ -10212,7 +10199,20 @@ Las rectas son **skew** (no coplanarias).
 | Recta paralela a plano | $\\\\vec{v} \\\\cdot \\\\vec{n} = 0$ |
 | Recta perpendicular a plano | $\\\\vec{v} = k\\\\vec{n}$ |
 | Planos paralelos | $\\\\vec{n_1} = k\\\\vec{n_2}$ |
-| Planos perpendiculares | $\\\\vec{n_1} \\\\cdot \\\\vec{n_2} = 0$ |`},
+| Planos perpendiculares | $\\\\vec{n_1} \\\\cdot \\\\vec{n_2} = 0$ |`,
+    theory: [
+      {
+        level: "basico",
+        title: "Elementos fundamentales del espacio",
+        lines: [
+          "Una recta en el espacio se representa con una ecuación paramétrica o simétrica.",
+          "Un plano en el espacio se representa con la ecuación Ax + By + Cz + D = 0.",
+          "Dos rectas en el espacio pueden ser: paralelas, concurrentes o escalas.",
+          "Una recta es paralela a un plano si no tiene puntos en común con él.",
+          "Una recta es perpendicular a un plano si es perpendicular a todas las rectas del plano.",
+          "Dos planos son paralelos si no tienen rectas en común."
+        ]
+      },
       {
         level: "intermedio",
         title: "Relaciones entre rectas y planos",
@@ -10307,20 +10307,7 @@ Las rectas son **skew** (no coplanarias).
     slug: "angulos-en-el-espacio",
     illustrationSummary: "Ángulos diedros entre planos y ángulos entre rectas y planos en el espacio.",
     tip: "El ángulo diedro se mide entre dos semiplanos que forman una arista. Se calcula midiendo el ángulo entre las normales de los planos. Para ángulos entre rectas y planos usa el seno.",
-    theory: [
-      {
-        level: "basico",
-        title: "Tipos de ángulos en el espacio",
-        lines: [
-          "Un ángulo diedro es el ángulo formado por dos semiplanos que comparten una recta (arista).",
-          "El ángulo diedro se mide trazando un plano perpendicular a la arista y midiendo el ángulo de la intersección.",
-          "Dos planos pueden formar ángulos agudos, rectos o obtusos entre sí.",
-          "El ángulo entre dos rectas en el espacio se mide con el producto punto de sus vectores directores.",
-          "El ángulo entre una recta y un plano es el complemento del ángulo entre la recta y la normal al plano.",
-          "Dos rectas perpendiculares en el espacio no necesariamente se cortan."
-        ]
-      ,
-  studyGuide: `## Ángulos en el Espacio
+    studyGuide: `## Ángulos en el Espacio
 
 ### Definición y tipos de ángulos
 
@@ -10360,7 +10347,20 @@ Calculamos \\\\(\\\\vec{u} \\\\cdot \\\\vec{v} = 2(1) + 3(-1) + 1(4) = 3\\\\).
 
 Las magnitudes son \\\\(|\\\\vec{u}| = \\\\sqrt{4+9+1} = \\\\sqrt{14}\\\\) y \\\\(|\\\\vec{v}| = \\\\sqrt{1+1+16} = 3\\\\sqrt{2}\\\\).
 
-Entonces \\\\(\\\\cos\\\\theta = \\\\frac{|3|}{\\\\sqrt{14} \\\\cdot 3\\\\sqrt{2}} = \\\\frac{3}{3\\\\sqrt{28}} = \\\\frac{1}{2\\\\sqrt{7}}\\\\), por lo que \\\\(\\\\theta = \\\\arccos\\\\left(\\\\frac{1}{2\\\\sqrt{7}}\\\\right) \\\\approx 67.8°\\\\).`},
+Entonces \\\\(\\\\cos\\\\theta = \\\\frac{|3|}{\\\\sqrt{14} \\\\cdot 3\\\\sqrt{2}} = \\\\frac{3}{3\\\\sqrt{28}} = \\\\frac{1}{2\\\\sqrt{7}}\\\\), por lo que \\\\(\\\\theta = \\\\arccos\\\\left(\\\\frac{1}{2\\\\sqrt{7}}\\\\right) \\\\approx 67.8°\\\\).`,
+    theory: [
+      {
+        level: "basico",
+        title: "Tipos de ángulos en el espacio",
+        lines: [
+          "Un ángulo diedro es el ángulo formado por dos semiplanos que comparten una recta (arista).",
+          "El ángulo diedro se mide trazando un plano perpendicular a la arista y midiendo el ángulo de la intersección.",
+          "Dos planos pueden formar ángulos agudos, rectos o obtusos entre sí.",
+          "El ángulo entre dos rectas en el espacio se mide con el producto punto de sus vectores directores.",
+          "El ángulo entre una recta y un plano es el complemento del ángulo entre la recta y la normal al plano.",
+          "Dos rectas perpendiculares en el espacio no necesariamente se cortan."
+        ]
+      },
       {
         level: "intermedio",
         title: "Cálculo de ángulos entre planos",
@@ -10456,20 +10456,7 @@ Entonces \\\\(\\\\cos\\\\theta = \\\\frac{|3|}{\\\\sqrt{14} \\\\cdot 3\\\\sqrt{2
     slug: "teorema-ptolomeo",
     illustrationSummary: "Cuadrilátero cíclico con diagonales y lados. Se muestra la relación: AC × BD = AB × CD + AD × BC.",
     tip: "En un cuadrilátero cíclico, el producto de las diagonales es igual a la suma de los productos de los lados opuestos: AC·BD = AB·CD + BC·AD.",
-    theory: [
-      {
-        level: "basico",
-        title: "Cuadriláteros cíclicos",
-        lines: [
-          "Un cuadrilátero es cíclico cuando sus cuatro vértices están sobre una misma circunferencia.",
-          "Una condición necesaria y suficiente es que ángulos opuestos sean suplementarios: ∠A + ∠C = 180°.",
-          "Todo rectángulo y todo isósceles trapezoide son cuadriláteros cíclicos.",
-          "En un cuadrilátero cíclico, el ángulo externo es igual al ángulo interior opuesto.",
-          "La suma de productos de lados opuestos está relacionada con las diagonales.",
-          "Este tipo de figuras aparecen frecuentemente en problemas del examinationes de admisión."
-        ]
-      ,
-  studyGuide: `## Teorema de Ptolomeo
+    studyGuide: `## Teorema de Ptolomeo
 
 ### Enunciado del teorema
 
@@ -10503,7 +10490,20 @@ Aplicando Ptolomeo: \\\\(AC \\\\cdot BD = 10 \\\\cdot 10 = 100\\\\).
 
 El lado derecho es \\\\(AB \\\\cdot CD + BC \\\\cdot AD = 6 \\\\cdot 6 + 8 \\\\cdot 8 = 36 + 64 = 100\\\\).
 
-Ambos miembros coinciden, verificando el teorema. Para un caso no trivial, considérese un trapecio isósceles inscrito con bases \\\\(AB = 2\\\\) y \\\\(CD = 6\\\\) y lados \\\\(BC = AD = 4\\\\). Se calcula \\\\(AC = BD = \\\\sqrt{4^2 - 2^2 + 6^2} = \\\\sqrt{28}\\\\), y Ptolomeo da \\\\(28 = 2 \\\\cdot 6 + 4 \\\\cdot 4 = 12 + 16 = 28\\\\).`},
+Ambos miembros coinciden, verificando el teorema. Para un caso no trivial, considérese un trapecio isósceles inscrito con bases \\\\(AB = 2\\\\) y \\\\(CD = 6\\\\) y lados \\\\(BC = AD = 4\\\\). Se calcula \\\\(AC = BD = \\\\sqrt{4^2 - 2^2 + 6^2} = \\\\sqrt{28}\\\\), y Ptolomeo da \\\\(28 = 2 \\\\cdot 6 + 4 \\\\cdot 4 = 12 + 16 = 28\\\\).`,
+    theory: [
+      {
+        level: "basico",
+        title: "Cuadriláteros cíclicos",
+        lines: [
+          "Un cuadrilátero es cíclico cuando sus cuatro vértices están sobre una misma circunferencia.",
+          "Una condición necesaria y suficiente es que ángulos opuestos sean suplementarios: ∠A + ∠C = 180°.",
+          "Todo rectángulo y todo isósceles trapezoide son cuadriláteros cíclicos.",
+          "En un cuadrilátero cíclico, el ángulo externo es igual al ángulo interior opuesto.",
+          "La suma de productos de lados opuestos está relacionada con las diagonales.",
+          "Este tipo de figuras aparecen frecuentemente en problemas del examinationes de admisión."
+        ]
+      },
       {
         level: "intermedio",
         title: "Enunciado del Teorema de Ptolomeo",
@@ -10620,20 +10620,7 @@ Ambos miembros coinciden, verificando el teorema. Para un caso no trivial, consi
     slug: "teorema-stewart",
     illustrationSummary: "Triángulo con una ceviana. Se muestra la relación entre la ceviana y los lados del triángulo.",
     tip: "Si M es un punto sobre BC en un triángulo ABC, entonces: AB²·MC + AC²·BM = AM²·BC + BM·MC·BC.",
-    theory: [
-      {
-        level: "basico",
-        title: "Cevianas en un triángulo",
-        lines: [
-          "Una ceviana es un segmento que une un vértice de un triángulo con un punto del lado opuesto.",
-          "La mediana es una ceviana que va al punto medio del lado opuesto.",
-          "La bisectriz es una ceviana que divide al ángulo opuesto en dos partes iguales.",
-          "La altura es una ceviana perpendicular al lado opuesto.",
-          "El Teorema de Stewart relaciona la longitud de una ceviana con los lados del triángulo.",
-          "Es una herramienta fundamental para calcular longitudes en problemas de geometría."
-        ]
-      ,
-  studyGuide: `## Teorema de Stewart
+    studyGuide: `## Teorema de Stewart
 
 ### Enunciado del teorema
 
@@ -10676,7 +10663,20 @@ Aplicando Stewart: \\\\(7^2 \\\\cdot 3 + 5^2 \\\\cdot 5 = 8(d^2 + 3 \\\\cdot 5)\
 \\\\[d^2 = 19\\\\]
 \\\\[d = \\\\sqrt{19} \\\\approx 4.36\\\\]
 
-Podemos verificar: \\\\(\\\\cos B = \\\\frac{5^2 + 8^2 - 7^2}{2 \\\\cdot 5 \\\\cdot 8} = \\\\frac{40}{80} = 0.5\\\\), luego en \\\\(\\\\triangle ABD\\\\): \\\\(AD^2 = 25 + 9 - 30(0.5) = 19\\\\), confirmando el resultado.`},
+Podemos verificar: \\\\(\\\\cos B = \\\\frac{5^2 + 8^2 - 7^2}{2 \\\\cdot 5 \\\\cdot 8} = \\\\frac{40}{80} = 0.5\\\\), luego en \\\\(\\\\triangle ABD\\\\): \\\\(AD^2 = 25 + 9 - 30(0.5) = 19\\\\), confirmando el resultado.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Cevianas en un triángulo",
+        lines: [
+          "Una ceviana es un segmento que une un vértice de un triángulo con un punto del lado opuesto.",
+          "La mediana es una ceviana que va al punto medio del lado opuesto.",
+          "La bisectriz es una ceviana que divide al ángulo opuesto en dos partes iguales.",
+          "La altura es una ceviana perpendicular al lado opuesto.",
+          "El Teorema de Stewart relaciona la longitud de una ceviana con los lados del triángulo.",
+          "Es una herramienta fundamental para calcular longitudes en problemas de geometría."
+        ]
+      },
       {
         level: "intermedio",
         title: "Enunciado del Teorema de Stewart",
@@ -10791,20 +10791,7 @@ Podemos verificar: \\\\(\\\\cos B = \\\\frac{5^2 + 8^2 - 7^2}{2 \\\\cdot 5 \\\\c
     slug: "circunferencia-nueve-puntos",
     illustrationSummary: "Triángulo con los 9 puntos notables: puntos medios, pies de alturas y puntos de Euler.",
     tip: "La circunferencia de los nueve puntos pasa por los 3 puntos medios de los lados, los 3 pies de las alturas y los 3 puntos medios de los segmentos del ortocentro a cada vértice.",
-    theory: [
-      {
-        level: "basico",
-        title: "Los nueve puntos notables",
-        lines: [
-          "En todo triángulo existen nueve puntos que siempre están sobre una misma circunferencia.",
-          "Los tres puntos medios de los lados del triángulo forman el primer grupo de tres puntos.",
-          "Los tres pies de las alturas (donde cada altura corta al lado opuesto) forman el segundo grupo.",
-          "Los tres puntos medios de los segmentos que van del ortocentro H a cada vértice completan los nueve puntos.",
-          "Esta circunferencia se llama la circunferencia de los nueve puntos o circunferencia de Euler.",
-          "Es un resultado sorprendente que tantos puntos construidos de forma diferente estén concíclicos."
-        ]
-      ,
-  studyGuide: `## Circunferencia de los Nueve Puntos
+    studyGuide: `## Circunferencia de los Nueve Puntos
 
 ### Definición y los nueve puntos
 
@@ -10843,7 +10830,20 @@ Centro de los nueve puntos: \\\\(N = \\\\left(\\\\frac{0+2}{2}, \\\\frac{\\\\fra
 
 Radio circunscrita: \\\\(R = \\\\frac{abc}{4K}\\\\) donde \\\\(K = 48\\\\), \\\\(R = \\\\frac{12 \\\\cdot 10 \\\\cdot \\\\sqrt{52}}{192} = \\\\frac{5\\\\sqrt{52}}{8}\\\\).
 
-Radio de los nueve puntos: \\\\(R_N = \\\\frac{R}{2} = \\\\frac{5\\\\sqrt{52}}{16} = \\\\frac{5\\\\sqrt{13}}{8} \\\\approx 2.25\\\\).`},
+Radio de los nueve puntos: \\\\(R_N = \\\\frac{R}{2} = \\\\frac{5\\\\sqrt{52}}{16} = \\\\frac{5\\\\sqrt{13}}{8} \\\\approx 2.25\\\\).`,
+    theory: [
+      {
+        level: "basico",
+        title: "Los nueve puntos notables",
+        lines: [
+          "En todo triángulo existen nueve puntos que siempre están sobre una misma circunferencia.",
+          "Los tres puntos medios de los lados del triángulo forman el primer grupo de tres puntos.",
+          "Los tres pies de las alturas (donde cada altura corta al lado opuesto) forman el segundo grupo.",
+          "Los tres puntos medios de los segmentos que van del ortocentro H a cada vértice completan los nueve puntos.",
+          "Esta circunferencia se llama la circunferencia de los nueve puntos o circunferencia de Euler.",
+          "Es un resultado sorprendente que tantos puntos construidos de forma diferente estén concíclicos."
+        ]
+      },
       {
         level: "intermedio",
         title: "Propiedades de la circunferencia de los nueve puntos",
@@ -10962,20 +10962,7 @@ Radio de los nueve puntos: \\\\(R_N = \\\\frac{R}{2} = \\\\frac{5\\\\sqrt{52}}{1
     slug: "triangulo-de-euler",
     illustrationSummary: "Triángulo con la recta de Euler que conecta el ortocentro, baricentro y circuncentro.",
     tip: "El baricentro G divide cada mediana en razón 2:1 desde el vértice. En la recta de Euler: HG = 2·GO donde H es el ortocentro y O el circuncentro.",
-    theory: [
-      {
-        level: "basico",
-        title: "Centros notables del triángulo",
-        lines: [
-          "El baricentro G es el punto de intersección de las tres medianas del triángulo.",
-          "El circuncentro O es el punto de intersección de las mediatrices de los tres lados.",
-          "El ortocentro H es el punto de intersección de las tres alturas del triángulo.",
-          "El incentro I es el punto de intersección de las tres bisectrices internas.",
-          "Estos cuatro puntos son fundamentales en la geometría del triángulo.",
-          "Leonhard Euler descubrió que tres de ellos están siempre alineados."
-        ]
-      ,
-  studyGuide: `## Triángulo de Euler
+    studyGuide: `## Triángulo de Euler
 
 ### Definición
 
@@ -11018,7 +11005,20 @@ Lados del triángulo de Euler: \\\\(P_aP_b = 3\\\\), \\\\(P_aP_c = \\\\sqrt{1+4}
 
 Lados de \\\\(ABC\\\\): \\\\(AB = 6\\\\), \\\\(AC = \\\\sqrt{4+16} = 2\\\\sqrt{5}\\\\), \\\\(BC = \\\\sqrt{16+16} = 4\\\\sqrt{2}\\\\).
 
-Verificación: cada lado del Euler es exactamente la mitad del correspondiente en \\\\(ABC\\\\).`},
+Verificación: cada lado del Euler es exactamente la mitad del correspondiente en \\\\(ABC\\\\).`,
+    theory: [
+      {
+        level: "basico",
+        title: "Centros notables del triángulo",
+        lines: [
+          "El baricentro G es el punto de intersección de las tres medianas del triángulo.",
+          "El circuncentro O es el punto de intersección de las mediatrices de los tres lados.",
+          "El ortocentro H es el punto de intersección de las tres alturas del triángulo.",
+          "El incentro I es el punto de intersección de las tres bisectrices internas.",
+          "Estos cuatro puntos son fundamentales en la geometría del triángulo.",
+          "Leonhard Euler descubrió que tres de ellos están siempre alineados."
+        ]
+      },
       {
         level: "intermedio",
         title: "La recta de Euler",
@@ -11137,20 +11137,7 @@ Verificación: cada lado del Euler es exactamente la mitad del correspondiente e
     slug: "inversiva-geometria",
     illustrationSummary: "Inversión respecto a una circunferencia. Se muestran puntos y sus inversos.",
     tip: "La inversión respecto a una circunferencia transforma circunferencias en circunferencias (o líneas), preserva ángulos entre curvas y mantiene la tangencia.",
-    theory: [
-      {
-        level: "basico",
-        title: "Definición de inversión",
-        lines: [
-          "La inversión es una transformación geométrica que refleja puntos a través de una circunferencia.",
-          "Sea C(O, R) una circunferencia. La imagen de un punto P es el punto P' sobre la recta OP.",
-          "Se cumple que OP · OP' = R², es decir, P' está en la misma dirección que P desde O.",
-          "Si P está dentro de la circunferencia, P' queda fuera, y viceversa.",
-          "El centro O de la circunferencia de inversión no tiene imagen definida.",
-          "Los puntos de la circunferencia de inversión se mappean a sí mismos."
-        ]
-      ,
-  studyGuide: `## Geometría Inversiva
+    studyGuide: `## Geometría Inversiva
 
 ### Definición de inversión
 
@@ -11193,7 +11180,20 @@ El centro de la imagen está sobre \\\\(OC\\\\) a distancia \\\\(d' = \\\\frac{k
 
 La imagen es \\\\(\\\\mathcal{C}': \\\\left(x - \\\\frac{12}{5}\\\\right)^2 + y^2 = \\\\frac{64}{25}\\\\).
 
-Verificación: el punto \\\\((1,0)\\\\) de \\\\(\\\\mathcal{C}\\\\) se invierte en \\\\(\\\\left(\\\\frac{4}{1}, 0\\\\right) = (4,0)\\\\), y \\\\(\\\\left(4-\\\\frac{12}{5}\\\\right)^2 = \\\\left(\\\\frac{8}{5}\\\\right)^2 = \\\\frac{64}{25}\\\\). ✓`},
+Verificación: el punto \\\\((1,0)\\\\) de \\\\(\\\\mathcal{C}\\\\) se invierte en \\\\(\\\\left(\\\\frac{4}{1}, 0\\\\right) = (4,0)\\\\), y \\\\(\\\\left(4-\\\\frac{12}{5}\\\\right)^2 = \\\\left(\\\\frac{8}{5}\\\\right)^2 = \\\\frac{64}{25}\\\\). ✓`,
+    theory: [
+      {
+        level: "basico",
+        title: "Definición de inversión",
+        lines: [
+          "La inversión es una transformación geométrica que refleja puntos a través de una circunferencia.",
+          "Sea C(O, R) una circunferencia. La imagen de un punto P es el punto P' sobre la recta OP.",
+          "Se cumple que OP · OP' = R², es decir, P' está en la misma dirección que P desde O.",
+          "Si P está dentro de la circunferencia, P' queda fuera, y viceversa.",
+          "El centro O de la circunferencia de inversión no tiene imagen definida.",
+          "Los puntos de la circunferencia de inversión se mappean a sí mismos."
+        ]
+      },
       {
         level: "intermedio",
         title: "Propiedades de la inversión",
@@ -11309,20 +11309,7 @@ Verificación: el punto \\\\((1,0)\\\\) de \\\\(\\\\mathcal{C}\\\\) se invierte 
     slug: "numeros-complejos-geometria",
     illustrationSummary: "Plano complejo con números complejos representados como vectores. Se muestra la rotación.",
     tip: "Un número complejo z = a + bi representa el punto (a, b) en el plano. El módulo |z| es la distancia al origen y el argumento es el ángulo con el eje real. Las rotaciones se multiplican por e^(iθ).",
-    theory: [
-      {
-        level: "basico",
-        title: "El plano complejo",
-        lines: [
-          "Un número complejo z = a + bi se representa como el punto (a, b) en el plano cartesiano.",
-          "El eje horizontal es la parte real (Re) y el vertical es la parte imaginaria (Im).",
-          "El módulo de z es |z| = √(a² + b²), que es la distancia de z al origen.",
-          "El conjugado de z = a + bi es z̄ = a - bi, que es la reflexión sobre el eje real.",
-          "Los números reales son aquellos con parte imaginaria cero (sobre el eje horizontal).",
-          "El número i = √(-1) representa una rotación de 90° en el plano complejo."
-        ]
-      ,
-  studyGuide: `## Números Complejos y Geometría
+    studyGuide: `## Números Complejos y Geometría
 
 ### Representación geométrica
 
@@ -11368,7 +11355,20 @@ Verificación geométrica: \\\\(z_1 - z_2 = -2+2i\\\\) tiene módulo \\\\(2\\\\s
 Distancia \\\\(|z' - z_2| = |1-3i - 3+i| = |-2-2i| = 2\\\\sqrt{2}\\\\), igual a \\\\(|z_1 - z_2|\\\\), confirmando que la rotación preserva distancias.
 
 Para encontrar el baricentro de \\\\(z_1, z_2, z_3 = -1+2i\\\\):
-\\\\[G = \\\\frac{(1+i) + (3-i) + (-1+2i)}{3} = \\\\frac{3 + 2i}{3} = 1 + \\\\frac{2}{3}i\\\\]`},
+\\\\[G = \\\\frac{(1+i) + (3-i) + (-1+2i)}{3} = \\\\frac{3 + 2i}{3} = 1 + \\\\frac{2}{3}i\\\\]`,
+    theory: [
+      {
+        level: "basico",
+        title: "El plano complejo",
+        lines: [
+          "Un número complejo z = a + bi se representa como el punto (a, b) en el plano cartesiano.",
+          "El eje horizontal es la parte real (Re) y el vertical es la parte imaginaria (Im).",
+          "El módulo de z es |z| = √(a² + b²), que es la distancia de z al origen.",
+          "El conjugado de z = a + bi es z̄ = a - bi, que es la reflexión sobre el eje real.",
+          "Los números reales son aquellos con parte imaginaria cero (sobre el eje horizontal).",
+          "El número i = √(-1) representa una rotación de 90° en el plano complejo."
+        ]
+      },
       {
         level: "intermedio",
         title: "Módulo, argumento y forma polar",
@@ -11486,20 +11486,7 @@ Para encontrar el baricentro de \\\\(z_1, z_2, z_3 = -1+2i\\\\):
     slug: "coordenadas-polares",
     illustrationSummary: "Punto en coordenadas polares (r, θ) y su conversión al sistema cartesiano.",
     tip: "Las coordenadas polares (r, θ) se relacionan con las cartesianas (x, y) mediante: x = r·cos θ, y = r·sen θ. Son ideales para curvas con simetría circular.",
-    theory: [
-      {
-        level: "basico",
-        title: "Sistema de coordenadas polares",
-        lines: [
-          "Las coordenadas polares representan un punto con una distancia r al origen y un ángulo θ.",
-          "El punto P se escribe como (r, θ), donde r ≥ 0 es la distancia al polo y θ es el ángulo.",
-          "El polo es el origen del sistema y el eje polar es la dirección de referencia (eje positivo x).",
-          "Las coordenadas polares no son únicas: (r, θ) = (r, θ + 2π) = (-r, θ + π).",
-          "El polo tiene coordenadas (0, θ) para cualquier ángulo θ.",
-          "Las coordenadas polares son especialmente útiles para describir curvas circulares."
-        ]
-      ,
-  studyGuide: `## Coordenadas Polares
+    studyGuide: `## Coordenadas Polares
 
 ### Sistema de coordenadas polares
 
@@ -11557,7 +11544,20 @@ Para la longitud de arco, \\\\(\\\\frac{dr}{d\\\\theta} = -2\\\\sin\\\\theta\\\\
 
 \\\\[L = 2\\\\int_0^{\\\\pi} \\\\sqrt{4(1+\\\\cos\\\\theta)^2 + 4\\\\sin^2\\\\theta} \\\\, d\\\\theta = 4\\\\int_0^{\\\\pi} \\\\sqrt{2 + 2\\\\cos\\\\theta} \\\\, d\\\\theta\\\\]
 
-\\\\[= 4\\\\int_0^{\\\\pi} 2\\\\cos\\\\frac{\\\\theta}{2} \\\\, d\\\\theta = 8\\\\left[2\\\\sin\\\\frac{\\\\theta}{2}\\\\right]_0^{\\\\pi} = 16\\\\]`},
+\\\\[= 4\\\\int_0^{\\\\pi} 2\\\\cos\\\\frac{\\\\theta}{2} \\\\, d\\\\theta = 8\\\\left[2\\\\sin\\\\frac{\\\\theta}{2}\\\\right]_0^{\\\\pi} = 16\\\\]`,
+    theory: [
+      {
+        level: "basico",
+        title: "Sistema de coordenadas polares",
+        lines: [
+          "Las coordenadas polares representan un punto con una distancia r al origen y un ángulo θ.",
+          "El punto P se escribe como (r, θ), donde r ≥ 0 es la distancia al polo y θ es el ángulo.",
+          "El polo es el origen del sistema y el eje polar es la dirección de referencia (eje positivo x).",
+          "Las coordenadas polares no son únicas: (r, θ) = (r, θ + 2π) = (-r, θ + π).",
+          "El polo tiene coordenadas (0, θ) para cualquier ángulo θ.",
+          "Las coordenadas polares son especialmente útiles para describir curvas circulares."
+        ]
+      },
       {
         level: "intermedio",
         title: "Conversión entre sistemas",
@@ -11673,20 +11673,7 @@ Para la longitud de arco, \\\\(\\\\frac{dr}{d\\\\theta} = -2\\\\sin\\\\theta\\\\
     slug: "curvas-notables",
     illustrationSummary: "Espiral de Arquímedes, cardioide y lemniscata con sus ecuaciones polares.",
     tip: "La espiral de Arquímedes tiene r = aθ (crecimiento lineal), el cardioide r = a(1+cosθ) (corazón), la lemniscata r² = a²cos2θ (infinito) y las trisectrices resuelven la trisección del ángulo.",
-    theory: [
-      {
-        level: "basico",
-        title: "La espiral de Arquímedes",
-        lines: [
-          "La espiral de Arquímedes es la curva cuya distancia al polo crece linealmente con el ángulo.",
-          "Su ecuación polar es r = a·θ, donde a es una constante que controla la separación entre vueltas.",
-          "Cada vuelta completa (2π radianes) aumenta la distancia en 2πa.",
-          "Fue estudiada por Arquímedes en el siglo III a.C. para problemas de cuadratura.",
-          "La separación entre espirales consecutivas es constante e igual a 2πa.",
-          "Se puede generar enrollando un hilo alrededor de un cilindro a velocidad constante."
-        ]
-      ,
-  studyGuide: `## Curvas Notables
+    studyGuide: `## Curvas Notables
 
 Las curvas notables son familias de curvas que aparecen frecuentemente en geometría y análisis matemático. Se denominan "notables" por su relevancia en la resolución de problemas geométricos, su presencia en modelos físicos y su papel fundamental en el estudio de secciones cónicas.
 
@@ -11727,7 +11714,20 @@ Por lo tanto: 2a = 5 + 5 = 10, entonces a = 5.
 
 ### Aplicaciones
 
-Las curvas notables tienen aplicaciones en órbitas planetarias (elipses), reflectores de luz (parábolas) y trayectorias hiperbólicas de partículas subatómicas. En arquitectura, los arcos parabólicos distribuyen eficientemente las cargas.`},
+Las curvas notables tienen aplicaciones en órbitas planetarias (elipses), reflectores de luz (parábolas) y trayectorias hiperbólicas de partículas subatómicas. En arquitectura, los arcos parabólicos distribuyen eficientemente las cargas.`,
+    theory: [
+      {
+        level: "basico",
+        title: "La espiral de Arquímedes",
+        lines: [
+          "La espiral de Arquímedes es la curva cuya distancia al polo crece linealmente con el ángulo.",
+          "Su ecuación polar es r = a·θ, donde a es una constante que controla la separación entre vueltas.",
+          "Cada vuelta completa (2π radianes) aumenta la distancia en 2πa.",
+          "Fue estudiada por Arquímedes en el siglo III a.C. para problemas de cuadratura.",
+          "La separación entre espirales consecutivas es constante e igual a 2πa.",
+          "Se puede generar enrollando un hilo alrededor de un cilindro a velocidad constante."
+        ]
+      },
       {
         level: "intermedio",
         title: "Cardioide y lemniscata",
@@ -11829,20 +11829,7 @@ Las curvas notables tienen aplicaciones en órbitas planetarias (elipses), refle
     slug: "metodos-resolucion-geometrica",
     illustrationSummary: "Diagrama de flujo mostrando los métodos de resolución: coordinados, trigonométricos y clásicos.",
     tip: "En el examen de admisión, identifica primero el método más eficiente: coordenadas para figuras en el plano, vectores para paralelismo y perpendicularidad, y trigonometría para ángulos y distancias no convencionales.",
-    theory: [
-      {
-        level: "basico",
-        title: "Métodos clásicos de resolución",
-        lines: [
-          "El método clásico usa propiedades directas de figuras: áreas, perímetros y ángulos conocidos.",
-          "Se aplica cuando el problema involucra polígonos regulares, círculos o relaciones de semejanza.",
-          "La identificación del tipo de triángulo (equilátero, isósceles, escaleno) guía la estrategia.",
-          "Los teoremas fundamentales como Pitágoras y Tales resuelven la mayoría de casos básicos.",
-          "Verificar siempre si se puede reducir el problema a figuras más simples.",
-          "El método clásico es el punto de partida antes de intentar técnicas más avanzadas."
-        ]
-      ,
-  studyGuide: `## Métodos de Resolución Geométrica
+    studyGuide: `## Métodos de Resolución Geométrica
 
 Los métodos de resolución geométrica comprenden técnicas sistemáticas para resolver problemas que involucran figuras, construcciones y relaciones espaciales. Estos métodos combinan razonamiento deductivo con herramientas de construcción clásicas.
 
@@ -11895,7 +11882,20 @@ Estas transformaciones son isometías cuando conservan distancias y ángulos. Se
 
 ### Elección del Método
 
-La elección del método adecuado depende de la naturaleza del problema. Los problemas con medidas y ángulos se resuelven preferentemente con trigonometría. Los problemas de posición relativa conviene abordarlos con vectores. Las construcciones precisas requieren métodos por semejanza o transformaciones.`},
+La elección del método adecuado depende de la naturaleza del problema. Los problemas con medidas y ángulos se resuelven preferentemente con trigonometría. Los problemas de posición relativa conviene abordarlos con vectores. Las construcciones precisas requieren métodos por semejanza o transformaciones.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Métodos clásicos de resolución",
+        lines: [
+          "El método clásico usa propiedades directas de figuras: áreas, perímetros y ángulos conocidos.",
+          "Se aplica cuando el problema involucra polígonos regulares, círculos o relaciones de semejanza.",
+          "La identificación del tipo de triángulo (equilátero, isósceles, escaleno) guía la estrategia.",
+          "Los teoremas fundamentales como Pitágoras y Tales resuelven la mayoría de casos básicos.",
+          "Verificar siempre si se puede reducir el problema a figuras más simples.",
+          "El método clásico es el punto de partida antes de intentar técnicas más avanzadas."
+        ]
+      },
       {
         level: "intermedio",
         title: "Método de coordenadas y vectores",
@@ -11995,20 +11995,7 @@ La elección del método adecuado depende de la naturaleza del problema. Los pro
     slug: "problemas-compuestos-geometrica",
     illustrationSummary: "Problema que combina múltiples conceptos geométricos: triángulos, circunferencias y áreas.",
     tip: "Los problemas compuestos evalúan tu capacidad de descomponer una figura compleja en partes más simples. Dibuja siempre una figura clara y etiqueta todas las medidas antes de calcular.",
-    theory: [
-      {
-        level: "basico",
-        title: "Composición de figuras básicas",
-        lines: [
-          "Las figuras compuestas se forman al unir, superponer o recortar figuras elementales.",
-          "El área total es la suma de las áreas de las partes que la componen sin traslape.",
-          "Las figuras elementales más comunes son: triángulo, rectángulo, círculo y trapecio.",
-          "Al recortar una figura de otra, se resta el área de la parte removida.",
-          "Verificar que las piezas cubren exactamente la figura sin huecos ni superposiciones.",
-          "Los problemas de perímetros compuestos requieren cuidado: no todas las líneas interiores se suman."
-        ]
-      ,
-  studyGuide: `## Problemas Compuestos de Geometría
+    studyGuide: `## Problemas Compuestos de Geometría
 
 Los problemas compuestos de geometría son ejercicios que integran múltiples conceptos y métodos en una sola situación problemática. Su resolución exige identificar las relaciones entre diversas figuras, aplicar varias fórmulas de manera coordinada y descomponer el problema en partes más simples.
 
@@ -12058,7 +12045,20 @@ A_circunscrita = π(3√2)² = π · 18 = 18π
 
 ### Errores Comunes
 
-No asumir que una figura es inscrita sin verificar las condiciones de tangencia. Olvidar que los radios de una circunferencia inscrita y circunscrita en un polígono regular se calculan con fórmulas distintas. Confundir la base con la altura en polígonos inclinados.`},
+No asumir que una figura es inscrita sin verificar las condiciones de tangencia. Olvidar que los radios de una circunferencia inscrita y circunscrita en un polígono regular se calculan con fórmulas distintas. Confundir la base con la altura en polígonos inclinados.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Composición de figuras básicas",
+        lines: [
+          "Las figuras compuestas se forman al unir, superponer o recortar figuras elementales.",
+          "El área total es la suma de las áreas de las partes que la componen sin traslape.",
+          "Las figuras elementales más comunes son: triángulo, rectángulo, círculo y trapecio.",
+          "Al recortar una figura de otra, se resta el área de la parte removida.",
+          "Verificar que las piezas cubren exactamente la figura sin huecos ni superposiciones.",
+          "Los problemas de perímetros compuestos requieren cuidado: no todas las líneas interiores se suman."
+        ]
+      },
       {
         level: "intermedio",
         title: "Estrategias de descomposición",
@@ -12153,20 +12153,7 @@ No asumir que una figura es inscrita sin verificar las condiciones de tangencia.
     slug: "optimizacion-geometrica",
     illustrationSummary: "Figuras con áreas o perímetros máximos/mínimos bajo restricciones.",
     tip: "En problemas de optimización geométrica, la derivada igualada a cero siempre encuentra extremos. Recuerda que el cuadrado maximiza el área entre todos los rectángulos con perímetro fijo.",
-    theory: [
-      {
-        level: "basico",
-        title: "Conceptos de optimización",
-        lines: [
-          "Optimizar significa encontrar el valor máximo o mínimo de una cantidad bajo ciertas restricciones.",
-          "En geometría, las restricciones suelen ser: perímetro fijo, área fija o sumas de longitudes constantes.",
-          "El cuadrado maximiza el área entre todos los rectángulos con el mismo perímetro.",
-          "El círculo maximiza el área entre todas las figuras con el mismo perímetro (isoperimetría).",
-          "Para rectángulos con área fija, el cuadrado minimiza el perímetro.",
-          "Identificar qué se quiere optimizar (área, perímetro, volumen) y cuál es la restricción."
-        ]
-      ,
-  studyGuide: `## Optimización Geométrica
+    studyGuide: `## Optimización Geométrica
 
 La optimización geométrica consiste en encontrar, dentro de un conjunto de soluciones posibles, la que maximiza o minimiza una determinada magnitud geométrica como área, perímetro, volumen o distancia. Esta disciplina combina herramientas de geometría con técnicas de cálculo diferencial.
 
@@ -12216,7 +12203,20 @@ x = 25 metros
 
 ### Consideraciones Geométricas
 
-La isoperimetría establece que, entre todas las figuras de igual perímetro, el círculo encierra la mayor área. Este principio fundamental justifica por qué las soluciones óptimas de muchos problemas geométricos involucran figuras circulares o cuadradas. La simetría es una característica recurrente en las soluciones de problemas de optimización geométrica.`},
+La isoperimetría establece que, entre todas las figuras de igual perímetro, el círculo encierra la mayor área. Este principio fundamental justifica por qué las soluciones óptimas de muchos problemas geométricos involucran figuras circulares o cuadradas. La simetría es una característica recurrente en las soluciones de problemas de optimización geométrica.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos de optimización",
+        lines: [
+          "Optimizar significa encontrar el valor máximo o mínimo de una cantidad bajo ciertas restricciones.",
+          "En geometría, las restricciones suelen ser: perímetro fijo, área fija o sumas de longitudes constantes.",
+          "El cuadrado maximiza el área entre todos los rectángulos con el mismo perímetro.",
+          "El círculo maximiza el área entre todas las figuras con el mismo perímetro (isoperimetría).",
+          "Para rectángulos con área fija, el cuadrado minimiza el perímetro.",
+          "Identificar qué se quiere optimizar (área, perímetro, volumen) y cuál es la restricción."
+        ]
+      },
       {
         level: "intermedio",
         title: "Optimización con derivadas",
@@ -12312,20 +12312,7 @@ La isoperimetría establece que, entre todas las figuras de igual perímetro, el
     slug: "fractales-introduccion",
     illustrationSummary: "Conjunto de Mandelbrot y triángulo de Sierpinski mostrando autosimilitud.",
     tip: "Los fractales no son comunes en el examen de admisión, pero entender autosimilitud y dimensiones fractales te da ventaja en problemas de patrones geométricos recursivos y series infinitas.",
-    theory: [
-      {
-        level: "basico",
-        title: "¿Qué son los fractales?",
-        lines: [
-          "Un fractal es una figura geométrica que presenta autosimilitud: partes pequeñas se parecen al todo.",
-          "Los fractales se generan mediante procesos repetitivos (iteraciones) que se aplican indefinidamente.",
-          "La Dimensión de Hausdorff mide la complejidad de un fractal y puede ser un número no entero.",
-          "El triángulo de Sierpinski se obtiene eliminando el triángulo central repetidamente.",
-          "La curva de Koch se construye agregando triángulos equilálicos en cada segmento de una línea.",
-          "Los fractales aparecen en la naturaleza: costas, nubes, copas de árboles y systema circulatorio."
-        ]
-      ,
-  studyGuide: `## Fractales: Introducción
+    studyGuide: `## Fractales: Introducción
 
 Los fractales son estructuras geométricas que exhiben autosimilitud, es decir, contienen réplicas de sí mismas a diferentes escalas. Fueron formalizados en el siglo XX por matemáticos como Benoît Mandelbrot, aunque patrones fractales aparecieron en obras artísticas y naturales mucho antes.
 
@@ -12377,7 +12364,20 @@ Los fractales modelan numerosos fenómenos naturales: la estructura de los pulmo
 
 ### Generación por Sistemas de Funciones Iteradas
 
-Los fractales se generan mediante sistemas de funciones iteradas (IFS, por sus siglas en inglés). Un IFS consta de un conjunto de transformaciones contractantes f₁, f₂, ..., fₙ tales que el fractal es el único conjunto invariante bajo la unión de estas funciones: F = ∪fᵢ(F). El teorema de Hutchinson garantiza la existencia y unicidad de este conjunto atractor.`},
+Los fractales se generan mediante sistemas de funciones iteradas (IFS, por sus siglas en inglés). Un IFS consta de un conjunto de transformaciones contractantes f₁, f₂, ..., fₙ tales que el fractal es el único conjunto invariante bajo la unión de estas funciones: F = ∪fᵢ(F). El teorema de Hutchinson garantiza la existencia y unicidad de este conjunto atractor.`,
+    theory: [
+      {
+        level: "basico",
+        title: "¿Qué son los fractales?",
+        lines: [
+          "Un fractal es una figura geométrica que presenta autosimilitud: partes pequeñas se parecen al todo.",
+          "Los fractales se generan mediante procesos repetitivos (iteraciones) que se aplican indefinidamente.",
+          "La Dimensión de Hausdorff mide la complejidad de un fractal y puede ser un número no entero.",
+          "El triángulo de Sierpinski se obtiene eliminando el triángulo central repetidamente.",
+          "La curva de Koch se construye agregando triángulos equilálicos en cada segmento de una línea.",
+          "Los fractales aparecen en la naturaleza: costas, nubes, copas de árboles y systema circulatorio."
+        ]
+      },
       {
         level: "intermedio",
         title: "Fractales clásicos y sus propiedades",
@@ -12605,20 +12605,7 @@ Los fractales se generan mediante sistemas de funciones iteradas (IFS, por sus s
     slug: "relaciones-de-parentesco",
     illustrationSummary: "Árbol genealógico con las relaciones de parentesco: directo, colateral y por matrimonio.",
     tip: "Dibuja el árbol genealógico completo antes de responder. Identifica primero el punto de referencia y luego ve subiendo y bajando generaciones. Los errores más comunes son confundir cuñado con cuñada o tío político con tío carnal.",
-    theory: [
-      {
-        level: "basico",
-        title: "Conceptos fundamentales",
-        lines: [
-          "**Parentesco directo**: Relaciones de ascendencia o descendencia (padre, hijo, abuelo, nieto).",
-          "**Parentesco colateral**: Personas que comparten un antepasado común pero no son ascendientes entre sí (hermanos, primos, tíos).",
-          "**Generaciones**: Cada nivel del árbol genealógico representa una generación. Los padres están una generación arriba, los hijos una abajo.",
-          "**Grado de parentesco**: Se contabiliza el número de generaciones que separan a dos personas. Entre hermanos es de 2do grado, entre tíos y sobrinos de 3er grado.",
-          "**Cónyuges**: No tienen parentesco de consanguinidad, pero se relacionan por matrimonio (suegro, yerno, nuera, cuñado).",
-          "**Terminología clave**: Abuelo/a (2 gen. arriba), Padre/Madre (1 gen. arriba), Hermano/a (misma gen.), Hijo/a (1 gen. abajo), Nieto/a (2 gen. abajo)."
-        ]
-      ,
-  studyGuide: `## Relaciones de Parentesco
+    studyGuide: `## Relaciones de Parentesco
 ### Tipos de parentesco
 El parentesco se define por la relación biológica o jurídica entre personas. Existen dos tipos fundamentales: consanguíneos (por sangre) y por afinidad (por matrimonio o unión). Los grados de parentesco se cuentan desde uno hasta el ascendente o descendente directo, y luego se suman ambos lados para obtener el grado total entre dos personas.
 
@@ -12643,7 +12630,20 @@ Luis es padre de Carlos. Carmen es hermana de Luis. ¿Qué relación tiene Carlo
 - Tío-abuelo y sobrino-nieto: grado 4
 
 ### Consejos para resolver
-Identifica primero el ancestro común más cercano. Cuenta los saltos desde cada persona hasta ese ancestro. Suma ambos valores. Recuerda que los cuñados tienen parentesco por afinidad, no por sangre. En problemas complejos, dibuja un árbol genealógico para visualizar las relaciones.`},
+Identifica primero el ancestro común más cercano. Cuenta los saltos desde cada persona hasta ese ancestro. Suma ambos valores. Recuerda que los cuñados tienen parentesco por afinidad, no por sangre. En problemas complejos, dibuja un árbol genealógico para visualizar las relaciones.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "**Parentesco directo**: Relaciones de ascendencia o descendencia (padre, hijo, abuelo, nieto).",
+          "**Parentesco colateral**: Personas que comparten un antepasado común pero no son ascendientes entre sí (hermanos, primos, tíos).",
+          "**Generaciones**: Cada nivel del árbol genealógico representa una generación. Los padres están una generación arriba, los hijos una abajo.",
+          "**Grado de parentesco**: Se contabiliza el número de generaciones que separan a dos personas. Entre hermanos es de 2do grado, entre tíos y sobrinos de 3er grado.",
+          "**Cónyuges**: No tienen parentesco de consanguinidad, pero se relacionan por matrimonio (suegro, yerno, nuera, cuñado).",
+          "**Terminología clave**: Abuelo/a (2 gen. arriba), Padre/Madre (1 gen. arriba), Hermano/a (misma gen.), Hijo/a (1 gen. abajo), Nieto/a (2 gen. abajo)."
+        ]
+      },
       {
         level: "intermedio",
         title: "Estrategias y técnicas",
@@ -12781,20 +12781,7 @@ Identifica primero el ancestro común más cercano. Cuenta los saltos desde cada
     slug: "relaciones-de-tiempo",
     illustrationSummary: "Línea de tiempo con fechas, intervalos y operaciones temporales.",
     tip: "En problemas de tiempo, convierte siempre todo a la misma unidad (minutos o horas) antes de operar. Los errores más frecuentes son mezclar unidades. Dibuja una línea de tiempo para visualizar el problema.",
-    theory: [
-      {
-        level: "basico",
-        title: "Conceptos fundamentales",
-        lines: [
-          "**Unidades de tiempo**: 1 hora = 60 minutos, 1 día = 24 horas, 1 semana = 7 días, 1 mes ≈ 30 días, 1 año = 12 meses o 365 días.",
-          "**Línea de tiempo**: Representación visual que ordena eventos de pasado a futuro. Ayuda a resolver problemas de \"antes\", \"después\", \"hace\" y \"dentro de\".",
-          "**Operaciones con horas**: Para sumar horas se suma hora con hora y minuto con minuto. Si los minutos superan 60, se convierten: 75 min = 1 hora 15 min.",
-          "**Resta de horas**: Si los minutos del segundo tiempo son mayores, se \"pide\" una hora (60 min) para realizar la resta correctamente.",
-          "**Antes y después**: \"Hace 2 horas\" significa retroceder en el tiempo. \"Dentro de 3 horas\" significa avanzar en el tiempo.",
-          "**Fusión horaria del Perú**: Se usa UTC-5 (hora de Lima). No tiene horario de verano desde 2009."
-        ]
-      ,
-  studyGuide: `## Relaciones de Tiempo
+    studyGuide: `## Relaciones de Tiempo
 ### Concepto fundamental
 Las relaciones de tiempo determinan cuándo ocurrieron eventos pasados o cuándo ocurrirán eventos futuros. Se basan en la resta de fechas o la suma de lapsos de tiempo. El punto de referencia es siempre la fecha actual o una fecha dada en el problema.
 
@@ -12817,7 +12804,20 @@ Cuando calcules meses, recuerda que no todos los meses tienen 30 días. Para sim
 Si hoy es 20 de enero y un evento ocurrió hace 45 días: enero tiene 31 días, 20 de enero menos 20 = 31 de diciembre del año anterior. Luego restar 25 días más: 6 de diciembre. El evento fue el 6 de diciembre.
 
 ### Consejos prácticos
-Dibuja una línea de tiempo para visualizar los eventos. Identifica la fecha de referencia y hacia dónde te mueves (pasado o futuro). Cuida los límites de cada mes. Cuando un problema diga "el mes pasado", refiérete al mismo día pero del mes anterior. Para edades, recuerda que la edad se incrementa en el cumpleaños, no el 1 de enero.`},
+Dibuja una línea de tiempo para visualizar los eventos. Identifica la fecha de referencia y hacia dónde te mueves (pasado o futuro). Cuida los límites de cada mes. Cuando un problema diga "el mes pasado", refiérete al mismo día pero del mes anterior. Para edades, recuerda que la edad se incrementa en el cumpleaños, no el 1 de enero.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "**Unidades de tiempo**: 1 hora = 60 minutos, 1 día = 24 horas, 1 semana = 7 días, 1 mes ≈ 30 días, 1 año = 12 meses o 365 días.",
+          "**Línea de tiempo**: Representación visual que ordena eventos de pasado a futuro. Ayuda a resolver problemas de \"antes\", \"después\", \"hace\" y \"dentro de\".",
+          "**Operaciones con horas**: Para sumar horas se suma hora con hora y minuto con minuto. Si los minutos superan 60, se convierten: 75 min = 1 hora 15 min.",
+          "**Resta de horas**: Si los minutos del segundo tiempo son mayores, se \"pide\" una hora (60 min) para realizar la resta correctamente.",
+          "**Antes y después**: \"Hace 2 horas\" significa retroceder en el tiempo. \"Dentro de 3 horas\" significa avanzar en el tiempo.",
+          "**Fusión horaria del Perú**: Se usa UTC-5 (hora de Lima). No tiene horario de verano desde 2009."
+        ]
+      },
       {
         level: "intermedio",
         title: "Estrategias y técnicas",
@@ -12969,20 +12969,7 @@ Dibuja una línea de tiempo para visualizar los eventos. Identifica la fecha de 
     slug: "verdades-y-mentiras",
     illustrationSummary: "Tabla lógica con proposiciones verdaderas y falsas. Se muestran las reglas de deducción.",
     tip: "Siempre construye la tabla de verdad completa. Cuando hay 3 o más personas, prueba caso por caso: primero asume que A dice la verdad y ve si hay contradicción. La clave es encontrar SIEMPRE una contradicción en al menos un caso.",
-    theory: [
-      {
-        level: "basico",
-        title: "Conceptos fundamentales",
-        lines: [
-          "**Enunciado verdadero**: Un statement que se corresponde con la realidad. Si A dice la verdad, todo lo que afirma es correcto.",
-          "**Enunciado falso (mentira)**: Un statement que contradice la realidad. Si A miente, todo lo que afirma es incorrecto.",
-          "**Negación**: Si A dice \"B es mentiroso\", y A dice la verdad, entonces B es efectivamente mentiroso. Si A miente, entonces B dice la verdad.",
-          "**Condiciones del problema**: Generalmente, el enunciado indica cuántos dicen la verdad y cuántos mienten (ej: \"uno miente y dos dicen la verdad\").",
-          "**Proposiciones simples vs compuestas**: Simple: \"El cielo es azul\". Compuesta: \"Si llueve, entonces uso paraguas\".",
-          "**Conectores lógicos**: Y (∧), O (∨), SI...ENTONCES (→), NO (¬). Estos conectan proposiciones."
-        ]
-      ,
-  studyGuide: `## Verdades y Mentiras
+    studyGuide: `## Verdades y Mentiras
 ### Planteo del problema
 En este tipo de problemas se presentan varias afirmaciones y se sabe que unas son verdaderas y otras son falsas. El objetivo es determinar qué afirmaciones son verdaderas y cuáles son falsas usando lógica deductiva. La clave es asumir que una afirmación es verdadera o falsa y verificar si genera contradicciones.
 
@@ -13010,7 +12997,20 @@ Cuando se usa "o" (disjunction), al menos una parte debe ser verdadera para que 
 | F | F | V |
 
 ### Consejos prácticos
-Empieza asumiendo que cada persona dice la verdad o miente, y busca contradicciones. Usa tablas de verdad para verificar. Presta atención a cuantificadores como "todos", "algunos", "ninguno". Cuando diga "al menos uno", significa uno o más. Cuando diga "exactamente uno", significa uno y solo uno. Los problemas más difíciles requieren probar múltiples casos hasta encontrar el único consistente.`},
+Empieza asumiendo que cada persona dice la verdad o miente, y busca contradicciones. Usa tablas de verdad para verificar. Presta atención a cuantificadores como "todos", "algunos", "ninguno". Cuando diga "al menos uno", significa uno o más. Cuando diga "exactamente uno", significa uno y solo uno. Los problemas más difíciles requieren probar múltiples casos hasta encontrar el único consistente.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "**Enunciado verdadero**: Un statement que se corresponde con la realidad. Si A dice la verdad, todo lo que afirma es correcto.",
+          "**Enunciado falso (mentira)**: Un statement que contradice la realidad. Si A miente, todo lo que afirma es incorrecto.",
+          "**Negación**: Si A dice \"B es mentiroso\", y A dice la verdad, entonces B es efectivamente mentiroso. Si A miente, entonces B dice la verdad.",
+          "**Condiciones del problema**: Generalmente, el enunciado indica cuántos dicen la verdad y cuántos mienten (ej: \"uno miente y dos dicen la verdad\").",
+          "**Proposiciones simples vs compuestas**: Simple: \"El cielo es azul\". Compuesta: \"Si llueve, entonces uso paraguas\".",
+          "**Conectores lógicos**: Y (∧), O (∨), SI...ENTONCES (→), NO (¬). Estos conectan proposiciones."
+        ]
+      },
       {
         level: "intermedio",
         title: "Estrategias y técnicas",
@@ -13179,20 +13179,7 @@ Empieza asumiendo que cada persona dice la verdad o miente, y busca contradiccio
     slug: "orden-de-informacion",
     illustrationSummary: "Secuencia de eventos con el orden lógico establecido por las premisas.",
     tip: "Dibuja una tabla de ordenamiento con las restricciones. Coloca primero los elementos que tienen más restricciones (los que aparecen en más pistas). Si una restricción dice \"A antes que B\", dibuja una flecha A → B.",
-    theory: [
-      {
-        level: "basico",
-        title: "Conceptos fundamentales",
-        lines: [
-          "**Secuencia**: Orden en que ocurren los elementos (números, personas, objetos). Se lee de izquierda a derecha o de arriba a abajo.",
-          "**Posiciones**: Primero (1), Segundo (2), Tercero (3), etc. Cada elemento ocupa exactamente una posición.",
-          "**Restricción**: Regla que limita el orden. Ej: \"Ana está después de Luis\" significa que Ana NO puede estar en el primer lugar si Luis no está antes.",
-          "**Comparaciones directas**: \"A es mayor que B\" o \"A está a la izquierda de B\". Estas definen un orden parcial.",
-          "**Restricciones absolutas**: \"Pedro está en el puesto 1\". Esto fija la posición de un elemento.",
-          "**Restricciones relativas**: \"María está justo después de Juan\". Esto define una posición relativa entre dos elementos."
-        ]
-      ,
-  studyGuide: `## Orden de Información
+    studyGuide: `## Orden de Información
 ### Tipo de problema
 Se presentan varias personas o elementos y una serie de pistas que establecen relaciones de orden (antes, después, mayor, menor, izquierda, derecha, etc.). El objetivo es determinar el orden completo o responder preguntas específicas sobre la secuencia.
 
@@ -13215,7 +13202,20 @@ Algunas pistas dan información condicional: "Si A está en posición 1, entonce
 Tres personas: X, Y, Z. Si X es el mayor, entonces Y es el menor. Z no es el mayor. Si X fuera el mayor, Y sería el menor. Entonces Z estaría en el medio. Verificación: X mayor, Z medio, Y menor. Z no es el mayor (correcto). Esto funciona. X es el mayor.
 
 ### Consejos prácticos
-Dibuja una tabla o línea de tiempo para representar las posiciones. Marca con X las posiciones descartadas. Usa proceso de eliminación cuando tengas información parcial. Cuando una pista diga "no nécessairement", significa que esa relación no siempre se cumple. Presta atención a las pistas que dicen "exactamente" o "al menos". Revisa siempre tu respuesta contra todas las pistas originales.`},
+Dibuja una tabla o línea de tiempo para representar las posiciones. Marca con X las posiciones descartadas. Usa proceso de eliminación cuando tengas información parcial. Cuando una pista diga "no nécessairement", significa que esa relación no siempre se cumple. Presta atención a las pistas que dicen "exactamente" o "al menos". Revisa siempre tu respuesta contra todas las pistas originales.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "**Secuencia**: Orden en que ocurren los elementos (números, personas, objetos). Se lee de izquierda a derecha o de arriba a abajo.",
+          "**Posiciones**: Primero (1), Segundo (2), Tercero (3), etc. Cada elemento ocupa exactamente una posición.",
+          "**Restricción**: Regla que limita el orden. Ej: \"Ana está después de Luis\" significa que Ana NO puede estar en el primer lugar si Luis no está antes.",
+          "**Comparaciones directas**: \"A es mayor que B\" o \"A está a la izquierda de B\". Estas definen un orden parcial.",
+          "**Restricciones absolutas**: \"Pedro está en el puesto 1\". Esto fija la posición de un elemento.",
+          "**Restricciones relativas**: \"María está justo después de Juan\". Esto define una posición relativa entre dos elementos."
+        ]
+      },
       {
         level: "intermedio",
         title: "Estrategias y técnicas",
@@ -13394,20 +13394,7 @@ Dibuja una tabla o línea de tiempo para representar las posiciones. Marca con X
     slug: "razonamiento-inductivo",
     illustrationSummary: "Patrón numérico con casos específicos que llevan a una generalización.",
     tip: "Para hallar el patrón, calcula las diferencias entre términos consecutivos. Si las diferencias son constantes → progresión aritmética. Si las razones son constantes → progresión geométrica. Si no, busca en las segundas diferencias.",
-    theory: [
-      {
-        level: "basico",
-        title: "Conceptos fundamentales",
-        lines: [
-          "**Razonamiento inductivo**: Proceso de llegar a una conclusión general a partir de observaciones particulares. \"He visto 100 cisnes blancos, entonces todos los cisnes son blancos\".",
-          "**Sucesión**: Conjunto de números que siguen un patrón o regla determinada. Ej: 2, 4, 6, 8, ... → cada término suma 2.",
-          "**Diferencia entre términos**: Resta un término con el siguiente. Si la diferencia es constante, es una progresión aritmética.",
-          "**Razón de progresión aritmética (r)**: La diferencia constante entre términos consecutivos. Fórmula: aₙ = a₁ + (n−1)·r.",
-          "**Término general**: Expresión matemática que permite calcular cualquier término de la sucesión sin listar todos los anteriores.",
-          "**Enunciado inductivo vs deductivo**: Inductivo: particular → general. Deductivo: general → particular."
-        ]
-      ,
-  studyGuide: `## Razonamiento Inductivo
+    studyGuide: `## Razonamiento Inductivo
 ### Definición
 El razonamiento inductivo consiste en observar patrones específicos y generalizarlos para predecir comportamientos futuros o establecer reglas generales. A diferencia del deductivo, que va de lo general a lo particular, el inductivo va de lo particular a lo general. No garantiza certeza absoluta, sino alta probabilidad.
 
@@ -13433,7 +13420,20 @@ Cuando las primeras diferencias no son constantes pero las segundas sí. Ejemplo
 Algunos patrones combinan múltiples reglas. Ejemplo: 2, 3, 5, 8, 12, 17, ... Primeras diferencias: 1, 2, 3, 4, 5, ... Son crecientes de 1 en 1. Segundas diferencias: 1, 1, 1, 1, ... Constante. Esto es un patrón cuadrático. Generalización: aₙ = n(n+1)/2 + 1. Para n=1: (1×2)/2 + 1 = 2. Para n=2: (2×3)/2 + 1 = 4. Verificar: a₃ = (3×4)/2 + 1 = 7. Hmm, ese no coincide. Ajustar: aₙ = n²/2 + n/2 + 1. Para n=1: 0.5 + 0.5 + 1 = 2. Para n=2: 2 + 1 + 1 = 4. Para n=3: 4.5 + 1.5 + 1 = 7. Aún no. La secuencia correcta para 2, 3, 5, 8, 12, 17 es aₙ = (n² + n + 2)/2. Para n=1: (1+1+2)/2 = 2. Para n=2: (4+2+2)/2 = 4. Para n=3: (9+3+2)/2 = 7. Aún no coincide. La secuencia real con esas diferencias 1, 2, 3, 4, 5 genera: 2, 3, 5, 8, 12, 17. Verificando: a₁=2, a₂=3, a₃=5, a₄=8, a₅=12, a₆=17. Las diferencias son 1, 2, 3, 4, 5. Para n=6: a₆=17. La fórmula es aₙ = (n² - n + 4)/2. Para n=1: (1-1+4)/2 = 2. Para n=2: (4-2+4)/2 = 3. Para n=3: (9-3+4)/2 = 5. Para n=4: (16-4+4)/2 = 8. Para n=5: (25-5+4)/2 = 12. Para n=6: (36-6+4)/2 = 17. Correcto.
 
 ### Consejos prácticos
-Siempre calcula las diferencias entre términos consecutivos. Si son constantes, es aritmético. Si no lo son, calcula las segundas diferencias. Si son constantes, es cuadrático. Para patrones geométricos, calcula la razón entre términos. Dibuja los patrones visuales para identificar transformaciones. Verifica tu fórmula con los primeros términos conocidos. Si un patrón no se ajusta a una categoría simple, busca combinaciones de patrones.`},
+Siempre calcula las diferencias entre términos consecutivos. Si son constantes, es aritmético. Si no lo son, calcula las segundas diferencias. Si son constantes, es cuadrático. Para patrones geométricos, calcula la razón entre términos. Dibuja los patrones visuales para identificar transformaciones. Verifica tu fórmula con los primeros términos conocidos. Si un patrón no se ajusta a una categoría simple, busca combinaciones de patrones.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "**Razonamiento inductivo**: Proceso de llegar a una conclusión general a partir de observaciones particulares. \"He visto 100 cisnes blancos, entonces todos los cisnes son blancos\".",
+          "**Sucesión**: Conjunto de números que siguen un patrón o regla determinada. Ej: 2, 4, 6, 8, ... → cada término suma 2.",
+          "**Diferencia entre términos**: Resta un término con el siguiente. Si la diferencia es constante, es una progresión aritmética.",
+          "**Razón de progresión aritmética (r)**: La diferencia constante entre términos consecutivos. Fórmula: aₙ = a₁ + (n−1)·r.",
+          "**Término general**: Expresión matemática que permite calcular cualquier término de la sucesión sin listar todos los anteriores.",
+          "**Enunciado inductivo vs deductivo**: Inductivo: particular → general. Deductivo: general → particular."
+        ]
+      },
       {
         level: "intermedio",
         title: "Estrategias y técnicas",
@@ -13566,20 +13566,7 @@ Siempre calcula las diferencias entre términos consecutivos. Si son constantes,
     slug: "sistemas-de-numeracion",
     illustrationSummary: "Comparación de sistemas: decimal, binario, hexadecimal y sus conversiones.",
     tip: "Memoriza las potencias de 2 (hasta 2¹⁰=1024) y de 16 (hasta 16³=4096). Para convertir de binario a decimal multiplica cada dígito por 2 elevado a su posición (desde 0 a la derecha). Para convertir de decimal a binario divide sucesivamente entre 2.",
-    theory: [
-      {
-        level: "basico",
-        title: "Conceptos fundamentales",
-        lines: [
-          "**Sistema decimal (base 10)**: Usa los dígitos 0-9. Cada posición representa una potencia de 10: 1, 10, 100, 1000...",
-          "**Sistema binario (base 2)**: Usa solo 0 y 1. Cada posición representa una potencia de 2: 1, 2, 4, 8, 16...",
-          "**Sistema octal (base 8)**: Usa dígitos 0-7. Cada posición representa una potencia de 8: 1, 8, 64, 512...",
-          "**Sistema hexadecimal (base 16)**: Usa 0-9 y A-F (A=10, B=11, C=12, D=13, E=14, F=15).",
-          "**Conversión a decimal**: Multiplica cada dígito por base^(posición) y suma. Ej: 1011₂ = 1·8+0·4+1·2+1·1 = 11₁₀.",
-          "**Notación**: Se escribe el número con subíndice de la base. Ej: 255₁₀ = FF₁₆ = 377₈ = 11111111₂."
-        ]
-      ,
-  studyGuide: `## Sistemas de Numeración
+    studyGuide: `## Sistemas de Numeración
 ### Tipos de sistemas
 Los sistemas de numeración más comunes son: decimal (base 10), binario (base 2), octal (base 8), hexadecimal (base 16), y en general cualquier base b. Cada sistema utiliza un conjunto de dígitos y un valor posicional para representar números.
 
@@ -13613,7 +13600,20 @@ Las operaciones aritméticas se realizan igual que en base 10, pero con los díg
 - Base 16: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F
 
 ### Consejos prácticos
-Memoriza las potencias de las bases más comunes (2, 8, 16). Para conversiones rápidas de binario a hexadecimal, agrupa los bits de 4 en 4 desde la derecha. Para binario a octal, agrupa de 3 en 3. Verifica siempre tu respuesta reconstruyendo el número en base 10. En exámenes, las bases más preguntadas son 2, 8 y 16.`},
+Memoriza las potencias de las bases más comunes (2, 8, 16). Para conversiones rápidas de binario a hexadecimal, agrupa los bits de 4 en 4 desde la derecha. Para binario a octal, agrupa de 3 en 3. Verifica siempre tu respuesta reconstruyendo el número en base 10. En exámenes, las bases más preguntadas son 2, 8 y 16.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "**Sistema decimal (base 10)**: Usa los dígitos 0-9. Cada posición representa una potencia de 10: 1, 10, 100, 1000...",
+          "**Sistema binario (base 2)**: Usa solo 0 y 1. Cada posición representa una potencia de 2: 1, 2, 4, 8, 16...",
+          "**Sistema octal (base 8)**: Usa dígitos 0-7. Cada posición representa una potencia de 8: 1, 8, 64, 512...",
+          "**Sistema hexadecimal (base 16)**: Usa 0-9 y A-F (A=10, B=11, C=12, D=13, E=14, F=15).",
+          "**Conversión a decimal**: Multiplica cada dígito por base^(posición) y suma. Ej: 1011₂ = 1·8+0·4+1·2+1·1 = 11₁₀.",
+          "**Notación**: Se escribe el número con subíndice de la base. Ej: 255₁₀ = FF₁₆ = 377₈ = 11111111₂."
+        ]
+      },
       {
         level: "intermedio",
         title: "Estrategias y técnicas",
@@ -13778,20 +13778,7 @@ Memoriza las potencias de las bases más comunes (2, 8, 16). Para conversiones r
     slug: "criptoaritmetica",
     illustrationSummary: "Operación aritmética donde cada letra representa un dígito diferente.",
     tip: "Para resolver criptoaritmética, empieza analizando la columna de la derecha (unidades) porque ahí no hay acarreo inicial. Luego busca letras que se repiten mucho o que aparecen en la primera posición de números de dos dígitos (nunca pueden ser 0).",
-    theory: [
-      {
-        level: "basico",
-        title: "Conceptos fundamentales",
-        lines: [
-          "**Criptoaritmética**: Problema matemático donde cada letra representa un dígito único (0-9). Se debe descifrar qué letra corresponde a cada número.",
-          "**Regla fundamental**: Cada letra = un dígito. Cada dígito = una letra. Dos letras diferentes NO pueden tener el mismo valor.",
-          "**Primer dígito**: La primera letra de un número de más de un dígito NUNCA puede ser 0 (como en los números reales).",
-          "**Operaciones**: Se suman, restan o multiplican números codificados con letras. El resultado también está codificado.",
-          "**Cifras únicas**: Si un número tiene una sola letra (ej: A), su valor va de 0 a 9. Si tiene dos letras (AB), va de 10 a 99 (siendo A≠0).",
-          "**Pista clave**: La suma de dos dígitos máximos (9+9=18) genera acarreo de 1 como máximo en la siguiente columna."
-        ]
-      ,
-  studyGuide: `## Criptoaritmetica
+    studyGuide: `## Criptoaritmetica
 ### Definición
 La criptoaritmética es un tipo de puzzles donde cada letra representa un dígito único (0-9). Se presenta una operación aritmética (suma, resta, multiplicación) con letras en lugar de números, y el objetivo es descubrir qué dígito corresponde a cada letra.
 
@@ -13814,7 +13801,20 @@ En una suma ABC + DEF = GHIJ, el carry máximo es 1 en cada columna. En columnas
 En multiplicaciones como AB × C = DEF, el rango de posibles valores es mayor. Para AB × C: A×C puede dar un carry. El producto tiene restricciones por los dígitos disponibles. Usa prueba y error sistemático con las restricciones conocidas.
 
 ### Consejos prácticos
-Empieza por las letras en posiciones más restrictivas (primera cifra, resultado de carry). Usa una tabla para rastrear qué dígitos ya están asignados. Si hay 8 letras, solo quedan 2 dígitos sin usar. Cuando encuentres un candidato, verifica toda la operación. Los carry son la herramienta más poderosa para reducir posibilidades.`},
+Empieza por las letras en posiciones más restrictivas (primera cifra, resultado de carry). Usa una tabla para rastrear qué dígitos ya están asignados. Si hay 8 letras, solo quedan 2 dígitos sin usar. Cuando encuentres un candidato, verifica toda la operación. Los carry son la herramienta más poderosa para reducir posibilidades.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "**Criptoaritmética**: Problema matemático donde cada letra representa un dígito único (0-9). Se debe descifrar qué letra corresponde a cada número.",
+          "**Regla fundamental**: Cada letra = un dígito. Cada dígito = una letra. Dos letras diferentes NO pueden tener el mismo valor.",
+          "**Primer dígito**: La primera letra de un número de más de un dígito NUNCA puede ser 0 (como en los números reales).",
+          "**Operaciones**: Se suman, restan o multiplican números codificados con letras. El resultado también está codificado.",
+          "**Cifras únicas**: Si un número tiene una sola letra (ej: A), su valor va de 0 a 9. Si tiene dos letras (AB), va de 10 a 99 (siendo A≠0).",
+          "**Pista clave**: La suma de dos dígitos máximos (9+9=18) genera acarreo de 1 como máximo en la siguiente columna."
+        ]
+      },
       {
         level: "intermedio",
         title: "Estrategias y técnicas",
@@ -13929,20 +13929,7 @@ Empieza por las letras en posiciones más restrictivas (primera cifra, resultado
     slug: "sucesiones",
     illustrationSummary: "Secuencia numérica con la regla de formación y los primeros términos.",
     tip: "Cuando veas una sucesión, SIEMPRE calcula primero las diferencias entre términos consecutivos. Si las primeras diferencias son constantes → aritmética. Si no lo son, calcula las segundas diferencias. Si esas son constantes → cuadrática (aₙ = an² + bn + c).",
-    theory: [
-      {
-        level: "basico",
-        title: "Conceptos fundamentales",
-        lines: [
-          "**Sucesión**: Función cuyo dominio es el conjunto de los números naturales {1, 2, 3, ...}. Cada número se llama término.",
-          "**Sucesión aritmética**: Cada término se obtiene sumando una constante r al anterior. Ej: 3, 5, 7, 9... (r=2).",
-          "**Sucesión geométrica**: Cada término se obtiene multiplicando por una constante q al anterior. Ej: 2, 6, 18, 54... (q=3).",
-          "**Término general (fórmula explícita)**: Expresión que calcula directamente el término n sin necesidad de listar los anteriores.",
-          "**Primer término (a₁)**: El primer elemento de la sucesión. Es fundamental para establecer el patrón.",
-          "**Diferencia entre sucesión y serie**: Sucesión = lista de números. Serie = suma de los términos de una sucesión."
-        ]
-      ,
-  studyGuide: `## Sucesiones
+    studyGuide: `## Sucesiones
 ### Concepto general
 Una sucesión es una función que asigna un número a cada posición (índice) de un conjunto ordenado. Se representa como a₁, a₂, a₃, ... o {aₙ}. El objetivo es encontrar la fórmula general aₙ que permita calcular cualquier término sin necesidad de calcular todos los anteriores.
 
@@ -13974,7 +13961,20 @@ Definidas por una fórmula que depende de términos anteriores. Ejemplo: a₁ = 
 - Serie geométrica infinita (|r| < 1): a₁/(1-r)
 
 ### Consejos prácticos
-Calcula las diferencias entre términos consecutivos para identificar el tipo de sucesión. Si las primeras diferencias son constantes, es aritmética. Si las segundas lo son, es cuadrática. Si la razón entre términos es constante, es geométrica. Verifica tu fórmula con los primeros términos conocidos. Para sumas, identifica si es aritmética o geométrica antes de aplicar la fórmula.`},
+Calcula las diferencias entre términos consecutivos para identificar el tipo de sucesión. Si las primeras diferencias son constantes, es aritmética. Si las segundas lo son, es cuadrática. Si la razón entre términos es constante, es geométrica. Verifica tu fórmula con los primeros términos conocidos. Para sumas, identifica si es aritmética o geométrica antes de aplicar la fórmula.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "**Sucesión**: Función cuyo dominio es el conjunto de los números naturales {1, 2, 3, ...}. Cada número se llama término.",
+          "**Sucesión aritmética**: Cada término se obtiene sumando una constante r al anterior. Ej: 3, 5, 7, 9... (r=2).",
+          "**Sucesión geométrica**: Cada término se obtiene multiplicando por una constante q al anterior. Ej: 2, 6, 18, 54... (q=3).",
+          "**Término general (fórmula explícita)**: Expresión que calcula directamente el término n sin necesidad de listar los anteriores.",
+          "**Primer término (a₁)**: El primer elemento de la sucesión. Es fundamental para establecer el patrón.",
+          "**Diferencia entre sucesión y serie**: Sucesión = lista de números. Serie = suma de los términos de una sucesión."
+        ]
+      },
       {
         level: "intermedio",
         title: "Estrategias y técnicas",
@@ -14136,20 +14136,7 @@ Calcula las diferencias entre términos consecutivos para identificar el tipo de
     slug: "analogias-y-distribuciones",
     illustrationSummary: "Relaciones de correspondencia entre elementos de dos conjuntos.",
     tip: "En analogías, identifica primero el **tipo de relación** entre el primer par de palabras. Luego aplica esa misma relación al segundo par. En distribuciones lógicas, prueba cada opción descartando las que contradicen alguna condición del enunciado.",
-    theory: [
-      {
-        level: "basico",
-        title: "Conceptos fundamentales",
-        lines: [
-          "Una **analogía** es una correspondencia entre dos pares de elementos que comparten una relación similar.",
-          "La estructura básica es: **A es a B como C es a D**, o sea A:B :: C:D.",
-          "Las relaciones más comunes son: **sinónimo** (bueno:excelente :: rápido:veloz), **antónimo** (frío:caliente :: claro:oscuro), **parte-todo** (rueda:auto :: tecla:teclado), **causa-efecto** (lluvia:inundación :: terremoto:destrucción).",
-          "Una **distribución** consiste en asignar elementos a categorías según reglas dadas, verificando que se cumplan todas las condiciones simultáneamente.",
-          "Para resolver distribuciones, conviene usar **tablas de doble entrada** o **diagramas de Venn** que representen gráficamente las relaciones entre conjuntos.",
-          "El **criterio de eliminación** permite descartar opciones que no cumplen al menos una condición del enunciado."
-        ]
-      ,
-  studyGuide: `## Analogías y Distribuciones
+    studyGuide: `## Analogías y Distribuciones
 ### Concepto de analogía
 Una analogía establece una relación entre dos pares de elementos: A es a B como C es a D (A:B::C:D). La relación entre A y B debe ser la misma que entre C y D. El objetivo es encontrar el elemento que completa la analogía o determinar si una analogía es válida.
 
@@ -14181,7 +14168,20 @@ Cuando hay restricciones (por ejemplo, "al menos uno de cada tipo"), se usa el p
 Cinco regalos para tres personas. ¿Cuántas formas de distribuir si cada persona recibe al menos un regalo? Total sin restricción: 3⁵ = 243. Usar inclusión-exclusión para restar los casos donde una persona no recibe nada. Sea A_i = "la persona i no recibe nada". |A₁| = 2⁵ = 32 (solo personas 2 y 3). |A₁ ∩ A₂| = 1⁵ = 1 (solo persona 3). |A₁ ∪ A₂ ∪ A₃| = 3×32 - 3×1 + 0 = 96 - 3 = 93. Formas válidas: 243 - 93 = 150.
 
 ### Consejos prácticos
-En analogías, identifica primero la relación entre el primer par. Luego aplica la misma relación al segundo par. Para distribuciones, distingue si los elementos son idénticos o distintos. Si los elementos son distintos y las categorías también, es permutación. Si los elementos son idénticos, es combinación con repetición. Verifica siempre que tu respuesta cumpla todas las restricciones del problema.`},
+En analogías, identifica primero la relación entre el primer par. Luego aplica la misma relación al segundo par. Para distribuciones, distingue si los elementos son idénticos o distintos. Si los elementos son distintos y las categorías también, es permutación. Si los elementos son idénticos, es combinación con repetición. Verifica siempre que tu respuesta cumpla todas las restricciones del problema.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "Una **analogía** es una correspondencia entre dos pares de elementos que comparten una relación similar.",
+          "La estructura básica es: **A es a B como C es a D**, o sea A:B :: C:D.",
+          "Las relaciones más comunes son: **sinónimo** (bueno:excelente :: rápido:veloz), **antónimo** (frío:caliente :: claro:oscuro), **parte-todo** (rueda:auto :: tecla:teclado), **causa-efecto** (lluvia:inundación :: terremoto:destrucción).",
+          "Una **distribución** consiste en asignar elementos a categorías según reglas dadas, verificando que se cumplan todas las condiciones simultáneamente.",
+          "Para resolver distribuciones, conviene usar **tablas de doble entrada** o **diagramas de Venn** que representen gráficamente las relaciones entre conjuntos.",
+          "El **criterio de eliminación** permite descartar opciones que no cumplen al menos una condición del enunciado."
+        ]
+      },
       {
         level: "intermedio",
         title: "Estrategias y técnicas",
@@ -14294,20 +14294,7 @@ En analogías, identifica primero la relación entre el primer par. Luego aplica
     slug: "series",
     illustrationSummary: "Suma de términos de una sucesión con las propiedades de convergencia.",
     tip: "Identifica siempre la **diferencia** o **razón** entre términos consecutivos. Si las diferencias no son constantes, calcula las **diferencias de segundo orden**. Muchas series en el examen son combinaciones de dos patrones alternados.",
-    theory: [
-      {
-        level: "basico",
-        title: "Conceptos fundamentales",
-        lines: [
-          "Una **serie numérica** es un conjunto de números que siguen un patrón o regla definida.",
-          "Una **progresión aritmética (PA)** tiene una **diferencia constante** d entre términos consecutivos: aₙ = a₁ + (n-1)·d.",
-          "Una **progresión geométrica (PG)** tiene una **razón constante** r: aₙ = a₁ · r^(n-1).",
-          "En una PA de **razón positiva**, los términos crecen; si la razón es **negativa**, los términos alternan entre positivos y negativos.",
-          "Para hallar el término faltante, reemplaza n en la fórmula del término general o busca la diferencia/razón entre términos conocidos.",
-          "Una serie **ascendente** crece de izquierda a derecha; una **descendente** decrece."
-        ]
-      ,
-  studyGuide: `## Series
+    studyGuide: `## Series
 ### Definición
 Una series es la suma de los términos de una sucesión. Se representa como Σaₙ donde n va desde un valor inicial hasta uno final. Las series más comunes son aritméticas, geométricas, cuadráticas y de potencias. El objetivo es calcular la suma de un número determinado de términos o hallar la suma infinita cuando converge.
 
@@ -14345,7 +14332,20 @@ Para series positivas: si aₙ → 0, la serie puede converger o diverger. El cr
 Σ(1/n²) desde n=1 hasta ∞. Esta es la serie de Riemann zeta(2) = π²/6 ≈ 1.6449. Criterio de la razón: (1/(n+1)²)/(1/n²) = n²/(n+1)² → 1. No conclusive. Usar criterio de comparación con Σ(1/n(n+1)) que converge (serie telescópica). 1/n² < 1/n(n+1) para n > 1, así que converge.
 
 ### Consejos prácticos
-Identifica el tipo de serie (aritmética, geométrica, potencias). Para series aritméticas, usa Sₙ = n(a₁ + aₙ)/2. Para geométricas, usa la fórmula con rⁿ - 1. Para series infinitas, verifica que |r| < 1 antes de usar a₁/(1-r). Las series telescópicas son comunes en exámenes: busca términos que se cancelen. Para series de potencias, memoriza las fórmulas de suma de cuadrados y cubos.`},
+Identifica el tipo de serie (aritmética, geométrica, potencias). Para series aritméticas, usa Sₙ = n(a₁ + aₙ)/2. Para geométricas, usa la fórmula con rⁿ - 1. Para series infinitas, verifica que |r| < 1 antes de usar a₁/(1-r). Las series telescópicas son comunes en exámenes: busca términos que se cancelen. Para series de potencias, memoriza las fórmulas de suma de cuadrados y cubos.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "Una **serie numérica** es un conjunto de números que siguen un patrón o regla definida.",
+          "Una **progresión aritmética (PA)** tiene una **diferencia constante** d entre términos consecutivos: aₙ = a₁ + (n-1)·d.",
+          "Una **progresión geométrica (PG)** tiene una **razón constante** r: aₙ = a₁ · r^(n-1).",
+          "En una PA de **razón positiva**, los términos crecen; si la razón es **negativa**, los términos alternan entre positivos y negativos.",
+          "Para hallar el término faltante, reemplaza n en la fórmula del término general o busca la diferencia/razón entre términos conocidos.",
+          "Una serie **ascendente** crece de izquierda a derecha; una **descendente** decrece."
+        ]
+      },
       {
         level: "intermedio",
         title: "Estrategias y técnicas",
@@ -14457,20 +14457,7 @@ Identifica el tipo de serie (aritmética, geométrica, potencias). Para series a
     slug: "sumatorias",
     illustrationSummary: "Notación sigma con las propiedades de las sumatorias.",
     tip: "Memoriza las fórmulas básicas: **∑k = n(n+1)/2**, **∑k² = n(n+1)(2n+1)/6**, **∑k³ = [n(n+1)/2]²**. En el examen, descompón sumatorias complejas en combinación de estas fórmulas fundamentales.",
-    theory: [
-      {
-        level: "basico",
-        title: "Conceptos fundamentales",
-        lines: [
-          "La **sumatoria** (σ mayúscula) es la suma de una sucesión de términos: Σᵢ₌₁ⁿ aᵢ = a₁ + a₂ + ... + aₙ.",
-          "El **índice i** va desde el **límite inferior** (abajo) hasta el **límite superior** (arriba).",
-          "Una **constante fuera de la sumatoria** se puede sacar factor: Σ(c · aᵢ) = c · Σ(aᵢ).",
-          "La **suma de los primeros n naturales** es: Σᵢ₌₁ⁿ i = n(n+1)/2.",
-          "La **suma de constantes**: Σᵢ₌₁ⁿ c = c · n (se suma c, n veces).",
-          "La **propiedad de aditividad**: Σ(aᵢ + bᵢ) = Σaᵢ + Σbᵢ. Las sumatorias se pueden separar término a término."
-        ]
-      ,
-  studyGuide: `## Sumatorias
+    studyGuide: `## Sumatorias
 ### Notación sigma
 La sumatoria se representa con la letra griega sigma (Σ). Σaₙ donde n va desde i hasta j significa sumar todos los términos aᵢ, aᵢ₊₁, ..., aⱼ. Es una forma compacta de expresar sumas largas. El índice puede usar cualquier letra (i, j, k, n, etc.).
 
@@ -14509,7 +14496,20 @@ Calcule Σk² desde k=1 hasta 4. Usando la fórmula: 4×5×9/6 = 180/6 = 30. Ver
 A veces es útil factorizar: Σ(aₙ×bₙ) no se puede separar en Σaₙ × Σbₙ en general. Solo se puede separar si los términos son independientes del índice. Ejemplo: Σ(c×aₙ) = c×Σaₙ porque c no depende de n.
 
 ### Consejos prácticos
-Memoriza las fórmulas para sumas de k, k² y k³. Usa linealidad para separar sumatorias complejas. El cambio de índice es poderoso para simplificar límites. Para sumatorias dobles, prueba cambiar el orden de summación. Verifica siempre con los primeros términos. Las sumatorias aparecen frecuentemente en problemas de series y progresiones.`},
+Memoriza las fórmulas para sumas de k, k² y k³. Usa linealidad para separar sumatorias complejas. El cambio de índice es poderoso para simplificar límites. Para sumatorias dobles, prueba cambiar el orden de summación. Verifica siempre con los primeros términos. Las sumatorias aparecen frecuentemente en problemas de series y progresiones.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "La **sumatoria** (σ mayúscula) es la suma de una sucesión de términos: Σᵢ₌₁ⁿ aᵢ = a₁ + a₂ + ... + aₙ.",
+          "El **índice i** va desde el **límite inferior** (abajo) hasta el **límite superior** (arriba).",
+          "Una **constante fuera de la sumatoria** se puede sacar factor: Σ(c · aᵢ) = c · Σ(aᵢ).",
+          "La **suma de los primeros n naturales** es: Σᵢ₌₁ⁿ i = n(n+1)/2.",
+          "La **suma de constantes**: Σᵢ₌₁ⁿ c = c · n (se suma c, n veces).",
+          "La **propiedad de aditividad**: Σ(aᵢ + bᵢ) = Σaᵢ + Σbᵢ. Las sumatorias se pueden separar término a término."
+        ]
+      },
       {
         level: "intermedio",
         title: "Estrategias y técnicas",
@@ -14621,20 +14621,7 @@ Memoriza las fórmulas para sumas de k, k² y k³. Usa linealidad para separar s
     slug: "cuatro-operaciones",
     illustrationSummary: "Operaciones aritméticas fundamentales con propiedades y trucos de cálculo.",
     tip: "Aplica siempre el **orden PEMDAS**: Paréntesis, Exponentes, Multiplicación/División (izq. a der.), Adición/Sustracción (izq. a der.). Muchos errores en el examen provienen de no respetar este orden.",
-    theory: [
-      {
-        level: "basico",
-        title: "Conceptos fundamentales",
-        lines: [
-          "Las **cuatro operaciones** básicas son: **suma** (+), **resta** (−), **multiplicación** (×) y **división** (÷).",
-          "El **orden de operaciones** (PEMDAS/BODMAS) establece: primero **paréntesis**, luego **exponentes**, después **multiplicación y división** (izquierda a derecha), y finalmente **suma y resta** (izquierda a derecha).",
-          "La **propiedad conmutativa** dice que a + b = b + a y a × b = b × a. Esto NO aplica para la resta ni la división.",
-          "La **propiedad asociativa** permite agrupar: (a + b) + c = a + (b + c) y (a × b) × c = a × (b × c).",
-          "La **propiedad distributiva** conecta multiplicación con suma: a × (b + c) = a×b + a×c.",
-          "El **signo menos** se distribuye: −(a + b) = −a − b y −(a − b) = −a + b. Cuidado con los dobles negativos."
-        ]
-      ,
-  studyGuide: `## Cuatro Operaciones
+    studyGuide: `## Cuatro Operaciones
 ### Operaciones básicas
 Las cuatro operaciones fundamentales son: suma (+), resta (-), multiplicación (×) y división (÷). Cada una tiene propiedades algebraicas que facilitan los cálculos. Conocer estas propiedades permite simplificar expresiones y resolver problemas más eficientemente.
 
@@ -14675,7 +14662,20 @@ Para sumar o restar decimales, alinea los puntos decimales. Para multiplicar: mu
 Calcule 3.5 × 2.4. Como enteros: 35 × 24 = 840. Decimales: 1 (de 3.5) + 1 (de 2.4) = 2. Resultado: 8.40 = 8.4. Verificación: 3.5×2.4 = 8.4. Correcto.
 
 ### Consejos prácticos
-Siempre verifica tu respuesta con una estimación. Usa paréntesis para agrupar términos que quieres calcular primero. Factoriza cuando sea posible para simplificar. Para multiplicaciones grandes, descompon en factores más fáciles. Para divisiones, verifica multiplicando el cociente por el divisor y sumando el residuo.`},
+Siempre verifica tu respuesta con una estimación. Usa paréntesis para agrupar términos que quieres calcular primero. Factoriza cuando sea posible para simplificar. Para multiplicaciones grandes, descompon en factores más fáciles. Para divisiones, verifica multiplicando el cociente por el divisor y sumando el residuo.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "Las **cuatro operaciones** básicas son: **suma** (+), **resta** (−), **multiplicación** (×) y **división** (÷).",
+          "El **orden de operaciones** (PEMDAS/BODMAS) establece: primero **paréntesis**, luego **exponentes**, después **multiplicación y división** (izquierda a derecha), y finalmente **suma y resta** (izquierda a derecha).",
+          "La **propiedad conmutativa** dice que a + b = b + a y a × b = b × a. Esto NO aplica para la resta ni la división.",
+          "La **propiedad asociativa** permite agrupar: (a + b) + c = a + (b + c) y (a × b) × c = a × (b × c).",
+          "La **propiedad distributiva** conecta multiplicación con suma: a × (b + c) = a×b + a×c.",
+          "El **signo menos** se distribuye: −(a + b) = −a − b y −(a − b) = −a + b. Cuidado con los dobles negativos."
+        ]
+      },
       {
         level: "intermedio",
         title: "Estrategias y técnicas",
@@ -14787,20 +14787,7 @@ Siempre verifica tu respuesta con una estimación. Usa paréntesis para agrupar 
     slug: "metodos-practicos",
     illustrationSummary: "Técnicas de cálculo rápido: redondeo, distribución y factorización.",
     tip: "Los métodos prácticos son **atajos** que ahorran tiempo en el examen. Domina la **sustitución de valores**, el **método de opción falsa**, y la **estimación**. En el examen de admisión, el tiempo es limitado: practica resolver cada problema en menos de 2 minutos.",
-    theory: [
-      {
-        level: "basico",
-        title: "Conceptos fundamentales",
-        lines: [
-          "Los **métodos prácticos** son técnicas de resolución rápida que evitan procedimientos largos y propensos a errores.",
-          "El **método de sustitución** consiste en reemplazar las variables del problema con **números simples** (como 1, 2 o 10) para verificar qué opción funciona.",
-          "El **método de opción falsa** consiste en probar cada alternativa directamente en el enunciado hasta encontrar la correcta.",
-          "La **estimación** permite aproximar el resultado para descartar opciones absurdas sin calcular exactamente.",
-          "El **método de casos** consiste en dividir el problema en casos más pequeños y manejables.",
-          "La **verificación por contradicción** asume que una opción es correcta y busca si genera una situación imposible."
-        ]
-      ,
-  studyGuide: `## Métodos Prácticos
+    studyGuide: `## Métodos Prácticos
 ### Tipos de métodos
 Los métodos prácticos son técnicas de cálculo rápido que simplifican operaciones aritméticas complejas. Incluyen: redondeo, descomposición, compensación, división en factores fáciles, y uso de propiedades algebraicas. Estos métodos son especialmente útiles en exámenes donde el tiempo es limitado.
 
@@ -14844,7 +14831,20 @@ Para sumar números del 1 al n: n(n+1)/2. Ejemplo: Suma del 1 al 100: 100×101/2
 Calcule 35% de 480. 35% = 30% + 5%. 10% de 480 = 48. 30% = 3×48 = 144. 5% = 48/2 = 24. Total: 144 + 24 = 168. Verificación: 0.35×480 = 168. Correcto.
 
 ### Consejos prácticos
-Elige el método más simple para cada caso. Para multiplicar por 9, 11, 99, 101, etc., usa los trucos específicos. Para sumas largas, busca patrones o usa la fórmula de la serie aritmética. En exámenes, verifica tu respuesta con una estimación. Practica estos métodos hasta que se vuelvan automáticos.`},
+Elige el método más simple para cada caso. Para multiplicar por 9, 11, 99, 101, etc., usa los trucos específicos. Para sumas largas, busca patrones o usa la fórmula de la serie aritmética. En exámenes, verifica tu respuesta con una estimación. Practica estos métodos hasta que se vuelvan automáticos.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "Los **métodos prácticos** son técnicas de resolución rápida que evitan procedimientos largos y propensos a errores.",
+          "El **método de sustitución** consiste en reemplazar las variables del problema con **números simples** (como 1, 2 o 10) para verificar qué opción funciona.",
+          "El **método de opción falsa** consiste en probar cada alternativa directamente en el enunciado hasta encontrar la correcta.",
+          "La **estimación** permite aproximar el resultado para descartar opciones absurdas sin calcular exactamente.",
+          "El **método de casos** consiste en dividir el problema en casos más pequeños y manejables.",
+          "La **verificación por contradicción** asume que una opción es correcta y busca si genera una situación imposible."
+        ]
+      },
       {
         level: "intermedio",
         title: "Estrategias y técnicas",
@@ -14965,20 +14965,7 @@ Elige el método más simple para cada caso. Para multiplicar por 9, 11, 99, 101
     slug: "planteo-de-ecuaciones",
     illustrationSummary: "Traducción de problemas verbales a ecuaciones matemáticas.",
     tip: "Lee el enunciado **varias veces** y subraya las cantidades desconocidas. Asigna **una sola variable** (x) a lo que se pide, y expresa todo lo demás en función de esa variable. Verifica que la ecuación resultante tenga sentido con un caso simple.",
-    theory: [
-      {
-        level: "basico",
-        title: "Conceptos fundamentales",
-        lines: [
-          "El **planteamiento de ecuaciones** consiste en traducir un problema en lenguaje natural a una ecuación matemática.",
-          "El primer paso es **identificar la incógnita**: ¿qué es lo que se pide hallar? Se asigna una variable, generalmente **x**.",
-          "Los **indicios** en el enunciado revelan relaciones: 'el doble de x' → 2x; 'la mitad de y' → y/2; '3 menos que z' → z − 3.",
-          "Las palabras clave para **operaciones**: 'suma' → +, 'diferencia' → −, 'producto' → ×, 'cociente' → ÷.",
-          "Las palabras para **igualdad**: 'es igual a' → =, 'es el mismo que' → =, 'resulta en' → =.",
-          "Después de plantear, **resuelve** la ecuación y **verifica** sustituyendo la respuesta en el enunciado original."
-        ]
-      ,
-  studyGuide: `## Planteo de Ecuaciones
+    studyGuide: `## Planteo de Ecuaciones
 ### Metodología
 El planteo de ecuaciones consiste en traducir un problema verbal a una o varias ecuaciones matemáticas. El proceso tiene tres pasos: 1) Identificar la incógnita (la variable), 2) Establecer las relaciones entre las cantidades, 3) Formular la ecuación que representa el problema. Resolver la ecuación y verificar la respuesta.
 
@@ -15007,7 +14994,20 @@ Siempre verifica tu respuesta sustituyendo en la ecuación original. Si la ecuac
 Un rectángulo tiene un perímetro de 40 cm. Su largo es 3 cm más que su ancho. ¿Cuáles son las dimensiones? Llamo x al ancho. El largo es x + 3. Perímetro: 2(x + x + 3) = 40 → 2(2x + 3) = 40 → 4x + 6 = 40 → 4x = 34 → x = 8.5. Ancho = 8.5 cm, largo = 11.5 cm. Verificación: 2(8.5 + 11.5) = 2(20) = 40. Correcto.
 
 ### Consejos prácticos
-Lee el problema varias veces antes de plantear. Identifica las cantidades conocidas y desconocidas. Establece claramente qué representa cada variable. Escribe ecuaciones que relacionen las cantidades. Resuelve paso a paso. Verifica siempre tu respuesta. Si el problema involucra dos incógnitas, busca un sistema de dos ecuaciones.`},
+Lee el problema varias veces antes de plantear. Identifica las cantidades conocidas y desconocidas. Establece claramente qué representa cada variable. Escribe ecuaciones que relacionen las cantidades. Resuelve paso a paso. Verifica siempre tu respuesta. Si el problema involucra dos incógnitas, busca un sistema de dos ecuaciones.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "El **planteamiento de ecuaciones** consiste en traducir un problema en lenguaje natural a una ecuación matemática.",
+          "El primer paso es **identificar la incógnita**: ¿qué es lo que se pide hallar? Se asigna una variable, generalmente **x**.",
+          "Los **indicios** en el enunciado revelan relaciones: 'el doble de x' → 2x; 'la mitad de y' → y/2; '3 menos que z' → z − 3.",
+          "Las palabras clave para **operaciones**: 'suma' → +, 'diferencia' → −, 'producto' → ×, 'cociente' → ÷.",
+          "Las palabras para **igualdad**: 'es igual a' → =, 'es el mismo que' → =, 'resulta en' → =.",
+          "Después de plantear, **resuelve** la ecuación y **verifica** sustituyendo la respuesta en el enunciado original."
+        ]
+      },
       {
         level: "intermedio",
         title: "Estrategias y técnicas",
@@ -15152,20 +15152,7 @@ Lee el problema varias veces antes de plantear. Identifica las cantidades conoci
     slug: "edades",
     illustrationSummary: "Problemas de edades con relaciones entre personas.",
     tip: "Define SIEMPRE la **edad actual** de la persona mayor o principal como x. Expresa las demás edades en función de x. Recuerda que **todas las personas envejecen la misma cantidad** de años. Si el enunciado dice 'hace 5 años', TODOS tenían 5 años menos.",
-    theory: [
-      {
-        level: "basico",
-        title: "Conceptos fundamentales",
-        lines: [
-          "Los problemas de **edades** son uno de los temas más frecuentes en exámenes de admisión peruanos.",
-          "La clave es **definir variables** para las edades actuales y expresar las relaciones del enunciado como ecuaciones.",
-          "Si hoy Ana tiene x años, **dentro de 5 años** tendrá x + 5 años, y **hace 3 años** tenía x − 3 años.",
-          "Todos los involucrados envejecen **la misma cantidad** de tiempo. Si hace 10 años María tenía el doble de Pedro, ambos tenían 10 años menos.",
-          "Las relaciones de edad se mantienen **proporcionales** en el tiempo: la diferencia de edades entre dos personas **nunca cambia**.",
-          "Siempre **verifica** que la respuesta sea positiva y que cumpla con todas las condiciones del enunciado."
-        ]
-      ,
-  studyGuide: `## Edades
+    studyGuide: `## Edades
 ### Tipos de problemas
 Los problemas de edades involucran calcular edades pasadas, futuras o comparar edades entre personas. La clave es que todas las personas envejecen al mismo ritmo: si hoy Pedro tiene 20 años, dentro de 5 años tendrá 25. La diferencia de edades entre dos personas nunca cambia.
 
@@ -15197,7 +15184,20 @@ Cuando un problema dice "hace x años, A tenía el doble de B", recuerda que amb
 Hace 6 años, María tenía el triple de lo que tenía Pedro. Hoy María tiene el doble de Pedro. ¿Cuántos años tienen? Hace 6 años: María = 3(Pedro - 6). Hoy: María = 2Pedro. María hoy = 3(Pedro - 6) + 6 = 3Pedro - 12. Igualando: 2Pedro = 3Pedro - 12. Pedro = 12. María = 24. Verificación: Hace 6 años: María 18, Pedro 6. 18 = 3×6. Correcto.
 
 ### Consejos prácticos
-Dibuja una línea de tiempo para visualizar las edades en diferentes momentos. Usa una tabla para organizar las edades de cada persona. Recuerda que la diferencia de edades es constante. Para problemas con más de dos personas, establece todas las relaciones antes de resolver. Verifica siempre que las edades sean positivas y tengan sentido.`},
+Dibuja una línea de tiempo para visualizar las edades en diferentes momentos. Usa una tabla para organizar las edades de cada persona. Recuerda que la diferencia de edades es constante. Para problemas con más de dos personas, establece todas las relaciones antes de resolver. Verifica siempre que las edades sean positivas y tengan sentido.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "Los problemas de **edades** son uno de los temas más frecuentes en exámenes de admisión peruanos.",
+          "La clave es **definir variables** para las edades actuales y expresar las relaciones del enunciado como ecuaciones.",
+          "Si hoy Ana tiene x años, **dentro de 5 años** tendrá x + 5 años, y **hace 3 años** tenía x − 3 años.",
+          "Todos los involucrados envejecen **la misma cantidad** de tiempo. Si hace 10 años María tenía el doble de Pedro, ambos tenían 10 años menos.",
+          "Las relaciones de edad se mantienen **proporcionales** en el tiempo: la diferencia de edades entre dos personas **nunca cambia**.",
+          "Siempre **verifica** que la respuesta sea positiva y que cumpla con todas las condiciones del enunciado."
+        ]
+      },
       {
         level: "intermedio",
         title: "Estrategias y técnicas",
@@ -15324,20 +15324,7 @@ Dibuja una línea de tiempo para visualizar las edades en diferentes momentos. U
     slug: "cronometria",
     illustrationSummary: "Problemas de tiempo: duración, inicio, final y zonas horarias.",
     tip: "En problemas de **tiempo**, convierte todo a una misma unidad (minutos o segundos). Para **velocidad**: distancia = velocidad × tiempo. Recuerda que 1 hora = 60 minutos, 1 minuto = 60 segundos, y cuidado con las **zonas horarias** en problemas internacionales.",
-    theory: [
-      {
-        level: "basico",
-        title: "Conceptos fundamentales",
-        lines: [
-          "La **cronometría** es la medición del tiempo. Las unidades principales son: **hora** (h), **minuto** (min) y **segundo** (s).",
-          "Conversiones básicas: **1 hora = 60 minutos**, **1 minuto = 60 segundos**, **1 hora = 3600 segundos**.",
-          "El **reloj de 12 horas** marca AM (antes del mediodía) y PM (después). El **reloj de 24 horas** va de 00:00 a 23:59.",
-          "Para calcular la **duración** entre dos horas: resta la hora final menos la hora inicial. Si el minuto final es menor, 'presta' 1 hora (= 60 min).",
-          "Un **cuadrante del reloj** tiene 12 números. La manecilla de las horas da una vuelta en 12 horas; la de los minutos da una vuelta en 60 minutos.",
-          "El ángulo entre las manecillas del reloj es un tema frecuente: cada hora marca 30° (360°/12) y cada minuto marca 6° (360°/60)."
-        ]
-      ,
-  studyGuide: `## Cronometría
+    studyGuide: `## Cronometría
 ### Concepto fundamental
 La cronometría estudia la relación entre tiempo, velocidad y distancia. Las fórmulas fundamentales son: distancia = velocidad × tiempo (d = v×t), velocidad = distancia/tiempo (v = d/t), tiempo = distancia/velocidad (t = d/v). Estas fórmulas son la base para resolver problemas de viajes, trenes, autos y cualquier movimiento.
 
@@ -15369,7 +15356,20 @@ Un auto recorre los primeros 100 km a 50 km/h y los siguientes 100 km a 100 km/h
 Las agujas de un reloj se mueven a velocidades constantes: la de horas a 0.5°/min y la de minutos a 6°/min. Velocidad relativa = 5.5°/min. Para que se encuentren: ángulo inicial / 5.5 = minutos. Ejemplo: Si están superpuestas a las 12:00, se encuentran cada 360/5.5 ≈ 65.45 minutos.
 
 ### Consejos prácticos
-Dibuja una línea de tiempo para visualizar los movimientos. Identifica si los cuerpos se mueven en la misma dirección o en direcciones opuestas. Para trenes cruzándose, suma las longitudes. Para persecución, resta las velocidades. Para velocidad promedio, nunca promedies velocidades; usa distancia total dividida entre tiempo total. Verifica las unidades antes de calcular.`},
+Dibuja una línea de tiempo para visualizar los movimientos. Identifica si los cuerpos se mueven en la misma dirección o en direcciones opuestas. Para trenes cruzándose, suma las longitudes. Para persecución, resta las velocidades. Para velocidad promedio, nunca promedies velocidades; usa distancia total dividida entre tiempo total. Verifica las unidades antes de calcular.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "La **cronometría** es la medición del tiempo. Las unidades principales son: **hora** (h), **minuto** (min) y **segundo** (s).",
+          "Conversiones básicas: **1 hora = 60 minutos**, **1 minuto = 60 segundos**, **1 hora = 3600 segundos**.",
+          "El **reloj de 12 horas** marca AM (antes del mediodía) y PM (después). El **reloj de 24 horas** va de 00:00 a 23:59.",
+          "Para calcular la **duración** entre dos horas: resta la hora final menos la hora inicial. Si el minuto final es menor, 'presta' 1 hora (= 60 min).",
+          "Un **cuadrante del reloj** tiene 12 números. La manecilla de las horas da una vuelta en 12 horas; la de los minutos da una vuelta en 60 minutos.",
+          "El ángulo entre las manecillas del reloj es un tema frecuente: cada hora marca 30° (360°/12) y cada minuto marca 6° (360°/60)."
+        ]
+      },
       {
         level: "intermedio",
         title: "Estrategias y técnicas",
@@ -15498,17 +15498,7 @@ Dibuja una línea de tiempo para visualizar los movimientos. Identifica si los c
     slug: "promedios",
     illustrationSummary: "Cálculo de media, mediana y moda con datos agrupados.",
     tip: "El promedio se calcula sumando todos los valores y dividiendo por la cantidad. Para quitar uno: (suma actual - valor) / (n-1). Para agregar uno: (suma actual + valor) / (n+1).",
-    theory: [
-      {
-        level: "basico",
-        title: "Promedio aritmético",
-        lines: [
-          "Promedio = (x₁ + x₂ + ... + xₙ) / n",
-          "Es la suma de todos los valores dividida por la cantidad de valores",
-          "Ejemplo: Promedio de 8, 6, 10 = (8+6+10)/3 = 24/3 = 8"
-        ]
-      ,
-  studyGuide: `## Promedios
+    studyGuide: `## Promedios
 ### Concepto
 El promedio (media aritmética) es la suma de los valores dividida entre la cantidad de valores. Fórmula: Promedio = (x₁ + x₂ + ... + xₙ)/n. Es una medida de tendencia central que indica el valor típico de un conjunto de datos. No es afectado por valores extremos tanto como la mediana.
 
@@ -15543,7 +15533,17 @@ Para cualquier conjunto de datos positivos: Promedio armónico ≤ Promedio geom
 El promedio de 5 números es 40. Si se añaden 5 números más con promedio de 60, ¿cuál es el promedio general? Promedio combinado = (5×40 + 5×60)/(5+5) = (200 + 300)/10 = 50.
 
 ### Consejos prácticos
-Para promedios simples, suma y divide. Para promedios ponderados, multiplica cada dato por su peso. El promedio geométrico es mejor para tasas de crecimiento. El promedio armónico es mejor para velocidades. Recuerda que el promedio aritmético no siempre representa bien el centro de datos con valores extremos. Verifica que tu respuesta tenga sentido en el contexto del problema.`},
+Para promedios simples, suma y divide. Para promedios ponderados, multiplica cada dato por su peso. El promedio geométrico es mejor para tasas de crecimiento. El promedio armónico es mejor para velocidades. Recuerda que el promedio aritmético no siempre representa bien el centro de datos con valores extremos. Verifica que tu respuesta tenga sentido en el contexto del problema.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Promedio aritmético",
+        lines: [
+          "Promedio = (x₁ + x₂ + ... + xₙ) / n",
+          "Es la suma de todos los valores dividida por la cantidad de valores",
+          "Ejemplo: Promedio de 8, 6, 10 = (8+6+10)/3 = 24/3 = 8"
+        ]
+      },
       {
         level: "intermedio",
         title: "Propiedades del promedio",
@@ -15656,20 +15656,7 @@ Para promedios simples, suma y divide. Para promedios ponderados, multiplica cad
     slug: "operadores-matematicos",
     illustrationSummary: "Símbolos y operadores: +, -, ×, ÷, potencia, raíz.",
     tip: "Lee siempre el **enunciado completo** antes de calcular. Identifica la fórmula del operador, sustituye paso a paso y respeta el orden de operaciones.",
-    theory: [
-      {
-        level: "basico",
-        title: "Conceptos fundamentales",
-        lines: [
-          "Un **operador matemático** es un símbolo que define una operación entre números. Aparecen con símbolos como ◊, △, ⋆, ∘, ☆.",
-          "La expresión **a ◊ b** significa que debes reemplazar ◊ con la fórmula específica dada en el problema.",
-          "Los operadores comunes involucran **suma, resta, multiplicación** y potencias, combinados de forma no estándar.",
-          "**Primero identificas la operación**, luego sustituyes los valores y calculas respetando el orden PEMDAS.",
-          "Ejemplo: Si a ◊ b = 2a + 3b, entonces **3 ◊ 4** = 2(3) + 3(4) = 6 + 12 = **18**.",
-          "Los paréntesis en la definición son **obligatorios** para definir el alcance de la operación."
-        ]
-      ,
-  studyGuide: `## Operadores Matemáticos
+    studyGuide: `## Operadores Matemáticos
 ### Operadores básicos
 Los operadores matemáticos son símbolos que indican una operación. Los fundamentales son: + (suma), - (resta/negación), × (multiplicación), ÷ (división), ^ (potenciación), √ (radicación). Cada operador tiene propiedades algebraicas y un orden de precedencia.
 
@@ -15710,7 +15697,20 @@ Calcule √(49/16). √(49/16) = √49 / √16 = 7/4 = 1.75. Verificación: (7/4
 Ejemplo: 5 + 3 × 2² - 8 ÷ 4. Exponentes: 2² = 4. Multiplicación y división: 3×4 = 12, 8÷4 = 2. Suma y resta: 5 + 12 - 2 = 15.
 
 ### Consejos prácticos
-Memoriza el orden de precedencia PEMDAS/BODMAS. Para exponentes, recuerda que -x² = -(x²), no (-x)². Para módulo, piensa en el residuo de la división. Verifica siempre tus cálculos con valores simples. Los errores más comunes son: olvidar paréntesis, confundir precedencia, y no distribuir correctamente.`},
+Memoriza el orden de precedencia PEMDAS/BODMAS. Para exponentes, recuerda que -x² = -(x²), no (-x)². Para módulo, piensa en el residuo de la división. Verifica siempre tus cálculos con valores simples. Los errores más comunes son: olvidar paréntesis, confundir precedencia, y no distribuir correctamente.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "Un **operador matemático** es un símbolo que define una operación entre números. Aparecen con símbolos como ◊, △, ⋆, ∘, ☆.",
+          "La expresión **a ◊ b** significa que debes reemplazar ◊ con la fórmula específica dada en el problema.",
+          "Los operadores comunes involucran **suma, resta, multiplicación** y potencias, combinados de forma no estándar.",
+          "**Primero identificas la operación**, luego sustituyes los valores y calculas respetando el orden PEMDAS.",
+          "Ejemplo: Si a ◊ b = 2a + 3b, entonces **3 ◊ 4** = 2(3) + 3(4) = 6 + 12 = **18**.",
+          "Los paréntesis en la definición son **obligatorios** para definir el alcance de la operación."
+        ]
+      },
       {
         level: "intermedio",
         title: "Estrategias y técnicas",
@@ -15793,20 +15793,7 @@ Memoriza el orden de precedencia PEMDAS/BODMAS. Para exponentes, recuerda que -x
     slug: "operadores-binarios",
     illustrationSummary: "Operaciones en sistema binario: AND, OR, NOT, XOR.",
     tip: "Los operadores binarios suelen definirse por **tabla o fórmula**. Si es tabla, constrúyela completa antes de responder. Si es fórmula, verifica con valores dados para confirmar tu interpretación.",
-    theory: [
-      {
-        level: "basico",
-        title: "Conceptos fundamentales",
-        lines: [
-          "Un **operador binario** toma exactamente **dos operandos** y produce un resultado. Se escribe como a ⊕ b.",
-          "Los binarios conocidos son: **suma (+), resta (−), multiplicación (×)** y división (÷).",
-          "Un operador binario se define mediante una **fórmula algebraica** o una **tabla de valores**.",
-          "Si a ⊕ b = a + b − 2, entonces 5 ⊕ 3 = 5 + 3 − 2 = **6**.",
-          "La **conmutatividad** significa que a ◊ b = b ◊ a. No todos la cumplen.",
-          "La **asociatividad** significa que (a ◊ b) ◊ c = a ◊ (b ◊ c)."
-        ]
-      ,
-  studyGuide: `## Operadores Binarios
+    studyGuide: `## Operadores Binarios
 ### Definición
 Un operador binario es una operación que toma dos operandos y produce un resultado. En informática y matemática, los más comunes son: AND (∧), OR (∨), XOR (⊕), NOT (¬), y los desplazamientos. En aritmética, los operadores binarios son +, -, ×, ÷, ^, %.
 
@@ -15871,7 +15858,20 @@ Igualdad (==), desigualdad (!=), mayor que (>), menor que (<), mayor o igual (>=
 Calcule: (3 AND 5) OR (2 XOR 4). 3 = 011, 5 = 101. 3 AND 5 = 001 = 1. 2 = 010, 4 = 100. 2 XOR 4 = 110 = 6. 1 OR 6 = 001 OR 110 = 111 = 7.
 
 ### Consejos prácticos
-Convierte siempre a binario antes de operar. Dibuja tablas de verdad para verificar. Recuerda que AND filtra bits, OR combina bits, XOR detecta diferencias. Los desplazamientos son multiplicaciones/divisiones rápidas por potencias de 2. Las leyes de De Morgan son útiles para simplificar expresiones lógicas complejas.`},
+Convierte siempre a binario antes de operar. Dibuja tablas de verdad para verificar. Recuerda que AND filtra bits, OR combina bits, XOR detecta diferencias. Los desplazamientos son multiplicaciones/divisiones rápidas por potencias de 2. Las leyes de De Morgan son útiles para simplificar expresiones lógicas complejas.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "Un **operador binario** toma exactamente **dos operandos** y produce un resultado. Se escribe como a ⊕ b.",
+          "Los binarios conocidos son: **suma (+), resta (−), multiplicación (×)** y división (÷).",
+          "Un operador binario se define mediante una **fórmula algebraica** o una **tabla de valores**.",
+          "Si a ⊕ b = a + b − 2, entonces 5 ⊕ 3 = 5 + 3 − 2 = **6**.",
+          "La **conmutatividad** significa que a ◊ b = b ◊ a. No todos la cumplen.",
+          "La **asociatividad** significa que (a ◊ b) ◊ c = a ◊ (b ◊ c)."
+        ]
+      },
       {
         level: "intermedio",
         title: "Estrategias y técnicas",
@@ -15954,20 +15954,7 @@ Convierte siempre a binario antes de operar. Dibuja tablas de verdad para verifi
     slug: "conteo-de-figuras",
     illustrationSummary: "Figuras geométricas superpuestas con técnicas de conteo.",
     tip: "Para contar figuras en cuadrículas usa **fórmulas directas**: cuadrados en n×n = n(n+1)(2n+1)/6; rectángulos en m×n = C(m+1,2)·C(n+1,2). Empieza siempre por las figuras más pequeñas.",
-    theory: [
-      {
-        level: "basico",
-        title: "Conceptos fundamentales",
-        lines: [
-          "El **conteo de figuras** es identificar y contar todas las figuras geométricas en un dibujo o cuadrícula.",
-          "Para contar **cuadrados** en una malla n×n: suma los cuadrados de cada tamaño. En 2×2 hay 4+1 = **5**.",
-          "Para **rectángulos** en m×n: **C(m+1,2) × C(n+1,2)** = m(m+1)/2 × n(n+1)/2.",
-          "Un **triángulo** se forma cuando dos líneas se cortan creando una figura de 3 lados.",
-          "En un triángulo subdividido en n filas, hay **n²** triángulos con la misma orientación.",
-          "Empieza contando las figuras **más pequeñas** y avanza hacia las más grandes."
-        ]
-      ,
-  studyGuide: `## Conteo de Figuras
+    studyGuide: `## Conteo de Figuras
 ### Métodos de conteo
 El conteo de figuras consiste en determinar cuántos triángulos, rectángulos u otras figuras hay en una figura compuesta. Los métodos más comunes son: conteo directo, conteo por sistemas, fórmulas para figuras regulares, y el principio de inclusión-exclusión.
 
@@ -16002,7 +15989,20 @@ Cuando hay líneas que se cruzan, cuenta por regiones. Ejemplo: 4 líneas que se
 Para contar polígonos, clasifica por número de lados. Ejemplo: en un octágono regular, ¿cuántos triángulos se forman al conectar todos los vértices? C(8,3) = 56 triángulos.
 
 ### Consejos prácticos
-Clasifica las figuras por tamaño para evitar duplicados. Usa fórmulas cuando la figura sea regular. Para figuras irregulares, conta directamente usando un sistema organizado. Marca las figuras ya contadas para no repetir. Verifica tu respuesta con un método diferente si es posible. Los errores más comunes son: contar figuras dos veces y olvidar figuras compuestas.`},
+Clasifica las figuras por tamaño para evitar duplicados. Usa fórmulas cuando la figura sea regular. Para figuras irregulares, conta directamente usando un sistema organizado. Marca las figuras ya contadas para no repetir. Verifica tu respuesta con un método diferente si es posible. Los errores más comunes son: contar figuras dos veces y olvidar figuras compuestas.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "El **conteo de figuras** es identificar y contar todas las figuras geométricas en un dibujo o cuadrícula.",
+          "Para contar **cuadrados** en una malla n×n: suma los cuadrados de cada tamaño. En 2×2 hay 4+1 = **5**.",
+          "Para **rectángulos** en m×n: **C(m+1,2) × C(n+1,2)** = m(m+1)/2 × n(n+1)/2.",
+          "Un **triángulo** se forma cuando dos líneas se cortan creando una figura de 3 lados.",
+          "En un triángulo subdividido en n filas, hay **n²** triángulos con la misma orientación.",
+          "Empieza contando las figuras **más pequeñas** y avanza hacia las más grandes."
+        ]
+      },
       {
         level: "intermedio",
         title: "Estrategias y técnicas",
@@ -16085,20 +16085,7 @@ Clasifica las figuras por tamaño para evitar duplicados. Usa fórmulas cuando l
     slug: "areas-sombreadas-y-perimetros",
     illustrationSummary: "Figuras con áreas sombreadas y cálculo de perímetros.",
     tip: "Para áreas sombreadas usa **resta de áreas**: calcula el área total y resta las partes no sombreadas. Identifica primero las figuras que componen el dibujo.",
-    theory: [
-      {
-        level: "basico",
-        title: "Conceptos fundamentales",
-        lines: [
-          "El **área** es el espacio interior de una figura, medida en unidades cuadradas (cm², m²).",
-          "Fórmulas: **Cuadrado** = lado², **Rectángulo** = base × altura, **Triángulo** = (base × altura)/2.",
-          "El **perímetro** es la suma de todos los lados. Cuadrado: P = 4l.",
-          "Área de **círculo** = **πr²**. Circunferencia = **2πr**.",
-          "Semicírculo = πr²/2. Cuarto de círculo = πr²/4.",
-          "Para **área sombreada**, identifica qué figuras conforman la región y aplica la fórmula."
-        ]
-      ,
-  studyGuide: `## Áreas Sombreadas y Perímetros
+    studyGuide: `## Áreas Sombreadas y Perímetros
 ### Fórmulas fundamentales
 Área del rectángulo: A = base × altura. Área del triángulo: A = (base × altura)/2. Área del círculo: A = πr². Perímetro del rectángulo: P = 2(base + altura). Perímetro del círculo: P = 2πr. Circunferencia: C = 2πr = πd.
 
@@ -16136,7 +16123,20 @@ Si duplicas las dimensiones de una figura, el área se cuadruplica (×2² = ×4)
 Un rectángulo tiene área 50. Si sus lados se duplican, el área será 50 × 4 = 200. Verificación: si originalmente es 5 × 10, luego es 10 × 20 = 200. Correcto.
 
 ### Consejos prácticos
-Dibuja la figura y marca las dimensiones. Divide figuras complejas en formas simples. Para áreas sombreadas, resta el área no sombreada del总面积. Para perímetros, solo cuenta los lados exteriores. Recuerda que π ≈ 3.14159. Usa τ (tau) ≈ 6.28318 para circunferencias. Verifica que tus dimensiones sean consistentes (mismas unidades).`},
+Dibuja la figura y marca las dimensiones. Divide figuras complejas en formas simples. Para áreas sombreadas, resta el área no sombreada del总面积. Para perímetros, solo cuenta los lados exteriores. Recuerda que π ≈ 3.14159. Usa τ (tau) ≈ 6.28318 para circunferencias. Verifica que tus dimensiones sean consistentes (mismas unidades).`,
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "El **área** es el espacio interior de una figura, medida en unidades cuadradas (cm², m²).",
+          "Fórmulas: **Cuadrado** = lado², **Rectángulo** = base × altura, **Triángulo** = (base × altura)/2.",
+          "El **perímetro** es la suma de todos los lados. Cuadrado: P = 4l.",
+          "Área de **círculo** = **πr²**. Circunferencia = **2πr**.",
+          "Semicírculo = πr²/2. Cuarto de círculo = πr²/4.",
+          "Para **área sombreada**, identifica qué figuras conforman la región y aplica la fórmula."
+        ]
+      },
       {
         level: "intermedio",
         title: "Estrategias y técnicas",
@@ -16219,20 +16219,7 @@ Dibuja la figura y marca las dimensiones. Divide figuras complejas en formas sim
     slug: "analisis-combinatorio",
     illustrationSummary: "Permutaciones, combinaciones y el principio de conteo.",
     tip: "Domina: **P(n,r) = n!/(n−r)!** y **C(n,r) = n!/(r!(n−r)!)**. Pregunta siempre si el orden importa. Si hay restricciones, usa el principio multiplicativo paso a paso.",
-    theory: [
-      {
-        level: "basico",
-        title: "Conceptos fundamentales",
-        lines: [
-          "El **análisis combinatorio** estudia las formas de **organizar, agrupar y contar** elementos.",
-          "**Factorial** n! = n × (n−1) × ... × 1. Ejemplo: 5! = 120.",
-          "**Permutaciones**: el orden importa. P(n,r) = n!/(n−r)!.",
-          "**Combinaciones**: el orden NO importa. C(n,r) = n!/(r!(n−r)!).",
-          "**Principio multiplicativo**: el total es el **producto** de opciones por etapa.",
-          "**Principio aditivo**: si hay formas independientes, el total es la **suma**."
-        ]
-      ,
-  studyGuide: `## Análisis Combinatorio
+    studyGuide: `## Análisis Combinatorio
 ### Principio multiplicativo
 Si un evento puede ocurrir de m maneras y otro de n maneras, los dos eventos juntos pueden ocurrir de m × n maneras. Ejemplo: 3 camisas y 4 pantalones: 3 × 4 = 12 outfits posibles. Este principio se extiende a más eventos.
 
@@ -16279,7 +16266,20 @@ El número de formas de ordenar n elementos en un círculo es (n-1)!. Ejemplo: 5
 4 personas en una mesa redonda: (4-1)! = 6 formas. Si se cuenta la dirección (horario y antihorario son iguales): 6/2 = 3 formas.
 
 ### Consejos prácticos
-Identifica si el orden importa (permutación) o no (combinación). Para problemas con restricciones, usa inclusión-exclusión. Para problemas de distribución, usa combinaciones con repetición. Los factoriales crecen muy rápido: 10! = 3,628,800. Para cálculos grandes, simplifica antes de multiplicar. Verifica tu respuesta con un caso pequeño.`},
+Identifica si el orden importa (permutación) o no (combinación). Para problemas con restricciones, usa inclusión-exclusión. Para problemas de distribución, usa combinaciones con repetición. Los factoriales crecen muy rápido: 10! = 3,628,800. Para cálculos grandes, simplifica antes de multiplicar. Verifica tu respuesta con un caso pequeño.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "El **análisis combinatorio** estudia las formas de **organizar, agrupar y contar** elementos.",
+          "**Factorial** n! = n × (n−1) × ... × 1. Ejemplo: 5! = 120.",
+          "**Permutaciones**: el orden importa. P(n,r) = n!/(n−r)!.",
+          "**Combinaciones**: el orden NO importa. C(n,r) = n!/(r!(n−r)!).",
+          "**Principio multiplicativo**: el total es el **producto** de opciones por etapa.",
+          "**Principio aditivo**: si hay formas independientes, el total es la **suma**."
+        ]
+      },
       {
         level: "intermedio",
         title: "Estrategias y técnicas",
@@ -16362,20 +16362,7 @@ Identifica si el orden importa (permutación) o no (combinación). Para problema
     slug: "probabilidades",
     illustrationSummary: "Eventos con probabilidades calculadas por frecuencia y classical.",
     tip: "Probabilidad = **casos favorables / casos posibles**. Para eventos compuestos: **independientes** se multiplican, **dependientes** ajusta el denominador. Los **árboles de probabilidad** son tu mejor aliado para múltiples etapas.",
-    theory: [
-      {
-        level: "basico",
-        title: "Conceptos fundamentales",
-        lines: [
-          "La **probabilidad** mide la posibilidad de un evento. Va de **0** (imposible) a **1** (seguro).",
-          "**P(A) = casos favorables / casos posibles**. Dado justo: P(6) = 1/6.",
-          "El **espacio muestral** (S) es el conjunto de todos los resultados posibles.",
-          "**P(no A) = 1 − P(A)**. Si P(lluvia) = 0.3, P(no lluvia) = 0.7.",
-          "**Mutuamente excluyentes**: no ocurren juntos. P(A o B) = P(A) + P(B).",
-          "Las probabilidades del espacio muestral **suman 1**."
-        ]
-      ,
-  studyGuide: `## Probabilidades
+    studyGuide: `## Probabilidades
 ### Definición
 La probabilidad de un evento es la razón entre el número de casos favorables y el número total de casos posibles (cuando todos son equiprobables). P(A) = casos favorables / casos totales. El valor siempre está entre 0 (imposible) y 1 (seguro). P(A) = 1 - P(no A).
 
@@ -16419,7 +16406,20 @@ Un juego: si sale 6 ganas $10, si sale par ganas $2, si sale impar pierdes $1. �
 Var(X) = E(X²) - [E(X)]². Desviación estándar = √Var(X). Ejemplo: Dado justo. E(X²) = (1+4+9+16+25+36)/6 = 91/6. Var(X) = 91/6 - (3.5)² = 91/6 - 12.25 = 91/6 - 73.5/6 = 17.5/6 ≈ 2.917. σ ≈ 1.708.
 
 ### Consejos prácticos
-Siempre verifica que las probabilidades sumen 1. Usa el complemento cuando "al menos" aparezca en el problema. Para eventos independientes, multiplica las probabilidades. Para eventos mutuamente excluyentes, suma las probabilidades. El valor esperado es útil para tomar decisiones: si E(X) > 0, el juego es favorable a largo plazo. Recuerda que la probabilidad de un evento cierto es 1 y de un evento imposible es 0.`},
+Siempre verifica que las probabilidades sumen 1. Usa el complemento cuando "al menos" aparezca en el problema. Para eventos independientes, multiplica las probabilidades. Para eventos mutuamente excluyentes, suma las probabilidades. El valor esperado es útil para tomar decisiones: si E(X) > 0, el juego es favorable a largo plazo. Recuerda que la probabilidad de un evento cierto es 1 y de un evento imposible es 0.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "La **probabilidad** mide la posibilidad de un evento. Va de **0** (imposible) a **1** (seguro).",
+          "**P(A) = casos favorables / casos posibles**. Dado justo: P(6) = 1/6.",
+          "El **espacio muestral** (S) es el conjunto de todos los resultados posibles.",
+          "**P(no A) = 1 − P(A)**. Si P(lluvia) = 0.3, P(no lluvia) = 0.7.",
+          "**Mutuamente excluyentes**: no ocurren juntos. P(A o B) = P(A) + P(B).",
+          "Las probabilidades del espacio muestral **suman 1**."
+        ]
+      },
       {
         level: "intermedio",
         title: "Estrategias y técnicas",
@@ -16502,20 +16502,7 @@ Siempre verifica que las probabilidades sumen 1. Usa el complemento cuando "al m
     slug: "teoria-de-conjuntos",
     illustrationSummary: "Diagrama de Venn con operaciones de conjuntos: unión, intersección, complemento y diferencia.",
     tip: "En el examen, identifica primero los conjuntos dados antes de calcular operaciones. Dibuja un diagrama para verificar tu respuesta.",
-    theory: [
-      {
-        level: "basico",
-        title: "Definición y notación de conjuntos",
-        lines: [
-          "Un conjunto es una colección bien definida de objetos llamados elementos.",
-          "Se escriben entre llaves: A = {1, 2, 3, 4}.",
-          "El símbolo ∈ indica pertenencia: 3 ∈ A significa que 3 está en A.",
-          "El conjunto vacío se denota ∅ y no contiene ningún elemento.",
-          "Dos conjuntos son iguales si tienen exactamente los mismos elementos.",
-          "Un subconjunto B ⊆ A contiene solo elementos que pertenecen a A."
-        ]
-      ,
-  studyGuide: `## Teoría de Conjuntos
+    studyGuide: `## Teoría de Conjuntos
 
 ### Conceptos Fundamentales
 
@@ -16564,7 +16551,20 @@ De 100 estudiantes: 60 inglés, 45 francés, 25 ambos.
 - **Asociativa:** (A ∪ B) ∪ C = A ∪ (B ∪ C)
 - **Distributiva:** A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C)
 - **De Morgan:** (A ∪ B)ᶜ = Aᶜ ∩ Bᶜ, (A ∩ B)ᶜ = Aᶜ ∪ Bᶜ
-- **Absorción:** A ∪ (A ∩ B) = A, A ∩ (A ∪ B) = A`},
+- **Absorción:** A ∪ (A ∩ B) = A, A ∩ (A ∪ B) = A`,
+    theory: [
+      {
+        level: "basico",
+        title: "Definición y notación de conjuntos",
+        lines: [
+          "Un conjunto es una colección bien definida de objetos llamados elementos.",
+          "Se escriben entre llaves: A = {1, 2, 3, 4}.",
+          "El símbolo ∈ indica pertenencia: 3 ∈ A significa que 3 está en A.",
+          "El conjunto vacío se denota ∅ y no contiene ningún elemento.",
+          "Dos conjuntos son iguales si tienen exactamente los mismos elementos.",
+          "Un subconjunto B ⊆ A contiene solo elementos que pertenecen a A."
+        ]
+      },
       {
         level: "intermedio",
         title: "Unión e intersección",
@@ -16678,20 +16678,7 @@ De 100 estudiantes: 60 inglés, 45 francés, 25 ambos.
     slug: "diagramas-de-venn",
     illustrationSummary: "Representación visual de 2 y 3 conjuntos con las regiones sombreadas.",
     tip: "Lee siempre el enunciado cuidadosamente: los números en un Venn representan la cantidad de elementos en cada región, no los elementos mismos.",
-    theory: [
-      {
-        level: "basico",
-        title: "Elementos de un diagrama de Venn",
-        lines: [
-          "Un diagrama de Venn usa círculos cerrados para representar conjuntos.",
-          "El rectángulo exterior representa al conjunto universal U.",
-          "Cada círculo representa un conjunto con sus elementos dentro.",
-          "Los números dentro de las regiones indican la cantidad de elementos.",
-          "Las regiones superpuestas muestran elementos compartidos entre conjuntos.",
-          "Es la herramienta visual más útil para resolver problemas de conjuntos."
-        ]
-      ,
-  studyGuide: `## Diagramas de Venn
+    studyGuide: `## Diagramas de Venn
 
 ### Definición
 
@@ -16736,7 +16723,20 @@ Solo F = 20. Solo B = 12. Solo T = 12. Ninguno = 13.
 
 - No incluir el universo.
 - Empezar por regiones exteriores.
-- Confundir "al menos uno" (unión) con "todos" (intersección).`},
+- Confundir "al menos uno" (unión) con "todos" (intersección).`,
+    theory: [
+      {
+        level: "basico",
+        title: "Elementos de un diagrama de Venn",
+        lines: [
+          "Un diagrama de Venn usa círculos cerrados para representar conjuntos.",
+          "El rectángulo exterior representa al conjunto universal U.",
+          "Cada círculo representa un conjunto con sus elementos dentro.",
+          "Los números dentro de las regiones indican la cantidad de elementos.",
+          "Las regiones superpuestas muestran elementos compartidos entre conjuntos.",
+          "Es la herramienta visual más útil para resolver problemas de conjuntos."
+        ]
+      },
       {
         level: "intermedio",
         title: "Diagramas con dos conjuntos",
@@ -16854,20 +16854,7 @@ Solo F = 20. Solo B = 12. Solo T = 12. Ninguno = 13.
     slug: "algebra-booleana",
     illustrationSummary: "Circuitos lógicos con operadores AND, OR, NOT y sus equivalentes.",
     tip: "Memoriza las leyes de De Morgan y de absorción; aparecen frecuentemente en el examen y simplifican mucho las expresiones.",
-    theory: [
-      {
-        level: "basico",
-        title: "Operadores booleanos fundamentales",
-        lines: [
-          "En álgebra booleana las variables solo toman valores verdadero (1) o falso (0).",
-          "AND (∧) produce 1 solo cuando ambos operandos son 1.",
-          "OR (∨) produce 1 cuando al menos uno de los operandos es 1.",
-          "NOT (¬) invierte el valor: ¬1 = 0 y ¬0 = 1.",
-          "Se usan las letras P, Q, R para representar proposiciones.",
-          "La precedencia es: NOT antes de AND, AND antes de OR."
-        ]
-      ,
-  studyGuide: `## Álgebra Booleana
+    studyGuide: `## Álgebra Booleana
 
 ### Fundamentos
 
@@ -16918,7 +16905,20 @@ Para F = A ∧ (B ∨ ¬C): 3 de 8 filas son verdaderas.
 
 ### Aplicaciones
 
-Circuitos digitales, consultas SQL, lógica computacional.`},
+Circuitos digitales, consultas SQL, lógica computacional.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Operadores booleanos fundamentales",
+        lines: [
+          "En álgebra booleana las variables solo toman valores verdadero (1) o falso (0).",
+          "AND (∧) produce 1 solo cuando ambos operandos son 1.",
+          "OR (∨) produce 1 cuando al menos uno de los operandos es 1.",
+          "NOT (¬) invierte el valor: ¬1 = 0 y ¬0 = 1.",
+          "Se usan las letras P, Q, R para representar proposiciones.",
+          "La precedencia es: NOT antes de AND, AND antes de OR."
+        ]
+      },
       {
         level: "intermedio",
         title: "Leyes de la álgebra booleana",
@@ -17036,20 +17036,7 @@ Circuitos digitales, consultas SQL, lógica computacional.`},
     slug: "tablas-de-verdad",
     illustrationSummary: "Tabla de verdad para proposiciones compuestas con todas las combinaciones.",
     tip: "Construye la tabla paso a paso, evaluando primero las expresiones entre paréntesis y aplicando la precedencia de operadores.",
-    theory: [
-      {
-        level: "basico",
-        title: "Estructura de una tabla de verdad",
-        lines: [
-          "Una tabla de verdad lista todas las combinaciones posibles de valores de verdad.",
-          "Con n variables hay exactamente 2^n filas en la tabla.",
-          "Las columnas se ordenan de izquierda a derecha, de más variable a menos.",
-          "Se empieza alternando V y F en la primera columna.",
-          "La segunda columna alterna cada 2 filas, la tercera cada 4, y así sucesivamente.",
-          "Se evalúa la expresión columna por columna siguiendo la precedencia."
-        ]
-      ,
-  studyGuide: `## Tablas de Verdad
+    studyGuide: `## Tablas de Verdad
 
 ### Definición
 
@@ -17088,7 +17075,20 @@ P ∧ (Q ∨ ¬R): 8 filas, verdadera en 3 casos.
 
 ### Uso
 
-Verificar argumentos lógicos, demostrar equivalencias.`},
+Verificar argumentos lógicos, demostrar equivalencias.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Estructura de una tabla de verdad",
+        lines: [
+          "Una tabla de verdad lista todas las combinaciones posibles de valores de verdad.",
+          "Con n variables hay exactamente 2^n filas en la tabla.",
+          "Las columnas se ordenan de izquierda a derecha, de más variable a menos.",
+          "Se empieza alternando V y F en la primera columna.",
+          "La segunda columna alterna cada 2 filas, la tercera cada 4, y así sucesivamente.",
+          "Se evalúa la expresión columna por columna siguiendo la precedencia."
+        ]
+      },
       {
         level: "intermedio",
         title: "Proposiciones compuestas",
@@ -17201,20 +17201,7 @@ Verificar argumentos lógicos, demostrar equivalencias.`},
     slug: "logica-condicional",
     illustrationSummary: "Diagrama de flujo del condicional: si P entonces Q, contrapositiva, inversa.",
     tip: "La única forma de que 'si P entonces Q' sea falsa es cuando P es verdadero y Q es falso. No confundas con la recíproca.",
-    theory: [
-      {
-        level: "basico",
-        title: "Enunciado condicional",
-        lines: [
-          "Un condicional se escribe P → Q y se lee 'si P entonces Q'.",
-          "P es la hipótesis (antecedente) y Q es la conclusión (consecuente).",
-          "P → Q solo es falso cuando P es verdadero y Q es falso.",
-          "Si la hipótesis es falsa, el condicional es verdadero automáticamente.",
-          "Ejemplo: 'Si llueve, entonces mojado' solo es falso si llueve y no se moja.",
-          "Un condicional no afirma que P cause Q, solo establece una relación lógica."
-        ]
-      ,
-  studyGuide: `## Lógica Condicional
+    studyGuide: `## Lógica Condicional
 
 ### El Condicional
 
@@ -17258,7 +17245,20 @@ P → Q y Q → R implica **P → R** (silogismo hipotético).
 
 ### Ejemplo Complejo
 
-(E∧A) → G. Estudio, no me gradúo: ¬G implica ¬(E∧A) = ¬E∨¬A. Como E, entonces ¬A.`},
+(E∧A) → G. Estudio, no me gradúo: ¬G implica ¬(E∧A) = ¬E∨¬A. Como E, entonces ¬A.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Enunciado condicional",
+        lines: [
+          "Un condicional se escribe P → Q y se lee 'si P entonces Q'.",
+          "P es la hipótesis (antecedente) y Q es la conclusión (consecuente).",
+          "P → Q solo es falso cuando P es verdadero y Q es falso.",
+          "Si la hipótesis es falsa, el condicional es verdadero automáticamente.",
+          "Ejemplo: 'Si llueve, entonces mojado' solo es falso si llueve y no se moja.",
+          "Un condicional no afirma que P cause Q, solo establece una relación lógica."
+        ]
+      },
       {
         level: "intermedio",
         title: "Contrapositiva, recíproca e inversa",
@@ -17366,20 +17366,7 @@ P → Q y Q → R implica **P → R** (silogismo hipotético).
     slug: "logica-bicondicional",
     illustrationSummary: "Equivalencia lógica: si y solo si. Tabla de verdad y propiedades.",
     tip: "P ↔ Q es verdadero solo cuando P y Q tienen el mismo valor de verdad. Verifica ambos sentidos de la implicación.",
-    theory: [
-      {
-        level: "basico",
-        title: "Definición de bicondicional",
-        lines: [
-          "El bicondicional P ↔ Q se lee 'P si y solo si Q'.",
-          "Es verdadero cuando P y Q tienen el mismo valor de verdad.",
-          "Es falso cuando uno es verdadero y el otro es falso.",
-          "P ↔ Q equivale a (P → Q) ∧ (Q → P).",
-          "También equivale a (P ∧ Q) ∨ (¬P ∧ ¬Q).",
-          "En el examen, verifica ambos sentidos de la implicación para confirmar."
-        ]
-      ,
-  studyGuide: `## Lógica Bicondicional
+    studyGuide: `## Lógica Bicondicional
 
 ### Definición
 
@@ -17417,7 +17404,20 @@ Si P↔Q es tautología: P ≡ Q (equivalentes lógicamente).
 
 ### Aplicación
 
-"Soy mayor de edad si y solo si puedo votar." P=V, Q=V. P↔Q = V. Verdadera.`},
+"Soy mayor de edad si y solo si puedo votar." P=V, Q=V. P↔Q = V. Verdadera.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Definición de bicondicional",
+        lines: [
+          "El bicondicional P ↔ Q se lee 'P si y solo si Q'.",
+          "Es verdadero cuando P y Q tienen el mismo valor de verdad.",
+          "Es falso cuando uno es verdadero y el otro es falso.",
+          "P ↔ Q equivale a (P → Q) ∧ (Q → P).",
+          "También equivale a (P ∧ Q) ∨ (¬P ∧ ¬Q).",
+          "En el examen, verifica ambos sentidos de la implicación para confirmar."
+        ]
+      },
       {
         level: "intermedio",
         title: "Equivalencia lógica",
@@ -17542,20 +17542,7 @@ Si P↔Q es tautología: P ≡ Q (equivalentes lógicamente).
     slug: "cuantificadores-logica",
     illustrationSummary: "Cuantificador universal (∀) y existencial (∃) con sus negaciones.",
     tip: "La negación de 'todo X cumple P' es 'existe un X que no cumple P', y viceversa. Cambia siempre el cuantificador al negar.",
-    theory: [
-      {
-        level: "basico",
-        title: "Cuantificador universal (∀)",
-        lines: [
-          "El cuantificador universal ∀ se lee 'para todo' o 'todo'.",
-          "∀x P(x) significa que P(x) es verdadero para todo x del dominio.",
-          "Para refutar ∀x P(x), basta con encontrar un solo contraejemplo.",
-          "Ejemplo: ∀n ∈ ℕ, n² ≥ 0 es verdadero para todos los naturales.",
-          "Ejemplo: ∀n ∈ ℕ, n es par es falso porque 1 no es par.",
-          "En el examen, distingue entre 'para todo' y 'existe al menos uno'."
-        ]
-      ,
-  studyGuide: `## Cuantificadores en Lógica
+    studyGuide: `## Cuantificadores en Lógica
 
 ### Universal (∀)
 
@@ -17599,7 +17586,20 @@ Negar ∀x (x>0 → ∃y y²=x):
 |-----------|----------|
 | ∀x P(x) | ∃x ¬P(x) |
 | ∃x P(x) | ∀x ¬P(x) |
-| ∀x∃y P(x,y) | ∃x∀y ¬P(x,y) |`},
+| ∀x∃y P(x,y) | ∃x∀y ¬P(x,y) |`,
+    theory: [
+      {
+        level: "basico",
+        title: "Cuantificador universal (∀)",
+        lines: [
+          "El cuantificador universal ∀ se lee 'para todo' o 'todo'.",
+          "∀x P(x) significa que P(x) es verdadero para todo x del dominio.",
+          "Para refutar ∀x P(x), basta con encontrar un solo contraejemplo.",
+          "Ejemplo: ∀n ∈ ℕ, n² ≥ 0 es verdadero para todos los naturales.",
+          "Ejemplo: ∀n ∈ ℕ, n es par es falso porque 1 no es par.",
+          "En el examen, distingue entre 'para todo' y 'existe al menos uno'."
+        ]
+      },
       {
         level: "intermedio",
         title: "Cuantificador existencial (∃)",
@@ -17714,20 +17714,7 @@ Negar ∀x (x>0 → ∃y y²=x):
     slug: "paradojas-logicas",
     illustrationSummary: "Representación del mentiroso y otras paradojas lógicas clásicas.",
     tip: "En el examen, identifica la auto-referencia como fuente de la paradoja y busca la interpretación formal, no filosófica.",
-    theory: [
-      {
-        level: "basico",
-        title: "¿Qué es una paradoja lógica?",
-        lines: [
-          "Una paradoja es una afirmación que parece contradecirse a sí misma.",
-          "No todas las paradojas son verdaderas contradicciones; muchas tienen solución.",
-          "En exámenes, las paradojas se usan para evaluar razonamiento lógico.",
-          "La paradoja del mentiroso: 'Esta frase es falsa' no puede ser V ni F.",
-          "El examen busca que identifiques la estructura lógica, no la resuelvas filosóficamente.",
-          "Reconocer una auto-referencia es el primer paso para analizar una paradoja."
-        ]
-      ,
-  studyGuide: `## Paradojas Lógicas
+    studyGuide: `## Paradojas Lógicas
 
 ### ¿Qué es una Paradoja?
 
@@ -17763,7 +17750,20 @@ Si reemplazas todas las partes de un barco, ¿es el mismo? ¿Y si las partes vie
 
 1. Auto-referencia genera contradicciones.
 2. No toda proposición tiene valor de verdad definido.
-3. Las paradojas mejoraron los fundamentos de la matemática.`},
+3. Las paradojas mejoraron los fundamentos de la matemática.`,
+    theory: [
+      {
+        level: "basico",
+        title: "¿Qué es una paradoja lógica?",
+        lines: [
+          "Una paradoja es una afirmación que parece contradecirse a sí misma.",
+          "No todas las paradojas son verdaderas contradicciones; muchas tienen solución.",
+          "En exámenes, las paradojas se usan para evaluar razonamiento lógico.",
+          "La paradoja del mentiroso: 'Esta frase es falsa' no puede ser V ni F.",
+          "El examen busca que identifiques la estructura lógica, no la resuelvas filosóficamente.",
+          "Reconocer una auto-referencia es el primer paso para analizar una paradoja."
+        ]
+      },
       {
         level: "intermedio",
         title: "Paradojas clásicas",
@@ -17891,20 +17891,7 @@ Si reemplazas todas las partes de un barco, ¿es el mismo? ¿Y si las partes vie
     slug: "divisibilidad-residuos",
     illustrationSummary: "Tabla de residuos y criterios de divisibilidad para 2, 3, 5, 7, 11.",
     tip: "Si un número es divisible por 2 y por 3, también es divisible por 6. Aprende a identificar patrones de residuos para resolver divisiones sin calcular directamente.",
-    theory: [
-      {
-        level: "basico",
-        title: "Criterios de divisibilidad básicos",
-        lines: [
-          "Un número es divisible por 2 si su último dígito es par (0, 2, 4, 6, 8).",
-          "Un número es divisible por 3 si la suma de sus dígitos es divisible por 3.",
-          "Un número es divisible por 5 si termina en 0 o en 5.",
-          "Un número es divisible por 10 si termina en 0.",
-          "Un número es divisible por 4 si sus últimas dos cifras forman un número divisible por 4.",
-          "Un número es divisible por 6 si es divisible por 2 y por 3 simultáneamente."
-        ]
-      ,
-  studyGuide: `## Divisibilidad y Residuos
+    studyGuide: `## Divisibilidad y Residuos
 
 ### Definición
 
@@ -17948,7 +17935,20 @@ Si reemplazas todas las partes de un barco, ¿es el mismo? ¿Y si las partes vie
 
 7^100 mod 3: 7 mod 3 = 1 → 1^100 = 1.
 
-2^10 mod 7: ciclo 2,4,1 (long 3). 10 = 3·3+1 → 2^1 ≡ 2.`},
+2^10 mod 7: ciclo 2,4,1 (long 3). 10 = 3·3+1 → 2^1 ≡ 2.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Criterios de divisibilidad básicos",
+        lines: [
+          "Un número es divisible por 2 si su último dígito es par (0, 2, 4, 6, 8).",
+          "Un número es divisible por 3 si la suma de sus dígitos es divisible por 3.",
+          "Un número es divisible por 5 si termina en 0 o en 5.",
+          "Un número es divisible por 10 si termina en 0.",
+          "Un número es divisible por 4 si sus últimas dos cifras forman un número divisible por 4.",
+          "Un número es divisible por 6 si es divisible por 2 y por 3 simultáneamente."
+        ]
+      },
       {
         level: "intermedio",
         title: "Criterios avanzados y residuos",
@@ -18062,20 +18062,7 @@ Si reemplazas todas las partes de un barco, ¿es el mismo? ¿Y si las partes vie
     slug: "mcm-mcd",
     illustrationSummary: "MCM y MCD calculados por el método de Euclides y por factorización.",
     tip: "Recuerda la fórmula clave: a × b = MCM(a,b) × MCD(a,b). Esto te permite calcular uno si conoces el otro y los dos números.",
-    theory: [
-      {
-        level: "basico",
-        title: "MCD y MCM: definiciones",
-        lines: [
-          "El Máximo Común Divisor (MCD) de dos números es el mayor entero que divide a ambos.",
-          "El Mínimo Común Múltiplo (MCM) de dos números es el menor entero positivo múltiplo de ambos.",
-          "Ejemplo: MCD(12, 18) = 6, porque 6 es el mayor divisor común de 12 y 18.",
-          "Ejemplo: MCM(12, 18) = 36, porque 36 es el menor múltiplo común de 12 y 18.",
-          "Si dos números son primos entre sí (coprimos), su MCD es 1.",
-          "Si un número es múltiplo del otro, el MCD es el menor y el MCM es el mayor."
-        ]
-      ,
-  studyGuide: `## MCM y MCD
+    studyGuide: `## MCM y MCD
 
 ### MCM
 
@@ -18120,7 +18107,20 @@ mcd(a,b,c) = mcd(mcd(a,b),c).
 
 24 rosas, 36 tulipanes. mcd=12. Puede hacer **12 ramos**.
 
-Autobuses cada 12 y 18 min: mcm=36 min.`},
+Autobuses cada 12 y 18 min: mcm=36 min.`,
+    theory: [
+      {
+        level: "basico",
+        title: "MCD y MCM: definiciones",
+        lines: [
+          "El Máximo Común Divisor (MCD) de dos números es el mayor entero que divide a ambos.",
+          "El Mínimo Común Múltiplo (MCM) de dos números es el menor entero positivo múltiplo de ambos.",
+          "Ejemplo: MCD(12, 18) = 6, porque 6 es el mayor divisor común de 12 y 18.",
+          "Ejemplo: MCM(12, 18) = 36, porque 36 es el menor múltiplo común de 12 y 18.",
+          "Si dos números son primos entre sí (coprimos), su MCD es 1.",
+          "Si un número es múltiplo del otro, el MCD es el menor y el MCM es el mayor."
+        ]
+      },
       {
         level: "intermedio",
         title: "Algoritmo de Euclides",
@@ -18236,20 +18236,7 @@ Autobuses cada 12 y 18 min: mcm=36 min.`},
     slug: "congruencias-modulares",
     illustrationSummary: "Recta numérica con congruencias módulo n y residuos.",
     tip: "Las congruencias modulares son como 'relojes': si la hora es 15:00, en un reloj de 12 horas son las 3. En congruencias: 15 ≡ 3 (mod 12).",
-    theory: [
-      {
-        level: "basico",
-        title: "Congruencias: definición básica",
-        lines: [
-          "Decimos que a ≡ b (mod m) si (a - b) es divisible por m.",
-          "Equivalente: a y b tienen el mismo residuo al dividirlos entre m.",
-          "Ejemplo: 17 ≡ 5 (mod 6) porque 17 - 5 = 12, y 12 es divisible por 6.",
-          "Ejemplo: 23 ≡ 8 (mod 5) porque ambos dan residuo 3 al dividir entre 5.",
-          "Las congruencias se pueden sumar, restar y multiplicar de ambos lados.",
-          "Si a ≡ b (mod m) y c ≡ d (mod m), entonces a + c ≡ b + d (mod m)."
-        ]
-      ,
-  studyGuide: `## Congruencias Modulares
+    studyGuide: `## Congruencias Modulares
 
 ### Definición
 
@@ -18288,7 +18275,20 @@ Resolver ax ≡ b (mod n): existe si mcd(a,n) | b.
 
 ### Aplicación
 
-Dígito units de 7^2023: ciclo mod 10 es 7,9,3,1 (long 4). 2023 = 4·505+3 → 7^3 ≡ **3**.`},
+Dígito units de 7^2023: ciclo mod 10 es 7,9,3,1 (long 4). 2023 = 4·505+3 → 7^3 ≡ **3**.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Congruencias: definición básica",
+        lines: [
+          "Decimos que a ≡ b (mod m) si (a - b) es divisible por m.",
+          "Equivalente: a y b tienen el mismo residuo al dividirlos entre m.",
+          "Ejemplo: 17 ≡ 5 (mod 6) porque 17 - 5 = 12, y 12 es divisible por 6.",
+          "Ejemplo: 23 ≡ 8 (mod 5) porque ambos dan residuo 3 al dividir entre 5.",
+          "Las congruencias se pueden sumar, restar y multiplicar de ambos lados.",
+          "Si a ≡ b (mod m) y c ≡ d (mod m), entonces a + c ≡ b + d (mod m)."
+        ]
+      },
       {
         level: "intermedio",
         title: "Operaciones con congruencias",
@@ -18404,20 +18404,7 @@ Dígito units de 7^2023: ciclo mod 10 es 7,9,3,1 (long 4). 2023 = 4·505+3 → 7
     slug: "primalidad-factorizacion",
     illustrationSummary: "Criba de Eratóstenes y descomposición en factores primos.",
     tip: "Para verificar si un número n es primo, solo necesitas probar divisibilidad por primos hasta √n. Para n = 127, √127 ≈ 11.27, así que prueba con 2, 3, 5, 7 y 11.",
-    theory: [
-      {
-        level: "basico",
-        title: "Números primos: definición",
-        lines: [
-          "Un número primo es un entero mayor que 1 que solo tiene dos divisores: 1 y sí mismo.",
-          "Los primeros primos son: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, ...",
-          "El número 2 es el único primo par. Todos los demás primos son impares.",
-          "El 1 no es primo ni compuesto por convención.",
-          "Un número compuesto tiene más de dos divisores distintos.",
-          "Todo entero mayor que 1 se puede expresar de forma única como producto de primos (factorización prima)."
-        ]
-      ,
-  studyGuide: `## Primalidad y Factorización
+    studyGuide: `## Primalidad y Factorización
 
 ### Número Primo
 
@@ -18459,7 +18446,20 @@ Probar primos hasta √n. 97: √97≈9.8, probando 2,3,5,7 → primo. 91=7·13 
 
 ### Semiprimos
 
-Producto de dos primos. 6=2·3, 15=3·5. Clave en criptografía RSA.`},
+Producto de dos primos. 6=2·3, 15=3·5. Clave en criptografía RSA.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Números primos: definición",
+        lines: [
+          "Un número primo es un entero mayor que 1 que solo tiene dos divisores: 1 y sí mismo.",
+          "Los primeros primos son: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, ...",
+          "El número 2 es el único primo par. Todos los demás primos son impares.",
+          "El 1 no es primo ni compuesto por convención.",
+          "Un número compuesto tiene más de dos divisores distintos.",
+          "Todo entero mayor que 1 se puede expresar de forma única como producto de primos (factorización prima)."
+        ]
+      },
       {
         level: "intermedio",
         title: "Criba de Eratóstenes",
@@ -18628,20 +18628,7 @@ Producto de dos primos. 6=2·3, 15=3·5. Clave en criptografía RSA.`},
     slug: "propiedades-potencias",
     illustrationSummary: "Leyes de exponentes con ejemplos: multiplicación, división, potencia de potencia.",
     tip: "Cuando multiplican potencias de igual base, suman exponentes. Cuando elevan una potencia a otra, multiplican exponentes. Memoria: multiplican=SUMAR, potencia=MULTIPLICAR.",
-    theory: [
-      {
-        level: "basico",
-        title: "Leyes fundamentales de exponentes",
-        lines: [
-          "Producto de potencias de igual base: aᵐ × aⁿ = a^(m+n).",
-          "Cociente de potencias de igual base: aᵐ / aⁿ = a^(m-n).",
-          "Potencia de una potencia: (aᵐ)ⁿ = a^(m×n).",
-          "Potencia de un producto: (a × b)ⁿ = aⁿ × bⁿ.",
-          "Potencia de un cociente: (a / b)ⁿ = aⁿ / bⁿ.",
-          "Cualquier número elevado a la potencia 0 es 1: a⁰ = 1 (si a ≠ 0)."
-        ]
-      ,
-  studyGuide: `## Propiedades de las Potencias
+    studyGuide: `## Propiedades de las Potencias
 
 ### Definición
 
@@ -18683,7 +18670,20 @@ Si 2^x = 5: 4^x·8^x = (2^x)²·(2^x)³ = 25·125 = 3125.
 
 Si 3^x=2, 3^y=5: 3^(2x+y) = 4·5 = 20.
 
-(27)^(2/3)·(8)^(−1/3) = 9·(1/2) = 9/2.`},
+(27)^(2/3)·(8)^(−1/3) = 9·(1/2) = 9/2.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Leyes fundamentales de exponentes",
+        lines: [
+          "Producto de potencias de igual base: aᵐ × aⁿ = a^(m+n).",
+          "Cociente de potencias de igual base: aᵐ / aⁿ = a^(m-n).",
+          "Potencia de una potencia: (aᵐ)ⁿ = a^(m×n).",
+          "Potencia de un producto: (a × b)ⁿ = aⁿ × bⁿ.",
+          "Potencia de un cociente: (a / b)ⁿ = aⁿ / bⁿ.",
+          "Cualquier número elevado a la potencia 0 es 1: a⁰ = 1 (si a ≠ 0)."
+        ]
+      },
       {
         level: "intermedio",
         title: "Exponentes negativos y fraccionarios",
@@ -18802,20 +18802,7 @@ Si 3^x=2, 3^y=5: 3^(2x+y) = 4·5 = 20.
     slug: "igualdades-notables",
     illustrationSummary: "Identidades algebraicas: (a+b)², (a-b)², (a+b)(a-b), a³+b³.",
     tip: "Memoriza: (a+b)² = a²+2ab+b², (a-b)² = a²-2ab+b², y (a+b)³ = a³+3a²b+3ab²+b³. El truco: los coefficientes de (a+b)ⁿ siguen el triángulo de Pascal.",
-    theory: [
-      {
-        level: "basico",
-        title: "Cuadrados notables",
-        lines: [
-          "(a + b)² = a² + 2ab + b². Se lee: 'cuadrado de la suma'.",
-          "(a - b)² = a² - 2ab + b². Se lee: 'cuadrado de la diferencia'.",
-          "Error común: (a + b)² ≠ a² + b². Siempre hay un término medio 2ab.",
-          "Diferencia de cuadrados: a² - b² = (a + b)(a - b).",
-          "Para factorizar a² + b² no existe factorización real directa.",
-          "Ejemplo: (x + 5)² = x² + 10x + 25. Aquí a = x, b = 5."
-        ]
-      ,
-  studyGuide: `## Igualdades Notables
+    studyGuide: `## Igualdades Notables
 
 ### Las Tres Principales
 
@@ -18857,7 +18844,20 @@ x⁴−16 = (x²+4)(x²−4) = (x²+4)(x+2)(x−2).
 | 1 | 1, 1 |
 | 2 | 1, 2, 1 |
 | 3 | 1, 3, 3, 1 |
-| 4 | 1, 4, 6, 4, 1 |`},
+| 4 | 1, 4, 6, 4, 1 |`,
+    theory: [
+      {
+        level: "basico",
+        title: "Cuadrados notables",
+        lines: [
+          "(a + b)² = a² + 2ab + b². Se lee: 'cuadrado de la suma'.",
+          "(a - b)² = a² - 2ab + b². Se lee: 'cuadrado de la diferencia'.",
+          "Error común: (a + b)² ≠ a² + b². Siempre hay un término medio 2ab.",
+          "Diferencia de cuadrados: a² - b² = (a + b)(a - b).",
+          "Para factorizar a² + b² no existe factorización real directa.",
+          "Ejemplo: (x + 5)² = x² + 10x + 25. Aquí a = x, b = 5."
+        ]
+      },
       {
         level: "intermedio",
         title: "Cubos notables y binomios",
@@ -18983,20 +18983,7 @@ x⁴−16 = (x²+4)(x²−4) = (x²+4)(x+2)(x−2).
     slug: "desigualdades-elementales",
     illustrationSummary: "Desigualdad triangular y AM-GM en el plano cartesiano.",
     tip: "La desigualdad AM-GM: el promedio aritmético siempre es mayor o igual al promedio geométrico. Se aplica cuando buscas el mínimo o máximo de expresiones con productos o sumas.",
-    theory: [
-      {
-        level: "basico",
-        title: "Desigualdad triangular básica",
-        lines: [
-          "En todo triángulo, la suma de dos lados siempre es mayor que el tercero.",
-          "Si los lados son a, b, c, entonces: a + b > c, a + c > b, b + c > a.",
-          "Esta propiedad también se llama desigualdad del lado.",
-          "Para que tres longitudes formen un triángulo, deben cumplir las tres desigualdades.",
-          "Ejemplo: lados 3, 4, 5: 3+4=7>5, 3+5=8>4, 4+5=9>3. Sí forman triángulo.",
-          "Ejemplo: lados 1, 2, 5: 1+2=3<5. NO forman triángulo."
-        ]
-      ,
-  studyGuide: `## Desigualdades Elementales
+    studyGuide: `## Desigualdades Elementales
 
 ### Propiedades
 
@@ -19032,7 +19019,20 @@ x²−5x+6 < 0 → (x−2)(x−3) < 0 → **2 < x < 3**.
 
 ### Aplicación
 
-Mínimo de x+1/x para x>0: por AM-GM ≥ 2. Alcanzado en x=1.`},
+Mínimo de x+1/x para x>0: por AM-GM ≥ 2. Alcanzado en x=1.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Desigualdad triangular básica",
+        lines: [
+          "En todo triángulo, la suma de dos lados siempre es mayor que el tercero.",
+          "Si los lados son a, b, c, entonces: a + b > c, a + c > b, b + c > a.",
+          "Esta propiedad también se llama desigualdad del lado.",
+          "Para que tres longitudes formen un triángulo, deben cumplir las tres desigualdades.",
+          "Ejemplo: lados 3, 4, 5: 3+4=7>5, 3+5=8>4, 4+5=9>3. Sí forman triángulo.",
+          "Ejemplo: lados 1, 2, 5: 1+2=3<5. NO forman triángulo."
+        ]
+      },
       {
         level: "intermedio",
         title: "Desigualdad AM-GM",
@@ -19151,20 +19151,7 @@ Mínimo de x+1/x para x>0: por AM-GM ≥ 2. Alcanzado en x=1.`},
     slug: "raices-y-radicales",
     illustrationSummary: "Simplificación y racionalización de expresiones con radicales.",
     tip: "Para racionalizar un denominador con √a - √b, multiplica por √a + √b. Esto usa la diferencia de cuadrados: (√a - √b)(√a + √b) = a - b.",
-    theory: [
-      {
-        level: "basico",
-        title: "Propiedades básicas de raíces",
-        lines: [
-          "√(a × b) = √a × √b, siempre que a ≥ 0 y b ≥ 0.",
-          "√(a / b) = √a / √b, siempre que a ≥ 0 y b > 0.",
-          "√a × √a = a para todo a ≥ 0.",
-          "√(a²) = |a| (valor absoluto, no siempre a).",
-          "n√a = a^(1/n). La raíz n-ésima de a.",
-          "Para simplificar √n: busca el mayor cuadrado perfecto que divida a n."
-        ]
-      ,
-  studyGuide: `## Raíces y Radicales
+    studyGuide: `## Raíces y Radicales
 
 ### Definición
 
@@ -19201,7 +19188,20 @@ x = 2±√6. Verificar: solo x = 2+√6 funciona.
 
 ### Potencias Fraccionarias
 
-a^(m/n) = ⁿ√(a^m). 27^(2/3) = (27^(1/3))² = 9.`},
+a^(m/n) = ⁿ√(a^m). 27^(2/3) = (27^(1/3))² = 9.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Propiedades básicas de raíces",
+        lines: [
+          "√(a × b) = √a × √b, siempre que a ≥ 0 y b ≥ 0.",
+          "√(a / b) = √a / √b, siempre que a ≥ 0 y b > 0.",
+          "√a × √a = a para todo a ≥ 0.",
+          "√(a²) = |a| (valor absoluto, no siempre a).",
+          "n√a = a^(1/n). La raíz n-ésima de a.",
+          "Para simplificar √n: busca el mayor cuadrado perfecto que divida a n."
+        ]
+      },
       {
         level: "intermedio",
         title: "Simplificación y racionalización",
@@ -19319,20 +19319,7 @@ a^(m/n) = ⁿ√(a^m). 27^(2/3) = (27^(1/3))² = 9.`},
     slug: "problemas-mezclas",
     illustrationSummary: "Diagrama de mezclas con concentraciones iniciales y finales.",
     tip: "En problemas de mezclas, identifica siempre las cantidades de soluto y solvente. La concentración es soluto/total × 100%. Al mezclar, el soluto total se conserva: usa la ecuación C₁V₁ + C₂V₂ = C_fV_f.",
-    theory: [
-      {
-        level: "basico",
-        title: "Conceptos de mezclas y concentración",
-        lines: [
-          "Una **mezcla** es la combinación de dos o más sustancias sin que se produzca una reacción química.",
-          "El **soluto** es la sustancia que se disuelve y el **solvente** es el medio que la disuelve.",
-          "La **concentración** mide la proporción de soluto en la solución total.",
-          "Fórmula: **Concentración = (masa de soluto / masa de solución) × 100%**.",
-          "La masa de solución es la masa de soluto más la masa del solvente.",
-          "Si hay 20 g de sal en 80 g de agua, la concentración es 20/100 = 20%."
-        ]
-      ,
-  studyGuide: `## Problemas de Mezclas
+    studyGuide: `## Problemas de Mezclas
 
 ### Concepto
 
@@ -19370,7 +19357,20 @@ Café $8/kg y $12/kg para 20 kg a $9.50/kg.
 
 - Verificar cantidades positivas.
 - Porcentajes como decimales.
-- Si el objetivo no está entre los extremos, es imposible.`},
+- Si el objetivo no está entre los extremos, es imposible.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos de mezclas y concentración",
+        lines: [
+          "Una **mezcla** es la combinación de dos o más sustancias sin que se produzca una reacción química.",
+          "El **soluto** es la sustancia que se disuelve y el **solvente** es el medio que la disuelve.",
+          "La **concentración** mide la proporción de soluto en la solución total.",
+          "Fórmula: **Concentración = (masa de soluto / masa de solución) × 100%**.",
+          "La masa de solución es la masa de soluto más la masa del solvente.",
+          "Si hay 20 g de sal en 80 g de agua, la concentración es 20/100 = 20%."
+        ]
+      },
       {
         level: "intermedio",
         title: "Mezcla de dos soluciones",
@@ -19470,20 +19470,7 @@ Café $8/kg y $12/kg para 20 kg a $9.50/kg.
     slug: "problemas-trabajo-tiempo",
     illustrationSummary: "Tasas de trabajo combinadas de múltiples trabajadores.",
     tip: "La tasa de trabajo es el trabajo completado por unidad de tiempo. Si A tarda 'a' horas y B tarda 'b' horas, juntos completan el trabajo en ab/(a+b). Recuerda: trabajo = tasa × tiempo.",
-    theory: [
-      {
-        level: "basico",
-        title: "Conceptos de trabajo y tiempo",
-        lines: [
-          "El **trabajo** se mide como la cantidad de tarea completada en un período de tiempo.",
-          "La **tasa de trabajo** es la fracción del trabajo total que se completa en una unidad de tiempo.",
-          "Si Pedro tarda 6 horas en pintar un muro, su tasa es 1/6 del trabajo por hora.",
-          "Cuando dos personas trabajan juntas, sus tasas se **suman**.",
-          "Si Ana tarda 4 horas y Juan tarda 6 horas, juntos tasan 1/4 + 1/6 = 5/12 por hora.",
-          "El tiempo para trabajar juntos se calcula como **T = 1/(tasa₁ + tasa₂)**."
-        ]
-      ,
-  studyGuide: `## Problemas de Trabajo y Tiempo
+    studyGuide: `## Problemas de Trabajo y Tiempo
 
 ### Concepto
 
@@ -19521,7 +19508,20 @@ Ciclo: 5h por 4h de trabajo. Para 10h: 2 ciclos (10h) + 2h extra = 12h.
 
 "Carlos en 10 días, María en 15 días. ¿Juntos en cuántos días?"
 
-1/T = 1/10+1/15 = 5/30 = 1/6. T = **6 días**.`},
+1/T = 1/10+1/15 = 5/30 = 1/6. T = **6 días**.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos de trabajo y tiempo",
+        lines: [
+          "El **trabajo** se mide como la cantidad de tarea completada en un período de tiempo.",
+          "La **tasa de trabajo** es la fracción del trabajo total que se completa en una unidad de tiempo.",
+          "Si Pedro tarda 6 horas en pintar un muro, su tasa es 1/6 del trabajo por hora.",
+          "Cuando dos personas trabajan juntas, sus tasas se **suman**.",
+          "Si Ana tarda 4 horas y Juan tarda 6 horas, juntos tasan 1/4 + 1/6 = 5/12 por hora.",
+          "El tiempo para trabajar juntos se calcula como **T = 1/(tasa₁ + tasa₂)**."
+        ]
+      },
       {
         level: "intermedio",
         title: "Fórmulas y situaciones típicas",
@@ -19617,20 +19617,7 @@ Ciclo: 5h por 4h de trabajo. Para 10h: 2 ciclos (10h) + 2h extra = 12h.
     slug: "problemas-velocidad",
     illustrationSummary: "Diagrama de movimiento: distancia, velocidad y tiempo con corriente.",
     tip: "Recuerda la fórmula base: Velocidad = Distancia / Tiempo. En problemas de río, suma o resta la velocidad del agua según si vas a favor o en contra. Siempre verifica las unidades antes de resolver.",
-    theory: [
-      {
-        level: "basico",
-        title: "Velocidad, distancia y tiempo",
-        lines: [
-          "La **velocidad** es la distancia recorrida por unidad de tiempo: **v = d/t**.",
-          "La **distancia** se calcula como: **d = v × t**.",
-          "El **tiempo** se calcula como: **t = d/v**.",
-          "Unidades comunes: km/h, m/s. Para convertir m/s a km/h multiplica por 3.6.",
-          "La **velocidad promedio** es la distancia total dividida entre el tiempo total.",
-          "Velocidad constante significa que el objeto recorre la misma distancia en intervalos iguales."
-        ]
-      ,
-  studyGuide: `## Problemas de Velocidad
+    studyGuide: `## Problemas de Velocidad
 
 ### Fórmula Fundamental
 
@@ -19664,7 +19651,20 @@ Velocidad real = velocidad en agua + corriente (río abajo) o − corriente (rí
 
 Tiempo = (L₁+L₂)/(v₁+v₂) si van en sentidos opuestos.
 
-Tiempo = L₁/(v₁−v₂) si uno persigue al otro.`},
+Tiempo = L₁/(v₁−v₂) si uno persigue al otro.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Velocidad, distancia y tiempo",
+        lines: [
+          "La **velocidad** es la distancia recorrida por unidad de tiempo: **v = d/t**.",
+          "La **distancia** se calcula como: **d = v × t**.",
+          "El **tiempo** se calcula como: **t = d/v**.",
+          "Unidades comunes: km/h, m/s. Para convertir m/s a km/h multiplica por 3.6.",
+          "La **velocidad promedio** es la distancia total dividida entre el tiempo total.",
+          "Velocidad constante significa que el objeto recorre la misma distancia en intervalos iguales."
+        ]
+      },
       {
         level: "intermedio",
         title: "Movimiento con río y encuentros",
@@ -19766,20 +19766,7 @@ Tiempo = L₁/(v₁−v₂) si uno persigue al otro.`},
     slug: "problemas-financieros",
     illustrationSummary: "Gráfica de interés simple vs compuesto con el tiempo.",
     tip: "En interés simple, los intereses se calculan SIEMPRE sobre el capital inicial. En interés compuesto, se calculan sobre el capital acumulado. Memoriza: I = C×r×t y M = C(1+r)^t.",
-    theory: [
-      {
-        level: "basico",
-        title: "Interés simple y conceptos financieros",
-        lines: [
-          "El **capital** (C) es la cantidad de dinero inicial que se invierte o se toma prestada.",
-          "La **tasa de interés** (r) es el porcentaje que se cobra por el uso del dinero, generalmente anual.",
-          "El **interés simple** se calcula SIEMPRE sobre el capital original: **I = C × r × t**.",
-          "El **monto final** con interés simple es: **M = C + I = C(1 + r×t)**.",
-          "Si el capital es S/ 1000, la tasa es 5% anual y el tiempo es 3 años: I = 1000 × 0.05 × 3 = S/ 150.",
-          "Un **descuento** simple es el interés que se resta del monto futuro para obtener el valor presente."
-        ]
-      ,
-  studyGuide: `## Problemas Financieros
+    studyGuide: `## Problemas Financieros
 
 ### Interés Simple
 
@@ -19824,7 +19811,20 @@ VF = 200[(1.01)^12−1]/0.01 = 200(12.6825) = $2536.50.
 
 Tiempo para duplicar (interés compuesto): **t ≈ 72/r** (r en porcentaje).
 
-Al 6%: t ≈ 12 años. Al 8%: t ≈ 9 años.`},
+Al 6%: t ≈ 12 años. Al 8%: t ≈ 9 años.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Interés simple y conceptos financieros",
+        lines: [
+          "El **capital** (C) es la cantidad de dinero inicial que se invierte o se toma prestada.",
+          "La **tasa de interés** (r) es el porcentaje que se cobra por el uso del dinero, generalmente anual.",
+          "El **interés simple** se calcula SIEMPRE sobre el capital original: **I = C × r × t**.",
+          "El **monto final** con interés simple es: **M = C + I = C(1 + r×t)**.",
+          "Si el capital es S/ 1000, la tasa es 5% anual y el tiempo es 3 años: I = 1000 × 0.05 × 3 = S/ 150.",
+          "Un **descuento** simple es el interés que se resta del monto futuro para obtener el valor presente."
+        ]
+      },
       {
         level: "intermedio",
         title: "Interés compuesto y cuotas",
@@ -19928,20 +19928,7 @@ Al 6%: t ≈ 12 años. Al 8%: t ≈ 9 años.`},
     slug: "porcentajes-tantos",
     illustrationSummary: "Diagrama de descuentos, aumentos y variación porcentual.",
     tip: "Si algo sube 20% y luego baja 20%, NO vuelves al precio original (quedas en 96%). Para calcular el porcentaje de cambio usa: (nuevo − original)/original × 100%.",
-    theory: [
-      {
-        level: "basico",
-        title: "Conceptos de porcentaje",
-        lines: [
-          "Un **porcentaje** es una fracción cuyo denominador es 100: 25% = 25/100 = 0.25.",
-          "Para calcular el tanto por ciento: **(parte / total) × 100%**.",
-          "Para calcular un porcentaje de un número: **Número × (porcentaje/100)**.",
-          "Un **aumento** del 20% significa que el nuevo valor es el 120% del original.",
-          "Un **descuento** del 25% significa que se paga el 75% del precio original.",
-          "Para recuperar el original tras un descuento: **Precio original = Precio con descuento / (1 − r)**."
-        ]
-      ,
-  studyGuide: `## Porcentajes y Tantos
+    studyGuide: `## Porcentajes y Tantos
 
 ### Definición
 
@@ -19981,7 +19968,20 @@ Descuento total efectivo: 28%.
 
 Un producto cuesta $450 con 10% de descuento. Si el IVA es 16%, ¿cuánto paga?
 
-Precio base: 450(0.90) = $405. Con IVA: 405(1.16) = $469.80.`},
+Precio base: 450(0.90) = $405. Con IVA: 405(1.16) = $469.80.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos de porcentaje",
+        lines: [
+          "Un **porcentaje** es una fracción cuyo denominador es 100: 25% = 25/100 = 0.25.",
+          "Para calcular el tanto por ciento: **(parte / total) × 100%**.",
+          "Para calcular un porcentaje de un número: **Número × (porcentaje/100)**.",
+          "Un **aumento** del 20% significa que el nuevo valor es el 120% del original.",
+          "Un **descuento** del 25% significa que se paga el 75% del precio original.",
+          "Para recuperar el original tras un descuento: **Precio original = Precio con descuento / (1 − r)**."
+        ]
+      },
       {
         level: "intermedio",
         title: "Aumentos, descuentos y variación",
@@ -20082,20 +20082,7 @@ Precio base: 450(0.90) = $405. Con IVA: 405(1.16) = $469.80.`},
     slug: "proporcionalidad",
     illustrationSummary: "Gráficas de proporcionalidad directa e inversa.",
     tip: "En proporcionalidad directa, ambos términos crecen juntos (y/x = k). En inversa, uno sube cuando el otro baja (x×y = k). Identifica primero el tipo antes de plantear la regla de tres.",
-    theory: [
-      {
-        level: "basico",
-        title: "Proporcionalidad directa e inversa",
-        lines: [
-          "Dos magnitudes son **directamente proporcionales** si al duplicar una, la otra también se duplica.",
-          "Fórmula: **y = k × x**, donde k es la constante de proporcionalidad.",
-          "Dos magnitudes son **inversamente proporcionales** si al duplicar una, la otra se reduce a la mitad.",
-          "Fórmula: **y = k / x** o **x × y = k**, donde k es constante.",
-          "Si 5 personas consumen 20 kg de arroz en 4 días, la cantidad es directa con personas e inversa con días.",
-          "Identificar si es directa o inversa es el paso MÁS IMPORTANTE antes de plantear cualquier regla de tres."
-        ]
-      ,
-  studyGuide: `## Proporcionalidad
+    studyGuide: `## Proporcionalidad
 
 ### Directa
 
@@ -20139,7 +20126,20 @@ x = 20·(3/5)·(6/8) = 20·0.6·0.75 = 9 kg.
 
 Si a, m, b son progresión aritmética: **m = (a+b)/2**.
 
-Si a, g, b son progresión geométrica: **g = √(ab)**.`},
+Si a, g, b son progresión geométrica: **g = √(ab)**.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Proporcionalidad directa e inversa",
+        lines: [
+          "Dos magnitudes son **directamente proporcionales** si al duplicar una, la otra también se duplica.",
+          "Fórmula: **y = k × x**, donde k es la constante de proporcionalidad.",
+          "Dos magnitudes son **inversamente proporcionales** si al duplicar una, la otra se reduce a la mitad.",
+          "Fórmula: **y = k / x** o **x × y = k**, donde k es constante.",
+          "Si 5 personas consumen 20 kg de arroz en 4 días, la cantidad es directa con personas e inversa con días.",
+          "Identificar si es directa o inversa es el paso MÁS IMPORTANTE antes de plantear cualquier regla de tres."
+        ]
+      },
       {
         level: "intermedio",
         title: "Regla de tres simple",
@@ -20266,20 +20266,7 @@ Si a, g, b son progresión geométrica: **g = √(ab)**.`},
     slug: "problemas-densidad",
     illustrationSummary: "Relación masa-volumen-densidad con ejemplos prácticos.",
     tip: "La densidad es masa entre volumen: ρ = m/V. Si conoces dos de las tres variables, despeja la tercera. Recuerda: 1 mL = 1 cm³ y la densidad del agua es 1 g/cm³. Un objeto flota si su densidad es menor que la del líquido.",
-    theory: [
-      {
-        level: "basico",
-        title: "Conceptos de densidad",
-        lines: [
-          "La **densidad** (ρ) es la masa por unidad de volumen: **ρ = m/V**.",
-          "Unidades comunes: g/cm³, kg/m³, g/mL. Para convertir g/cm³ a kg/m³ multiplica por 1000.",
-          "La densidad del agua es **1 g/cm³** o **1000 kg/m³** (a 4°C).",
-          "Un objeto **flota** si su densidad es menor que la del líquido donde se sumerge.",
-          "Un objeto **se hunde** si su densidad es mayor que la del líquido.",
-          "La densidad es una propiedad característica de cada sustancia y no depende de la cantidad."
-        ]
-      ,
-  studyGuide: `## Problemas de Densidad
+    studyGuide: `## Problemas de Densidad
 
 ### Fórmula
 
@@ -20325,7 +20312,20 @@ V = m/ρ = 500/2.7 ≈ 185.2 cm³.
 
 Un bloque de 2 kg sumergido en agua desplaza 750 mL. ¿Es de madera o metal?
 
-V_bloque = 750 cm³ (igual al desplazado). ρ = 2000/750 ≈ 2.67 g/cm³ > 1. Es **metal**.`},
+V_bloque = 750 cm³ (igual al desplazado). ρ = 2000/750 ≈ 2.67 g/cm³ > 1. Es **metal**.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos de densidad",
+        lines: [
+          "La **densidad** (ρ) es la masa por unidad de volumen: **ρ = m/V**.",
+          "Unidades comunes: g/cm³, kg/m³, g/mL. Para convertir g/cm³ a kg/m³ multiplica por 1000.",
+          "La densidad del agua es **1 g/cm³** o **1000 kg/m³** (a 4°C).",
+          "Un objeto **flota** si su densidad es menor que la del líquido donde se sumerge.",
+          "Un objeto **se hunde** si su densidad es mayor que la del líquido.",
+          "La densidad es una propiedad característica de cada sustancia y no depende de la cantidad."
+        ]
+      },
       {
         level: "intermedio",
         title: "Fórmulas y aplicaciones",
@@ -20449,20 +20449,7 @@ V_bloque = 750 cm³ (igual al desplazado). ρ = 2000/750 ≈ 2.67 g/cm³ > 1. Es
     slug: "problemas-edad-avanzados",
     illustrationSummary: "Línea de tiempo con edades de múltiples personas en diferentes momentos.",
     tip: "En problemas de edades, define la edad de UNA persona como variable base y expresa las demás en función de ella. Recuerda que la diferencia de edad entre dos personas NUNCA cambia con el tiempo.",
-    theory: [
-      {
-        level: "basico",
-        title: "Conceptos fundamentales de edades",
-        lines: [
-          "Define **x** como la edad actual de una persona y expresa las demás edades en función de x.",
-          "La **diferencia de edad** entre dos personas es **constante** a lo largo del tiempo.",
-          "Si Ana tiene el doble de la edad de Luis, y Luis tiene 10 años, Ana tiene 20 años.",
-          "Dentro de 'n' años, la edad será **edad actual + n**.",
-          "Hace 'n' años, la edad era **edad actual − n**.",
-          "Siempre verifica que las edades resultantes sean **positivas** y **lógicas**."
-        ]
-      ,
-  studyGuide: `## Problemas de Edad (Avanzados)
+    studyGuide: `## Problemas de Edad (Avanzados)
 
 ### Planteamiento General
 
@@ -20498,7 +20485,20 @@ P+H=50. P−5 = 4(H−5) → P = 4H−15. Sustituyendo: 4H−15+H=50 → 5H=65 �
 
 - Siempre verificar con las condiciones originales.
 - Definir una variable como referencia.
-- Las edades aumentan igual para todos.`},
+- Las edades aumentan igual para todos.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales de edades",
+        lines: [
+          "Define **x** como la edad actual de una persona y expresa las demás edades en función de x.",
+          "La **diferencia de edad** entre dos personas es **constante** a lo largo del tiempo.",
+          "Si Ana tiene el doble de la edad de Luis, y Luis tiene 10 años, Ana tiene 20 años.",
+          "Dentro de 'n' años, la edad será **edad actual + n**.",
+          "Hace 'n' años, la edad era **edad actual − n**.",
+          "Siempre verifica que las edades resultantes sean **positivas** y **lógicas**."
+        ]
+      },
       {
         level: "intermedio",
         title: "Relaciones entre dos personas",
@@ -20605,20 +20605,7 @@ P+H=50. P−5 = 4(H−5) → P = 4H−15. Sustituyendo: 4H−15+H=50 → 5H=65 �
     slug: "sucesiones-aritmeticas",
     illustrationSummary: "Gráfica de una progresión aritmética con razón constante.",
     tip: "Identifica rápidamente la razón restando dos términos consecutivos; luego usa aₙ = a₁ + (n−1)d para cualquier término.",
-    theory: [
-      {
-        level: "basico",
-        title: "Definición de sucesión aritmética",
-        lines: [
-          "Una sucesión aritmética es aquella en la que la diferencia entre términos consecutivos es constante.",
-          "Esa diferencia constante se llama razón (d) y se calcula como d = aₙ₊₁ − aₙ.",
-          "Ejemplo: 3, 7, 11, 15, 19, … tiene razón d = 4 porque 7−3 = 11−7 = 4.",
-          "Una sucesión es creciente si d > 0, decreciente si d < 0, y constante si d = 0.",
-          "El primer término se denota a₁ y es el punto de partida para construir toda la sucesión.",
-          "Para confirmar que una sucesión es aritmética, basta verificar que la diferencia entre pares consecutivos sea siempre la misma."
-        ]
-      ,
-  studyGuide: `## Sucesiones Aritméticas
+    studyGuide: `## Sucesiones Aritméticas
 
 ### Definición
 
@@ -20659,7 +20646,20 @@ Insertar 4 términos armónicos entre 3 y 18.
 
 Primero: 4 términos aritméticos entre 3 y 18.
 
-3, ___, ___, ___, ___, 18. 5 espacios, d=(18−3)/5 = 3. Secuencia: 3,6,9,12,15,18.`},
+3, ___, ___, ___, ___, 18. 5 espacios, d=(18−3)/5 = 3. Secuencia: 3,6,9,12,15,18.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Definición de sucesión aritmética",
+        lines: [
+          "Una sucesión aritmética es aquella en la que la diferencia entre términos consecutivos es constante.",
+          "Esa diferencia constante se llama razón (d) y se calcula como d = aₙ₊₁ − aₙ.",
+          "Ejemplo: 3, 7, 11, 15, 19, … tiene razón d = 4 porque 7−3 = 11−7 = 4.",
+          "Una sucesión es creciente si d > 0, decreciente si d < 0, y constante si d = 0.",
+          "El primer término se denota a₁ y es el punto de partida para construir toda la sucesión.",
+          "Para confirmar que una sucesión es aritmética, basta verificar que la diferencia entre pares consecutivos sea siempre la misma."
+        ]
+      },
       {
         level: "intermedio",
         title: "Término general de una AP",
@@ -20767,20 +20767,7 @@ Primero: 4 términos aritméticos entre 3 y 18.
     slug: "sucesiones-geometricas",
     illustrationSummary: "Gráfica de una progresión geométrica con razón y suma infinita.",
     tip: "En una GP, multiplica el primer término por q^(n−1) para el término n; para la suma infinita verifica que |q| < 1 antes de usar S = a₁/(1−q).",
-    theory: [
-      {
-        level: "basico",
-        title: "Definición de sucesión geométrica",
-        lines: [
-          "Una sucesión geométrica es aquella en la que el cociente entre términos consecutivos es constante.",
-          "Ese cociente constante se llama razón (q) y se calcula como q = aₙ₊₁ / aₙ.",
-          "Ejemplo: 2, 6, 18, 54, … tiene razón q = 3 porque 6/2 = 18/6 = 54/18 = 3.",
-          "La sucesión es creciente si q > 1 (con a₁ > 0), decreciente si 0 < q < 1, y alterna si q < 0.",
-          "Si q = 1 la sucesión es constante: todos los términos valen a₁.",
-          "Para verificar que una sucesión es geométrica, basta comprobar que el cociente entre pares consecutivos sea siempre igual."
-        ]
-      ,
-  studyGuide: `## Sucesiones Geométricas
+    studyGuide: `## Sucesiones Geométricas
 
 ### Definición
 
@@ -20827,7 +20814,20 @@ Si log(aₙ) es aritmética, entonces aₙ es geométrica.
 
 Una pelota cae desde 10 m. En cada rebote alcanza ⅔ de la altura anterior. ¿Distancia total?
 
-Caída: 10. Rebotes: 2·(10·⅔ + 10·(⅔)² + ...) = 2·10·⅔/(1−⅔) = 40. Total = 10+40 = 50 m.`},
+Caída: 10. Rebotes: 2·(10·⅔ + 10·(⅔)² + ...) = 2·10·⅔/(1−⅔) = 40. Total = 10+40 = 50 m.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Definición de sucesión geométrica",
+        lines: [
+          "Una sucesión geométrica es aquella en la que el cociente entre términos consecutivos es constante.",
+          "Ese cociente constante se llama razón (q) y se calcula como q = aₙ₊₁ / aₙ.",
+          "Ejemplo: 2, 6, 18, 54, … tiene razón q = 3 porque 6/2 = 18/6 = 54/18 = 3.",
+          "La sucesión es creciente si q > 1 (con a₁ > 0), decreciente si 0 < q < 1, y alterna si q < 0.",
+          "Si q = 1 la sucesión es constante: todos los términos valen a₁.",
+          "Para verificar que una sucesión es geométrica, basta comprobar que el cociente entre pares consecutivos sea siempre igual."
+        ]
+      },
       {
         level: "intermedio",
         title: "Término general de una GP",
@@ -20929,20 +20929,7 @@ Caída: 10. Rebotes: 2·(10·⅔ + 10·(⅔)² + ...) = 2·10·⅔/(1−⅔) = 4
     slug: "sucesiones-recursivas",
     illustrationSummary: "Definición recursiva de Fibonacci con los primeros términos.",
     tip: "En definiciones recursivas, identifica siempre los casos base (primeros términos dados) antes de calcular cualquier término posterior.",
-    theory: [
-      {
-        level: "basico",
-        title: "¿Qué es una definición recursiva?",
-        lines: [
-          "Una sucesión recursiva se define mediante una fórmula que expresa cada término en función de los anteriores.",
-          "Se necesita siempre al menos un caso base para empezar a generar la sucesión.",
-          "Ejemplo: a₁ = 2, aₙ = aₙ₋₁ + 3 genera: 2, 5, 8, 11, 14, …",
-          "La recursividad es como una cadena: cada eslabón depende del anterior.",
-          "No confundir recursiva con explícita: la recursiva necesita calcular paso a paso.",
-          "En los exámenes, lee con cuidado la fórmula recursiva y los casos base; un error al inicio afecta todos los términos."
-        ]
-      ,
-  studyGuide: `## Sucesiones Recursivas
+    studyGuide: `## Sucesiones Recursivas
 
 ### Definición
 
@@ -20979,7 +20966,20 @@ bₙ = aₙ+3: bₙ = 2bₙ₋₁, b₁ = 8.
 
 bₙ = 8·2^(n−1) = 2^(n+2).
 
-**aₙ = 2^(n+2) − 3.** Verificar: a₁=8−3=5, a₂=16−3=13=2·5+3. ✓`},
+**aₙ = 2^(n+2) − 3.** Verificar: a₁=8−3=5, a₂=16−3=13=2·5+3. ✓`,
+    theory: [
+      {
+        level: "basico",
+        title: "¿Qué es una definición recursiva?",
+        lines: [
+          "Una sucesión recursiva se define mediante una fórmula que expresa cada término en función de los anteriores.",
+          "Se necesita siempre al menos un caso base para empezar a generar la sucesión.",
+          "Ejemplo: a₁ = 2, aₙ = aₙ₋₁ + 3 genera: 2, 5, 8, 11, 14, …",
+          "La recursividad es como una cadena: cada eslabón depende del anterior.",
+          "No confundir recursiva con explícita: la recursiva necesita calcular paso a paso.",
+          "En los exámenes, lee con cuidado la fórmula recursiva y los casos base; un error al inicio afecta todos los términos."
+        ]
+      },
       {
         level: "intermedio",
         title: "La sucesión de Fibonacci",
@@ -21088,20 +21088,7 @@ bₙ = 8·2^(n−1) = 2^(n+2).
     slug: "sucesiones-recurrentes",
     illustrationSummary: "Relación de recurrencia con solución paso a paso.",
     tip: "Para relaciones de recurrencia, sustituye valores conocidos uno por uno; si la relación es lineal, busca el patrón o usa la ecuación característica.",
-    theory: [
-      {
-        level: "basico",
-        title: "Relaciones de recurrencia",
-        lines: [
-          "Una relación de recurrencia define un término de la sucesión en función de uno o varios anteriores.",
-          "Es similar a la definición recursiva pero se enfoca en la ecuación que relaciona los términos.",
-          "Ejemplo: aₙ₊₁ = 2aₙ + 1 con a₁ = 1 genera: 1, 3, 7, 15, 31, …",
-          "Cada recurrencia necesita al menos un término conocido (condición inicial) para resolverse.",
-          "La recurrencia puede ser lineal o no lineal, homogénea o no homogénea.",
-          "En exámenes, lee bien la recurrencia: ¿depende de un término, dos o más? Eso cambia el método."
-        ]
-      ,
-  studyGuide: `## Sucesiones Recurrentes
+    studyGuide: `## Sucesiones Recurrentes
 
 ### Definición
 
@@ -21141,7 +21128,20 @@ De la primera: A=(1−3B)/2. Sustituyendo: 2(1−3B)+9B=4 → 3B=2 → B=2/3, A=
 
 aₙ = aₙ₋₁ + aₙ₋₂. Ecuación: x²−x−1=0. Raíces: (1±√5)/2.
 
-A=1/√5, B=−1/√5. **aₙ = (φⁿ − ψⁿ)/√5** donde φ=(1+√5)/2, ψ=(1−√5)/2.`},
+A=1/√5, B=−1/√5. **aₙ = (φⁿ − ψⁿ)/√5** donde φ=(1+√5)/2, ψ=(1−√5)/2.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Relaciones de recurrencia",
+        lines: [
+          "Una relación de recurrencia define un término de la sucesión en función de uno o varios anteriores.",
+          "Es similar a la definición recursiva pero se enfoca en la ecuación que relaciona los términos.",
+          "Ejemplo: aₙ₊₁ = 2aₙ + 1 con a₁ = 1 genera: 1, 3, 7, 15, 31, …",
+          "Cada recurrencia necesita al menos un término conocido (condición inicial) para resolverse.",
+          "La recurrencia puede ser lineal o no lineal, homogénea o no homogénea.",
+          "En exámenes, lee bien la recurrencia: ¿depende de un término, dos o más? Eso cambia el método."
+        ]
+      },
       {
         level: "intermedio",
         title: "Calcular términos sucesivos",
@@ -21244,20 +21244,7 @@ A=1/√5, B=−1/√5. **aₙ = (φⁿ − ψⁿ)/√5** donde φ=(1+√5)/2, ψ
     slug: "patrones-numericos",
     illustrationSummary: "Secuencia con patrón visible y fórmula general.",
     tip: "Calcula las diferencias entre términos consecutivos; si son constantes es AP, si los cocientes son constantes es GP, si las diferencias varían prueba cuadráticas.",
-    theory: [
-      {
-        level: "basico",
-        title: "¿Qué son los patrones numéricos?",
-        lines: [
-          "Un patrón numérico es una regla que conecta los términos de una sucesión de forma sistemática.",
-          "Reconocer patrones es clave en razonamiento matemático y aparece mucho en exámenes de admisión.",
-          "Los patrones pueden ser aritméticos (suma constante), geométricos (multiplicación constante) u otros.",
-          "Ejemplo: 1, 4, 9, 16, 25, … sigue el patrón de cuadrados perfectos: aₙ = n².",
-          "Para descubrir un patrón, escribe los términos y busca relaciones entre su posición y su valor.",
-          "Empieza siempre calculando diferencias y cocientes entre términos consecutivos como primera estrategia."
-        ]
-      ,
-  studyGuide: `## Patrones Numéricos
+    studyGuide: `## Patrones Numéricos
 
 ### Identificación
 
@@ -21305,7 +21292,20 @@ Cada término = suma de los dos anteriores → **Fibonacci**.
 - **Diferencias sucesivas** para polinomios.
 - **Razones sucesivas** para exponenciales.
 - **Composición** de patrones (ej: n² + n).
-- **Teorema de difference engines:** si las k-ésimas diferencias son constantes, el patrón es un polinomio de grado k.`},
+- **Teorema de difference engines:** si las k-ésimas diferencias son constantes, el patrón es un polinomio de grado k.`,
+    theory: [
+      {
+        level: "basico",
+        title: "¿Qué son los patrones numéricos?",
+        lines: [
+          "Un patrón numérico es una regla que conecta los términos de una sucesión de forma sistemática.",
+          "Reconocer patrones es clave en razonamiento matemático y aparece mucho en exámenes de admisión.",
+          "Los patrones pueden ser aritméticos (suma constante), geométricos (multiplicación constante) u otros.",
+          "Ejemplo: 1, 4, 9, 16, 25, … sigue el patrón de cuadrados perfectos: aₙ = n².",
+          "Para descubrir un patrón, escribe los términos y busca relaciones entre su posición y su valor.",
+          "Empieza siempre calculando diferencias y cocientes entre términos consecutivos como primera estrategia."
+        ]
+      },
       {
         level: "intermedio",
         title: "Cómo extraer la fórmula general",
@@ -21387,20 +21387,7 @@ Cada término = suma de los dos anteriores → **Fibonacci**.
     slug: "conjeturas-induccion",
     illustrationSummary: "Verificación de casos y formulación de hipótesis.",
     tip: "Para conjeturas, verifica al menos 3 casos; para demostrar por inducción, necesitas caso base + paso inductivo (asumir para k, probar para k+1).",
-    theory: [
-      {
-        level: "basico",
-        title: "Verificar con casos específicos",
-        lines: [
-          "Una conjetura es una afirmación que se propone basándose en la observación de patrones.",
-          "Para formular una conjetura, verifica la propiedad con varios valores de n: n = 1, 2, 3, 4, …",
-          "Si la propiedad se cumple para los primeros casos, tenemos evidencia (pero no prueba) de que es cierta.",
-          "Ejemplo: Observamos que 1+3=4=2², 1+3+5=9=3², 1+3+5+7=16=4². Conjetura: la suma de n impares consecutivos es n².",
-          "Nunca conjetures solo con un caso; usa al menos tres para tener confianza en el patrón.",
-          "Una conjetura puede ser falsa aunque se cumpla para muchos casos (contraejemplos tardíos)."
-        ]
-      ,
-  studyGuide: `## Conjeturas e Inducción
+    studyGuide: `## Conjeturas e Inducción
 
 ### Proceso Inductivo
 
@@ -21443,7 +21430,20 @@ Demostrar: 2ⁿ > n para todo n ≥ 1.
 
 **Base:** 2¹ = 2 > 1. ✓
 
-**Paso:** Asumir 2ᵏ > k. Entonces 2^(k+1) = 2·2ᵏ > 2k ≥ k+1 (para k ≥ 1). ✓`},
+**Paso:** Asumir 2ᵏ > k. Entonces 2^(k+1) = 2·2ᵏ > 2k ≥ k+1 (para k ≥ 1). ✓`,
+    theory: [
+      {
+        level: "basico",
+        title: "Verificar con casos específicos",
+        lines: [
+          "Una conjetura es una afirmación que se propone basándose en la observación de patrones.",
+          "Para formular una conjetura, verifica la propiedad con varios valores de n: n = 1, 2, 3, 4, …",
+          "Si la propiedad se cumple para los primeros casos, tenemos evidencia (pero no prueba) de que es cierta.",
+          "Ejemplo: Observamos que 1+3=4=2², 1+3+5=9=3², 1+3+5+7=16=4². Conjetura: la suma de n impares consecutivos es n².",
+          "Nunca conjetures solo con un caso; usa al menos tres para tener confianza en el patrón.",
+          "Una conjetura puede ser falsa aunque se cumpla para muchos casos (contraejemplos tardíos)."
+        ]
+      },
       {
         level: "intermedio",
         title: "Formular y expresar hipótesis",
@@ -21522,20 +21522,7 @@ Demostrar: 2ⁿ > n para todo n ≥ 1.
     slug: "secuencias-dos-variables",
     illustrationSummary: "Dos sucesiones acopladas con sus relaciones.",
     tip: "Cuando cada término depende de dos anteriores, identifica si son independientes o acopladas; calcula término a término sin intentar fórmulas cerradas.",
-    theory: [
-      {
-        level: "basico",
-        title: "Sucesiones con dos variables",
-        lines: [
-          "Una sucesión de dos variables involucra dos sucesiones que se definen mutuamente o de forma simultánea.",
-          "Cada término puede depender de los dos términos anteriores de una misma sucesión o de dos sucesiones distintas.",
-          "Ejemplo: aₙ₊₁ = bₙ + 1 y bₙ₊₁ = aₙ − 1, con a₁ = 5, b₁ = 3.",
-          "Se calculan los términos en orden: primero a₂, luego b₂, después a₃, y así sucesivamente.",
-          "Las sucesiones de dos variables aparecen en problemas de movimiento, poblaciones y sistemas dinámicos.",
-          "La clave es organizar los cálculos en una tabla para no mezclar los valores."
-        ]
-      ,
-  studyGuide: `## Secuencias de Dos Variables
+    studyGuide: `## Secuencias de Dos Variables
 
 ### Definición
 
@@ -21578,7 +21565,20 @@ Si parten con distancia d: 2t = 3t − d → t = d.
 
 ### Aplicación
 
-Sistemas de ecuaciones recursivas aparecen en modelos poblacionales, finanzas y dinámica de sistemas.`},
+Sistemas de ecuaciones recursivas aparecen en modelos poblacionales, finanzas y dinámica de sistemas.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Sucesiones con dos variables",
+        lines: [
+          "Una sucesión de dos variables involucra dos sucesiones que se definen mutuamente o de forma simultánea.",
+          "Cada término puede depender de los dos términos anteriores de una misma sucesión o de dos sucesiones distintas.",
+          "Ejemplo: aₙ₊₁ = bₙ + 1 y bₙ₊₁ = aₙ − 1, con a₁ = 5, b₁ = 3.",
+          "Se calculan los términos en orden: primero a₂, luego b₂, después a₃, y así sucesivamente.",
+          "Las sucesiones de dos variables aparecen en problemas de movimiento, poblaciones y sistemas dinámicos.",
+          "La clave es organizar los cálculos en una tabla para no mezclar los valores."
+        ]
+      },
       {
         level: "intermedio",
         title: "Ejemplo resuelto paso a paso",
@@ -21668,20 +21668,7 @@ Sistemas de ecuaciones recursivas aparecen en modelos poblacionales, finanzas y 
     slug: "progresiones-avanzadas",
     illustrationSummary: "Diferencias parciales y progresiones polinómicas.",
     tip: "Si las diferencias no son constantes, calcula diferencias de segundo o tercer orden; las diferencias parciales revelan el grado del polinomio que genera la sucesión.",
-    theory: [
-      {
-        level: "basico",
-        title: "Mezclas de progresiones",
-        lines: [
-          "Una sucesión puede combinar comportamiento aritmético y geométrico en sus términos.",
-          "Ejemplo: 1, 3, 7, 15, 31, … parece crecer rápido (geométrico) pero las diferencias son 2, 4, 8, 16.",
-          "Identificar si hay mezcla ayuda a encontrar la fórmula correcta: aₙ = 2ⁿ − 1 en este caso.",
-          "Otra mezcla común: aₙ = n · 2ⁿ (término lineal multiplicado por exponencial).",
-          "La suma de una AP y una GP también genera una sucesión mixta con comportamiento especial.",
-          "En exámenes, si no encaja en AP ni GP pura, sospecha de una mezcla o combinación."
-        ]
-      ,
-  studyGuide: `## Progresiones Avanzadas
+    studyGuide: `## Progresiones Avanzadas
 
 ### Progresión Armónica
 
@@ -21727,7 +21714,20 @@ b=2, c=−1. **aₙ = n²+2n−1.**
 
 Terminios de la forma aₙ = (a+nd)·rⁿ.
 
-Ejemplo: 1·2, 2·4, 3·8, 4·16... = n·2ⁿ.`},
+Ejemplo: 1·2, 2·4, 3·8, 4·16... = n·2ⁿ.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Mezclas de progresiones",
+        lines: [
+          "Una sucesión puede combinar comportamiento aritmético y geométrico en sus términos.",
+          "Ejemplo: 1, 3, 7, 15, 31, … parece crecer rápido (geométrico) pero las diferencias son 2, 4, 8, 16.",
+          "Identificar si hay mezcla ayuda a encontrar la fórmula correcta: aₙ = 2ⁿ − 1 en este caso.",
+          "Otra mezcla común: aₙ = n · 2ⁿ (término lineal multiplicado por exponencial).",
+          "La suma de una AP y una GP también genera una sucesión mixta con comportamiento especial.",
+          "En exámenes, si no encaja en AP ni GP pura, sospecha de una mezcla o combinación."
+        ]
+      },
       {
         level: "intermedio",
         title: "Método de diferencias parciales",
@@ -21824,20 +21824,7 @@ Ejemplo: 1·2, 2·4, 3·8, 4·16... = n·2ⁿ.`},
     slug: "permutaciones-simples",
     illustrationSummary: "Elementos ordenados con la fórmula P(n) = n! y ejemplos.",
     tip: "Memoriza P(n)=n! y verifica si hay restricciones: elementos fijos, prohibidos o junto. En exámenes, si un elemento NO puede ir en cierta posición, usa restas o el principio de inclusión-exclusión.",
-    theory: [
-      {
-        level: "basico",
-        title: "Conceptos fundamentales",
-        lines: [
-          "Una **permutación** es un ordenamiento de elementos donde el orden importa.",
-          "El número de permutaciones de n elementos distintos es **P(n) = n!** (n factorial).",
-          "**n! = n × (n-1) × (n-2) × ... × 2 × 1**, con 0! = 1 por definición.",
-          "Si solo elegimos k elementos de n: **P(n,k) = n! / (n-k)!**.",
-          "Ejemplo: P(5) = 5! = 120 formas de ordenar 5 libros en una estantería.",
-          "Ejemplo: P(6,3) = 6!/3! = 6 × 5 × 4 = 120 formas de elegir y ordenar 3 de 6."
-        ]
-      ,
-  studyGuide: `## Permutaciones Simples
+    studyGuide: `## Permutaciones Simples
 
 ### Definición
 
@@ -21881,7 +21868,20 @@ Total: 6!. A siempre primero: 5!. A nunca primero: 6!−5! = 720−120 = 600.
 
 ### n!/(n₁!·n₂!·...·nₖ!)
 
-**Ejemplo:** Letras de "MATEMÁTICA" (10 letras, M×2, A×3, T×2): 10!/(2!·3!·2!) = 151200.`},
+**Ejemplo:** Letras de "MATEMÁTICA" (10 letras, M×2, A×3, T×2): 10!/(2!·3!·2!) = 151200.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "Una **permutación** es un ordenamiento de elementos donde el orden importa.",
+          "El número de permutaciones de n elementos distintos es **P(n) = n!** (n factorial).",
+          "**n! = n × (n-1) × (n-2) × ... × 2 × 1**, con 0! = 1 por definición.",
+          "Si solo elegimos k elementos de n: **P(n,k) = n! / (n-k)!**.",
+          "Ejemplo: P(5) = 5! = 120 formas de ordenar 5 libros en una estantería.",
+          "Ejemplo: P(6,3) = 6!/3! = 6 × 5 × 4 = 120 formas de elegir y ordenar 3 de 6."
+        ]
+      },
       {
         level: "intermedio",
         title: "Restricciones y técnicas",
@@ -21981,20 +21981,7 @@ Total: 6!. A siempre primero: 5!. A nunca primero: 6!−5! = 720−120 = 600.
     slug: "combinaciones-simples",
     illustrationSummary: "Selección de elementos sin orden con C(n,k) y triángulo de Pascal.",
     tip: "Usa C(n,k) cuando NO importa el orden: 'elegir un grupo', 'formar un comité', 'selección'. Si dice 'elegir y ordenar', es permutación. Si pregunta '¿cuántos subgrupos?', es combinación.",
-    theory: [
-      {
-        level: "basico",
-        title: "Conceptos fundamentales",
-        lines: [
-          "Una **combinación** es un subconjunto donde el orden NO importa.",
-          "C(n,k) = n! / (k! × (n-k)!) = número de formas de elegir k elementos de n.",
-          "También se escribe **C(n,k) = (n choose k)** o 'n sobre k'.",
-          "Propiedad fundamental: **C(n,k) = C(n, n-k)** (elegir k es lo mismo que rechazar n-k).",
-          "Ejemplo: C(6,2) = 6!/(2!×4!) = (6×5)/(2×1) = 15 subgrupos de 2 personas entre 6.",
-          "C(n,0) = 1 y C(n,n) = 1: solo hay una forma de elegir 0 o todos los elementos."
-        ]
-      ,
-  studyGuide: `## Combinaciones Simples
+    studyGuide: `## Combinaciones Simples
 
 ### Definición
 
@@ -22035,7 +22022,20 @@ Al menos 1 mujer: 120 − 20 = 100.
 
 Desde (0,0) hasta (m,n) solo moviéndose derecha o abajo: C(m+n, m) o C(m+n, n).
 
-De (0,0) a (3,2): C(5,3) = 10 caminos.`},
+De (0,0) a (3,2): C(5,3) = 10 caminos.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "Una **combinación** es un subconjunto donde el orden NO importa.",
+          "C(n,k) = n! / (k! × (n-k)!) = número de formas de elegir k elementos de n.",
+          "También se escribe **C(n,k) = (n choose k)** o 'n sobre k'.",
+          "Propiedad fundamental: **C(n,k) = C(n, n-k)** (elegir k es lo mismo que rechazar n-k).",
+          "Ejemplo: C(6,2) = 6!/(2!×4!) = (6×5)/(2×1) = 15 subgrupos de 2 personas entre 6.",
+          "C(n,0) = 1 y C(n,n) = 1: solo hay una forma de elegir 0 o todos los elementos."
+        ]
+      },
       {
         level: "intermedio",
         title: "Identidades y propiedades",
@@ -22166,20 +22166,7 @@ De (0,0) a (3,2): C(5,3) = 10 caminos.`},
     slug: "permutaciones-repeticion",
     illustrationSummary: "Distribución de elementos con repetición: nᵏ.",
     tip: "Cuando distributes n objetos en k cajas (con repetición permitida), la respuesta es nᵏ. Ej: 3 colores para pintar 4 casas = 3⁴ = 81 formas. No confundir con combinaciones con repetición.",
-    theory: [
-      {
-        level: "basico",
-        title: "Conceptos fundamentales",
-        lines: [
-          "Permutaciones con repetición: **P = nᵏ** cuando hay k posiciones y n opciones para cada una.",
-          "Cada posición puede repetir cualquier elemento, de forma independiente.",
-          "Ejemplo: 2 colores para pintar 3 casas = 2³ = 8 formas (cada casa elige su color).",
-          "Si hay restricciones de repetición por posición, se multiplican las opciones disponibles.",
-          "Para n slots y restricciones: Pos₁ × Pos₂ × ... × Posₙ = total de formas.",
-          "Ojo: si se dice 'sin repetir', entonces es P(n,k) normal, no con repetición."
-        ]
-      ,
-  studyGuide: `## Permutaciones con Repetición
+    studyGuide: `## Permutaciones con Repetición
 
 ### Elementos Repetidos
 
@@ -22225,7 +22212,20 @@ n personas en mesa circular: (n−1)!.
 
 6 personas: 5! = 120 disposiciones.
 
-Si hay personas idénticas: (n−1)!/(n₁!·n₂!·...).`},
+Si hay personas idénticas: (n−1)!/(n₁!·n₂!·...).`,
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "Permutaciones con repetición: **P = nᵏ** cuando hay k posiciones y n opciones para cada una.",
+          "Cada posición puede repetir cualquier elemento, de forma independiente.",
+          "Ejemplo: 2 colores para pintar 3 casas = 2³ = 8 formas (cada casa elige su color).",
+          "Si hay restricciones de repetición por posición, se multiplican las opciones disponibles.",
+          "Para n slots y restricciones: Pos₁ × Pos₂ × ... × Posₙ = total de formas.",
+          "Ojo: si se dice 'sin repetir', entonces es P(n,k) normal, no con repetición."
+        ]
+      },
       {
         level: "intermedio",
         title: "Técnicas y variaciones",
@@ -22330,20 +22330,7 @@ Si hay personas idénticas: (n−1)!/(n₁!·n₂!·...).`},
     slug: "combinaciones-repeticion",
     illustrationSummary: "Método de barras y barras para combinaciones con repetición.",
     tip: "La fórmula clave es C(n+k-1, k) = combinatoria con repetición. Úsala cuando: 'elegir k objetos de n tipos con repetición', 'repartir k objetos idénticos en n cajas', 'barras y barras'.",
-    theory: [
-      {
-        level: "basico",
-        title: "Conceptos fundamentales",
-        lines: [
-          "**Combinación con repetición**: elegir k elementos de n tipos, donde la repetición SÍ está permitida.",
-          "Fórmula: **C(n+k-1, k) = (n+k-1)! / (k! × (n-1)!)**.",
-          "También se llama 'combinación con reposición' o 'combinación con repetición'.",
-          "Ejemplo: elegir 3 frutas de 4 tipos (con repetición): C(4+3-1, 3) = C(6,3) = 20.",
-          "Si NO se permite repetición, es simplemente C(n,k) sin el +1.",
-          "Los objetos elegidos NO tienen orden: {manzana, manzana, pera} = {pera, manzana, manzana}."
-        ]
-      ,
-  studyGuide: `## Combinaciones con Repetición
+    studyGuide: `## Combinaciones con Repetición
 
 ### Fórmula
 
@@ -22389,7 +22376,20 @@ Enumerar: y puede ser 0,2,4,6 (con x ≥ 0).
 
 y=0: x=10. y=2: x=7. y=4: x=4. y=6: x=1. **4 soluciones.**
 
-Cuando los coeficientes son > 1, no se aplica la fórmula directamente; se enumera.`},
+Cuando los coeficientes son > 1, no se aplica la fórmula directamente; se enumera.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "**Combinación con repetición**: elegir k elementos de n tipos, donde la repetición SÍ está permitida.",
+          "Fórmula: **C(n+k-1, k) = (n+k-1)! / (k! × (n-1)!)**.",
+          "También se llama 'combinación con reposición' o 'combinación con repetición'.",
+          "Ejemplo: elegir 3 frutas de 4 tipos (con repetición): C(4+3-1, 3) = C(6,3) = 20.",
+          "Si NO se permite repetición, es simplemente C(n,k) sin el +1.",
+          "Los objetos elegidos NO tienen orden: {manzana, manzana, pera} = {pera, manzana, manzana}."
+        ]
+      },
       {
         level: "intermedio",
         title: "Método de barras y barras",
@@ -22513,20 +22513,7 @@ Cuando los coeficientes son > 1, no se aplica la fórmula directamente; se enume
     slug: "inclusion-exclusion",
     illustrationSummary: "Diagrama de Venn de 3 conjuntos con la fórmula de inclusión-exclusión.",
     tip: "Para dos conjuntos: |A∪B| = |A|+|B|-|A∩B|. Para tres: suma todos, resta intersecciones de 2, suma intersección de 3. Siempre lee bien: ¿te piden 'al menos uno', 'solo uno', o 'todos'?",
-    theory: [
-      {
-        level: "basico",
-        title: "Principio fundamental",
-        lines: [
-          "El **principio de inclusión-exclusión** evita contar doble los elementos compartidos.",
-          "Para **dos conjuntos**: |A∪B| = |A| + |B| - |A∩B|.",
-          "Para **tres conjuntos**: |A∪B∪C| = |A|+|B|+|C| - |A∩B|-|A∩C|-|B∩C| + |A∩B∩C|.",
-          "El patrón: suma individuales, resta pares, suma triples, resta cuádruples...",
-          "Ejemplo: de 30 alumnos, 18 saben inglés y 15 saben francés. Si 8 saben ambos: 18+15-8 = 25 saben al menos uno.",
-          "La fórmula general para n conjuntos alterna sumas y restas de intersecciones."
-        ]
-      ,
-  studyGuide: `## Principio de Inclusión-Exclusión
+    studyGuide: `## Principio de Inclusión-Exclusión
 
 ### Para Dos Conjuntos
 
@@ -22562,7 +22549,20 @@ A₂=50, A₃=33, A₅=20. A₂∩A₃=16, A₂∩A₅=10, A₃∩A₅=6. A₂�
 
 |E∪F∪A| = 70+60+45−30−25−20+10 = 110.
 
-Pero |U| = 100, así que hay inconsistencia. Verificar datos.`},
+Pero |U| = 100, así que hay inconsistencia. Verificar datos.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Principio fundamental",
+        lines: [
+          "El **principio de inclusión-exclusión** evita contar doble los elementos compartidos.",
+          "Para **dos conjuntos**: |A∪B| = |A| + |B| - |A∩B|.",
+          "Para **tres conjuntos**: |A∪B∪C| = |A|+|B|+|C| - |A∩B|-|A∩C|-|B∩C| + |A∩B∩C|.",
+          "El patrón: suma individuales, resta pares, suma triples, resta cuádruples...",
+          "Ejemplo: de 30 alumnos, 18 saben inglés y 15 saben francés. Si 8 saben ambos: 18+15-8 = 25 saben al menos uno.",
+          "La fórmula general para n conjuntos alterna sumas y restas de intersecciones."
+        ]
+      },
       {
         level: "intermedio",
         title: "Técnicas de aplicación",
@@ -22808,20 +22808,7 @@ Pero |U| = 100, así que hay inconsistencia. Verificar datos.`},
     slug: "problemas-colocacion",
     illustrationSummary: "Objetos en posiciones con restricciones y sus soluciones.",
     tip: "Cuando colocas objetos en posiciones con restricciones, usa un 'casillero mental': llena primero las posiciones más restringidas. Si un objeto no puede ir en cierta posición, multiplica opciones disponibles menos una.",
-    theory: [
-      {
-        level: "basico",
-        title: "Problemas básicos de colocación",
-        lines: [
-          "Colocar n objetos en n posiciones = n! permutaciones.",
-          "Si un objeto tiene una posición prohibida: (n-1)! (lo pones en una de las n-1 permitidas y permutas el resto).",
-          "Si cada objeto tiene una posición prohibida diferente: inclusion-exclusion con n conjuntos.",
-          "Si hay posiciones fijas: solo permutas las posiciones libres.",
-          "Ejemplo: 5 personas en 5 sillas, pero Ana no puede sentarse en la silla 1: 4×4! = 96... Eso no es correcto. Es (5-1)! = 4! = 24 si solo Ana tiene restricción.",
-          "Para restricciones múltiples: identifica todas, clasifica por tipo, y aplica la fórmula adecuada."
-        ]
-      ,
-  studyGuide: `## Problemas de Colocación
+    studyGuide: `## Problemas de Colocación
 
 ### Colocar n Objetos Distintos en n Lugares
 
@@ -22869,7 +22856,20 @@ r objetos en n cajas, cada caja al menos 1: **C(r−1, n−1)**
 
 "En cuántos ways se pueden sentar 6 personas en fila, si A y B no pueden estar juntos?"
 
-Total: 6! = 720. Juntos: 5!·2! = 240. No juntos: 720−240 = **480**.`},
+Total: 6! = 720. Juntos: 5!·2! = 240. No juntos: 720−240 = **480**.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Problemas básicos de colocación",
+        lines: [
+          "Colocar n objetos en n posiciones = n! permutaciones.",
+          "Si un objeto tiene una posición prohibida: (n-1)! (lo pones en una de las n-1 permitidas y permutas el resto).",
+          "Si cada objeto tiene una posición prohibida diferente: inclusion-exclusion con n conjuntos.",
+          "Si hay posiciones fijas: solo permutas las posiciones libres.",
+          "Ejemplo: 5 personas en 5 sillas, pero Ana no puede sentarse en la silla 1: 4×4! = 96... Eso no es correcto. Es (5-1)! = 4! = 24 si solo Ana tiene restricción.",
+          "Para restricciones múltiples: identifica todas, clasifica por tipo, y aplica la fórmula adecuada."
+        ]
+      },
       {
         level: "intermedio",
         title: "Restricciones comunes",
@@ -22976,20 +22976,7 @@ Total: 6! = 720. Juntos: 5!·2! = 240. No juntos: 720−240 = **480**.`},
     slug: "polinomios-generadores",
     illustrationSummary: "Función generadora con coeficientes que representan una secuencia.",
     tip: "La función generadora codifica una secuencia en los coeficientes de un polinomio. Para elegir k elementos de n tipos con repetición: el coeficiente de xᵏ en (1+x+x²+...)^n = C(n+k-1, k).",
-    theory: [
-      {
-        level: "basico",
-        title: "Conceptos fundamentales",
-        lines: [
-          "Una **función generadora** (o polinomio generador) representa una secuencia como coeficientes de un polinomio.",
-          "Si la secuencia es a₀, a₁, a₂, ..., la función generadora es: G(x) = a₀ + a₁x + a₂x² + ...",
-          "Ejemplo: la secuencia 1, 2, 3, 4, 5 genera: G(x) = 1 + 2x + 3x² + 4x³ + 5x⁴.",
-          "Para elegir k objetos de n tipos con repetición: G(x) = (1+x+x²+...+xᵏ)^n.",
-          "El coeficiente de xᵏ en (1+x+x²+...) es 1; en (1+x+x²+...)² es k+1, etc.",
-          "Las funciones generadoras convierten problemas de conteo en operaciones algebraicas."
-        ]
-      ,
-  studyGuide: `## Polinomios Generadores
+    studyGuide: `## Polinomios Generadores
 
 ### Definición
 
@@ -23032,7 +23019,20 @@ G(x) = 1/(1−x)² (derivada de 1/(1−x)).
 Los polinomios generadores permiten:
 1. Encontrar fórmulas cerradas para secuencias.
 2. Resolver problemas de conteo recursivo.
-3. Operar algebraicamente con secuencias.`},
+3. Operar algebraicamente con secuencias.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Conceptos fundamentales",
+        lines: [
+          "Una **función generadora** (o polinomio generador) representa una secuencia como coeficientes de un polinomio.",
+          "Si la secuencia es a₀, a₁, a₂, ..., la función generadora es: G(x) = a₀ + a₁x + a₂x² + ...",
+          "Ejemplo: la secuencia 1, 2, 3, 4, 5 genera: G(x) = 1 + 2x + 3x² + 4x³ + 5x⁴.",
+          "Para elegir k objetos de n tipos con repetición: G(x) = (1+x+x²+...+xᵏ)^n.",
+          "El coeficiente de xᵏ en (1+x+x²+...) es 1; en (1+x+x²+...)² es k+1, etc.",
+          "Las funciones generadoras convierten problemas de conteo en operaciones algebraicas."
+        ]
+      },
       {
         level: "intermedio",
         title: "Propiedades y operaciones",
@@ -23146,20 +23146,7 @@ Los polinomios generadores permiten:
     slug: "media-mediana-moda",
     illustrationSummary: "Gráfica de barras con media, mediana y moda marcadas.",
     tip: "La media se afecta por valores extremos; la mediana y la moda son más robustas ante datos atípicos.",
-    theory: [
-      {
-        level: "basico",
-        title: "Media aritmética",
-        lines: [
-          "La media aritmética es la suma de todos los valores dividida entre la cantidad total de datos.",
-          "Fórmula: media = (x₁ + x₂ + ... + xₙ) / n",
-          "Es la medida de tendencia central más utilizada en el examen.",
-          "Si sumamos 10 a cada dato, la media también sube 10 unidades.",
-          "Ejemplo: 4, 6, 8, 10, 12 → media = (4+6+8+10+12)/5 = 40/5 = 8",
-          "La media puede no ser representativa si hay valores muy grandes o muy pequeños."
-        ]
-      ,
-  studyGuide: `## Media, Mediana y Moda
+    studyGuide: `## Media, Mediana y Moda
 
 ### Media Aritmética
 
@@ -23204,7 +23191,20 @@ En distribución asimétrica derecha: moda < mediana < media.
 
 ### Rango = máximo − mínimo
 
-**Ejemplo:** 3, 5, 7, 9, 20 → rango = 20−3 = 17.`},
+**Ejemplo:** 3, 5, 7, 9, 20 → rango = 20−3 = 17.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Media aritmética",
+        lines: [
+          "La media aritmética es la suma de todos los valores dividida entre la cantidad total de datos.",
+          "Fórmula: media = (x₁ + x₂ + ... + xₙ) / n",
+          "Es la medida de tendencia central más utilizada en el examen.",
+          "Si sumamos 10 a cada dato, la media también sube 10 unidades.",
+          "Ejemplo: 4, 6, 8, 10, 12 → media = (4+6+8+10+12)/5 = 40/5 = 8",
+          "La media puede no ser representativa si hay valores muy grandes o muy pequeños."
+        ]
+      },
       {
         level: "intermedio",
         title: "Mediana y moda",
@@ -23315,20 +23315,7 @@ En distribución asimétrica derecha: moda < mediana < media.
     slug: "varianza-desviacion",
     illustrationSummary: "Distribución con varianza baja y alta, mostrando la dispersión.",
     tip: "La desviación estándar mide qué tan dispersos están los datos respecto a la media. Un valor alto indica mucha variabilidad.",
-    theory: [
-      {
-        level: "basico",
-        title: "Qué es la varianza",
-        lines: [
-          "La varianza mide qué tan alejados están los datos de la media.",
-          "Se calcula restando la media a cada dato, elevando al cuadrado y promediando.",
-          "Fórmula: varianza = Σ(xᵢ − media)² / n",
-          "Siempre es un valor positivo o cero.",
-          "Si todos los datos son iguales, la varianza es cero.",
-          "Unidad de la varianza: la unidad original elevada al cuadrado."
-        ]
-      ,
-  studyGuide: `## Varianza y Desviación Estándar
+    studyGuide: `## Varianza y Desviación Estándar
 
 ### Varianza (σ²)
 
@@ -23375,7 +23362,20 @@ Suma = n · x̄ = 20 · 50 = 1000.
 
 ### σ² = (Σxᵢ²/n) − x̄²
 
-Útil cuando se conocen las sumas.`},
+Útil cuando se conocen las sumas.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Qué es la varianza",
+        lines: [
+          "La varianza mide qué tan alejados están los datos de la media.",
+          "Se calcula restando la media a cada dato, elevando al cuadrado y promediando.",
+          "Fórmula: varianza = Σ(xᵢ − media)² / n",
+          "Siempre es un valor positivo o cero.",
+          "Si todos los datos son iguales, la varianza es cero.",
+          "Unidad de la varianza: la unidad original elevada al cuadrado."
+        ]
+      },
       {
         level: "intermedio",
         title: "Desviación estándar",
@@ -23513,20 +23513,7 @@ Suma = n · x̄ = 20 · 50 = 1000.
     slug: "percentiles-cuartiles",
     illustrationSummary: "Diagrama de caja con Q1, Q2, Q3 y valores atípicos.",
     tip: "El diagrama de caja muestra la mediana, Q1, Q3 y los valores atípicos. Domina el cálculo de posiciones.",
-    theory: [
-      {
-        level: "basico",
-        title: "Qué son los percentiles",
-        lines: [
-          "Un percentil es el valor por debajo del cual se encuentra un porcentaje de los datos.",
-          "P50 es la mediana, el percentil 50.",
-          "P25 es el valor que deja el 25% de datos por debajo.",
-          "P75 deja el 75% de datos por debajo.",
-          "La posición del percentil k es: pos = (k/100) × n.",
-          "Si la posición no es entera, se redondea hacia arriba."
-        ]
-      ,
-  studyGuide: `## Percentiles y Cuartiles
+    studyGuide: `## Percentiles y Cuartiles
 
 ### Percentil
 
@@ -23573,7 +23560,20 @@ Mide la dispersión del 50% central. Es más robusto que la desviación estánda
 - Línea dentro de caja: mediana
 - Borde superior de caja: Q₃
 - Línea superior: máximo
-- **Valores atípicos:** fuera de Q₁−1.5·RIQ o Q₃+1.5·RIQ.`},
+- **Valores atípicos:** fuera de Q₁−1.5·RIQ o Q₃+1.5·RIQ.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Qué son los percentiles",
+        lines: [
+          "Un percentil es el valor por debajo del cual se encuentra un porcentaje de los datos.",
+          "P50 es la mediana, el percentil 50.",
+          "P25 es el valor que deja el 25% de datos por debajo.",
+          "P75 deja el 75% de datos por debajo.",
+          "La posición del percentil k es: pos = (k/100) × n.",
+          "Si la posición no es entera, se redondea hacia arriba."
+        ]
+      },
       {
         level: "intermedio",
         title: "Cuartiles y diagrama de caja",
@@ -23699,20 +23699,7 @@ Mide la dispersión del 50% central. Es más robusto que la desviación estánda
     slug: "razonamiento-verbal-avanzado",
     illustrationSummary: "Silogismo con premisas y conclusión lógica.",
     tip: "Para deducir el correcto, prueba cada opción y verifica si contradice la premisa. La respuesta siempre se sigue lógicamente.",
-    theory: [
-      {
-        level: "basico",
-        title: "Afirmaciones universales",
-        lines: [
-          "Todo A es B → equivale a: Si es A, entonces es B.",
-          "Ningún A es B → equivale a: Si es A, entonces no es B.",
-          "Algunos A son B → existe al menos un A que es B.",
-          "Algunos A no son B → existe al menos un A que no es B.",
-          "De 'todo A es B' NO se puede concluir que todo B es A.",
-          "La negación de 'todo A es B' es 'algunos A no son B'."
-        ]
-      ,
-  studyGuide: `## Razonamiento Verbal Avanzado
+    studyGuide: `## Razonamiento Verbal Avanzado
 
 ### Tipos de Preguntas
 
@@ -23750,7 +23737,20 @@ Premisa 2: Algunos que estudian mucho son becados.
 
 ¿Se puede concluir que "Algunos médicos son becados"?
 
-**No.** La Premisa 2 dice que algunos que estudian mucho son becados, pero no especifica que sean médicos.`},
+**No.** La Premisa 2 dice que algunos que estudian mucho son becados, pero no especifica que sean médicos.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Afirmaciones universales",
+        lines: [
+          "Todo A es B → equivale a: Si es A, entonces es B.",
+          "Ningún A es B → equivale a: Si es A, entonces no es B.",
+          "Algunos A son B → existe al menos un A que es B.",
+          "Algunos A no son B → existe al menos un A que no es B.",
+          "De 'todo A es B' NO se puede concluir que todo B es A.",
+          "La negación de 'todo A es B' es 'algunos A no son B'."
+        ]
+      },
       {
         level: "intermedio",
         title: "Deducción verbal paso a paso",
@@ -23886,20 +23886,7 @@ Premisa 2: Algunos que estudian mucho son becados.
     slug: "razonamiento-abstracto",
     illustrationSummary: "Secuencia de figuras con patrón de incremento.",
     tip: "Busca el patrón: número de lados, rotación, simetría, color o posición. Compara siempre entre elementos consecutivos.",
-    theory: [
-      {
-        level: "basico",
-        title: "Tipos de patrones visuales",
-        lines: [
-          "Los patrones pueden ser: repetición, alternancia, progresión o simetría.",
-          "Repetición: un elemento se repite igual en cada paso.",
-          "Alternancia: dos o más elementos se intercalan (A, B, A, B...).",
-          "Progresión: el elemento cambia gradualmente (más lados, más oscuro, más grande).",
-          "Simetría: el patrón es igual a la izquierda y a la derecha.",
-          "Para encontrar el patrón, compara pares de figuras consecutivas."
-        ]
-      ,
-  studyGuide: `## Razonamiento Abstracto
+    studyGuide: `## Razonamiento Abstracto
 
 ### Tipos de Secuencias
 
@@ -23943,7 +23930,20 @@ En una cuadrícula 3×3, cada fila y columna tiene símbolos distintos. Se busca
 
 - Si hay muchas figuras iguales excepto una: buscar la que rompe el patrón.
 - Si hay rotaciones: verificar el ángulo (45°, 90°, 180°).
-- Si hay conteo: los números suelen ser sucesivos.`},
+- Si hay conteo: los números suelen ser sucesivos.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Tipos de patrones visuales",
+        lines: [
+          "Los patrones pueden ser: repetición, alternancia, progresión o simetría.",
+          "Repetición: un elemento se repite igual en cada paso.",
+          "Alternancia: dos o más elementos se intercalan (A, B, A, B...).",
+          "Progresión: el elemento cambia gradualmente (más lados, más oscuro, más grande).",
+          "Simetría: el patrón es igual a la izquierda y a la derecha.",
+          "Para encontrar el patrón, compara pares de figuras consecutivas."
+        ]
+      },
       {
         level: "intermedio",
         title: "Elementos cambiantes",
@@ -24073,20 +24073,7 @@ En una cuadrícula 3×3, cada fila y columna tiene símbolos distintos. Se busca
     slug: "razonamiento-espacial",
     illustrationSummary: "Rotación mental de un cubo y plegado de papel.",
     tip: "Imagina que sostienes el objeto. Para plegados, sigue cada cara. Para rotaciones, mantén una marca de referencia.",
-    theory: [
-      {
-        level: "basico",
-        title: "Rotaciones mentales",
-        lines: [
-          "Una rotación cambia la orientación de un objeto sin alterar su forma.",
-          "Al rotar,某些 caras quedan ocultas y otras se vuelven visibles.",
-          "Elige una marca o color en el objeto para rastrear su posición.",
-          "Una rotación de 90° cambia radicalmente qué caras se ven.",
-          "Una rotación de 180° invierte arriba/abajo y izquierda/derecha.",
-          "Practica con cubos: una cara visible puede quedar arriba, abajo o al costado."
-        ]
-      ,
-  studyGuide: `## Razonamiento Espacial
+    studyGuide: `## Razonamiento Espacial
 
 ### Plegado de Papel
 
@@ -24131,7 +24118,20 @@ Dada una vista plana, imaginar el objeto tridimensional.
 
 **Ejemplo:** Dado un cubo desplegado, identificar cuáles caras son opuestas.
 
-**Regla:** En un cubo desplegado en cruz, las caras opuestas están separadas por una cara intermedia.`},
+**Regla:** En un cubo desplegado en cruz, las caras opuestas están separadas por una cara intermedia.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Rotaciones mentales",
+        lines: [
+          "Una rotación cambia la orientación de un objeto sin alterar su forma.",
+          "Al rotar,某些 caras quedan ocultas y otras se vuelven visibles.",
+          "Elige una marca o color en el objeto para rastrear su posición.",
+          "Una rotación de 90° cambia radicalmente qué caras se ven.",
+          "Una rotación de 180° invierte arriba/abajo y izquierda/derecha.",
+          "Practica con cubos: una cara visible puede quedar arriba, abajo o al costado."
+        ]
+      },
       {
         level: "intermedio",
         title: "Plegado de papel",
@@ -24264,20 +24264,7 @@ Dada una vista plana, imaginar el objeto tridimensional.
     slug: "problemas-compuestos-rm",
     illustrationSummary: "Problema que combina lógica, combinatoria y aritmética.",
     tip: "Descompón el problema en partes: identifica qué conoces, qué buscas y qué operación necesitas para cada paso.",
-    theory: [
-      {
-        level: "basico",
-        title: "Estructura de un problema compuesto",
-        lines: [
-          "Un problema compuesto combina dos o más áreas: aritmética, lógica, conteo.",
-          "Lee el enunciado completo antes de intentar resolver.",
-          "Subraya los datos conocidos y escribe qué se pide.",
-          "Identifica las operaciones necesarias en orden.",
-          "Resuelve paso a paso: un error al inicio afecta todo lo demás.",
-          "Verifica que la respuesta tenga sentido en el contexto del problema."
-        ]
-      ,
-  studyGuide: `## Problemas Compuestos de Razonamiento Matemático
+    studyGuide: `## Problemas Compuestos de Razonamiento Matemático
 
 ### Estrategia General
 
@@ -24334,7 +24321,20 @@ Descuento total efectivo: 100−464/500 = 7.2%.
 - **Lee todo el problema** antes de empezar.
 - **Identifica** todas las áreas de matemáticas involucradas.
 - **Descompón** en subproblemas.
- **Verifica** cada paso y el resultado final.`},
+ **Verifica** cada paso y el resultado final.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Estructura de un problema compuesto",
+        lines: [
+          "Un problema compuesto combina dos o más áreas: aritmética, lógica, conteo.",
+          "Lee el enunciado completo antes de intentar resolver.",
+          "Subraya los datos conocidos y escribe qué se pide.",
+          "Identifica las operaciones necesarias en orden.",
+          "Resuelve paso a paso: un error al inicio afecta todo lo demás.",
+          "Verifica que la respuesta tenga sentido en el contexto del problema."
+        ]
+      },
       {
         level: "intermedio",
         title: "Problemas combinados con porcentajes",
@@ -24467,20 +24467,7 @@ const historiaModulesPart1: CourseModule[] = [
     slug: "civilizaciones-preincaicas",
     illustrationSummary: "Línea de tiempo de las civilizaciones preincaicas: Chavín, Paracas, Nazca, Moche, Wari, Chimú.",
     tip: "En el examen, memoriza la ubicaci\u00f3n geogr\u00e1fica y caracter\u00edstica principal de cada civilizaci\u00f3n: Nazca=L\u00edneas, Moche=cer\u00e1mica, Wari=imperio temprano, Chim\u00fa=Chan Chan.",
-    theory: [
-      {
-        level: "basico",
-        title: "Las seis grandes civilizaciones preincaicas",
-        lines: [
-          "Chav\u00edn (1200-400 a.C.): civilizaci\u00f3n matriz ubicada en la sierra norte (Chav\u00edn de Hu\u00e1ntar). Su deidad principal fue el Lanz\u00f3n monol\u00edtico.",
-          "Paracas (800 a.C.-100 d.C.): se desarroll\u00f3 en la pen\u00ednsula de Paracas (Ica). Destac\u00f3 por sus textiles momia y trepanaciones craneanas.",
-          "Nazca (100 a.C.-800 d.C.): floreci\u00f3 en la costa sur. Son famosas las L\u00edneas de Nazca y los acueductos de Cahuachi.",
-          "Moche (100-700 d.C.): se ubic\u00f3 en la costa norte (Valle de Moche, La Libertad). Produjo la cer\u00e1mica retrato m\u00e1s realista del antiguo Per\u00fa.",
-          "Wari (550-1000 d.C.): imperio centralista que domin\u00f3 la sierra y costa centrales desde su capital en Ayacucho (Huari).",
-          "Chim\u00fa (900-1470 d.C.): imperio coste\u00f1o con capital en Chan Chan (La Libertad). Fue el \u00faltimo gran rival del Tahuantinsuyo."
-        ]
-      ,
-  studyGuide: `## Civilizaciones Preincaicas del Peru
+    studyGuide: `## Civilizaciones Preincaicas del Peru
 
 ### Contexto geografico y cronologico
 
@@ -24506,7 +24493,20 @@ Estas civilizaciones desarrollaron sistemas de irrigation avanzados, andeneria, 
 
 ### Conclusion
 
-El estudio de las civilizaciones preincaicas revela una historia milenaria de innovacion, adaptacion y complejidad. Cada cultura aporto elementos definitorios a la identidad peruana, y su legado perdura en la arqueologia, la cultura viva y la cosmovision andina contemporanea del pais.`},
+El estudio de las civilizaciones preincaicas revela una historia milenaria de innovacion, adaptacion y complejidad. Cada cultura aporto elementos definitorios a la identidad peruana, y su legado perdura en la arqueologia, la cultura viva y la cosmovision andina contemporanea del pais.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Las seis grandes civilizaciones preincaicas",
+        lines: [
+          "Chav\u00edn (1200-400 a.C.): civilizaci\u00f3n matriz ubicada en la sierra norte (Chav\u00edn de Hu\u00e1ntar). Su deidad principal fue el Lanz\u00f3n monol\u00edtico.",
+          "Paracas (800 a.C.-100 d.C.): se desarroll\u00f3 en la pen\u00ednsula de Paracas (Ica). Destac\u00f3 por sus textiles momia y trepanaciones craneanas.",
+          "Nazca (100 a.C.-800 d.C.): floreci\u00f3 en la costa sur. Son famosas las L\u00edneas de Nazca y los acueductos de Cahuachi.",
+          "Moche (100-700 d.C.): se ubic\u00f3 en la costa norte (Valle de Moche, La Libertad). Produjo la cer\u00e1mica retrato m\u00e1s realista del antiguo Per\u00fa.",
+          "Wari (550-1000 d.C.): imperio centralista que domin\u00f3 la sierra y costa centrales desde su capital en Ayacucho (Huari).",
+          "Chim\u00fa (900-1470 d.C.): imperio coste\u00f1o con capital en Chan Chan (La Libertad). Fue el \u00faltimo gran rival del Tahuantinsuyo."
+        ]
+      },
       {
         level: "intermedio",
         title: "Caracter\u00edsticas espec\u00edficas de cada civilizaci\u00f3n",
@@ -24586,20 +24586,7 @@ El estudio de las civilizaciones preincaicas revela una historia milenaria de in
     slug: "tahuantinsuyo",
     illustrationSummary: "Mapa del Tahuantinsuyo con sus cuatro suyos: Chinchaysuyu, Antisuyu, Collasuyu, Cuntisuyu.",
     tip: "Pachac\u00fatec expandi\u00f3 el imperio, T\u00fapac Inca lo consolid\u00f3, Atahualpa lo perdi\u00f3. Memoriza la estructura social: Sapa Inca \u2192 Curacas \u2192 Hatun Runa \u2192 Yanakuna.",
-    theory: [
-      {
-        level: "basico",
-        title: "El Tahuantinsuyo: el imperio incaico",
-        lines: [
-          "El Tahuantinsuyo (\u201clas cuatro regiones\u201d) fue el imperio m\u00e1s grande de Am\u00e9rica precolombina, abarcando desde Colombia hasta Chile.",
-          "Su capital fue Cusco, el ombligo del mundo (Qosqo), desde donde se gobernaron cuatro suyus: Chinchaysuyu, Antisuyu, Collasuyu y Cuntisuyu.",
-          "Pachac\u00fatec (1438-1471) es considerado el fundador del Tahuantinsuyo. Derrot\u00f3 a los chancas y expandi\u00f3 el imperio hacia el norte y sur.",
-          "T\u00fapac Inca Yupanqui (1471-1493) consolid\u00f3 la expansi\u00f3n, llegando hasta el r\u00edo Atrato (Colombia) y la zona central de Chile.",
-          "Huayna C\u00e1pac (1493-1527) fue el \u00faltimo gran Sapa Inca. Muri\u00f3 de una epidemia europea, lo que desat\u00f3 la guerra civil entre Atahualpa y Hu\u00e1scar.",
-          "El imperio colaps\u00f3 en 1532 cuando Pizarro captur\u00f3 a Atahualpa en Cajamarca, fragmentando un poder que se sosten\u00eda en la figura del Sapa Inca."
-        ]
-      ,
-  studyGuide: `## El Tahuantinsuyo: Imperio Incaico
+    studyGuide: `## El Tahuantinsuyo: Imperio Incaico
 
 ### Origen y expansion
 
@@ -24623,7 +24610,20 @@ El culto al sol Inti era central en la religion incaica. El Coricancha en el Cus
 
 ### Legado
 
-El Tahuantinsuyo dejo una huella indeleble en America del Sur: el quechua se habla aun por millones de personas, el sistema de terrazas agricolas sigue en uso, y ciudades como el Cusco conservan cimientos incaicos bajo la arquitectura colonial. La ingenieria hidraulica, la agricultura en andenes y la organizacion social comunitaria son herencias vivas de esta civilizacion.`},
+El Tahuantinsuyo dejo una huella indeleble en America del Sur: el quechua se habla aun por millones de personas, el sistema de terrazas agricolas sigue en uso, y ciudades como el Cusco conservan cimientos incaicos bajo la arquitectura colonial. La ingenieria hidraulica, la agricultura en andenes y la organizacion social comunitaria son herencias vivas de esta civilizacion.`,
+    theory: [
+      {
+        level: "basico",
+        title: "El Tahuantinsuyo: el imperio incaico",
+        lines: [
+          "El Tahuantinsuyo (\u201clas cuatro regiones\u201d) fue el imperio m\u00e1s grande de Am\u00e9rica precolombina, abarcando desde Colombia hasta Chile.",
+          "Su capital fue Cusco, el ombligo del mundo (Qosqo), desde donde se gobernaron cuatro suyus: Chinchaysuyu, Antisuyu, Collasuyu y Cuntisuyu.",
+          "Pachac\u00fatec (1438-1471) es considerado el fundador del Tahuantinsuyo. Derrot\u00f3 a los chancas y expandi\u00f3 el imperio hacia el norte y sur.",
+          "T\u00fapac Inca Yupanqui (1471-1493) consolid\u00f3 la expansi\u00f3n, llegando hasta el r\u00edo Atrato (Colombia) y la zona central de Chile.",
+          "Huayna C\u00e1pac (1493-1527) fue el \u00faltimo gran Sapa Inca. Muri\u00f3 de una epidemia europea, lo que desat\u00f3 la guerra civil entre Atahualpa y Hu\u00e1scar.",
+          "El imperio colaps\u00f3 en 1532 cuando Pizarro captur\u00f3 a Atahualpa en Cajamarca, fragmentando un poder que se sosten\u00eda en la figura del Sapa Inca."
+        ]
+      },
       {
         level: "intermedio",
         title: "Organizaci\u00f3n social, econ\u00f3mica y pol\u00edtica del Tahuantinsuyo",
@@ -24722,20 +24722,7 @@ El Tahuantinsuyo dejo una huella indeleble en America del Sur: el quechua se hab
     slug: "conquista-espanola",
     illustrationSummary: "Cronología de la conquista española: Cajamarca, guerras civiles, resistencia incaica.",
     tip: "La batalla de Cajamarca (1532) fue decisiva. Solo 168 espa\u00f1oles capturaron al Inca. Memoriza fechas: 1532-conquista, 1533-ejecuci\u00f3n de Atahualpa, 1535-fundaci\u00f3n de Lima.",
-    theory: [
-      {
-        level: "basico",
-        title: "La llegada de Pizarro y la captura de Atahualpa",
-        lines: [
-          "Francisco Pizarro lleg\u00f3 al Per\u00fa en 1532 con 168 soldados, 27 caballos y armas de fuego. Parti\u00f3 de San Miguel de Piura hacia la sierra.",
-          "En Cajamarca, el 16 de noviembre de 1532, Pizarro embosc\u00f3 al ej\u00e9rcito inca y captur\u00f3 al Sapa Inca Atahualpa en el Patio de la Recepci\u00f3n.",
-          "Atahualpa ofreci\u00f3 una habitaci\u00f3n llena de oro y dos de plata como rescate. Los espa\u00f1oles la recolectaron pero no lo liberaron.",
-          "El 26 de julio de 1533, Atahualpa fue ejecutado en la plaza de Cajamarca mediante garrote, bajo la acusaci\u00f3n de idolatr\u00eda y usurpaci\u00f3n del trono.",
-          "Tras la ejecuci\u00f3n, Pizarro march\u00f3 hacia Cusco, entrando el 15 de noviembre de 1533 sin resistencia significativa, ali\u00e1ndose con los partidarios de Hu\u00e1scar.",
-          "El 18 de enero de 1535, Pizarro fund\u00f3 la Ciudad de los Reyes (Lima) como capital del nuevo territorio, rompiendo con la tradici\u00f3n cusque\u00f1a."
-        ]
-      ,
-  studyGuide: `## La Conquista Espanola del Peru
+    studyGuide: `## La Conquista Espanola del Peru
 
 ### Antecedentes y llegada
 
@@ -24759,7 +24746,20 @@ La conquista provoco un colapso demografico devastador: la poblacion indigena se
 
 ### Figuras del proceso
 
-Ademas de Pizarro, participaron Diego de Almagro, los hermanos Pizarro y curacas como Tlalmanilloyan que resistieron la invasion. La conquista se complemento con la accion evangelizadora de misioneros que aprendieron quechua para predicar.`},
+Ademas de Pizarro, participaron Diego de Almagro, los hermanos Pizarro y curacas como Tlalmanilloyan que resistieron la invasion. La conquista se complemento con la accion evangelizadora de misioneros que aprendieron quechua para predicar.`,
+    theory: [
+      {
+        level: "basico",
+        title: "La llegada de Pizarro y la captura de Atahualpa",
+        lines: [
+          "Francisco Pizarro lleg\u00f3 al Per\u00fa en 1532 con 168 soldados, 27 caballos y armas de fuego. Parti\u00f3 de San Miguel de Piura hacia la sierra.",
+          "En Cajamarca, el 16 de noviembre de 1532, Pizarro embosc\u00f3 al ej\u00e9rcito inca y captur\u00f3 al Sapa Inca Atahualpa en el Patio de la Recepci\u00f3n.",
+          "Atahualpa ofreci\u00f3 una habitaci\u00f3n llena de oro y dos de plata como rescate. Los espa\u00f1oles la recolectaron pero no lo liberaron.",
+          "El 26 de julio de 1533, Atahualpa fue ejecutado en la plaza de Cajamarca mediante garrote, bajo la acusaci\u00f3n de idolatr\u00eda y usurpaci\u00f3n del trono.",
+          "Tras la ejecuci\u00f3n, Pizarro march\u00f3 hacia Cusco, entrando el 15 de noviembre de 1533 sin resistencia significativa, ali\u00e1ndose con los partidarios de Hu\u00e1scar.",
+          "El 18 de enero de 1535, Pizarro fund\u00f3 la Ciudad de los Reyes (Lima) como capital del nuevo territorio, rompiendo con la tradici\u00f3n cusque\u00f1a."
+        ]
+      },
       {
         level: "intermedio",
         title: "Guerras civiles espa\u00f1olas y alianzas ind\u00edgenas",
@@ -24844,20 +24844,7 @@ Ademas de Pizarro, participaron Diego de Almagro, los hermanos Pizarro y curacas
     slug: "virreinato-del-peru",
     illustrationSummary: "Mapa del Virreinato del Perú con sus divisiones administrativas y ciudades principales.",
     tip: "El Virreinato del Per\u00fa abarcaba casi toda Sudam\u00e9rica. Los virreyes m\u00e1s importantes: Toledo (reformas), Lima (expansi\u00f3n), Amat (ilustraci\u00f3n).",
-    theory: [
-      {
-        level: "basico",
-        title: "El Virreinato del Per\u00fa: estructura y gobierno colonial",
-        lines: [
-          "El Virreinato del Per\u00fa fue creado en 1542 por Carlos V. Inicialmente abarcaba casi toda Sudam\u00e9rica, excepto Brasil, Venezuela y la regi\u00f3n del R\u00edo de la Plata.",
-          "La capital era la Ciudad de los Reyes (Lima), que desde 1560 fue sede de la Real Audiencia y centro administrativo del imperio espa\u00f1ol en Sudam\u00e9rica.",
-          "El virrey era el representante directo del rey y ten\u00eda poder ejecutivo, judicial y militar. Los primeros virreyes enfrentaron rebeliones como la de Gonzalo Pizarro.",
-          "Blasco N\u00fa\u00f1ez Vira fue el primer virrey (1544-1546), pero fue derrocado por Gonzalo Pizarro, quien gobern\u00f3 hasta su ejecuci\u00f3n en 1548.",
-          "El Toledo (1569-1581) realiz\u00f3 reformas fundamentales: estableci\u00f3 la reducci\u00f3n de indios, reorganiz\u00f3 la mit'a y fund\u00f3 pueblos de espa\u00f1oles.",
-          "El virreinato se dividi\u00f3 en gobernaciones, corregimientos y encomiendas, creando una jerarqu\u00eda administrativa que controlaba la explotaci\u00f3n de recursos y mano de obra ind\u00edgena."
-        ]
-      ,
-  studyGuide: `## El Virreinato del Peru
+    studyGuide: `## El Virreinato del Peru
 
 ### Creacion y extension
 
@@ -24881,7 +24868,20 @@ Lima fue centro de una vibrante vida cultural con universidades como San Marcos 
 
 ### Reformas y declive
 
-Las Reformas Borbonicas del siglo XVIII modernizaron la administracion pero generaron tensiones. La expulsion de los jesuitas, los nuevos impuestos y el monopolio del tabaco provocaron malestar creciente. Las rebeliones de Tupac Amaru II anticiparon la crisis del sistema colonial que desembocaria en las guerras de independencia.`},
+Las Reformas Borbonicas del siglo XVIII modernizaron la administracion pero generaron tensiones. La expulsion de los jesuitas, los nuevos impuestos y el monopolio del tabaco provocaron malestar creciente. Las rebeliones de Tupac Amaru II anticiparon la crisis del sistema colonial que desembocaria en las guerras de independencia.`,
+    theory: [
+      {
+        level: "basico",
+        title: "El Virreinato del Per\u00fa: estructura y gobierno colonial",
+        lines: [
+          "El Virreinato del Per\u00fa fue creado en 1542 por Carlos V. Inicialmente abarcaba casi toda Sudam\u00e9rica, excepto Brasil, Venezuela y la regi\u00f3n del R\u00edo de la Plata.",
+          "La capital era la Ciudad de los Reyes (Lima), que desde 1560 fue sede de la Real Audiencia y centro administrativo del imperio espa\u00f1ol en Sudam\u00e9rica.",
+          "El virrey era el representante directo del rey y ten\u00eda poder ejecutivo, judicial y militar. Los primeros virreyes enfrentaron rebeliones como la de Gonzalo Pizarro.",
+          "Blasco N\u00fa\u00f1ez Vira fue el primer virrey (1544-1546), pero fue derrocado por Gonzalo Pizarro, quien gobern\u00f3 hasta su ejecuci\u00f3n en 1548.",
+          "El Toledo (1569-1581) realiz\u00f3 reformas fundamentales: estableci\u00f3 la reducci\u00f3n de indios, reorganiz\u00f3 la mit'a y fund\u00f3 pueblos de espa\u00f1oles.",
+          "El virreinato se dividi\u00f3 en gobernaciones, corregimientos y encomiendas, creando una jerarqu\u00eda administrativa que controlaba la explotaci\u00f3n de recursos y mano de obra ind\u00edgena."
+        ]
+      },
       {
         level: "intermedio",
         title: "Econom\u00eda colonial: miner\u00eda, mita y comercio",
@@ -24968,20 +24968,7 @@ Las Reformas Borbonicas del siglo XVIII modernizaron la administracion pero gene
     slug: "independencia-del-peru",
     illustrationSummary: "Línea de tiempo de la independencia: Túpac Amaru II, San Martín, Bolívar, Batalla de Ayacucho.",
     tip: "San Mart\u00edn proclam\u00f3 la independencia el 28 de julio de 1821. Bol\u00edvar la consolid\u00f3 en 1824. La batalla de Ayacucho (1824) fue la definitiva.",
-    theory: [
-      {
-        level: "basico",
-        title: "Proclamaci\u00f3n y batallas de la independencia",
-        lines: [
-          "José de San Martín llegó al Perú en 1820 desde Chile con el Ejército de los Andes, desembarcando en Paracas y marchando hacia Lima.",
-          "El 28 de julio de 1821, San Martín proclamó la independencia del Perú en la Plaza de Armas de Lima, declarando al país como Estado Libre.",
-          "San Martín se autoproclamó Protector del Perú y promulgo leyes libertarias como la abolición de la mita y la libertad de vientres.",
-          "En 1822, San Martín y Simón Bolívar se reunieron en la conferencia de Guayaquil, tras la cual San Martín renunció y se exilió a Europa.",
-          "Bolívar asumió el liderazgo y consolidó la independencia con la batalla de Junín (1824) y la batalla de Ayacucho (1824), ambas victorias decisivas.",
-          "La batalla de Ayacucho (9 de diciembre de 1824) fue la última gran batalla de las guerras de independencia sudamericanas. El virrey La Serna se rindió."
-        ]
-      ,
-  studyGuide: `## La Independencia del Peru
+    studyGuide: `## La Independencia del Peru
 
 ### Antecedentes
 
@@ -25005,7 +24992,20 @@ La Batalla de Junin (6 de agosto de 1824), combate de caballeria sin disparo de 
 
 ### Consecuencias
 
-La independencia trajo la republica, pero tambien inestabilidad: guerras civiles, caudillismo, territorios perdidos y una estructura social que mantuvo la desigualdad colonial. El 28 de julio se celebra como fiesta nacional.`},
+La independencia trajo la republica, pero tambien inestabilidad: guerras civiles, caudillismo, territorios perdidos y una estructura social que mantuvo la desigualdad colonial. El 28 de julio se celebra como fiesta nacional.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Proclamaci\u00f3n y batallas de la independencia",
+        lines: [
+          "José de San Martín llegó al Perú en 1820 desde Chile con el Ejército de los Andes, desembarcando en Paracas y marchando hacia Lima.",
+          "El 28 de julio de 1821, San Martín proclamó la independencia del Perú en la Plaza de Armas de Lima, declarando al país como Estado Libre.",
+          "San Martín se autoproclamó Protector del Perú y promulgo leyes libertarias como la abolición de la mita y la libertad de vientres.",
+          "En 1822, San Martín y Simón Bolívar se reunieron en la conferencia de Guayaquil, tras la cual San Martín renunció y se exilió a Europa.",
+          "Bolívar asumió el liderazgo y consolidó la independencia con la batalla de Junín (1824) y la batalla de Ayacucho (1824), ambas victorias decisivas.",
+          "La batalla de Ayacucho (9 de diciembre de 1824) fue la última gran batalla de las guerras de independencia sudamericanas. El virrey La Serna se rindió."
+        ]
+      },
       {
         level: "intermedio",
         title: "San Martín vs. Bolívar: estrategias y differencias",
@@ -25111,20 +25111,7 @@ La independencia trajo la republica, pero tambien inestabilidad: guerras civiles
     slug: "republica-temprana",
     illustrationSummary: "Gobiernos de la República temprana: Balboa, Gamarra, Castilla y la consolidación del Estado.",
     tip: "La Rep\u00fablica temprana (1826-1872) fue inestable: caudillos, guerras con Colombia y Bolivia. Memoriza: Guerra con Colombia (1828-1829), Guerra del Pac\u00edfico (1879-1883).",
-    theory: [
-      {
-        level: "basico",
-        title: "Primeros gobiernos y la inestabilidad republicana",
-        lines: [
-          "Después de Ayacucho (1824), Perú tuvo múltiples gobiernos inestables: caudillos militares, presidentes provisionales y constituciones cambiantes.",
-          "Agustín Gamarra y Andrés de Santa Cruz fueron dos de los primeros líderes que intentaron consolidar la república, pero ambos enfrentaron oposición armada.",
-          "Santa Cruz creó la Confederación Perú-Bolivia (1836-1839), un proyecto unionista que fue destruido por Chile y Argentina en la Guerra de la Confederación.",
-          "La Guerra contra la Confederación (1836-1839) terminó con la derrota en la batalla de Yungay y la disolución forzosa de la unión.",
-          "En la década de 1840-1850, los caudillos como Ramón Castilla (1845-1849, 1855-1862) intentaron modernizar el Estado sin abandonar el autoritarismo.",
-          "La constitución de 1860, impulsada por Castilla, fue la más estable del siglo XIX y sirvió como marco político durante décadas."
-        ]
-      ,
-  studyGuide: `## La Republica Temprana del Peru (1822-1842)
+    studyGuide: `## La Republica Temprana del Peru (1822-1842)
 
 ### Consolidacion inicial
 
@@ -25152,7 +25139,20 @@ La economia dependia de la exportacion de guano, salitre y Lana de alpaca. Las h
 
 ### Legado
 
-La Republica Temprana dejo instituciones fragiles, una elite politica fragmentada y una estructura social desigual. Sin embargo, sento las bases de la vida republicana: la Constitucion, el parlamento y la educacion publica, aunque limitada a la elite masculina criolla.`},
+La Republica Temprana dejo instituciones fragiles, una elite politica fragmentada y una estructura social desigual. Sin embargo, sento las bases de la vida republicana: la Constitucion, el parlamento y la educacion publica, aunque limitada a la elite masculina criolla.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Primeros gobiernos y la inestabilidad republicana",
+        lines: [
+          "Después de Ayacucho (1824), Perú tuvo múltiples gobiernos inestables: caudillos militares, presidentes provisionales y constituciones cambiantes.",
+          "Agustín Gamarra y Andrés de Santa Cruz fueron dos de los primeros líderes que intentaron consolidar la república, pero ambos enfrentaron oposición armada.",
+          "Santa Cruz creó la Confederación Perú-Bolivia (1836-1839), un proyecto unionista que fue destruido por Chile y Argentina en la Guerra de la Confederación.",
+          "La Guerra contra la Confederación (1836-1839) terminó con la derrota en la batalla de Yungay y la disolución forzosa de la unión.",
+          "En la década de 1840-1850, los caudillos como Ramón Castilla (1845-1849, 1855-1862) intentaron modernizar el Estado sin abandonar el autoritarismo.",
+          "La constitución de 1860, impulsada por Castilla, fue la más estable del siglo XIX y sirvió como marco político durante décadas."
+        ]
+      },
       {
         level: "intermedio",
         title: "Guerras externas y la consolidación territorial",
@@ -25238,20 +25238,7 @@ La Republica Temprana dejo instituciones fragiles, una elite politica fragmentad
     slug: "guano-y-salitre",
     illustrationSummary: "Económía guanera y salitrera: exportaciones, guerras y el conflicto con Chile.",
     tip: "El guano generó fortunas (1840-1880). La Guerra del Pacífico (1879-1883) contra Chile nos costó Tarapacá, Arica y Tacna. Memoriza: Batalla de San Francisco, Batalla de Angamos.",
-    theory: [
-      {
-        level: "basico",
-        title: "Época del guano y la causa de la Guerra del Pacífico",
-        lines: [
-          "El Perú vivió una época de prosperidad gracias a la exportación de guano (excremento de aves marinas) entre 1840 y 1880.",
-          "Las islas de Chincha, Lobos y Pisco fueron las principales fuentes de guano, que se vendía a precios altísimos en Europa como fertilizante.",
-          "El salitre (nitrato de sodio) en Tarapacá era igualmente valioso: se usaba como fertilizante agrícola y componente de explosivos.",
-          "Chile invadió Tarapacá en 1879, desatando la Guerra del Pacífico (1879-1883) que resultó en la pérdida territorial más grande de Perú.",
-          "La Guerra del Pacífico se desarrolló en tres frentes: terrestre (desierto de Atacama), naval (costa del Pacífico) y la defensa de Lima.",
-          "La captura de Lima en enero de 1881 por el ejército chileno marcó el fin efectivo de la resistencia peruana y el inicio de la ocupación."
-        ]
-      ,
-  studyGuide: `## La Epoca del Guano y el Salitre (1840-1880)
+    studyGuide: `## La Epoca del Guano y el Salitre (1840-1880)
 
 ### Contexto economico global
 
@@ -25279,7 +25266,20 @@ La guerra dejo al Peru devastado: perdio territorios ricos en recursos, sufrio u
 
 ### Figuras clave
 
-Ramon Castilla modernizo el pais durante el boom del guano. Miguel de Iglesias firmino el Tratado de Ancon. Nicolas de Pierola lidero la resistencia. Andres Avelino Cáceres, el Brujo de los Andes, lidero la guerrilla en la sierra.`},
+Ramon Castilla modernizo el pais durante el boom del guano. Miguel de Iglesias firmino el Tratado de Ancon. Nicolas de Pierola lidero la resistencia. Andres Avelino Cáceres, el Brujo de los Andes, lidero la guerrilla en la sierra.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Época del guano y la causa de la Guerra del Pacífico",
+        lines: [
+          "El Perú vivió una época de prosperidad gracias a la exportación de guano (excremento de aves marinas) entre 1840 y 1880.",
+          "Las islas de Chincha, Lobos y Pisco fueron las principales fuentes de guano, que se vendía a precios altísimos en Europa como fertilizante.",
+          "El salitre (nitrato de sodio) en Tarapacá era igualmente valioso: se usaba como fertilizante agrícola y componente de explosivos.",
+          "Chile invadió Tarapacá en 1879, desatando la Guerra del Pacífico (1879-1883) que resultó en la pérdida territorial más grande de Perú.",
+          "La Guerra del Pacífico se desarrolló en tres frentes: terrestre (desierto de Atacama), naval (costa del Pacífico) y la defensa de Lima.",
+          "La captura de Lima en enero de 1881 por el ejército chileno marcó el fin efectivo de la resistencia peruana y el inicio de la ocupación."
+        ]
+      },
       {
         level: "intermedio",
         title: "Batallas principales y el Pacto de Tacna-Arica",
@@ -25368,20 +25368,7 @@ Ramon Castilla modernizo el pais durante el boom del guano. Miguel de Iglesias f
     slug: "oncenio-y-guerra",
     illustrationSummary: "Gobierno de Leguía y el inicio de la Guerra del Pacífico.",
     tip: "El Oncenio de Leguía (1919-1930) modernizó Lima pero fue autoritario. La Gran Depresión de 1929 lo derrocó. Memoriza: Nuevo Civilismo, Leguía, Sánchez Cerro.",
-    theory: [
-      {
-        level: "basico",
-        title: "El Oncenio: modernización y autoritarismo de Leguía",
-        lines: [
-          "Augusto B. Leguía gobernó el Perú durante 11 años (1919-1930), un período conocido como el Oncenio, el más largo del siglo XX.",
-          "Leguía llegó al poder por segunda vez en 1919, prometiendo modernizar la economía y la infraestructura del país.",
-          "Bajo su gobierno se construyó el Palacio de Gobierno actual (Casa de Pizarro), el Edificio Giuffre y el Teatro Municipal de Lima.",
-          "Leguía implementó el sistema de Consignaciones, que otorgaba monopolios de exportación a empresas extranjeras a cambio de préstamos.",
-          "Su gobierno fue autoritario: cerró el Congreso, persiguió opositores y utilizó la censura de prensa para silenciar críticas.",
-          "La Gran Depresión de 1929 provocó una crisis económica que debilitó a Leguía, facilitando su derrocamiento en agosto de 1930."
-        ]
-      ,
-  studyGuide: `## El Oncenio de Leguia y la Segunda Guerra Mundial (1919-1945)
+    studyGuide: `## El Oncenio de Leguia y la Segunda Guerra Mundial (1919-1945)
 
 ### El Oncenio de Augusto B. Leguia (1919-1930)
 
@@ -25409,7 +25396,20 @@ Peru declaro la guerra a las potencias del Eje en 1942. Se beneficio economicame
 
 ### Consecuencias
 
-El periodo dejo al Peru con una economia mas diversificada pero dependiente, una clase media en crecimiento y un movimiento aprista consolidado. La inestabilidad politica y la tension social marcaron el paisaje politico.`},
+El periodo dejo al Peru con una economia mas diversificada pero dependiente, una clase media en crecimiento y un movimiento aprista consolidado. La inestabilidad politica y la tension social marcaron el paisaje politico.`,
+    theory: [
+      {
+        level: "basico",
+        title: "El Oncenio: modernización y autoritarismo de Leguía",
+        lines: [
+          "Augusto B. Leguía gobernó el Perú durante 11 años (1919-1930), un período conocido como el Oncenio, el más largo del siglo XX.",
+          "Leguía llegó al poder por segunda vez en 1919, prometiendo modernizar la economía y la infraestructura del país.",
+          "Bajo su gobierno se construyó el Palacio de Gobierno actual (Casa de Pizarro), el Edificio Giuffre y el Teatro Municipal de Lima.",
+          "Leguía implementó el sistema de Consignaciones, que otorgaba monopolios de exportación a empresas extranjeras a cambio de préstamos.",
+          "Su gobierno fue autoritario: cerró el Congreso, persiguió opositores y utilizó la censura de prensa para silenciar críticas.",
+          "La Gran Depresión de 1929 provocó una crisis económica que debilitó a Leguía, facilitando su derrocamiento en agosto de 1930."
+        ]
+      },
       {
         level: "intermedio",
         title: "Contexto político: Nuevo Civilismo, aprismo y oposición",
@@ -25495,20 +25495,7 @@ const historiaModulesPart2: CourseModule[] = [
     slug: "aprismo-y-guerra",
     illustrationSummary: "APRA, Sánchez Cerro y la Guerra con Ecuador de 1941.",
     tip: "APRA (Alianza Popular Revolucionaria Americana) fue fundado en 1924. Sánchez Cerro derrocó a Leguía (1930) y enfrentó al aprismo. La Guerra con Ecuador fue en 1941.",
-    theory: [
-      {
-        level: "basico",
-        title: "APRA, Sánchez Cerro y la Guerra con Ecuador",
-        lines: [
-          "El APRA fue fundado por Víctor Raúl Haya de la Torre en 1924 en México como movimiento continental antiimperialista.",
-          "En 1930, Luis Sánchez Cerro lideró un golpe de estado que derrocó al gobierno de Augusto B. Leguía.",
-          "Sánchez Cerro enfrentó una fuerte oposición del APRA, lo que generó un enfrentamiento político violento.",
-          "La Guerra con Ecuador estalló en julio de 1941 por disputas territoriales en la frontera amazónica.",
-          "El conflicto terminó con la firma del Protocolo de Río de Janeiro en 1942, favorable al Perú.",
-          "El Perú obtuvo territorios significativos en la Amazonía, consolidando su soberanía en la frontera norte."
-        ]
-      ,
-  studyGuide: `## El Aprismo y las Guerras Civiles (1930-1950)
+    studyGuide: `## El Aprismo y las Guerras Civiles (1930-1950)
 
 ### Origen del APRA
 
@@ -25532,7 +25519,20 @@ El breve periodo de Jose Luis Bustamante y Rivero (1945-1948) represento la unic
 
 ### Consecuencias politicas
 
-El aprismo y las guerras civiles dejaron al Peru con una politica polarizada. La lucha por el poder se desarrollo en un contexto de debilidad institucional. La gradual insertion del APRA en la legalidad politica se lograria recien en los anos 1950.`},
+El aprismo y las guerras civiles dejaron al Peru con una politica polarizada. La lucha por el poder se desarrollo en un contexto de debilidad institucional. La gradual insertion del APRA en la legalidad politica se lograria recien en los anos 1950.`,
+    theory: [
+      {
+        level: "basico",
+        title: "APRA, Sánchez Cerro y la Guerra con Ecuador",
+        lines: [
+          "El APRA fue fundado por Víctor Raúl Haya de la Torre en 1924 en México como movimiento continental antiimperialista.",
+          "En 1930, Luis Sánchez Cerro lideró un golpe de estado que derrocó al gobierno de Augusto B. Leguía.",
+          "Sánchez Cerro enfrentó una fuerte oposición del APRA, lo que generó un enfrentamiento político violento.",
+          "La Guerra con Ecuador estalló en julio de 1941 por disputas territoriales en la frontera amazónica.",
+          "El conflicto terminó con la firma del Protocolo de Río de Janeiro en 1942, favorable al Perú.",
+          "El Perú obtuvo territorios significativos en la Amazonía, consolidando su soberanía en la frontera norte."
+        ]
+      },
       {
         level: "intermedio",
         title: "Ideología aprista y persecución política",
@@ -25609,20 +25609,7 @@ El aprismo y las guerras civiles dejaron al Peru con una politica polarizada. La
     slug: "segundo-militarismo",
     illustrationSummary: "Segundo gobierno militar: Odría, reorganización y modernización.",
     tip: "Odría gobernó 1948-1956. Su esposa Manuelita gobernó de facto 1950-1955. Memoriza: 1948-golpe, 1950-Manuelita, 1955-revolución libertadora.",
-    theory: [
-      {
-        level: "basico",
-        title: "Golpe de Odría y gobierno autoritario",
-        lines: [
-          "En 1948, Manuel A. Odría dio un golpe de estado derrocando al gobierno de José Luis Bustamante y Rivero.",
-          "Odría instauró un régimen autoritario conocido como el 'Ochenio' (1948-1956).",
-          "Su gobierno se caracterizó por la represión de opositores, la censura de prensa y la persecución política.",
-          "Entre 1950 y 1955, Odría delegó el poder a su esposa, Manuelita Odría, mientras gobernaba desde las sombras.",
-          "Manuelita Odría impulsó obras públicas, educación y la mejora de la infraestructura urbana.",
-          "Odría cayó en 1955 tras una 'revolución libertadora' encabezada por el general Ricardo Pérez Godoy."
-        ]
-      ,
-  studyGuide: `## El Segundo Militarismo (1930-1956)
+    studyGuide: `## El Segundo Militarismo (1930-1956)
 
 ### Contexto historico
 
@@ -25650,7 +25637,20 @@ Odría instalo una dictadura de ocho anos con represion politica, censura y enca
 
 ### Legado
 
-El Segundo Militarismo dejo debilidad institucional y la problematica de la participation ciudadana. Las dictaduras estabilizaron temporalmente pero no resolvieron desigualdad ni dependencia economica.`},
+El Segundo Militarismo dejo debilidad institucional y la problematica de la participation ciudadana. Las dictaduras estabilizaron temporalmente pero no resolvieron desigualdad ni dependencia economica.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Golpe de Odría y gobierno autoritario",
+        lines: [
+          "En 1948, Manuel A. Odría dio un golpe de estado derrocando al gobierno de José Luis Bustamante y Rivero.",
+          "Odría instauró un régimen autoritario conocido como el 'Ochenio' (1948-1956).",
+          "Su gobierno se caracterizó por la represión de opositores, la censura de prensa y la persecución política.",
+          "Entre 1950 y 1955, Odría delegó el poder a su esposa, Manuelita Odría, mientras gobernaba desde las sombras.",
+          "Manuelita Odría impulsó obras públicas, educación y la mejora de la infraestructura urbana.",
+          "Odría cayó en 1955 tras una 'revolución libertadora' encabezada por el general Ricardo Pérez Godoy."
+        ]
+      },
       {
         level: "intermedio",
         title: "Economía, relaciones exteriores y movimientos estudiantiles",
@@ -25847,20 +25847,7 @@ El Segundo Militarismo dejo debilidad institucional y la problematica de la part
     slug: "velasco-y-reforma",
     illustrationSummary: "Gobierno de Velasco: reforma agraria, nacionalizaciones y cambios sociales.",
     tip: "Velasco (1968-1975) hizo la reforma agraria más grande de América Latina. Expropió haciendas y las repartió a campesinos. Fue derrocado por Morales Bermúdez.",
-    theory: [
-      {
-        level: "basico",
-        title: "Reforma agraria, expropiaciones y cambios sociales",
-        lines: [
-          "En 1968, el general Juan Velasco Alvarado dio un golpe de estado instaurando un gobierno militar reformista.",
-          "Su principal obra fue la Reforma Agraria de 1969, que expropió grandes haciendas para redistribuirlas a campesinos.",
-          "La reforma buscó eliminar el latifundio como estructura de explotación social y económica en el campo.",
-          "Se crearon cooperativas agrícolas y se impulsó la organización comunal de los productores rurales.",
-          "Velasco también nacionalizó empresas extranjeras en sectores clave como la minería y la industria.",
-          "Los cambios sociales incluyeron la creación de sindicatos campesinos y la mejora de las condiciones de vida rurales."
-        ]
-      ,
-  studyGuide: `## El Gobierno de Velasco y la Reforma Agraria (1968-1975)
+    studyGuide: `## El Gobierno de Velasco y la Reforma Agraria (1968-1975)
 
 ### El golpe militar de 1968
 
@@ -25884,7 +25871,20 @@ Velasco enfrento la oposicion de la oligarquia terrateniente. En 1975, fue derro
 
 ### Consecuencias
 
-La reforma agraria transformo la estructura agraria pero enfrento problemas de productividad y falta de asistencia tecnica. La economia se estanco. Sin embargo, la reforma abrio espacios de participation politica para sectores populares.`},
+La reforma agraria transformo la estructura agraria pero enfrento problemas de productividad y falta de asistencia tecnica. La economia se estanco. Sin embargo, la reforma abrio espacios de participation politica para sectores populares.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Reforma agraria, expropiaciones y cambios sociales",
+        lines: [
+          "En 1968, el general Juan Velasco Alvarado dio un golpe de estado instaurando un gobierno militar reformista.",
+          "Su principal obra fue la Reforma Agraria de 1969, que expropió grandes haciendas para redistribuirlas a campesinos.",
+          "La reforma buscó eliminar el latifundio como estructura de explotación social y económica en el campo.",
+          "Se crearon cooperativas agrícolas y se impulsó la organización comunal de los productores rurales.",
+          "Velasco también nacionalizó empresas extranjeras en sectores clave como la minería y la industria.",
+          "Los cambios sociales incluyeron la creación de sindicatos campesinos y la mejora de las condiciones de vida rurales."
+        ]
+      },
       {
         level: "intermedio",
         title: "Modelos económicos: Velasco vs. Morales Bermúdez",
@@ -25963,20 +25963,7 @@ La reforma agraria transformo la estructura agraria pero enfrento problemas de p
     slug: "terrorismo-y-dictadura",
     illustrationSummary: "Sendero Luminoso, MRTA y la dictadura de Fujimori.",
     tip: "El terrorismo (1980-2000) mató a más de 69,000 personas. Fujimori dio el autogolpe en 1992. Memoriza: Sendero Luminoso (Abimael Guzmán), MRTA, Comisión de la Verdad.",
-    theory: [
-      {
-        level: "basico",
-        title: "Sendero Luminoso, MRTA y violencia 1980-2000",
-        lines: [
-          "El Sendero Luminoso fue una organización maoísta liderada por Abimael Guzmán que inició la lucha armada en 1980.",
-          "El MRTA (Movimiento Revolucionario Túpac Amaru) fue otro grupo insurgente de orientación marxista-leninista.",
-          "Entre 1980 y 2000, la violencia terrorista mató a más de 69,000 personas, principalmente en zonas rurales.",
-          "Sendero Luminoso atacó infraestructura, instituciones del Estado y comunidades campesinas.",
-          "El MRTA realizó secuestros y atentados, destacando la toma de la embajada de Japón en 1996.",
-          "La lucha contra el terrorismo provocó violaciones de derechos humanos por parte de las fuerzas del Estado."
-        ]
-      ,
-  studyGuide: `## El Terrorismo y la Dictadura (1980-2000)
+    studyGuide: `## El Terrorismo y la Dictadura (1980-2000)
 
 ### Sendero Luminoso
 
@@ -26000,7 +25987,20 @@ Murieron mas de 69,000 personas segun la Comision de la Verdad. Sendero cometio 
 
 ### La caida de Fujimori
 
-Fujimori renuncio en 2000 tras videos que mostraban la corrupcion del gobierno. Se refugio en Japon. Fue calificado de dictadura y sus funcionarios enjuiciados. La transicion fue liderada por Alejandro Toledo.`},
+Fujimori renuncio en 2000 tras videos que mostraban la corrupcion del gobierno. Se refugio en Japon. Fue calificado de dictadura y sus funcionarios enjuiciados. La transicion fue liderada por Alejandro Toledo.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Sendero Luminoso, MRTA y violencia 1980-2000",
+        lines: [
+          "El Sendero Luminoso fue una organización maoísta liderada por Abimael Guzmán que inició la lucha armada en 1980.",
+          "El MRTA (Movimiento Revolucionario Túpac Amaru) fue otro grupo insurgente de orientación marxista-leninista.",
+          "Entre 1980 y 2000, la violencia terrorista mató a más de 69,000 personas, principalmente en zonas rurales.",
+          "Sendero Luminoso atacó infraestructura, instituciones del Estado y comunidades campesinas.",
+          "El MRTA realizó secuestros y atentados, destacando la toma de la embajada de Japón en 1996.",
+          "La lucha contra el terrorismo provocó violaciones de derechos humanos por parte de las fuerzas del Estado."
+        ]
+      },
       {
         level: "intermedio",
         title: "Autogolpe de Fujimori, Montesinos y el régimen autoritario",
@@ -26077,20 +26077,7 @@ Fujimori renuncio en 2000 tras videos que mostraban la corrupcion del gobierno. 
     slug: "transicion-democratica",
     illustrationSummary: "Transición a la democracia: Kuczynski, Toledo, García.",
     tip: "La transición (2001-2016) fue difícil: Paniagua limpió, Toledo creció, Humala moderó. Memoriza: Comisión de la Verdad, crisis 2008, corrupción generalizada.",
-    theory: [
-      {
-        level: "basico",
-        title: "Paniagua, Toledo y Humala",
-        lines: [
-          "Valentín Paniagua asumió la presidencia en 2001 tras la caída de Fujimori, liderando un gobierno de transición.",
-          "Paniagua convocó elecciones y sentó las bases para la reconstrucción democrática del país.",
-          "Alejandro Toledo fue elegido en 2001 y gobernó hasta 2006, implementando políticas de crecimiento económico.",
-          "Toledo enfrentó protestas sociales y crisis políticas que afectaron gravemente su popularidad.",
-          "Ollanta Humala fue elegido en 2011 con un discurso moderado, alejándose de su postura radical inicial.",
-          "Humala implementó políticas sociales y mantuvo la estabilidad macroeconómica durante su gobierno."
-        ]
-      ,
-  studyGuide: `## La Transicion Democratica (2000-2006)
+    studyGuide: `## La Transicion Democratica (2000-2006)
 
 ### El gobierno de Paniagua (2000-2001)
 
@@ -26118,7 +26105,20 @@ La CVR documento que mas de 69,000 personas murieron o desaparecieron, la mayori
 
 ### Consecuencias
 
-La transicion dejo instituciones mas solidas pero con desafios pendientes: pobreza, desigualdad, corrupcion y tension entre desarrollo y medio ambiente.`},
+La transicion dejo instituciones mas solidas pero con desafios pendientes: pobreza, desigualdad, corrupcion y tension entre desarrollo y medio ambiente.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Paniagua, Toledo y Humala",
+        lines: [
+          "Valentín Paniagua asumió la presidencia en 2001 tras la caída de Fujimori, liderando un gobierno de transición.",
+          "Paniagua convocó elecciones y sentó las bases para la reconstrucción democrática del país.",
+          "Alejandro Toledo fue elegido en 2001 y gobernó hasta 2006, implementando políticas de crecimiento económico.",
+          "Toledo enfrentó protestas sociales y crisis políticas que afectaron gravemente su popularidad.",
+          "Ollanta Humala fue elegido en 2011 con un discurso moderado, alejándose de su postura radical inicial.",
+          "Humala implementó políticas sociales y mantuvo la estabilidad macroeconómica durante su gobierno."
+        ]
+      },
       {
         level: "intermedio",
         title: "Crecimiento económico, pobreza y corrupción",
@@ -26221,20 +26221,7 @@ La transicion dejo instituciones mas solidas pero con desafios pendientes: pobre
     slug: "peru-contemporaneo",
     illustrationSummary: "Perú contemporáneo: crecimiento económico, desafíos sociales.",
     tip: "El Perú contemporáneo (2016-2025) tiene crisis políticas frecuentes: Kuczynski renunció, Vizcarra fue vacado, Castillo fue vacado y arrestado.",
-    theory: [
-      {
-        level: "basico",
-        title: "Kuczynski, Vizcarra, Castillo y Boluarte",
-        lines: [
-          "Pedro Pablo Kuczynski fue elegido en 2016 pero renunció en 2018 ante la amenaza de vacancia por corrupción.",
-          "Martín Vizcarra asumió la presidencia y fue vacado por el Congreso en 2020 en un proceso polémico.",
-          "Manuel Merino asumió brevemente la presidencia pero renunció tras fuertes protestas ciudadanas.",
-          "Francisco Sagasti lideró un gobierno de transición hasta las elecciones de 2021.",
-          "Pedro Castillo fue elegido en 2021 con un discurso de transformación social pero enfrentó múltiples crisis.",
-          "Castillo fue vacado y arrestado en diciembre de 2022, asumiendo Dina Boluarte la presidencia."
-        ]
-      ,
-  studyGuide: `## El Peru Contemporaneo
+    studyGuide: `## El Peru Contemporaneo
 
 ### Contexto politico actual
 
@@ -26262,7 +26249,20 @@ El Peru vive un proceso de revalorizacion cultural. La gastronomia se ha convert
 
 ### Retos pendientes
 
-El Peru enfrenta desafios fundamentales: fortalecer instituciones, reducir pobreza, mejorar educacion y salud, combatir corrupcion, proteger el medio ambiente y construir identidad nacional inclusiva.`},
+El Peru enfrenta desafios fundamentales: fortalecer instituciones, reducir pobreza, mejorar educacion y salud, combatir corrupcion, proteger el medio ambiente y construir identidad nacional inclusiva.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Kuczynski, Vizcarra, Castillo y Boluarte",
+        lines: [
+          "Pedro Pablo Kuczynski fue elegido en 2016 pero renunció en 2018 ante la amenaza de vacancia por corrupción.",
+          "Martín Vizcarra asumió la presidencia y fue vacado por el Congreso en 2020 en un proceso polémico.",
+          "Manuel Merino asumió brevemente la presidencia pero renunció tras fuertes protestas ciudadanas.",
+          "Francisco Sagasti lideró un gobierno de transición hasta las elecciones de 2021.",
+          "Pedro Castillo fue elegido en 2021 con un discurso de transformación social pero enfrentó múltiples crisis.",
+          "Castillo fue vacado y arrestado en diciembre de 2022, asumiendo Dina Boluarte la presidencia."
+        ]
+      },
       {
         level: "intermedio",
         title: "Crisis constitucional, vacancias y protestas",
@@ -26347,20 +26347,7 @@ El Peru enfrenta desafios fundamentales: fortalecer instituciones, reducir pobre
     slug: "derechos-humanos",
     illustrationSummary: "Comisión de la Verdad y Reconciliación, derechos humanos en el Perú.",
     tip: "La Comisión de la Verdad (2001-2003) documentó 69,280 muertos. El caso de los penales fue emblemático. Memoriza: Comisión de la Verdad, informe final, reparaciones.",
-    theory: [
-      {
-        level: "basico",
-        title: "Qué fue la Comisión de la Verdad, mandato y hallazgos",
-        lines: [
-          "La Comisión de la Verdad y Reconciliación (CVR) fue creada en 2001 para investigar el conflicto armado interno.",
-          "Su mandato fue establecer la verdad sobre las violaciones de derechos humanos cometidas entre 1980 y 2000.",
-          "La CVR documentó 69,280 víctimas mortales y desaparecidos durante el período de violencia.",
-          "El informe final fue presentado en agosto de 2003 y contuvo recomendaciones para la reconciliación nacional.",
-          "La comisión estuvo presidida por Salomón Lerner Febres y contó con el apoyo de organizaciones de derechos humanos.",
-          "Los hallazgos de la CVR revelaron la responsabilidad de Sendero Luminoso, el MRTA y las fuerzas del Estado."
-        ]
-      ,
-  studyGuide: `## Derechos Humanos en el Peru
+    studyGuide: `## Derechos Humanos en el Peru
 
 ### Marco historico
 
@@ -26384,7 +26371,20 @@ La Coordinadora Nacional de Derechos Humanos, el IDL, APRODEH y colectivos de vi
 
 ### Desafios pendientes
 
-Los desafios incluyen: juzgar responsables de violaciones, reparar victimas, fortalecer el sistema judicial, proteger derechos de vulnerables y garantizar la no repeticion del pasado.`},
+Los desafios incluyen: juzgar responsables de violaciones, reparar victimas, fortalecer el sistema judicial, proteger derechos de vulnerables y garantizar la no repeticion del pasado.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Qué fue la Comisión de la Verdad, mandato y hallazgos",
+        lines: [
+          "La Comisión de la Verdad y Reconciliación (CVR) fue creada en 2001 para investigar el conflicto armado interno.",
+          "Su mandato fue establecer la verdad sobre las violaciones de derechos humanos cometidas entre 1980 y 2000.",
+          "La CVR documentó 69,280 víctimas mortales y desaparecidos durante el período de violencia.",
+          "El informe final fue presentado en agosto de 2003 y contuvo recomendaciones para la reconciliación nacional.",
+          "La comisión estuvo presidida por Salomón Lerner Febres y contó con el apoyo de organizaciones de derechos humanos.",
+          "Los hallazgos de la CVR revelaron la responsabilidad de Sendero Luminoso, el MRTA y las fuerzas del Estado."
+        ]
+      },
       {
         level: "intermedio",
         title: "Casos emblemáticos, penales y comunidades afectadas",
@@ -26462,20 +26462,7 @@ const historiaModulesPart3: CourseModule[] = [
     slug: "revolucion-francesa",
     illustrationSummary: "Cronología de la Revolución Francesa: toma de la Bastilla, terror, imperio napoleónico.",
     tip: "La Revolución Francesa (1789) cambió el mundo. Causas: desigualdad social, Ilustración, crisis económica. Memoriza: Toma de la Bastilla (14 jul 1789), Declaración de Derechos del Hombre.",
-    theory: [
-      {
-        level: "basico",
-        title: "Causas y detonantes de la Revolución Francesa",
-        lines: [
-          "Francia vivía bajo el Antiguo Régimen, dividido en tres estamentos: clero, nobleza y pueblo llano (97% de la población).",
-          "Los primeros dos estamentos gozaban de privilegios fiscales, mientras el tercero soportaba la carga tributaria.",
-          "La Ilustración (Voltaire, Rousseau, Montesquieu) promovió ideas de libertad, soberanía popular y separación de poderes.",
-          "La crisis económica, derivada de la deuda por apoyar la independencia de EE.UU. y malas cosechas, provocó hambruna.",
-          "El 14 de julio de 1789, el pueblo tomó la Bastilla, símbolo del poder absoluto monárquico, marcando el inicio de la Revolución.",
-          "En agosto de 1789 se proclamó la Declaración de los Derechos del Hombre y del Ciudadano, base del constitucionalismo moderno."
-        ]
-      ,
-  studyGuide: `## La Revolucion Francesa (1789-1799)
+    studyGuide: `## La Revolucion Francesa (1789-1799)
 
 ### Antecedentes
 
@@ -26499,7 +26486,20 @@ Durante el periodo mas radical, miles fueron ejecutados en la guillotina. El Com
 
 ### Consecuencias
 
-La Revolucion transformo la politica europea: abolio el absolutismo, difundio ideales democraticos, creo el concepto de ciudadania moderna y desato las guerras napoleonicas.`},
+La Revolucion transformo la politica europea: abolio el absolutismo, difundio ideales democraticos, creo el concepto de ciudadania moderna y desato las guerras napoleonicas.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Causas y detonantes de la Revolución Francesa",
+        lines: [
+          "Francia vivía bajo el Antiguo Régimen, dividido en tres estamentos: clero, nobleza y pueblo llano (97% de la población).",
+          "Los primeros dos estamentos gozaban de privilegios fiscales, mientras el tercero soportaba la carga tributaria.",
+          "La Ilustración (Voltaire, Rousseau, Montesquieu) promovió ideas de libertad, soberanía popular y separación de poderes.",
+          "La crisis económica, derivada de la deuda por apoyar la independencia de EE.UU. y malas cosechas, provocó hambruna.",
+          "El 14 de julio de 1789, el pueblo tomó la Bastilla, símbolo del poder absoluto monárquico, marcando el inicio de la Revolución.",
+          "En agosto de 1789 se proclamó la Declaración de los Derechos del Hombre y del Ciudadano, base del constitucionalismo moderno."
+        ]
+      },
       {
         level: "intermedio",
         title: "Fases de la Revolución y ascenso de Napoleón",
@@ -26617,20 +26617,7 @@ La Revolucion transformo la politica europea: abolio el absolutismo, difundio id
     slug: "revoluciones-industriales",
     illustrationSummary: "Primera y segunda revolución industrial: vapor, electricidad, fábricas.",
     tip: "La Revolución Industrial comenzó en Inglaterra (1760). Causas: carbón, hierro, máquina de vapor. Memoriza: Watt (vapor), Arkwright (hiladora), Stephenson (ferrocarril).",
-    theory: [
-      {
-        level: "basico",
-        title: "Origen e inventos de la Revolución Industrial",
-        lines: [
-          "La Revolución Industrial comenzó en Inglaterra hacia 1760 y transformó la producción artesanal en manufactura mecanizada.",
-          "Factores que explican su inicio en Inglaterra: abundancia de carbón y hierro, colonias como mercado, estabilidad política y Revolution Agrícola.",
-          "James Watt perfeccionó la máquina de vapor (1769), fuente de energía que reemplazó al agua y al viento en las fábricas.",
-          "Richard Arkwright inventó la hiladora hidráulica (1769), revolucionando la industria textil y concentrando a los trabajadores en fábricas.",
-          "George Stephenson construyó la primera locomotora de vapor (1814) y abrió la primera línea de ferrocarril pública (1825).",
-          "La mecanización del hilado (Jenny de Hargreaves, 1764) y del tejido (telar mecánico de Cartwright, 1785) transformaron la industria textil."
-        ]
-      ,
-  studyGuide: `## Las Revoluciones Industriales
+    studyGuide: `## Las Revoluciones Industriales
 
 ### Primera Revolucion Industrial (1760-1840)
 
@@ -26650,7 +26637,20 @@ Genero liberalismo economico (Adam Smith), socialismo (Marx), anarquismo (Proudh
 
 ### Consecuencias en America Latina
 
-Las revoluciones afectaron a America Latina como proveedor de materias primas y mercado para manufacturas. La insercion en la economia mundial como periferia genero dependencia, desigualdad y conflictos por tierra y recursos.`},
+Las revoluciones afectaron a America Latina como proveedor de materias primas y mercado para manufacturas. La insercion en la economia mundial como periferia genero dependencia, desigualdad y conflictos por tierra y recursos.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Origen e inventos de la Revolución Industrial",
+        lines: [
+          "La Revolución Industrial comenzó en Inglaterra hacia 1760 y transformó la producción artesanal en manufactura mecanizada.",
+          "Factores que explican su inicio en Inglaterra: abundancia de carbón y hierro, colonias como mercado, estabilidad política y Revolution Agrícola.",
+          "James Watt perfeccionó la máquina de vapor (1769), fuente de energía que reemplazó al agua y al viento en las fábricas.",
+          "Richard Arkwright inventó la hiladora hidráulica (1769), revolucionando la industria textil y concentrando a los trabajadores en fábricas.",
+          "George Stephenson construyó la primera locomotora de vapor (1814) y abrió la primera línea de ferrocarril pública (1825).",
+          "La mecanización del hilado (Jenny de Hargreaves, 1764) y del tejido (telar mecánico de Cartwright, 1785) transformaron la industria textil."
+        ]
+      },
       {
         level: "intermedio",
         title: "Consecuencias sociales: proletariado, burguesía y urbanización",
@@ -26771,20 +26771,7 @@ Las revoluciones afectaron a America Latina como proveedor de materias primas y 
     slug: "imperialismo-y-colonialismo",
     illustrationSummary: "Imperialismo europeo en África y Asia, colonias y dependencia.",
     tip: "El imperialismo (1870-1914) dividió África y Asia. Causas: materias primas, mercados, rivalidades. Memoriza: Conferencia de Berlín (1884), 'carga del hombre blanco'.",
-    theory: [
-      {
-        level: "basico",
-        title: "Qué fue el imperialismo y regiones afectadas",
-        lines: [
-          "El imperialismo fue el dominio político, económico y cultural de las potencias europeas sobre pueblos de África, Asia y Oceanía.",
-          "Se intensificó entre 1870 y 1914, cuando las potencias europeas competían por territorios en un proceso llamado 'reparto del mundo'.",
-          "Las principales potencias imperialistas fueron: Gran Bretaña, Francia, Alemania, Bélgica, Italia, Países Bajos y Portugal.",
-          "En África, el continente fue casi totalmente colonizado excepto Etiopía (que derrotó a Italia en Adwa, 1896) y Liberia.",
-          "En Asia, Gran Bretaña dominaba la India, Francia controlaba Indochina, y Holanda mantenido las Indias Orientales (actual Indonesia).",
-          "El imperialismo también se extendió a Oceanía (Australia, Nueva Zelanda, islas del Pacífico) y a América Latina (influencia económica)."
-        ]
-      ,
-  studyGuide: `## Imperialismo y Colonialismo
+    studyGuide: `## Imperialismo y Colonialismo
 
 ### El Nuevo Imperialismo (1870-1914)
 
@@ -26804,7 +26791,20 @@ Los pueblos colonizados resistieron mediante movimientos de liberacion, rebelion
 
 ### Descolonizacion
 
-Tras la Segunda Guerra Mundial, los movimientos se aceleraron en Asia y Africa. La Conferencia de Bandung (1955) marco el inicio del Tercer Mundo como actor politico.`},
+Tras la Segunda Guerra Mundial, los movimientos se aceleraron en Asia y Africa. La Conferencia de Bandung (1955) marco el inicio del Tercer Mundo como actor politico.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Qué fue el imperialismo y regiones afectadas",
+        lines: [
+          "El imperialismo fue el dominio político, económico y cultural de las potencias europeas sobre pueblos de África, Asia y Oceanía.",
+          "Se intensificó entre 1870 y 1914, cuando las potencias europeas competían por territorios en un proceso llamado 'reparto del mundo'.",
+          "Las principales potencias imperialistas fueron: Gran Bretaña, Francia, Alemania, Bélgica, Italia, Países Bajos y Portugal.",
+          "En África, el continente fue casi totalmente colonizado excepto Etiopía (que derrotó a Italia en Adwa, 1896) y Liberia.",
+          "En Asia, Gran Bretaña dominaba la India, Francia controlaba Indochina, y Holanda mantenido las Indias Orientales (actual Indonesia).",
+          "El imperialismo también se extendió a Oceanía (Australia, Nueva Zelanda, islas del Pacífico) y a América Latina (influencia económica)."
+        ]
+      },
       {
         level: "intermedio",
         title: "Causas económicas, políticas e ideológicas",
@@ -26922,20 +26922,7 @@ Tras la Segunda Guerra Mundial, los movimientos se aceleraron en Asia y Africa. 
     slug: "primera-guerra-mundial",
     illustrationSummary: "Causas, desarrollo y consecuencias de la Primera Guerra Mundial.",
     tip: "La Primera Guerra Mundial (1914-1918) involucró a todas las grandes potencias. Causas: nacionalismo, imperialismos, alianzas. Memoriza: Tratado de Versalles (1919), Liga de Naciones.",
-    theory: [
-      {
-        level: "basico",
-        title: "Causas, bandos y desarrollo de la Gran Guerra",
-        lines: [
-          "La Primera Guerra Mundial (1914-1918) enfrentó a las potencias europeas en el conflicto bélico más grande hasta entonces.",
-          "Causas: nacionalismo exacerbado, imperialismo competitivo, carrera armamentística y sistema de alianzas militares rígidas.",
-          "El detonante fue el asesinato del archiduque Francisco Fernando de Austria-Hungría en Sarajevo (28 junio 1914).",
-          "Bandos: Triple Entente (Francia, Gran Bretaña, Rusia) vs. Potencias Centrales (Alemania, Austria-Hungría, Imperio Otomano).",
-          "Italia inicialmente era de las Potencias Centrales pero cambió de bando en 1915 (Pacto de Londres) y se unió a la Entente.",
-          "EE.UU. entró en 1917 tras los ataques submarinos alemanes y el hundimiento del Lusitania (1915), decidiendo el resultado a favor de la Entente."
-        ]
-      ,
-  studyGuide: `## La Primera Guerra Mundial (1914-1918)
+    studyGuide: `## La Primera Guerra Mundial (1914-1918)
 
 ### Causas
 
@@ -26955,7 +26942,20 @@ Murieron aproximadamente 17 millones de personas. Europa quedo devastada. El Tra
 
 ### Legado
 
-Destruyo imperios, creo nuevos estados, instalo la Sociedad de Naciones y sento bases de conflictos del siglo XX. El trauma se reflejo en arte, literatura y filosofia.`},
+Destruyo imperios, creo nuevos estados, instalo la Sociedad de Naciones y sento bases de conflictos del siglo XX. El trauma se reflejo en arte, literatura y filosofia.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Causas, bandos y desarrollo de la Gran Guerra",
+        lines: [
+          "La Primera Guerra Mundial (1914-1918) enfrentó a las potencias europeas en el conflicto bélico más grande hasta entonces.",
+          "Causas: nacionalismo exacerbado, imperialismo competitivo, carrera armamentística y sistema de alianzas militares rígidas.",
+          "El detonante fue el asesinato del archiduque Francisco Fernando de Austria-Hungría en Sarajevo (28 junio 1914).",
+          "Bandos: Triple Entente (Francia, Gran Bretaña, Rusia) vs. Potencias Centrales (Alemania, Austria-Hungría, Imperio Otomano).",
+          "Italia inicialmente era de las Potencias Centrales pero cambió de bando en 1915 (Pacto de Londres) y se unió a la Entente.",
+          "EE.UU. entró en 1917 tras los ataques submarinos alemanes y el hundimiento del Lusitania (1915), decidiendo el resultado a favor de la Entente."
+        ]
+      },
       {
         level: "intermedio",
         title: "Batallas decisivas y nuevas tecnologías bélicas",
@@ -27071,20 +27071,7 @@ Destruyo imperios, creo nuevos estados, instalo la Sociedad de Naciones y sento 
     slug: "revolucion-rusa",
     illustrationSummary: "Revolución Rusa de 1917: bolcheviques, leninismo, URSS.",
     tip: "La Revolución Rusa (1917) fue comunista. Febrero: cae el Zar. Octubre: Lenin toma el poder. Memoriza: Lenin (1917-1924), Stalin (1924-1953), URSS (1922-1991).",
-    theory: [
-      {
-        level: "basico",
-        title: "Causas y las dos revoluciones de 1917",
-        lines: [
-          "El Imperio Ruso era una monarquía absoluta con profundas desigualdades: una nobleza terrateniente y una masa campesina empobrecida.",
-          "Nicolás II gobernaba de forma autocrática, sin parlamento efectivo, y entró en la Primera Guerra Mundial con graves derrotas.",
-          "En febrero de 1917, huelgas y manifestaciones en Petrogrado obligaron a Nicolás II a abdicar (Revolución de Febrero).",
-          "Se formó un Gobierno Provisional liderado primero por el príncipe Lvov y luego por Alexander Kérenski, que continuó en la guerra.",
-          "En octubre de 1917, Lenin y los bolcheviques tomaron el Palacio de Invierno mediante un golpe armado (Revolución de Octubre).",
-          "Lenin implementó los 'Dekretos de Paz y de Tierra', prometiendo retirada de la guerra y distribución de tierras entre los campesinos."
-        ]
-      ,
-  studyGuide: `## La Revolucion Rusa (1917)
+    studyGuide: `## La Revolucion Rusa (1917)
 
 ### Antecedentes
 
@@ -27104,7 +27091,20 @@ El Ejercito Rojo enfrento al Ejercito Blanco con intervenciones extranjeras. El 
 
 ### Consecuencias
 
-Creo la Union Sovietica (1922), primer estado socialista. Se convirtio en superpotencia tras la Segunda Guerra. Influyo en movimientos de liberacion mundial, incluyendo el Peru.`},
+Creo la Union Sovietica (1922), primer estado socialista. Se convirtio en superpotencia tras la Segunda Guerra. Influyo en movimientos de liberacion mundial, incluyendo el Peru.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Causas y las dos revoluciones de 1917",
+        lines: [
+          "El Imperio Ruso era una monarquía absoluta con profundas desigualdades: una nobleza terrateniente y una masa campesina empobrecida.",
+          "Nicolás II gobernaba de forma autocrática, sin parlamento efectivo, y entró en la Primera Guerra Mundial con graves derrotas.",
+          "En febrero de 1917, huelgas y manifestaciones en Petrogrado obligaron a Nicolás II a abdicar (Revolución de Febrero).",
+          "Se formó un Gobierno Provisional liderado primero por el príncipe Lvov y luego por Alexander Kérenski, que continuó en la guerra.",
+          "En octubre de 1917, Lenin y los bolcheviques tomaron el Palacio de Invierno mediante un golpe armado (Revolución de Octubre).",
+          "Lenin implementó los 'Dekretos de Paz y de Tierra', prometiendo retirada de la guerra y distribución de tierras entre los campesinos."
+        ]
+      },
       {
         level: "intermedio",
         title: "Lenin, guerra civil y ascenso de Stalin",
@@ -27247,20 +27247,7 @@ Creo la Union Sovietica (1922), primer estado socialista. Se convirtio en superp
     slug: "segunda-guerra-mundial",
     illustrationSummary: "Causas, frentes y consecuencias de la Segunda Guerra Mundial.",
     tip: "La Segunda Guerra Mundial (1939-1945) fue la más grande. Bandos: Aliados vs Eje. Memoriza: Hitler (Alemania), Mussolini (Italia), Hiroshima (6 ago 1945).",
-    theory: [
-      {
-        level: "basico",
-        title: "Causas, bandos y principales batallas",
-        lines: [
-          "La Segunda Guerra Mundial (1939-1945) fue el conflicto más devastador de la historia, con más de 60 millones de muertos.",
-          "Causas: ascenso de los totalitarismos (fascismo y nazismo), fracaso de la política de apaciguamiento, Tratado de Versalles y Gran Depresión.",
-          "Bandos: Aliados (EE.UU., URSS, Gran Bretaña, Francia, China) vs. Eje (Alemania, Italia, Japón).",
-          "Alemania invadió Polonia el 1 de septiembre de 1939, dando inicio a la guerra en Europa. Francia cayó en junio de 1940.",
-          "La Batalla de Stalingrado (1942-1943) fue el punto de inflexión en el frente oriental, con la derrota alemana decisiva.",
-          "El Día D (6 junio 1944) fue el desembarco de Normandía, la mayor operación anfibia de la historia, que abrió el frente occidental."
-        ]
-      ,
-  studyGuide: `## La Segunda Guerra Mundial (1939-1945)
+    studyGuide: `## La Segunda Guerra Mundial (1939-1945)
 
 ### Causas
 
@@ -27280,7 +27267,20 @@ Genocidio de 6 millones de judios, gitanos, homosexuales y otros. Auschwitz, Tre
 
 ### Consecuencias
 
-Entre 70 y 85 millones de muertos. Creacion de la ONU, inicio de la Guerra Fria, descolonizacion y establecimiento de Israel. Peru declaro guerra al Eje en 1942.`},
+Entre 70 y 85 millones de muertos. Creacion de la ONU, inicio de la Guerra Fria, descolonizacion y establecimiento de Israel. Peru declaro guerra al Eje en 1942.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Causas, bandos y principales batallas",
+        lines: [
+          "La Segunda Guerra Mundial (1939-1945) fue el conflicto más devastador de la historia, con más de 60 millones de muertos.",
+          "Causas: ascenso de los totalitarismos (fascismo y nazismo), fracaso de la política de apaciguamiento, Tratado de Versalles y Gran Depresión.",
+          "Bandos: Aliados (EE.UU., URSS, Gran Bretaña, Francia, China) vs. Eje (Alemania, Italia, Japón).",
+          "Alemania invadió Polonia el 1 de septiembre de 1939, dando inicio a la guerra en Europa. Francia cayó en junio de 1940.",
+          "La Batalla de Stalingrado (1942-1943) fue el punto de inflexión en el frente oriental, con la derrota alemana decisiva.",
+          "El Día D (6 junio 1944) fue el desembarco de Normandía, la mayor operación anfibia de la historia, que abrió el frente occidental."
+        ]
+      },
       {
         level: "intermedio",
         title: "Holocausto, bombas atómicas y juicios de Núremberg",
@@ -27400,20 +27400,7 @@ Entre 70 y 85 millones de muertos. Creacion de la ONU, inicio de la Guerra Fria,
     slug: "guerra-fria-y-globalizacion",
     illustrationSummary: "Guerra Fría: OTAN vs Pacto de Varsovia, caída del muro, globalización.",
     tip: "La Guerra Fría (1947-1991) fue EE.UU. vs URSS. Memoriza: Plan Marshall, OTAN, Pacto de Varsovia, caída del muro de Berlín (1989), disolución URSS (1991).",
-    theory: [
-      {
-        level: "basico",
-        title: "Qué fue la Guerra Fría, bandos y eventos clave",
-        lines: [
-          "La Guerra Fría (1947-1991) fue el enfrentamiento político, ideológico y militar entre EE.UU. (capitalismo) y URSS (comunismo) sin guerra directa.",
-          "Bandos: OTAN (1949, alianza occidental liderada por EE.UU.) vs. Pacto de Varsovia (1955, alianza socialista liderada por URSS).",
-          "La Doctrina Truman (1947) estableció la contención del comunismo como política exterior de EE.UU.",
-          "El Plan Marshall (1948) ayudó a reconstruir Europa occidental e impidió la expansión comunista en la región.",
-          "El Bloqueo de Berlín (1948-1949) fue la primera gran crisis: la URSS bloqueó el acceso terrestre a Berlín Occidental.",
-          "Los eventos clave incluyen: crisis de los misiles de Cuba (1962), caída del Muro de Berlín (1989) y disolución de la URSS (1991)."
-        ]
-      ,
-  studyGuide: `## Guerra Fria y Globalizacion
+    studyGuide: `## Guerra Fria y Globalizacion
 
 ### La Guerra Fria (1947-1991)
 
@@ -27433,7 +27420,20 @@ Dictaduras militares anticomunistas, Revolucion Cubana y Guerra Fria en Centroam
 
 ### El Peru en la Guerra Fria
 
-La dictadura de Velasco, guerra contra Sendero e intervencion estadounidense. La economia oriento alternadamente hacia mercado libre y proteccionismo estatal.`},
+La dictadura de Velasco, guerra contra Sendero e intervencion estadounidense. La economia oriento alternadamente hacia mercado libre y proteccionismo estatal.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Qué fue la Guerra Fría, bandos y eventos clave",
+        lines: [
+          "La Guerra Fría (1947-1991) fue el enfrentamiento político, ideológico y militar entre EE.UU. (capitalismo) y URSS (comunismo) sin guerra directa.",
+          "Bandos: OTAN (1949, alianza occidental liderada por EE.UU.) vs. Pacto de Varsovia (1955, alianza socialista liderada por URSS).",
+          "La Doctrina Truman (1947) estableció la contención del comunismo como política exterior de EE.UU.",
+          "El Plan Marshall (1948) ayudó a reconstruir Europa occidental e impidió la expansión comunista en la región.",
+          "El Bloqueo de Berlín (1948-1949) fue la primera gran crisis: la URSS bloqueó el acceso terrestre a Berlín Occidental.",
+          "Los eventos clave incluyen: crisis de los misiles de Cuba (1962), caída del Muro de Berlín (1989) y disolución de la URSS (1991)."
+        ]
+      },
       {
         level: "intermedio",
         title: "Crisis de los misiles, carrera espacial y descolonización",
@@ -27571,20 +27571,7 @@ const historiaModulesPart4: CourseModule[] = [
     slug: "cultura-wari-tiahuanaco",
     illustrationSummary: "Línea de tiempo o mapa histórico del tema Cultura Wari Tiahuanaco. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "Wari y Tiwanaku fueron los primeros imperios expansionistas del mundo andino, anteriores a los incas.",
-    theory: [
-      {
-        level: "basico",
-        title: "Los dos grandes imperios tempranos",
-        lines: [
-          "El Imperio Wari se desarrolló entre los años 550 y 1000 d.C. en la sierra central del Perú.",
-          "Su capital se ubicaba en la ciudad de Wari, actualmente en el departamento de Ayacucho.",
-          "El Imperio Tiwanaku surgió en la meseta del Collao, cerca del lago Titicaca, en Bolivia.",
-          "Ambos imperios coexistieron durante varios siglos y dominaron vastos territorios.",
-          "Los Wari controlaron la costa, sierra y parte de la selva del antiguo Perú.",
-          "Tiwanaku extendió su influencia desde el sur de Perú hasta Bolivia, Chile y Argentina."
-        ]
-      ,
-  studyGuide: `## Cultura Wari y Tiahuanaco
+    studyGuide: `## Cultura Wari y Tiahuanaco
 
 ### La Cultura Wari (600-1000 d.C.)
 
@@ -27612,7 +27599,20 @@ Ambas colapsaron alrededor del 1000 d.C., posiblemente por sequias y agotamiento
 
 ### Figuras y sitios
 
-Wari: ciudad de Wari, Pikillacta, Jargampata. Tiahuanaco: Akapana, Puma Punku, monolitos. Ambos son Patrimonio Cultural.`},
+Wari: ciudad de Wari, Pikillacta, Jargampata. Tiahuanaco: Akapana, Puma Punku, monolitos. Ambos son Patrimonio Cultural.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Los dos grandes imperios tempranos",
+        lines: [
+          "El Imperio Wari se desarrolló entre los años 550 y 1000 d.C. en la sierra central del Perú.",
+          "Su capital se ubicaba en la ciudad de Wari, actualmente en el departamento de Ayacucho.",
+          "El Imperio Tiwanaku surgió en la meseta del Collao, cerca del lago Titicaca, en Bolivia.",
+          "Ambos imperios coexistieron durante varios siglos y dominaron vastos territorios.",
+          "Los Wari controlaron la costa, sierra y parte de la selva del antiguo Perú.",
+          "Tiwanaku extendió su influencia desde el sur de Perú hasta Bolivia, Chile y Argentina."
+        ]
+      },
       {
         level: "intermedio",
         title: "Administración y mitmaqkuna",
@@ -27724,20 +27724,7 @@ Wari: ciudad de Wari, Pikillacta, Jargampata. Tiahuanaco: Akapana, Puma Punku, m
     slug: "senorios-regionales",
     illustrationSummary: "Línea de tiempo o mapa histórico del tema Senorios Regionales. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "Tras la caída de Wari y Tiwanaku, surgieron múltiples señoríos independientes que dominaron distintas regiones del Perú.",
-    theory: [
-      {
-        level: "basico",
-        title: "El período de los señoríos",
-        lines: [
-          "Entre los años 1000 y 1400 d.C., el territorio peruano se fragmentó en múltiples señoríos regionales.",
-          "Cada señorío controlaba un territorio específico y mantenía su propia organización política.",
-          "Los principales señoríos se ubicaban en la costa, sierra y valles intermedios del Perú.",
-          "Este período se conoce como el Horizonte Tardío o Intermedio Tardío.",
-          "Los señoríos competían por territorios, recursos y rutas comerciales entre sí.",
-          "La diversidad cultural de este período es una de las más ricas de la historia andina."
-        ]
-      ,
-  studyGuide: `## Senorios Regionales del Intermedio Temprano (600-1200 d.C.)
+    studyGuide: `## Senorios Regionales del Intermedio Temprano (600-1200 d.C.)
 
 ### Contexto historico
 
@@ -27769,7 +27756,20 @@ Cada senorio con economia basada en sus recursos. Red de comercio de obsidiana, 
 
 ### Legado
 
-Demostraron que la complejidad social no requiere estado centralizado. Sus estrategias fueron heredadas por el Tahuantinsuyo.`},
+Demostraron que la complejidad social no requiere estado centralizado. Sus estrategias fueron heredadas por el Tahuantinsuyo.`,
+    theory: [
+      {
+        level: "basico",
+        title: "El período de los señoríos",
+        lines: [
+          "Entre los años 1000 y 1400 d.C., el territorio peruano se fragmentó en múltiples señoríos regionales.",
+          "Cada señorío controlaba un territorio específico y mantenía su propia organización política.",
+          "Los principales señoríos se ubicaban en la costa, sierra y valles intermedios del Perú.",
+          "Este período se conoce como el Horizonte Tardío o Intermedio Tardío.",
+          "Los señoríos competían por territorios, recursos y rutas comerciales entre sí.",
+          "La diversidad cultural de este período es una de las más ricas de la historia andina."
+        ]
+      },
       {
         level: "intermedio",
         title: "Los principales señoríos costeños",
@@ -27886,20 +27886,7 @@ Demostraron que la complejidad social no requiere estado centralizado. Sus estra
     slug: "culturas-costeras-detalladas",
     illustrationSummary: "Línea de tiempo o mapa histórico del tema Culturas Costeras Detalladas. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "Las culturas costeñas desarrollaron obras monumentales como las Huacas de Moche y las Líneas de Nazca sin usar la rueda ni animales de tiro.",
-    theory: [
-      {
-        level: "basico",
-        title: "Las grandes culturas de la costa",
-        lines: [
-          "Los Moche habitaron la costa norte del Perú entre 100 y 700 d.C., construyendo las Huacas del Sol y de la Luna.",
-          "Los Nazca florecieron entre 100 a.C. y 800 d.C. en el valle del río Grande de Nazca.",
-          "Los Chimú dominaron la costa norte entre 900 y 1470 d.C., con su gran capital en Chan Chan.",
-          "Cada cultura desarrolló técnicas agrícolas y artísticas únicas adaptadas a su entorno.",
-          "Las huacas Moche eran estructuras de adobe de enormes dimensiones para ceremonias religiosas.",
-          "Los Nazca son mundialmente famosos por las Líneas y geoglífos del desierto de Nazca."
-        ]
-      ,
-  studyGuide: `## Culturas Costeras Detalladas
+    studyGuide: `## Culturas Costeras Detalladas
 
 ### Mochica (100-700 d.C.)
 
@@ -27923,7 +27910,20 @@ La gente de las nubes en la ceja de selva. Kuelap con murallas de 19 metros. Sar
 
 ### Tumbas Reales
 
-Hallazgos en costa norte con sacrificios, ceramica y metalurgia que demuestran complejidad ritual y politica de las culturas costeras.`},
+Hallazgos en costa norte con sacrificios, ceramica y metalurgia que demuestran complejidad ritual y politica de las culturas costeras.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Las grandes culturas de la costa",
+        lines: [
+          "Los Moche habitaron la costa norte del Perú entre 100 y 700 d.C., construyendo las Huacas del Sol y de la Luna.",
+          "Los Nazca florecieron entre 100 a.C. y 800 d.C. en el valle del río Grande de Nazca.",
+          "Los Chimú dominaron la costa norte entre 900 y 1470 d.C., con su gran capital en Chan Chan.",
+          "Cada cultura desarrolló técnicas agrícolas y artísticas únicas adaptadas a su entorno.",
+          "Las huacas Moche eran estructuras de adobe de enormes dimensiones para ceremonias religiosas.",
+          "Los Nazca son mundialmente famosos por las Líneas y geoglífos del desierto de Nazca."
+        ]
+      },
       {
         level: "intermedio",
         title: "Obras e innovaciones destacadas",
@@ -28041,20 +28041,7 @@ Hallazgos en costa norte con sacrificios, ceramica y metalurgia que demuestran c
     slug: "agricultura-andina",
     illustrationSummary: "Línea de tiempo o mapa histórico del tema Agricultura Andina. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "Los antiguos peruanos domesticaron más de 3,000 variedades de papa y desarrollaron el chuño hace más de 2,000 años.",
-    theory: [
-      {
-        level: "basico",
-        title: "Bases de la agricultura andina",
-        lines: [
-          "Los andes son uno de los centros de origen de la agricultura mundial, con miles de años de desarrollo.",
-          "Los antiguos peruanos domesticaron la papa, la quinua, el maíz, la yuca y muchas otras plantas.",
-          "La ganadería de camélidos (llamas y alpacas) fue fundamental para la economía andina.",
-          "El sistema de andenes o terrazas agrícolas permitió cultivar en las empinadas laderas de los Andes.",
-          "El waru waru o camellón era un sistema de campos elevados rodeados de canales en zonas húmedas.",
-          "Estas técnicas permitieron producir excedentes para sostener grandes poblaciones en zonas difíciles."
-        ]
-      ,
-  studyGuide: `## Agricultura Andina
+    studyGuide: `## Agricultura Andina
 
 ### Sistemas tradicionales
 
@@ -28078,7 +28065,20 @@ El Peru posee biodiversidad invaluable para seguridad alimentaria mundial. Siste
 
 ### Desafios actuales
 
-Cambio climatico, perdida de variedades nativas, migracion rural y falta de asistencia tecnica. Existe interes creciente en revitalizar tecnicas ancestrales.`},
+Cambio climatico, perdida de variedades nativas, migracion rural y falta de asistencia tecnica. Existe interes creciente en revitalizar tecnicas ancestrales.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Bases de la agricultura andina",
+        lines: [
+          "Los andes son uno de los centros de origen de la agricultura mundial, con miles de años de desarrollo.",
+          "Los antiguos peruanos domesticaron la papa, la quinua, el maíz, la yuca y muchas otras plantas.",
+          "La ganadería de camélidos (llamas y alpacas) fue fundamental para la economía andina.",
+          "El sistema de andenes o terrazas agrícolas permitió cultivar en las empinadas laderas de los Andes.",
+          "El waru waru o camellón era un sistema de campos elevados rodeados de canales en zonas húmedas.",
+          "Estas técnicas permitieron producir excedentes para sostener grandes poblaciones en zonas difíciles."
+        ]
+      },
       {
         level: "intermedio",
         title: "Técnicas avanzadas de conservación",
@@ -28193,20 +28193,7 @@ Cambio climatico, perdida de variedades nativas, migracion rural y falta de asis
     slug: "qhapaq-nan-caminos",
     illustrationSummary: "Línea de tiempo o mapa histórico del tema Qhapaq Nan Caminos. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "El Qhapaq Ñan tenía más de 30,000 km y conectaba desde Colombia hasta Chile, siendo una de las mayores obras de ingeniería de la antigüedad.",
-    theory: [
-      {
-        level: "basico",
-        title: "El camino incaico",
-        lines: [
-          "El Qhapaq Ñan era la red de caminos construida por el Imperio Inca que recorría todo el Tahuantinsuyo.",
-          "Su extensión total era de aproximadamente 30,000 kilómetros, desde Colombia hasta Chile.",
-          "El camino conectaba las principales ciudades, centros administrativos y zonas productivas del imperio.",
-          "Fue construido utilizando técnicas de ingeniería avanzada como puentes colgantes y túneles.",
-          "El Qhapaq Ñan permitía el desplazamiento rápido de ejércitos, mensajeros y caravanas de llamas.",
-          "Hoy está declarado Patrimonio Mundial de la Humanidad por la UNESCO desde 2014."
-        ]
-      ,
-  studyGuide: `## El Qhapaq Nan: Los Caminos del Inca
+    studyGuide: `## El Qhapaq Nan: Los Caminos del Inca
 
 ### Extension y magnitud
 
@@ -28230,7 +28217,20 @@ Declarado Patrimonio de la Humanidad por la UNESCO en 2014 como bien transfronte
 
 ### Conservacion y uso actual
 
-Partes se usan como senderos turisticos. Comunidades mantienen tradiciones de conservacion. La construccion moderna amenaza fragmentos historicos.`},
+Partes se usan como senderos turisticos. Comunidades mantienen tradiciones de conservacion. La construccion moderna amenaza fragmentos historicos.`,
+    theory: [
+      {
+        level: "basico",
+        title: "El camino incaico",
+        lines: [
+          "El Qhapaq Ñan era la red de caminos construida por el Imperio Inca que recorría todo el Tahuantinsuyo.",
+          "Su extensión total era de aproximadamente 30,000 kilómetros, desde Colombia hasta Chile.",
+          "El camino conectaba las principales ciudades, centros administrativos y zonas productivas del imperio.",
+          "Fue construido utilizando técnicas de ingeniería avanzada como puentes colgantes y túneles.",
+          "El Qhapaq Ñan permitía el desplazamiento rápido de ejércitos, mensajeros y caravanas de llamas.",
+          "Hoy está declarado Patrimonio Mundial de la Humanidad por la UNESCO desde 2014."
+        ]
+      },
       {
         level: "intermedio",
         title: "Tambos y chasquis",
@@ -28350,20 +28350,7 @@ Partes se usan como senderos turisticos. Comunidades mantienen tradiciones de co
     slug: "economia-incaica",
     illustrationSummary: "Línea de tiempo o mapa histórico del tema Economia Incaica. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "La economía inca no tenía mercados ni dinero: todo era administrado por el Estado bajo el principio de reciprocidad y redistribución.",
-    theory: [
-      {
-        level: "basico",
-        title: "Principios de la economía inca",
-        lines: [
-          "La economía inca se basaba en la propiedad colectiva de la tierra y los recursos.",
-          "No existían mercados ni dinero; el Estado controlaba toda la producción y distribución.",
-          "El principio de reciprocidad guiaba las relaciones económicas entre personas y comunidades.",
-          "La mit'a era un sistema de trabajo obligatorio que cada familia debía al Estado.",
-          "A cambio de la mit'a, el Estado proporcionaba protección, alimentos y servicios a la población.",
-          "Este sistema permitió grandes obras públicas como caminos, terrazas y templos."
-        ]
-      ,
-  studyGuide: `## La Economia Incaica (Tahuantinsuyo)
+    studyGuide: `## La Economia Incaica (Tahuantinsuyo)
 
 ### Caracteristicas generales
 
@@ -28391,7 +28378,20 @@ Tributo en trabajo (mita). Estado acumulaba excedentes en qollqa para emergencia
 
 ### Legado
 
-Demostro sociedad eficiente sin mercado ni moneda. Tecnicas agricolas, gestion del agua y organizacion comunitaria siguen vigentes en comunidades andinas actuales.`},
+Demostro sociedad eficiente sin mercado ni moneda. Tecnicas agricolas, gestion del agua y organizacion comunitaria siguen vigentes en comunidades andinas actuales.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Principios de la economía inca",
+        lines: [
+          "La economía inca se basaba en la propiedad colectiva de la tierra y los recursos.",
+          "No existían mercados ni dinero; el Estado controlaba toda la producción y distribución.",
+          "El principio de reciprocidad guiaba las relaciones económicas entre personas y comunidades.",
+          "La mit'a era un sistema de trabajo obligatorio que cada familia debía al Estado.",
+          "A cambio de la mit'a, el Estado proporcionaba protección, alimentos y servicios a la población.",
+          "Este sistema permitió grandes obras públicas como caminos, terrazas y templos."
+        ]
+      },
       {
         level: "intermedio",
         title: "Almacenamiento y redistribución",
@@ -28531,20 +28531,7 @@ Demostro sociedad eficiente sin mercado ni moneda. Tecnicas agricolas, gestion d
     slug: "guerra-civil-atahualpa",
     illustrationSummary: "Línea de tiempo o mapa histórico del tema Guerra Civil Atahualpa. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "La guerra civil entre Huáscar y Atahualpa debilitó al Tahuantinsuyo justo antes de la llegada de los españoles, facilitando la conquista.",
-    theory: [
-      {
-        level: "basico",
-        title: "La sucesión incaica",
-        lines: [
-          "Tras la muerte de Huayna Capac en 1527, se desató una guerra civil por la sucesión al trono inca.",
-          "Huáscar, hijo legítimo, se enfrentó a su medio hermano Atahualpa, hijo de una princesa quiteña.",
-          "La guerra se desarrolló entre 1529 y 1532, enfrentando a dos ejércitos enormes del Tahuantinsuyo.",
-          "Atahualpa finalmente derrotó a Huáscar y tomó el control del imperio en 1532.",
-          "La guerra civil causó la muerte de cientos de miles de personas y debilitó profundamente al imperio.",
-          "Este debilitamiento permitió que Francisco Pizarro y sus hombres conquistaran el imperio con facilidad."
-        ]
-      ,
-  studyGuide: `## La Guerra Civil de Atahualpa (1529-1532)
+    studyGuide: `## La Guerra Civil de Atahualpa (1529-1532)
 
 ### Causas
 
@@ -28564,7 +28551,20 @@ Perdidas humanas enormes (decenas de miles), debilito administracion, fragmento 
 
 ### Relevancia historica
 
-Demostro fragilidad del sistema sucesorio incaico: falta de regla clara, ausencia de testamento y pugna entre panacas. Este conflicto fue tan determinante como la llegada española para la caida del Tahuantinsuyo.`},
+Demostro fragilidad del sistema sucesorio incaico: falta de regla clara, ausencia de testamento y pugna entre panacas. Este conflicto fue tan determinante como la llegada española para la caida del Tahuantinsuyo.`,
+    theory: [
+      {
+        level: "basico",
+        title: "La sucesión incaica",
+        lines: [
+          "Tras la muerte de Huayna Capac en 1527, se desató una guerra civil por la sucesión al trono inca.",
+          "Huáscar, hijo legítimo, se enfrentó a su medio hermano Atahualpa, hijo de una princesa quiteña.",
+          "La guerra se desarrolló entre 1529 y 1532, enfrentando a dos ejércitos enormes del Tahuantinsuyo.",
+          "Atahualpa finalmente derrotó a Huáscar y tomó el control del imperio en 1532.",
+          "La guerra civil causó la muerte de cientos de miles de personas y debilitó profundamente al imperio.",
+          "Este debilitamiento permitió que Francisco Pizarro y sus hombres conquistaran el imperio con facilidad."
+        ]
+      },
       {
         level: "intermedio",
         title: "La batalla de Quipaipán y sus consecuencias",
@@ -28699,20 +28699,7 @@ Demostro fragilidad del sistema sucesorio incaico: falta de regla clara, ausenci
     slug: "resistencia-manco-inca",
     illustrationSummary: "Línea de tiempo o mapa histórico del tema Resistencia Manco Inca. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "Manco Inca lideró la resistencia inca contra los españoles y fundó el Estado neoinca de Vilcabamba, que resistió hasta 1572.",
-    theory: [
-      {
-        level: "basico",
-        title: "La rebelión de Manco Inca",
-        lines: [
-          "Manco Inca fue nombrado Inca por los españoles tras la captura de Atahualpa en 1533.",
-          "Inicialmente colaboró con los españoles, pero pronto se dio cuenta de sus verdaderas intenciones.",
-          "En 1536, Manco Inca lideró una gran rebelión contra los españoles desde el Cusco.",
-          "Miles de guerreros incas se unieron a la rebelión y sitieron la ciudad del Cusco durante meses.",
-          "Aunque no logró recuperar el Cusco, Manco estableció un gobierno independiente en Vilcabamba.",
-          "La resistencia inca continuó desde Vilcabamba por casi 40 años más."
-        ]
-      ,
-  studyGuide: `## La Resistencia de Manco Inca (1536-1544)
+    studyGuide: `## La Resistencia de Manco Inca (1536-1544)
 
 ### Contexto
 
@@ -28736,7 +28723,20 @@ Manco uso españoles contra otros: se alio con Almagro durante la guerra civil e
 
 ### Legado
 
-Demostro capacidad de resistencia y sento precedente heredado por sucesores. Vilcabamba mantuvo viva la esperanza incaica hasta 1572, ejecucion de Tupac Amaru I.`},
+Demostro capacidad de resistencia y sento precedente heredado por sucesores. Vilcabamba mantuvo viva la esperanza incaica hasta 1572, ejecucion de Tupac Amaru I.`,
+    theory: [
+      {
+        level: "basico",
+        title: "La rebelión de Manco Inca",
+        lines: [
+          "Manco Inca fue nombrado Inca por los españoles tras la captura de Atahualpa en 1533.",
+          "Inicialmente colaboró con los españoles, pero pronto se dio cuenta de sus verdaderas intenciones.",
+          "En 1536, Manco Inca lideró una gran rebelión contra los españoles desde el Cusco.",
+          "Miles de guerreros incas se unieron a la rebelión y sitieron la ciudad del Cusco durante meses.",
+          "Aunque no logró recuperar el Cusco, Manco estableció un gobierno independiente en Vilcabamba.",
+          "La resistencia inca continuó desde Vilcabamba por casi 40 años más."
+        ]
+      },
       {
         level: "intermedio",
         title: "El Estado neoinca de Vilcabamba",
@@ -28852,20 +28852,7 @@ Demostro capacidad de resistencia y sento precedente heredado por sucesores. Vil
     slug: "batalla-cajamarca",
     illustrationSummary: "Línea de tiempo o mapa histórico del tema Batalla Cajamarca. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "La captura de Atahualpa en 1532 fue el momento decisivo que permitio la conquista espanola del Imperio Inca.",
-    theory: [
-      {
-        level: "basico",
-        title: "La Batalla de Cajamarca",
-        lines: [
-          "En noviembre de 1532, Francisco Pizarro llego a Cajamarca con 168 soldados espanoles.",
-          "Atahualpa estaba en Cajamarca tras vencer a Huascar en la guerra civil incaica.",
-          "Los espanoles tendieron una emboscada en la plaza de Cajamarca al atardecer.",
-          "Atahualpa llego sin escolta armada, confiando en su superioridad numerica.",
-          "Los espanoles atacaron por sorpresa, causando una masacre entre la escolta incaica.",
-          "El emperador Atahualpa fue capturado vivo por los espanoles esa noche."
-        ]
-      ,
-  studyGuide: `## La Batalla de Cajamarca (1532)
+    studyGuide: `## La Batalla de Cajamarca (1532)
 
 ### Antecedentes
 
@@ -28889,7 +28876,20 @@ Pese a cumplir promesa, Atahualpa fue ejecutado en julio de 1533. Cargos incluia
 
 ### Significado historico
 
-Cajamarca demostro vulnerabilidad del sistema politico incaico: captura del lider paralizo al imperio. Revelo superioridad militar española en combate campo abierto.`},
+Cajamarca demostro vulnerabilidad del sistema politico incaico: captura del lider paralizo al imperio. Revelo superioridad militar española en combate campo abierto.`,
+    theory: [
+      {
+        level: "basico",
+        title: "La Batalla de Cajamarca",
+        lines: [
+          "En noviembre de 1532, Francisco Pizarro llego a Cajamarca con 168 soldados espanoles.",
+          "Atahualpa estaba en Cajamarca tras vencer a Huascar en la guerra civil incaica.",
+          "Los espanoles tendieron una emboscada en la plaza de Cajamarca al atardecer.",
+          "Atahualpa llego sin escolta armada, confiando en su superioridad numerica.",
+          "Los espanoles atacaron por sorpresa, causando una masacre entre la escolta incaica.",
+          "El emperador Atahualpa fue capturado vivo por los espanoles esa noche."
+        ]
+      },
       {
         level: "intermedio",
         title: "El Rescate y la Prision de Atahualpa",
@@ -28987,20 +28987,7 @@ Cajamarca demostro vulnerabilidad del sistema politico incaico: captura del lide
     slug: "guerras-civiles-incas",
     illustrationSummary: "Línea de tiempo o mapa histórico del tema Guerras Civiles Incas. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "Las guerras civiles entre conquistadores debilitaron el control espanol y permitieron resistencias indigenas.",
-    theory: [
-      {
-        level: "basico",
-        title: "Conflictos entre Conquistadores",
-        lines: [
-          "Tras la conquista del Peru, los espanoles se enfrentaron entre si por el control del territorio.",
-          "Diego de Almagro reclamo el Cusco y entro en conflicto con Francisco Pizarro.",
-          "La Batalla de las Salinas en 1538 enfrento a los dos conquistadores.",
-          "Almagro fue derrotado y ejecutado por orden de Pizarro en el Cusco.",
-          "Hermanos y aliados de Almagro buscaron venganza contra Pizarro.",
-          "En 1541, Almagro el Mozo asesino a Pizarro en su palacio de Lima."
-        ]
-      ,
-  studyGuide: `## Las Guerras Civiles Incas
+    studyGuide: `## Las Guerras Civiles Incas
 
 ### Primera guerra civil (1529-1532)
 
@@ -29020,7 +29007,20 @@ Fueron determinantes. La desunion permitio alianzas españolas con facciones riv
 
 ### Lecciones historicas
 
-Revelan fragilidad del sistema centralizado ante crisis sucesorias. Falta de mecanismo claro, competencia entre panacas y ausencia de testamento crearon conflictos devastadores.`},
+Revelan fragilidad del sistema centralizado ante crisis sucesorias. Falta de mecanismo claro, competencia entre panacas y ausencia de testamento crearon conflictos devastadores.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Conflictos entre Conquistadores",
+        lines: [
+          "Tras la conquista del Peru, los espanoles se enfrentaron entre si por el control del territorio.",
+          "Diego de Almagro reclamo el Cusco y entro en conflicto con Francisco Pizarro.",
+          "La Batalla de las Salinas en 1538 enfrento a los dos conquistadores.",
+          "Almagro fue derrotado y ejecutado por orden de Pizarro en el Cusco.",
+          "Hermanos y aliados de Almagro buscaron venganza contra Pizarro.",
+          "En 1541, Almagro el Mozo asesino a Pizarro en su palacio de Lima."
+        ]
+      },
       {
         level: "intermedio",
         title: "La Rebelion de Gonzalo Pizarro",
@@ -29124,20 +29124,7 @@ Revelan fragilidad del sistema centralizado ante crisis sucesorias. Falta de mec
     slug: "virreinato-temprano",
     illustrationSummary: "Línea de tiempo o mapa histórico del tema Virreinato Temprano. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "El Virreinato del Peru se creo en 1542 y Lima fue designada como su capital y centro administrativo.",
-    theory: [
-      {
-        level: "basico",
-        title: "Creacion del Virreinato",
-        lines: [
-          "El Virreinato del Peru fue creado por Real Decreto del 20 de noviembre de 1542.",
-          "Se establecio para governar los territorios espanoles en America del Sur.",
-          "Lima fue designada como la capital del virreinato por su ubicacion costera.",
-          "El primer virrey fue Blasco Nunez Vela, quien llego al Peru en 1544.",
-          "La Real Audiencia de Lima funciono como tribunal de justicia y gobierno.",
-          "El virrey representaba directamente al rey de España en los territorios americanos."
-        ]
-      ,
-  studyGuide: `## El Virreinato Temprano (1542-1600)
+    studyGuide: `## El Virreinato Temprano (1542-1600)
 
 ### Creacion
 
@@ -29165,7 +29152,20 @@ Congregaron indigenas dispersos en pueblos planificados. Misioneros jesuitas, fr
 
 ### Conflictos iniciales
 
-Rebeliones indigenas y de Hernandez Giron. Tensiones entre Corona, Iglesia y colonos.`},
+Rebeliones indigenas y de Hernandez Giron. Tensiones entre Corona, Iglesia y colonos.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Creacion del Virreinato",
+        lines: [
+          "El Virreinato del Peru fue creado por Real Decreto del 20 de noviembre de 1542.",
+          "Se establecio para governar los territorios espanoles en America del Sur.",
+          "Lima fue designada como la capital del virreinato por su ubicacion costera.",
+          "El primer virrey fue Blasco Nunez Vela, quien llego al Peru en 1544.",
+          "La Real Audiencia de Lima funciono como tribunal de justicia y gobierno.",
+          "El virrey representaba directamente al rey de España en los territorios americanos."
+        ]
+      },
       {
         level: "intermedio",
         title: "Sistema Administrativo Temprano",
@@ -29286,20 +29286,7 @@ Rebeliones indigenas y de Hernandez Giron. Tensiones entre Corona, Iglesia y col
     slug: "encomienda-repartimiento",
     illustrationSummary: "Línea de tiempo o mapa histórico del tema Encomienda Repartimiento. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "La encomienda y el repartimiento fueron los principales sistemas de explotacion laboral indigena en el Peru colonial.",
-    theory: [
-      {
-        level: "basico",
-        title: "El Sistema de Encomienda",
-        lines: [
-          "La encomienda era un sistema donde un espanol recibia el derecho a cobrar tributo a indigenas.",
-          "A cambio, el encomendero debia proteger a los indigenas y evangelizarlos.",
-          "En la practica, la encomienda se convirtio en un instrumento de explotacion laboral.",
-          "Los indigenas eran forzados a trabajar en haciendas, minas y obras publicas.",
-          "Las encomiendas se heredaban dentro de las familias de los conquistadores.",
-          "Los abusos contra los indigenas generaron protestas y resistencia indigena."
-        ]
-      ,
-  studyGuide: `## La Encomienda y el Repartimiento
+    studyGuide: `## La Encomienda y el Repartimiento
 
 ### La Encomienda
 
@@ -29327,7 +29314,20 @@ Gradual eliminada en siglos XVII-XVIII. Leyes Nuevas, Ordanzas de 1591 y Reforma
 
 ### Consecuencias
 
-Explotacion laboral, desculturizacion y muerte indigena. Desestructuracion de comunidades y traumaticidad colectiva persisten.`},
+Explotacion laboral, desculturizacion y muerte indigena. Desestructuracion de comunidades y traumaticidad colectiva persisten.`,
+    theory: [
+      {
+        level: "basico",
+        title: "El Sistema de Encomienda",
+        lines: [
+          "La encomienda era un sistema donde un espanol recibia el derecho a cobrar tributo a indigenas.",
+          "A cambio, el encomendero debia proteger a los indigenas y evangelizarlos.",
+          "En la practica, la encomienda se convirtio en un instrumento de explotacion laboral.",
+          "Los indigenas eran forzados a trabajar en haciendas, minas y obras publicas.",
+          "Las encomiendas se heredaban dentro de las familias de los conquistadores.",
+          "Los abusos contra los indigenas generaron protestas y resistencia indigena."
+        ]
+      },
       {
         level: "intermedio",
         title: "El Repartimiento de Trabajo",
@@ -29425,20 +29425,7 @@ Explotacion laboral, desculturizacion y muerte indigena. Desestructuracion de co
     slug: "economia-colonial-mineria",
     illustrationSummary: "Línea de tiempo o mapa histórico del tema Economia Colonial Mineria. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "La mina de Potosi y el Cerro Rico fueron el motor economico del Imperio Español durante tres siglos.",
-    theory: [
-      {
-        level: "basico",
-        title: "El Cerro Rico de Potosi",
-        lines: [
-          "El Cerro Rico de Potosi fue descubierto en 1545 y se convirtio en la mina mas importante del mundo.",
-          "Potosi era una de las ciudades mas grandes y ricas de America en el siglo XVI.",
-          "La plata extraida de Potosi financio el imperio español durante tres siglos.",
-          "Se estima que Potosi produjo mas de 45.000 toneladas de plata en su historia.",
-          "La mineria fue la actividad economica mas lucrativa de la colonia.",
-          "Las condiciones de trabajo en las minas eran extremadamente peligrosas y mortales."
-        ]
-      ,
-  studyGuide: `## La Economia Colonial: La Mineria
+    studyGuide: `## La Economia Colonial: La Mineria
 
 ### El Cerro Rico de Potosi
 
@@ -29466,7 +29453,20 @@ Cerro de Pasco (plata), Yanahuarca y yacimientos en sierra. Mineria como motor e
 
 ### Consecuencias
 
-Herencia ambivalente: enriquecio a España, financio ciudades, pero causo muerte de cientos de miles y degradacion ambiental.`},
+Herencia ambivalente: enriquecio a España, financio ciudades, pero causo muerte de cientos de miles y degradacion ambiental.`,
+    theory: [
+      {
+        level: "basico",
+        title: "El Cerro Rico de Potosi",
+        lines: [
+          "El Cerro Rico de Potosi fue descubierto en 1545 y se convirtio en la mina mas importante del mundo.",
+          "Potosi era una de las ciudades mas grandes y ricas de America en el siglo XVI.",
+          "La plata extraida de Potosi financio el imperio español durante tres siglos.",
+          "Se estima que Potosi produjo mas de 45.000 toneladas de plata en su historia.",
+          "La mineria fue la actividad economica mas lucrativa de la colonia.",
+          "Las condiciones de trabajo en las minas eran extremadamente peligrosas y mortales."
+        ]
+      },
       {
         level: "intermedio",
         title: "Tecnicas de Extraccion y Comercio",
@@ -29588,20 +29588,7 @@ Herencia ambivalente: enriquecio a España, financio ciudades, pero causo muerte
     slug: "sociedad-colonial-castas",
     illustrationSummary: "Línea de tiempo o mapa histórico del tema Sociedad Colonial Castas. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "La sociedad colonial se organizaba en un estricto sistema de castas basado en el origen racial y la jerarquia social.",
-    theory: [
-      {
-        level: "basico",
-        title: "El Sistema de Castas",
-        lines: [
-          "La sociedad colonial peruana se organizaba en un sistema jerarquico de castas raciales.",
-          "Los espanoles peninsulares ocupaban la cima de la piramide social y politica.",
-          "Los criollos (hijos de espanoles nacidos en America) estaban en el segundo escalon.",
-          "Los mestizos (mezcla de espanol e indigena) formaban una clase intermedia.",
-          "Los indigenas y los esclavos africanos ocupaban los estratos inferiores de la sociedad.",
-          "El color de piel determinaba los derechos y oportunidades de cada persona."
-        ]
-      ,
-  studyGuide: `## La Sociedad Colonial: El Sistema de Castas
+    studyGuide: `## La Sociedad Colonial: El Sistema de Castas
 
 ### Estructura social
 
@@ -29629,7 +29616,20 @@ Clasificacion europea del Renacimiento justificando dominacion española y explo
 
 ### Legado
 
-Herencia profunda de desigualdad y discriminacion que persiste. Privilegios blancos, marginalizacion indigena y afrodescendiente.`},
+Herencia profunda de desigualdad y discriminacion que persiste. Privilegios blancos, marginalizacion indigena y afrodescendiente.`,
+    theory: [
+      {
+        level: "basico",
+        title: "El Sistema de Castas",
+        lines: [
+          "La sociedad colonial peruana se organizaba en un sistema jerarquico de castas raciales.",
+          "Los espanoles peninsulares ocupaban la cima de la piramide social y politica.",
+          "Los criollos (hijos de espanoles nacidos en America) estaban en el segundo escalon.",
+          "Los mestizos (mezcla de espanol e indigena) formaban una clase intermedia.",
+          "Los indigenas y los esclavos africanos ocupaban los estratos inferiores de la sociedad.",
+          "El color de piel determinaba los derechos y oportunidades de cada persona."
+        ]
+      },
       {
         level: "intermedio",
         title: "Mujeres en la Sociedad Colonial",
@@ -29743,20 +29743,7 @@ Herencia profunda de desigualdad y discriminacion que persiste. Privilegios blan
     slug: "contrabando-colonial",
     illustrationSummary: "Línea de tiempo o mapa histórico del tema Contrabando Colonial. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "El contrabando europeo debilito los ingresos de la Corona española y fomento economias ilegales en America.",
-    theory: [
-      {
-        level: "basico",
-        title: "El Comercio Ilegal en America",
-        lines: [
-          "El comercio colonial estaba reservado exclusivamente para España por las Leyes de Indias.",
-          "Los paises europeos como Holanda, Inglaterra y Portugal realizaron contrabando en America.",
-          "El contrabando se realizaba a traves de puertos no autorizados en las costas americanas.",
-          "Los productos extranjeros llegaban a precios mas bajos que los productos españoles.",
-          "El contrabando era generalizado y contaba con la complicidad de funcionarios coloniales.",
-          "La Corona española intento combater el contrabando pero sin exito significativo."
-        ]
-      ,
-  studyGuide: `## El Contrabando Colonial
+    studyGuide: `## El Contrabando Colonial
 
 ### El monopolio comercial
 
@@ -29784,7 +29771,20 @@ Patrullas costeras, inspecciones, castigos. Corrupcion y extension del litoral i
 
 ### Significado historico
 
-Revela limites del monopolio español. Economia mas diversa e interconectada de lo admitido. Sento bases de integracion en economia mundial.`},
+Revela limites del monopolio español. Economia mas diversa e interconectada de lo admitido. Sento bases de integracion en economia mundial.`,
+    theory: [
+      {
+        level: "basico",
+        title: "El Comercio Ilegal en America",
+        lines: [
+          "El comercio colonial estaba reservado exclusivamente para España por las Leyes de Indias.",
+          "Los paises europeos como Holanda, Inglaterra y Portugal realizaron contrabando en America.",
+          "El contrabando se realizaba a traves de puertos no autorizados en las costas americanas.",
+          "Los productos extranjeros llegaban a precios mas bajos que los productos españoles.",
+          "El contrabando era generalizado y contaba con la complicidad de funcionarios coloniales.",
+          "La Corona española intento combater el contrabando pero sin exito significativo."
+        ]
+      },
       {
         level: "intermedio",
         title: "Actores del Contrabando",
@@ -29890,20 +29890,7 @@ Revela limites del monopolio español. Economia mas diversa e interconectada de 
     slug: "reformas-borbonicas",
     illustrationSummary: "Línea de tiempo o mapa histórico del tema Reformas Borbonicas. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "Las Reformas Borbonicas (1750-1800) transformaron la administracion colonial y despertaron el sentimiento independentista.",
-    theory: [
-      {
-        level: "basico",
-        title: "Reformas Administrativas",
-        lines: [
-          "Las Reformas Borbonicas fueron un conjunto de cambios implementados por la dinastia Borbon en Espana.",
-          "Se crearon las intendencias para mejorar la recaudacion de impuestos en America.",
-          "El comercio libre reemplazo el monopolio comercial, permitiendo mas intercambio comercial.",
-          "Se expulso a los jesuitas de America en 1767, confiscando sus propiedades.",
-          "Se fortalecio el poder del virrey y se redujo la influencia de las Audiencias.",
-          "Las reformas buscaron modernizar la administracion colonial para maximizar las ganancias."
-        ]
-      ,
-  studyGuide: `## Las Reformas Borbonicas (1700-1800)
+    studyGuide: `## Las Reformas Borbonicas (1700-1800)
 
 ### Contexto historico
 
@@ -29931,7 +29918,20 @@ Tupac Amaru II (1780-1781) y Comuneros de Asuara (1781). Aunque derrotadas, demo
 
 ### Consecuencias
 
-Modernizaron administracion pero no evitaron crisis. Tension criollos/españoles, descontento indigena e ideas ilustradas prepararon guerras de independencia.`},
+Modernizaron administracion pero no evitaron crisis. Tension criollos/españoles, descontento indigena e ideas ilustradas prepararon guerras de independencia.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Reformas Administrativas",
+        lines: [
+          "Las Reformas Borbonicas fueron un conjunto de cambios implementados por la dinastia Borbon en Espana.",
+          "Se crearon las intendencias para mejorar la recaudacion de impuestos en America.",
+          "El comercio libre reemplazo el monopolio comercial, permitiendo mas intercambio comercial.",
+          "Se expulso a los jesuitas de America en 1767, confiscando sus propiedades.",
+          "Se fortalecio el poder del virrey y se redujo la influencia de las Audiencias.",
+          "Las reformas buscaron modernizar la administracion colonial para maximizar las ganancias."
+        ]
+      },
       {
         level: "intermedio",
         title: "Impacto en la Sociedad Colonial",
@@ -30033,20 +30033,7 @@ Modernizaron administracion pero no evitaron crisis. Tension criollos/españoles
     slug: "rebelion-tupac-amaru-ii",
     illustrationSummary: "Línea de tiempo o mapa histórico del tema Rebelion Tupac Amaru Ii. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "Túpac Amaru II inició la rebelión indígena más grande contra el dominio español en los Andes.",
-    theory: [
-      {
-        level: "basico",
-        title: "José Gabriel Condorcanqui",
-        lines: [
-          "José Gabriel Condorcanqui adoptó el nombre de Túpac Amaru II en honor al último inca.",
-          "Era un cacique educado de Tinta, en la provincia de Canchis, con posición económica.",
-          "El 4 de noviembre de 1780 proclamó la rebelión en la plaza de Tinta contra los españoles.",
-          "Su principal reclamo fue la abolición de las mitas y los abusos de los corregidores.",
-          "La rebelión rápidamente se extendió por todo el sur del Perú y el Alto Perú.",
-          "Llegó a comandar un ejército de más de 60.000 indígenas y mestizos unidos."
-        ]
-      ,
-  studyGuide: `## La Rebelion de Tupac Amaru II (1780-1781)
+    studyGuide: `## La Rebelion de Tupac Amaru II (1780-1781)
 
 ### Antecedentes
 
@@ -30070,7 +30057,20 @@ Brutal: miles ejecutados, comunidades destruidas, lideres torturados. Virrey Jau
 
 ### Legado
 
-Simbolo de resistencia indigena e antiimperialista. Influjo en luchas del siglo XIX y movimientos contemporaneos. Grito de Patria o Muerte sigue vigente.`},
+Simbolo de resistencia indigena e antiimperialista. Influjo en luchas del siglo XIX y movimientos contemporaneos. Grito de Patria o Muerte sigue vigente.`,
+    theory: [
+      {
+        level: "basico",
+        title: "José Gabriel Condorcanqui",
+        lines: [
+          "José Gabriel Condorcanqui adoptó el nombre de Túpac Amaru II en honor al último inca.",
+          "Era un cacique educado de Tinta, en la provincia de Canchis, con posición económica.",
+          "El 4 de noviembre de 1780 proclamó la rebelión en la plaza de Tinta contra los españoles.",
+          "Su principal reclamo fue la abolición de las mitas y los abusos de los corregidores.",
+          "La rebelión rápidamente se extendió por todo el sur del Perú y el Alto Perú.",
+          "Llegó a comandar un ejército de más de 60.000 indígenas y mestizos unidos."
+        ]
+      },
       {
         level: "intermedio",
         title: "El sitio del Cusco",
@@ -30177,20 +30177,7 @@ Simbolo de resistencia indigena e antiimperialista. Influjo en luchas del siglo 
     slug: "rebeliones-coloniales",
     illustrationSummary: "Línea de tiempo o mapa histórico del tema Rebeliones Coloniales. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "Antes de Túpac Amaru II hubo múltiples rebeliones indígenas contra el dominio español en el Perú.",
-    theory: [
-      {
-        level: "basico",
-        title: "Juan Santos Atahualpa",
-        lines: [
-          "Juan Santos Atahualpa lideró una rebelión en la selva central del Perú en 1742.",
-          "Se proclamó descendiente de los incas y buscó expulsar a los españoles de la región.",
-          "Estableció un gobierno propio en el Cerro de la Sal, en la selva de Jauja.",
-          "La rebelión se extendió por las montañas de Tarma y Jauja durante más de diez años.",
-          "Los españoles nunca lograron capturarlo, ya que se refugió en la selva profunda.",
-          "Es considerado un héroe de la resistencia indígena en la Amazonía peruana."
-        ]
-      ,
-  studyGuide: `## Las Rebeliones Coloniales
+    studyGuide: `## Las Rebeliones Coloniales
 
 ### Panorama general
 
@@ -30214,7 +30201,20 @@ Sublevaciones en multiples ciudades del sur contra impuestos y autoridad colonia
 
 ### Consecuencias
 
-Herencia de resistencia y conflicto social. Represion genero traumaticas pero sento bases para independencia. Memoria sigue siendo central en identidad nacional.`},
+Herencia de resistencia y conflicto social. Represion genero traumaticas pero sento bases para independencia. Memoria sigue siendo central en identidad nacional.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Juan Santos Atahualpa",
+        lines: [
+          "Juan Santos Atahualpa lideró una rebelión en la selva central del Perú en 1742.",
+          "Se proclamó descendiente de los incas y buscó expulsar a los españoles de la región.",
+          "Estableció un gobierno propio en el Cerro de la Sal, en la selva de Jauja.",
+          "La rebelión se extendió por las montañas de Tarma y Jauja durante más de diez años.",
+          "Los españoles nunca lograron capturarlo, ya que se refugió en la selva profunda.",
+          "Es considerado un héroe de la resistencia indígena en la Amazonía peruana."
+        ]
+      },
       {
         level: "intermedio",
         title: "Túpac Amaru I y Paria",
@@ -30328,20 +30328,7 @@ Herencia de resistencia y conflicto social. Represion genero traumaticas pero se
     slug: "san-martin-bolivar",
     illustrationSummary: "Línea de tiempo o mapa histórico del tema San Martin Bolivar. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "La Conferencia de Guayaquil entre San Martín y Bolívar fue un punto de inflexión en la independencia sudamericana.",
-    theory: [
-      {
-        level: "basico",
-        title: "Cruce de los Andes",
-        lines: [
-          "José de San Martín cruzó los Andes desde Chile en 1820 para liberar al Perú.",
-          "El Ejército de los Andes fue preparado durante dos años en la ciudad de Mendoza.",
-          "El cruce fue una hazaña militar comparable a la de Aníbal por los Alpes europeos.",
-          "San Martín desembarcó en la costa peruana y avanzó estratégicamente hacia Lima.",
-          "Proclamó la independencia del Perú el 28 de julio de 1821 en la capital.",
-          "Se nombró a sí mismo Protector del Perú y gobernó hasta su partida en 1822."
-        ]
-      ,
-  studyGuide: `## San Martin y Bolivar en el Peru
+    studyGuide: `## San Martin y Bolivar en el Peru
 
 ### Manuel Belgrano y primeras incursiones
 
@@ -30365,7 +30352,20 @@ Bolivar asumio dictadura en 1824. Organizo ejercito y concreto campana final. Su
 
 ### Consecuencias
 
-Presencia decisiva para independencia pero genero conflictos politicos. Vacio de poder tras partida leadas a guerras civiles. Heroes nacionales con legados percibidos distinto.`},
+Presencia decisiva para independencia pero genero conflictos politicos. Vacio de poder tras partida leadas a guerras civiles. Heroes nacionales con legados percibidos distinto.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Cruce de los Andes",
+        lines: [
+          "José de San Martín cruzó los Andes desde Chile en 1820 para liberar al Perú.",
+          "El Ejército de los Andes fue preparado durante dos años en la ciudad de Mendoza.",
+          "El cruce fue una hazaña militar comparable a la de Aníbal por los Alpes europeos.",
+          "San Martín desembarcó en la costa peruana y avanzó estratégicamente hacia Lima.",
+          "Proclamó la independencia del Perú el 28 de julio de 1821 en la capital.",
+          "Se nombró a sí mismo Protector del Perú y gobernó hasta su partida en 1822."
+        ]
+      },
       {
         level: "intermedio",
         title: "La Conferencia de Guayaquil",
@@ -30459,20 +30459,7 @@ Presencia decisiva para independencia pero genero conflictos politicos. Vacio de
     slug: "batallas-independencia",
     illustrationSummary: "Línea de tiempo o mapa histórico del tema Batallas Independencia. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "Las batallas de Junín y Ayacucho fueron decisivas para la independencia del Perú y de toda Sudamérica.",
-    theory: [
-      {
-        level: "basico",
-        title: "Junín y Ayacucho",
-        lines: [
-          "La Batalla de Junín se libró el 6 de agosto de 1824 en el altiplano del centro del Perú.",
-          "Fue una carga de caballería sin disparo de arma de fuego, durando solo 45 minutos.",
-          "La victoria patriota en Junín impulsó la campaña del mariscal Sucre hacia el sur.",
-          "La Batalla de Ayacucho tuvo lugar el 9 de diciembre de 1824 en la pampa de la Quinua.",
-          "Fue la batalla definitiva que puso fin al dominio español en todo el continente.",
-          "El virrey La Serna se rindió y se firmó el Acta de Capitulación de Ayacucho."
-        ]
-      ,
-  studyGuide: `## Las Batallas de la Independencia del Peru
+    studyGuide: `## Las Batallas de la Independencia del Peru
 
 ### Panorama general
 
@@ -30496,7 +30483,20 @@ Desaguadero (1823), Ingavi (1841). Region sur como escenario de conflictos perua
 
 ### Consecuencias
 
-Destruyeron orden colonial pero no trajeron estabilidad. Guerras civiles y caudillismo como desafios de republica naciente. Heroes como figuras nacionales.`},
+Destruyeron orden colonial pero no trajeron estabilidad. Guerras civiles y caudillismo como desafios de republica naciente. Heroes como figuras nacionales.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Junín y Ayacucho",
+        lines: [
+          "La Batalla de Junín se libró el 6 de agosto de 1824 en el altiplano del centro del Perú.",
+          "Fue una carga de caballería sin disparo de arma de fuego, durando solo 45 minutos.",
+          "La victoria patriota en Junín impulsó la campaña del mariscal Sucre hacia el sur.",
+          "La Batalla de Ayacucho tuvo lugar el 9 de diciembre de 1824 en la pampa de la Quinua.",
+          "Fue la batalla definitiva que puso fin al dominio español en todo el continente.",
+          "El virrey La Serna se rindió y se firmó el Acta de Capitulación de Ayacucho."
+        ]
+      },
       {
         level: "intermedio",
         title: "Pichincha y Boyacá",
@@ -30594,20 +30594,7 @@ Destruyeron orden colonial pero no trajeron estabilidad. Guerras civiles y caudi
     slug: "constituciones-primitivas",
     illustrationSummary: "Línea de tiempo o mapa histórico del tema Constituciones Primitivas. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "Perú tuvo múltiples constituciones en sus primeros años, reflejando la inestabilidad política de la república.",
-    theory: [
-      {
-        level: "basico",
-        title: "Primeras constituciones",
-        lines: [
-          "La primera constitución peruana fue promulgada en 1823 por el Congreso Constituyente.",
-          "La Constitución de 1826 fue redactada por Simón Bolívar con tendencia centralista.",
-          "Establecía un sistema presidencial vitalicio con un Senado hereditario designado.",
-          "La Constitución de 1828, bajo José de La Mar, restableció el sistema representativo.",
-          "Fue más liberal y limitó los poderes del presidente en comparación con la anterior.",
-          "Estas constituciones reflejaban la lucha constante entre centralismo y federalismo."
-        ]
-      ,
-  studyGuide: `## Las Constituciones Primitivas del Peru
+    studyGuide: `## Las Constituciones Primitivas del Peru
 
 ### Constitucion de 1823
 
@@ -30639,7 +30626,20 @@ Mas avanzada del siglo XX: derechos sociales, jornada 8 horas, protection trabaj
 
 ### Constitucion de 1979
 
-Estado social democratico de derecho, derechos sociales, protection del ambiente. Reemplazada por la de 1993.`},
+Estado social democratico de derecho, derechos sociales, protection del ambiente. Reemplazada por la de 1993.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Primeras constituciones",
+        lines: [
+          "La primera constitución peruana fue promulgada en 1823 por el Congreso Constituyente.",
+          "La Constitución de 1826 fue redactada por Simón Bolívar con tendencia centralista.",
+          "Establecía un sistema presidencial vitalicio con un Senado hereditario designado.",
+          "La Constitución de 1828, bajo José de La Mar, restableció el sistema representativo.",
+          "Fue más liberal y limitó los poderes del presidente en comparación con la anterior.",
+          "Estas constituciones reflejaban la lucha constante entre centralismo y federalismo."
+        ]
+      },
       {
         level: "intermedio",
         title: "Constituciones del siglo XIX",
@@ -30737,20 +30737,7 @@ Estado social democratico de derecho, derechos sociales, protection del ambiente
     slug: "consolidacion-republicana",
     illustrationSummary: "Línea de tiempo o mapa histórico del tema Consolidacion Republicana. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "Los primeros años de la república peruana estuvieron marcados por guerras civiles y luchas por el poder.",
-    theory: [
-      {
-        level: "basico",
-        title: "Agustín Gamarra",
-        lines: [
-          "Agustín Gamarra fue presidente del Perú en dos períodos: 1829-1833 y 1838-1841.",
-          "Era partidario del centralismo y se opuso a la Confederación Perú-Boliviana.",
-          "En su primer gobierno consolidó las fronteras del sur contra influencias bolivianas.",
-          "Impulsó la educación pública y la creación de colegios nacionales en la capital.",
-          "En su segundo período presidió la restauración de la Confederación con victoria militar.",
-          "Murió en batalla en la Guerra contra Bolivia en 1841 en la batalla de Ingavi."
-        ]
-      ,
-  studyGuide: `## La Consolidacion Republicana (1842-1879)
+    studyGuide: `## La Consolidacion Republicana (1842-1879)
 
 ### Estabilizacion institucional
 
@@ -30774,7 +30761,20 @@ Catastrofe mas grande. Perdida de Tarapaca, Tacna y Arica. Ocupacion de Lima. De
 
 ### Consecuencias
 
-Instituciones mas solidas pero pais profundamente afectado. Reconstruction lenta y dolorosa.`},
+Instituciones mas solidas pero pais profundamente afectado. Reconstruction lenta y dolorosa.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Agustín Gamarra",
+        lines: [
+          "Agustín Gamarra fue presidente del Perú en dos períodos: 1829-1833 y 1838-1841.",
+          "Era partidario del centralismo y se opuso a la Confederación Perú-Boliviana.",
+          "En su primer gobierno consolidó las fronteras del sur contra influencias bolivianas.",
+          "Impulsó la educación pública y la creación de colegios nacionales en la capital.",
+          "En su segundo período presidió la restauración de la Confederación con victoria militar.",
+          "Murió en batalla en la Guerra contra Bolivia en 1841 en la batalla de Ingavi."
+        ]
+      },
       {
         level: "intermedio",
         title: "Orbegoso, Benavente y Salaverry",
@@ -30874,20 +30874,7 @@ Instituciones mas solidas pero pais profundamente afectado. Reconstruction lenta
     slug: "guerras-civiles-xix",
     illustrationSummary: "Línea de tiempo o mapa histórico del tema Guerras Civiles Xix. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "Las guerras civiles del siglo XIX peruano fueron causadas por disputas entre centralistas y federales.",
-    theory: [
-      {
-        level: "basico",
-        title: "La Mar vs Gamarra",
-        lines: [
-          "La guerra entre José de La Mar y Agustín Gamarra fue por el control del gobierno en 1829.",
-          "Gamarra derrotó a La Mar en la batalla de Portete de Tarqui el 21 de febrero de 1829.",
-          "La Mar fue depuesto y exiliado al Ecuador donde murió poco después de la derrota.",
-          "Gamarra asumió la presidencia y consolidó su poder mediante la fuerza militar.",
-          "Este conflicto estableció el patrón de luchas entre caudillos militares en la república.",
-          "La guerra mostró la fragilidad de las instituciones recién creadas en el Perú."
-        ]
-      ,
-  studyGuide: `## Las Guerras Civiles del Siglo XIX
+    studyGuide: `## Las Guerras Civiles del Siglo XIX
 
 ### Panorama general
 
@@ -30915,7 +30902,20 @@ Disputas por control de recursos generaron conflictos entre caudillos.
 
 ### Consecuencias
 
-Debilitaron al Peru, impidieron desarrollo y dejaron herencia de violencia politica. Consolidacion solo a finales del siglo, tras Guerra del Pacifico.`},
+Debilitaron al Peru, impidieron desarrollo y dejaron herencia de violencia politica. Consolidacion solo a finales del siglo, tras Guerra del Pacifico.`,
+    theory: [
+      {
+        level: "basico",
+        title: "La Mar vs Gamarra",
+        lines: [
+          "La guerra entre José de La Mar y Agustín Gamarra fue por el control del gobierno en 1829.",
+          "Gamarra derrotó a La Mar en la batalla de Portete de Tarqui el 21 de febrero de 1829.",
+          "La Mar fue depuesto y exiliado al Ecuador donde murió poco después de la derrota.",
+          "Gamarra asumió la presidencia y consolidó su poder mediante la fuerza militar.",
+          "Este conflicto estableció el patrón de luchas entre caudillos militares en la república.",
+          "La guerra mostró la fragilidad de las instituciones recién creadas en el Perú."
+        ]
+      },
       {
         level: "intermedio",
         title: "Guerra contra la Confederación Perú-Boliviana",
@@ -31005,20 +31005,7 @@ Debilitaron al Peru, impidieron desarrollo y dejaron herencia de violencia polit
     slug: "economia-guanera",
     illustrationSummary: "Línea de tiempo o mapa histórico del tema Economia Guanera. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "La economía guanera fue la principal fuente de riqueza del Perú entre 1840 y 1880.",
-    theory: [
-      {
-        level: "basico",
-        title: "Los depósitos de guano",
-        lines: [
-          "El guano era el excremento de aves marinas acumulado durante siglos en las islas costeras.",
-          "Perú poseía las mayores reservas de guano del mundo en las Islas de Chincha y otras islas.",
-          "El guano era un fertilizante natural de altísima calidad para la agricultura europea.",
-          "La explotación del guano comenzó de manera intensiva a partir de 1840.",
-          "Los depósitos generaron enormes ingresos fiscales para el Estado peruano.",
-          "El guano transformó temporalmente la economía del Perú y financió grandes obras públicas."
-        ]
-      ,
-  studyGuide: `## La Economia Guanera
+    studyGuide: `## La Economia Guanera
 
 ### El boom del guano
 
@@ -31042,7 +31029,20 @@ Genero elite oligarquica dominante. Desigualdad social profunda. Modelo exportad
 
 ### Legado
 
-Modernizo el pais pero genero dependencia, corrupcion y desigualdad. Paradigma de economia peruana hasta siglo XXI.`},
+Modernizo el pais pero genero dependencia, corrupcion y desigualdad. Paradigma de economia peruana hasta siglo XXI.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Los depósitos de guano",
+        lines: [
+          "El guano era el excremento de aves marinas acumulado durante siglos en las islas costeras.",
+          "Perú poseía las mayores reservas de guano del mundo en las Islas de Chincha y otras islas.",
+          "El guano era un fertilizante natural de altísima calidad para la agricultura europea.",
+          "La explotación del guano comenzó de manera intensiva a partir de 1840.",
+          "Los depósitos generaron enormes ingresos fiscales para el Estado peruano.",
+          "El guano transformó temporalmente la economía del Perú y financió grandes obras públicas."
+        ]
+      },
       {
         level: "intermedio",
         title: "Contratos fantasma y diplomacia del guano",
@@ -31162,20 +31162,7 @@ Modernizo el pais pero genero dependencia, corrupcion y desigualdad. Paradigma d
     slug: "guerra-pacifico",
     illustrationSummary: "Línea de tiempo o mapa histórico del tema Guerra Pacifico. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "La Guerra del Pacífico (1879-1883) enfrentó a Perú y Bolivia contra Chile por el control del salitre en el desierto de Atacama.",
-    theory: [
-      {
-        level: "basico",
-        title: "Causas de la Guerra del Pacífico",
-        lines: [
-          "La Guerra del Pacífico se libró entre 1879 y 1883 principalmente por el control de los depósitos de salitre y guano.",
-          "Bolivia impuso un impuesto de 10 centavos por quintal de salitre a la empresa chilena Compañía de Salitres de Antofagasta.",
-          "Chile respondió militarmente invadiendo el puerto boliviano de Antofagasta en febrero de 1879.",
-          "Perú se unió al conflicto debido al Tratado de Alianza Defensiva firmado con Bolivia en 1873.",
-          "El desierto de Atacama contenía valiosos yacimientos de salitre que eran la principal fuente de ingresos de la región.",
-          "La riqueza del guano y el salitre atrajo la ambición de las potencias europeas y de Chile hacia el territorio."
-        ]
-      ,
-  studyGuide: `## La Guerra del Pacifico (1879-1883)
+    studyGuide: `## La Guerra del Pacifico (1879-1883)
 
 ### Causas
 
@@ -31199,7 +31186,20 @@ Enero 1881. Fuerzas chilenas entraron sin resistencia. Ciudad saqueada: libros, 
 
 ### Consecuencias
 
-Perdida de territorios ricos, crisis economica profunda, poblacion reducida. Deuda disparada. Reconstruction lenta y sentimiento revanchista.`},
+Perdida de territorios ricos, crisis economica profunda, poblacion reducida. Deuda disparada. Reconstruction lenta y sentimiento revanchista.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Causas de la Guerra del Pacífico",
+        lines: [
+          "La Guerra del Pacífico se libró entre 1879 y 1883 principalmente por el control de los depósitos de salitre y guano.",
+          "Bolivia impuso un impuesto de 10 centavos por quintal de salitre a la empresa chilena Compañía de Salitres de Antofagasta.",
+          "Chile respondió militarmente invadiendo el puerto boliviano de Antofagasta en febrero de 1879.",
+          "Perú se unió al conflicto debido al Tratado de Alianza Defensiva firmado con Bolivia en 1873.",
+          "El desierto de Atacama contenía valiosos yacimientos de salitre que eran la principal fuente de ingresos de la región.",
+          "La riqueza del guano y el salitre atrajo la ambición de las potencias europeas y de Chile hacia el territorio."
+        ]
+      },
       {
         level: "intermedio",
         title: "Batallas navales y terrestres",
@@ -31321,20 +31321,7 @@ Perdida de territorios ricos, crisis economica profunda, poblacion reducida. Deu
     slug: "guerra-pacifico-consecuencias",
     illustrationSummary: "Línea de tiempo o mapa histórico del tema Guerra Pacifico Consecuencias. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "Las consecuencias de la Guerra del Pacífico devastaron al Perú: perdió Tarapacá, sufrió ocupación y tardó décadas en recuperarse económicamente.",
-    theory: [
-      {
-        level: "basico",
-        title: "Pérdidas territoriales del Perú",
-        lines: [
-          "Perú perdió la provincia de Tarapacá de forma permanente tras la firma del Tratado de Ancón en 1883.",
-          "La región sur del país quedó devastada por las batallas y la ocupación militar chilena.",
-          "Arica y Tacna quedaron bajo administración chilena durante más de 40 años antes de resolverse el conflicto.",
-          "El Plebiscito de Tacna fue demorado por ambas naciones durante décadas sin llegar a una solución.",
-          "El Tratado de Lima de 1929 finalmente devolvió Tacna al Perú pero Arica quedó definitivamente en manos chilenas.",
-          "La pérdida territorial significó también la pérdida de importantes recursos mineros y de la riqueza del salitre."
-        ]
-      ,
-  studyGuide: `## Consecuencias de la Guerra del Pacifico
+    studyGuide: `## Consecuencias de la Guerra del Pacifico
 
 ### Perdidas territoriales
 
@@ -31358,7 +31345,20 @@ Tratado de Lima (1929) establecio plebiscito. Realizado en 1925, irregular. Tacn
 
 ### Transformacion politica
 
-Debilito oligarquia limeña. Caudillos militares (Pierola, Cáceres) emergieron. Reconstruction unio temporalmente pero divisiones persistirian.`},
+Debilito oligarquia limeña. Caudillos militares (Pierola, Cáceres) emergieron. Reconstruction unio temporalmente pero divisiones persistirian.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Pérdidas territoriales del Perú",
+        lines: [
+          "Perú perdió la provincia de Tarapacá de forma permanente tras la firma del Tratado de Ancón en 1883.",
+          "La región sur del país quedó devastada por las batallas y la ocupación militar chilena.",
+          "Arica y Tacna quedaron bajo administración chilena durante más de 40 años antes de resolverse el conflicto.",
+          "El Plebiscito de Tacna fue demorado por ambas naciones durante décadas sin llegar a una solución.",
+          "El Tratado de Lima de 1929 finalmente devolvió Tacna al Perú pero Arica quedó definitivamente en manos chilenas.",
+          "La pérdida territorial significó también la pérdida de importantes recursos mineros y de la riqueza del salitre."
+        ]
+      },
       {
         level: "intermedio",
         title: "Consecuencias económicas y sociales",
@@ -31470,20 +31470,7 @@ Debilito oligarquia limeña. Caudillos militares (Pierola, Cáceres) emergieron.
     slug: "generacion-900",
     illustrationSummary: "Línea de tiempo o mapa histórico del tema Generacion 900. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "La Generación del 900 fue un movimiento intelectual y político que surgió contra la oligarquía y el sistema de gobierno de la República Aristocrática.",
-    theory: [
-      {
-        level: "basico",
-        title: "Manuel González Prada y el movimiento",
-        lines: [
-          "Manuel González Prada fue el principal líder intelectual de la Generación del 900 en el Perú.",
-          "Este movimiento intelectual surgió a principios del siglo XX como respuesta a la oligarquía gobernante.",
-          "González Prada criticó duramente la corrupción del gobierno y la explotación de los trabajadores.",
-          "El movimiento buscaba una reforma social profunda que incluyera derechos para los indígenas.",
-          "Las ideas de la Generación del 900 influyeron en movimientos posteriores como el Aprismo.",
-          "González Prada utilizó su pluma para denunciar la injusticia social y la opresión del pueblo."
-        ]
-      ,
-  studyGuide: `## La Generacion del 900
+    studyGuide: `## La Generacion del 900
 
 ### Contexto cultural
 
@@ -31507,7 +31494,20 @@ Los intelectuales incorporaron ideas de la Generacion del 98 espanola, el simbol
 
 ### Consecuencias
 
-La Generacion del 900 sento las bases de la cultura peruana moderna. Sus debates identitarios siguen vigentes. La tension entre tradicion andina y modernidad occidental se convirtio en tema central de la cultura peruana.`},
+La Generacion del 900 sento las bases de la cultura peruana moderna. Sus debates identitarios siguen vigentes. La tension entre tradicion andina y modernidad occidental se convirtio en tema central de la cultura peruana.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Manuel González Prada y el movimiento",
+        lines: [
+          "Manuel González Prada fue el principal líder intelectual de la Generación del 900 en el Perú.",
+          "Este movimiento intelectual surgió a principios del siglo XX como respuesta a la oligarquía gobernante.",
+          "González Prada criticó duramente la corrupción del gobierno y la explotación de los trabajadores.",
+          "El movimiento buscaba una reforma social profunda que incluyera derechos para los indígenas.",
+          "Las ideas de la Generación del 900 influyeron en movimientos posteriores como el Aprismo.",
+          "González Prada utilizó su pluma para denunciar la injusticia social y la opresión del pueblo."
+        ]
+      },
       {
         level: "intermedio",
         title: "Anarquismo y movimientos sociales",
@@ -31623,20 +31623,7 @@ La Generacion del 900 sento las bases de la cultura peruana moderna. Sus debates
     slug: "oligarquia-exportadora",
     illustrationSummary: "Línea de tiempo o mapa histórico del tema Oligarquia Exportadora. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "La República Aristocrática (1895-1930) fue una etapa de dominio de la oligarquía exportadora que modernizó la economía pero excluyó a las mayorías.",
-    theory: [
-      {
-        level: "basico",
-        title: "La paz civil de Piérola",
-        lines: [
-          "Nicolás de Piérola asumió el poder en 1895 tras la Revolución Civil de 1894 contra el gobierno de Cáceres.",
-          "Piérola estableció la paz civil y puso fin a las guerras internas que habían plagado al Perú desde la Guerra del Pacífico.",
-          "Su gobierno modernizó la administración pública y estableció un sistema tributario más eficiente.",
-          "Piérola creó la Corte de Cuentas y profesionalizó la recaudación de impuestos del Estado.",
-          "Su gestión sentó las bases para el crecimiento económico que viviría el Perú en las primeras décadas del siglo XX.",
-          "La oligarquía costeña comenzó a dominar la política nacional a partir de la estabilidad alcanzada con Piérola."
-        ]
-      ,
-  studyGuide: `## La Oligarquia Exportadora (1895-1930)
+    studyGuide: `## La Oligarquia Exportadora (1895-1930)
 
 ### Contexto historico
 
@@ -31668,7 +31655,20 @@ La oligarquia perdio poder durante la crisis de los anos 30. La Depresion de 192
 
 ### Legado
 
-La oligarquia exportadora dejo una herencia de desigualdad social, dependencia economica y debilidad institucional. El modelo extractivo y exportador seguiria siendo una constante en la economia peruana. Los conflictos por tierra y recursos son legados de este periodo.`},
+La oligarquia exportadora dejo una herencia de desigualdad social, dependencia economica y debilidad institucional. El modelo extractivo y exportador seguiria siendo una constante en la economia peruana. Los conflictos por tierra y recursos son legados de este periodo.`,
+    theory: [
+      {
+        level: "basico",
+        title: "La paz civil de Piérola",
+        lines: [
+          "Nicolás de Piérola asumió el poder en 1895 tras la Revolución Civil de 1894 contra el gobierno de Cáceres.",
+          "Piérola estableció la paz civil y puso fin a las guerras internas que habían plagado al Perú desde la Guerra del Pacífico.",
+          "Su gobierno modernizó la administración pública y estableció un sistema tributario más eficiente.",
+          "Piérola creó la Corte de Cuentas y profesionalizó la recaudación de impuestos del Estado.",
+          "Su gestión sentó las bases para el crecimiento económico que viviría el Perú en las primeras décadas del siglo XX.",
+          "La oligarquía costeña comenzó a dominar la política nacional a partir de la estabilidad alcanzada con Piérola."
+        ]
+      },
       {
         level: "intermedio",
         title: "Modernización económica",
@@ -31780,20 +31780,7 @@ La oligarquia exportadora dejo una herencia de desigualdad social, dependencia e
     slug: "crisis-1929",
     illustrationSummary: "Línea de tiempo o mapa histórico del tema Crisis 1929. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "La crisis de 1929 golpeó duramente al Perú: cayeron las exportaciones, aumentó el desempleo y surgieron nuevos movimientos políticos como el APRA.",
-    theory: [
-      {
-        level: "basico",
-        title: "Impacto de la Gran Depresión en el Perú",
-        lines: [
-          "La Gran Depresión de 1929 afectó gravemente la economía peruana al caer la demanda internacional de sus productos de exportación.",
-          "Los precios del algodón, azúcar y caucho se desplomaron, causando quiebras de empresas y desempleo masivo.",
-          "Las exportaciones peruanas se redujeron a la mitad en apenas dos años, devastando la economía nacional.",
-          "El desempleo se disparó en las ciudades costeñas, especialmente en Lima, Callao y Trujillo.",
-          "Los campesinos y obreros fueron los más afectados por la crisis económica y la caída de los salarios.",
-          "La crisis expuso las debilidades de un modelo económico dependiente de la exportación de materias primas."
-        ]
-      ,
-  studyGuide: `## La Crisis de 1929 y sus Efectos en el Peru
+    studyGuide: `## La Crisis de 1929 y sus Efectos en el Peru
 
 ### Contexto internacional
 
@@ -31821,7 +31808,20 @@ Los gobiernos posteriores implementaron politicas de proteccion industrial, sust
 
 ### Consecuencias a largo plazo
 
-La crisis de 1929 transformo la economia y la politica peruana. El modelo de desarrollo basado en exportaciones primarias fue cuestionado. La industrializacion incipiente y el intervencionismo estatal cobraron fuerza. Los movimientos sociales y politicos se reorganizaron.`},
+La crisis de 1929 transformo la economia y la politica peruana. El modelo de desarrollo basado en exportaciones primarias fue cuestionado. La industrializacion incipiente y el intervencionismo estatal cobraron fuerza. Los movimientos sociales y politicos se reorganizaron.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Impacto de la Gran Depresión en el Perú",
+        lines: [
+          "La Gran Depresión de 1929 afectó gravemente la economía peruana al caer la demanda internacional de sus productos de exportación.",
+          "Los precios del algodón, azúcar y caucho se desplomaron, causando quiebras de empresas y desempleo masivo.",
+          "Las exportaciones peruanas se redujeron a la mitad en apenas dos años, devastando la economía nacional.",
+          "El desempleo se disparó en las ciudades costeñas, especialmente en Lima, Callao y Trujillo.",
+          "Los campesinos y obreros fueron los más afectados por la crisis económica y la caída de los salarios.",
+          "La crisis expuso las debilidades de un modelo económico dependiente de la exportación de materias primas."
+        ]
+      },
       {
         level: "intermedio",
         title: "Inestabilidad política y social",
@@ -31957,20 +31957,7 @@ La crisis de 1929 transformo la economia y la politica peruana. El modelo de des
     slug: "segundo-ingenieros",
     illustrationSummary: "Línea de tiempo o mapa histórico del tema Segundo Ingenieros. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "El APRA se fundó en 1930 y la Revolución de Trujillo de 1932 fue un intento fallido de Haya de la Torre de tomar el poder por la fuerza.",
-    theory: [
-      {
-        level: "basico",
-        title: "Víctor Raúl Haya de la Torre",
-        lines: [
-          "Víctor Raúl Haya de la Torre fue el fundador del APRA y una de las figuras políticas más importantes del siglo XX peruano.",
-          "Haya de la Torre fundó el Partido Aprista Peruano en 1930 durante su exilio en México.",
-          "El APRA se presentó como un movimiento antiimperialista y de liberación nacional para las Américas.",
-          "Haya de la Torre propuso la unión de los países latinoamericanos frente al imperialismo estadounidense.",
-          "El APRA ganó rápidamente apoyo entre los estudiantes, obreros y sectores medios urbanos.",
-          "La ideología aprista combinaba elementos del socialismo democrático con el nacionalismo latinoamericano."
-        ]
-      ,
-  studyGuide: `## El Segundo Gobierno de los Ingenieros (1962-1968)
+    studyGuide: `## El Segundo Gobierno de los Ingenieros (1962-1968)
 
 ### Contexto
 
@@ -31998,7 +31985,20 @@ El 3 de octubre de 1968, el general Velasco Alvarado derroco a Belaunde. El golp
 
 ### Legado
 
-El segundo gobierno de Belaunde dejo una estructura vial significativa pero tambien inestabilidad politica. La reforma agraria limitada no resolvio la cuestion de la tierra, lo que lleva al golpe militar de Velasco.`},
+El segundo gobierno de Belaunde dejo una estructura vial significativa pero tambien inestabilidad politica. La reforma agraria limitada no resolvio la cuestion de la tierra, lo que lleva al golpe militar de Velasco.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Víctor Raúl Haya de la Torre",
+        lines: [
+          "Víctor Raúl Haya de la Torre fue el fundador del APRA y una de las figuras políticas más importantes del siglo XX peruano.",
+          "Haya de la Torre fundó el Partido Aprista Peruano en 1930 durante su exilio en México.",
+          "El APRA se presentó como un movimiento antiimperialista y de liberación nacional para las Américas.",
+          "Haya de la Torre propuso la unión de los países latinoamericanos frente al imperialismo estadounidense.",
+          "El APRA ganó rápidamente apoyo entre los estudiantes, obreros y sectores medios urbanos.",
+          "La ideología aprista combinaba elementos del socialismo democrático con el nacionalismo latinoamericano."
+        ]
+      },
       {
         level: "intermedio",
         title: "La Revolución de Trujillo de 1932",
@@ -32111,20 +32111,7 @@ El segundo gobierno de Belaunde dejo una estructura vial significativa pero tamb
     slug: "gobierno-del-45",
     illustrationSummary: "Línea de tiempo o mapa histórico del tema Gobierno Del 45. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "El gobierno de José Luis Bustamante y Rivero (1945-1948) intentó equilibrar la democracia con la influencia del APRA, pero terminó en un golpe militar.",
-    theory: [
-      {
-        level: "basico",
-        title: "Elección de Bustamante y Rivero",
-        lines: [
-          "José Luis Bustamante y Rivero fue elegido presidente en 1945 con el apoyo del Partido Aprista Peruano.",
-          "El APRA junto con el Frente Democrático Nacional ganaron las elecciones contra la coalición conservadora.",
-          "Bustamante era un diplomático de carrera que buscaba gobrar de forma moderada y conciliadora.",
-          "Su gobierno inició con la esperanza de una nueva etapa de estabilidad política y reformas sociales.",
-          "El estilo moderado de Bustamante contrastaba con las demandas radicales del APRA y la oligarquía.",
-          "El nuevo gobierno enfrentó la difícil tarea de conciliar los intereses de sectores opuestos."
-        ]
-      ,
-  studyGuide: `## El Gobierno del 45: Bustamante y Rivero (1945-1948)
+    studyGuide: `## El Gobierno del 45: Bustamante y Rivero (1945-1948)
 
 ### Contexto y eleccion
 
@@ -32156,7 +32143,20 @@ El golpe de 1948 marco el inicio de la dictadura de Odría. El breve periodo dem
 
 ### Legado
 
-El gobierno del 45 demostro las posibilidades y limitaciones de la democracy en un contexto de tensiones sociales profundas. La participacion del APRA en el gobierno, aunque breve, sento precedentes para la futuro participation del partido en la politica legal.`},
+El gobierno del 45 demostro las posibilidades y limitaciones de la democracy en un contexto de tensiones sociales profundas. La participacion del APRA en el gobierno, aunque breve, sento precedentes para la futuro participation del partido en la politica legal.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Elección de Bustamante y Rivero",
+        lines: [
+          "José Luis Bustamante y Rivero fue elegido presidente en 1945 con el apoyo del Partido Aprista Peruano.",
+          "El APRA junto con el Frente Democrático Nacional ganaron las elecciones contra la coalición conservadora.",
+          "Bustamante era un diplomático de carrera que buscaba gobrar de forma moderada y conciliadora.",
+          "Su gobierno inició con la esperanza de una nueva etapa de estabilidad política y reformas sociales.",
+          "El estilo moderado de Bustamante contrastaba con las demandas radicales del APRA y la oligarquía.",
+          "El nuevo gobierno enfrentó la difícil tarea de conciliar los intereses de sectores opuestos."
+        ]
+      },
       {
         level: "intermedio",
         title: "Alianza y conflicto con el APRA",
@@ -32269,20 +32269,7 @@ El gobierno del 45 demostro las posibilidades y limitaciones de la democracy en 
     slug: "dictadura-odria",
     illustrationSummary: "Línea de tiempo o mapa histórico del tema Dictadura Odria. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "La dictadura de Manuel A. Odría (1948-1956) se caracterizó por la represión política, el crecimiento económico y el exilio de sus opositores.",
-    theory: [
-      {
-        level: "basico",
-        title: "La Junta Militar y la represión",
-        lines: [
-          "Manuel A. Odría gobernó el Perú de 1948 a 1956 mediante una dictadura militar represiva.",
-          "La Junta Militar gobernó inicialmente antes de que Odría fuera elegido en elecciones amañadas en 1950.",
-          "Odría persiguió a los opositores políticos, especialmente a los apristas y los comunistas.",
-          "El penal del Callao se llenó de prisioneros políticos durante los primeros años de la dictadura.",
-          "Muchos intelectuales, artistas y políticos se exiliaron en México, Europa y otros países de América.",
-          "La prensa fue censurada y los partidos políticos fueron prohibidos durante el gobierno de Odría."
-        ]
-      ,
-  studyGuide: `## La Dictadura de Manuel A. Odría (1948-1956)
+    studyGuide: `## La Dictadura de Manuel A. Odría (1948-1956)
 
 ### Ascenso al poder
 
@@ -32310,7 +32297,20 @@ Mantuvo estrechos lazos con Estados Unidos en el contexto de la Guerra Fria. Per
 
 ### Legado
 
-La dictadura de Odría dejo una herencia de represion, inestabilidad y debilidad institucional. El APRA, aunque perseguido, se consolido como fuerza politica. La transicion democratica seria conflictiva.`},
+La dictadura de Odría dejo una herencia de represion, inestabilidad y debilidad institucional. El APRA, aunque perseguido, se consolido como fuerza politica. La transicion democratica seria conflictiva.`,
+    theory: [
+      {
+        level: "basico",
+        title: "La Junta Militar y la represión",
+        lines: [
+          "Manuel A. Odría gobernó el Perú de 1948 a 1956 mediante una dictadura militar represiva.",
+          "La Junta Militar gobernó inicialmente antes de que Odría fuera elegido en elecciones amañadas en 1950.",
+          "Odría persiguió a los opositores políticos, especialmente a los apristas y los comunistas.",
+          "El penal del Callao se llenó de prisioneros políticos durante los primeros años de la dictadura.",
+          "Muchos intelectuales, artistas y políticos se exiliaron en México, Europa y otros países de América.",
+          "La prensa fue censurada y los partidos políticos fueron prohibidos durante el gobierno de Odría."
+        ]
+      },
       {
         level: "intermedio",
         title: "Crecimiento económico y obras públicas",
@@ -32424,20 +32424,7 @@ La dictadura de Odría dejo una herencia de represion, inestabilidad y debilidad
     slug: "segundo-belaunder",
     illustrationSummary: "Línea de tiempo o mapa histórico del tema Segundo Belaunder. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "El segundo gobierno de Belaunde (1963-1968) continuo el proyecto modernizador del primer periodo, impulsado por la Alianza para el Progreso, pero fue derrocado por un golpe militar encabezado por el general Juan Velasco Alvarado.",
-    theory: [
-      {
-        level: "basico",
-        title: "La Alianza para el Progreso",
-        lines: [
-          "La Alianza para el Progreso fue un programa de cooperacion economica entre Estados Unidos y America Latina.",
-          "Fue lanzada en 1961 por el presidente John F. Kennedy como respuesta a la Revolucion Cubana.",
-          "Su objetivo principal era promover el desarrollo economico y social para evitar nuevas revoluciones.",
-          "Peru recibio importantes prestamos y ayuda tecnica bajo este programa durante el gobierno de Belaunde.",
-          "Se financiaron obras de infraestructura como carreteras, puentes y centros de salud en todo el pais.",
-          "Sin embargo, muchos criticos senalaron que los beneficios no llegaron equitativamente a toda la poblacion."
-        ]
-      ,
-  studyGuide: `## El Segundo Gobierno de Belaunde (1980-1985)
+    studyGuide: `## El Segundo Gobierno de Belaunde (1980-1985)
 
 ### Eleccion en contexto
 
@@ -32465,7 +32452,20 @@ En 1985, Belaunde perdio las elecciones ante Alan García, del APRA. El agotamie
 
 ### Legado
 
-El segundo gobierno de Belaunde dejo al Peru con una democracia fragil pero activa, una crisis economica profunda y un conflicto armado en crecimiento. La lucha contra Sendero Luminoso se convertiria en el desafio principal de los gobiernos siguientes.`},
+El segundo gobierno de Belaunde dejo al Peru con una democracia fragil pero activa, una crisis economica profunda y un conflicto armado en crecimiento. La lucha contra Sendero Luminoso se convertiria en el desafio principal de los gobiernos siguientes.`,
+    theory: [
+      {
+        level: "basico",
+        title: "La Alianza para el Progreso",
+        lines: [
+          "La Alianza para el Progreso fue un programa de cooperacion economica entre Estados Unidos y America Latina.",
+          "Fue lanzada en 1961 por el presidente John F. Kennedy como respuesta a la Revolucion Cubana.",
+          "Su objetivo principal era promover el desarrollo economico y social para evitar nuevas revoluciones.",
+          "Peru recibio importantes prestamos y ayuda tecnica bajo este programa durante el gobierno de Belaunde.",
+          "Se financiaron obras de infraestructura como carreteras, puentes y centros de salud en todo el pais.",
+          "Sin embargo, muchos criticos senalaron que los beneficios no llegaron equitativamente a toda la poblacion."
+        ]
+      },
       {
         level: "intermedio",
         title: "Las Escuelas Nacionales Unificadas (ENU)",
@@ -32562,20 +32562,7 @@ El segundo gobierno de Belaunde dejo al Peru con una democracia fragil pero acti
     slug: "velasco-reformismo-militar",
     illustrationSummary: "Línea de tiempo o mapa histórico del tema Velasco Reformismo Militar. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "El gobierno de Velasco Alvarado (1968-1975) implemento reformas estructurales radicales: reforma agraria, nacionalizacion de minas, petroleo y banca, y una profunda transformacion del sistema educativo peruano.",
-    theory: [
-      {
-        level: "basico",
-        title: "La Reforma Agraria de Velasco",
-        lines: [
-          "La reforma agraria fue una de las medidas mas importantes del gobierno de Velasco Alvarado.",
-          "Se promulgo la Ley de Reforma Agraria el 24 de junio de 1969 mediante el Decreto Ley No. 17716.",
-          "Se expropiaron las grandes haciendas agricolas para redistribuirlas entre los campesinos.",
-          "Se crearon las Cooperativas Agrarias de Produccion y las Sociedades Agricolas de Interes Social.",
-          "La reforma transformo la estructura de propiedad de la tierra en las zonas costeras y valles intermedios.",
-          "Sin embargo, muchas unidades productivas carecieron de asistencia tecnica y recursos financieros adecuados."
-        ]
-      ,
-  studyGuide: `## El Reformismo Militar de Velasco (1968-1975)
+    studyGuide: `## El Reformismo Militar de Velasco (1968-1975)
 
 ### El golpe y la ideologia
 
@@ -32603,7 +32590,20 @@ La oligarquia terrateniente resistio la reforma. APRA y partidos de izquierda cr
 
 ### El golpe de Morales Bermudez (1975)
 
-El 29 de agosto de 1975, el general Francisco Morales Bermudez derroco a Velasco. El golpe interno marco el fin del reformismo militar radical.`},
+El 29 de agosto de 1975, el general Francisco Morales Bermudez derroco a Velasco. El golpe interno marco el fin del reformismo militar radical.`,
+    theory: [
+      {
+        level: "basico",
+        title: "La Reforma Agraria de Velasco",
+        lines: [
+          "La reforma agraria fue una de las medidas mas importantes del gobierno de Velasco Alvarado.",
+          "Se promulgo la Ley de Reforma Agraria el 24 de junio de 1969 mediante el Decreto Ley No. 17716.",
+          "Se expropiaron las grandes haciendas agricolas para redistribuirlas entre los campesinos.",
+          "Se crearon las Cooperativas Agrarias de Produccion y las Sociedades Agricolas de Interes Social.",
+          "La reforma transformo la estructura de propiedad de la tierra en las zonas costeras y valles intermedios.",
+          "Sin embargo, muchas unidades productivas carecieron de asistencia tecnica y recursos financieros adecuados."
+        ]
+      },
       {
         level: "intermedio",
         title: "Nacionalizacion de Recursos Estrategicos",
@@ -32700,20 +32700,7 @@ El 29 de agosto de 1975, el general Francisco Morales Bermudez derroco a Velasco
     slug: "velasco-consecuencias",
     illustrationSummary: "Línea de tiempo o mapa histórico del tema Velasco Consecuencias. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "Las reformas de Velasco transformaron la estructura social peruana, creando nuevos sectores sociales, pero tambien generaron tensiones internas en las fuerzas armadas que llevaron a su reemplazo por Morales Bermudez en 1975.",
-    theory: [
-      {
-        level: "basico",
-        title: "Nuevos Sectores Sociales",
-        lines: [
-          "Las reformas de Velasco Alvarado generaron la aparicion de nuevos sectores sociales en el Peru.",
-          "Los campesinos que recibieron tierras se organizaron en cooperativas y comunidades campesinas.",
-          "La clase media crecio con la expansion del empleo publico y la inversion estatal en servicios.",
-          "Los sectores obreros fortalecieron su organizacion sindical bajo el amparo de las reformas laborales.",
-          "La reforma educativa permitio el acceso masivo de estudiantes de sectores populares a la educacion superior.",
-          "Estos cambios transformaron el panorama social peruano durante las decadas de 1970 y 1980."
-        ]
-      ,
-  studyGuide: `## Consecuencias del Reformismo Militar de Velasco
+    studyGuide: `## Consecuencias del Reformismo Militar de Velasco
 
 ### Transformacion agraria
 
@@ -32737,7 +32724,20 @@ Peru mantuvo politica de no alineamiento. Se acerco a Cuba, China y paises del T
 
 ### Legado a largo plazo
 
-La reforma de Velasco dejo una huella profunda. Aunque las cooperativas fracasaron economicamente, la distribucion de tierra fue permanente. El debate sobre reforma agraria sigue vigente.`},
+La reforma de Velasco dejo una huella profunda. Aunque las cooperativas fracasaron economicamente, la distribucion de tierra fue permanente. El debate sobre reforma agraria sigue vigente.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Nuevos Sectores Sociales",
+        lines: [
+          "Las reformas de Velasco Alvarado generaron la aparicion de nuevos sectores sociales en el Peru.",
+          "Los campesinos que recibieron tierras se organizaron en cooperativas y comunidades campesinas.",
+          "La clase media crecio con la expansion del empleo publico y la inversion estatal en servicios.",
+          "Los sectores obreros fortalecieron su organizacion sindical bajo el amparo de las reformas laborales.",
+          "La reforma educativa permitio el acceso masivo de estudiantes de sectores populares a la educacion superior.",
+          "Estos cambios transformaron el panorama social peruano durante las decadas de 1970 y 1980."
+        ]
+      },
       {
         level: "intermedio",
         title: "El Rol Militar en la Economia",
@@ -32834,20 +32834,7 @@ La reforma de Velasco dejo una huella profunda. Aunque las cooperativas fracasar
     slug: "morales-bermudez",
     illustrationSummary: "Línea de tiempo o mapa histórico del tema Morales Bermudez. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "El gobierno de Morales Bermudez (1975-1980) enfrento una grave crisis economica con hiperinflacion, presiones sociales crecientes y el inicio de la insurgencia senderista que marcaria la historia del pais.",
-    theory: [
-      {
-        level: "basico",
-        title: "La Crisis Economica",
-        lines: [
-          "El gobierno de Morales Bermudez heredo una economia en crisis tras las reformas de Velasco.",
-          "Los precios internacionales del petroleo y otros productos de exportacion cayeron dramaticamente.",
-          "La deuda externa peruana crecio de manera alarmante durante este periodo.",
-          "Se implementaron programas de ajuste estructural respaldados por el Fondo Monetario Internacional.",
-          "La inflacion se acelero alcanzando niveles preocupantes para la estabilidad economica del pais.",
-          "Los salarios reales de los trabajadores se deterioraron significativamente durante la decada de 1970."
-        ]
-      ,
-  studyGuide: `## El Gobierno de Francisco Morales Bermudez (1975-1980)
+    studyGuide: `## El Gobierno de Francisco Morales Bermudez (1975-1980)
 
 ### El golpe y la transicion
 
@@ -32875,7 +32862,20 @@ La economia peruana entro en crisis a finales de los anos 70. La deuda externa a
 
 ### Legado
 
-Morales Bermudez dejo al Peru con una economia debilitada, un conflicto armado en crecimiento y una democracia fragil pero restaurada. La Constitucion de 1979 seria la base legal de la transicion democratica.`},
+Morales Bermudez dejo al Peru con una economia debilitada, un conflicto armado en crecimiento y una democracia fragil pero restaurada. La Constitucion de 1979 seria la base legal de la transicion democratica.`,
+    theory: [
+      {
+        level: "basico",
+        title: "La Crisis Economica",
+        lines: [
+          "El gobierno de Morales Bermudez heredo una economia en crisis tras las reformas de Velasco.",
+          "Los precios internacionales del petroleo y otros productos de exportacion cayeron dramaticamente.",
+          "La deuda externa peruana crecio de manera alarmante durante este periodo.",
+          "Se implementaron programas de ajuste estructural respaldados por el Fondo Monetario Internacional.",
+          "La inflacion se acelero alcanzando niveles preocupantes para la estabilidad economica del pais.",
+          "Los salarios reales de los trabajadores se deterioraron significativamente durante la decada de 1970."
+        ]
+      },
       {
         level: "intermedio",
         title: "El Giro a la Izquierda",
@@ -32972,20 +32972,7 @@ Morales Bermudez dejo al Peru con una economia debilitada, un conflicto armado e
     slug: "sendero-origenes",
     illustrationSummary: "Línea de tiempo o mapa histórico del tema Sendero Origenes. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "Sendero Luminoso se origino en la Universidad Nacional de San Cristobal de Huamanga de Ayacucho, donde Abimael Guzman (Presidente Gonzalo) desarrollo su ideologia maoista durante las decadas de 1960 y 1970.",
-    theory: [
-      {
-        level: "basico",
-        title: "Abimael Guzman y el Maoismo",
-        lines: [
-          "Abimael Guzman Reynoso fue un profesor universitario nacido en 1934 en Arequipa.",
-          "Se unio al Partido Comunista Peruano en la decada de 1960 y adopto el maoismo como ideologia.",
-          "El maoismo es una interpretacion del marxismo-leninismo basada en las ideas de Mao Zedong.",
-          "Guzman creia que una revolucion agraria liderada por el campesinado podia transformar Peru.",
-          "Encontro en la Universidad de Huamanga (Ayacucho) un terreno fertil para difundir sus ideas.",
-          "Sus seguidores lo llamaban Presidente Gonzalo y lo consideraban la cuarta espada del comunismo."
-        ]
-      ,
-  studyGuide: `## Sendero Luminoso: Origenes
+    studyGuide: `## Sendero Luminoso: Origenes
 
 ### Fundacion
 
@@ -33009,7 +32996,20 @@ Sendero se expandio rapidamente por la sierra sur: Ayacucho, Huancavelica, Apuri
 
 ### Primeras victorias
 
-Los primeros años de lucha armada fueron exitosos para Sendero. Las fuerzas del Estado estaban desorganizadas y no supieron responder a la guerrilla. Sendero controlo extensas zonas rurales y establecio "zonas liberadas".`},
+Los primeros años de lucha armada fueron exitosos para Sendero. Las fuerzas del Estado estaban desorganizadas y no supieron responder a la guerrilla. Sendero controlo extensas zonas rurales y establecio "zonas liberadas".`,
+    theory: [
+      {
+        level: "basico",
+        title: "Abimael Guzman y el Maoismo",
+        lines: [
+          "Abimael Guzman Reynoso fue un profesor universitario nacido en 1934 en Arequipa.",
+          "Se unio al Partido Comunista Peruano en la decada de 1960 y adopto el maoismo como ideologia.",
+          "El maoismo es una interpretacion del marxismo-leninismo basada en las ideas de Mao Zedong.",
+          "Guzman creia que una revolucion agraria liderada por el campesinado podia transformar Peru.",
+          "Encontro en la Universidad de Huamanga (Ayacucho) un terreno fertil para difundir sus ideas.",
+          "Sus seguidores lo llamaban Presidente Gonzalo y lo consideraban la cuarta espada del comunismo."
+        ]
+      },
       {
         level: "intermedio",
         title: "La Universidad de Huamanga",
@@ -33106,20 +33106,7 @@ Los primeros años de lucha armada fueron exitosos para Sendero. Las fuerzas del
     slug: "sendero-expansion",
     illustrationSummary: "Línea de tiempo o mapa histórico del tema Sendero Expansion. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "Sendero Luminoso inicio su campana violenta en 1980 con el ataque a Chuschi, cometio la masacre de Lucanamarca en 1983 y desato una guerra terrorista contra el Estado peruano con atentados de bomba en las principales ciudades.",
-    theory: [
-      {
-        level: "basico",
-        title: "El Ataque a Chuschi (1980)",
-        lines: [
-          "El 17 de mayo de 1980, Sendero Luminoso realizo su primer ataque en Chuschi, Ayacucho.",
-          "Los subversivos quemaron las cajas electorales el dia de las elecciones presidenciales.",
-          "Este acto simbolico marco el inicio oficial de la lucha armada del grupo terrorista.",
-          "El gobierno del primer Belaunde subestimo la amenaza y califico los hechos como un incidente menor.",
-          "Chuschi fue elegido como escenario por ser proximo a la Universidad de Huamanga, centro de la ideologia senderista.",
-          "Este primer acto de violencia paso desapercibido para la mayoria de la opinion publica nacional."
-        ]
-      ,
-  studyGuide: `## Sendero Luminoso: Expansion
+    studyGuide: `## Sendero Luminoso: Expansion
 
 ### Crecimiento (1980-1985)
 
@@ -33143,7 +33130,20 @@ En junio de 1983, Sendero y el ejercito se enfrentaron en la ciudad de Uchiza (A
 
 ### Reacciones internacionales
 
-La violencia en Peru genero preocupacion internacional. Organizaciones de derechos humanos documentaron abusos de ambas partes. El gobierno peruano busco apoyo de Estados Unidos en la lucha contra Sendero.`},
+La violencia en Peru genero preocupacion internacional. Organizaciones de derechos humanos documentaron abusos de ambas partes. El gobierno peruano busco apoyo de Estados Unidos en la lucha contra Sendero.`,
+    theory: [
+      {
+        level: "basico",
+        title: "El Ataque a Chuschi (1980)",
+        lines: [
+          "El 17 de mayo de 1980, Sendero Luminoso realizo su primer ataque en Chuschi, Ayacucho.",
+          "Los subversivos quemaron las cajas electorales el dia de las elecciones presidenciales.",
+          "Este acto simbolico marco el inicio oficial de la lucha armada del grupo terrorista.",
+          "El gobierno del primer Belaunde subestimo la amenaza y califico los hechos como un incidente menor.",
+          "Chuschi fue elegido como escenario por ser proximo a la Universidad de Huamanga, centro de la ideologia senderista.",
+          "Este primer acto de violencia paso desapercibido para la mayoria de la opinion publica nacional."
+        ]
+      },
       {
         level: "intermedio",
         title: "La Masacre de Lucanamarca (1983)",
@@ -33240,20 +33240,7 @@ La violencia en Peru genero preocupacion internacional. Organizaciones de derech
     slug: "crisis-80s",
     illustrationSummary: "Línea de tiempo o mapa histórico del tema Crisis 80s. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "La decada de 1980 represento una de las peores crisis de la historia peruana: hiperinflacion descontrolada, guerra interna contra Sendero Luminoso y un desastre economico sin precedentes bajo el gobierno de Alan Garcia (1985-1990).",
-    theory: [
-      {
-        level: "basico",
-        title: "Hiperinflacion y Colapso Economico",
-        lines: [
-          "La inflacion en el Peru alcanzo niveles estratosfericos durante la decada de 1980.",
-          "En 1989, la inflacion anual supero el 3,000 por ciento, destruyendo los ahorros de la poblacion.",
-          "El sol peruano fue reemplazado por el inti y luego por el sol de oro como intento de estabilizacion.",
-          "Los precios subian diariamente, y los ciudadanos tenian que cambiar su dinero lo mas rapido posible.",
-          "La escasez de alimentos y productos basicos se volvio una situacion cotidiana para los peruanos.",
-          "La economia informal crecio enormemente como respuesta a la crisis del sistema financiero formal."
-        ]
-      ,
-  studyGuide: `## La Crisis de los Anos 80
+    studyGuide: `## La Crisis de los Anos 80
 
 ### La economia
 
@@ -33281,7 +33268,20 @@ Grupos paramilitares como el Rodrigo Franco aparecieron para combatir a Sendero.
 
 ### Legado
 
-La crisis de los 80 dejo cicatrices profundas: pobreza extrema, trauma social, debilidad institucional y desconfianza politica. Las consecuencias del conflicto armado siguen vigentes.`},
+La crisis de los 80 dejo cicatrices profundas: pobreza extrema, trauma social, debilidad institucional y desconfianza politica. Las consecuencias del conflicto armado siguen vigentes.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Hiperinflacion y Colapso Economico",
+        lines: [
+          "La inflacion en el Peru alcanzo niveles estratosfericos durante la decada de 1980.",
+          "En 1989, la inflacion anual supero el 3,000 por ciento, destruyendo los ahorros de la poblacion.",
+          "El sol peruano fue reemplazado por el inti y luego por el sol de oro como intento de estabilizacion.",
+          "Los precios subian diariamente, y los ciudadanos tenian que cambiar su dinero lo mas rapido posible.",
+          "La escasez de alimentos y productos basicos se volvio una situacion cotidiana para los peruanos.",
+          "La economia informal crecio enormemente como respuesta a la crisis del sistema financiero formal."
+        ]
+      },
       {
         level: "intermedio",
         title: "El Gobierno de Alan Garcia (1985-1990)",
@@ -33378,20 +33378,7 @@ La crisis de los 80 dejo cicatrices profundas: pobreza extrema, trauma social, d
     slug: "fujimori-dictadura",
     illustrationSummary: "Línea de tiempo o mapa histórico del tema Fujimori Dictadura. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "Alberto Fujimori goberno el Peru de 1990 a 2000, iniciando con un autogolpe en 1992, implementando el Plan Verde de estabilizacion economica, capturando a Abimael Guzman, y finalmente cayendo tras el escandalo de los vladivideos.",
-    theory: [
-      {
-        level: "basico",
-        title: "El Autogolpe de 1992",
-        lines: [
-          "El 5 de abril de 1992, Alberto Fujimori disolvio el Congreso de la Republica y asumio poderes extraordinarios.",
-          "Este accion fue conocida como el autogolpe, ya que el presidente desmantelo las instituciones democraticas.",
-          "Fujimori argumento que el Congreso impedia las reformas necesarias para enfrentar la crisis.",
-          "El autogolpe fue respaldado por sectores de la poblacion cansados de la inestabilidad politica.",
-          "Se intervenio el poder judicial y se establecio un regimen de gobierno por decreto.",
-          "El autogolpe fue condenado internacionalmente pero aceptado pragmaticamente por importantes sectores del pais."
-        ]
-      ,
-  studyGuide: `## El Fujimori: Dictadura (1990-2000)
+    studyGuide: `## El Fujimori: Dictadura (1990-2000)
 
 ### Ascenso al poder
 
@@ -33419,7 +33406,20 @@ El regimen reprimio la oposicion: encarcelamiento de opositores, censura de pren
 
 ### La caida
 
-En 2000, tras la revelacion de videos que mostraban la corrupcion del gobierno, Fujimori renuncio y se refugio en Japon. Su regimen fue calificado de dictadura y sus principales funcionarios fueron enjuiciados.`},
+En 2000, tras la revelacion de videos que mostraban la corrupcion del gobierno, Fujimori renuncio y se refugio en Japon. Su regimen fue calificado de dictadura y sus principales funcionarios fueron enjuiciados.`,
+    theory: [
+      {
+        level: "basico",
+        title: "El Autogolpe de 1992",
+        lines: [
+          "El 5 de abril de 1992, Alberto Fujimori disolvio el Congreso de la Republica y asumio poderes extraordinarios.",
+          "Este accion fue conocida como el autogolpe, ya que el presidente desmantelo las instituciones democraticas.",
+          "Fujimori argumento que el Congreso impedia las reformas necesarias para enfrentar la crisis.",
+          "El autogolpe fue respaldado por sectores de la poblacion cansados de la inestabilidad politica.",
+          "Se intervenio el poder judicial y se establecio un regimen de gobierno por decreto.",
+          "El autogolpe fue condenado internacionalmente pero aceptado pragmaticamente por importantes sectores del pais."
+        ]
+      },
       {
         level: "intermedio",
         title: "El Plan Verde y Estabilizacion Economica",
@@ -33516,20 +33516,7 @@ En 2000, tras la revelacion de videos que mostraban la corrupcion del gobierno, 
     slug: "corrupcion-colonial",
     illustrationSummary: "Línea de tiempo o mapa histórico del tema Corrupcion Colonial. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "La corrupcion en el sistema colonial era estructural: los cargos se compraban y vendian (venalidad), lo que garantizaba que el funcionario buscara recuperar su inversion mediante sobornos y malversaciones.",
-    theory: [
-      {
-        level: "basico",
-        title: "La venalidad de cargos en el Imperio Espanol",
-        lines: [
-          "La venalidad era el sistema mediante el cual los cargos publicos en Indias se compraban y vendian libremente.",
-          "Un funcionario pagaba al rey por el derecho a ocupar un puesto, y luego buscaba recuperar esa inversion cobrando sobornos.",
-          "Esto creaba un circulo vicioso: el precio de los cargos subia, la corrupcion aumentaba y la administracion se volvia ineficiente.",
-          "Los visitadores enviados para auditar a los funcionarios corruptos a menudo eran sobornados tambien.",
-          "Los indigenas y mestizos eran las principales victimas de esta corrupcion sistematica.",
-          "La corrupcion colonial es un antecedente directo de los patrones de corrupcion que persisten en el Peru actual."
-        ]
-      ,
-  studyGuide: `## La Corrupcion Colonial
+    studyGuide: `## La Corrupcion Colonial
 
 ### Naturaleza del sistema
 
@@ -33553,7 +33540,20 @@ La encomienda fue fuente de corrupcion: encomenderos excedian sus atributos, cob
 
 ### Consecuencias
 
-La corrupcion colonial debilito al imperio español, genero descontento en las colonias y sento precedentes de impunidad que persistirian en la republica. La corrupcion se convirtio en un problema estructural de la sociedad peruana.`},
+La corrupcion colonial debilito al imperio español, genero descontento en las colonias y sento precedentes de impunidad que persistirian en la republica. La corrupcion se convirtio en un problema estructural de la sociedad peruana.`,
+    theory: [
+      {
+        level: "basico",
+        title: "La venalidad de cargos en el Imperio Espanol",
+        lines: [
+          "La venalidad era el sistema mediante el cual los cargos publicos en Indias se compraban y vendian libremente.",
+          "Un funcionario pagaba al rey por el derecho a ocupar un puesto, y luego buscaba recuperar esa inversion cobrando sobornos.",
+          "Esto creaba un circulo vicioso: el precio de los cargos subia, la corrupcion aumentaba y la administracion se volvia ineficiente.",
+          "Los visitadores enviados para auditar a los funcionarios corruptos a menudo eran sobornados tambien.",
+          "Los indigenas y mestizos eran las principales victimas de esta corrupcion sistematica.",
+          "La corrupcion colonial es un antecedente directo de los patrones de corrupcion que persisten en el Peru actual."
+        ]
+      },
       {
         level: "intermedio",
         title: "El caso Quezada (1613): un escandalo colonial",
@@ -33650,20 +33650,7 @@ La corrupcion colonial debilito al imperio español, genero descontento en las c
     slug: "corrupcion-republicana",
     illustrationSummary: "Línea de tiempo o mapa histórico del tema Corrupcion Republicana. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "La corrupcion republicana tiene raices en la independencia: el saqueo patriota de las arcas coloniales y la deuda externa fraudulenta sentaron las bases de un sistema que privilegiaba a las elites sobre el pueblo.",
-    theory: [
-      {
-        level: "basico",
-        title: "El saqueo patriota y la deuda externa fraudulenta",
-        lines: [
-          "Al inicio de la Republica, las elites criollas saquearon las arcas coloniales sin rendir cuentas a la poblacion.",
-          "La deuda externa se utilizo como mecanismo de enriquecimiento: se contrajeron prestamos con condiciones leoninas que beneficiaban a banqueros extranjeros y locales.",
-          "Los contratos de deuda incluian comisiones ocultas que iban directamente a los bolsillos de los politicos que los firmaban.",
-          "El pueblo peruano pago esta deuda durante decadas sin recibir beneficios significativos a cambio.",
-          "La corrupcion se convirtio en un elemento central del sistema politico republicano.",
-          "Los caudillos militares a menudo gobernaban para enriquecerse personalmente, no para servir al pais."
-        ]
-      ,
-  studyGuide: `## La Corrupcion Republicana
+    studyGuide: `## La Corrupcion Republicana
 
 ### El caudillismo corrupto
 
@@ -33687,7 +33674,20 @@ El regimen de Fujimori (1990-2000) sistematizo la corrupcion. Vladimiro Montesin
 
 ### Consecuencias
 
-La corrupcion republicana debilito las instituciones, genero desconfianza ciudadana e impidio el desarrollo. El patron de corrupcion se perpetuo de gobierno en gobierno, convirtiendose en el principal desafio de la gobernabilidad peruana.`},
+La corrupcion republicana debilito las instituciones, genero desconfianza ciudadana e impidio el desarrollo. El patron de corrupcion se perpetuo de gobierno en gobierno, convirtiendose en el principal desafio de la gobernabilidad peruana.`,
+    theory: [
+      {
+        level: "basico",
+        title: "El saqueo patriota y la deuda externa fraudulenta",
+        lines: [
+          "Al inicio de la Republica, las elites criollas saquearon las arcas coloniales sin rendir cuentas a la poblacion.",
+          "La deuda externa se utilizo como mecanismo de enriquecimiento: se contrajeron prestamos con condiciones leoninas que beneficiaban a banqueros extranjeros y locales.",
+          "Los contratos de deuda incluian comisiones ocultas que iban directamente a los bolsillos de los politicos que los firmaban.",
+          "El pueblo peruano pago esta deuda durante decadas sin recibir beneficios significativos a cambio.",
+          "La corrupcion se convirtio en un elemento central del sistema politico republicano.",
+          "Los caudillos militares a menudo gobernaban para enriquecerse personalmente, no para servir al pais."
+        ]
+      },
       {
         level: "intermedio",
         title: "El gobierno de Pierola y el Consorcio Franco-Peruano",
@@ -33784,20 +33784,7 @@ La corrupcion republicana debilito las instituciones, genero desconfianza ciudad
     slug: "historia-economica-peru",
     illustrationSummary: "Línea de tiempo o mapa histórico del tema Historia Economica Peru. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "La economia peruana ha oscilado entre periodos de bonanza extractiva (guano, salitre, minerales) y crisis profundas, sin lograr una diversificacion productiva sostenible.",
-    theory: [
-      {
-        level: "basico",
-        title: "La era del guano y el salitre",
-        lines: [
-          "Entre 1840 y 1880, el Peru vivio una epoca de bonanza economica gracias a la exportacion de guano de islas y salitre del desierto de Atacama.",
-          "El guano, utilizado como fertilizante, genero enormes ingresos que financiaron la modernizacion del pais.",
-          "El salitre, rico en nitratos, era esencial para la agricultura y la fabricacion de polvora.",
-          "Sin embargo, la mala gestion de estos recursos provoco que la mayoria de la riqueza beneficiara a una elite reducida.",
-          "La Guerra del Pacifico (1879-1884) marco el fin de esta era, con la perdida de los territorios salitreros.",
-          "Peru quedo endeudado y sin sus principales fuentes de ingreso, lo que desencadeno una profunda crisis economica."
-        ]
-      ,
-  studyGuide: `## Historia Economica del Peru
+    studyGuide: `## Historia Economica del Peru
 
 ### Epoca prehispanica
 
@@ -33825,7 +33812,20 @@ Estabilizacion macroeconomica, crecimiento basado en minerales y exportacion. De
 
 ### Desafios
 
-Diversificacion economica, reduccion de pobreza, inclusion social, protection ambiental y formalizacion de la economia informal.`},
+Diversificacion economica, reduccion de pobreza, inclusion social, protection ambiental y formalizacion de la economia informal.`,
+    theory: [
+      {
+        level: "basico",
+        title: "La era del guano y el salitre",
+        lines: [
+          "Entre 1840 y 1880, el Peru vivio una epoca de bonanza economica gracias a la exportacion de guano de islas y salitre del desierto de Atacama.",
+          "El guano, utilizado como fertilizante, genero enormes ingresos que financiaron la modernizacion del pais.",
+          "El salitre, rico en nitratos, era esencial para la agricultura y la fabricacion de polvora.",
+          "Sin embargo, la mala gestion de estos recursos provoco que la mayoria de la riqueza beneficiara a una elite reducida.",
+          "La Guerra del Pacifico (1879-1884) marco el fin de esta era, con la perdida de los territorios salitreros.",
+          "Peru quedo endeudado y sin sus principales fuentes de ingreso, lo que desencadeno una profunda crisis economica."
+        ]
+      },
       {
         level: "intermedio",
         title: "Sustitucion de importaciones y reformas neoliberales",
@@ -33922,20 +33922,7 @@ Diversificacion economica, reduccion de pobreza, inclusion social, protection am
     slug: "historia-educacion-peru",
     illustrationSummary: "Línea de tiempo o mapa histórico del tema Historia Educacion Peru. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "La educacion en el Peru ha sido historicamente un privilegio de elites. La universidad colonial excluia a indigenas y mestizos, y la brecha educativa persiste hasta hoy.",
-    theory: [
-      {
-        level: "basico",
-        title: "Universidades coloniales y expansion republicana",
-        lines: [
-          "La primera universidad del Peru fue la Universidad Nacional Mayor de San Marcos, fundada en 1551 por cedula real.",
-          "Las universidades coloniales estaban reservadas para la elite criolla y europea, excluyendo a indigenas y mestizos.",
-          "Durante la Republica, la educacion se expandio lentamente, pero seguia siendo un privilegio de las clases altas.",
-          "La educacion publica se consolido con la Reforma de 1920, que establecio la educacion primaria gratuita y obligatoria.",
-          "Sin embargo, la implementacion efectiva de estas reformas fue lenta y desigual entre las regiones.",
-          "La brecha educativa entre Lima y las provincias se mantuvo como un problema estructural durante todo el siglo XX."
-        ]
-      ,
-  studyGuide: `## Historia de la Educacion en el Peru
+    studyGuide: `## Historia de la Educacion en el Peru
 
 ### Epoca incaica
 
@@ -33963,7 +33950,20 @@ La crisis economica devasto al sistema educativo. La inversion en educacion cayo
 
 ### Desafios actuales
 
-Mejorar calidad educativa, reducir brechas urbanas-rurales, fortalecer educacion tecnica, incluir educacion intercultural y reducir el abandono escolar.`},
+Mejorar calidad educativa, reducir brechas urbanas-rurales, fortalecer educacion tecnica, incluir educacion intercultural y reducir el abandono escolar.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Universidades coloniales y expansion republicana",
+        lines: [
+          "La primera universidad del Peru fue la Universidad Nacional Mayor de San Marcos, fundada en 1551 por cedula real.",
+          "Las universidades coloniales estaban reservadas para la elite criolla y europea, excluyendo a indigenas y mestizos.",
+          "Durante la Republica, la educacion se expandio lentamente, pero seguia siendo un privilegio de las clases altas.",
+          "La educacion publica se consolido con la Reforma de 1920, que establecio la educacion primaria gratuita y obligatoria.",
+          "Sin embargo, la implementacion efectiva de estas reformas fue lenta y desigual entre las regiones.",
+          "La brecha educativa entre Lima y las provincias se mantuvo como un problema estructural durante todo el siglo XX."
+        ]
+      },
       {
         level: "intermedio",
         title: "SUNEDU y la crisis de calidad educativa",
@@ -34060,20 +34060,7 @@ Mejorar calidad educativa, reducir brechas urbanas-rurales, fortalecer educacion
     slug: "historia-mineria-peru",
     illustrationSummary: "Línea de tiempo o mapa histórico del tema Historia Mineria Peru. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "La mineria ha sido el motor economico del Peru durante siglos, pero tambien la fuente de mayores conflictos sociales y ambientales. Potosi alimento al imperio espanol, mientras que hoy la mineria moderna genera debate nacional.",
-    theory: [
-      {
-        level: "basico",
-        title: "Potosi y la explotacion colonial de la plata",
-        lines: [
-          "El Cerro Rico de Potosi, en el actual Bolivia, fue la mina de plata mas importante del mundo durante el siglo XVI.",
-          "Millones de indigenas fueron forzados a trabajar en las minas bajo el sistema de mita, una forma de trabajo forzado colonial.",
-          "La plata extraida de Potosi financia el imperio espanol y transformo la economia mundial.",
-          "Las condiciones laborales eran extremadamente peligrosas: derrumbes, intoxicacion por mercurio y enfermedades pulmonares.",
-          "Se estima que mas de ocho millones de indigenas murieron en las minas de Potosi durante el periodo colonial.",
-          "Potosi es un simbolo de la explotacion colonial y de los costos humanos del capitalismo temprano."
-        ]
-      ,
-  studyGuide: `## Historia de la Mineria en el Peru
+    studyGuide: `## Historia de la Mineria en el Peru
 
 ### Epoca prehispanica
 
@@ -34097,7 +34084,20 @@ Elboom minero de los 2000 impulsó el crecimiento economico. El cobre, oro y zin
 
 ### Desafios
 
-Regulacion ambiental, proteccion de comunidades, distribucion justa de beneficios, formalizacion de la mineria artesanal y diversificacion economica.`},
+Regulacion ambiental, proteccion de comunidades, distribucion justa de beneficios, formalizacion de la mineria artesanal y diversificacion economica.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Potosi y la explotacion colonial de la plata",
+        lines: [
+          "El Cerro Rico de Potosi, en el actual Bolivia, fue la mina de plata mas importante del mundo durante el siglo XVI.",
+          "Millones de indigenas fueron forzados a trabajar en las minas bajo el sistema de mita, una forma de trabajo forzado colonial.",
+          "La plata extraida de Potosi financia el imperio espanol y transformo la economia mundial.",
+          "Las condiciones laborales eran extremadamente peligrosas: derrumbes, intoxicacion por mercurio y enfermedades pulmonares.",
+          "Se estima que mas de ocho millones de indigenas murieron en las minas de Potosi durante el periodo colonial.",
+          "Potosi es un simbolo de la explotacion colonial y de los costos humanos del capitalismo temprano."
+        ]
+      },
       {
         level: "intermedio",
         title: "Mercurio, plata y la metalurgia colonial",
@@ -34194,20 +34194,7 @@ Regulacion ambiental, proteccion de comunidades, distribucion justa de beneficio
     slug: "movimientos-sociales-peru",
     illustrationSummary: "Línea de tiempo o mapa histórico del tema Movimientos Sociales Peru. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "Los movimientos sociales en el Peru han sido la principal fuerza de resistencia contra la exclusion y la injusticia. Desde las federaciones campesinas hasta la Marcha de los 4 Suyos, el pueblo ha protagonizado la historia.",
-    theory: [
-      {
-        level: "basico",
-        title: "Federacion Campesina del Peru",
-        lines: [
-          "La Federacion Campesina del Peru (FCP) fue fundada en 1930 como la primera organizacion que representaba los intereses de los agricultores.",
-          "La FCP lucho por la reforma agraria, la distribucion de tierras y los derechos laborales de los campesinos.",
-          "Durante los anos 1950 y 1960, la federacion se convirtio en un actor clave en la lucha por la justicia social.",
-          "La FCP promovio la educacion rural y la organizacion comunal como herramientas de empoderamiento.",
-          "Sin embargo, el gobierno la reprimio en varias ocasiones, especialmente durante los gobiernos militares.",
-          "La FCP sento las bases para el movimiento campesino peruano que seguiria luchando por decadas."
-        ]
-      ,
-  studyGuide: `## Movimientos Sociales en el Peru
+    studyGuide: `## Movimientos Sociales en el Peru
 
 ### Siglo XIX: campesinos e indigenas
 
@@ -34235,7 +34222,20 @@ Las mujeres organizaron movimientos por igualdad de derechos, contra la violenci
 
 ### Desafios actuales
 
-Fortalecer la organizacion social, garantizar derechos, promover participacion politica inclusiva y construir ciudadania plena para todos los sectores de la sociedad.`},
+Fortalecer la organizacion social, garantizar derechos, promover participacion politica inclusiva y construir ciudadania plena para todos los sectores de la sociedad.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Federacion Campesina del Peru",
+        lines: [
+          "La Federacion Campesina del Peru (FCP) fue fundada en 1930 como la primera organizacion que representaba los intereses de los agricultores.",
+          "La FCP lucho por la reforma agraria, la distribucion de tierras y los derechos laborales de los campesinos.",
+          "Durante los anos 1950 y 1960, la federacion se convirtio en un actor clave en la lucha por la justicia social.",
+          "La FCP promovio la educacion rural y la organizacion comunal como herramientas de empoderamiento.",
+          "Sin embargo, el gobierno la reprimio en varias ocasiones, especialmente durante los gobiernos militares.",
+          "La FCP sento las bases para el movimiento campesino peruano que seguiria luchando por decadas."
+        ]
+      },
       {
         level: "intermedio",
         title: "CONFAIE, CONVEAG y organizaciones regionales",
@@ -34332,20 +34332,7 @@ Fortalecer la organizacion social, garantizar derechos, promover participacion p
     slug: "derechos-humanos-historia",
     illustrationSummary: "Línea de tiempo o mapa histórico del tema Derechos Humanos Historia. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "El informe de la Comision de la Verdad y Reconciliacion documento mas de 69,000 victimas del conflicto armado interno (1980-2000), revelando la magnitud de las violaciones de derechos humanos en el Peru.",
-    theory: [
-      {
-        level: "basico",
-        title: "El informe de la CVR y sus hallazgos",
-        lines: [
-          "La Comision de la Verdad y Reconciliacion (CVR) fue creada en 2000 para investigar el conflicto armado interno entre 1980 y 2000.",
-          "El informe final, presentado en 2003, documento mas de 69,000 victimas, la mayoria de ellas campesinos indigenas.",
-          "Se establecio que Sendero Luminoso fue responsable del 54% de las victimas, mientras que las fuerzas del Estado del 37%.",
-          "La CVR recomendo justicia, reparaciones y reformas institucionales para prevenir que la historia se repita.",
-          "El informe revelo que la violencia afecto desproporcionadamente a las poblaciones rurales y amazonicas.",
-          "La CVR marco un hito en la defensa de derechos humanos en el Peru, aunque muchas de sus recomendaciones no se cumplieron."
-        ]
-      ,
-  studyGuide: `## Derechos Humanos: Historia en el Peru
+    studyGuide: `## Derechos Humanos: Historia en el Peru
 
 ### Epoca colonial
 
@@ -34373,7 +34360,20 @@ Avances en proteccion de derechos pero persisten problemas: violencia contra muj
 
 ### Desafios
 
-Juzgar responsables, reparar victimas, fortalecer sistema judicial, proteger derechos de vulnerables y garantizar no repeticion.`},
+Juzgar responsables, reparar victimas, fortalecer sistema judicial, proteger derechos de vulnerables y garantizar no repeticion.`,
+    theory: [
+      {
+        level: "basico",
+        title: "El informe de la CVR y sus hallazgos",
+        lines: [
+          "La Comision de la Verdad y Reconciliacion (CVR) fue creada en 2000 para investigar el conflicto armado interno entre 1980 y 2000.",
+          "El informe final, presentado en 2003, documento mas de 69,000 victimas, la mayoria de ellas campesinos indigenas.",
+          "Se establecio que Sendero Luminoso fue responsable del 54% de las victimas, mientras que las fuerzas del Estado del 37%.",
+          "La CVR recomendo justicia, reparaciones y reformas institucionales para prevenir que la historia se repita.",
+          "El informe revelo que la violencia afecto desproporcionadamente a las poblaciones rurales y amazonicas.",
+          "La CVR marco un hito en la defensa de derechos humanos en el Peru, aunque muchas de sus recomendaciones no se cumplieron."
+        ]
+      },
       {
         level: "intermedio",
         title: "La Cantuta, Barrios Altos y la justicia pendiente",
@@ -34470,20 +34470,7 @@ Juzgar responsables, reparar victimas, fortalecer sistema judicial, proteger der
     slug: "peru-contemporaneo-problemas",
     illustrationSummary: "Línea de tiempo o mapa histórico del tema Peru Contemporaneo Problemas. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "El Peru contemporaneo enfrenta una paradoja: tiene crecimiento economico sostenido pero una de las mayores desigualdades de America Latina, con una democracia fragil y corrupcion sistemica.",
-    theory: [
-      {
-        level: "basico",
-        title: "Democracia y corrupcion en el Peru actual",
-        lines: [
-          "El Peru ha transitado de regimenes autoritarios a una democracia formal, pero con graves deficiencias institucionales.",
-          "La corrupcion sigue siendo un problema endemico: practicamente todos los expresidentes de las ultimas decadas han sido investigados.",
-          "La desconfianza ciudadana en las instituciones politicas es una de las mas altas de America Latina.",
-          "El sistema electoral ha generado inestabilidad, con presidencias cortas y constantes crisis politicas.",
-          "La decentralizacion, implementada en los anos 2000, no logro reducir las brechas regionales significativamente.",
-          "El Peru contemporaneo enfrenta el desafio de fortalecer sus instituciones democraticas sin caer en autoritarismos."
-        ]
-      ,
-  studyGuide: `## Problemas del Peru Contemporaneo
+    studyGuide: `## Problemas del Peru Contemporaneo
 
 ### Crisis politica cronica
 
@@ -34511,7 +34498,20 @@ Calidad educativa desigual. Sistema de salud fragmentado. Brechas entre Lima y p
 
 ### Identidad nacional
 
-Debate sobre identidad: ¿mestiza, andina, amazonica, criolla? La gastronomia y la cultura popular como factores de cohesion. El bicentenario (2021) genero reflexion sobre el proyecto nacional.`},
+Debate sobre identidad: ¿mestiza, andina, amazonica, criolla? La gastronomia y la cultura popular como factores de cohesion. El bicentenario (2021) genero reflexion sobre el proyecto nacional.`,
+    theory: [
+      {
+        level: "basico",
+        title: "Democracia y corrupcion en el Peru actual",
+        lines: [
+          "El Peru ha transitado de regimenes autoritarios a una democracia formal, pero con graves deficiencias institucionales.",
+          "La corrupcion sigue siendo un problema endemico: practicamente todos los expresidentes de las ultimas decadas han sido investigados.",
+          "La desconfianza ciudadana en las instituciones politicas es una de las mas altas de America Latina.",
+          "El sistema electoral ha generado inestabilidad, con presidencias cortas y constantes crisis politicas.",
+          "La decentralizacion, implementada en los anos 2000, no logro reducir las brechas regionales significativamente.",
+          "El Peru contemporaneo enfrenta el desafio de fortalecer sus instituciones democraticas sin caer en autoritarismos."
+        ]
+      },
       {
         level: "intermedio",
         title: "Crecimiento economico vs. desigualdad social",
@@ -34608,20 +34608,7 @@ Debate sobre identidad: ¿mestiza, andina, amazonica, criolla? La gastronomia y 
     slug: "bicentenario-identidad",
     illustrationSummary: "Línea de tiempo o mapa histórico del tema Bicentenario Identidad. Se muestran las fechas, eventos y personajes principales con código de colores.",
     tip: "En 2021 el Peru celebro sus 200 anos de independencia, pero la fecha expuso una crisis de identidad nacional: que significa ser peruano hoy? Como construir un pais inclusivo tras dos siglos de exclusion?",
-    theory: [
-      {
-        level: "basico",
-        title: "El Bicentenario y la debate sobre la identidad nacional",
-        lines: [
-          "El 28 de julio de 2021, el Peru celebro sus 200 anos de independencia, marcando un momento historico para la nacion.",
-          "Sin embargo, la fecha expuso profundas divisiones sociales, economicas y politicas que persisten desde la fundacion de la Republica.",
-          "El debate sobre la identidad nacional incluyo preguntas fundamentales: que nos une como peruanos?",
-          "La diversidad cultural del pais, con 55 pueblos indigenas, 48 lenguas y multiples tradiciones, es tanto una fortaleza como un desafio.",
-          "El Bicentenario genero discusiones sobre la necesidad de construir una narrativa nacional mas inclusiva y representativa.",
-          "Las celebraciones oficiales contrastaron con la realidad de millones de peruanos que siguen en pobreza y exclusion."
-        ]
-      ,
-  studyGuide: `## Bicentenario e Identidad Nacional
+    studyGuide: `## Bicentenario e Identidad Nacional
 
 ### El Bicentenario (2021)
 
@@ -34645,7 +34632,20 @@ El Peru del bicentenario enfrenta desafios fundamentales: fortalecer la democrac
 
 ### El futuro
 
-El bicentenario abrio un espacio para imaginar el Peru del futuro. La construccion de una identidad nacional inclusiva, que trascienda divisiones regionales, sociales y etnicas, sigue siendo el gran desafio del pais. La memoria historica, el reconocimiento de la diversidad y la construccion de ciudadania son fundamentales.`},
+El bicentenario abrio un espacio para imaginar el Peru del futuro. La construccion de una identidad nacional inclusiva, que trascienda divisiones regionales, sociales y etnicas, sigue siendo el gran desafio del pais. La memoria historica, el reconocimiento de la diversidad y la construccion de ciudadania son fundamentales.`,
+    theory: [
+      {
+        level: "basico",
+        title: "El Bicentenario y la debate sobre la identidad nacional",
+        lines: [
+          "El 28 de julio de 2021, el Peru celebro sus 200 anos de independencia, marcando un momento historico para la nacion.",
+          "Sin embargo, la fecha expuso profundas divisiones sociales, economicas y politicas que persisten desde la fundacion de la Republica.",
+          "El debate sobre la identidad nacional incluyo preguntas fundamentales: que nos une como peruanos?",
+          "La diversidad cultural del pais, con 55 pueblos indigenas, 48 lenguas y multiples tradiciones, es tanto una fortaleza como un desafio.",
+          "El Bicentenario genero discusiones sobre la necesidad de construir una narrativa nacional mas inclusiva y representativa.",
+          "Las celebraciones oficiales contrastaron con la realidad de millones de peruanos que siguen en pobreza y exclusion."
+        ]
+      },
       {
         level: "intermedio",
         title: "Que significa la independencia hoy",
