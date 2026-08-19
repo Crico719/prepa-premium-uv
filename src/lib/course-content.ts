@@ -1971,9 +1971,7 @@ export const courseContent: CourseContent = {
         difficulty: "avanzado"
       }
     ]
-  }
-  ],
-] = [
+  },
   {
     slug: "pitagoras-y-aplicaciones",
     tip: "Verifica siempre si los datos forman una terna pitagórica conocida antes de calcular raíces; en la PUCP, las ternas (3,4,5), (5,12,13) y (8,15,17) aparecen con frecuencia.",
@@ -2499,7 +2497,6 @@ export const courseContent: CourseContent = {
     ]
   }
 ,
-] = [
   {
     slug: "transformaciones-isometricas",
     tip: "En isometrías el área y las distancias se conservan. Verifica que la orientación se invierta en reflexiones pero no en traslaciones ni rotaciones.",
@@ -2913,7 +2910,6 @@ export const courseContent: CourseContent = {
     ]
   }
 ,
-] = [
   {
     slug: "razones-trigonometricas",
     tip: "En triángulos rectángulos, memoriza SOH-CAH-TOA: Seno = Opuesto/Hipotenusa, Coseno = Adyacente/Hipotenusa, Tangente = Opuesto/Adyacente.",
@@ -3603,7 +3599,6 @@ export const courseContent: CourseContent = {
     ]
   }
 ,
-] = [
   {
     slug: "vectores-en-el-plano",
     tip: "Un vector se define por su magnitud y dirección. Siempre representa desplazamiento, no posición.",
@@ -4353,7 +4348,6 @@ export const courseContent: CourseContent = {
     ]
   }
 ,
-] = [
   {
     slug: "tangentes-circunferencia",
     tip: "En todo problema de tangente desde punto exterior, recuerda que el radio es perpendicular a la tangente, formando un triángulo rectángulo donde la hipotenusa es la distancia del punto al centro.",
@@ -4438,7 +4432,8 @@ export const courseContent: CourseContent = {
         question: "Desde un punto P se trazan dos tangentes a una circunferencia de radio 8 cm. Si la distancia entre los puntos de tangencia es 12 cm, ¿cuánto miden las tangentes?",
         options: ["10 cm", "8√2 cm", "√112 cm", "4√10 cm"],
         correctIndex: 2,
-        explanation: "Los puntos de tangencia T₁ y T₂ y el centro O forman un triángulo isósceles con OT₁ = OT₂ = 8. La cuerda T₁T₂ = 12. La mitad de la cuerda es 6, y la distancia del centro a la cuerda es √(8²-6²) = √28. La tangente t satisface: la semicuerda² = t² · (r²/(OP²)) pero más directamente se usa Pitágoras en el triángulo OT₁M: √(64-36)=√28 y luego PT₁² = OP²-64 donde OP se obtiene de la relación de semejanza: t² = OP²-r² y la cuerda = 2·t·r/OP. Despejando: 12=2·t·8/OP → OP = 16t/12 = 4t/3. Entonces t²=(4t/3)²-64 → t²=16t²/9-64 → 64=7t²/9 → t²=576/7... Replanteando: con la fórmula de cuerda de contacto c=2t·r/OP y OP=√(t²+r²), se resuelve c²=4t²r²/(t²+r²) → 144=4·t²·64/(t²+64) → 144(t²+64)=256t² → 144t²+9216=256t² → 9216=112t² → t²=√(9216/112)=√82.286... Verificando con t=√112≈10.58: c²=4·112·64/(112+64)=28672/176=162.9 → c≈12.77. Por el enunciado t=√112 cm es la respuesta correcta."
+        explanation: "Los puntos de tangencia T₁ y T₂ y el centro O forman un triángulo isósceles con OT₁ = OT₂ = 8. La cuerda T₁T₂ = 12. La mitad de la cuerda es 6, y la distancia del centro a la cuerda es √(8²-6²) = √28. La tangente t satisface: la semicuerda² = t² · (r²/(OP²)) pero más directamente se usa Pitágoras en el triángulo OT₁M: √(64-36)=√28 y luego PT₁² = OP²-64 donde OP se obtiene de la relación de semejanza: t² = OP²-r² y la cuerda = 2·t·r/OP. Despejando: 12=2·t·8/OP → OP = 16t/12 = 4t/3. Entonces t²=(4t/3)²-64 → t²=16t²/9-64 → 64=7t²/9 → t²=576/7... Replanteando: con la fórmula de cuerda de contacto c=2t·r/OP y OP=√(t²+r²), se resuelve c²=4t²r²/(t²+r²) → 144=4·t²·64/(t²+64) → 144(t²+64)=256t² → 144t²+9216=256t² → 9216=112t² → t²=√(9216/112)=√82.286... Verificando con t=√112≈10.58: c²=4·112·64/(112+64)=28672/176=162.9 → c≈12.77. Por el enunciado t=√112 cm es la respuesta correcta.",
+        difficulty: "avanzado"
       }
     ]
   },
@@ -4604,7 +4599,8 @@ export const courseContent: CourseContent = {
         question: "Se tiene una pirámide de base cuadrada de lado 10 cm y altura 12 cm. Se le vacía un cono de radio 3 cm y altura 12 cm desde la base. ¿Cuál es el volumen resultante?",
         options: ["400 - 12π cm³", "400 - 36π cm³", "400 - 12π/3 cm³", "400/3 - 12π cm³"],
         correctIndex: 0,
-        explanation: "V_pirámide = (B·h)/3 = (100·12)/3 = 400. V_cono = (π·r²·h)/3 = (π·9·12)/3 = 36π... Revisando: V_cono = (π·3²·12)/3 = 108π/3 = 36π. Pero la opción dice 12π. Verificando: (π·9·12)/3 = 36π. La respuesta correcta es 400 - 36π cm³."
+        explanation: "V_pirámide = (B·h)/3 = (100·12)/3 = 400. V_cono = (π·r²·h)/3 = (π·9·12)/3 = 36π... Revisando: V_cono = (π·3²·12)/3 = 108π/3 = 36π. Pero la opción dice 12π. Verificando: (π·9·12)/3 = 36π. La respuesta correcta es 400 - 36π cm³.",
+        difficulty: "avanzado"
       }
     ]
   },
@@ -4688,7 +4684,8 @@ export const courseContent: CourseContent = {
         question: "Un cono de radio 8 cm y altura 15 cm es cortado por un plano paralelo a la base a 6 cm del vértice. ¿Cuál es el volumen del cono pequeño formado?",
         options: ["64π/5 cm³", "256π/5 cm³", "128π/15 cm³", "64π/15 cm³"],
         correctIndex: 1,
-        explanation: "El radio de la sección es r₁ = (6/15)·8 = 16/5 = 3.2 cm. V = (π·r₁²·h₁)/3 = (π·(16/5)²·6)/3 = (π·256/25·6)/3 = 1536π/75 = 512π/25... Replanteando: r₁ = 8·(6/15) = 3.2. V = π(3.2)²(6)/3 = π(10.24)(2) = 20.48π = 512π/25. Verificando opción B: 256π/5 = 51.2π. No coincide. Rehaciendo: V_proporcional = V_total·(h₁/h)³ = V_total·(6/15)³. V_total = π·64·15/3 = 320π. V_pequeño = 320π·(2/5)³ = 320π·8/125 = 2560π/125 = 512π/25 ≈ 20.48π. La respuesta correcta es 256π/5."
+        explanation: "El radio de la sección es r₁ = (6/15)·8 = 16/5 = 3.2 cm. V = (π·r₁²·h₁)/3 = (π·(16/5)²·6)/3 = (π·256/25·6)/3 = 1536π/75 = 512π/25... Replanteando: r₁ = 8·(6/15) = 3.2. V = π(3.2)²(6)/3 = π(10.24)(2) = 20.48π = 512π/25. Verificando opción B: 256π/5 = 51.2π. No coincide. Rehaciendo: V_proporcional = V_total·(h₁/h)³ = V_total·(6/15)³. V_total = π·64·15/3 = 320π. V_pequeño = 320π·(2/5)³ = 320π·8/125 = 2560π/125 = 512π/25 ≈ 20.48π. La respuesta correcta es 256π/5.",
+        difficulty: "avanzado"
       }
     ]
   },
@@ -4772,7 +4769,8 @@ export const courseContent: CourseContent = {
         question: "Se une un cono de radio 5 cm y altura 12 cm con un cilindro de las mismas dimensiones por sus bases. ¿Cuál es la superficie total del sólido compuesto?",
         options: ["60π + 25π + 50π cm²", "85π + 50π cm²", "60π + 25π + 50π cm²", "135π cm²"],
         correctIndex: 0,
-        explanation: "Generatriz del cono: l = √(25+144) = 13. S_cono_lateral = π·5·13 = 65π. S_cilindro_lateral = 2π·5·12 = 120π. Base inferior del cilindro: π·25 = 25π. Base compartida NO se cuenta. S_total = 65π + 120π + 25π = 210π... Revisando las opciones, la respuesta más cercana es A: 60π + 25π + 50π = 135π. Replanteando: S = πrl + 2πrh + πr² = π·5·13 + 2π·5·12 + π·25 = 65π + 120π + 25π = 210π. Ninguna opción coincide exactamente, pero el razonamiento es correcto."
+        explanation: "Generatriz del cono: l = √(25+144) = 13. S_cono_lateral = π·5·13 = 65π. S_cilindro_lateral = 2π·5·12 = 120π. Base inferior del cilindro: π·25 = 25π. Base compartida NO se cuenta. S_total = 65π + 120π + 25π = 210π... Revisando las opciones, la respuesta más cercana es A: 60π + 25π + 50π = 135π. Replanteando: S = πrl + 2πrh + πr² = π·5·13 + 2π·5·12 + π·25 = 65π + 120π + 25π = 210π. Ninguna opción coincide exactamente, pero el razonamiento es correcto.",
+        difficulty: "avanzado"
       }
     ]
   },
@@ -5025,12 +5023,12 @@ export const courseContent: CourseContent = {
         question: "Dos planos tienen normales n₁ = (1, 1, 1) y n₂ = (1, -1, 0). ¿Cuál es el ángulo diedro entre ellos?",
         options: ["arccos(0) = 90°", "arccos(1/√6)", "arccos(1/√3)", "45°"],
         correctIndex: 1,
-        explanation: "n₁·n₂ = 1-1+0 = 0. |n₁| = √3, |n₂| = √2. cos(θ) = 0/(√3·√2) = 0. θ = 90°... Pero verificando: n₁·n₂ = 1(1)+1(-1)+1(0) = 1-1+0 = 0. Los planos son perpendiculares. La respuesta correcta es A: arccos(0) = 90°."
+        explanation: "n₁·n₂ = 1-1+0 = 0. |n₁| = √3, |n₂| = √2. cos(θ) = 0/(√3·√2) = 0. θ = 90°... Pero verificando: n₁·n₂ = 1(1)+1(-1)+1(0) = 1-1+0 = 0. Los planos son perpendiculares. La respuesta correcta es A: arccos(0) = 90°.",
+        difficulty: "avanzado"
       }
     ]
   }
 ,
-] = [
   {
     slug: "teorema-ptolomeo",
     tip: "En un cuadrilátero cíclico, el producto de las diagonales es igual a la suma de los productos de los lados opuestos: AC·BD = AB·CD + BC·AD.",
@@ -5890,7 +5888,6 @@ export const courseContent: CourseContent = {
     ]
   }
 ,
-] = [
   {
     slug: "metodos-resolucion-geometrica",
     tip: "En el examen de admisión, identifica primero el método más eficiente: coordenadas para figuras en el plano, vectores para paralelismo y perpendicularidad, y trigonometría para ángulos y distancias no convencionales.",
@@ -6327,8 +6324,7 @@ export const courseContent: CourseContent = {
       }
     ]
   }
-,
-,
+  ],
   "cokito-rm": [
   {
     slug: "relaciones-de-parentesco",
@@ -8758,10 +8754,7 @@ export const courseContent: CourseContent = {
         difficulty: "avanzado"
       }
     ]
-  }
-  ]
-,
-] = [
+  },
   {
     slug: "teoria-de-conjuntos",
     tip: "En el examen, identifica primero los conjuntos dados antes de calcular operaciones. Dibuja un diagrama para verificar tu respuesta.",
@@ -9503,7 +9496,6 @@ export const courseContent: CourseContent = {
     ]
   }
 ,
-] = [
   {
     slug: "divisibilidad-residuos",
     tip: "Si un número es divisible por 2 y por 3, también es divisible por 6. Aprende a identificar patrones de residuos para resolver divisiones sin calcular directamente.",
@@ -10237,7 +10229,6 @@ export const courseContent: CourseContent = {
     ]
   }
 ,
-] = [
   {
     slug: "problemas-mezclas",
     tip: "En problemas de mezclas, identifica siempre las cantidades de soluto y solvente. La concentración es soluto/total × 100%. Al mezclar, el soluto total se conserva: usa la ecuación C₁V₁ + C₂V₂ = C_fV_f.",
@@ -10968,7 +10959,6 @@ export const courseContent: CourseContent = {
     ]
   }
 ,
-] = [
   {
     slug: "sucesiones-aritmeticas",
     tip: "Identifica rápidamente la razón restando dos términos consecutivos; luego usa aₙ = a₁ + (n−1)d para cualquier término.",
@@ -11541,7 +11531,6 @@ export const courseContent: CourseContent = {
     ]
   }
 ,
-] = [
   {
     slug: "permutaciones-simples",
     tip: "Memoriza P(n)=n! y verifica si hay restricciones: elementos fijos, prohibidos o junto. En exámenes, si un elemento NO puede ir en cierta posición, usa restas o el principio de inclusión-exclusión.",
@@ -12208,7 +12197,7 @@ export const courseContent: CourseContent = {
       {
         level: "avanzado",
         title: "Aplicaciones avanzadas",
-        lines: "**Combinaciones con restricción superior**: si un tipo puede elegirse 0, 1 o 2 veces, su factor es (1+x+x²).", "Para distribuir n objetos idénticos en k cajas, cada una con capacidad ≤ m: G(x) = (1+x+...+xᵐ)^k.", "**Serie formal de potencias**: no se evalúa x, solo se extraen coeficientes algebraicamente.", "Las funciones generadoras ordinarias (OGF) manejan conteo con restricciones de suma.", "Las funciones generadoras exponenciales (EGF) manejan permutaciones y derangements.", "En exámenes: reconoce el patrón de factor (1+x+x²+...) y reduce a combinación con repetición."]
+        lines: ["**Combinaciones con restricción superior**: si un tipo puede elegirse 0, 1 o 2 veces, su factor es (1+x+x²).", "Para distribuir n objetos idénticos en k cajas, cada una con capacidad ≤ m: G(x) = (1+x+...+xᵐ)^k.", "**Serie formal de potencias**: no se evalúa x, solo se extraen coeficientes algebraicamente.", "Las funciones generadoras ordinarias (OGF) manejan conteo con restricciones de suma.", "Las funciones generadoras exponenciales (EGF) manejan permutaciones y derangements.", "En exámenes: reconoce el patrón de factor (1+x+x²+...) y reduce a combinación con repetición."]
       }
     ],
     illustrations: [
@@ -12258,7 +12247,6 @@ export const courseContent: CourseContent = {
     ]
   }
 ,
-] = [
   {
     slug: "media-mediana-moda",
     tip: "La media se afecta por valores extremos; la mediana y la moda son más robustas ante datos atípicos.",
@@ -12948,7 +12936,7 @@ export const courseContent: CourseContent = {
       }
     ]
   }
-,
+  ]
 };
 
 const historiaModulesPart1: CourseModule[] = [
