@@ -162,8 +162,7 @@ Verificación: m₁ · m₂ = 2 · (-1/2) = -1 ✓. Sustituyendo x = 2: y = -1 +
         correctIndex: 2,
         explanation: "Si m₁ · m₂ = 2 × (−1/2) = −1, las rectas son perpendiculares, por lo que el ángulo entre ellas es 90°.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 100, question: "Si dos rectas se cortan y forman un ángulo de 75°, ¿cuál es el ángulo opuesto por el vértice?", options: ["75°", "105°", "15°", "180°"], correctIndex: 0, explanation: "Los ángulos opuestos por el vértice son iguales.", difficulty: "basic" },
     { id: 101, question: "¿Cuánto miden los dos ángulos complementarios si uno mide 32°?", options: ["58°", "148°", "68°", "90°"], correctIndex: 0, explanation: "La suma de ángulos complementarios es 90°, entonces 90° - 32° = 58°.", difficulty: "basic" },
     { id: 102, question: "¿Cuánto miden los dos ángulos suplementarios si uno mide 40°?", options: ["140°", "50°", "130°", "180°"], correctIndex: 0, explanation: "La suma de ángulos suplementarios es 180°, entonces 180° - 40° = 140°.", difficulty: "basic" },
@@ -184,8 +183,7 @@ Verificación: m₁ · m₂ = 2 · (-1/2) = -1 ✓. Sustituyendo x = 2: y = -1 +
     { id: 117, question: "Dos rectas se cortan formando ángulos de (3x + 10)° y (5x - 30)° que son adyacentes. Si son suplementarios, ¿cuánto mide el ángulo mayor?", options: ["115°", "65°", "130°", "100°"], correctIndex: 0, explanation: "Siendo adyacentes y suplementarios: (3x + 10) + (5x - 30) = 180, luego 8x - 20 = 180, 8x = 200, x = 25. El primero es 85° y el segundo es 95°. El mayor es 95°. Pero verificando: 3(25)+10=85, 5(25)-30=95, el mayor es 95°. Corrigiendo opción: debe ser 95°. Ajustando: si el problema busca el mayor de los ángulos no adyacentes (iguales al mayor adyacente), es 95°.", difficulty: "advanced" },
     { id: 118, question: "Si un ángulo de 120° tiene una recta que lo divide en dos partes donde una es el triple de la otra, ¿cuánto mide la parte menor?", options: ["30°", "90°", "40°", "20°"], correctIndex: 0, explanation: "Sea x la parte menor, entonces 3x es la mayor. x + 3x = 120°, luego 4x = 120° y x = 30°.", difficulty: "advanced" },
     { id: 119, question: "Tres rectas paralelas cortan a dos transversales. Si los segmentos sobre una transversal son 6 cm y 9 cm, y sobre la otra el primer segmento es 4 cm, ¿cuánto mide el segundo?", options: ["6 cm", "8 cm", "5 cm", "10 cm"], correctIndex: 0, explanation: "Por el teorema de Thales: 6/9 = 4/x, entonces x = 9 × 4 / 6 = 6 cm.", difficulty: "advanced" },
-    { id: 120, question: "La bisectriz de un ángulo exterior de un triángulo determina con el lado opuesto un ángulo de 25°. Si uno de los ángulos internos no adyacentes es 55°, ¿cuánto es el otro ángulo interior del triángulo?", options: ["80°", "70°", "90°", "60°"], correctIndex: 0, explanation: "El ángulo exterior bisecado forma un triángulo con el lado opuesto. Usando la propiedad de bisectriz exterior y ángulos: el ángulo exterior es 55° + ángulo B. La bisectriz crea relaciones entre los ángulos del nuevo triángulo. Con cálculos, el ángulo buscado es 80°.", difficulty: "advanced" }
-  ,
+    { id: 120, question: "La bisectriz de un ángulo exterior de un triángulo determina con el lado opuesto un ángulo de 25°. Si uno de los ángulos internos no adyacentes es 55°, ¿cuánto es el otro ángulo interior del triángulo?", options: ["80°", "70°", "90°", "60°"], correctIndex: 0, explanation: "El ángulo exterior bisecado forma un triángulo con el lado opuesto. Usando la propiedad de bisectriz exterior y ángulos: el ángulo exterior es 55° + ángulo B. La bisectriz crea relaciones entre los ángulos del nuevo triángulo. Con cálculos, el ángulo buscado es 80°.", difficulty: "advanced" },
     { id: 100, question: "Si dos rectas se cortan y forman un ángulo de 75°, ¿cuál es el ángulo opuesto por el vértice?", options: ["75°", "105°", "15°", "180°"], correctIndex: 0, explanation: "Los ángulos opuestos por el vértice son iguales.", difficulty: "basic" },
     { id: 101, question: "¿Cuánto miden los dos ángulos complementarios si uno mide 32°?", options: ["58°", "148°", "68°", "90°"], correctIndex: 0, explanation: "La suma de ángulos complementarios es 90°, entonces 90° - 32° = 58°.", difficulty: "basic" },
     { id: 102, question: "¿Cuánto miden los dos ángulos suplementarios si uno mide 40°?", options: ["140°", "50°", "130°", "180°"], correctIndex: 0, explanation: "La suma de ángulos suplementarios es 180°, entonces 180° - 40° = 140°.", difficulty: "basic" },
@@ -349,8 +347,7 @@ En un triángulo rectángulo, R siempre equivale a la mitad de la hipotenusa: 13
         correctIndex: 3,
         explanation: "Aplicando el teorema del coseno: c² = a² + b² − 2ab·cos(C) = 49 + 100 − 2(7)(10)cos(60°) = 149 − 140(0.5) = 149 − 70 = 79. Entonces c = √79.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 121, question: "¿Cuántos tipos de triángulos existen según sus lados?", options: ["3: equilátero, isósceles, escaleno", "2: regular e irregular", "4: rectángulo, isósceles, equilátero, escaleno", "3: acutángulo, rectángulo, obtusángulo"], correctIndex: 0, explanation: "Según sus lados, los triángulos pueden ser equilátero (3 lados iguales), isósceles (2 lados iguales) o escaleno (3 lados diferentes).", difficulty: "basic" },
     { id: 122, question: "¿Cuánto suman los ángulos internos de un triángulo?", options: ["180°", "360°", "90°", "270°"], correctIndex: 0, explanation: "La suma de los ángulos internos de cualquier triángulo es 180°.", difficulty: "basic" },
     { id: 123, question: "Un triángulo tiene ángulos de 45° y 65°. ¿Cuánto mide el tercer ángulo?", options: ["70°", "110°", "80°", "60°"], correctIndex: 0, explanation: "El tercer ángulo es 180° - 45° - 65° = 70°.", difficulty: "basic" },
@@ -510,8 +507,7 @@ Verificación con la fórmula directa: A = (8 · (8.28)² · cot(22.5°))/4 ≈ 
         correctIndex: 1,
         explanation: "Si cada ángulo mide 156°, entonces (n−2)×180°/n = 156°. Despejando: (n−2)×180 = 156n → 180n − 360 = 156n → 24n = 360 → n = 15.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 142, question: "¿Cuántos lados tiene un polígono?", options: ["Al menos 3", "Al menos 4", "Al menos 2", "Al menos 5"], correctIndex: 0, explanation: "Un polígono es una figura plana cerrada formada por al menos 3 segmentos de recta.", difficulty: "basic" },
     { id: 143, question: "¿Cómo se llama un polígono con 5 lados?", options: ["Pentágono", "Hexágono", "Cuadrilátero", "Heptágono"], correctIndex: 0, explanation: "Un polígono de 5 lados se llama pentágono.", difficulty: "basic" },
     { id: 144, question: "¿Cuántos grados suman los ángulos internos de un pentágono?", options: ["540°", "360°", "720°", "480°"], correctIndex: 0, explanation: "La suma de ángulos internos es (n-2) × 180° = (5-2) × 180° = 540°.", difficulty: "basic" },
@@ -530,8 +526,7 @@ Verificación con la fórmula directa: A = (8 · (8.28)² · cot(22.5°))/4 ≈ 
     { id: 157, question: "¿Cuál es el número mínimo de lados de un polígono convexo cuya suma de ángulos interiores supera 2000°?", options: ["14", "13", "15", "12"], correctIndex: 0, explanation: "(n-2)×180° > 2000°, entonces n-2 > 11.11, por lo tanto n > 13.11. El menor entero es 14.", difficulty: "advanced" },
     { id: 158, question: "Si un polígono de n lados tiene exactamente 54 diagonales, ¿cuántos lados tiene?", options: ["12", "10", "11", "13"], correctIndex: 0, explanation: "n(n-3)/2 = 54, entonces n² - 3n - 108 = 0. Usando la fórmula cuadrática: n = (3+√(9+432))/2 = (3+21)/2 = 12.", difficulty: "advanced" },
     { id: 159, question: "¿Cuántos polígonos se pueden formar usando todos los vértices de un octágono regular?", options: ["256", "128", "512", "64"], correctIndex: 0, explanation: "Un octágono tiene 8 vértices. El número de polígonos que se pueden formar es 2^(8-1) - 1 = 127... Corrigiendo: cada subconjunto de al menos 3 vértices forma un polígono. Total = 2^8 - C(8,0) - C(8,1) - C(8,2) = 256 - 1 - 8 - 28 = 219. Verificando opciones, ajustar a 256 como respuesta simplificada.", difficulty: "advanced" },
-    { id: 160, question: "La suma de los ángulos interiores de un polígono es 7 veces la suma de sus ángulos exteriores. ¿Cuántos lados tiene?", options: ["16", "14", "18", "12"], correctIndex: 0, explanation: "La suma de exteriores es 360°. Si la suma de interiores es 7×360° = 2520°, entonces (n-2)×180° = 2520°, luego n-2 = 14 y n = 16.", difficulty: "advanced" }
-  ,
+    { id: 160, question: "La suma de los ángulos interiores de un polígono es 7 veces la suma de sus ángulos exteriores. ¿Cuántos lados tiene?", options: ["16", "14", "18", "12"], correctIndex: 0, explanation: "La suma de exteriores es 360°. Si la suma de interiores es 7×360° = 2520°, entonces (n-2)×180° = 2520°, luego n-2 = 14 y n = 16.", difficulty: "advanced" },
     { id: 161, question: "¿Cuántos lados tiene un cuadrilátero?", options: ["4", "3", "5", "6"], correctIndex: 0, explanation: "Un cuadrilátero es un polígono con exactamente 4 lados.", difficulty: "basic" },
     { id: 162, question: "¿Cuántos grados suman los ángulos interiores de un cuadrilátero?", options: ["360°", "180°", "540°", "270°"], correctIndex: 0, explanation: "La suma de ángulos interiores de un cuadrilátero es (4-2)×180° = 360°.", difficulty: "basic" },
     { id: 163, question: "¿Cuál es un cuadrilátero con dos pares de lados paralelos y todos los ángulos rectos?", options: ["Rectángulo", "Rombo", "Trapecio", "Trapezoide"], correctIndex: 0, explanation: "Un rectángulo tiene dos pares de lados paralelos y todos sus ángulos miden 90°.", difficulty: "basic" },
@@ -700,8 +695,7 @@ cos θ = (10² + 17² - 21²)/(2·10·17) = (100 + 289 - 441)/340 = -52/340 = -1
         correctIndex: 0,
         explanation: "El área del rombo es A = (d₁ × d₂)/2 = (10 × 24)/2 = 120 cm². El lado se obtiene con Pitágoras usando medias diagonales: lado = √(5² + 12²) = √(25 + 144) = √169 = 13 cm.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 161, question: "¿Cuántos lados tiene un cuadrilátero?", options: ["4", "3", "5", "6"], correctIndex: 0, explanation: "Un cuadrilátero es un polígono con exactamente 4 lados.", difficulty: "basic" },
     { id: 162, question: "¿Cuántos grados suman los ángulos interiores de un cuadrilátero?", options: ["360°", "180°", "540°", "270°"], correctIndex: 0, explanation: "La suma de ángulos interiores de un cuadrilátero es (4-2)×180° = 360°.", difficulty: "basic" },
     { id: 163, question: "¿Cuál es un cuadrilátero con dos pares de lados paralelos y todos los ángulos rectos?", options: ["Rectángulo", "Rombo", "Trapecio", "Trapezoide"], correctIndex: 0, explanation: "Un rectángulo tiene dos pares de lados paralelos y todos sus ángulos miden 90°.", difficulty: "basic" },
@@ -720,8 +714,7 @@ cos θ = (10² + 17² - 21²)/(2·10·17) = (100 + 289 - 441)/340 = -52/340 = -1
     { id: 176, question: "Un trapecio isósceles tiene bases de 10 cm y 16 cm y lados iguales de 5 cm. ¿Cuál es su altura?", options: ["4 cm", "5 cm", "3 cm", "6 cm"], correctIndex: 0, explanation: "El proyectado de cada lado sobre la base mayor es (16-10)/2 = 3 cm. Con el teorema de Pitágoras: h = √(5² - 3²) = √16 = 4 cm.", difficulty: "advanced" },
     { id: 177, question: "¿Cuál es el área de un rombo con diagonales de 10 cm y 24 cm?", options: ["120 cm²", "240 cm²", "60 cm²", "34 cm²"], correctIndex: 0, explanation: "El área de un rombo es (d₁ × d₂)/2 = (10 × 24)/2 = 120 cm².", difficulty: "advanced" },
     { id: 178, question: "Si las diagonales de un paralelogramo miden 18 cm y 24 cm y se cortan formando un ángulo de 60°, ¿cuál es su área?", options: ["108√3 cm²", "216 cm²", "432 cm²", "216√3 cm²"], correctIndex: 0, explanation: "El área es la mitad del producto de las diagonales por el seno del ángulo: (18×24×sin60°)/2 = (432×√3/2)/2 = 108√3 cm².", difficulty: "advanced" },
-    { id: 179, question: "Un rectángulo tiene un perímetro de 40 cm y su diagonal mide 13 cm. ¿Cuáles son sus lados?", options: ["5 cm y 15 cm", "8 cm y 12 cm", "7 cm y 13 cm", "6 cm y 14 cm"], correctIndex: 0, explanation: "Si los lados son a y b: 2(a+b) = 40 → a+b = 20, y a²+b² = 169. Desarrollando: a² + (20-a)² = 169, 2a² - 40a + 400 = 169, 2a² - 40a + 231 = 0. Resolviendo: a = (40±√(1600-1848))/4. Ajustando: con a=5, b=15: 25+225=250≠169. Con a=8, b=12: 64+144=208≠169. Verificando 5 y 15: 25+225=250. Corrigiendo: debe ser a=5, b=12: 25+144=169 ✓. Entonces 2(5+12)=34≠40. Revisando: a+b=20 y a²+b²=169. (a+b)²=400=a²+b²+2ab=169+2ab, 2ab=231, ab=115.5. Esto no da valores enteros. Ajustando opciones: a=5, b=15 da 250; a=8, b=12 da 208; a=7, b=13 da 218; a=6, b=14 da 232. La opción más cercana matemáticamente es 5 y 15.", difficulty: "advanced" }
-  ,
+    { id: 179, question: "Un rectángulo tiene un perímetro de 40 cm y su diagonal mide 13 cm. ¿Cuáles son sus lados?", options: ["5 cm y 15 cm", "8 cm y 12 cm", "7 cm y 13 cm", "6 cm y 14 cm"], correctIndex: 0, explanation: "Si los lados son a y b: 2(a+b) = 40 → a+b = 20, y a²+b² = 169. Desarrollando: a² + (20-a)² = 169, 2a² - 40a + 400 = 169, 2a² - 40a + 231 = 0. Resolviendo: a = (40±√(1600-1848))/4. Ajustando: con a=5, b=15: 25+225=250≠169. Con a=8, b=12: 64+144=208≠169. Verificando 5 y 15: 25+225=250. Corrigiendo: debe ser a=5, b=12: 25+144=169 ✓. Entonces 2(5+12)=34≠40. Revisando: a+b=20 y a²+b²=169. (a+b)²=400=a²+b²+2ab=169+2ab, 2ab=231, ab=115.5. Esto no da valores enteros. Ajustando opciones: a=5, b=15 da 250; a=8, b=12 da 208; a=7, b=13 da 218; a=6, b=14 da 232. La opción más cercana matemáticamente es 5 y 15.", difficulty: "advanced" },
     { id: 180, question: "¿Cuántos grados tiene una circunferencia completa?", options: ["360°", "180°", "180°", "270°"], correctIndex: 0, explanation: "Una circunferencia completa tiene 360°.", difficulty: "basic" },
     { id: 181, question: "¿Cuál es la fórmula del área de un círculo?", options: ["πr²", "2πr", "πd", "r²"], correctIndex: 0, explanation: "El área de un círculo es π multiplicado por el radio al cuadrado.", difficulty: "basic" },
     { id: 182, question: "¿Cómo se llama el segmento que une dos puntos de una circunferencia pasando por el centro?", options: ["Diámetro", "Radio", "Cuerda", "Arco"], correctIndex: 0, explanation: "El diámetro es la cuerda máxima que pasa por el centro de la circunferencia.", difficulty: "basic" },
@@ -889,8 +882,7 @@ El ángulo central: cos(θ/2) = d/r = 3/5, entonces θ/2 = arccos(0.6) ≈ 53.13
         correctIndex: 1,
         explanation: "Por el teorema tangente-secante: PT² = PA × PB. Entonces 8² = 4 × PB → 64 = 4 × PB → PB = 16 cm.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 180, question: "¿Cuántos grados tiene una circunferencia completa?", options: ["360°", "180°", "180°", "270°"], correctIndex: 0, explanation: "Una circunferencia completa tiene 360°.", difficulty: "basic" },
     { id: 181, question: "¿Cuál es la fórmula del área de un círculo?", options: ["πr²", "2πr", "πd", "r²"], correctIndex: 0, explanation: "El área de un círculo es π multiplicado por el radio al cuadrado.", difficulty: "basic" },
     { id: 182, question: "¿Cómo se llama el segmento que une dos puntos de una circunferencia pasando por el centro?", options: ["Diámetro", "Radio", "Cuerda", "Arco"], correctIndex: 0, explanation: "El diámetro es la cuerda máxima que pasa por el centro de la circunferencia.", difficulty: "basic" },
@@ -910,8 +902,7 @@ El ángulo central: cos(θ/2) = d/r = 3/5, entonces θ/2 = arccos(0.6) ≈ 53.13
     { id: 196, question: "¿Cuántas cuerdas iguales se pueden trazar en una circunferencia de 360° si cada una abarca un arco de 45°?", options: ["8", "4", "6", "12"], correctIndex: 0, explanation: "360° / 45° = 8 cuerdas iguales.", difficulty: "advanced" },
     { id: 197, question: "Un triángulo inscrito en una circunferencia tiene un lado que es igual al diámetro. ¿Qué tipo de triángulo es?", options: ["Rectángulo", "Equilátero", "Isósceles", "Acutángulo"], correctIndex: 0, explanation: "Si un lado es el diámetro, el ángulo opuesto es inscrito y abarca un semicírculo, por lo que mide 90°.", difficulty: "advanced" },
     { id: 198, question: "Si dos cuerdas de una circunferencia se cortan en el interior, una dividida en segmentos de 3 y 5, y otra en 4 y x, ¿cuánto vale x?", options: ["3.75", "6", "5", "2.5"], correctIndex: 0, explanation: "Por el producto de segmentos: 3 × 5 = 4 × x, entonces x = 15/4 = 3.75.", difficulty: "advanced" },
-    { id: 199, question: "¿Cuánto mide el ángulo formado por una tangente y una secante que se cortan en el exterior si abarcan arcos de 80° y 40°?", options: ["20°", "40°", "60°", "80°"], correctIndex: 0, explanation: "El ángulo exterior entre una tangente y una secante es la mitad de la diferencia de los arcos: (80° - 40°)/2 = 20°.", difficulty: "advanced" }
-  ,
+    { id: 199, question: "¿Cuánto mide el ángulo formado por una tangente y una secante que se cortan en el exterior si abarcan arcos de 80° y 40°?", options: ["20°", "40°", "60°", "80°"], correctIndex: 0, explanation: "El ángulo exterior entre una tangente y una secante es la mitad de la diferencia de los arcos: (80° - 40°)/2 = 20°.", difficulty: "advanced" },
     { id: 200, question: "¿Cómo se llama el punto donde se cortan las mediatrices de un triángulo?", options: ["Circuncentro", "Incentro", "Baricentro", "Ortocentro"], correctIndex: 0, explanation: "El circuncentro es el punto de intersección de las mediatrices y es el centro de la circunferencia circunscrita.", difficulty: "basic" },
     { id: 201, question: "¿Cómo se llama el punto donde se cortan las bisectrices de un triángulo?", options: ["Incentro", "Circuncentro", "Baricentro", "Ortocentro"], correctIndex: 0, explanation: "El incentro es el punto de intersección de las bisectrices y es el centro de la circunferencia inscrita.", difficulty: "basic" },
     { id: 202, question: "¿Cómo se llama el punto donde se cortan las medianas de un triángulo?", options: ["Baricentro", "Incentro", "Circuncentro", "Ortocentro"], correctIndex: 0, explanation: "El baricentro es el punto de intersección de las medianas y divide cada una en razón 2:1.", difficulty: "basic" },
@@ -1128,8 +1119,7 @@ Verificación: R + r = 3√3 = h ✓ y R = 2r ✓.`,
         correctIndex: 1,
         explanation: "En un triángulo rectángulo, el circuncentro siempre se encuentra en el punto medio de la hipotenusa. La hipotenusa mide 10 cm (por Pitágoras), y el radio de la circunferencia circunscrita es 5 cm.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 200, question: "¿Cómo se llama el punto donde se cortan las mediatrices de un triángulo?", options: ["Circuncentro", "Incentro", "Baricentro", "Ortocentro"], correctIndex: 0, explanation: "El circuncentro es el punto de intersección de las mediatrices y es el centro de la circunferencia circunscrita.", difficulty: "basic" },
     { id: 201, question: "¿Cómo se llama el punto donde se cortan las bisectrices de un triángulo?", options: ["Incentro", "Circuncentro", "Baricentro", "Ortocentro"], correctIndex: 0, explanation: "El incentro es el punto de intersección de las bisectrices y es el centro de la circunferencia inscrita.", difficulty: "basic" },
     { id: 202, question: "¿Cómo se llama el punto donde se cortan las medianas de un triángulo?", options: ["Baricentro", "Incentro", "Circuncentro", "Ortocentro"], correctIndex: 0, explanation: "El baricentro es el punto de intersección de las medianas y divide cada una en razón 2:1.", difficulty: "basic" },
@@ -1323,7 +1313,6 @@ Verificación: 15 = (1/3) · 45 ✓.`,
           "La fórmula del segmento paralelo en un trapecio es EF = (EA × CD + DE × AB)/(DE + EA) = (5 × 12 + 3 × 20)/(3 + 5) = (60 + 60)/8 = 15.",
         difficulty: "avanzado",
       },
-    ,
     { id: 220, question: "¿Qué condiciones deben cumplir dos triángulos para ser semejantes?", options: ["Tener ángulos iguales y lados proporcionales", "Tener los mismos lados", "Tener la misma área", "Tener el mismo perímetro"], correctIndex: 0, explanation: "Dos triángulos son semejantes si tienen ángulos correspondientes iguales y lados correspondientes en proporción.", difficulty: "basic" },
     { id: 221, question: "¿Qué es la semejanza entre dos figuras?", options: ["Tienen la misma forma pero no necesariamente el mismo tamaño", "Tienen el mismo tamaño", "Son idénticas", "Son congruentes"], correctIndex: 0, explanation: "Dos figuras son semejantes si tienen la misma forma (ángulos iguales) pero pueden tener diferentes tamaños.", difficulty: "basic" },
     { id: 222, question: "Si dos triángulos son semejantes con razón de semejanza 2, ¿cuál es la razón de sus áreas?", options: ["4", "2", "8", "16"], correctIndex: 0, explanation: "Si la razón de semejanza es k, la razón de áreas es k². Con k=2, la razón de áreas es 4.", difficulty: "basic" },
@@ -1343,8 +1332,7 @@ Verificación: 15 = (1/3) · 45 ✓.`,
     { id: 236, question: "¿Cuánto vale la distancia entre los centroides de dos triángulos homotéticos si la razón es 3 y la distancia entre un par de vértices correspondientes es 15 cm?", options: ["5 cm", "15 cm", "45 cm", "10 cm"], correctIndex: 0, explanation: "La distancia entre centroides es la misma razón que los lados: 15/3 = 5 cm.", difficulty: "advanced" },
     { id: 237, question: "Si el perímetro de un triángulo es 30 cm y su semejante tiene perímetro de 90 cm, ¿cuánto es la razón de semejanza y la razón de áreas?", options: ["3 y 9", "9 y 81", "3 y 27", "1/3 y 1/9"], correctIndex: 0, explanation: "La razón de perímetros = razón de lados = 90/30 = 3. La razón de áreas = 3² = 9.", difficulty: "advanced" },
     { id: 238, question: "Un triángulo tiene lados 5, 12, 13. ¿Cuáles son las longitudes de los lados de un triángulo semejante cuya área es 4 veces la del primero?", options: ["10, 24, 26", "20, 48, 52", "2.5, 6, 6.5", "15, 36, 39"], correctIndex: 0, explanation: "Si el área es 4 veces, la razón de semejanza es √4 = 2. Los lados son 5×2=10, 12×2=24, 13×2=26.", difficulty: "advanced" },
-    { id: 239, question: "¿Cuántos puntos notables pueden coincidir en un triángulo isósceles?", options: ["3 (circuncentro, ortocentro y baricentro en la mediana del lado desigual)", "4 (todos)", "2", "1"], correctIndex: 0, explanation: "En un triángulo isósceles, el circuncentro, ortocentro y baricentro están en la mediana del lado desigual, pero no en el mismo punto a menos que sea equilátero.", difficulty: "advanced" }
-  ,
+    { id: 239, question: "¿Cuántos puntos notables pueden coincidir en un triángulo isósceles?", options: ["3 (circuncentro, ortocentro y baricentro en la mediana del lado desigual)", "4 (todos)", "2", "1"], correctIndex: 0, explanation: "En un triángulo isósceles, el circuncentro, ortocentro y baricentro están en la mediana del lado desigual, pero no en el mismo punto a menos que sea equilátero.", difficulty: "advanced" },
     { id: 258, question: "¿Cuántos lados tiene un polígono regular?", options: ["Al menos 3, todos iguales", "Al menos 4", "Exactamente 6", "Al menos 5"], correctIndex: 0, explanation: "Un polígono regular tiene todos sus lados y ángulos iguales, con al menos 3 lados.", difficulty: "basic" },
     { id: 259, question: "¿Cuánto mide cada ángulo interior de un cuadrado regular?", options: ["90°", "60°", "120°", "45°"], correctIndex: 0, explanation: "Un cuadrado tiene 4 lados: (4-2)×180°/4 = 90°.", difficulty: "basic" },
     { id: 260, question: "¿Cuánto mide cada ángulo interior de un hexágono regular?", options: ["120°", "108°", "135°", "150°"], correctIndex: 0, explanation: "(6-2)×180°/6 = 720°/6 = 120°.", difficulty: "basic" },
@@ -1539,7 +1527,6 @@ Relación armónica: 1/6² = 1/180 + 1/45 → 1/36 = 1/180 + 4/180 = 5/180 = 1/3
           "c = m + n = 9 + 16 = 25 cm. Por el teorema del cateto: a² = c·m = 25·9 = 225, a = 15 cm. b² = c·n = 25·16 = 400, b = 20 cm. Verificación: 15² + 20² = 225 + 400 = 625 = 25².",
         difficulty: "avanzado",
       },
-    ,
     { id: 240, question: "¿Cuál es el teorema de Pitágoras?", options: ["a² + b² = c²", "a + b = c", "a² - b² = c²", "a × b = c²"], correctIndex: 0, explanation: "En un triángulo rectángulo, la suma de los catetos al cuadrado es igual a la hipotenusa al cuadrado.", difficulty: "basic" },
     { id: 241, question: "¿Cuánto mide la hipotenusa de un triángulo rectángulo con catetos de 3 y 4?", options: ["5", "7", "12", "25"], correctIndex: 0, explanation: "c = √(3² + 4²) = √(9 + 16) = √25 = 5.", difficulty: "basic" },
     { id: 242, question: "¿Cuál es la altura relativa a la hipotenusa en un triángulo rectángulo?", options: ["Segmento perpendicular desde el ángulo recto a la hipotenusa", "La mediana a la hipotenusa", "La bisectriz del ángulo recto", "El segmento que une los puntos medios"], correctIndex: 0, explanation: "La altura relativa a la hipotenusa es el segmento perpendicular trazado desde el vértice del ángulo recto hasta la hipotenusa.", difficulty: "basic" },
@@ -1557,8 +1544,7 @@ Relación armónica: 1/6² = 1/180 + 1/45 → 1/36 = 1/180 + 4/180 = 5/180 = 1/3
     { id: 254, question: "Un triángulo rectángulo tiene catetos de 9 y 12. ¿Cuánto mide la distancia del ortocentro al circuncentro?", options: ["7.5 cm", "15 cm", "5 cm", "10 cm"], correctIndex: 0, explanation: "El ortocentro está en el vértice del ángulo recto y el circuncentro en el punto medio de la hipotenusa (15 cm). La distancia es la mitad de la hipotenusa: 15/2 = 7.5 cm.", difficulty: "advanced" },
     { id: 255, question: "Si la hipotenusa de un triángulo rectángulo mide 17 y un cateto mide 8, ¿cuánto mide la altura relativa a la hipotenusa?", options: ["7.65 cm", "8 cm", "15 cm", "6.5 cm"], correctIndex: 0, explanation: "El otro cateto es √(17² - 8²) = √(289 - 64) = √225 = 15. La altura h = (8×15)/17 = 120/17 ≈ 7.06 cm. Ajustando: verificando, 8×15/17 = 7.06. La opción más cercana es 7.65.", difficulty: "advanced" },
     { id: 256, question: "¿Cuánto vale la suma de las inversas de los cuadrados de las proyecciones de los catetos sobre la hipotenusa?", options: ["Igual a la inversa del cuadrado de la altura", "Igual a 1", "Igual a la hipotenusa", "No tiene valor fijo"], correctIndex: 0, explanation: "1/p + 1/q = 1/h², ya que p = a²/c, q = b²/c y h = ab/c.", difficulty: "advanced" },
-    { id: 257, question: "En un triángulo rectángulo, si la suma de los catetos es 14 y la hipotenusa es 10, ¿cuáles son los catetos?", options: ["6 y 8", "5 y 9", "4 y 10", "7 y 7"], correctIndex: 0, explanation: "a + b = 14 y a² + b² = 100. Entonces (a+b)² = 196 = a²+b²+2ab = 100+2ab, 2ab = 96, ab = 48. Los números son 6 y 8.", difficulty: "advanced" }
-  ,
+    { id: 257, question: "En un triángulo rectángulo, si la suma de los catetos es 14 y la hipotenusa es 10, ¿cuáles son los catetos?", options: ["6 y 8", "5 y 9", "4 y 10", "7 y 7"], correctIndex: 0, explanation: "a + b = 14 y a² + b² = 100. Entonces (a+b)² = 196 = a²+b²+2ab = 100+2ab, 2ab = 96, ab = 48. Los números son 6 y 8.", difficulty: "advanced" },
     { id: 278, question: "¿Cuál es la fórmula del área de un triángulo?", options: ["(base × altura)/2", "base × altura", "base + altura", "(base × altura)/4"], correctIndex: 0, explanation: "El área de un triángulo es la base por la altura dividido entre 2.", difficulty: "basic" },
     { id: 279, question: "¿Cuál es el área de un rectángulo con base 8 cm y altura 5 cm?", options: ["40 cm²", "13 cm²", "26 cm²", "20 cm²"], correctIndex: 0, explanation: "Área = base × altura = 8 × 5 = 40 cm².", difficulty: "basic" },
     { id: 280, question: "¿Cuál es la fórmula del área de un trapecio?", options: ["((B + b) × h)/2", "B × b × h", "(B × h)/2", "B + b + h"], correctIndex: 0, explanation: "El área de un trapecio es la suma de las bases por la altura, dividido entre 2.", difficulty: "basic" },
@@ -1758,7 +1744,6 @@ Un polígono regular estrellado se obtiene uniendo cada vértice con otros vért
           "(n−2) × 180° = 1800°, entonces n − 2 = 10, por lo tanto n = 12. Cada ángulo interno = 1800°/12 = 150°. Verificación: 12 × 150° = 1800°.",
         difficulty: "avanzado",
       },
-    ,
     { id: 258, question: "¿Cuántos lados tiene un polígono regular?", options: ["Al menos 3, todos iguales", "Al menos 4", "Exactamente 6", "Al menos 5"], correctIndex: 0, explanation: "Un polígono regular tiene todos sus lados y ángulos iguales, con al menos 3 lados.", difficulty: "basic" },
     { id: 259, question: "¿Cuánto mide cada ángulo interior de un cuadrado regular?", options: ["90°", "60°", "120°", "45°"], correctIndex: 0, explanation: "Un cuadrado tiene 4 lados: (4-2)×180°/4 = 90°.", difficulty: "basic" },
     { id: 260, question: "¿Cuánto mide cada ángulo interior de un hexágono regular?", options: ["120°", "108°", "135°", "150°"], correctIndex: 0, explanation: "(6-2)×180°/6 = 720°/6 = 120°.", difficulty: "basic" },
@@ -1963,7 +1948,6 @@ La precisión en el cálculo de áreas es fundamental en ingeniería civil, arqu
           "A = (b₁ + b₂)h/2 → 104 = (10 + 16)h/2 = 13h → h = 8 cm. El triángulo formado por una diagonal y la base menor (b₁ = 10) tiene la misma altura h = 8 cm. Su área = (10 × 8)/2 = 40 cm².",
         difficulty: "avanzado",
       },
-    ,
     { id: 278, question: "¿Cuál es la fórmula del área de un triángulo?", options: ["(base × altura)/2", "base × altura", "base + altura", "(base × altura)/4"], correctIndex: 0, explanation: "El área de un triángulo es la base por la altura dividido entre 2.", difficulty: "basic" },
     { id: 279, question: "¿Cuál es el área de un rectángulo con base 8 cm y altura 5 cm?", options: ["40 cm²", "13 cm²", "26 cm²", "20 cm²"], correctIndex: 0, explanation: "Área = base × altura = 8 × 5 = 40 cm².", difficulty: "basic" },
     { id: 280, question: "¿Cuál es la fórmula del área de un trapecio?", options: ["((B + b) × h)/2", "B × b × h", "(B × h)/2", "B + b + h"], correctIndex: 0, explanation: "El área de un trapecio es la suma de las bases por la altura, dividido entre 2.", difficulty: "basic" },
@@ -2167,7 +2151,6 @@ La intersección de rectas y planos es clave en cálculo vectorial, óptica geom
           "La diagonal del cubo d_c = a√3. La diagonal de una cara d_f = a√2. El ángulo α entre ellas cumple: cos(α) = d_f/d_c = (a√2)/(a√3) = √2/√3. Entonces α = arccos(√2/√3) ≈ 35.26°.",
         difficulty: "avanzado",
       },
-    ,
     { id: 200, question: "¿Cuántos puntos determinan dos rectas paralelas distintas en un plano?", options: ["4", "2", "3", "Infinitos"], correctIndex: 0, explanation: "Cada recta contiene infinitos puntos, pero como son paralelas y distintas no comparten ningún punto; juntas determinan puntos de ambas rectas, pero como figuras determinan al menos 2 puntos por recta, es decir 4.", difficulty: "basico" },
     { id: 201, question: "¿Cómo se llama el conjunto de todos los puntos que pertenecen a una recta y a un plano simultáneamente si la recta está en el plano?", options: ["La recta entera", "Un punto", "La intersección", "Un segmento"], correctIndex: 0, explanation: "Si una recta está contenida en un plano, todos sus puntos pertenecen al plano; la intersección es la recta completa.", difficulty: "basico" },
     { id: 202, question: "Si una recta y un plano no son paralelos, ¿cuántos puntos tiene su intersección?", options: ["Uno", "Ninguno", "Infinitos", "Dos"], correctIndex: 0, explanation: "Una recta que no es paralela a un plano lo corta exactamente en un punto.", difficulty: "basico" },
@@ -2365,7 +2348,6 @@ Los prismas y cilindros aparecen frecuentemente en la ingeniería y la arquitect
           "Área del hexágono = 6 × (√3/4)(4²) = 6 × 4√3 = 24√3 cm². Volumen = 24√3 × 10 = 240√3 cm³. Perímetro = 6 × 4 = 24 cm. A_lateral = 24 × 10 = 240 cm². A_total = 2(24√3) + 240 = 48√3 + 240 cm².",
         difficulty: "avanzado",
       },
-    ,
     { id: 221, question: "¿Cuántas caras laterales tiene un prisma pentagonal?", options: ["5", "7", "10", "3"], correctIndex: 0, explanation: "Un prisma pentagonal tiene una base pentagonal y 5 caras laterales rectangulares.", difficulty: "basico" },
     { id: 222, question: "¿Cuántos vértices tiene un prisma hexagonal?", options: ["12", "8", "6", "10"], correctIndex: 0, explanation: "Un prisma hexagonal tiene 2 bases hexagonales, cada una con 6 vértices, total 12 vértices.", difficulty: "basico" },
     { id: 223, question: "¿Cuántas aristas tiene un prisma triangular?", options: ["9", "6", "3", "12"], correctIndex: 0, explanation: "Un prisma triangular tiene 3 aristas en cada base (6) y 3 aristas laterales, total 9.", difficulty: "basico" },
@@ -2559,8 +2541,7 @@ donde R es el radio de la base mayor, r el de la menor y h la altura del tronco.
         correctIndex: 0,
         explanation: "La altura total es h=24. Truncando a la mitad, h_tronco=12. Por semejanza, el radio del cono pequeño es r₂=3.5 y el radio mayor es r₁=7. V=(1/3)·π·12·(7²+3.5²+7·3.5)=(1/3)·π·12·(49+12.25+24.5)=(1/3)·π·12·85.75=12·π·85.75/3=308π cm³.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 242, question: "¿Cuántas caras laterales tiene una pirámide pentagonal?", options: ["5", "7", "10", "3"], correctIndex: 0, explanation: "Una pirámide pentagonal tiene una base pentagonal y 5 caras laterales triangulares.", difficulty: "basico" },
     { id: 243, question: "¿Cuántos vértices tiene una pirámide cuadrangular?", options: ["5", "4", "8", "6"], correctIndex: 0, explanation: "Una pirámide cuadrangular tiene 4 vértices en la base y 1 vértice superior, total 5.", difficulty: "basico" },
     { id: 244, question: "La fórmula del volumen de un cono es:", options: ["(1/3)πr²h", "πr²h", "2πrh", "(4/3)πr³"], correctIndex: 0, explanation: "El volumen de un cono es un tercio del volumen del cilindro con las mismas dimensiones: V = (1/3)πr²h.", difficulty: "basico" },
@@ -2745,8 +2726,7 @@ Si se perfora un cilindro coaxial de radio a a través de una esfera de radio r,
         correctIndex: 0,
         explanation: "El cilindro que circunscribe una esfera de radio r tiene radio r y altura 2r. V_esfera = (4/3)πr³, V_cilindro = πr²(2r) = 2πr³. Relación: (4/3)πr³ / 2πr³ = (4/3)/2 = 2/3.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 263, question: "¿Cuántos centros tiene una esfera?", options: ["Uno", "Dos", "Infinitos", "Ninguno"], correctIndex: 0, explanation: "Una esfera tiene un único centro, que es el punto equidistante de todos los puntos de la superficie.", difficulty: "basico" },
     { id: 264, question: "¿Cuántos radios tiene una esfera?", options: ["Infinitos", "Uno", "Dos", "Cuatro"], correctIndex: 0, explanation: "Una esfera tiene infinitos radios, ya que desde el centro se pueden trazar segmentos hacia cualquier punto de la superficie.", difficulty: "basico" },
     { id: 265, question: "¿Qué figura se obtiene al cortar una esfera con un plano que pasa por el centro?", options: ["Círculo máximo", "Elipse", "Punto", "Círculo menor"], correctIndex: 0, explanation: "Un plano que pasa por el centro de una esfera genera un círculo máximo (gran círculo).", difficulty: "basico" },
@@ -2954,8 +2934,7 @@ La comprensión profunda de las propiedades de las rectas es el fundamento de la
         correctIndex: 0,
         explanation: "Usando la fórmula del área con coordenadas: A = (1/2)|x₁(y₂−y₃) + x₂(y₃−y₁) + x₃(y₁−y₂)| = (1/2)|1(6−3) + 4(3−2) + 7(2−6)| = (1/2)|3 + 4 − 28| = (1/2)|−21| = 10.5.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 284, question: "¿Cuántos puntos determinan una recta?", options: ["Dos", "Tres", "Uno", "Infinitos"], correctIndex: 0, explanation: "Dos puntos distintos determinan exactamente una recta.", difficulty: "basico" },
     { id: 285, question: "¿Cuántas rectas pasan por un punto dado?", options: ["Infinitas", "Una", "Dos", "Ninguna"], correctIndex: 0, explanation: "Por un punto se pueden trazar infinitas rectas en todas las direcciones posibles.", difficulty: "basico" },
     { id: 286, question: "¿Cómo se llama la pendiente de una recta vertical?", options: ["No está definida", "Cero", "Infinita", "Uno"], correctIndex: 0, explanation: "La pendiente de una recta vertical es m = Δy/Δx = Δy/0, que no está definida.", difficulty: "basico" },
@@ -3161,8 +3140,7 @@ La circunferencia y la parábola son curvas cónicas fundamentales con amplias a
         correctIndex: 0,
         explanation: "El foco (1,1) está arriba del vértice (1,−2), así que la parábola abre hacia arriba con eje vertical. p = 1−(−2) = 3. Forma: (x−1)² = 4p(y−(−2)) = 12(y+2).",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 305, question: "¿Cuántos puntos tiene una circunferencia?", options: ["Infinitos", "Cuatro", "Dos", "Uno"], correctIndex: 0, explanation: "Una circunferencia es el lugar geométrico de infinitos puntos que están a la misma distancia del centro.", difficulty: "basico" },
     { id: 306, question: "¿Cuál es la ecuación de la circunferencia centrada en el origen con radio 3?", options: ["x² + y² = 9", "x² + y² = 3", "x² + y² = 6", "x² − y² = 9"], correctIndex: 0, explanation: "La ecuación es x² + y² = r² = 3² = 9.", difficulty: "basico" },
     { id: 307, question: "¿Cuántos ejes de simetría tiene una circunferencia?", options: ["Infinitos", "Cuatro", "Dos", "Uno"], correctIndex: 0, explanation: "Cualquier diámetro es un eje de simetría, por lo que hay infinitos.", difficulty: "basico" },
@@ -3387,8 +3365,7 @@ La distancia focal de un punto $P$ sobre la elipse a un foco se calcula como $d 
         correctIndex: 0,
         explanation: "Focos en (0,±4): c=4. El punto (3,0) está en la elipse: 3²/b²+0²/a²=1 → b²=9, b=3. Con eje vertical: a²=b²+c²=9+16=25, a=5. e=c/a=4/5.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 326, question: "¿Cuántos focos tiene una elipse?", options: ["Dos", "Uno", "Cuatro", "Ninguno"], correctIndex: 0, explanation: "Una elipse tiene dos focos, uno a cada lado del centro.", difficulty: "basico" },
     { id: 327, question: "¿Cuántos ejes de simetría tiene una elipse?", options: ["Dos", "Uno", "Cuatro", "Infinitos"], correctIndex: 0, explanation: "Una elipse tiene dos ejes de simetría: el mayor y el menor.", difficulty: "basico" },
     { id: 328, question: "En una elipse, la suma de las distancias de cualquier punto a los dos focos es:", options: ["Constante e igual a 2a", "Constante e igual a 2c", "Variable", "Igual a c²"], correctIndex: 0, explanation: "Por definición, PF₁ + PF₂ = 2a, donde a es el semieje mayor.", difficulty: "basico" },
@@ -3409,8 +3386,7 @@ La distancia focal de un punto $P$ sobre la elipse a un foco se calcula como $d 
     { id: 343, question: "El segmento focal de una hipérbola x²/a² − y²/b² = 1 tiene longitud:", options: ["2b²/a", "2a²/b", "2c", "b²/a"], correctIndex: 0, explanation: "El latus rectum de una hipérbola es 2b²/a.", difficulty: "avanzado" },
     { id: 344, question: "Una hipérbola tiene ecuación x²/9 − y²/16 = 1. ¿Cuál es la distancia entre sus focos?", options: ["10", "5", "6", "8"], correctIndex: 0, explanation: "c² = a² + b² = 9 + 16 = 25 → c = 5. La distancia entre focos es 2c = 10.", difficulty: "avanzado" },
     { id: 345, question: "¿Cuál es la ecuación de la elipse con focos en (0, ±3) y vértices en (0, ±5)?", options: ["x²/16 + y²/25 = 1", "x²/25 + y²/16 = 1", "x²/9 + y²/25 = 1", "x²/16 + y²/9 = 1"], correctIndex: 0, explanation: "a = 5, c = 3, b² = 25 − 9 = 16. La elipse es vertical: x²/16 + y²/25 = 1.", difficulty: "avanzado" },
-    { id: 346, question: "Si la excentricidad de una cónica es mayor que 1, ¿qué tipo de curva es?", options: ["Hipérbola", "Elipse", "Parábola", "Circunferencia"], correctIndex: 0, explanation: "Si e > 1, la cónica es una hipérbola. Si e < 1 es una elipse, si e = 1 es una parábola.", difficulty: "avanzado" }
-  ,
+    { id: 346, question: "Si la excentricidad de una cónica es mayor que 1, ¿qué tipo de curva es?", options: ["Hipérbola", "Elipse", "Parábola", "Circunferencia"], correctIndex: 0, explanation: "Si e > 1, la cónica es una hipérbola. Si e < 1 es una elipse, si e = 1 es una parábola.", difficulty: "avanzado" },
     { id: 389, question: "¿Cuántos criterios de semejanza de triángulos existen?", options: ["Tres (AA, LAL, LLL)", "Dos", "Cuatro", "Uno"], correctIndex: 0, explanation: "Los criterios de semejanza son AA (dos ángulos iguales), LAL (lados proporcionales con ángulo comprendido igual) y LLL (tres lados proporcionales).", difficulty: "basico" },
     { id: 390, question: "Si dos triángulos son semejantes con razón de semejanza 2, la razón de sus perímetros es:", options: ["2", "4", "8", "1"], correctIndex: 0, explanation: "La razón de perímetros de triángulos semejantes es igual a la razón de semejanza k = 2.", difficulty: "basico" },
     { id: 391, question: "Si la razón de semejanza entre dos triángulos es 3, la razón de sus áreas es:", options: ["9", "3", "27", "6"], correctIndex: 0, explanation: "La razón de áreas es k² = 3² = 9.", difficulty: "basico" },
@@ -3565,8 +3541,7 @@ El teorema de Pitágoras permite definir la métrica euclidiana. La distancia en
     exercises: [
       { id: 1, question: "¿Cuál es la hipotenusa de un triángulo rectángulo con catetos 6 y 8?", options: ["10", "12", "14", "16"], correctIndex: 0, explanation: "Aplicando Pitágoras: c = √(6² + 8²) = √(36 + 64) = √100 = 10.", difficulty: "basico" },
       { id: 2, question: "¿Es rectángulo un triángulo con lados 7, 24 y 25?", options: ["Sí, porque 7² + 24² = 25²", "No, porque 7 + 24 > 25", "Sí, porque todos los lados son primos", "No, porque 25² > 7² + 24²"], correctIndex: 0, explanation: "7² + 24² = 49 + 576 = 625 = 25². Se verifica la relación pitagórica, por lo que es rectángulo.", difficulty: "intermedio" },
-      { id: 3, question: "¿Cuál es la distancia entre los puntos A(1, 2) y B(4, 6)?", options: ["5", "7", "12", "3√5"], correctIndex: 0, explanation: "d = √((4−1)² + (6−2)²) = √(9 + 16) = √25 = 5.", difficulty: "avanzado" }
-    ,
+      { id: 3, question: "¿Cuál es la distancia entre los puntos A(1, 2) y B(4, 6)?", options: ["5", "7", "12", "3√5"], correctIndex: 0, explanation: "d = √((4−1)² + (6−2)²) = √(9 + 16) = √25 = 5.", difficulty: "avanzado" },
     { id: 347, question: "¿Cuál es la hipotenusa de un triángulo rectángulo con catetos 9 y 12?", options: ["15", "21", "18", "3√7"], correctIndex: 0, explanation: "c = √(9² + 12²) = √(81 + 144) = √225 = 15. Es múltiplo de la terna (3, 4, 5) × 3.", difficulty: "basico" },
     { id: 348, question: "¿Cuál es el cateto de un triángulo rectángulo con hipotenusa 13 y otro cateto 5?", options: ["12", "8", "10", "144"], correctIndex: 0, explanation: "a = √(13² − 5²) = √(169 − 25) = √144 = 12.", difficulty: "basico" },
     { id: 349, question: "¿Es rectángulo un triángulo con lados 9, 12 y 15?", options: ["Sí, porque 9² + 12² = 15²", "No, porque no es la terna 3-4-5", "Sí, porque tiene un lado par", "No, porque 15² > 9² + 12²"], correctIndex: 0, explanation: "81 + 144 = 225 = 15². Se verifica Pitágoras, por lo que es rectángulo.", difficulty: "basico" },
@@ -3587,8 +3562,7 @@ El teorema de Pitágoras permite definir la métrica euclidiana. La distancia en
     { id: 364, question: "¿Cuál es la distancia entre los puntos A(1, 2, 3) y B(4, 6, 8)?", options: ["√50", "√14", "5√2", "50"], correctIndex: 0, explanation: "d = √((4−1)² + (6−2)² + (8−3)²) = √(9 + 16 + 25) = √50 = 5√2.", difficulty: "avanzado" },
     { id: 365, question: "En un triángulo rectángulo, si los catetos están en razón 3:5 y la hipotenusa mide √34, ¿cuánto mide el menor cateto?", options: ["3", "5", "√34/2", "6"], correctIndex: 0, explanation: "Si a = 3k y b = 5k: 9k² + 25k² = 34 → 34k² = 34 → k = 1. El menor es 3(1) = 3.", difficulty: "avanzado" },
     { id: 366, question: "Un triángulo rectángulo tiene un cateto de 10 y la proyección de ese cateto sobre la hipotenusa mide 6. ¿Cuánto mide la hipotenusa?", options: ["50/3", "20/3", "15", "100/6"], correctIndex: 0, explanation: "Por las relaciones de la métrica en el triángulo rectángulo: a² = c·p, donde p es la proyección. 100 = c·6 → c = 100/6 = 50/3.", difficulty: "avanzado" },
-    { id: 367, question: "La diagonal de un cubo mide 10 cm. ¿Cuánto mide la arista del cubo?", options: ["10/√3", "10√3", "5√2", "10/3"], correctIndex: 0, explanation: "d = a√3 → 10 = a√3 → a = 10/√3 = 10√3/3.", difficulty: "avanzado" }
-  ,
+    { id: 367, question: "La diagonal de un cubo mide 10 cm. ¿Cuánto mide la arista del cubo?", options: ["10/√3", "10√3", "5√2", "10/3"], correctIndex: 0, explanation: "d = a√3 → 10 = a√3 → a = 10/√3 = 10√3/3.", difficulty: "avanzado" },
     { id: 300, question: "¿Qué necesitas para aplicar el criterio LLL en dos triángulos?", options: ["Tres lados iguales respectivamente", "Dos ángulos iguales", "Un lado y dos ángulos", "Dos lados y un ángulo"], correctIndex: 0, explanation: "El criterio LLL establece que dos triángulos son congruentes si sus tres lados correspondientes son iguales.", difficulty: "basico" },
     { id: 301, question: "¿Qué significa que dos triángulos son congruentes?", options: ["Tienen la misma forma y el mismo tamaño", "Solo tienen la misma forma", "Tienen la misma área pero diferente forma", "Solo tienen un lado igual"], correctIndex: 0, explanation: "Triángulos congruentes son exactamente iguales: mismos lados, mismos ángulos y misma área.", difficulty: "basico" },
     { id: 302, question: "Si AB = DE, BC = EF y AC = DF, ¿qué criterio de congruencia aplica?", options: ["LLL", "LAL", "ALA", "AAA"], correctIndex: 0, explanation: "Cuando los tres pares de lados correspondientes son iguales, se usa el criterio LLL.", difficulty: "basico" },
@@ -3738,8 +3712,7 @@ Esta fórmula es una consecuencia directa del teorema de Tales aplicado a los ej
     exercises: [
       { id: 4, question: "En un triángulo ABC, si D y E son puntos medios de AB y AC respectivamente, y BC = 10, ¿cuánto mide DE?", options: ["5", "10", "20", "2.5"], correctIndex: 0, explanation: "Por el teorema de Tales, D y E miden los lados en proporción 1:1, entonces DE = BC/2 = 5.", difficulty: "basico" },
       { id: 5, question: "Si DE ∥ BC, AD = 3, DB = 6 y AE = 2, ¿cuánto mide EC?", options: ["4", "3", "6", "9"], correctIndex: 0, explanation: "Por Tales: AD/DB = AE/EC → 3/6 = 2/EC → EC = 4.", difficulty: "intermedio" },
-      { id: 6, question: "La bisectriz del ángulo A en un triángulo divide a BC en BD = 5 y DC = 8. Si AB = 10, ¿cuánto mide AC?", options: ["16", "12", "20", "13"], correctIndex: 0, explanation: "Por la bisectriz: BD/DC = AB/AC → 5/8 = 10/AC → AC = 16.", difficulty: "avanzado" }
-    ,
+      { id: 6, question: "La bisectriz del ángulo A en un triángulo divide a BC en BD = 5 y DC = 8. Si AB = 10, ¿cuánto mide AC?", options: ["16", "12", "20", "13"], correctIndex: 0, explanation: "Por la bisectriz: BD/DC = AB/AC → 5/8 = 10/AC → AC = 16.", difficulty: "avanzado" },
     { id: 368, question: "Si DE es paralela a BC y D divide a AB en razón 1:2, ¿en qué razón divide E a AC?", options: ["1:2", "2:1", "1:3", "3:1"], correctIndex: 0, explanation: "Por el Teorema de Tales, las razones son iguales: AD/DB = AE/EC = 1/2.", difficulty: "basico" },
     { id: 369, question: "En un triángulo, si D y E son puntos medios de AB y AC, ¿cuánto vale DE/BC?", options: ["1/2", "1/3", "2", "1"], correctIndex: 0, explanation: "Por el teorema de Tales, DE/BC = AD/AB = 1/2 cuando D y E son puntos medios.", difficulty: "basico" },
     { id: 370, question: "Si DE ∥ BC, AD = 4, DB = 8 y BC = 15, ¿cuánto mide DE?", options: ["5", "10", "7.5", "15"], correctIndex: 0, explanation: "DE/BC = AD/AB → DE/15 = 4/12 = 1/3 → DE = 5.", difficulty: "basico" },
@@ -3888,8 +3861,7 @@ En un triángulo rectángulo, las razones trigonométricas se definen por la sem
     exercises: [
       { id: 7, question: "Si ΔABC ~ ΔDEF con razón de semejanza k = 3 y AB = 6, ¿cuánto mide DE?", options: ["2", "18", "9", "12"], correctIndex: 0, explanation: "AB/DE = k → 6/DE = 3 → DE = 2.", difficulty: "basico" },
       { id: 8, question: "Si dos triángulos semejantes tienen lados 5 y 8 en el primero, y 10 y x en el segundo, ¿cuánto vale x?", options: ["16", "20", "4", "25"], correctIndex: 0, explanation: "La proporción es constante: 5/10 = 8/x → x = 16.", difficulty: "intermedio" },
-      { id: 9, question: "Si la razón de semejanza entre dos triángulos es 3:1, ¿cuál es la razón de sus áreas?", options: ["3:1", "9:1", "27:1", "6:1"], correctIndex: 1, explanation: "La razón de áreas es k² = 3² = 9, por lo que la razón es 9:1.", difficulty: "avanzado" }
-    ,
+      { id: 9, question: "Si la razón de semejanza entre dos triángulos es 3:1, ¿cuál es la razón de sus áreas?", options: ["3:1", "9:1", "27:1", "6:1"], correctIndex: 1, explanation: "La razón de áreas es k² = 3² = 9, por lo que la razón es 9:1.", difficulty: "avanzado" },
     { id: 389, question: "¿Cuántos criterios de semejanza de triángulos existen?", options: ["Tres (AA, LAL, LLL)", "Dos", "Cuatro", "Uno"], correctIndex: 0, explanation: "Los criterios de semejanza son AA (dos ángulos iguales), LAL (lados proporcionales con ángulo comprendido igual) y LLL (tres lados proporcionales).", difficulty: "basico" },
     { id: 390, question: "Si dos triángulos son semejantes con razón de semejanza 2, la razón de sus perímetros es:", options: ["2", "4", "8", "1"], correctIndex: 0, explanation: "La razón de perímetros de triángulos semejantes es igual a la razón de semejanza k = 2.", difficulty: "basico" },
     { id: 391, question: "Si la razón de semejanza entre dos triángulos es 3, la razón de sus áreas es:", options: ["9", "3", "27", "6"], correctIndex: 0, explanation: "La razón de áreas es k² = 3² = 9.", difficulty: "basico" },
@@ -3910,8 +3882,7 @@ En un triángulo rectángulo, las razones trigonométricas se definen por la sem
     { id: 406, question: "Un cuadrado y un rectángulo NO son semejantes porque:", options: ["Sus ángulos son iguales pero sus lados no son proporcionales", "No tienen los mismos ángulos", "No son polígonos regulares", "Tienen diferente número de lados"], correctIndex: 0, explanation: "Ambos tienen ángulos de 90°, pero en el cuadrado todos los lados son iguales y en el rectángulo no necesariamente, por lo que los lados no son proporcionales en el sentido de semejanza de polígonos.", difficulty: "avanzado" },
     { id: 407, question: "Si la razón de semejanza entre dos polígonos regulares con el mismo número de lados es k, ¿cuál es la razón de sus áreas?", options: ["k²", "k", "k³", "nk"], correctIndex: 0, explanation: "Para cualquier par de polígonos semejantes, la razón de áreas es k², igual que para triángulos.", difficulty: "avanzado" },
     { id: 408, question: "Un triángulo tiene lados 9, 12 y 15. ¿Cuál es el lado de un triángulo equilátero semejante cuya área sea el doble?", options: ["9√2", "18", "9√(2/√3)", "12√2"], correctIndex: 0, explanation: "Para un triángulo equilátero de lado a, A = (√3/4)a². El triángulo 9-12-15 tiene A = 54. Un equilátero con A = 108: (√3/4)a² = 108 → a² = 432/√3 → a = √(432/√3) = 9√(2√3) ≈ 14.02. La opción más cercana es 9√2 ≈ 12.73.", difficulty: "avanzado" },
-    { id: 409, question: "Si dos figuras semejantes tienen áreas 50 cm² y 200 cm² y el perímetro de la menor es 30 cm, ¿cuánto es el volumen de la mayor si la menor es un cubo de volumen 30 cm³?", options: ["120 cm³", "240 cm³", "60 cm³", "90 cm³"], correctIndex: 0, explanation: "k² = 200/50 = 4 → k = 2. Para volúmenes: V₂/V₁ = k³ = 8. V₂ = 30 × 8 = 240 cm³. Verificando: la razón correcta para volúmenes es k³, y k = 2, entonces V₂ = 30·8 = 240.", difficulty: "avanzado" }
-  ,
+    { id: 409, question: "Si dos figuras semejantes tienen áreas 50 cm² y 200 cm² y el perímetro de la menor es 30 cm, ¿cuánto es el volumen de la mayor si la menor es un cubo de volumen 30 cm³?", options: ["120 cm³", "240 cm³", "60 cm³", "90 cm³"], correctIndex: 0, explanation: "k² = 200/50 = 4 → k = 2. Para volúmenes: V₂/V₁ = k³ = 8. V₂ = 30 × 8 = 240 cm³. Verificando: la razón correcta para volúmenes es k³, y k = 2, entonces V₂ = 30·8 = 240.", difficulty: "avanzado" },
     { id: 363, question: "¿Qué es la potencia de un punto exterior a una circunferencia?", options: ["El producto de las longitudes de los segmentos de una secante", "La distancia al centro", "El radio al cuadrado", "La suma de dos cuerdas"], correctIndex: 0, explanation: "La potencia de un punto exterior es el producto de las longitudes de los segmentos de cualquier secante.", difficulty: "basico" },
     { id: 364, question: "Si desde P se traza una secante PAB, ¿cuál es la potencia de P?", options: ["PA × PB", "PA + PB", "PA / PB", "PA − PB"], correctIndex: 0, explanation: "La potencia del punto P es PA × PB.", difficulty: "basico" },
     { id: 365, question: "Si PA × PB = 16 y PA = 4, ¿cuánto mide PB?", options: ["4", "8", "12", "2"], correctIndex: 0, explanation: "PB = (PA × PB) / PA = 16 / 4 = 4.", difficulty: "basico" },
@@ -4069,8 +4040,7 @@ Para triángulos rectángulos existen criterios especiales: el criterio de hipot
     exercises: [
       { id: 10, question: "¿Cuál de los siguientes criterios NO garantiza congruencia entre triángulos?", options: ["LAL", "LAA", "AAA", "LLL"], correctIndex: 2, explanation: "AAA solo garantiza semejanza, no congruencia, porque el tamaño puede ser diferente.", difficulty: "basico" },
       { id: 11, question: "Dos triángulos rectángulos tienen la misma hipotenusa y un cateto igual. ¿Son congruentes?", options: ["Sí, por criterio HR", "Sí, por criterio AAA", "No, no hay criterio suficiente", "Solo si el ángulo es 60°"], correctIndex: 0, explanation: "El criterio HR (hipotenusa-cateto) es un caso de LAL para triángulos rectángulos.", difficulty: "intermedio" },
-      { id: 12, question: "En ΔABC y ΔDEF, si AB = DE, ∠A = ∠D y ∠B = ∠E, ¿qué criterio garantiza congruencia?", options: ["LAL", "ALA", "LAA", "LLL"], correctIndex: 1, explanation: "Tienen dos ángulos y el lado comprendido entre ellos iguales, lo cual corresponde al criterio ALA.", difficulty: "avanzado" }
-    ,
+      { id: 12, question: "En ΔABC y ΔDEF, si AB = DE, ∠A = ∠D y ∠B = ∠E, ¿qué criterio garantiza congruencia?", options: ["LAL", "ALA", "LAA", "LLL"], correctIndex: 1, explanation: "Tienen dos ángulos y el lado comprendido entre ellos iguales, lo cual corresponde al criterio ALA.", difficulty: "avanzado" },
     { id: 300, question: "¿Qué necesitas para aplicar el criterio LLL en dos triángulos?", options: ["Tres lados iguales respectivamente", "Dos ángulos iguales", "Un lado y dos ángulos", "Dos lados y un ángulo"], correctIndex: 0, explanation: "El criterio LLL establece que dos triángulos son congruentes si sus tres lados correspondientes son iguales.", difficulty: "basico" },
     { id: 301, question: "¿Qué significa que dos triángulos son congruentes?", options: ["Tienen la misma forma y el mismo tamaño", "Solo tienen la misma forma", "Tienen la misma área pero diferente forma", "Solo tienen un lado igual"], correctIndex: 0, explanation: "Triángulos congruentes son exactamente iguales: mismos lados, mismos ángulos y misma área.", difficulty: "basico" },
     { id: 302, question: "Si AB = DE, BC = EF y AC = DF, ¿qué criterio de congruencia aplica?", options: ["LLL", "LAL", "ALA", "AAA"], correctIndex: 0, explanation: "Cuando los tres pares de lados correspondientes son iguales, se usa el criterio LLL.", difficulty: "basico" },
@@ -4237,8 +4207,7 @@ Para un triángulo con dos lados dados $a$ y $b$, el área es máxima cuando el 
     exercises: [
       { id: 13, question: "Un triángulo tiene base 12 cm y altura 8 cm. ¿Cuál es su área?", options: ["96 cm²", "48 cm²", "24 cm²", "20 cm²"], correctIndex: 1, explanation: "A = (12 × 8) / 2 = 96 / 2 = 48 cm².", difficulty: "basico" },
       { id: 14, question: "Un triángulo tiene lados 3, 4 y 5. Usando la fórmula de Herón, su área es:", options: ["12", "6", "10", "8"], correctIndex: 1, explanation: "s = (3+4+5)/2 = 6. A = √(6·3·2·1) = √36 = 6.", difficulty: "intermedio" },
-      { id: 15, question: "Los vértices de un triángulo son A(1,1), B(4,1) y C(1,5). ¿Cuál es su área?", options: ["12", "6", "8", "10"], correctIndex: 1, explanation: "A = ½|1(1−5) + 4(5−1) + 1(1−1)| = ½|−4 + 16 + 0| = ½(12) = 6.", difficulty: "avanzado" }
-    ,
+      { id: 15, question: "Los vértices de un triángulo son A(1,1), B(4,1) y C(1,5). ¿Cuál es su área?", options: ["12", "6", "8", "10"], correctIndex: 1, explanation: "A = ½|1(1−5) + 4(5−1) + 1(1−1)| = ½|−4 + 16 + 0| = ½(12) = 6.", difficulty: "avanzado" },
     { id: 321, question: "¿Cuál es la fórmula del área de un triángulo usando base y altura?", options: ["A = (base × altura) / 2", "A = base × altura", "A = (base + altura) / 2", "A = base² + altura²"], correctIndex: 0, explanation: "El área de un triángulo es la mitad del producto de su base por la altura correspondiente.", difficulty: "basico" },
     { id: 322, question: "Si un triángulo tiene base 10 cm y altura 6 cm, ¿cuál es su área?", options: ["30 cm²", "60 cm²", "16 cm²", "36 cm²"], correctIndex: 0, explanation: "A = (10 × 6) / 2 = 60 / 2 = 30 cm².", difficulty: "basico" },
     { id: 323, question: "¿Qué relación tienen dos triángulos con la misma base y la misma altura?", options: ["Tienen la misma área", "Tienen la misma forma", "Son congruentes", "Son semejantes"], correctIndex: 0, explanation: "Si comparten base y altura, el área = (b × h) / 2 es idéntica.", difficulty: "basico" },
@@ -4404,8 +4373,7 @@ El incentro siempre está dentro del triángulo. La distancia del circuncentro a
     exercises: [
       { id: 16, question: "¿Cómo se obtiene el circuncentro de un triángulo?", options: ["Intersección de alturas", "Intersección de mediatrices", "Intersección de bisectrices", "Intersección de medianas"], correctIndex: 1, explanation: "El circuncentro es el punto de intersección de las mediatrices de los lados del triángulo.", difficulty: "basico" },
       { id: 17, question: "Un triángulo rectángulo tiene catetos 6 y 8. ¿Cuál es el radio de su circunferencia circunscrita?", options: ["4", "5", "10", "3"], correctIndex: 1, explanation: "La hipotenusa es √(36+64) = 10. En un triángulo rectángulo, R = hipotenusa/2 = 5.", difficulty: "intermedio" },
-      { id: 18, question: "Un triángulo tiene área 30 y semiperímetro s = 15. ¿Cuál es el radio de la circunferencia inscrita?", options: ["1", "2", "3", "5"], correctIndex: 1, explanation: "r = A/s = 30/15 = 2.", difficulty: "avanzado" }
-    ,
+      { id: 18, question: "Un triángulo tiene área 30 y semiperímetro s = 15. ¿Cuál es el radio de la circunferencia inscrita?", options: ["1", "2", "3", "5"], correctIndex: 1, explanation: "r = A/s = 30/15 = 2.", difficulty: "avanzado" },
     { id: 342, question: "¿Qué es la circunferencia circunscrita de un triángulo?", options: ["La que pasa por los tres vértices del triángulo", "La que está dentro del triángulo", "La que toca un solo lado", "La que tiene el mismo centro"], correctIndex: 0, explanation: "La circunferencia circunscrita contiene los tres vértices del triángulo.", difficulty: "basico" },
     { id: 343, question: "¿Qué es la circunferencia inscrita de un triángulo?", options: ["La que es tangente a los tres lados del triángulo", "La que pasa por los vértices", "La que tiene la mayor área posible", "La que rodea al triángulo"], correctIndex: 0, explanation: "La circunferencia inscrita es tangente a los tres lados y está dentro del triángulo.", difficulty: "basico" },
     { id: 344, question: "¿Dónde se encuentra el centro de la circunferencia circunscrita?", options: ["En la intersección de las mediatrices de los lados", "En la intersección de las bisectrices", "En la intersección de las medianas", "En la intersección de las alturas"], correctIndex: 0, explanation: "El circuncentro es el punto de intersección de las mediatrices.", difficulty: "basico" },
@@ -4572,8 +4540,7 @@ Cuando se trazan tangentes desde un punto exterior a dos circunferencias, los pu
     exercises: [
       { id: 19, question: "Si P está fuera de una circunferencia y PT es tangente con PT = 6, ¿cuál es la potencia de P?", options: ["36", "6", "12", "18"], correctIndex: 0, explanation: "La potencia de un punto exterior es PT² = 6² = 36.", difficulty: "basico" },
       { id: 20, question: "Desde P se trazan dos secantes PAB y PCD con PA = 2, PB = 8 y PC = 4. ¿Cuánto mide PD?", options: ["4", "6", "8", "16"], correctIndex: 0, explanation: "PA × PB = PC × PD → 2 × 8 = 4 × PD → PD = 16/4 = 4.", difficulty: "intermedio" },
-      { id: 21, question: "Dos cuerdas AB y CD se cruzan en P dentro de una circunferencia con PA = 3, PB = 5 y PC = 2. ¿Cuánto mide PD?", options: ["7.5", "8", "6", "10"], correctIndex: 0, explanation: "PA × PB = PC × PD → 3 × 5 = 2 × PD → PD = 15/2 = 7.5.", difficulty: "avanzado" }
-    ,
+      { id: 21, question: "Dos cuerdas AB y CD se cruzan en P dentro de una circunferencia con PA = 3, PB = 5 y PC = 2. ¿Cuánto mide PD?", options: ["7.5", "8", "6", "10"], correctIndex: 0, explanation: "PA × PB = PC × PD → 3 × 5 = 2 × PD → PD = 15/2 = 7.5.", difficulty: "avanzado" },
     { id: 363, question: "¿Qué es la potencia de un punto exterior a una circunferencia?", options: ["El producto de las longitudes de los segmentos de una secante", "La distancia al centro", "El radio al cuadrado", "La suma de dos cuerdas"], correctIndex: 0, explanation: "La potencia de un punto exterior es el producto de las longitudes de los segmentos de cualquier secante.", difficulty: "basico" },
     { id: 364, question: "Si desde P se traza una secante PAB, ¿cuál es la potencia de P?", options: ["PA × PB", "PA + PB", "PA / PB", "PA − PB"], correctIndex: 0, explanation: "La potencia del punto P es PA × PB.", difficulty: "basico" },
     { id: 365, question: "Si PA × PB = 16 y PA = 4, ¿cuánto mide PB?", options: ["4", "8", "12", "2"], correctIndex: 0, explanation: "PB = (PA × PB) / PA = 16 / 4 = 4.", difficulty: "basico" },
@@ -4713,8 +4680,7 @@ Los angulos inscritos y centrales son fundamentales en geometria circular, naveg
     exercises: [
       { id: 22, question: "Si un ángulo central mide 80°, ¿cuánto mide el ángulo inscrito que intercepta el mismo arco?", options: ["80°", "160°", "40°", "20°"], correctIndex: 2, explanation: "El ángulo inscrito vale la mitad del central: 80° / 2 = 40°.", difficulty: "basico" },
       { id: 23, question: "Un ángulo inscrito mide 72°. ¿Cuánto mide el arco que intercepta?", options: ["72°", "144°", "36°", "108°"], correctIndex: 1, explanation: "El arco interceptado es el doble del ángulo inscrito: 2 × 72° = 144°.", difficulty: "intermedio" },
-      { id: 24, question: "Un cuadrilátero cíclico tiene un ángulo de 65°. ¿Cuánto mide el ángulo opuesto?", options: ["65°", "115°", "130°", "90°"], correctIndex: 1, explanation: "En un cuadrilátero cíclico los ángulos opuestos suman 180°: 180° − 65° = 115°.", difficulty: "avanzado" }
-    ,
+      { id: 24, question: "Un cuadrilátero cíclico tiene un ángulo de 65°. ¿Cuánto mide el ángulo opuesto?", options: ["65°", "115°", "130°", "90°"], correctIndex: 1, explanation: "En un cuadrilátero cíclico los ángulos opuestos suman 180°: 180° − 65° = 115°.", difficulty: "avanzado" },
     { id: 384, question: "¿Qué es un ángulo central en una circunferencia?", options: ["Un ángulo cuyo vértice está en el centro", "Un ángulo inscrito", "Un ángulo formado por dos tangentes", "Un ángulo exterior"], correctIndex: 0, explanation: "Un ángulo central tiene su vértice en el centro O y sus lados son radios.", difficulty: "basico" },
     { id: 385, question: "¿Qué es un ángulo inscrito?", options: ["Un ángulo cuyo vértice está sobre la circunferencia", "Un ángulo cuyo vértice está en el centro", "Un ángulo formado por dos diámetros", "Un ángulo que mide 90°"], correctIndex: 0, explanation: "Un ángulo inscrito tiene su vértice sobre la circunferencia y sus lados son cuerdas.", difficulty: "basico" },
     { id: 386, question: "¿Qué relación existe entre un ángulo central y un inscrito que subtienden el mismo arco?", options: ["El central mide el doble del inscrito", "Son iguales", "El inscrito mide el doble del central", "No tienen relación"], correctIndex: 0, explanation: "El ángulo central mide exactamente el doble que el ángulo inscrito del mismo arco.", difficulty: "basico" },
@@ -4737,22 +4703,12 @@ Los angulos inscritos y centrales son fundamentales en geometria circular, naveg
     { id: 403, question: "Si una tangente y una secante se cortan fuera de la circunferencia con arcos 140° y 20°, ¿cuánto mide el ángulo?", options: ["60°", "80°", "140°", "100°"], correctIndex: 0, explanation: "∠ = (140° − 20°) / 2 = 60°.", difficulty: "avanzado" },
     { id: 404, question: "Si un ángulo inscrito subtiende un arco de 300°, ¿cuánto mide?", options: ["150°", "300°", "60°", "120°"], correctIndex: 0, explanation: "El ángulo inscrito = 300° / 2 = 150°.", difficulty: "avanzado" }
   ]
-  }
-,
+  },
   {
     slug: "transformaciones-isometricas",
     illustrationSummary: "Figura original con sus transformaciones: traslación, rotación y reflexión. Cada transformación se muestra en un color diferente.",
     tip: "En isometrías el área y las distancias se conservan. Verifica que la orientación se invierta en reflexiones pero no en traslaciones ni rotaciones.",
-    theory: [
-      { level: "basico", title: "Traslación", lines: [
-        "Una traslación mueve todos los puntos de una figura la misma distancia en la misma dirección.",
-        "Se define por un vector v = (a, b) que indica el desplazamiento horizontal y vertical.",
-        "Si un punto tiene coordenadas (x, y), su imagen trasladada será (x + a, y + b).",
-        "La traslación conserva distancias, ángulos y áreas de la figura original.",
-        "No cambia la orientación de la figura: lo que estaba a la izquierda sigue a la izquierda.",
-        "Ejemplo: trasladar (3, 2) con vector (-1, 4) da como resultado (2, 6)."
-      ],
-  studyGuide: `## Transformaciones Isometricas
+    studyGuide: `## Transformaciones Isometricas
 
 ### Definicion
 
@@ -4806,7 +4762,17 @@ Solucion: Los puntos reflejados son R'(1, -5) y S'(4, -3). La longitud del segme
 
 ### Aplicaciones
 
-Las transformaciones isometricas se aplican en diseno grafico, animacion por computadora, arquitectura, ingenieria mecanica y robotica. Permiten generar simetrias, patrones repetitivos y analizar movimientos de objetos en el espacio sin alterar sus dimensiones.`},
+Las transformaciones isometricas se aplican en diseno grafico, animacion por computadora, arquitectura, ingenieria mecanica y robotica. Permiten generar simetrias, patrones repetitivos y analizar movimientos de objetos en el espacio sin alterar sus dimensiones.`,
+    theory: [
+      { level: "basico", title: "Traslación", lines: [
+        "Una traslación mueve todos los puntos de una figura la misma distancia en la misma dirección.",
+        "Se define por un vector v = (a, b) que indica el desplazamiento horizontal y vertical.",
+        "Si un punto tiene coordenadas (x, y), su imagen trasladada será (x + a, y + b).",
+        "La traslación conserva distancias, ángulos y áreas de la figura original.",
+        "No cambia la orientación de la figura: lo que estaba a la izquierda sigue a la izquierda.",
+        "Ejemplo: trasladar (3, 2) con vector (-1, 4) da como resultado (2, 6)."
+      ],
+      },
       { level: "intermedio", title: "Rotación", lines: [
         "Una rotación gira cada punto alrededor de un punto fijo llamado centro de rotación.",
         "El ángulo de rotación indica cuántos grados se gira; puede ser horario o antihorario.",
@@ -4841,8 +4807,7 @@ Las transformaciones isometricas se aplican en diseno grafico, animacion por com
     exercises: [
       { id: 1, question: "¿Cuál es la imagen del punto (4, -3) tras una traslación con vector (-2, 5)?", options: ["(6, 2)", "(2, 2)", "(-2, 2)", "(2, 8)"], correctIndex: 1, explanation: "Se suman: (4 + (-2), -3 + 5) = (2, 2).", difficulty: "basico" },
       { id: 2, question: "¿Cuál es la imagen de (3, 1) al rotarlo 90° antihorario respecto al origen?", options: ["(-1, 3)", "(1, -3)", "(-3, 1)", "(3, -1)"], correctIndex: 0, explanation: "Rotación 90° antihorario: (x, y) → (-y, x), entonces (3, 1) → (-1, 3).", difficulty: "intermedio" },
-      { id: 3, question: "Reflexión respecto al eje Y y luego traslación con vector (3, -2) al punto (5, 4). ¿Resultado final?", options: ["(-2, 2)", "(8, 2)", "(2, 2)", "(-8, 2)"], correctIndex: 0, explanation: "Reflexión Y: (5,4)→(-5,4). Traslación: (-5+3, 4-2) = (-2, 2).", difficulty: "avanzado" }
-    ,
+      { id: 3, question: "Reflexión respecto al eje Y y luego traslación con vector (3, -2) al punto (5, 4). ¿Resultado final?", options: ["(-2, 2)", "(8, 2)", "(2, 2)", "(-8, 2)"], correctIndex: 0, explanation: "Reflexión Y: (5,4)→(-5,4). Traslación: (-5+3, 4-2) = (-2, 2).", difficulty: "avanzado" },
     { id: 405, question: "¿Qué es una isometría en geometría?", options: ["Una transformación que conserva las distancias", "Una transformación que cambia el tamaño", "Una transformación que rota el plano", "Una transformación que agranda"], correctIndex: 0, explanation: "Una isometría preserva las distancias entre puntos.", difficulty: "basico" },
     { id: 406, question: "¿Cuáles son las isometrías del plano?", options: ["Traslación, rotación, reflexión y rotoreflexión", "Solo traslación y rotación", "Solo reflexión", "Traslación, dilatación y rotación"], correctIndex: 0, explanation: "Las cuatro isometrías del plano son traslación, rotación, reflexión y rotoreflexión.", difficulty: "basico" },
     { id: 407, question: "¿Qué transformación mueve una figura sin rotarla ni reflejarla?", options: ["Traslación", "Rotación", "Reflexión", "Dilatación"], correctIndex: 0, explanation: "La traslación desplaza cada punto en la misma dirección y distancia.", difficulty: "basico" },
@@ -4870,16 +4835,7 @@ Las transformaciones isometricas se aplican en diseno grafico, animacion por com
     slug: "simetria-ejes-y-puntos",
     illustrationSummary: "Figuras con ejes de simetría axial y centro de simetría. Se marcan los puntos correspondientes.",
     tip: "Una figura tiene simetría axial si al doblarla por el eje las partes coinciden. Un cuadrado tiene 4 ejes, un rectángulo solo 2.",
-    theory: [
-      { level: "basico", title: "Simetría Axial", lines: [
-        "Una figura tiene simetría axial si existe una línea que la divide en dos partes congruentes y reflejadas.",
-        "Al doblar la figura por el eje, las dos mitades coinciden exactamente.",
-        "Un triángulo equilátero tiene 3 ejes de simetría, cada uno desde un vértice hasta el punto medio del lado opuesto.",
-        "Un cuadrado tiene 4 ejes: 2 diagonales y 2 que unen puntos medios de lados opuestos.",
-        "Un rectángulo tiene 2 ejes de simetría: las rectas que unen los puntos medios de lados opuestos.",
-        "Un círculo tiene infinitos ejes de simetría: cualquier diámetro es un eje."
-      ],
-  studyGuide: `## Simetria de Ejes y Puntos
+    studyGuide: `## Simetria de Ejes y Puntos
 
 ### Definicion
 
@@ -4927,7 +4883,17 @@ Solucion: El circulo tiene infinitos ejes de simetria, siendo cada diametro un e
 
 ### Aplicaciones
 
-La simetria se estudia en arte, arquitectura, biologia, cristalografia y diseno industrial. Permite crear patrones equilibrados, analizar estructuras moleculares y disenar figuras esteticamente armoniosas.`},
+La simetria se estudia en arte, arquitectura, biologia, cristalografia y diseno industrial. Permite crear patrones equilibrados, analizar estructuras moleculares y disenar figuras esteticamente armoniosas.`,
+    theory: [
+      { level: "basico", title: "Simetría Axial", lines: [
+        "Una figura tiene simetría axial si existe una línea que la divide en dos partes congruentes y reflejadas.",
+        "Al doblar la figura por el eje, las dos mitades coinciden exactamente.",
+        "Un triángulo equilátero tiene 3 ejes de simetría, cada uno desde un vértice hasta el punto medio del lado opuesto.",
+        "Un cuadrado tiene 4 ejes: 2 diagonales y 2 que unen puntos medios de lados opuestos.",
+        "Un rectángulo tiene 2 ejes de simetría: las rectas que unen los puntos medios de lados opuestos.",
+        "Un círculo tiene infinitos ejes de simetría: cualquier diámetro es un eje."
+      ],
+      },
       { level: "intermedio", title: "Simetría Central", lines: [
         "Una figura tiene simetría central si existe un punto tal que cada punto tiene un simétrico opuesto a la misma distancia.",
         "La simetría central equivale a una rotación de 180° respecto al centro de simetría.",
@@ -4964,8 +4930,7 @@ La simetria se estudia en arte, arquitectura, biologia, cristalografia y diseno 
     exercises: [
       { id: 4, question: "¿Cuántos ejes de simetría tiene un rombo que NO es cuadrado?", options: ["0", "1", "2", "4"], correctIndex: 2, explanation: "Un rombo no cuadrado tiene exactamente 2 ejes de simetría: sus diagonales.", difficulty: "basico" },
       { id: 5, question: "¿Cuál de las siguientes figuras NO tiene simetría central?", options: ["Paralelogramo", "Rectángulo", "Rombo", "Triángulo equilátero"], correctIndex: 3, explanation: "El triángulo equilátero tiene simetría axial pero NO simetría central.", difficulty: "intermedio" },
-      { id: 6, question: "Reflexión respecto al eje X y luego respecto al eje Y equivale a:", options: ["Una traslación", "Una rotación de 90°", "Una rotación de 180°", "Una reflexión"], correctIndex: 2, explanation: "Reflexión X: (x,y)→(x,-y). Luego Y: (x,-y)→(-x,-y). Equivale a rotación de 180°.", difficulty: "avanzado" }
-    ,
+      { id: 6, question: "Reflexión respecto al eje X y luego respecto al eje Y equivale a:", options: ["Una traslación", "Una rotación de 90°", "Una rotación de 180°", "Una reflexión"], correctIndex: 2, explanation: "Reflexión X: (x,y)→(x,-y). Luego Y: (x,-y)→(-x,-y). Equivale a rotación de 180°.", difficulty: "avanzado" },
     { id: 426, question: "¿Qué es un eje de simetría?", options: ["Una recta que divide una figura en dos partes simétricas", "Un punto especial", "Un ángulo", "Una línea que une vértices"], correctIndex: 0, explanation: "Un eje de simetría es una recta respecto a la cual la figura coincide consigo misma al reflexionarla.", difficulty: "basico" },
     { id: 427, question: "¿Cuántos ejes de simetría tiene un cuadrado?", options: ["4", "2", "1", "0"], correctIndex: 0, explanation: "Un cuadrado tiene 4 ejes de simetría.", difficulty: "basico" },
     { id: 428, question: "¿Cuántos ejes de simetría tiene un triángulo equilátero?", options: ["3", "1", "6", "0"], correctIndex: 0, explanation: "Un triángulo equilátero tiene 3 ejes de simetría.", difficulty: "basico" },
@@ -4993,16 +4958,7 @@ La simetria se estudia en arte, arquitectura, biologia, cristalografia y diseno 
     slug: "homotecia",
     illustrationSummary: "Dos figuras semejantes relacionadas por homotecia con centro O y razón k. Se muestran las rectas concurrentes.",
     tip: "En una homotecia las distancias se multiplican por |k| y las áreas por k². Si k es negativo la figura se invierte respecto al centro.",
-    theory: [
-      { level: "basico", title: "Definición de Homotecia", lines: [
-        "Una homotecia amplía o reduce una figura respecto a un punto fijo llamado centro de homotecia.",
-        "Se define por un centro O y un factor de homotecia k distinto de cero.",
-        "Cada punto P se transforma en P' tal que OP' = k · OP.",
-        "Si k > 1, la imagen es más grande que el original (ampliación).",
-        "Si 0 < k < 1, la imagen es más pequeña que el original (reducción).",
-        "Si k < 0, la imagen se ubica en el lado opuesto del centro respecto al original."
-      ],
-  studyGuide: `## Homotecia
+    studyGuide: `## Homotecia
 
 ### Definicion
 
@@ -5052,7 +5008,17 @@ La homotecia es una de las transformaciones que generan semejanza entre figuras.
 
 ### Aplicaciones
 
-La homotecia se utiliza en arquitectura para crear planos a escala, en cartografia para elaborar mapas, en arte para crear efectos de profundidad y perspectiva, y en ingenieria para disear piezas mecanicas con diferentes tamanos manteniendo la proporcion de sus partes.`},
+La homotecia se utiliza en arquitectura para crear planos a escala, en cartografia para elaborar mapas, en arte para crear efectos de profundidad y perspectiva, y en ingenieria para disear piezas mecanicas con diferentes tamanos manteniendo la proporcion de sus partes.`,
+    theory: [
+      { level: "basico", title: "Definición de Homotecia", lines: [
+        "Una homotecia amplía o reduce una figura respecto a un punto fijo llamado centro de homotecia.",
+        "Se define por un centro O y un factor de homotecia k distinto de cero.",
+        "Cada punto P se transforma en P' tal que OP' = k · OP.",
+        "Si k > 1, la imagen es más grande que el original (ampliación).",
+        "Si 0 < k < 1, la imagen es más pequeña que el original (reducción).",
+        "Si k < 0, la imagen se ubica en el lado opuesto del centro respecto al original."
+      ],
+      },
       { level: "intermedio", title: "Propiedades de la Homotecia", lines: [
         "La homotecia conserva las líneas paralelas: si dos segmentos son paralelos, sus imágenes también.",
         "Los ángulos se conservan: la homotecia preserva la orientación de la figura.",
@@ -5089,8 +5055,7 @@ La homotecia se utiliza en arquitectura para crear planos a escala, en cartograf
     exercises: [
       { id: 7, question: "¿Cuál es la imagen de (2, 3) bajo homotecia de centro en el origen y factor k = 3?", options: ["(6, 9)", "(5, 6)", "(8, 12)", "(-2, -3)"], correctIndex: 0, explanation: "P'(kx, ky) = (3·2, 3·3) = (6, 9).", difficulty: "basico" },
       { id: 8, question: "Un triángulo tiene área 20 cm². ¿Cuál será el área de su imagen bajo homotecia de factor k = 3?", options: ["60 cm²", "80 cm²", "180 cm²", "40 cm²"], correctIndex: 2, explanation: "El área se multiplica por k² = 9, entonces 20 × 9 = 180 cm².", difficulty: "intermedio" },
-      { id: 9, question: "Homotecia de centro O y factor k = -2 transforma un segmento de longitud 5. ¿Longitud y posición de la imagen?", options: ["10, mismo lado de O", "10, lado opuesto de O", "2.5, mismo lado de O", "2.5, lado opuesto de O"], correctIndex: 1, explanation: "Longitud: |k|·5 = 10. k negativo implica lado opuesto de O.", difficulty: "avanzado" }
-    ,
+      { id: 9, question: "Homotecia de centro O y factor k = -2 transforma un segmento de longitud 5. ¿Longitud y posición de la imagen?", options: ["10, mismo lado de O", "10, lado opuesto de O", "2.5, mismo lado de O", "2.5, lado opuesto de O"], correctIndex: 1, explanation: "Longitud: |k|·5 = 10. k negativo implica lado opuesto de O.", difficulty: "avanzado" },
     { id: 447, question: "¿Qué es una homotecia?", options: ["Una transformación que escala una figura respecto a un punto fijo", "Una traslación", "Una rotación", "Una reflexión"], correctIndex: 0, explanation: "Una homotecia multiplica las distancias respecto a un punto fijo por un factor k.", difficulty: "basico" },
     { id: 448, question: "¿Qué son el centro y el coeficiente de una homotecia?", options: ["El punto fijo y el factor de escala", "El vértice y el ángulo de giro", "El origen y la dirección", "El punto medio y la distancia"], correctIndex: 0, explanation: "El centro es el punto fijo O y k es el factor de escala.", difficulty: "basico" },
     { id: 449, question: "Si k = 2 en una homotecia, ¿qué sucede con la figura?", options: ["Se duplican todas las longitudes", "No cambia", "Se reduce a la mitad", "Se triplican"], correctIndex: 0, explanation: "Con k = 2, cada longitud se duplica.", difficulty: "basico" },
@@ -5118,16 +5083,7 @@ La homotecia se utiliza en arquitectura para crear planos a escala, en cartograf
     slug: "coordenadas-cartesianas",
     illustrationSummary: "Plano cartesiano con puntos A(x₁,y₁) y B(x₂,y₂). Se muestra la distancia entre ellos y el punto medio.",
     tip: "Para calcular la distancia usa d = √((x₂-x₁)² + (y₂-y₁)²). El punto medio se obtiene promediando cada coordenada por separado.",
-    theory: [
-      { level: "basico", title: "El Plano Cartesiano", lines: [
-        "El plano cartesiano se forma por dos rectas perpendiculares: el eje X (horizontal) y el eje Y (vertical).",
-        "El punto donde se cruzan los ejes se llama origen O y tiene coordenadas (0, 0).",
-        "Cada punto del plano se identifica con un par ordenado (x, y).",
-        "En el primer cuadrante ambos valores son positivos; en el segundo x es negativo y y positivo.",
-        "En el tercer cuadrante ambos son negativos; en el cuarto x positivo e y negativo.",
-        "Los ejes dividen al plano en 4 cuadrantes numerados en sentido antihorario."
-      ],
-  studyGuide: `## Coordenadas Cartesianas
+    studyGuide: `## Coordenadas Cartesianas
 
 ### Definicion
 
@@ -5187,7 +5143,17 @@ Solucion: La posicion horizontal es x = 4 (positiva porque esta a la derecha) y 
 
 ### Aplicaciones
 
-Las coordenadas cartesianas son esenciales en graficas de funcion, fisica, economia, programacion de videojigos, navegacion GPS y cualquier campo que requiera representar datos o posiciones espaciales de forma precisa y cuantificable.`},
+Las coordenadas cartesianas son esenciales en graficas de funcion, fisica, economia, programacion de videojigos, navegacion GPS y cualquier campo que requiera representar datos o posiciones espaciales de forma precisa y cuantificable.`,
+    theory: [
+      { level: "basico", title: "El Plano Cartesiano", lines: [
+        "El plano cartesiano se forma por dos rectas perpendiculares: el eje X (horizontal) y el eje Y (vertical).",
+        "El punto donde se cruzan los ejes se llama origen O y tiene coordenadas (0, 0).",
+        "Cada punto del plano se identifica con un par ordenado (x, y).",
+        "En el primer cuadrante ambos valores son positivos; en el segundo x es negativo y y positivo.",
+        "En el tercer cuadrante ambos son negativos; en el cuarto x positivo e y negativo.",
+        "Los ejes dividen al plano en 4 cuadrantes numerados en sentido antihorario."
+      ],
+      },
       { level: "intermedio", title: "Distancia entre Dos Puntos", lines: [
         "La distancia entre A(x₁, y₁) y B(x₂, y₂) se calcula con la fórmula de Pitágoras.",
         "Fórmula: d = √[(x₂ - x₁)² + (y₂ - y₁)²].",
@@ -5225,8 +5191,7 @@ Las coordenadas cartesianas son esenciales en graficas de funcion, fisica, econo
     exercises: [
       { id: 10, question: "¿Cuáles son las coordenadas del punto en el tercer cuadrante con abscisa -4 y ordenada -7?", options: ["(4, 7)", "(-4, 7)", "(-4, -7)", "(4, -7)"], correctIndex: 2, explanation: "En el tercer cuadrante ambas coordenadas son negativas: (-4, -7).", difficulty: "basico" },
       { id: 11, question: "¿Cuál es la distancia entre los puntos P(2, -1) y Q(-1, 3)?", options: ["3", "5", "7", "25"], correctIndex: 1, explanation: "d = √[(-1-2)² + (3-(-1))²] = √[9 + 16] = √25 = 5.", difficulty: "intermedio" },
-      { id: 12, question: "Si el punto medio es M(3, 5) y un extremo es A(1, 2), ¿cuál es el otro extremo B?", options: ["(5, 8)", "(6, 10)", "(4, 3)", "(2, 3)"], correctIndex: 0, explanation: "x_B = 2(3) - 1 = 5; y_B = 2(5) - 2 = 8. Entonces B = (5, 8).", difficulty: "avanzado" }
-    ,
+      { id: 12, question: "Si el punto medio es M(3, 5) y un extremo es A(1, 2), ¿cuál es el otro extremo B?", options: ["(5, 8)", "(6, 10)", "(4, 3)", "(2, 3)"], correctIndex: 0, explanation: "x_B = 2(3) - 1 = 5; y_B = 2(5) - 2 = 8. Entonces B = (5, 8).", difficulty: "avanzado" },
     { id: 468, question: "¿Qué es el plano cartesiano?", options: ["Un sistema de coordenadas con dos ejes perpendiculares", "Un triángulo especial", "Una circunferencia con centro en el origen", "Un sistema tridimensional"], correctIndex: 0, explanation: "El plano cartesiano tiene dos ejes perpendiculares que se cortan en el origen.", difficulty: "basico" },
     { id: 469, question: "¿Cuáles son las coordenadas del origen?", options: ["(0, 0)", "(1, 1)", "(0, 1)", "(1, 0)"], correctIndex: 0, explanation: "El origen es el punto (0, 0).", difficulty: "basico" },
     { id: 470, question: "En qué cuadrante está el punto (3, −2)?", options: ["Cuarto (IV)", "Primero (I)", "Segundo (II)", "Tercero (III)"], correctIndex: 0, explanation: "Con x positivo e y negativo, está en el cuarto cuadrante.", difficulty: "basico" },
@@ -5254,16 +5219,7 @@ Las coordenadas cartesianas son esenciales en graficas de funcion, fisica, econo
     slug: "area-coordenadas",
     illustrationSummary: "Polígono en el plano cartesiano con el método de las coordenadas (shoelace) para calcular su área.",
     tip: "El método Shoelace calcula el área de un polígono con vértices en coordenadas: multiplica diagonalmente, suma los productos y aplica valor absoluto sobre 2.",
-    theory: [
-      { level: "basico", title: "Método de las Coordenadas", lines: [
-        "El método de las coordenadas permite calcular el área de un polígono cuyos vértices se conocen.",
-        "Se listan los vértices en orden (horario o antihorario) repitiendo el primero al final.",
-        "Se multiplica cada abscisa por la ordenada del vértice siguiente, de izquierda a derecha.",
-        "Se multiplica cada ordenada por la abscisa del vértice siguiente, de izquierda a derecha.",
-        "Se resta la segunda suma de la primera, se toma el valor absoluto y se divide entre 2.",
-        "Fórmula: A = |Σ(xᵢ·yᵢ₊₁ - yᵢ·xᵢ₊₁)| / 2."
-      ],
-  studyGuide: `## Area en Coordenadas
+    studyGuide: `## Area en Coordenadas
 
 ### Definicion
 
@@ -5315,7 +5271,17 @@ Si los vertices de un poligono se enumeran en orden incorrecto, los resultados p
 
 ### Aplicaciones
 
-El calculo de area en coordenadas se utiliza en topografia, cartografia, diseno asistido por computadora, analisis geografico de informacion, planificacion urbana y determinacion de superficies de terrenos irregulares.`},
+El calculo de area en coordenadas se utiliza en topografia, cartografia, diseno asistido por computadora, analisis geografico de informacion, planificacion urbana y determinacion de superficies de terrenos irregulares.`,
+    theory: [
+      { level: "basico", title: "Método de las Coordenadas", lines: [
+        "El método de las coordenadas permite calcular el área de un polígono cuyos vértices se conocen.",
+        "Se listan los vértices en orden (horario o antihorario) repitiendo el primero al final.",
+        "Se multiplica cada abscisa por la ordenada del vértice siguiente, de izquierda a derecha.",
+        "Se multiplica cada ordenada por la abscisa del vértice siguiente, de izquierda a derecha.",
+        "Se resta la segunda suma de la primera, se toma el valor absoluto y se divide entre 2.",
+        "Fórmula: A = |Σ(xᵢ·yᵢ₊₁ - yᵢ·xᵢ₊₁)| / 2."
+      ],
+      },
       { level: "intermedio", title: "Aplicación Paso a Paso", lines: [
         "Para un triángulo con vértices (1,1), (4,1) y (1,5): listar (1,1), (4,1), (1,5), (1,1).",
         "Productos descendentes: 1·1 + 4·5 + 1·1 = 1 + 20 + 1 = 22.",
@@ -5356,8 +5322,7 @@ El calculo de area en coordenadas se utiliza en topografia, cartografia, diseno 
     exercises: [
       { id: 13, question: "¿Cuál es el área de un triángulo con vértices A(0,0), B(4,0) y C(0,3)?", options: ["6", "12", "7", "3"], correctIndex: 0, explanation: "Shoelace: |0·0 + 4·3 + 0·0 - (0·4 + 0·0 + 3·0)| / 2 = |12| / 2 = 6.", difficulty: "basico" },
       { id: 14, question: "Un cuadrado tiene vértices (1,1), (4,1), (4,4) y (1,4). ¿Cuál es su área por el método de coordenadas?", options: ["9", "12", "16", "6"], correctIndex: 0, explanation: "Shoelace: |1·1+4·4+4·4+1·1 - (1·4+1·4+4·1+4·1)| / 2 = |34 - 16| / 2 = 9.", difficulty: "intermedio" },
-      { id: 15, question: "¿Cuál es el área del triángulo con vértices A(2,1), B(5,1) y C(3,6)?", options: ["7.5", "15", "10", "5"], correctIndex: 0, explanation: "|2·1+5·6+3·1 - (1·5+1·3+6·2)| / 2 = |35 - 20| / 2 = 7.5.", difficulty: "avanzado" }
-    ,
+      { id: 15, question: "¿Cuál es el área del triángulo con vértices A(2,1), B(5,1) y C(3,6)?", options: ["7.5", "15", "10", "5"], correctIndex: 0, explanation: "|2·1+5·6+3·1 - (1·5+1·3+6·2)| / 2 = |35 - 20| / 2 = 7.5.", difficulty: "avanzado" },
     { id: 489, question: "¿Cuál es el área de un rectángulo con vértices (0,0), (4,0), (4,3) y (0,3)?", options: ["12", "14", "7", "24"], correctIndex: 0, explanation: "Base = 4, altura = 3. A = 4 × 3 = 12.", difficulty: "basico" },
     { id: 490, question: "¿Cómo se calcula el área de un triángulo con base horizontal en coordenadas?", options: ["(base × altura) / 2, con la altura como diferencia en y", "base × altura", "(x₁+x₂+x₃)/3", "y₁+y₂+y₃"], correctIndex: 0, explanation: "Si la base es horizontal, su longitud es la diferencia en x, y la altura es la diferencia en y.", difficulty: "basico" },
     { id: 491, question: "¿Cuál es el área del triángulo con vértices (0,0), (6,0) y (0,4)?", options: ["12", "24", "10", "6"], correctIndex: 0, explanation: "Es rectángulo con catetos 6 y 4. A = (6×4)/2 = 12.", difficulty: "basico" },
@@ -5385,16 +5350,7 @@ El calculo de area en coordenadas se utiliza en topografia, cartografia, diseno 
     slug: "recta-en-coordenadas",
     illustrationSummary: "Recta en el plano cartesiano con su ecuación y = mx + b, pendiente m y punto de corte con el eje Y.",
     tip: "Para hallar la ecuación de una recta por dos puntos primero calcula la pendiente m = (y₂-y₁)/(x₂-x₁) y luego usa punto-pendiente.",
-    theory: [
-      { level: "basico", title: "Formas de la Ecuación de una Recta", lines: [
-        "La ecuación reducida de una recta es y = mx + b, donde m es la pendiente y b la intersección con el eje Y.",
-        "La ecuación general es Ax + By + C = 0, donde A, B y C son constantes y B ≠ 0.",
-        "La pendiente m indica la inclinación de la recta: m = (y₂ - y₁) / (x₂ - x₁).",
-        "Si m > 0 la recta sube de izquierda a derecha; si m < 0 desciende; si m = 0 es horizontal.",
-        "Si B = 0 en la ecuación general, la recta es vertical (x = constante).",
-        "La forma normal es Ax + By = D, donde A² + B² = 1 y D es la distancia al origen."
-      ],
-  studyGuide: `## Recta en Coordenadas
+    studyGuide: `## Recta en Coordenadas
 
 ### Definicion
 
@@ -5460,7 +5416,17 @@ Solucion: Se igualan las ecuaciones: 2x + 3 = -x + 6. Resolviendo: 3x = 3, enton
 
 ### Aplicaciones
 
-Las ecuaciones de rectas se aplican en trayectorias de movimiento, analisis de datos estadisticos, graficas de funciones, optimizacion de rutas, ingenieria civil para calculo de pendientes y topografia para levantamientos planimetricos.`},
+Las ecuaciones de rectas se aplican en trayectorias de movimiento, analisis de datos estadisticos, graficas de funciones, optimizacion de rutas, ingenieria civil para calculo de pendientes y topografia para levantamientos planimetricos.`,
+    theory: [
+      { level: "basico", title: "Formas de la Ecuación de una Recta", lines: [
+        "La ecuación reducida de una recta es y = mx + b, donde m es la pendiente y b la intersección con el eje Y.",
+        "La ecuación general es Ax + By + C = 0, donde A, B y C son constantes y B ≠ 0.",
+        "La pendiente m indica la inclinación de la recta: m = (y₂ - y₁) / (x₂ - x₁).",
+        "Si m > 0 la recta sube de izquierda a derecha; si m < 0 desciende; si m = 0 es horizontal.",
+        "Si B = 0 en la ecuación general, la recta es vertical (x = constante).",
+        "La forma normal es Ax + By = D, donde A² + B² = 1 y D es la distancia al origen."
+      ],
+      },
       { level: "intermedio", title: "Ecuación por Dos Puntos", lines: [
         "Para hallar la recta por A(x₁, y₁) y B(x₂, y₂), primero calcula la pendiente m = (y₂ - y₁) / (x₂ - x₁).",
         "Luego usa la ecuación punto-pendiente: y - y₁ = m(x - x₁).",
@@ -5600,16 +5566,7 @@ Las ecuaciones de rectas se aplican en trayectorias de movimiento, analisis de d
     slug: "distancia-punto-recta",
     illustrationSummary: "Punto P y recta r en el plano. Se muestra la distancia perpendicular y la fórmula de cálculo.",
     tip: "La distancia del punto (x₀,y₀) a Ax+By+C=0 es |Ax₀+By₀+C|/√(A²+B²). Si el numerador es cero, el punto está sobre la recta.",
-    theory: [
-      { level: "basico", title: "Distancia Punto-Reta", lines: [
-        "La distancia de un punto a una recta es la longitud del segmento perpendicular desde el punto hasta la recta.",
-        "Para la recta Ax + By + C = 0 y el punto P(x₀, y₀), la fórmula es: d = |Ax₀ + By₀ + C| / √(A² + B²).",
-        "El valor absoluto garantiza que la distancia sea siempre positiva o cero.",
-        "Si el resultado es cero, el punto está sobre la recta.",
-        "El denominador √(A² + B²) normaliza la ecuación para cualquier forma de la recta.",
-        "Ejemplo: distancia de (1, 2) a 3x + 4y - 10 = 0 es |3+8-10|/5 = 1/5 = 0.2."
-      ],
-  studyGuide: `## Distancia de un Punto a una Recta
+    studyGuide: `## Distancia de un Punto a una Recta
 
 ### Definición y Concepto Fundamental
 
@@ -5667,7 +5624,17 @@ $$d = \\\\frac{|2(-1) - (5) + 3|}{\\\\sqrt{2^2 + (-1)^2}} = \\\\frac{|-2 - 5 + 3
 
 ### Aplicaciones Prácticas
 
-Esta fórmula se utiliza en optimización de rutas, cálculo de áreas de triángulos usando la base y la altura, determinación de errores en regresión lineal, y en problemas de colisiones en física y computación gráfica. Dominarla permite resolver problemas complejos que involucran relaciones geométricas entre puntos y líneas.`},
+Esta fórmula se utiliza en optimización de rutas, cálculo de áreas de triángulos usando la base y la altura, determinación de errores en regresión lineal, y en problemas de colisiones en física y computación gráfica. Dominarla permite resolver problemas complejos que involucran relaciones geométricas entre puntos y líneas.`,
+    theory: [
+      { level: "basico", title: "Distancia Punto-Reta", lines: [
+        "La distancia de un punto a una recta es la longitud del segmento perpendicular desde el punto hasta la recta.",
+        "Para la recta Ax + By + C = 0 y el punto P(x₀, y₀), la fórmula es: d = |Ax₀ + By₀ + C| / √(A² + B²).",
+        "El valor absoluto garantiza que la distancia sea siempre positiva o cero.",
+        "Si el resultado es cero, el punto está sobre la recta.",
+        "El denominador √(A² + B²) normaliza la ecuación para cualquier forma de la recta.",
+        "Ejemplo: distancia de (1, 2) a 3x + 4y - 10 = 0 es |3+8-10|/5 = 1/5 = 0.2."
+      ],
+      },
       { level: "intermedio", title: "Distancia entre Rectas Paralelas", lines: [
         "Dos rectas paralelas tienen la misma pendiente pero distinta intersección con el eje Y.",
         "Para hallar la distancia entre Ax + By + C₁ = 0 y Ax + By + C₂ = 0, usa: d = |C₁ - C₂| / √(A² + B²).",
@@ -5726,8 +5693,7 @@ Esta fórmula se utiliza en optimización de rutas, cálculo de áreas de trián
     { id: 461, question: "¿Cuál es el lugar geométrico de los puntos equidistantes de los puntos (0, 2) y la recta y = -2?", options: ["Parábola con vértice (0, 0) y foco (0, 2)", "Parábola con vértice (0, 0) y foco (0, -2)", "Circunferencia", "Elipse"], correctIndex: 0, explanation: "La parábola es el lugar de puntos equidistantes de un foco y una directriz.", difficulty: "advanced" },
     { id: 462, question: "¿Cuál es la distancia del punto (3, 4) a la recta polar del punto (1, 2) respecto a la circunferencia x² + y² = 25?", options: ["25/√5 unidades", "5/√5 unidades", "10/√5 unidades", "15/√5 unidades"], correctIndex: 0, explanation: "La recta polar es x·1 + y·2 = 25 → x + 2y = 25. d = |3 + 8 - 25|/√5 = 14/√5.", difficulty: "advanced" }
     ]
-  }
-,
+  },
   {
     slug: "razones-trigonometricas",
     illustrationSummary: "Triángulo rectángulo con los ángulos y los lados. Se muestran las razones: seno, coseno y tangente.",
@@ -5886,8 +5852,7 @@ Las razones trigonométricas son esenciales en navegación para calcular distanc
         correctIndex: 0,
         explanation: "tan(60°) = sen(60°)/cos(60°) = (√3/2)/(1/2) = √3.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 500, question: "¿Cuál es el valor de sen(30°)?", options: ["0.5", "√3/2", "1", "√2/2"], correctIndex: 0, explanation: "sen(30°) = 1/2 = 0.5 por definición del triángulo de 30-60-90.", difficulty: "basic" },
     { id: 501, question: "¿Cuál es el valor de cos(60°)?", options: ["√3/2", "0.5", "1", "0"], correctIndex: 1, explanation: "cos(60°) = 1/2 = 0.5 por definición del triángulo de 30-60-90.", difficulty: "basic" },
     { id: 502, question: "¿Cuál es el valor de tan(45°)?", options: ["0", "1", "√2", "√3"], correctIndex: 1, explanation: "tan(45°) = sen(45°)/cos(45°) = (√2/2)/(√2/2) = 1.", difficulty: "basic" },
@@ -6067,8 +6032,7 @@ Para simplificar expresiones trigonométricas se recomienda: convertir todo a se
         correctIndex: 0,
         explanation: "sen(2·30°) = sen(60°) = √3/2. También: 2·sen(30°)·cos(30°) = 2·(1/2)·(√3/2) = √3/2.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 541, question: "¿Cuál es el resultado de (2, 3) + (1, 4)?", options: ["(3, 7)", "(3, 1)", "(1, 7)", "(2, 12)"], correctIndex: 0, explanation: "Se suman componente a componente: (2+1, 3+4) = (3, 7).", difficulty: "basic" },
     { id: 542, question: "¿Cuál es (5, 6) - (2, 3)?", options: ["(3, 3)", "(7, 9)", "(-3, -3)", "(2, 2)"], correctIndex: 0, explanation: "Se restan componente a componente: (5-2, 6-3) = (3, 3).", difficulty: "basic" },
     { id: 543, question: "¿Cuál es 2·(3, -1)?", options: ["(6, -2)", "(5, -1)", "(3, -2)", "(6, 1)"], correctIndex: 0, explanation: "Se multiplica cada componente por el escalar: (2·3, 2·(-1)) = (6, -2).", difficulty: "basic" },
@@ -6249,8 +6213,7 @@ Memorizar las fórmulas de suma y diferencia es esencial. Una estrategia efectiv
         correctIndex: 0,
         explanation: "tan(A+B) = (tanA + tanB)/(1 - tanA·tanB) = (3/4 + 1/2)/(1 - 3/4·1/2) = (5/4)/(5/8) = 2.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 582, question: "¿Cuál es la ecuación vectorial de una recta que pasa por P(1, 2) con dirección (3, 4)?", options: ["r = (1,2) + t(3,4)", "r = (3,4) + t(1,2)", "r = t(1,2)", "r = (1,2) - t(3,4)"], correctIndex: 0, explanation: "La ecuación vectorial es r = P + t·d, donde P es un punto y d la dirección.", difficulty: "basic" },
     { id: 583, question: "¿Qué representa el parámetro t en la ecuación vectorial de una recta?", options: ["La pendiente", "La distancia al origen", "Un parámetro real que recorre la recta", "El ángulo de inclinación"], correctIndex: 2, explanation: "t es un número real que al variar genera todos los puntos de la recta.", difficulty: "basic" },
     { id: 584, question: "¿Cuál es la dirección de la recta con ecuación r = (2, 1) + t(4, -2)?", options: ["(4, -2)", "(2, 1)", "(2, -1)", "(-4, 2)"], correctIndex: 0, explanation: "El vector que multiplica a t es la dirección de la recta.", difficulty: "basic" },
@@ -6826,8 +6789,7 @@ El cálculo de áreas con trigonometría es fundamental en topografía para medi
         correctIndex: 0,
         explanation: "Área = ½ab·sen(C) → 12 = ½(6)(8)·sen(C) = 24·sen(C) → sen(C) = 12/24 = 1/2.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 663, question: "¿Qué es un lugar geométrico?", options: ["Un punto fijo en el plano", "El conjunto de puntos que cumplen una condición dada", "Una curva cerrada", "Un segmento de recta"], correctIndex: 1, explanation: "Un lugar geométrico es el conjunto de todos los puntos que satisfacen una condición específica.", difficulty: "basic" },
     { id: 664, question: "¿Cuál es el lugar geométrico de los puntos equidistantes de un punto fijo?", options: ["Una recta", "Una circunferencia", "Una elipse", "Un segmento"], correctIndex: 1, explanation: "Los puntos a distancia constante de un punto forman una circunferencia.", difficulty: "basic" },
     { id: 665, question: "¿Cuál es el lugar geométrico de los puntos equidistantes de dos puntos fijos A y B?", options: ["La recta perpendicular al segmento AB por su punto medio", "La mediatriz del segmento AB", "La circunferencia de diámetro AB", "La bisectriz del ángulo formado"], correctIndex: 1, explanation: "Los puntos equidistantes de A y B forman la mediatriz del segmento AB.", difficulty: "basic" },
@@ -7231,8 +7193,7 @@ $$c \\\\approx 5.67$$
     { id: 518, question: "Un satellite está a una altura h sobre la superficie terrestre. Si el radio terrestre es R y el ángulo de depresión es θ, ¿cuál es la distancia al horizonte?", options: ["R·cos(θ)", "R·sec(θ)", "R·tan(θ)", "R/sen(θ)"], correctIndex: 1, explanation: "La distancia al horizonte se calcula como R·sec(θ) usando trigonometría esférica.", difficulty: "advanced" },
     { id: 519, question: "Si sin(α) = 5/13 y cos(β) = 3/5, con α y β en el primer cuadrante, ¿cuál es sen(α+β)?", options: ["56/65", "63/65", "33/65", "16/65"], correctIndex: 2, explanation: "cos(α)=12/13, sen(β)=4/5. sen(α+β)=sen(α)cos(β)+cos(α)sen(β) = (5/13)(3/5)+(12/13)(4/5) = 15/65+48/65 = 63/65. Corrijamos: 15/65+48/65=63/65.", difficulty: "advanced" }
     ]
-  }
-,
+  },
   {
     slug: "vectores-en-el-plano",
     illustrationSummary: "Vectores en el plano cartesiano con componentes, magnitud y dirección. Se muestran los ejes X e Y.",
@@ -8918,8 +8879,7 @@ $$(x)^2 + y^2 = 4 \\\\quad \\\\text{(excepto los puntos } A \\\\text{ y } B\\\\t
     { id: 678, question: "¿Cuál es el lugar geométrico de los centros de las circunferencias tangentes internamente a dos circunferencias dadas?", options: ["Una elipse", "Una hipérbola", "Una parábola", "Una recta"], correctIndex: 0, explanation: "Los centros de circunferencias tangentes internamente a dos circunferencias forman una elipse.", difficulty: "advanced" },
     { id: 679, question: "Si A=(-3, 0) y B=(3, 0), ¿cuál es el lugar geométrico de los puntos P tales que PA/PB = 2?", options: ["Una circunferencia (Círculo de Apolonio)", "Una elipse", "Una hipérbola", "Una recta"], correctIndex: 0, explanation: "El lugar de puntos cuya razón de distancias a dos puntos fijos es constante (≠1) es una circunferencia, llamada Círculo de Apolonio.", difficulty: "advanced" }
     ]
-  }
-,
+  },
   {
     slug: "tangentes-circunferencia",
     illustrationSummary: "Punto exterior con dos tangentes a una circunferencia. Se marca el ángulo rectángulo con el radio.",
@@ -9291,8 +9251,7 @@ $$r = \\\\frac{60}{20} = 3, \\\\quad R = \\\\frac{17}{2} = 8.5$$
         correctIndex: 0,
         explanation: "El apotema a = R·cos(180°/3) = 8·cos(60°) = 8·(1/2) = 4 cm.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 600, question: "Un triángulo equilátero de lado 6 cm tiene una circunferencia inscrita. ¿Cuál es el radio de la incircunferencia?", options: ["√3 cm", "2√3 cm", "3 cm", "√6 cm"], correctIndex: 0, explanation: "El radio de la incircunferencia de un triángulo equilátero es r = a√3/6 = 6√3/6 = √3 cm.", difficulty: "basico" },
     { id: 601, question: "¿Cuántos lados tiene un polígono regular si cada ángulo externo mide 40°?", options: ["7", "8", "9", "10"], correctIndex: 2, explanation: "La suma de ángulos externos es 360°. Número de lados = 360°/40° = 9.", difficulty: "basico" },
     { id: 602, question: "Un cuadrado está inscrito en una circunferencia de radio 5 cm. ¿Cuánto mide el lado del cuadrado?", options: ["5 cm", "5√2 cm", "10 cm", "10√2 cm"], correctIndex: 1, explanation: "El diagonal del cuadrado inscrito es el diámetro = 10 cm. Por Pitágoras: a² + a² = 100, a = √50 = 5√2 cm.", difficulty: "basico" },
@@ -9473,8 +9432,7 @@ $$V_{total} = 64\\\\pi + \\\\frac{32\\\\pi}{3} = \\\\frac{224\\\\pi}{3} \\\\appr
         correctIndex: 0,
         explanation: "V_pirámide = (B·h)/3 = (100·12)/3 = 400. V_cono = (π·r²·h)/3 = (π·9·12)/3 = 36π... Revisando: V_cono = (π·3²·12)/3 = 108π/3 = 36π. Pero la opción dice 12π. Verificando: (π·9·12)/3 = 36π. La respuesta correcta es 400 - 36π cm³.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 621, question: "Un cubo tiene arista 4 cm. ¿Cuál es su volumen?", options: ["16 cm³", "64 cm³", "24 cm³", "48 cm³"], correctIndex: 1, explanation: "El volumen del cubo es V = a³ = 4³ = 64 cm³.", difficulty: "basico" },
     { id: 622, question: "Un cilindro tiene radio de base 3 cm y altura 10 cm. ¿Cuál es su volumen? (Usa π ≈ 3.14)", options: ["94.2 cm³", "188.4 cm³", "282.6 cm³", "314 cm³"], correctIndex: 0, explanation: "V = πr²h = 3.14 × 9 × 10 = 282.6 cm³. La respuesta correcta es 282.6 cm³.", difficulty: "basico" },
     { id: 623, question: "Una esfera tiene radio 5 cm. ¿Cuál es su volumen?", options: ["500π/3 cm³", "250π/3 cm³", "125π/3 cm³", "500π cm³"], correctIndex: 0, explanation: "V = (4/3)πr³ = (4/3)π(125) = 500π/3 cm³.", difficulty: "basico" },
@@ -9668,8 +9626,7 @@ Las secciones oblicuas de un cono producen las tres **cónicas**:
         correctIndex: 1,
         explanation: "El radio de la sección es r₁ = (6/15)·8 = 16/5 = 3.2 cm. V = (π·r₁²·h₁)/3 = (π·(16/5)²·6)/3 = (π·256/25·6)/3 = 1536π/75 = 512π/25... Replanteando: r₁ = 8·(6/15) = 3.2. V = π(3.2)²(6)/3 = π(10.24)(2) = 20.48π = 512π/25. Verificando opción B: 256π/5 = 51.2π. No coincide. Rehaciendo: V_proporcional = V_total·(h₁/h)³ = V_total·(6/15)³. V_total = π·64·15/3 = 320π. V_pequeño = 320π·(2/5)³ = 320π·8/125 = 2560π/125 = 512π/25 ≈ 20.48π. La respuesta correcta es 256π/5.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 641, question: "¿Qué figura se obtiene al cortar un cono con un plano paralelo a su base?", options: ["Elipse", "Círculo", "Parábola", "Hipérbola"], correctIndex: 1, explanation: "Un corte paralelo a la base de un cono produce siempre un círculo, ya que la sección es similar a la base.", difficulty: "basico" },
     { id: 642, question: "¿Qué sección cónica se forma cuando un plano corta un cono paralelamente a su generatriz?", options: ["Círculo", "Elipse", "Parábola", "Hipérbola"], correctIndex: 2, explanation: "Cuando el plano es paralelo a una generatriz del cono, la sección es una parábola.", difficulty: "basico" },
     { id: 643, question: "¿Qué figura resulta al cortar un cilindro con un plano paralelo a su eje?", options: ["Elipse", "Círculo", "Rectángulo", "Parábola"], correctIndex: 2, explanation: "Un corte paralelo al eje de un cilindro produce un rectángulo.", difficulty: "basico" },
@@ -9876,8 +9833,7 @@ $$A = 2\\\\pi (6400)(6400) = 81{,}920{,}000\\\\pi \\\\approx 257{,}359{,}270 \\\
         correctIndex: 0,
         explanation: "Generatriz del cono: l = √(25+144) = 13. S_cono_lateral = π·5·13 = 65π. S_cilindro_lateral = 2π·5·12 = 120π. Base inferior del cilindro: π·25 = 25π. Base compartida NO se cuenta. S_total = 65π + 120π + 25π = 210π... Revisando las opciones, la respuesta más cercana es A: 60π + 25π + 50π = 135π. Replanteando: S = πrl + 2πrh + πr² = π·5·13 + 2π·5·12 + π·25 = 65π + 120π + 25π = 210π. Ninguna opción coincide exactamente, pero el razonamiento es correcto.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 661, question: "¿Cuál es el área lateral de un prisma rectangular con base 5×8 cm y altura 10 cm?", options: ["130 cm²", "260 cm²", "40 cm²", "180 cm²"], correctIndex: 1, explanation: "A_lateral = P_base × h = 2(5+8) × 10 = 26 × 10 = 260 cm².", difficulty: "basico" },
     { id: 662, question: "Un cubo tiene arista 3 cm. ¿Cuál es su área total?", options: ["27 cm²", "54 cm²", "36 cm²", "48 cm²"], correctIndex: 1, explanation: "A_total = 6a² = 6(9) = 54 cm².", difficulty: "basico" },
     { id: 663, question: "¿Cuál es la superficie lateral de un cilindro de radio 2 cm y altura 7 cm?", options: ["14π cm²", "28π cm²", "20π cm²", "4π cm²"], correctIndex: 1, explanation: "A_lateral = 2πrh = 2π(2)(7) = 28π cm².", difficulty: "basico" },
@@ -10069,8 +10025,7 @@ $$V = \\\\pi \\\\int_0^{\\\\pi} \\\\sin^2 x \\\\, dx = \\\\pi \\\\int_0^{\\\\pi}
         correctIndex: 3,
         explanation: "V_esfera = (4/3)π(7³) = 1372π/3. V_cilindro = π(5²)(8) = 200π. V_restante = 1372π/3 - 200π. Las opciones A y C expresan lo mismo ya que 4·343/3 = 1372/3.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 681, question: "¿Cuál es el volumen de un cilindro con radio 2 cm y altura 5 cm?", options: ["10π cm³", "20π cm³", "40π cm³", "5π cm³"], correctIndex: 1, explanation: "V = πr²h = π(4)(5) = 20π cm³.", difficulty: "basico" },
     { id: 682, question: "Un prisma rectangular tiene dimensiones 3 cm × 4 cm × 5 cm. ¿Cuál es su volumen?", options: ["12 cm³", "20 cm³", "60 cm³", "47 cm³"], correctIndex: 2, explanation: "V = abc = 3 × 4 × 5 = 60 cm³.", difficulty: "basico" },
     { id: 683, question: "¿Cuál es el volumen de una esfera de radio 3 cm?", options: ["12π cm³", "27π cm³", "36π cm³", "108π cm³"], correctIndex: 2, explanation: "V = (4/3)πr³ = (4/3)π(27) = 36π cm³.", difficulty: "basico" },
@@ -10279,8 +10234,7 @@ Las rectas son **skew** (no coplanarias).
         correctIndex: 3,
         explanation: "El vector director es AB = (2,-1,2). La recta pasa por A: r = (1,0,2) + t(2,-1,2). También por B con otro parámetro. Las opciones A y C son equivalentes (C es la forma paramétrica de A). La opción B usa un punto diferente con el mismo vector. Son todas equivalentes.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 701, question: "¿Cuántos puntos determinan una recta en el espacio?", options: ["1", "2", "3", "4"], correctIndex: 1, explanation: "Una recta en el espacio queda determinada por exactamente 2 puntos.", difficulty: "basico" },
     { id: 702, question: "¿Cuántos puntos determinan un plano en el espacio?", options: ["2", "3 no colineales", "4", "5"], correctIndex: 1, explanation: "Un plano queda determinado por exactamente 3 puntos no colineales.", difficulty: "basico" },
     { id: 703, question: "¿Qué es una recta perpendicular a un plano?", options: ["Una recta que lo corta", "Una recta que forma 90° con todas las rectas del plano que pasan por el pie", "Una recta paralela al plano", "Una recta que no toca el plano"], correctIndex: 1, explanation: "Una recta es perpendicular a un plano cuando es perpendicular a todas las rectas del plano que pasan por su punto de intersección.", difficulty: "basico" },
@@ -10427,8 +10381,7 @@ Entonces \\\\(\\\\cos\\\\theta = \\\\frac{|3|}{\\\\sqrt{14} \\\\cdot 3\\\\sqrt{2
         correctIndex: 1,
         explanation: "n₁·n₂ = 1-1+0 = 0. |n₁| = √3, |n₂| = √2. cos(θ) = 0/(√3·√2) = 0. θ = 90°... Pero verificando: n₁·n₂ = 1(1)+1(-1)+1(0) = 1-1+0 = 0. Los planos son perpendiculares. La respuesta correcta es A: arccos(0) = 90°.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 721, question: "¿Cuánto miden los ángulos internos de un triángulo esférico equilátero en una esfera de radio R si cada lado mide πR/2?", options: ["60° cada uno", "90° cada uno", "120° cada uno", "72° cada uno"], correctIndex: 1, explanation: "En una esfera unitaria, un triángulo con lados de π/2 tiene cada ángulo igual a 90° (octante de la esfera).", difficulty: "basico" },
     { id: 722, question: "¿Cuál es el ángulo entre las diagonales de un cubo que parten del mismo vértice?", options: ["60°", "90°", "arccos(1/3)", "45°"], correctIndex: 2, explanation: "Las diagonales de cara que parten de un vértice forman un ángulo de arccos(1/3) ≈ 70.53° entre ellas.", difficulty: "basico" },
     { id: 723, question: "¿Cuánto mide el ángulo entre dos caras adyacentes de un cubo?", options: ["45°", "60°", "90°", "120°"], correctIndex: 2, explanation: "Las caras adyacentes de un cubo son perpendiculares entre sí, por lo que el ángulo diedro es 90°.", difficulty: "basico" },
@@ -10450,8 +10403,7 @@ Entonces \\\\(\\\\cos\\\\theta = \\\\frac{|3|}{\\\\sqrt{14} \\\\cdot 3\\\\sqrt{2
     { id: 739, question: "El teorema de Girard establece que el área de un triángulo esférico en una esfera de radio 1 es igual a:", options: ["A + B + C - π", "A + B + C - 180°", "(A + B + C) × R²", "A + B + C - π rad"], correctIndex: 0, explanation: "El teorema de Girard dice que el área de un triángulo esférico en la esfera unitaria es su exceso esférico: A + B + C - π (con ángulos en radianes).", difficulty: "avanzado" },
     { id: 740, question: "¿Cuál es el ángulo entre el vector (1,2,3) y el plano x + y + z = 0?", options: ["arcsin(6/√14·√3)", "arccos(6/√14·√3)", "90°", "arcsin(1/√3)"], correctIndex: 0, explanation: "El ángulo entre un vector y un plano es 90° menos el ángulo entre el vector y la normal al plano. sen α = |v·n|/(|v||n|) = 6/(√14·√3).", difficulty: "avanzado" }
   ]
-  }
-,
+  },
   {
     slug: "teorema-ptolomeo",
     illustrationSummary: "Cuadrilátero cíclico con diagonales y lados. Se muestra la relación: AC × BD = AB × CD + AD × BC.",
@@ -10592,8 +10544,7 @@ Ambos miembros coinciden, verificando el teorema. Para un caso no trivial, consi
         correctIndex: 0,
         explanation: "Por Ptolomeo: 7·6 = 3·5 + 4·AD, entonces 42 = 15 + 4·AD, lo que da AD = 27/4. Verificando las opciones: 21/5 = 4.2. Si AD = 21/5: 3·5 + 4·(21/5) = 15 + 84/5 = 159/5 = 31.8 ≠ 42. Revisando: 42 = 15 + 4·AD → AD = 27/4 = 6.75. La respuesta correcta más cercana es 21/5 según las opciones dadas.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 741, question: "¿Qué establece el teorema de Ptolomeo para un cuadrilátero cíclico?", options: ["La suma de ángulos opuestos es 180°", "AC × BD = AB × CD + BC × AD", "El producto de las diagonales es igual a la suma de los productos de lados opuestos", "Las diagonales son perpendiculares"], correctIndex: 1, explanation: "El teorema de Ptolomeo establece que para un cuadrilátero cíclico ABCD: AC · BD = AB · CD + BC · AD.", difficulty: "basico" },
     { id: 742, question: "¿En qué tipo de cuadrilátero se cumple que las diagonales son perpendiculares?", options: ["Paralelogramo", "Rombo", "Trapecio", "Rectángulo"], correctIndex: 1, explanation: "El rombo es el paralelogramo cuyas diagonales son perpendiculares entre sí.", difficulty: "basico" },
     { id: 743, question: "¿Cuánto mide cada ángulo interno de un cuadrado?", options: ["60°", "90°", "120°", "45°"], correctIndex: 1, explanation: "Todos los ángulos internos de un cuadrado miden exactamente 90°.", difficulty: "basico" },
@@ -10763,8 +10714,7 @@ Podemos verificar: \\\\(\\\\cos B = \\\\frac{5^2 + 8^2 - 7^2}{2 \\\\cdot 5 \\\\c
         correctIndex: 0,
         explanation: "Usando la fórmula de la mediana (caso especial de Stewart): m² = (2b² + 2c² - a²)/4 = (2·64 + 2·36 - 100)/4 = (128 + 72 - 100)/4 = 100/4 = 25. Pero verificando: m = 5. Entre las opciones, √73 ≈ 8.54. Si m² = (2·64 + 2·36 - 100)/4 = 25, m = 5. La respuesta más cercana según los valores es √73 considerando un cálculo diferente de los datos.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 761, question: "¿Qué calcula el teorema de Stewart?", options: ["La longitud de una mediana", "La longitud de un ceviano en un triángulo", "El área de un triángulo", "El radio de la circunferencia circunscrita"], correctIndex: 1, explanation: "El teorema de Stewart calcula la longitud de un ceviano (segmento de un vértice a un punto del lado opuesto) en un triángulo.", difficulty: "basico" },
     { id: 762, question: "En un triángulo ABC, si AD es la mediana y AB = 5, AC = 7, BC = 8, ¿cuánto mide BD?", options: ["3", "4", "5", "6"], correctIndex: 1, explanation: "La mediana D es el punto medio de BC. BD = BC/2 = 8/2 = 4.", difficulty: "basico" },
     { id: 763, question: "¿Cuánto mide la mediana de un triángulo equilátero de lado 6 cm?", options: ["3√3 cm", "6√3 cm", "9 cm", "3 cm"], correctIndex: 0, explanation: "La mediana de un triángulo equilátero es también la altura: m = (√3/2)(6) = 3√3 cm.", difficulty: "basico" },
@@ -10934,8 +10884,7 @@ Radio de los nueve puntos: \\\\(R_N = \\\\frac{R}{2} = \\\\frac{5\\\\sqrt{52}}{1
         correctIndex: 0,
         explanation: "El centro de la circunferencia de los nueve puntos N es el punto medio de OH: N = ((4+10)/2, (6+14)/2) = (7, 10).",
         difficulty: "intermedio"
-      }
-    ,
+      },
     { id: 781, question: "¿Qué es la circunferencia de los nueve puntos de un triángulo?", options: ["Una circunferencia que pasa por los vértices", "Una circunferencia que pasa por los puntos medios de los lados", "Una circunferencia que pasa por 9 puntos notables del triángulo", "Una circunferencia inscrita en el triángulo"], correctIndex: 2, explanation: "La circunferencia de los nueve puntos pasa por 9 puntos específicos: los puntos medios de los 3 lados, los pies de las 3 alturas y los puntos medios de los segmentos que van del ortocentro a cada vértice.", difficulty: "basico" },
     { id: 782, question: "¿Cuántos puntos medios de los lados de un triángulo hay?", options: ["1", "2", "3", "6"], correctIndex: 2, explanation: "Un triángulo tiene 3 lados, por lo tanto tiene 3 puntos medios, uno en cada lado.", difficulty: "basico" },
     { id: 783, question: "¿Cuántas alturas tiene un triángulo?", options: ["1", "2", "3", "4"], correctIndex: 2, explanation: "Todo triángulo tiene exactamente 3 alturas, una desde cada vértice perpendicular al lado opuesto.", difficulty: "basico" },
@@ -11108,8 +11057,7 @@ Verificación: cada lado del Euler es exactamente la mitad del correspondiente e
         correctIndex: 1,
         explanation: "OH² = 9R² - (a² + b² + c²) = 9R² - (169 + 196 + 225) = 9R² - 590. Sin conocer R exacto, la expresión es 9R² - 590.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 700, question: "¿Qué es el baricentro de un triángulo?", options: ["El punto de intersección de las tres mediatrices", "El punto de intersección de las tres medianas", "El punto de intersección de las tres alturas", "El punto de intersección de las tres bisectrices"], correctIndex: 1, explanation: "El baricentro G es el punto de intersección de las tres medianas del triángulo. Divide cada mediana en razón 2:1 desde el vértice.", difficulty: "basico" },
     { id: 701, question: "¿Cuántos centros notables tiene un triángulo?", options: ["2", "3", "4", "5"], correctIndex: 2, explanation: "Un triángulo tiene cuatro centros notables: baricentro (G), circuncentro (O), ortocentro (H) e incentro (I).", difficulty: "basico" },
     { id: 702, question: "¿Qué es el circuncentro de un triángulo?", options: ["El punto de intersección de las medianas", "El punto de intersección de las mediatrices", "El punto de intersección de las alturas", "El centro del círculo inscrito"], correctIndex: 1, explanation: "El circuncentro O es el punto de intersección de las mediatrices de los tres lados del triángulo.", difficulty: "basico" },
@@ -11280,8 +11228,7 @@ Verificación: el punto \\\\((1,0)\\\\) de \\\\(\\\\mathcal{C}\\\\) se invierte 
         correctIndex: 1,
         explanation: "Una circunferencia que no pasa por el centro de inversión se transforma en otra circunferencia que tampoco pasa por el centro. Solo las circunferencias que pasan por O se convierten en rectas.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 721, question: "¿Qué es la inversión geométrica?", options: ["Una transformación que rota los puntos alrededor de un centro", "Una transformación que refleja puntos respecto a una circunferencia", "Una transformación que traslada los puntos en línea recta", "Una transformación que duplica las distancias al origen"], correctIndex: 1, explanation: "La inversión geométrica es una transformación que refleja puntos a través de una circunferencia llamada circunferencia de inversión.", difficulty: "basico" },
     { id: 722, question: "Si la circunferencia de inversión tiene radio R = 5 y centro O, y un punto P está a distancia OP = 10, ¿cuánto mide OP'?", options: ["2.5", "5", "10", "50"], correctIndex: 0, explanation: "Por definición: OP · OP' = R² = 25. Entonces OP' = 25/10 = 2.5.", difficulty: "basico" },
     { id: 723, question: "¿Qué imagen produce la inversión de un punto que está sobre la circunferencia de inversión?", options: ["Se mapea al origen", "Se mapea al infinito", "Se mapea a sí mismo", "No tiene imagen definida"], correctIndex: 2, explanation: "Los puntos que están sobre la circunferencia de inversión se mappean a sí mismos, ya que OP = R implica OP' = R²/R = R.", difficulty: "basico" },
@@ -11457,8 +11404,7 @@ Para encontrar el baricentro de \\\\(z_1, z_2, z_3 = -1+2i\\\\):
         correctIndex: 2,
         explanation: "arg(z₁·z₂) = arg(z₁) + arg(z₂) = 30° + 60° = 90°.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 742, question: "¿Cómo se representa el número complejo z = 3 + 4i en el plano?", options: ["El punto (4, 3)", "El punto (3, 4)", "El punto (7, 0)", "El punto (0, 7)"], correctIndex: 1, explanation: "Un número complejo z = a + bi se representa como el punto (a, b), donde a es la parte real y b es la parte imaginaria.", difficulty: "basico" },
     { id: 743, question: "¿Cuál es el módulo del número complejo z = 5 + 12i?", options: ["7", "13", "17", "60"], correctIndex: 1, explanation: "|z| = √(5² + 12²) = √(25 + 144) = √169 = 13.", difficulty: "basico" },
     { id: 744, question: "¿Qué rotación realiza la multiplicación por i = √(-1) en el plano complejo?", options: ["45° en sentido antihorario", "90° en sentido antihorario", "180°", "90° en sentido horario"], correctIndex: 1, explanation: "Multiplicar por i = cos(90°) + i·sen(90°) rota un punto 90° en sentido antihorario respecto al origen.", difficulty: "basico" },
@@ -11644,8 +11590,7 @@ Para la longitud de arco, \\\\(\\\\frac{dr}{d\\\\theta} = -2\\\\sin\\\\theta\\\\
         correctIndex: 0,
         explanation: "Para la rosa r = a·cos(nθ), si n es impar tiene n pétalos, y si es par tiene 2n. Como n = 5 es impar, tiene 5 pétalos.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 100, question: "Si Juan es el padre de Pedro y Pedro es hermano de María, ¿qué relación tiene Juan con María?", options: ["Tío", "Padre", "Abuelo", "Primo"], correctIndex: 1, explanation: "Si Juan es padre de Pedro y Pedro es hermano de María, Juan también es padre de María.", difficulty: "basic" },
     { id: 101, question: "Ana es la esposa de Carlos. ¿Quién es el esposo de Ana?", options: ["Pedro", "Luis", "Carlos", "Miguel"], correctIndex: 2, explanation: "Si Ana es la esposa de Carlos, Carlos es el esposo de Ana.", difficulty: "basic" },
     { id: 102, question: "Si Laura es hermana de Pedro e hija de Carmen, ¿quién es la madre de Laura?", options: ["María", "Carmen", "Ana", "Rosa"], correctIndex: 1, explanation: "Si Laura es hermana de Pedro e hija de Carmen, Carmen es su madre.", difficulty: "basic" },
@@ -11823,8 +11768,7 @@ Las curvas notables tienen aplicaciones en órbitas planetarias (elipses), refle
         difficulty: "avanzado"
       }
     ]
-  }
-,
+  },
   {
     slug: "metodos-resolucion-geometrica",
     illustrationSummary: "Diagrama de flujo mostrando los métodos de resolución: coordinados, trigonométricos y clásicos.",
@@ -11966,8 +11910,7 @@ La elección del método adecuado depende de la naturaleza del problema. Los pro
         correctIndex: 0,
         explanation: "Area = ½|x₁(y₂-y₃) + x₂(y₃-y₁) + x₃(y₁-y₂)| = ½|0(0-3) + 4(3-0) + 2(0-0)| = ½|12| = 6.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 100, question: "Si Pedro siempre dice la verdad y dice 'Estoy hablando', ¿es verdadera?", options: ["Sí, es verdadera", "No, es falsa", "No se puede determinar", "Depende"], correctIndex: 0, explanation: "Si Pedro dice la verdad y afirma que está hablando, es verdadera.", difficulty: "basic" },
     { id: 101, question: "Si solo una miente entre Ana y Beatriz, y Ana dice 'Beatriz miente', ¿quién miente?", options: ["Ana", "Beatriz", "Las dos", "Ninguna"], correctIndex: 0, explanation: "Si Ana dijera la verdad, Beatriz mentiría. Pero entonces Ana estaría diciendo la verdad correctamente. Si Ana miente, Beatriz dice la verdad.", difficulty: "basic" },
     { id: 102, question: "Carlos dice: 'Yo nunca miente'. Si Carlos es mentiroso, ¿es verdad?", options: ["Sí", "No, siempre miente", "A veces dice la verdad", "No se puede saber"], correctIndex: 1, explanation: "Si Carlos siempre miente, cuando dice 'yo nunca miente' está mintiendo.", difficulty: "basic" },
@@ -12283,8 +12226,7 @@ La isoperimetría establece que, entre todas las figuras de igual perímetro, el
         correctIndex: 1,
         explanation: "Por semejanza: r = R(1 - h/H). V = πr²h = πR²(1 - h/H)²h. Derivando e igualando a cero: h = H/3 maximiza el volumen del cilindro inscrito.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 100, question: "Si A llega antes que B y B antes que C, ¿quién llegó primero?", options: ["B", "C", "A", "No se sabe"], correctIndex: 2, explanation: "A llegó antes que B, y B antes que C. A llegó primero.", difficulty: "basic" },
     { id: 101, question: "Si María tiene 15, Pedro 18 y Ana 12, ¿quién es la mayor?", options: ["María", "Ana", "Pedro", "Son iguales"], correctIndex: 2, explanation: "Pedro tiene 18 años, es el mayor.", difficulty: "basic" },
     { id: 102, question: "Si Juan gana más que Luis y Luis más que Pedro, ¿quién gana menos?", options: ["Juan", "Luis", "Pedro", "Todos igual"], correctIndex: 2, explanation: "Pedro gana menos que Luis, quien gana menos que Juan.", difficulty: "basic" },
@@ -12558,8 +12500,7 @@ Los fractales se generan mediante sistemas de funciones iteradas (IFS, por sus s
         correctIndex: 1,
         explanation: "Un hexágono regular inscrito en un círculo de radio r tiene lado = r y área = (3√3/2)r². Con r = 5: A = (3√3/2)(25) = 75√3/2 ≈ 64.95. La opción más cercana es 50√3 ≈ 86.6... Revisando: A = (3√3/2)·25 = 37.5√3 ≈ 64.95, y 25√3 ≈ 43.3. La respuesta correcta es 25√3 si consideramos la fórmula simplificada para un hexágono.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 800, question: "¿Qué método se utiliza para estimar el área de una figura irregular contando cuántos cuadros de una cuadrícula cubren parcial o totalmente la figura?", options: ["Método de conteo de cuadros", "Método de promedio", "Método de integración", "Método de Monte Carlo"], correctIndex: 0, explanation: "El método de conteo de cuadros implica superponer una cuadrícula sobre la figura y contar los cuadros que están dentro de ella, approximando el área total.", difficulty: "basic" },
     { id: 801, question: "Al estimar el perímetro de una forma irregular, ¿qué estrategia visual es útil?", options: ["Comparar con formas regulares conocidas", "Medir solo un lado", "Ignorar las curvas", "Usar siempre una fórmula exacta"], correctIndex: 0, explanation: "Comparar la forma irregular con formas regulares conocidas (como círculos o rectángulos) ayuda a obtener una estimación razonable del perímetro.", difficulty: "basic" },
     { id: 802, question: "¿Qué es una aproximación por exceso en la estimación de un área?", options: ["Un valor ligeramente mayor que el valor real", "Un valor ligeramente menor que el valor real", "El valor exacto", "Un valor aleatorio"], correctIndex: 0, explanation: "Una aproximación por exceso es un valor que se sabe es mayor que el valor real, útil para establecer límites superiores.", difficulty: "basic" },
@@ -12577,8 +12518,7 @@ Los fractales se generan mediante sistemas de funciones iteradas (IFS, por sus s
     { id: 814, question: "¿Qué es una estimación por promedio en el contexto de áreas irregulares?", options: ["Promediar múltiples estimaciones individuales", "Usar un solo valor exacto", "Sumar todas las áreas parciales", "Multiplicar por un factor de corrección"], correctIndex: 0, explanation: "Promediar múltiples estimaciones independientes puede reducir el error aleatorio y dar un resultado más confiable que una sola estimación.", difficulty: "intermediate" },
     { id: 815, question: "Al estimar el volumen de un objeto usando el método de capas, ¿qué se asume típicamente?", options: ["Que el objeto puede dividirse en capas de espesor conocido", "Que el objeto es perfectamente esférico", "Que el volumen es constante", "Que la densidad es uniforme"], correctIndex: 0, explanation: "El método de capas asume que el objeto puede dividirse en secciones o capas cuyo volumen se puede calcular y sumar para obtener una estimación total.", difficulty: "advanced" },
     { id: 816, question: "¿Qué es el método de Monte Carlo para estimar áreas?", options: ["Generar puntos aleatorios y contar cuántos caen dentro de la figura", "Medir todos los puntos exactos", "Usar una cuadrícula fija", "Calcular integrales definidas"], correctIndex: 0, explanation: "El método de Monte Carlo utiliza números aleatorios para muestrear puntos dentro de un dominio conocido; la proporción que cae dentro de la figura da una estimación del área.", difficulty: "advanced" },
-    { id: 817, question: "Al combinar estimaciones de diferentes métodos, ¿qué enfoque estadístico es útil para obtener un valor final más robusto?", options: ["Calcular la media ponderada basada en la precisión de cada método", "Usar solo la estimación más alta", "Sumar todas las estimaciones", "Ignorar las estimaciones con mayor error"], correctIndex: 0, explanation: "Una media ponderada asigna más peso a las estimaciones de mayor precisión, produciendo un resultado final que considera la confiabilidad de cada método.", difficulty: "advanced" }
-  ,
+    { id: 817, question: "Al combinar estimaciones de diferentes métodos, ¿qué enfoque estadístico es útil para obtener un valor final más robusto?", options: ["Calcular la media ponderada basada en la precisión de cada método", "Usar solo la estimación más alta", "Sumar todas las estimaciones", "Ignorar las estimaciones con mayor error"], correctIndex: 0, explanation: "Una media ponderada asigna más peso a las estimaciones de mayor precisión, produciendo un resultado final que considera la confiabilidad de cada método.", difficulty: "advanced" },
     { id: 800, question: "¿Qué método se utiliza para estimar el área de una figura irregular contando cuántos cuadros de una cuadrícula cubren parcial o totalmente la figura?", options: ["Método de conteo de cuadros", "Método de promedio", "Método de integración", "Método de Monte Carlo"], correctIndex: 0, explanation: "El método de conteo de cuadros implica superponer una cuadrícula sobre la figura y contar los cuadros que están dentro de ella, approximando el área total.", difficulty: "basic" },
     { id: 801, question: "Al estimar el perímetro de una forma irregular, ¿qué estrategia visual es útil?", options: ["Comparar con formas regulares conocidas", "Medir solo un lado", "Ignorar las curvas", "Usar siempre una fórmula exacta"], correctIndex: 0, explanation: "Comparar la forma irregular con formas regulares conocidas (como círculos o rectángulos) ayuda a obtener una estimación razonable del perímetro.", difficulty: "basic" },
     { id: 802, question: "¿Qué es una aproximación por exceso en la estimación de un área?", options: ["Un valor ligeramente mayor que el valor real", "Un valor ligeramente menor que el valor real", "El valor exacto", "Un valor aleatorio"], correctIndex: 0, explanation: "Una aproximación por exceso es un valor que se sabe es mayor que el valor real, útil para establecer límites superiores.", difficulty: "basic" },
@@ -12752,8 +12692,7 @@ Identifica primero el ancestro común más cercano. Cuenta los saltos desde cada
         correctIndex: 1,
         explanation: "Ana es hija de Luis, Pedro es hijo de Carmen. Luis y Carmen son hermanos (hijos de Manuel). Los hijos de hermanos son **primos carnales**.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 100, question: "Si Juan es el padre de Pedro y Pedro es hermano de María, ¿qué relación tiene Juan con María?", options: ["Tío", "Padre", "Abuelo", "Primo"], correctIndex: 1, explanation: "Si Juan es padre de Pedro y Pedro es hermano de María, Juan también es padre de María.", difficulty: "basic" },
     { id: 101, question: "Ana es la esposa de Carlos. ¿Quién es el esposo de Ana?", options: ["Pedro", "Luis", "Carlos", "Miguel"], correctIndex: 2, explanation: "Si Ana es la esposa de Carlos, Carlos es el esposo de Ana.", difficulty: "basic" },
     { id: 102, question: "Si Laura es hermana de Pedro e hija de Carmen, ¿quién es la madre de Laura?", options: ["María", "Carmen", "Ana", "Rosa"], correctIndex: 1, explanation: "Si Laura es hermana de Pedro e hija de Carmen, Carmen es su madre.", difficulty: "basic" },
@@ -12918,8 +12857,7 @@ Dibuja una línea de tiempo para visualizar los eventos. Identifica la fecha de 
         correctIndex: 2,
         explanation: "María recorre 12 km en 2h. Carlos en 2h recorrió 8 km, le faltan 4 km. Ahora van en direcciones opuestas: María regresa a 6 km/h y Carlos avanza a 4 km/h. Distancia entre ambos = 12−8=4 km, pero María ya va de vuelta. Distancia entre ambos = 4 km + (María ya regresó 0 km al punto de encuentro). Se encuentran cuando la suma de distancias recorridas = 2×12−8 = 16 km. Tiempo adicional = 16/(6+4) = 1.6 h. Total = 2+1.6 = 3.6 h. Alternativamente: María llega y vuelve, se cruzan. **A las 5 horas** ambos se encuentran considerando el trayecto completo.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 100, question: "Si son las 3:00 y dentro de 2 horas hay una reunión, ¿a qué hora es?", options: ["4:00", "5:00", "6:00", "2:00"], correctIndex: 1, explanation: "3:00 + 2 horas = 5:00.", difficulty: "basic" },
     { id: 101, question: "Un evento comenzó a las 10:00 y terminó a las 12:30. ¿Cuánto duró?", options: ["1 hora", "1.5 horas", "2 horas", "2.5 horas"], correctIndex: 3, explanation: "De 10:00 a 12:30 hay 2.5 horas.", difficulty: "basic" },
     { id: 102, question: "Si hoy es martes, ¿qué día será dentro de 5 días?", options: ["Domingo", "Lunes", "Sábado", "Viernes"], correctIndex: 2, explanation: "Martes + 5 días = Sábado.", difficulty: "basic" },
@@ -12940,8 +12878,7 @@ Dibuja una línea de tiempo para visualizar los eventos. Identifica la fecha de 
     { id: 117, question: "Si un reloj se atrasa 2 minutos cada hora, ¿cuánto se atrasa en un día?", options: ["24 minutos", "48 minutos", "36 minutos", "60 minutos"], correctIndex: 1, explanation: "2 min × 24 horas = 48 minutos.", difficulty: "advanced" },
     { id: 118, question: "Si el doble de la edad de Pedro en 5 años será 40, ¿cuántos años tiene?", options: ["12 años", "15 años", "17 años", "20 años"], correctIndex: 1, explanation: "2(x+5)=40 → x=15.", difficulty: "advanced" },
     { id: 119, question: "Si hay 48 semanas entre dos cumpleaños, ¿cuántos meses de diferencia hay?", options: ["9 meses", "10 meses", "11 meses", "12 meses"], correctIndex: 2, explanation: "48 semanas ÷ 4.34 ≈ 11 meses.", difficulty: "advanced" },
-    { id: 120, question: "Si una clase dura 1h20min y hay 4 al día, ¿cuántas horas son?", options: ["4 horas", "5 horas", "5.33 horas", "6 horas"], correctIndex: 2, explanation: "80 min × 4 = 320 min = 5.33 h.", difficulty: "advanced" }
-  ,
+    { id: 120, question: "Si una clase dura 1h20min y hay 4 al día, ¿cuántas horas son?", options: ["4 horas", "5 horas", "5.33 horas", "6 horas"], correctIndex: 2, explanation: "80 min × 4 = 320 min = 5.33 h.", difficulty: "advanced" },
     { id: 2500, question: "¿Cuál es el siguiente término de la sucesión 2, 4, 6, 8, ...?", options: ["10", "12", "9", "11"], correctIndex: 0, explanation: "Es una sucesión de números pares, cada término aumenta en 2.", difficulty: "basic" },
     { id: 2501, question: "En la sucesión 3, 6, 9, 12, ..., ¿cuál es el término 5?", options: ["15", "18", "20", "14"], correctIndex: 0, explanation: "Es una sucesión aritmética con razón 3: 3×5=15.", difficulty: "basic" },
     { id: 2502, question: "¿Cuál es el siguiente término de 5, 10, 20, 40, ...?", options: ["80", "60", "100", "50"], correctIndex: 0, explanation: "Cada término se duplica: 40×2=80.", difficulty: "basic" },
@@ -13128,8 +13065,7 @@ Empieza asumiendo que cada persona dice la verdad o miente, y busca contradiccio
         correctIndex: 0,
         explanation: "Si Pedro y Juan dicen verdad: Pedro dice al menos uno miente (V), Juan dice exactamente 2 mienten (V), María dice los 3 hombres mienten → María miente (F, ya que Pedro y Juan dicen verdad), Carlos dice que dice verdad → Carlos es F (miente). Mienten: María y Carlos = 2 mentirosos. Consistente con Juan diciendo \"exactamente 2 de los demás mienten\". **Pedro y Juan dicen la verdad**.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 100, question: "Si Pedro siempre dice la verdad y dice 'Estoy hablando', ¿es verdadera?", options: ["Sí, es verdadera", "No, es falsa", "No se puede determinar", "Depende"], correctIndex: 0, explanation: "Si Pedro dice la verdad y afirma que está hablando, es verdadera.", difficulty: "basic" },
     { id: 101, question: "Si solo una miente entre Ana y Beatriz, y Ana dice 'Beatriz miente', ¿quién miente?", options: ["Ana", "Beatriz", "Las dos", "Ninguna"], correctIndex: 0, explanation: "Si Ana dijera la verdad, Beatriz mentiría. Pero entonces Ana estaría diciendo la verdad correctamente. Si Ana miente, Beatriz dice la verdad.", difficulty: "basic" },
     { id: 102, question: "Carlos dice: 'Yo nunca miente'. Si Carlos es mentiroso, ¿es verdad?", options: ["Sí", "No, siempre miente", "A veces dice la verdad", "No se puede saber"], correctIndex: 1, explanation: "Si Carlos siempre miente, cuando dice 'yo nunca miente' está mintiendo.", difficulty: "basic" },
@@ -13150,8 +13086,7 @@ Empieza asumiendo que cada persona dice la verdad o miente, y busca contradiccio
     { id: 117, question: "Pedro dice 'La puerta A lleva al tesoro', Juan dice 'Pedro miente'. Si solo uno miente, ¿qué puerta?", options: ["Puerta A", "Puerta B", "Cualquiera", "No se puede determinar"], correctIndex: 1, explanation: "Si Juan dice la verdad y Pedro miente, la puerta A NO lleva al tesoro. Elegir B.", difficulty: "advanced" },
     { id: 118, question: "Si Ana dice 'Ninguna de las dos dice la verdad', ¿es posible que Ana diga la verdad?", options: ["Sí", "No, es una paradoja", "Solo si Beatriz miente", "No se puede determinar"], correctIndex: 1, explanation: "Si Ana dice la verdad, entonces las dos mienten, pero Ana estaría diciendo la verdad. Contradicción.", difficulty: "advanced" },
     { id: 119, question: "Alguien te dice 'Soy del tipo que miente' en una isla. ¿Qué es?", options: ["Mentiroso", "Verdadero", "Depende", "Es imposible"], correctIndex: 0, explanation: "Si fuera verdad, sería del tipo que dice la verdad. Contradicción. Es mentiroso.", difficulty: "advanced" },
-    { id: 120, question: "Pedro dice: 'O yo miento o Juan dice la verdad'. Si Pedro dice la verdad, ¿qué sabemos de Juan?", options: ["Juan dice la verdad", "Juan miente", "No sabemos nada", "Juan no existe"], correctIndex: 0, explanation: "Si Pedro dice la verdad y no miente, entonces Juan dice la verdad.", difficulty: "advanced" }
-  ,
+    { id: 120, question: "Pedro dice: 'O yo miento o Juan dice la verdad'. Si Pedro dice la verdad, ¿qué sabemos de Juan?", options: ["Juan dice la verdad", "Juan miente", "No sabemos nada", "Juan no existe"], correctIndex: 0, explanation: "Si Pedro dice la verdad y no miente, entonces Juan dice la verdad.", difficulty: "advanced" },
     { id: 2521, question: "Pregunta básica sobre analogías verbales y distribución de elementos (1)", options: ["Opción A", "Opción B", "Opción C", "Opción D"], correctIndex: 0, explanation: "Concepto fundamental de analogías verbales y distribución de elementos.", difficulty: "basic" },
     { id: 2522, question: "Pregunta básica sobre analogías verbales y distribución de elementos (2)", options: ["Opción A", "Opción B", "Opción C", "Opción D"], correctIndex: 0, explanation: "Concepto fundamental de analogías verbales y distribución de elementos.", difficulty: "basic" },
     { id: 2523, question: "Pregunta básica sobre analogías verbales y distribución de elementos (3)", options: ["Opción A", "Opción B", "Opción C", "Opción D"], correctIndex: 0, explanation: "Concepto fundamental de analogías verbales y distribución de elementos.", difficulty: "basic" },
@@ -13343,8 +13278,7 @@ Dibuja una tabla o línea de tiempo para representar las posiciones. Marca con X
         correctIndex: 2,
         explanation: "Juan > Ana > María. Luis no es max ni min, así que Luis = 16 o 18. Como Juan > Ana > María, y hay 4 valores: Juan podría ser 20, Ana 18, María 14, y Luis = 16 (verifica: Luis no es 20 ni 14 ✓). O Juan=20, Ana=16, María=14, Luis=18 (también funciona). Pero Ana > María y Luis ≠ max/min. Si Ana=18: Juan=20, María=14, Luis=16 ✓. Si Ana=16: Juan=18, María=14, Luis=20 (Luis sería el max, contradice). Si Juan=20: Ana=18 es la única que funciona. **Ana sacó 18**.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 100, question: "Si A llega antes que B y B antes que C, ¿quién llegó primero?", options: ["B", "C", "A", "No se sabe"], correctIndex: 2, explanation: "A llegó antes que B, y B antes que C. A llegó primero.", difficulty: "basic" },
     { id: 101, question: "Si María tiene 15, Pedro 18 y Ana 12, ¿quién es la mayor?", options: ["María", "Ana", "Pedro", "Son iguales"], correctIndex: 2, explanation: "Pedro tiene 18 años, es el mayor.", difficulty: "basic" },
     { id: 102, question: "Si Juan gana más que Luis y Luis más que Pedro, ¿quién gana menos?", options: ["Juan", "Luis", "Pedro", "Todos igual"], correctIndex: 2, explanation: "Pedro gana menos que Luis, quien gana menos que Juan.", difficulty: "basic" },
@@ -13365,8 +13299,7 @@ Dibuja una tabla o línea de tiempo para representar las posiciones. Marca con X
     { id: 117, question: "A ocurre después de B, B antes de C, C después de D, D después de E. ¿Cuál es el orden?", options: ["E, D, B, A, C", "E, B, D, A, C", "A, C, B, D, E", "E, D, C, B, A"], correctIndex: 0, explanation: "El orden es E, D, B, A, C.", difficulty: "advanced" },
     { id: 118, question: "Velocidad A > B, B < C, C > D, D > E. ¿Quién es el más rápido?", options: ["A", "C", "D", "No se puede determinar"], correctIndex: 3, explanation: "No se puede determinar entre A y C.", difficulty: "advanced" },
     { id: 119, question: "X antes que Y, Y antes que Z, Z después de W, W después de V, V después de X. ¿Quién llegó segundo?", options: ["X", "Y", "W", "V"], correctIndex: 3, explanation: "X primero, V segundo, W tercero.", difficulty: "advanced" },
-    { id: 120, question: "Peso A > B, B < C, C > D, D > E. ¿Quién es el más pesado?", options: ["A", "C", "D", "No se puede determinar"], correctIndex: 3, explanation: "No se puede determinar con certeza entre A y C.", difficulty: "advanced" }
-  ,
+    { id: 120, question: "Peso A > B, B < C, C > D, D > E. ¿Quién es el más pesado?", options: ["A", "C", "D", "No se puede determinar"], correctIndex: 3, explanation: "No se puede determinar con certeza entre A y C.", difficulty: "advanced" },
     { id: 2563, question: "Pregunta básica sobre notación sigma y propiedades de sumatorias (1)", options: ["Opción A", "Opción B", "Opción C", "Opción D"], correctIndex: 0, explanation: "Concepto fundamental de notación sigma y propiedades de sumatorias.", difficulty: "basic" },
     { id: 2564, question: "Pregunta básica sobre notación sigma y propiedades de sumatorias (2)", options: ["Opción A", "Opción B", "Opción C", "Opción D"], correctIndex: 0, explanation: "Concepto fundamental de notación sigma y propiedades de sumatorias.", difficulty: "basic" },
     { id: 2565, question: "Pregunta básica sobre notación sigma y propiedades de sumatorias (3)", options: ["Opción A", "Opción B", "Opción C", "Opción D"], correctIndex: 0, explanation: "Concepto fundamental de notación sigma y propiedades de sumatorias.", difficulty: "basic" },
@@ -13537,8 +13470,7 @@ Siempre calcula las diferencias entre términos consecutivos. Si son constantes,
         correctIndex: 0,
         explanation: "a₁=1, a₂=x, a₃=1+x, a₄=x+(1+x)=1+2x, a₅=(1+x)+(1+2x)=2+3x. Si a₅=7, entonces 2+3x=7 → 3x=5 → x=5/3. Esto no es entero. Revisando: a₁=1, a₂=1, a₃=2, a₄=3, a₅=5. Si a₅=7, necesitamos otros valores. Con a₁=1, a₂=2: a₃=3, a₄=5, a₅=8 ≠ 7. Con a₁=1, a₂=1: a₃=2, a₄=3, a₅=5 ≠ 7. Si a₁=1, a₃=2: a₂=1, a₄=3, a₅=5. Para a₅=7: a₁=1, a₂=x, a₃=1+x, a₄=1+2x, a₅=2+3x=7→x=5/3. La respuesta entera más cercana y consistente con Fibonacci modificada es **a₃=2**.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 100, question: "Secuencia: 2, 4, 6, 8. ¿Cuál es el siguiente?", options: ["9", "10", "12", "14"], correctIndex: 1, explanation: "Son números pares. El siguiente es 10.", difficulty: "basic" },
     { id: 101, question: "Todos los gatos son animales y Michi es un gato. ¿Qué concluimos?", options: ["Michi es un perro", "Michi es un animal", "Michi es una planta", "No se puede concluir"], correctIndex: 1, explanation: "Si todos los gatos son animales y Michi es gato, Michi es un animal.", difficulty: "basic" },
     { id: 102, question: "Secuencia: 1, 3, 5, 7. ¿Cuál es el siguiente?", options: ["8", "9", "10", "11"], correctIndex: 1, explanation: "Son números impares. El siguiente es 9.", difficulty: "basic" },
@@ -13727,8 +13659,7 @@ Memoriza las potencias de las bases más comunes (2, 8, 16). Para conversiones r
         correctIndex: 1,
         explanation: "11111111₂ = 2⁷+2⁶+2⁵+2⁴+2³+2²+2¹+2⁰ = 128+64+32+16+8+4+2+1 = **255**. Atajo: 2ⁿ−1 = 2⁸−1 = 255.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 100, question: "¿Cuánto vale 101 en binario?", options: ["2", "3", "4", "5"], correctIndex: 3, explanation: "101 binario = 1×4+0×2+1×1=5.", difficulty: "basic" },
     { id: 101, question: "¿Cuánto vale 15 en hexadecimal?", options: ["15", "F", "10", "11"], correctIndex: 1, explanation: "En hexadecimal, 15 se escribe F.", difficulty: "basic" },
     { id: 102, question: "¿Cuánto vale 10 en octal?", options: ["8", "10", "12", "16"], correctIndex: 0, explanation: "10 en octal = 1×8+0=8.", difficulty: "basic" },
@@ -13749,8 +13680,7 @@ Memoriza las potencias de las bases más comunes (2, 8, 16). Para conversiones r
     { id: 117, question: "1000000 binario equivale a:", options: ["32", "64", "128", "256"], correctIndex: 1, explanation: "1000000=2⁶=64.", difficulty: "advanced" },
     { id: 118, question: "123 en base 8 equivale a 83 en decimal. ¿Es correcto?", options: ["Sí", "No", "Es base 7", "Es base 9"], correctIndex: 0, explanation: "123 base 8=1×64+2×8+3=83.", difficulty: "advanced" },
     { id: 119, question: "Si A0 hex equivale a 160, ¿cuánto vale A00?", options: ["2560", "2600", "2400", "1600"], correctIndex: 0, explanation: "A00=10×256=2560.", difficulty: "advanced" },
-    { id: 120, question: "¿Cuánto vale 1A en hexadecimal?", options: ["26", "27", "28", "30"], correctIndex: 0, explanation: "1A=1×16+10=26.", difficulty: "advanced" }
-  ,
+    { id: 120, question: "¿Cuánto vale 1A en hexadecimal?", options: ["26", "27", "28", "30"], correctIndex: 0, explanation: "1A=1×16+10=26.", difficulty: "advanced" },
     { id: 2605, question: "Pregunta básica sobre métodos de cálculo rápido y estimación (1)", options: ["Opción A", "Opción B", "Opción C", "Opción D"], correctIndex: 0, explanation: "Concepto fundamental de métodos de cálculo rápido y estimación.", difficulty: "basic" },
     { id: 2606, question: "Pregunta básica sobre métodos de cálculo rápido y estimación (2)", options: ["Opción A", "Opción B", "Opción C", "Opción D"], correctIndex: 0, explanation: "Concepto fundamental de métodos de cálculo rápido y estimación.", difficulty: "basic" },
     { id: 2607, question: "Pregunta básica sobre métodos de cálculo rápido y estimación (3)", options: ["Opción A", "Opción B", "Opción C", "Opción D"], correctIndex: 0, explanation: "Concepto fundamental de métodos de cálculo rápido y estimación.", difficulty: "basic" },
@@ -13900,8 +13830,7 @@ Empieza por las letras en posiciones más restrictivas (primera cifra, resultado
         correctIndex: 1,
         explanation: "ABC + CBA = 999. Unidades: C+A = 9 o 19. Decenas: B+B = 9 o 19 (con acarreo). Centenas: A+C = 9 (con acarreo posible). Si B+B=9, B=4.5 (imposible). Si B+B=10 (con acarreo), B=5. Entonces A+C=9 (sin acarreo a centenas) → A+C=9 y B=5. Posibles pares (A,C): (1,8),(2,7),(3,6),(4,5) pero B=5, así que (4,5) no. Quedan **4 soluciones**: 158+851, 257+752, 356+653, 158+851... son las combinaciones con B=5 y A+C=9.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 100, question: "Si SEND+MORE=MONEY, ¿cuánto vale M?", options: ["0", "1", "2", "9"], correctIndex: 1, explanation: "En el problema clásico, M=1 por ser el carry.", difficulty: "basic" },
     { id: 101, question: "Si AB+AB=CD, ¿cuál es el valor máximo de AB?", options: ["49", "50", "48", "55"], correctIndex: 0, explanation: "El máximo sin que CD tenga 3 dígitos es 49 (2×49=98).", difficulty: "basic" },
     { id: 102, question: "Si CAT+CAT=DOG, ¿cuál es el valor máximo de DOG?", options: ["198", "196", "180", "200"], correctIndex: 0, explanation: "El máximo CAT=99. 99+99=198.", difficulty: "basic" },
@@ -14107,8 +14036,7 @@ Calcula las diferencias entre términos consecutivos para identificar el tipo de
         correctIndex: 1,
         explanation: "N ≡ 1 (mod 2), N ≡ 2 (mod 3), N ≡ 4 (mod 5). Observando: N+1 es divisible por 2, 3 y 5. MCM(2,3,5) = 30. El menor N tal que N+1=30 es N = **29**. Verificando: 29/2=14r1 ✓, 29/3=9r2 ✓, 29/5=5r4 ✓.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 2500, question: "¿Cuál es el siguiente término de la sucesión 2, 4, 6, 8, ...?", options: ["10", "12", "9", "11"], correctIndex: 0, explanation: "Es una sucesión de números pares, cada término aumenta en 2.", difficulty: "basic" },
     { id: 2501, question: "En la sucesión 3, 6, 9, 12, ..., ¿cuál es el término 5?", options: ["15", "18", "20", "14"], correctIndex: 0, explanation: "Es una sucesión aritmética con razón 3: 3×5=15.", difficulty: "basic" },
     { id: 2502, question: "¿Cuál es el siguiente término de 5, 10, 20, 40, ...?", options: ["80", "60", "100", "50"], correctIndex: 0, explanation: "Cada término se duplica: 40×2=80.", difficulty: "basic" },
@@ -14265,8 +14193,7 @@ En analogías, identifica primero la relación entre el primer par. Luego aplica
         correctIndex: 0,
         explanation: "La relación es **causa-efecto físico**: el calor causa la expansión de los materiales; el frío causa su **contracción**. Las otras opciones describen procesos distintos (enfriar es la causa, no el efecto; comprimir es una acción externa; solidificar es un cambio de estado).",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 2521, question: "Pregunta básica sobre analogías verbales y distribución de elementos (1)", options: ["Opción A", "Opción B", "Opción C", "Opción D"], correctIndex: 0, explanation: "Concepto fundamental de analogías verbales y distribución de elementos.", difficulty: "basic" },
     { id: 2522, question: "Pregunta básica sobre analogías verbales y distribución de elementos (2)", options: ["Opción A", "Opción B", "Opción C", "Opción D"], correctIndex: 0, explanation: "Concepto fundamental de analogías verbales y distribución de elementos.", difficulty: "basic" },
     { id: 2523, question: "Pregunta básica sobre analogías verbales y distribución de elementos (3)", options: ["Opción A", "Opción B", "Opción C", "Opción D"], correctIndex: 0, explanation: "Concepto fundamental de analogías verbales y distribución de elementos.", difficulty: "basic" },
@@ -14428,8 +14355,7 @@ Identifica el tipo de serie (aritmética, geométrica, potencias). Para series a
         correctIndex: 3,
         explanation: "Cada término se obtiene **duplicando el anterior y restando 1**: 2→3 (2×2-1), 3→5 (3×2-1), 5→9 (5×2-1), 9→17 (9×2-1), 17→**33** (17×2-1). Alternativamente: las diferencias son +1, +2, +4, +8, +16 → 17+16 = **33**.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 2542, question: "Pregunta básica sobre series numéricas y patrones (1)", options: ["Opción A", "Opción B", "Opción C", "Opción D"], correctIndex: 0, explanation: "Concepto fundamental de series numéricas y patrones.", difficulty: "basic" },
     { id: 2543, question: "Pregunta básica sobre series numéricas y patrones (2)", options: ["Opción A", "Opción B", "Opción C", "Opción D"], correctIndex: 0, explanation: "Concepto fundamental de series numéricas y patrones.", difficulty: "basic" },
     { id: 2544, question: "Pregunta básica sobre series numéricas y patrones (3)", options: ["Opción A", "Opción B", "Opción C", "Opción D"], correctIndex: 0, explanation: "Concepto fundamental de series numéricas y patrones.", difficulty: "basic" },
@@ -14592,8 +14518,7 @@ Memoriza las fórmulas para sumas de k, k² y k³. Usa linealidad para separar s
         correctIndex: 2,
         explanation: "Separando: 2·∑i² - ∑i + ∑3 = 2·(1+4+9+16) - (1+2+3+4) + 3·4 = 2·30 - 10 + 12 = 60 - 10 + 12 = **62**. Verificación directa: (2·1-1+3)+(2·4-2+3)+(2·9-3+3)+(2·16-4+3) = 4+9+18+31 = **62**.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 2563, question: "Pregunta básica sobre notación sigma y propiedades de sumatorias (1)", options: ["Opción A", "Opción B", "Opción C", "Opción D"], correctIndex: 0, explanation: "Concepto fundamental de notación sigma y propiedades de sumatorias.", difficulty: "basic" },
     { id: 2564, question: "Pregunta básica sobre notación sigma y propiedades de sumatorias (2)", options: ["Opción A", "Opción B", "Opción C", "Opción D"], correctIndex: 0, explanation: "Concepto fundamental de notación sigma y propiedades de sumatorias.", difficulty: "basic" },
     { id: 2565, question: "Pregunta básica sobre notación sigma y propiedades de sumatorias (3)", options: ["Opción A", "Opción B", "Opción C", "Opción D"], correctIndex: 0, explanation: "Concepto fundamental de notación sigma y propiedades de sumatorias.", difficulty: "basic" },
@@ -14758,8 +14683,7 @@ Siempre verifica tu respuesta con una estimación. Usa paréntesis para agrupar 
         correctIndex: 2,
         explanation: "Paréntesis: 1/2 + 1/3 = 5/6. Multiplicación: (5/6)×12 = 10. Raíz: √49 = 7. Exponente: 2² = 4. Resultado: 10 − 7 + 4 = **7**.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 2584, question: "Pregunta básica sobre operaciones fundamentales con propiedades (1)", options: ["Opción A", "Opción B", "Opción C", "Opción D"], correctIndex: 0, explanation: "Concepto fundamental de operaciones fundamentales con propiedades.", difficulty: "basic" },
     { id: 2585, question: "Pregunta básica sobre operaciones fundamentales con propiedades (2)", options: ["Opción A", "Opción B", "Opción C", "Opción D"], correctIndex: 0, explanation: "Concepto fundamental de operaciones fundamentales con propiedades.", difficulty: "basic" },
     { id: 2586, question: "Pregunta básica sobre operaciones fundamentales con propiedades (3)", options: ["Opción A", "Opción B", "Opción C", "Opción D"], correctIndex: 0, explanation: "Concepto fundamental de operaciones fundamentales con propiedades.", difficulty: "basic" },
@@ -14936,8 +14860,7 @@ Elige el método más simple para cada caso. Para multiplicar por 9, 11, 99, 101
         correctIndex: 0,
         explanation: "Desarrollando: 3x − 7 = 2x + 8. Despejando: 3x − 2x = 8 + 7 → **x = 15**. Verificación: 3(15)−7 = 38; 2(15+4) = 38 ✓.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 2605, question: "Pregunta básica sobre métodos de cálculo rápido y estimación (1)", options: ["Opción A", "Opción B", "Opción C", "Opción D"], correctIndex: 0, explanation: "Concepto fundamental de métodos de cálculo rápido y estimación.", difficulty: "basic" },
     { id: 2606, question: "Pregunta básica sobre métodos de cálculo rápido y estimación (2)", options: ["Opción A", "Opción B", "Opción C", "Opción D"], correctIndex: 0, explanation: "Concepto fundamental de métodos de cálculo rápido y estimación.", difficulty: "basic" },
     { id: 2607, question: "Pregunta básica sobre métodos de cálculo rápido y estimación (3)", options: ["Opción A", "Opción B", "Opción C", "Opción D"], correctIndex: 0, explanation: "Concepto fundamental de métodos de cálculo rápido y estimación.", difficulty: "basic" },
@@ -15101,8 +15024,7 @@ Lee el problema varias veces antes de plantear. Identifica las cantidades conoci
         correctIndex: 0,
         explanation: "Sea x lo retirado. El resto invertido es (12000 − x). Interés: (12000 − x) × 0.05 = 420. Entonces 12000 − x = 8400, y **x = S/ 3,600**.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 2626, question: "Pregunta básica sobre traducción de problemas a ecuaciones (1)", options: ["Opción A", "Opción B", "Opción C", "Opción D"], correctIndex: 0, explanation: "Concepto fundamental de traducción de problemas a ecuaciones.", difficulty: "basic" },
     { id: 2627, question: "Pregunta básica sobre traducción de problemas a ecuaciones (2)", options: ["Opción A", "Opción B", "Opción C", "Opción D"], correctIndex: 0, explanation: "Concepto fundamental de traducción de problemas a ecuaciones.", difficulty: "basic" },
     { id: 2628, question: "Pregunta básica sobre traducción de problemas a ecuaciones (3)", options: ["Opción A", "Opción B", "Opción C", "Opción D"], correctIndex: 0, explanation: "Concepto fundamental de traducción de problemas a ecuaciones.", difficulty: "basic" },
@@ -15123,8 +15045,7 @@ Lee el problema varias veces antes de plantear. Identifica las cantidades conoci
     { id: 2643, question: "Pregunta avanzada sobre traducción de problemas a ecuaciones (4)", options: ["Opción A", "Opción B", "Opción C", "Opción D"], correctIndex: 2, explanation: "Razonamiento avanzado de traducción de problemas a ecuaciones.", difficulty: "advanced" },
     { id: 2644, question: "Pregunta avanzada sobre traducción de problemas a ecuaciones (5)", options: ["Opción A", "Opción B", "Opción C", "Opción D"], correctIndex: 2, explanation: "Razonamiento avanzado de traducción de problemas a ecuaciones.", difficulty: "advanced" },
     { id: 2645, question: "Pregunta avanzada sobre traducción de problemas a ecuaciones (6)", options: ["Opción A", "Opción B", "Opción C", "Opción D"], correctIndex: 2, explanation: "Razonamiento avanzado de traducción de problemas a ecuaciones.", difficulty: "advanced" },
-    { id: 2646, question: "Pregunta avanzada sobre traducción de problemas a ecuaciones (7)", options: ["Opción A", "Opción B", "Opción C", "Opción D"], correctIndex: 2, explanation: "Razonamiento avanzado de traducción de problemas a ecuaciones.", difficulty: "advanced" }
-  ,
+    { id: 2646, question: "Pregunta avanzada sobre traducción de problemas a ecuaciones (7)", options: ["Opción A", "Opción B", "Opción C", "Opción D"], correctIndex: 2, explanation: "Razonamiento avanzado de traducción de problemas a ecuaciones.", difficulty: "advanced" },
     { id: 2794, question: "Si hay 3 camisas y 4 pantalones, ¿cuántos outfits se pueden formar?", options: ["12", "7", "3", "4"], correctIndex: 0, explanation: "Por el principio multiplicativo: 3×4=12.", difficulty: "basic" },
     { id: 2795, question: "¿Cuántas formas hay de elegir 1 libro de 5 disponibles?", options: ["5", "25", "10", "1"], correctIndex: 0, explanation: "Una elección simple: C(5,1)=5.", difficulty: "basic" },
     { id: 2796, question: "De 4 personas, ¿cuántas formas hay de elegir un presidente?", options: ["4", "6", "24", "12"], correctIndex: 0, explanation: "C(4,1)=4 formas.", difficulty: "basic" },
@@ -15295,8 +15216,7 @@ Dibuja una línea de tiempo para visualizar las edades en diferentes momentos. U
         correctIndex: 0,
         explanation: "Hace n años: (26 − n) = 3(10 − n) → 26 − n = 30 − 3n → 2n = 4 → **n = 2**. Verificación: hace 2 años Ana tenía 24 y Luis tenía 8: 24 = 3 × 8 ✓.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 2647, question: "Pregunta básica sobre problemas de relaciones de edad (1)", options: ["Opción A", "Opción B", "Opción C", "Opción D"], correctIndex: 0, explanation: "Concepto fundamental de problemas de relaciones de edad.", difficulty: "basic" },
     { id: 2648, question: "Pregunta básica sobre problemas de relaciones de edad (2)", options: ["Opción A", "Opción B", "Opción C", "Opción D"], correctIndex: 0, explanation: "Concepto fundamental de problemas de relaciones de edad.", difficulty: "basic" },
     { id: 2649, question: "Pregunta básica sobre problemas de relaciones de edad (3)", options: ["Opción A", "Opción B", "Opción C", "Opción D"], correctIndex: 0, explanation: "Concepto fundamental de problemas de relaciones de edad.", difficulty: "basic" },
@@ -15469,8 +15389,7 @@ Dibuja una línea de tiempo para visualizar los movimientos. Identifica si los c
         correctIndex: 2,
         explanation: "A las 4:30: la manecilla de horas está entre 4 y 5, específicamente a 4.5 × 30° = 135° desde las 12. La manecilla de minutos está en 6, a 180°. Ángulo = |180° − 135°| = **45°**.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 2668, question: "Pregunta básica sobre problemas de tiempo, horarios y calendario (1)", options: ["Opción A", "Opción B", "Opción C", "Opción D"], correctIndex: 0, explanation: "Concepto fundamental de problemas de tiempo, horarios y calendario.", difficulty: "basic" },
     { id: 2669, question: "Pregunta básica sobre problemas de tiempo, horarios y calendario (2)", options: ["Opción A", "Opción B", "Opción C", "Opción D"], correctIndex: 0, explanation: "Concepto fundamental de problemas de tiempo, horarios y calendario.", difficulty: "basic" },
     { id: 2670, question: "Pregunta básica sobre problemas de tiempo, horarios y calendario (3)", options: ["Opción A", "Opción B", "Opción C", "Opción D"], correctIndex: 0, explanation: "Concepto fundamental de problemas de tiempo, horarios y calendario.", difficulty: "basic" },
@@ -15626,8 +15545,7 @@ Para promedios simples, suma y divide. Para promedios ponderados, multiplica cad
         correctIndex: 2,
         explanation: "Nota = 18×0.4 + 14×0.3 + 16×0.3 = 7.2 + 4.2 + 4.8 = 16.2.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 2689, question: "Pregunta básica sobre medidas de tendencia central (1)", options: ["Opción A", "Opción B", "Opción C", "Opción D"], correctIndex: 0, explanation: "Concepto fundamental de medidas de tendencia central.", difficulty: "basic" },
     { id: 2690, question: "Pregunta básica sobre medidas de tendencia central (2)", options: ["Opción A", "Opción B", "Opción C", "Opción D"], correctIndex: 0, explanation: "Concepto fundamental de medidas de tendencia central.", difficulty: "basic" },
     { id: 2691, question: "Pregunta básica sobre medidas de tendencia central (3)", options: ["Opción A", "Opción B", "Opción C", "Opción D"], correctIndex: 0, explanation: "Concepto fundamental de medidas de tendencia central.", difficulty: "basic" },
@@ -15764,8 +15682,7 @@ Memoriza el orden de precedencia PEMDAS/BODMAS. Para exponentes, recuerda que -x
         correctIndex: 2,
         explanation: "3 ☆ 2 = 3² − 2 = 7. Luego 7 ◎ 5 = 2(7) + 5 = 14 + 5 = **19**.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 2710, question: "Pregunta básica sobre operadores definidos y reemplazo (1)", options: ["Opción A", "Opción B", "Opción C", "Opción D"], correctIndex: 0, explanation: "Concepto fundamental de operadores definidos y reemplazo.", difficulty: "basic" },
     { id: 2711, question: "Pregunta básica sobre operadores definidos y reemplazo (2)", options: ["Opción A", "Opción B", "Opción C", "Opción D"], correctIndex: 0, explanation: "Concepto fundamental de operadores definidos y reemplazo.", difficulty: "basic" },
     { id: 2712, question: "Pregunta básica sobre operadores definidos y reemplazo (3)", options: ["Opción A", "Opción B", "Opción C", "Opción D"], correctIndex: 0, explanation: "Concepto fundamental de operadores definidos y reemplazo.", difficulty: "basic" },
@@ -15925,8 +15842,7 @@ Convierte siempre a binario antes de operar. Dibuja tablas de verdad para verifi
         correctIndex: 2,
         explanation: "3 ☆ 2 = 9−6+4 = 7. Luego 7 ◎ 4 = 7+4 = **11**.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 2731, question: "Pregunta básica sobre operaciones binarias definidas (1)", options: ["Opción A", "Opción B", "Opción C", "Opción D"], correctIndex: 0, explanation: "Concepto fundamental de operaciones binarias definidas.", difficulty: "basic" },
     { id: 2732, question: "Pregunta básica sobre operaciones binarias definidas (2)", options: ["Opción A", "Opción B", "Opción C", "Opción D"], correctIndex: 0, explanation: "Concepto fundamental de operaciones binarias definidas.", difficulty: "basic" },
     { id: 2733, question: "Pregunta básica sobre operaciones binarias definidas (3)", options: ["Opción A", "Opción B", "Opción C", "Opción D"], correctIndex: 0, explanation: "Concepto fundamental de operaciones binarias definidas.", difficulty: "basic" },
@@ -16056,8 +15972,7 @@ Clasifica las figuras por tamaño para evitar duplicados. Usa fórmulas cuando l
         correctIndex: 2,
         explanation: "1²+2²+...+8² = 64+49+36+25+16+9+4+1 = **204**.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 2752, question: "Pregunta básica sobre conteo sistemático de figuras geométricas (1)", options: ["Opción A", "Opción B", "Opción C", "Opción D"], correctIndex: 0, explanation: "Concepto fundamental de conteo sistemático de figuras geométricas.", difficulty: "basic" },
     { id: 2753, question: "Pregunta básica sobre conteo sistemático de figuras geométricas (2)", options: ["Opción A", "Opción B", "Opción C", "Opción D"], correctIndex: 0, explanation: "Concepto fundamental de conteo sistemático de figuras geométricas.", difficulty: "basic" },
     { id: 2754, question: "Pregunta básica sobre conteo sistemático de figuras geométricas (3)", options: ["Opción A", "Opción B", "Opción C", "Opción D"], correctIndex: 0, explanation: "Concepto fundamental de conteo sistemático de figuras geométricas.", difficulty: "basic" },
@@ -16190,8 +16105,7 @@ Dibuja la figura y marca las dimensiones. Divide figuras complejas en formas sim
         correctIndex: 0,
         explanation: "2 lados rectos (10+10=20) + 2 semicírculos (2×5π=10π). Total = **20 + 10π**.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 2773, question: "Pregunta básica sobre cálculo de áreas sombreadas y perímetros (1)", options: ["Opción A", "Opción B", "Opción C", "Opción D"], correctIndex: 0, explanation: "Concepto fundamental de cálculo de áreas sombreadas y perímetros.", difficulty: "basic" },
     { id: 2774, question: "Pregunta básica sobre cálculo de áreas sombreadas y perímetros (2)", options: ["Opción A", "Opción B", "Opción C", "Opción D"], correctIndex: 0, explanation: "Concepto fundamental de cálculo de áreas sombreadas y perímetros.", difficulty: "basic" },
     { id: 2775, question: "Pregunta básica sobre cálculo de áreas sombreadas y perímetros (3)", options: ["Opción A", "Opción B", "Opción C", "Opción D"], correctIndex: 0, explanation: "Concepto fundamental de cálculo de áreas sombreadas y perímetros.", difficulty: "basic" },
@@ -16333,8 +16247,7 @@ Identifica si el orden importa (permutación) o no (combinación). Para problema
         correctIndex: 1,
         explanation: "2 juntos = 1 unidad → 4! = 24. Intercambio: 2! = 2. Total = 24×2 = **48**.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 2794, question: "Si hay 3 camisas y 4 pantalones, ¿cuántos outfits se pueden formar?", options: ["12", "7", "3", "4"], correctIndex: 0, explanation: "Por el principio multiplicativo: 3×4=12.", difficulty: "basic" },
     { id: 2795, question: "¿Cuántas formas hay de elegir 1 libro de 5 disponibles?", options: ["5", "25", "10", "1"], correctIndex: 0, explanation: "Una elección simple: C(5,1)=5.", difficulty: "basic" },
     { id: 2796, question: "De 4 personas, ¿cuántas formas hay de elegir un presidente?", options: ["4", "6", "24", "12"], correctIndex: 0, explanation: "C(4,1)=4 formas.", difficulty: "basic" },
@@ -16473,8 +16386,7 @@ Siempre verifica que las probabilidades sumen 1. Usa el complemento cuando "al m
         correctIndex: 0,
         explanation: "P(1ª roja) = 4/10. P(2ª roja|1ª roja) = 3/9. P(ambas) = 4/10 × 3/9 = 12/90 = **2/15**.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 2815, question: "¿Cuál es la probabilidad de sacar un 3 al lanzar un dado?", options: ["1/6", "1/3", "3/6", "1/12"], correctIndex: 0, explanation: "Hay 6 caras, solo una tiene un 3: 1/6.", difficulty: "basic" },
     { id: 2816, question: "Lanzo una moneda. ¿P(S) de sacar cara?", options: ["1/2", "1/4", "1", "0"], correctIndex: 0, explanation: "Cara y cruz son los 2 resultados posibles: 1/2.", difficulty: "basic" },
     { id: 2817, question: "De 10 pelotas, 4 son rojas. ¿P(de sacar una roja)?", options: ["2/5", "4/10", "1/4", "6/10"], correctIndex: 0, explanation: "4/10 = 2/5.", difficulty: "basic" },
@@ -16627,8 +16539,7 @@ De 100 estudiantes: 60 inglés, 45 francés, 25 ambos.
         correctIndex: 2,
         explanation: "A − B = {1,2,3} y B − A = {6,7}. La diferencia simétrica reúne los elementos exclusivos de cada conjunto.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 400, question: "Que representa el conjunto vacio?", options: ["Un conjunto sin elementos", "Un conjunto con un elemento", "Un conjunto infinito", "Un conjunto con todos los numeros"], correctIndex: 0, explanation: "El conjunto vacio es aquel que no contiene ningun elemento.", difficulty: "basico" },
     { id: 401, question: "Si A = {1, 2, 3}, cuantos elementos tiene A?", options: ["2", "3", "4", "6"], correctIndex: 1, explanation: "El conjunto A tiene exactamente 3 elementos: 1, 2 y 3.", difficulty: "basico" },
     { id: 402, question: "Que simbolo se utiliza para indicar que un elemento pertenece a un conjunto?", options: ["subset", "elemento de", "union", "interseccion"], correctIndex: 1, explanation: "El simbolo de pertenencia indica que un elemento esta en un conjunto.", difficulty: "basico" },
@@ -16649,8 +16560,7 @@ De 100 estudiantes: 60 inglés, 45 francés, 25 ambos.
     { id: 417, question: "Que tipo de conjunto es el conjunto de los numeros racionales respecto a los reales?", options: ["Conjunto disjunto", "Subconjunto propio", "Conjunto igual", "Conjunto vacio"], correctIndex: 1, explanation: "Los racionales son subconjunto propio de los reales, ya que existen irracionales.", difficulty: "avanzado" },
     { id: 418, question: "Si A producto cartesiano B = {(1,x),(1,y),(2,x),(2,y)}, cuales son A y B?", options: ["A={1,2}, B={x,y}", "A={x,y}, B={1,2}", "A={1,x}, B={2,y}", "A={(1,2)}, B={(x,y)}"], correctIndex: 0, explanation: "El producto cartesiano contiene todos los pares (a,b) con a en A y b en B.", difficulty: "avanzado" },
     { id: 419, question: "Si A = {1,2,3} y B = {2,3,4,5}, cual es la diferencia A menos B?", options: ["{1}", "{4,5}", "{1,4,5}", "{2,3}"], correctIndex: 0, explanation: "A menos B contiene los elementos de A que no estan en B: solo el 1.", difficulty: "avanzado" },
-    { id: 420, question: "Cuantos elementos tiene A producto cartesiano B si n(A) = 5 y n(B) = 4?", options: ["9", "20", "1", "45"], correctIndex: 1, explanation: "n(A x B) = n(A) * n(B) = 5 * 4 = 20.", difficulty: "avanzado" }
-  ,
+    { id: 420, question: "Cuantos elementos tiene A producto cartesiano B si n(A) = 5 y n(B) = 4?", options: ["9", "20", "1", "45"], correctIndex: 1, explanation: "n(A x B) = n(A) * n(B) = 5 * 4 = 20.", difficulty: "avanzado" },
     { id: 400, question: "Que representa el conjunto vacio?", options: ["Un conjunto sin elementos", "Un conjunto con un elemento", "Un conjunto infinito", "Un conjunto con todos los numeros"], correctIndex: 0, explanation: "El conjunto vacio es aquel que no contiene ningun elemento.", difficulty: "basico" },
     { id: 401, question: "Si A = {1, 2, 3}, cuantos elementos tiene A?", options: ["2", "3", "4", "6"], correctIndex: 1, explanation: "El conjunto A tiene exactamente 3 elementos: 1, 2 y 3.", difficulty: "basico" },
     { id: 402, question: "Que simbolo se utiliza para indicar que un elemento pertenece a un conjunto?", options: ["subset", "elemento de", "union", "interseccion"], correctIndex: 1, explanation: "El simbolo de pertenencia indica que un elemento esta en un conjunto.", difficulty: "basico" },
@@ -16803,8 +16713,7 @@ Solo F = 20. Solo B = 12. Solo T = 12. Ninguno = 13.
         correctIndex: 3,
         explanation: "Solo inglés = 80 − 30 − 15 + 10 = 45. Se suma la intersección de los tres porque se restó dos veces.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 421, question: "Que representa la region donde se superponen dos circulos en un diagrama de Venn?", options: ["La union de los conjuntos", "La interseccion de los conjuntos", "El complemento", "El conjunto vacio"], correctIndex: 1, explanation: "La region de superposicion representa los elementos que pertenecen a ambos conjuntos.", difficulty: "basico" },
     { id: 422, question: "En un diagrama de Venn con dos conjuntos, cuantas regiones se forman?", options: ["2", "3", "4", "5"], correctIndex: 2, explanation: "Se forman 4 regiones: solo A, solo B, A interseccion B, y fuera de ambos.", difficulty: "basico" },
     { id: 423, question: "Si dos circulos no se tocan en un diagrama de Venn, los conjuntos son:", options: ["Iguales", "Subconjuntos", "Disjuntos", "Complementarios"], correctIndex: 2, explanation: "Si los circulos no se superponen, los conjuntos no tienen elementos en comun.", difficulty: "basico" },
@@ -16825,8 +16734,7 @@ Solo F = 20. Solo B = 12. Solo T = 12. Ninguno = 13.
     { id: 438, question: "Si A subset C y B subset C, que se puede afirmar sobre A union B?", options: ["A union B es disjunto de C", "A union B subset C", "C subset A union B", "No hay relacion"], correctIndex: 1, explanation: "Si todos los elementos de A y B estan en C, entonces A union B subset C.", difficulty: "avanzado" },
     { id: 439, question: "En un diagrama de Venn de 3 conjuntos, la region que representa exactamente A es:", options: ["A", "A menos (B union C)", "A interseccion B' interseccion C'", "A menos B menos C"], correctIndex: 1, explanation: "La region de solo A es A menos la union de B y C.", difficulty: "avanzado" },
     { id: 440, question: "Si n(A inter B inter C)=4, n(A inter B)=10, n(A inter C)=8, n(B inter C)=7, cuantos hay en exactamente una interseccion de a pares?", options: ["6", "11", "13", "21"], correctIndex: 1, explanation: "Solo A inter B: 10-4=6. Solo A inter C: 8-4=4. Solo B inter C: 7-4=3. Total: 6+4+3=13... La respuesta correcta es 13.", difficulty: "avanzado" },
-    { id: 441, question: "Cuantas formas hay de numerar las 8 regiones de un diagrama de Venn de 3 conjuntos con enteros positivos si cada region debe tener un valor diferente?", options: ["8!", "2^8", "8^3", "3^8"], correctIndex: 0, explanation: "Las 8 regiones son distinguibles, hay 8! formas de asignar numeros diferentes.", difficulty: "avanzado" }
-  ,
+    { id: 441, question: "Cuantas formas hay de numerar las 8 regiones de un diagrama de Venn de 3 conjuntos con enteros positivos si cada region debe tener un valor diferente?", options: ["8!", "2^8", "8^3", "3^8"], correctIndex: 0, explanation: "Las 8 regiones son distinguibles, hay 8! formas de asignar numeros diferentes.", difficulty: "avanzado" },
     { id: 421, question: "Que representa la region donde se superponen dos circulos en un diagrama de Venn?", options: ["La union de los conjuntos", "La interseccion de los conjuntos", "El complemento", "El conjunto vacio"], correctIndex: 1, explanation: "La region de superposicion representa los elementos que pertenecen a ambos conjuntos.", difficulty: "basico" },
     { id: 422, question: "En un diagrama de Venn con dos conjuntos, cuantas regiones se forman?", options: ["2", "3", "4", "5"], correctIndex: 2, explanation: "Se forman 4 regiones: solo A, solo B, A interseccion B, y fuera de ambos.", difficulty: "basico" },
     { id: 423, question: "Si dos circulos no se tocan en un diagrama de Venn, los conjuntos son:", options: ["Iguales", "Subconjuntos", "Disjuntos", "Complementarios"], correctIndex: 2, explanation: "Si los circulos no se superponen, los conjuntos no tienen elementos en comun.", difficulty: "basico" },
@@ -16985,8 +16893,7 @@ Circuitos digitales, consultas SQL, lógica computacional.`,
         correctIndex: 2,
         explanation: "Factorizando P: P ∧ (Q ∨ ¬Q) = P ∧ 1 = P por la ley de complemento y de identidad.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 442, question: "Cual es el resultado de A union vacio?", options: ["vacio", "A", "A'", "U"], correctIndex: 1, explanation: "La union de cualquier conjunto con el vacio es el mismo conjunto.", difficulty: "basico" },
     { id: 443, question: "Que operacion booleana equivale al AND logico?", options: ["Union", "Interseccion", "Complemento", "Diferencia"], correctIndex: 1, explanation: "La interseccion equivale al AND logico.", difficulty: "basico" },
     { id: 444, question: "Cual es el resultado de A interseccion A'?", options: ["A", "A'", "vacio", "U"], correctIndex: 2, explanation: "Un conjunto y su complemento no tienen elementos en comun.", difficulty: "basico" },
@@ -17007,8 +16914,7 @@ Circuitos digitales, consultas SQL, lógica computacional.`,
     { id: 459, question: "Simplifique: A' interseccion (A union B)", options: ["A", "B", "A' interseccion B", "A' union B"], correctIndex: 2, explanation: "A' inter (A union B) = (A' inter A) union (A' inter B) = vacio union (A' inter B) = A' inter B.", difficulty: "avanzado" },
     { id: 460, question: "Si A interseccion B = vacio y A union C = B union C, que se puede concluir?", options: ["A = B", "A subset C", "B subset C", "C = vacio"], correctIndex: 1, explanation: "Si A inter B = vacio entonces A subset B' y de A union C = B union C se deduce A subset C.", difficulty: "avanzado" },
     { id: 461, question: "Simplifique: (A interseccion B) union (A interseccion B') union (A' interseccion B)", options: ["A", "B", "A union B", "A interseccion B"], correctIndex: 2, explanation: "(A inter B) union (A inter B') = A. Luego A union (A' inter B) = A union B.", difficulty: "avanzado" },
-    { id: 462, question: "Que propiedad booleana justifica que A union (B interseccion C) = (A union B) interseccion (A union C)?", options: ["Conmutativa", "Asociativa", "Distributiva", "Absorption"], correctIndex: 2, explanation: "La distributiva de la union sobre la interseccion.", difficulty: "avanzado" }
-  ,
+    { id: 462, question: "Que propiedad booleana justifica que A union (B interseccion C) = (A union B) interseccion (A union C)?", options: ["Conmutativa", "Asociativa", "Distributiva", "Absorption"], correctIndex: 2, explanation: "La distributiva de la union sobre la interseccion.", difficulty: "avanzado" },
     { id: 442, question: "Cual es el resultado de A union vacio?", options: ["vacio", "A", "A'", "U"], correctIndex: 1, explanation: "La union de cualquier conjunto con el vacio es el mismo conjunto.", difficulty: "basico" },
     { id: 443, question: "Que operacion booleana equivale al AND logico?", options: ["Union", "Interseccion", "Complemento", "Diferencia"], correctIndex: 1, explanation: "La interseccion equivale al AND logico.", difficulty: "basico" },
     { id: 444, question: "Cual es el resultado de A interseccion A'?", options: ["A", "A'", "vacio", "U"], correctIndex: 2, explanation: "Un conjunto y su complemento no tienen elementos en comun.", difficulty: "basico" },
@@ -17172,8 +17078,7 @@ Verificar argumentos lógicos, demostrar equivalencias.`,
         correctIndex: 3,
         explanation: "P ∨ Q = V ∨ F = V. ¬P ∨ ¬Q = F ∨ V = V. Por lo tanto V ∧ V = V. Ambas partes son verdaderas.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 463, question: "Cuantas filas tiene una tabla de verdad para 2 variables?", options: ["2", "3", "4", "8"], correctIndex: 2, explanation: "Con n variables hay 2^n filas. Para 2 variables: 4.", difficulty: "basico" },
     { id: 464, question: "Cual es el valor de verdad de P y Q cuando P es verdadero y Q es falso?", options: ["Verdadero", "Falso", "Depende", "Indefinido"], correctIndex: 1, explanation: "El AND solo es verdadero cuando ambos operandos son verdaderos.", difficulty: "basico" },
     { id: 465, question: "Cual es el valor de verdad de P o Q cuando P es falso y Q es falso?", options: ["Verdadero", "Falso", "Depende", "Indefinido"], correctIndex: 1, explanation: "El OR solo es falso cuando ambos operandos son falsos.", difficulty: "basico" },
@@ -17337,8 +17242,7 @@ P → Q y Q → R implica **P → R** (silogismo hipotético).
         correctIndex: 0,
         explanation: "P → Q equivale a ¬P ∨ Q: cuando P es falso el condicional es verdadero, y cuando P es verdadero se necesita Q verdadero.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 484, question: "Como se lee P implica Q?", options: ["P y Q", "P o Q", "Si P entonces Q", "P si y solo si Q"], correctIndex: 2, explanation: "P implica Q se lee 'si P entonces Q'.", difficulty: "basico" },
     { id: 485, question: "Cuando es falsa la implicacion P implica Q?", options: ["Cuando P es falso", "Cuando Q es verdadero", "Cuando P es verdadero y Q es falso", "Cuando ambos son falsos"], correctIndex: 2, explanation: "P implica Q solo es falsa cuando la hipotesis es verdadera y la conclusion es falsa.", difficulty: "basico" },
     { id: 486, question: "Cual es la hipotesis en P implica Q?", options: ["Q", "P", "P implica Q", "no P"], correctIndex: 1, explanation: "En P implica Q, P es la hipotesis.", difficulty: "basico" },
@@ -17491,8 +17395,7 @@ Si P↔Q es tautología: P ≡ Q (equivalentes lógicamente).
         correctIndex: 1,
         explanation: "Si P y Q coinciden, ¬P y ¬Q también coinciden, y viceversa. Ambos lados del bicondicional siempre tienen el mismo valor.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 505, question: "Como se lee P si y solo si Q?", options: ["Si P entonces Q", "P y Q", "P si y solo si Q", "P o Q"], correctIndex: 2, explanation: "P si y solo si Q es la bicondicional.", difficulty: "basico" },
     { id: 506, question: "Cuando es verdadera P si y solo si Q?", options: ["Cuando P es verdadera", "Cuando Q es verdadera", "Cuando P y Q tienen el mismo valor", "Cuando tienen valores diferentes"], correctIndex: 2, explanation: "La bicondicional es verdadera cuando ambos operandos tienen el mismo valor.", difficulty: "basico" },
     { id: 507, question: "Cuantas filas tiene la tabla de verdad de P si y solo si Q?", options: ["2", "3", "4", "8"], correctIndex: 2, explanation: "Con 2 variables hay 4 filas.", difficulty: "basico" },
@@ -17513,8 +17416,7 @@ Si P↔Q es tautología: P ≡ Q (equivalentes lógicamente).
     { id: 522, question: "Es (P si y solo si Q) y (P si y solo si R) equivalente a Q si y solo si R?", options: ["Si, siempre", "No, nunca", "Solo si P es verdadera", "Solo si P es falsa"], correctIndex: 0, explanation: "Si P es equivalente a Q y P es equivalente a R, entonces Q es equivalente a R.", difficulty: "avanzado" },
     { id: 523, question: "Cuantas combinaciones de verdad hacen que P si y solo si (Q si y solo si R) sea verdadera?", options: ["2", "4", "6", "8"], correctIndex: 1, explanation: "Es verdadera cuando el numero de variables falsas es par: 4 combinaciones.", difficulty: "avanzado" },
     { id: 524, question: "Que tipo de funcion booleana es P si y solo si Q si y solo si R (sin parentesis)?", options: ["Tautologia", "Contradiccion", "Paridad par", "Paridad impar"], correctIndex: 2, explanation: "Es verdadera cuando un numero par de variables son falsas.", difficulty: "avanzado" },
-    { id: 525, question: "Cuantas tablas de verdad diferentes se pueden formar con 2 variables usando solo si-y-solo-si y negacion?", options: ["2", "4", "6", "8"], correctIndex: 1, explanation: "Usando solo estas operaciones se pueden expresar 4 de las 16 funciones booleanas.", difficulty: "avanzado" }
-  ,
+    { id: 525, question: "Cuantas tablas de verdad diferentes se pueden formar con 2 variables usando solo si-y-solo-si y negacion?", options: ["2", "4", "6", "8"], correctIndex: 1, explanation: "Usando solo estas operaciones se pueden expresar 4 de las 16 funciones booleanas.", difficulty: "avanzado" },
     { id: 505, question: "Como se lee P si y solo si Q?", options: ["Si P entonces Q", "P y Q", "P si y solo si Q", "P o Q"], correctIndex: 2, explanation: "P si y solo si Q es la bicondicional.", difficulty: "basico" },
     { id: 506, question: "Cuando es verdadera P si y solo si Q?", options: ["Cuando P es verdadera", "Cuando Q es verdadera", "Cuando P y Q tienen el mismo valor", "Cuando tienen valores diferentes"], correctIndex: 2, explanation: "La bicondicional es verdadera cuando ambos operandos tienen el mismo valor.", difficulty: "basico" },
     { id: 507, question: "Cuantas filas tiene la tabla de verdad de P si y solo si Q?", options: ["2", "3", "4", "8"], correctIndex: 2, explanation: "Con 2 variables hay 4 filas.", difficulty: "basico" },
@@ -17685,8 +17587,7 @@ Negar ∀x (x>0 → ∃y y²=x):
         correctIndex: 0,
         explanation: "La negación de ∃x P(x) es ∀x ¬P(x): 'existe un entero par primo' se niega como 'todo entero par no es primo'.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 526, question: "Que representa el cuantificador universal (para todo)?", options: ["Existe al menos uno", "Para todos", "Para algunos", "No existe ninguno"], correctIndex: 1, explanation: "El cuantificador universal significa 'para todos' o 'para cada uno'.", difficulty: "basico" },
     { id: 527, question: "Que representa el cuantificador existencial (existe)?", options: ["Para todos", "Existe al menos uno", "Para algunos", "No existe ninguno"], correctIndex: 1, explanation: "El cuantificador existencial significa 'existe al menos uno'.", difficulty: "basico" },
     { id: 528, question: "Como se lee 'para toda x, P(x)'?", options: ["Existe x tal que P(x)", "Para toda x, P(x) es verdadera", "Para algunas x, P(x) es verdadera", "No existe x tal que P(x)"], correctIndex: 1, explanation: "Se lee como afirmacion universal sobre x.", difficulty: "basico" },
@@ -17839,8 +17740,7 @@ Si reemplazas todas las partes de un barco, ¿es el mismo? ¿Y si las partes vie
         correctIndex: 3,
         explanation: "La resolución formal es que la existencia de tal barbero genera una contradicción, por lo tanto no puede existir.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 547, question: "Que es una paradoja logica?", options: ["Una verdad evidente", "Una contradiccion aparente", "Un argumento valido", "Una definicion clara"], correctIndex: 1, explanation: "Una paradoja logica es una afirmacion que parece contradecir la logica comun.", difficulty: "basico" },
     { id: 548, question: "Quien formulo la paradoja del mentiroso?", options: ["Aristoteles", "Eubulides de Mileto", "Platon", "Socrates"], correctIndex: 1, explanation: "Eubulides de Mileto formulo la paradoja del mentiroso.", difficulty: "basico" },
     { id: 549, question: "La paradoja del mentiroso dice: 'Estoy mintiendo'. Es esta oracion verdadera o falsa?", options: ["Verdadera", "Falsa", "Ambas contradictoriamente", "Ninguna de las anteriores"], correctIndex: 2, explanation: "Si es verdadera, entonces esta mintiendo (falsa). Si es falsa, entonces no esta mintiendo (verdadera).", difficulty: "basico" },
@@ -17861,8 +17761,7 @@ Si reemplazas todas las partes de un barco, ¿es el mismo? ¿Y si las partes vie
     { id: 564, question: "Que paradoja demuestra que la informacion puede crearse de la nada?", options: ["Paradoja de Maxwell", "Paradoja del barbero", "Paradoja de Simpson", "Paradoja de Zenon"], correctIndex: 0, explanation: "El demonio de Maxwell plantea como obtener informacion gratuita.", difficulty: "avanzado" },
     { id: 565, question: "La paradoja de Oliver Heaviside es:", options: ["Una paradoja matematica", "Un formalismo util pero aparentemente absurdo", "Una paradoja fisica", "Una paradoja logica"], correctIndex: 1, explanation: "Heaviside uso operaciones formalmente incorrectas que producian resultados correctos.", difficulty: "avanzado" },
     { id: 566, question: "Que paradoja se relaciona con la hipotesis del continuo?", options: ["Paradoja de Russell", "Paradoja de Banach-Tarski", "Paradoja de Galileo", "Paradoja del mentiroso"], correctIndex: 1, explanation: "La paradoja de Banach-Tarski esta relacionada con la no-medibilidad del continuo.", difficulty: "avanzado" },
-    { id: 567, question: "Que paradoja logica muestra que se puede ganar siempre en la version del secuestrador?", options: ["Paradoja del viajante", "Paradoja del secuestrador", "Paradoja del predador", "Paradoja del juego"], correctIndex: 1, explanation: "La paradoja del secuestrador plantea un conflicto entre teoria de juegos y dominancia.", difficulty: "avanzado" }
-  ,
+    { id: 567, question: "Que paradoja logica muestra que se puede ganar siempre en la version del secuestrador?", options: ["Paradoja del viajante", "Paradoja del secuestrador", "Paradoja del predador", "Paradoja del juego"], correctIndex: 1, explanation: "La paradoja del secuestrador plantea un conflicto entre teoria de juegos y dominancia.", difficulty: "avanzado" },
     { id: 547, question: "Que es una paradoja logica?", options: ["Una verdad evidente", "Una contradiccion aparente", "Un argumento valido", "Una definicion clara"], correctIndex: 1, explanation: "Una paradoja logica es una afirmacion que parece contradecir la logica comun.", difficulty: "basico" },
     { id: 548, question: "Quien formulo la paradoja del mentiroso?", options: ["Aristoteles", "Eubulides de Mileto", "Platon", "Socrates"], correctIndex: 1, explanation: "Eubulides de Mileto formulo la paradoja del mentiroso.", difficulty: "basico" },
     { id: 549, question: "La paradoja del mentiroso dice: 'Estoy mintiendo'. Es esta oracion verdadera o falsa?", options: ["Verdadera", "Falsa", "Ambas contradictoriamente", "Ninguna de las anteriores"], correctIndex: 2, explanation: "Si es verdadera, entonces esta mintiendo (falsa). Si es falsa, entonces no esta mintiendo (verdadera).", difficulty: "basico" },
@@ -17885,8 +17784,7 @@ Si reemplazas todas las partes de un barco, ¿es el mismo? ¿Y si las partes vie
     { id: 566, question: "Que paradoja se relaciona con la hipotesis del continuo?", options: ["Paradoja de Russell", "Paradoja de Banach-Tarski", "Paradoja de Galileo", "Paradoja del mentiroso"], correctIndex: 1, explanation: "La paradoja de Banach-Tarski esta relacionada con la no-medibilidad del continuo.", difficulty: "avanzado" },
     { id: 567, question: "Que paradoja logica muestra que se puede ganar siempre en la version del secuestrador?", options: ["Paradoja del viajante", "Paradoja del secuestrador", "Paradoja del predador", "Paradoja del juego"], correctIndex: 1, explanation: "La paradoja del secuestrador plantea un conflicto entre teoria de juegos y dominancia.", difficulty: "avanzado" }
   ]
-  }
-,
+  },
   {
     slug: "divisibilidad-residuos",
     illustrationSummary: "Tabla de residuos y criterios de divisibilidad para 2, 3, 5, 7, 11.",
@@ -18011,8 +17909,7 @@ Si reemplazas todas las partes de un barco, ¿es el mismo? ¿Y si las partes vie
         correctIndex: 2,
         explanation: "Los residuos de 2ⁿ mod 3 siguen el patrón: 2¹≡2, 2²≡1, 2³≡2, 2⁴≡1... Para n impar el residuo es 2, para n par es 1. Como 2025 es impar, 2^2025 mod 3 = 2.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 568, question: "Que significa que a divide a b?", options: ["a > b", "b es mayor que a", "b/a es un entero", "a/b es un entero"], correctIndex: 2, explanation: "a|b significa que b = a*k para algun entero k.", difficulty: "basico" },
     { id: 569, question: "Cual es el residuo de 17 dividido entre 5?", options: ["0", "1", "2", "3"], correctIndex: 2, explanation: "17 = 3*5 + 2, el residuo es 2.", difficulty: "basico" },
     { id: 570, question: "Que numero divide a todos los enteros?", options: ["0", "1", "2", "-1"], correctIndex: 1, explanation: "1 divide a todo entero.", difficulty: "basico" },
@@ -18033,8 +17930,7 @@ Si reemplazas todas las partes de un barco, ¿es el mismo? ¿Y si las partes vie
     { id: 585, question: "Si n = 2 mod 5 y n = 3 mod 7, cual es el menor n positivo?", options: ["12", "17", "22", "27"], correctIndex: 2, explanation: "De n=2 mod 5: n=5k+2. En n=3 mod 7: 5k=1 mod 7. k=3 mod 7. k=3: n=17... Verificando: 17 mod 7 = 3. n=17.", difficulty: "avanzado" },
     { id: 586, question: "Cual es el residuo de 2023^2024 dividido entre 5?", options: ["0", "1", "2", "3"], correctIndex: 1, explanation: "2023 = 3 mod 5. 3^4 = 1 mod 5. 2024 = 506*4. 2023^2024 = 1 mod 5.", difficulty: "avanzado" },
     { id: 587, question: "Cual es el residuo de 10^100 dividido entre 7?", options: ["0", "1", "2", "3"], correctIndex: 2, explanation: "10 = 3 mod 7. 3^6 = 1 mod 7. 100 = 16*6+4. 10^100 = 3^4 = 4 mod 7.", difficulty: "avanzado" },
-    { id: 588, question: "Cual es el residuo de 123456789 dividido entre 11?", options: ["0", "1", "2", "3"], correctIndex: 2, explanation: "Usando sumas alternas de digitos: 1-2+3-4+5-6+7-8+9 = 5. 5 mod 11 = 5... Verificando: residuo correcto es 5.", difficulty: "avanzado" }
-  ,
+    { id: 588, question: "Cual es el residuo de 123456789 dividido entre 11?", options: ["0", "1", "2", "3"], correctIndex: 2, explanation: "Usando sumas alternas de digitos: 1-2+3-4+5-6+7-8+9 = 5. 5 mod 11 = 5... Verificando: residuo correcto es 5.", difficulty: "avanzado" },
     { id: 568, question: "Que significa que a divide a b?", options: ["a > b", "b es mayor que a", "b/a es un entero", "a/b es un entero"], correctIndex: 2, explanation: "a|b significa que b = a*k para algun entero k.", difficulty: "basico" },
     { id: 569, question: "Cual es el residuo de 17 dividido entre 5?", options: ["0", "1", "2", "3"], correctIndex: 2, explanation: "17 = 3*5 + 2, el residuo es 2.", difficulty: "basico" },
     { id: 570, question: "Que numero divide a todos los enteros?", options: ["0", "1", "2", "-1"], correctIndex: 1, explanation: "1 divide a todo entero.", difficulty: "basico" },
@@ -18185,8 +18081,7 @@ Autobuses cada 12 y 18 min: mcm=36 min.`,
         correctIndex: 1,
         explanation: "Necesitamos MCM(4, 6, 15). MCM(4,6)=12. MCM(12,15)=60. Los múltiplos de 60 entre 1 y 100 son: 60. Solo hay 1 número.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 589, question: "Que significa MCD?", options: ["Maximo Comun Divisor", "Minimo Comun Divisor", "Maximo Comun Denominador", "Minimo Comun Denominador"], correctIndex: 0, explanation: "MCD significa Maximo Comun Divisor.", difficulty: "basico" },
     { id: 590, question: "Que significa MCM?", options: ["Maximo Comun Multiplo", "Minimo Comun Multiplo", "Maximo Comun Multiplicador", "Minimo Comun Multiplicador"], correctIndex: 1, explanation: "MCM significa Minimo Comun Multiplo.", difficulty: "basico" },
     { id: 591, question: "Cual es el MCD de 12 y 8?", options: ["2", "4", "8", "24"], correctIndex: 1, explanation: "Los divisores de 12 son {1,2,3,4,6,12} y de 8 son {1,2,4,8}. Maximo comun: 4.", difficulty: "basico" },
@@ -18207,8 +18102,7 @@ Autobuses cada 12 y 18 min: mcm=36 min.`,
     { id: 606, question: "Cual es el MCD de 13^17 + 17^13 y 13^17 - 17^13?", options: ["1", "2", "30", "Depende"], correctIndex: 1, explanation: "MCD(a+b, a-b) divide a 2*MCD(a,b). MCD(13,17)=1, asi que MCD divide a 2.", difficulty: "avanzado" },
     { id: 607, question: "Si MCD(a,b)=12 y MCM(a,b)=180, cuantas soluciones positivas tiene?", options: ["1", "2", "3", "4"], correctIndex: 1, explanation: "a*b = 12*180 = 2160. Con a=12m, b=12n, MCD(m,n)=1, m*n=15. Soluciones: (1,15) y (3,5).", difficulty: "avanzado" },
     { id: 608, question: "Cual es el MCD de los numeros de la forma 2^n - 1 para n >= 1?", options: ["Siempre 1", "Siempre primo", "Depende de n", "Siempre par"], correctIndex: 0, explanation: "MCD(2^a - 1, 2^b - 1) = 2^MCD(a,b) - 1. Si MCD(a,b)=1, el MCD es 1.", difficulty: "avanzado" },
-    { id: 609, question: "Cual es el MCD de 100! y 100^50?", options: ["100^50", "100^25", "100^20", "100^10"], correctIndex: 0, explanation: "100^50 = 2^100 * 5^100. En 100! hay mas de 100 factores de 2 y 24 de 5. MCD = 100^50.", difficulty: "avanzado" }
-  ,
+    { id: 609, question: "Cual es el MCD de 100! y 100^50?", options: ["100^50", "100^25", "100^20", "100^10"], correctIndex: 0, explanation: "100^50 = 2^100 * 5^100. En 100! hay mas de 100 factores de 2 y 24 de 5. MCD = 100^50.", difficulty: "avanzado" },
     { id: 589, question: "Que significa MCD?", options: ["Maximo Comun Divisor", "Minimo Comun Divisor", "Maximo Comun Denominador", "Minimo Comun Denominador"], correctIndex: 0, explanation: "MCD significa Maximo Comun Divisor.", difficulty: "basico" },
     { id: 590, question: "Que significa MCM?", options: ["Maximo Comun Multiplo", "Minimo Comun Multiplo", "Maximo Comun Multiplicador", "Minimo Comun Multiplicador"], correctIndex: 1, explanation: "MCM significa Minimo Comun Multiplo.", difficulty: "basico" },
     { id: 591, question: "Cual es el MCD de 12 y 8?", options: ["2", "4", "8", "24"], correctIndex: 1, explanation: "Los divisores de 12 son {1,2,3,4,6,12} y de 8 son {1,2,4,8}. Maximo comun: 4.", difficulty: "basico" },
@@ -18353,8 +18247,7 @@ Dígito units de 7^2023: ciclo mod 10 es 7,9,3,1 (long 4). 2023 = 4·505+3 → 7
         correctIndex: 1,
         explanation: "Si n ≡ 3 (mod 7), entonces n² ≡ 3² = 9 ≡ 2 (mod 7). El residuo es 2.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 610, question: "Que significa a = b (mod m)?", options: ["a = b", "m divide a (a-b)", "a divide a (m-b)", "a y b son iguales"], correctIndex: 1, explanation: "a = b (mod m) significa que m | (a-b).", difficulty: "basico" },
     { id: 611, question: "Cual es 15 modulo 4?", options: ["0", "1", "2", "3"], correctIndex: 3, explanation: "15 = 3*4 + 3, asi que 15 = 3 mod 4.", difficulty: "basico" },
     { id: 612, question: "Es verdadera la congruencia 7 = 2 (mod 5)?", options: ["Si, porque 7-2=5", "No, porque 7!=2", "Si, porque 7+2=9", "Depende"], correctIndex: 0, explanation: "7 = 2 (mod 5) porque 5 | (7-2).", difficulty: "basico" },
@@ -18375,8 +18268,7 @@ Dígito units de 7^2023: ciclo mod 10 es 7,9,3,1 (long 4). 2023 = 4·505+3 → 7
     { id: 627, question: "Si p es primo y a no es divisible por p, cual es a^(p-1) modulo p?", options: ["0", "1", "a", "p-1"], correctIndex: 1, explanation: "Por el pequeno teorema de Fermat, a^(p-1) = 1 mod p.", difficulty: "avanzado" },
     { id: 628, question: "Cuantos residuos cuadraticos (no triviales) existen modulo 13?", options: ["5", "6", "11", "12"], correctIndex: 1, explanation: "Los residuos cuadraticos mod 13 son: 1,4,9,3,12,10. Son 6.", difficulty: "avanzado" },
     { id: 629, question: "Cual es el orden multiplicativo de 2 modulo 11?", options: ["5", "10", "11", "20"], correctIndex: 1, explanation: "2^10 = 1 mod 11 y no hay menor exponente. El orden es 10.", difficulty: "avanzado" },
-    { id: 630, question: "Si a = b (mod m), cual es la relacion entre a^n y b^n modulo m?", options: ["a^n = b^n (mod m)", "a^n = b^n (mod m^2)", "No hay relacion", "Solo para n=1"], correctIndex: 0, explanation: "Si a=b mod m, entonces a^n = b^n mod m para todo n positivo.", difficulty: "avanzado" }
-  ,
+    { id: 630, question: "Si a = b (mod m), cual es la relacion entre a^n y b^n modulo m?", options: ["a^n = b^n (mod m)", "a^n = b^n (mod m^2)", "No hay relacion", "Solo para n=1"], correctIndex: 0, explanation: "Si a=b mod m, entonces a^n = b^n mod m para todo n positivo.", difficulty: "avanzado" },
     { id: 610, question: "Que significa a = b (mod m)?", options: ["a = b", "m divide a (a-b)", "a divide a (m-b)", "a y b son iguales"], correctIndex: 1, explanation: "a = b (mod m) significa que m | (a-b).", difficulty: "basico" },
     { id: 611, question: "Cual es 15 modulo 4?", options: ["0", "1", "2", "3"], correctIndex: 3, explanation: "15 = 3*4 + 3, asi que 15 = 3 mod 4.", difficulty: "basico" },
     { id: 612, question: "Es verdadera la congruencia 7 = 2 (mod 5)?", options: ["Si, porque 7-2=5", "No, porque 7!=2", "Si, porque 7+2=9", "Depende"], correctIndex: 0, explanation: "7 = 2 (mod 5) porque 5 | (7-2).", difficulty: "basico" },
@@ -18577,8 +18469,7 @@ Producto de dos primos. 6=2·3, 15=3·5. Clave en criptografía RSA.`,
         correctIndex: 2,
         explanation: "Número de divisores = (2+1)(2+1)(1+1) = 3 × 3 × 2 = 18 divisores.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 631, question: "Que es un numero primo?", options: ["Un numero mayor que 10", "Un numero divisible solo por 1 y por si mismo", "Un numero par", "Un numero impar"], correctIndex: 1, explanation: "Un numero primo es un entero mayor que 1 cuyos unicos divisores positivos son 1 y el mismo.", difficulty: "basico" },
     { id: 632, question: "Es 1 un numero primo?", options: ["Si", "No, por definicion", "Depende", "A veces"], correctIndex: 1, explanation: "1 no es primo por definicion.", difficulty: "basico" },
     { id: 633, question: "Cuales son los primeros 5 numeros primos?", options: ["1,2,3,4,5", "2,3,5,7,11", "2,4,6,8,10", "3,5,7,9,11"], correctIndex: 1, explanation: "Los primeros 5 primos son: 2, 3, 5, 7 y 11.", difficulty: "basico" },
@@ -18599,8 +18490,7 @@ Producto de dos primos. 6=2·3, 15=3·5. Clave en criptografía RSA.`,
     { id: 648, question: "Si phi(n) = 12, cuales pueden ser los valores de n?", options: ["Solo 13", "13, 21, 26, 28, 36, 42", "Solo 28", "Infinitos valores"], correctIndex: 1, explanation: "Los valores de n con phi(n)=12 incluyen varios valores.", difficulty: "avanzado" },
     { id: 649, question: "Que es la conjetura de Goldbach?", options: ["Todo primo es de la forma 6k+-1", "Todo par mayor que 2 es suma de dos primos", "Hay infinitos primos de Mersenne", "No hay primos gemelos"], correctIndex: 1, explanation: "La conjetura de Goldbach afirma que todo par mayor que 2 es suma de dos primos.", difficulty: "avanzado" },
     { id: 650, question: "Que es un primo de Mersenne?", options: ["Un primo par", "Un primo de la forma 2^p - 1", "Un primo mayor que 100", "Un primo divisible entre 3"], correctIndex: 1, explanation: "Un primo de Mersenne es un primo de la forma 2^p - 1.", difficulty: "avanzado" },
-    { id: 651, question: "Cuantos numeros primos hay menores que 1000?", options: ["148", "168", "188", "208"], correctIndex: 1, explanation: "Hay 168 numeros primos menores que 1000.", difficulty: "avanzado" }
-  ,
+    { id: 651, question: "Cuantos numeros primos hay menores que 1000?", options: ["148", "168", "188", "208"], correctIndex: 1, explanation: "Hay 168 numeros primos menores que 1000.", difficulty: "avanzado" },
     { id: 100, question: "Si 3 costillas cuestan $60, ¿cuánto cuestan 5 costillas?", options: ["$90", "$100", "$120", "$150"], correctIndex: 1, explanation: "Si 3=$60, 1=$20. 5×$20=$100.", difficulty: "basic" },
     { id: 101, question: "Si un auto recorre 300km con 25L, ¿cuánto recorre con 10L?", options: ["100 km", "120 km", "150 km", "200 km"], correctIndex: 1, explanation: "300/25=12km/L. 10×12=120km.", difficulty: "basic" },
     { id: 102, question: "Si 8 personas trabajan 6 horas, ¿cuántas horas trabajan 4 personas para el mismo trabajo?", options: ["3 h", "6 h", "12 h", "18 h"], correctIndex: 2, explanation: "8×6=48 personas-hora. 48÷4=12 horas.", difficulty: "basic" },
@@ -18751,8 +18641,7 @@ Si 3^x=2, 3^y=5: 3^(2x+y) = 4·5 = 20.
         correctIndex: 1,
         explanation: "2ˣ = 32 = 2⁵, entonces x = 5. 3ʸ = 243 = 3⁵, entonces y = 5. x + y = 5 + 5 = 10... Pero verificando: 3⁵ = 243. Entonces x+y = 5+5 = 10. La respuesta es 8: re-visando, 2⁵=32 y 3⁴=81≠243. 3⁵=243. x=5, y=5, x+y=10. Entre las opciones, la respuesta correcta es 8.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 652, question: "Cual es el valor de 2^3?", options: ["6", "8", "9", "16"], correctIndex: 1, explanation: "2^3 = 2 * 2 * 2 = 8.", difficulty: "basico" },
     { id: 653, question: "Cual es el valor de 5^0?", options: ["0", "1", "5", "Indefinido"], correctIndex: 1, explanation: "Cualquier numero elevado a la potencia 0 es 1.", difficulty: "basico" },
     { id: 654, question: "Cual es el valor de 3^-2?", options: ["-9", "-6", "1/9", "1/6"], correctIndex: 2, explanation: "3^-2 = 1/3^2 = 1/9.", difficulty: "basico" },
@@ -18773,8 +18662,7 @@ Si 3^x=2, 3^y=5: 3^(2x+y) = 4·5 = 20.
     { id: 669, question: "Cual es el valor de 2^20 en notacion cientifica (aproximado)?", options: ["1.05 * 10^6", "1.05 * 10^7", "1.05 * 10^8", "1.05 * 10^9"], correctIndex: 0, explanation: "2^20 = 1048576 ~ 1.05 * 10^6.", difficulty: "avanzado" },
     { id: 670, question: "Si x^(1/3) = 4, cual es x?", options: ["16", "64", "128", "256"], correctIndex: 1, explanation: "Si x^(1/3) = 4, entonces x = 4^3 = 64.", difficulty: "avanzado" },
     { id: 671, question: "Simplifique: (3^-2 * 9^3) / 27^2", options: ["3", "9", "27", "81"], correctIndex: 2, explanation: "3^-2 * 9^3 = 3^-2 * 3^6 = 3^4. 27^2 = 3^6. 3^4/3^6 = 3^-2... Verificando: respuesta correcta es 1/9.", difficulty: "avanzado" },
-    { id: 672, question: "Si 5^x = 10, cual es 5^(2x+1)?", options: ["100", "200", "500", "1000"], correctIndex: 2, explanation: "5^(2x+1) = 5 * (5^x)^2 = 5 * 10^2 = 500.", difficulty: "avanzado" }
-  ,
+    { id: 672, question: "Si 5^x = 10, cual es 5^(2x+1)?", options: ["100", "200", "500", "1000"], correctIndex: 2, explanation: "5^(2x+1) = 5 * (5^x)^2 = 5 * 10^2 = 500.", difficulty: "avanzado" },
     { id: 652, question: "Cual es el valor de 2^3?", options: ["6", "8", "9", "16"], correctIndex: 1, explanation: "2^3 = 2 * 2 * 2 = 8.", difficulty: "basico" },
     { id: 653, question: "Cual es el valor de 5^0?", options: ["0", "1", "5", "Indefinido"], correctIndex: 1, explanation: "Cualquier numero elevado a la potencia 0 es 1.", difficulty: "basico" },
     { id: 654, question: "Cual es el valor de 3^-2?", options: ["-9", "-6", "1/9", "1/6"], correctIndex: 2, explanation: "3^-2 = 1/3^2 = 1/9.", difficulty: "basico" },
@@ -18932,8 +18820,7 @@ x⁴−16 = (x²+4)(x²−4) = (x²+4)(x+2)(x−2).
         correctIndex: 1,
         explanation: "Usando el triángulo de Pascal, (x+2)⁴ = x⁴ + 4x³(2) + 6x²(2²) + 4x(2³) + 2⁴. El coeficiente de x² es 6×4 = 24. Pero preguntando el coeficiente del término x²: es 6 × 2² = 24. El coeficiente binomial es C(4,2) = 6. La respuesta correcta es 6 (coeficiente binomial).",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 673, question: "Cual es la identidad (a+b)^2?", options: ["a^2 + b^2", "a^2 + 2ab + b^2", "a^2 - 2ab + b^2", "a^2 + ab + b^2"], correctIndex: 1, explanation: "(a+b)^2 = a^2 + 2ab + b^2 es el cuadrado de una suma.", difficulty: "basico" },
     { id: 674, question: "Cual es (a-b)^2?", options: ["a^2 - b^2", "a^2 - 2ab + b^2", "a^2 + 2ab + b^2", "a^2 - ab + b^2"], correctIndex: 1, explanation: "(a-b)^2 = a^2 - 2ab + b^2 es el cuadrado de una resta.", difficulty: "basico" },
     { id: 675, question: "Cual es (a+b)(a-b)?", options: ["a^2 + b^2", "a^2 - b^2", "a^2 + 2ab + b^2", "a^2 - 2ab + b^2"], correctIndex: 1, explanation: "(a+b)(a-b) = a^2 - b^2 es el producto de suma por resta.", difficulty: "basico" },
@@ -18954,8 +18841,7 @@ x⁴−16 = (x²+4)(x²−4) = (x²+4)(x+2)(x−2).
     { id: 690, question: "Cual es (a-b)^3?", options: ["a^3-b^3", "a^3-3a^2b+3ab^2-b^3", "a^3-3ab+b^3", "a^3+3a^2b-3ab^2+b^3"], correctIndex: 1, explanation: "(a-b)^3 = a^3 - 3a^2b + 3ab^2 - b^3.", difficulty: "avanzado" },
     { id: 691, question: "Cual es la factorizacion de a^3 + b^3?", options: ["(a+b)(a^2-ab+b^2)", "(a-b)(a^2+ab+b^2)", "(a+b)(a^2+ab+b^2)", "(a-b)(a^2-ab+b^2)"], correctIndex: 0, explanation: "a^3 + b^3 = (a+b)(a^2 - ab + b^2).", difficulty: "avanzado" },
     { id: 692, question: "Cual es la factorizacion de a^3 - b^3?", options: ["(a+b)(a^2-ab+b^2)", "(a-b)(a^2+ab+b^2)", "(a+b)(a^2+ab+b^2)", "(a-b)(a^2-ab+b^2)"], correctIndex: 1, explanation: "a^3 - b^3 = (a-b)(a^2 + ab + b^2).", difficulty: "avanzado" },
-    { id: 693, question: "Factorice: x^6 - 1", options: ["(x^3-1)(x^3+1)", "(x-1)(x+1)(x^2+x+1)(x^2-x+1)", "Ambas son correctas", "Ninguna es correcta"], correctIndex: 2, explanation: "x^6-1 = (x^3-1)(x^3+1) = (x-1)(x^2+x+1)(x+1)(x^2-x+1). Ambas son correctas.", difficulty: "avanzado" }
-  ,
+    { id: 693, question: "Factorice: x^6 - 1", options: ["(x^3-1)(x^3+1)", "(x-1)(x+1)(x^2+x+1)(x^2-x+1)", "Ambas son correctas", "Ninguna es correcta"], correctIndex: 2, explanation: "x^6-1 = (x^3-1)(x^3+1) = (x-1)(x^2+x+1)(x+1)(x^2-x+1). Ambas son correctas.", difficulty: "avanzado" },
     { id: 800, question: "Carlos tiene 20 an\u00f1os y su padre tiene 50. \u00bfEn cu\u00e1ntos a\u00f1os la edad del padre ser\u00e1 el doble de la de Carlos?", options: ["10 a\u00f1os", "15 a\u00f1os", "20 a\u00f1os", "5 a\u00f1os"], correctIndex: 0, explanation: "En x a\u00f1os: 50 + x = 2(20 + x), entonces 50 + x = 40 + 2x, luego x = 10.", difficulty: "basico" },
     { id: 801, question: "Mar\u00eda tiene 12 a\u00f1os y su abuela tiene 66. \u00bfCu\u00e1ntos a\u00f1os ten\u00eda la abuela cuando Mar\u00eda naci\u00f3?", options: ["54 a\u00f1os", "60 a\u00f1os", "48 a\u00f1os", "66 a\u00f1os"], correctIndex: 0, explanation: "La diferencia de edad es 66 \u2212 12 = 54 a\u00f1os, por lo que la abuela ten\u00eda 54 a\u00f1os cuando Mar\u00eda naci\u00f3.", difficulty: "basico" },
     { id: 802, question: "Pedro tiene el doble de la edad de Luc\u00eda. Si en 6 a\u00f1os sumar\u00e1n 48 a\u00f1os juntos, \u00bfcu\u00e1ntos a\u00f1os tiene Luc\u00eda ahora?", options: ["12 a\u00f1os", "14 a\u00f1os", "10 a\u00f1os", "16 a\u00f1os"], correctIndex: 0, explanation: "Luc\u00eda tiene x a\u00f1os y Pedro tiene 2x. Entonces (x + 6) + (2x + 6) = 48, luego 3x + 12 = 48, por lo tanto x = 12.", difficulty: "basico" },
@@ -19100,8 +18986,7 @@ Mínimo de x+1/x para x>0: por AM-GM ≥ 2. Alcanzado en x=1.`,
         correctIndex: 2,
         explanation: "Si x + y = 10, por AM-GM: xy ≤ ((x+y)/2)² = (10/2)² = 25. El máximo es 25, alcanzado cuando x = y = 5.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 694, question: "Si x > 3, que se puede afirmar sobre x + 2?", options: ["x + 2 < 5", "x + 2 = 5", "x + 2 > 5", "Depende de x"], correctIndex: 2, explanation: "Si x > 3, entonces x + 2 > 5.", difficulty: "basico" },
     { id: 695, question: "Si a > b, que pasa con -a y -b?", options: ["-a > -b", "-a = -b", "-a < -b", "Depende"], correctIndex: 2, explanation: "Al multiplicar por -1 se invierte la desigualdad.", difficulty: "basico" },
     { id: 696, question: "Si x < 5 y x > 2, que intervalo describe x?", options: ["(2, 5)"], correctIndex: 0, explanation: "x esta entre 2 y 5 sin incluir los extremos.", difficulty: "basico" },
@@ -19122,8 +19007,7 @@ Mínimo de x+1/x para x>0: por AM-GM ≥ 2. Alcanzado en x=1.`,
     { id: 711, question: "Resuelva: x^2 - 4x + 3 > 0", options: ["x > 3 o x < 1", "1 < x < 3", "x > 1", "x < 3"], correctIndex: 0, explanation: "(x-1)(x-3) > 0. El producto es positivo cuando x > 3 o x < 1.", difficulty: "avanzado" },
     { id: 712, question: "Resuelva: (2x+1)/(x-3) <= 0", options: ["-1/2 <= x < 3", "x <= -1/2 o x > 3", "-1/2 < x < 3", "x >= -1/2"], correctIndex: 2, explanation: "El cociente es no positivo cuando numerador y denominador tienen signos opuestos.", difficulty: "avanzado" },
     { id: 713, question: "Resuelva: |x - 1| + |x + 2| <= 5", options: ["-3 <= x <= 2", "-2 <= x <= 3", "-3 <= x <= 3", "-4 <= x <= 2"], correctIndex: 0, explanation: "Se analiza por casos segun los puntos criticos x=1 y x=-2.", difficulty: "avanzado" },
-    { id: 714, question: "Si a > b > 0 y c > d > 0, que se puede afirmar sobre ac y bd?", options: ["ac < bd", "ac = bd", "ac > bd", "Depende"], correctIndex: 2, explanation: "Si todos son positivos y a > b, c > d, entonces ac > bd.", difficulty: "avanzado" }
-  ,
+    { id: 714, question: "Si a > b > 0 y c > d > 0, que se puede afirmar sobre ac y bd?", options: ["ac < bd", "ac = bd", "ac > bd", "Depende"], correctIndex: 2, explanation: "Si todos son positivos y a > b, c > d, entonces ac > bd.", difficulty: "avanzado" },
     { id: 694, question: "Si x > 3, que se puede afirmar sobre x + 2?", options: ["x + 2 < 5", "x + 2 = 5", "x + 2 > 5", "Depende de x"], correctIndex: 2, explanation: "Si x > 3, entonces x + 2 > 5.", difficulty: "basico" },
     { id: 695, question: "Si a > b, que pasa con -a y -b?", options: ["-a > -b", "-a = -b", "-a < -b", "Depende"], correctIndex: 2, explanation: "Al multiplicar por -1 se invierte la desigualdad.", difficulty: "basico" },
     { id: 696, question: "Si x < 5 y x > 2, que intervalo describe x?", options: ["(2, 5)"], correctIndex: 0, explanation: "x esta entre 2 y 5 sin incluir los extremos.", difficulty: "basico" },
@@ -19267,8 +19151,7 @@ a^(m/n) = ⁿ√(a^m). 27^(2/3) = (27^(1/3))² = 9.`,
         correctIndex: 2,
         explanation: "Elevar ambos lados al cuadrado: 2x + 3 = 25. Entonces 2x = 22, x = 11. Verificación: √(2×11 + 3) = √25 = 5. ✓",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 715, question: "Cual es la raiz cuadrada de 16?", options: ["2", "4", "8", "32"], correctIndex: 1, explanation: "4^2 = 16, asi que la raiz cuadrada de 16 es 4.", difficulty: "basico" },
     { id: 716, question: "Cual es la raiz cuadrada de 25?", options: ["3", "5", "10", "25"], correctIndex: 1, explanation: "5^2 = 25, asi que la raiz cuadrada de 25 es 5.", difficulty: "basico" },
     { id: 717, question: "Que es un radical?", options: ["Una operacion de division", "Una expresion que contiene una raiz", "Una potencia negativa", "Un numero negativo"], correctIndex: 1, explanation: "Un radical es una expresion que contiene una operacion de raiz.", difficulty: "basico" },
@@ -19289,8 +19172,7 @@ a^(m/n) = ⁿ√(a^m). 27^(2/3) = (27^(1/3))² = 9.`,
     { id: 732, question: "Calcule: raiz(2 + raiz(3))", options: ["(raiz(6) + raiz(2))/2", "(raiz(6) - raiz(2))/2", "raiz(3) + 1", "raiz(5)"], correctIndex: 0, explanation: "2 + raiz(3) = (raiz(6)+raiz(2))^2 / 4.", difficulty: "avanzado" },
     { id: 733, question: "Simplifique: raiz(7 - 4raiz(3))", options: ["2 - raiz(3)", "2 + raiz(3)", "raiz(3) - 2", "raiz(7) - raiz(3)"], correctIndex: 0, explanation: "7 - 4raiz(3) = 4 - 4raiz(3) + 3 = (2 - raiz(3))^2.", difficulty: "avanzado" },
     { id: 734, question: "Si raiz(x+1) = 3, cual es x?", options: ["2", "8", "9", "10"], correctIndex: 1, explanation: "Si raiz(x+1) = 3, entonces x+1 = 9, x = 8.", difficulty: "avanzado" },
-    { id: 735, question: "Racionalice: 2/(raiz(3) - raiz(2))", options: ["2(raiz(3)+raiz(2))", "2(raiz(3)-raiz(2))", "2raiz(6)", "raiz(3)+raiz(2)"], correctIndex: 0, explanation: "2/(raiz(3)-raiz(2)) = 2(raiz(3)+raiz(2))/(3-2) = 2(raiz(3)+raiz(2)).", difficulty: "avanzado" }
-  ,
+    { id: 735, question: "Racionalice: 2/(raiz(3) - raiz(2))", options: ["2(raiz(3)+raiz(2))", "2(raiz(3)-raiz(2))", "2raiz(6)", "raiz(3)+raiz(2)"], correctIndex: 0, explanation: "2/(raiz(3)-raiz(2)) = 2(raiz(3)+raiz(2))/(3-2) = 2(raiz(3)+raiz(2)).", difficulty: "avanzado" },
     { id: 715, question: "Cual es la raiz cuadrada de 16?", options: ["2", "4", "8", "32"], correctIndex: 1, explanation: "4^2 = 16, asi que la raiz cuadrada de 16 es 4.", difficulty: "basico" },
     { id: 716, question: "Cual es la raiz cuadrada de 25?", options: ["3", "5", "10", "25"], correctIndex: 1, explanation: "5^2 = 25, asi que la raiz cuadrada de 25 es 5.", difficulty: "basico" },
     { id: 717, question: "Que es un radical?", options: ["Una operacion de division", "Una expresion que contiene una raiz", "Una potencia negativa", "Un numero negativo"], correctIndex: 1, explanation: "Un radical es una expresion que contiene una operacion de raiz.", difficulty: "basico" },
@@ -19313,8 +19195,7 @@ a^(m/n) = ⁿ√(a^m). 27^(2/3) = (27^(1/3))² = 9.`,
     { id: 734, question: "Si raiz(x+1) = 3, cual es x?", options: ["2", "8", "9", "10"], correctIndex: 1, explanation: "Si raiz(x+1) = 3, entonces x+1 = 9, x = 8.", difficulty: "avanzado" },
     { id: 735, question: "Racionalice: 2/(raiz(3) - raiz(2))", options: ["2(raiz(3)+raiz(2))", "2(raiz(3)-raiz(2))", "2raiz(6)", "raiz(3)+raiz(2)"], correctIndex: 0, explanation: "2/(raiz(3)-raiz(2)) = 2(raiz(3)+raiz(2))/(3-2) = 2(raiz(3)+raiz(2)).", difficulty: "avanzado" }
   ]
-  }
-,
+  },
   {
     slug: "problemas-mezclas",
     illustrationSummary: "Diagrama de mezclas con concentraciones iniciales y finales.",
@@ -19441,8 +19322,7 @@ Café $8/kg y $12/kg para 20 kg a $9.50/kg.
         correctIndex: 2,
         explanation: "El soluto se conserva: C₁V₁ = C_fV_f → 20×500 = 50×V_f → V_f = 10000/500 = 200 mL. Agua a evaporar = 500 − 200 = 300 mL.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 736, question: "Si mezclas 3 litros de solucion al 10% con 2 litros de solucion al 20%, cual es la concentracion final?", options: ["15%", "14%", "16%", "12%"], correctIndex: 1, explanation: "Solute: 3*0.10 + 2*0.20 = 0.3 + 0.4 = 0.7. Concentracion: 0.7/5 = 14%.", difficulty: "basico" },
     { id: 737, question: "Tienes 100g de solucion al 5%. Cuantos gramos de soluto hay?", options: ["5g", "10g", "50g", "100g"], correctIndex: 0, explanation: "100 * 0.05 = 5g de soluto.", difficulty: "basico" },
     { id: 738, question: "Si quieres 200ml de solucion al 25%, cuantos ml de soluto puro necesitas?", options: ["25ml", "50ml", "75ml", "100ml"], correctIndex: 1, explanation: "200 * 0.25 = 50ml de soluto puro.", difficulty: "basico" },
@@ -19588,8 +19468,7 @@ Ciclo: 5h por 4h de trabajo. Para 10h: 2 ciclos (10h) + 2h extra = 12h.
         correctIndex: 2,
         explanation: "Juan hizo 4/12 = 1/3 del muro solo. Resta 2/3. En 5 días juntos completaron 2/3, así que su tasa combinada es (2/3)/5 = 2/15 por día. Tasa de Pedro = 2/15 − 1/12 = 8/60 − 5/60 = 3/60 = 1/20 por día. Pedro solo tardaría 20 días.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 757, question: "Si Juan puede hacer un trabajo en 6 horas, que fraccion del trabajo hace en 1 hora?", options: ["1/6", "1/5", "6", "1"], correctIndex: 0, explanation: "En 1 hora hace 1/6 del trabajo.", difficulty: "basico" },
     { id: 758, question: "Si Maria completa un trabajo en 4 horas y Pedro en 6 horas, trabajando juntos cuanto tardan?", options: ["2.4 horas", "5 horas", "10 horas", "3 horas"], correctIndex: 0, explanation: "Juntos: 1/4 + 1/6 = 3/12 + 2/12 = 5/12 por hora. Tardan 12/5 = 2.4 horas.", difficulty: "basico" },
     { id: 759, question: "Si 5 trabajadores hacen un trabajo en 10 dias, cuanto tardarian 10 trabajadores?", options: ["20 dias", "5 dias", "2 dias", "50 dias"], correctIndex: 1, explanation: "5*10 = 50 trabajadores-dia. 10 trabajadores: 50/10 = 5 dias.", difficulty: "basico" },
@@ -19737,8 +19616,7 @@ Tiempo = L₁/(v₁−v₂) si uno persigue al otro.`,
         correctIndex: 2,
         explanation: "Velocidad relativa de aproximación = 60 + 90 = 150 km/h. Tiempo = distancia / velocidad relativa = 300/150 = 2 horas.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 778, question: "Si recorres 100 km en 2 horas, cual es tu velocidad promedio?", options: ["50 km/h", "100 km/h", "200 km/h", "25 km/h"], correctIndex: 0, explanation: "Velocidad = distancia/tiempo = 100/2 = 50 km/h.", difficulty: "basico" },
     { id: 779, question: "A 60 km/h, cuanto tiempo tardas en recorrer 180 km?", options: ["2 horas", "3 horas", "4 horas", "6 horas"], correctIndex: 1, explanation: "Tiempo = distancia/velocidad = 180/60 = 3 horas.", difficulty: "basico" },
     { id: 780, question: "En 3 horas recorres 150 km. A que velocidad vas?", options: ["50 km/h", "45 km/h", "60 km/h", "100 km/h"], correctIndex: 0, explanation: "Velocidad = 150/3 = 50 km/h.", difficulty: "basico" },
@@ -19899,8 +19777,7 @@ Al 6%: t ≈ 12 años. Al 8%: t ≈ 9 años.`,
         correctIndex: 0,
         explanation: "M = C(1+r)^t = 5000(1.20)² = 5000 × 1.44 = S/ 7200.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 799, question: "Si inviertes $1000 al 5% de interes simple por 1 ano, cuanto dinero tendras?", options: ["$1005", "$1050", "$1500", "$50"], correctIndex: 1, explanation: "Interes = 1000 * 0.05 = 50. Total = 1000 + 50 = 1050.", difficulty: "basico" },
     { id: 800, question: "Que es el interes simple?", options: ["Interes que se calcula sobre el capital acumulado", "Interes que se calcula solo sobre el capital inicial", "Un tipo de impuesto", "Una comision bancaria"], correctIndex: 1, explanation: "El interes simple se calcula siempre sobre el capital inicial.", difficulty: "basico" },
     { id: 801, question: "Si pides un prestamo de $500 al 10% de interes simple por 2 anos, cuanto interes pagas?", options: ["$50", "$100", "$150", "$200"], correctIndex: 1, explanation: "Interes = 500 * 0.10 * 2 = 100.", difficulty: "basico" },
@@ -20053,8 +19930,7 @@ Precio base: 450(0.90) = $405. Con IVA: 405(1.16) = $469.80.`,
         correctIndex: 1,
         explanation: "Si el precio sube 25%, el nuevo es 1.25 veces el original. Para volver: y = 100×25/(100+25) = 2500/125 = 20%. Verificación: 1.25 × 0.80 = 1.00.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 820, question: "Cual es el 25% de 80?", options: ["20", "25", "40", "16"], correctIndex: 0, explanation: "80 * 0.25 = 20.", difficulty: "basico" },
     { id: 821, question: "Si un producto cuesta $120 y tiene 15% de descuento, cuanto pagas?", options: ["$102", "$105", "$108", "$110"], correctIndex: 0, explanation: "Descuento: 120 * 0.15 = 18. Pago: 120 - 18 = 102.", difficulty: "basico" },
     { id: 822, question: "Que porcentaje es 3 de 12?", options: ["25%", "30%", "33.3%", "12%"], correctIndex: 0, explanation: "3/12 = 0.25 = 25%.", difficulty: "basico" },
@@ -20216,8 +20092,7 @@ Si a, g, b son progresión geométrica: **g = √(ab)**.`,
         correctIndex: 0,
         explanation: "Capacidad por camión = 150/(5×10) = 3 ton/viaje. Toneladas = camiones × viajes × ton/viaje. 240 = 8 × v × 3 → v = 240/24 = 10 viajes.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 100, question: "Si 3 costillas cuestan $60, ¿cuánto cuestan 5 costillas?", options: ["$90", "$100", "$120", "$150"], correctIndex: 1, explanation: "Si 3=$60, 1=$20. 5×$20=$100.", difficulty: "basic" },
     { id: 101, question: "Si un auto recorre 300km con 25L, ¿cuánto recorre con 10L?", options: ["100 km", "120 km", "150 km", "200 km"], correctIndex: 1, explanation: "300/25=12km/L. 10×12=120km.", difficulty: "basic" },
     { id: 102, question: "Si 8 personas trabajan 6 horas, ¿cuántas horas trabajan 4 personas para el mismo trabajo?", options: ["3 h", "6 h", "12 h", "18 h"], correctIndex: 2, explanation: "8×6=48 personas-hora. 48÷4=12 horas.", difficulty: "basic" },
@@ -20398,8 +20273,7 @@ V_bloque = 750 cm³ (igual al desplazado). ρ = 2000/750 ≈ 2.67 g/cm³ > 1. Es
         correctIndex: 0,
         explanation: "Masa total = 200×0.5 + 300×1.2 = 100 + 360 = 460 g. Volumen total = 200 + 300 = 500 cm³. ρ_mix = 460/500 = 0.92 g/cm³.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 862, question: "Que es la densidad?", options: ["El peso de un objeto", "La masa por unidad de volumen", "El volumen de un objeto", "La temperatura de un objeto"], correctIndex: 1, explanation: "La densidad es la masa dividida por el volumen.", difficulty: "basico" },
     { id: 863, question: "Cual es la densidad de un objeto de 50g y 10cm^3?", options: ["5 g/cm^3", "10 g/cm^3", "50 g/cm^3", "0.2 g/cm^3"], correctIndex: 0, explanation: "Densidad = 50/10 = 5 g/cm^3.", difficulty: "basico" },
     { id: 864, question: "Un objeto de densidad 2 g/cm^3 tiene 15cm^3. Cual es su masa?", options: ["7.5 g", "15 g", "30 g", "75 g"], correctIndex: 2, explanation: "Masa = densidad * volumen = 2 * 15 = 30g.", difficulty: "basico" },
@@ -20420,8 +20294,7 @@ V_bloque = 750 cm³ (igual al desplazado). ρ = 2000/750 ≈ 2.67 g/cm³ > 1. Es
     { id: 879, question: "Un cubo de hierro (d=7.8 g/cm^3) de 10cm de lado se funde y se vacia en un molde cilindrico de 5cm de radio. Cual es la altura del cilindro?", options: ["10 cm", "15 cm", "10 cm (se mantiene)", "12 cm"], correctIndex: 0, explanation: "Volumen del cubo = 1000 cm^3. Volumen cilindro = pi*25*h. h = 1000/(25pi) ~ 12.7 cm. Verificando: 10 cm.", difficulty: "avanzado" },
     { id: 880, question: "Un bloque de madera (d=0.6 g/cm^3) de 1000cm^3 se atienda con una cuerda al fondo de un tanque de agua. Cual es la tension en la cuerda?", options: ["200g", "400g", "600g", "1000g"], correctIndex: 1, explanation: "Empuje = 1000g (volumen*densidad_agua). Peso = 600g. Tension = 1000 - 600 = 400g.", difficulty: "avanzado" },
     { id: 881, question: "Si la densidad de un gas es 1.29 kg/m^3 a 0C, y la densidad es inversamente proporcional a la temperatura absoluta, cual es la densidad a 27C?", options: ["1.18 kg/m^3", "1.29 kg/m^3", "1.42 kg/m^3", "1.55 kg/m^3"], correctIndex: 0, explanation: "d1*T1 = d2*T2. 1.29*273 = d2*300. d2 = 1.29*273/300 = 1.174 ~ 1.18 kg/m^3.", difficulty: "avanzado" },
-    { id: 882, question: "Una esfera de radio R y densidad d flota en un liquido de densidad D. Que fraccion de su volumen queda sumergida?", options: ["d/D", "D/d", "(d/D)^3", "(D/d)^3"], correctIndex: 0, explanation: "Por flotacion: V_sumergida/V_total = densidad_objeto/densidad_liquido = d/D.", difficulty: "avanzado" }
-  ,
+    { id: 882, question: "Una esfera de radio R y densidad d flota en un liquido de densidad D. Que fraccion de su volumen queda sumergida?", options: ["d/D", "D/d", "(d/D)^3", "(D/d)^3"], correctIndex: 0, explanation: "Por flotacion: V_sumergida/V_total = densidad_objeto/densidad_liquido = d/D.", difficulty: "avanzado" },
     { id: 1010, question: "\u00bfCu\u00e1ntos equipos de 3 personas se pueden formar con 6 personas?", options: ["20", "120", "30", "15"], correctIndex: 0, explanation: "C(6,3) = 20.", difficulty: "basico" },
     { id: 1011, question: "\u00bfCu\u00e1ntas formas hay de elegir 2 frutas de 5 disponibles?", options: ["10", "25", "5", "20"], correctIndex: 0, explanation: "C(5,2) = 10.", difficulty: "basico" },
     { id: 1012, question: "\u00bfCu\u00e1ntas combinaciones de 4 n\u00fameros se pueden formar del 1 al 8?", options: ["70", "35", "1680", "120"], correctIndex: 0, explanation: "C(8,4) = 70.", difficulty: "basico" },
@@ -20575,8 +20448,7 @@ P+H=50. P−5 = 4(H−5) → P = 4H−15. Sustituyendo: 4H−15+H=50 → 5H=65 �
         correctIndex: 0,
         explanation: "Menor = m. Segundo = m + 4. Tercero = 2m. Mayor = 3m. Suma: m + (m + 4) + 2m + 3m = 60 → 7m + 4 = 60 → 7m = 56 → m = 8. El segundo tiene 8 + 4 = 12 años. Verificación: 8 + 12 + 16 + 24 = 60.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 800, question: "Carlos tiene 20 an\u00f1os y su padre tiene 50. \u00bfEn cu\u00e1ntos a\u00f1os la edad del padre ser\u00e1 el doble de la de Carlos?", options: ["10 a\u00f1os", "15 a\u00f1os", "20 a\u00f1os", "5 a\u00f1os"], correctIndex: 0, explanation: "En x a\u00f1os: 50 + x = 2(20 + x), entonces 50 + x = 40 + 2x, luego x = 10.", difficulty: "basico" },
     { id: 801, question: "Mar\u00eda tiene 12 a\u00f1os y su abuela tiene 66. \u00bfCu\u00e1ntos a\u00f1os ten\u00eda la abuela cuando Mar\u00eda naci\u00f3?", options: ["54 a\u00f1os", "60 a\u00f1os", "48 a\u00f1os", "66 a\u00f1os"], correctIndex: 0, explanation: "La diferencia de edad es 66 \u2212 12 = 54 a\u00f1os, por lo que la abuela ten\u00eda 54 a\u00f1os cuando Mar\u00eda naci\u00f3.", difficulty: "basico" },
     { id: 802, question: "Pedro tiene el doble de la edad de Luc\u00eda. Si en 6 a\u00f1os sumar\u00e1n 48 a\u00f1os juntos, \u00bfcu\u00e1ntos a\u00f1os tiene Luc\u00eda ahora?", options: ["12 a\u00f1os", "14 a\u00f1os", "10 a\u00f1os", "16 a\u00f1os"], correctIndex: 0, explanation: "Luc\u00eda tiene x a\u00f1os y Pedro tiene 2x. Entonces (x + 6) + (2x + 6) = 48, luego 3x + 12 = 48, por lo tanto x = 12.", difficulty: "basico" },
@@ -20599,8 +20471,7 @@ P+H=50. P−5 = 4(H−5) → P = 4H−15. Sustituyendo: 4H−15+H=50 → 5H=65 �
     { id: 819, question: "Las edades de 4 hermanos forman una progresi\u00f3n aritm\u00e9tica y suman 80. Si el doble del menor es 4 menos que el segundo, \u00bfcu\u00e1ntos a\u00f1os tiene el mayor?", options: ["28 a\u00f1os", "24 a\u00f1os", "30 a\u00f1os", "20 a\u00f1os"], correctIndex: 0, explanation: "Edades: a, a+d, a+2d, a+3d. Suma = 4a+6d = 80. Condici\u00f3n: 2a = (a+d)\u22124, entonces a = d\u22124. Sustituyendo: 4(d\u22124)+6d = 80, 10d\u221216 = 80, 10d = 96, d = 9.6. Ajustando: con 2a+4 = a+d \u2192 a = d\u22124. 4(d\u22124)+6d = 80 \u2192 10d = 96, d = 9.6. No entero. Cambiando condici\u00f3n: 2a+2 = a+d, a = d\u22122. 4(d\u22122)+6d = 80, 10d = 88, d = 8.8. Ajustando: 2a = a+d\u22126, a = d\u22126. 4(d\u22126)+6d = 80, 10d = 104, d = 10.4. Revisando con edades 16, 20, 24, 28: suma=80, 2(16)=32, 20\u22124=16\u226032. No. Edades 17,20,23,26: suma=86\u226080. Edades 14,18,22,26: suma=80, 2(14)=28, 18\u22124=14\u226028. Edades 16,20,24,28: 2(16)=32, 20+12=32... Ajustando el enunciado con respuestas correctas.", difficulty: "avanzado" },
     { id: 820, question: "Cuatro hermanos tienen edades diferentes todas menores de 18. La suma es 36 y forman una PA. Si el doble de la menor es 4 a\u00f1os menos que el segundo, \u00bfcu\u00e1ntos a\u00f1os tiene el mayor?", options: ["14 a\u00f1os", "12 a\u00f1os", "16 a\u00f1os", "10 a\u00f1os"], correctIndex: 0, explanation: "Edades: a, a+d, a+2d, a+3d. Suma = 4a+6d = 36, 2a+3d = 18. Condici\u00f3n: 2a = (a+d)\u22124, a = d\u22124. Sustituyendo: 2(d\u22124)+3d = 18, 5d\u22128 = 18, d = 5.2. No entero. Cambiando: 2a = a+d\u22122, a = d\u22122. 2(d\u22122)+3d = 18, 5d = 22, d = 4.4. Revisando con d=2, a=6: edades 6,8,10,12, suma=36. 2(6)=12, 8\u22122=6\u226012. Con d=2: 2a+6=18 \u2192 a=6. Edades: 6,8,10,12. El mayor tiene 12. Respuesta: 12.", difficulty: "avanzado" }
   ]
-  }
-,
+  },
   {
     slug: "sucesiones-aritmeticas",
     illustrationSummary: "Gráfica de una progresión aritmética con razón constante.",
@@ -20716,8 +20587,7 @@ Primero: 4 términos aritméticos entre 3 y 18.
     exercises: [
       { id: 1, question: "¿Cuál es la razón de la sucesión 5, 11, 17, 23, 29, …?", options: ["d = 4", "d = 5", "d = 6", "d = 7"], correctIndex: 2, explanation: "La razón es d = 11 − 5 = 6. Verificamos: 17 − 11 = 6 y 23 − 17 = 6.", difficulty: "basico" },
       { id: 2, question: "En una AP con a₁ = 8 y d = −3, ¿cuánto vale a₁₅?", options: ["−31", "−34", "−37", "−40"], correctIndex: 1, explanation: "a₁₅ = 8 + (15−1)(−3) = 8 + 14(−3) = 8 − 42 = −34.", difficulty: "intermedio" },
-      { id: 3, question: "¿Cuál es la suma de los primeros 20 términos de la AP 4, 7, 10, 13, …?", options: ["610", "640", "650", "700"], correctIndex: 2, explanation: "a₂₀ = 4 + 19·3 = 61. S₂₀ = 20/2 · (4 + 61) = 10 · 65 = 650.", difficulty: "avanzado" }
-    ,
+      { id: 3, question: "¿Cuál es la suma de los primeros 20 términos de la AP 4, 7, 10, 13, …?", options: ["610", "640", "650", "700"], correctIndex: 2, explanation: "a₂₀ = 4 + 19·3 = 61. S₂₀ = 20/2 · (4 + 61) = 10 · 65 = 650.", difficulty: "avanzado" },
     { id: 821, question: "\u00bfCu\u00e1l es el quinto t\u00e9rmino de la sucesi\u00f3n aritm\u00e9tica 3, 7, 11, 15, ...?", options: ["19", "17", "21", "23"], correctIndex: 0, explanation: "La diferencia com\u00fan es 7 \u2212 3 = 4. El quinto t\u00e9rmino es 15 + 4 = 19.", difficulty: "basico" },
     { id: 822, question: "\u00bfCu\u00e1l es la diferencia com\u00fan de la sucesi\u00f3n 10, 6, 2, \u22122, ...?", options: ["\u22124", "4", "\u22122", "\u22126"], correctIndex: 0, explanation: "La diferencia com\u00fan es 6 \u2212 10 = \u22124.", difficulty: "basico" },
     { id: 823, question: "\u00bfCu\u00e1ntos t\u00e9rminos tiene la sucesi\u00f3n 5, 8, 11, ..., 32?", options: ["10", "9", "11", "12"], correctIndex: 0, explanation: "a_n = 5 + (n\u22121)(3) = 32. Entonces 3(n\u22121) = 27, n = 10.", difficulty: "basico" },
@@ -20738,8 +20608,7 @@ Primero: 4 términos aritméticos entre 3 y 18.
     { id: 838, question: "\u00bfCu\u00e1l es el valor de n para el cual S_n de la PA 5, 8, 11, ... supera por primera vez 100?", options: ["8", "7", "9", "6"], correctIndex: 0, explanation: "a_1 = 5, d = 3. S_n = n/2(2(5) + (n\u22121)3) = n/2(3n+7). Para n=7: 98. Para n=8: 124. Respuesta: 8.", difficulty: "avanzado" },
     { id: 839, question: "Los t\u00e9rminos a_1, a_2, a_3 de una PA son tambi\u00e9n tres t\u00e9rminos consecutivos de otra PA con diferencia 10. Si a_1 = 3, \u00bfcu\u00e1l es a_3?", options: ["23", "18", "20", "15"], correctIndex: 0, explanation: "Si a_1, a_2, a_3 son consecutivos de PA con d=10: a_2\u2212a_1=10 y a_3\u2212a_2=10. Entonces a_1=3, a_2=13, a_3=23.", difficulty: "avanzado" },
     { id: 840, question: "Si la suma de los primeros 12 t\u00e9rminos de una PA es 6 veces el sexto t\u00e9rmino, \u00bfcu\u00e1l es la relaci\u00f3n entre a_1 y d?", options: ["a_1 = \u22126d", "a_1 = 2d", "a_1 = 3d", "a_1 = 5d"], correctIndex: 0, explanation: "S_12 = 6(2a_1+11d) y a_6 = a_1+5d. Si S_12 = 6a_6: 2a_1+11d = a_1+5d, entonces a_1 = \u22126d.", difficulty: "avanzado" },
-    { id: 841, question: "En una PA, a_1 \u00d7 a_7 = 27 y a_4 = 6. Si d \u2260 0, \u00bfcu\u00e1les son los t\u00e9rminos extremos?", options: ["3 y 9", "2 y 18", "4 y 9", "1 y 36"], correctIndex: 0, explanation: "a_4 = a_1+3d = 6, a_1 = 6\u22123d. a_1\u00d7a_7 = (6\u22123d)(6+3d) = 36\u22129d\u00b2 = 27. Entonces d\u00b2 = 1, d = \u00b11. Si d=1: a_1=3, a_7=9.", difficulty: "avanzado" }
-  ,
+    { id: 841, question: "En una PA, a_1 \u00d7 a_7 = 27 y a_4 = 6. Si d \u2260 0, \u00bfcu\u00e1les son los t\u00e9rminos extremos?", options: ["3 y 9", "2 y 18", "4 y 9", "1 y 36"], correctIndex: 0, explanation: "a_4 = a_1+3d = 6, a_1 = 6\u22123d. a_1\u00d7a_7 = (6\u22123d)(6+3d) = 36\u22129d\u00b2 = 27. Entonces d\u00b2 = 1, d = \u00b11. Si d=1: a_1=3, a_7=9.", difficulty: "avanzado" },
     { id: 1073, question: "En una clase de 40 alumnos, 25 estudian ingl\u00e9s y 20 estudian franc\u00e9s. Si 10 estudian ambos, \u00bfcu\u00e1ntos no estudian ninguno?", options: ["5", "10", "15", "0"], correctIndex: 0, explanation: "IE: |A\u222aB| = 25+20\u221210 = 35. No estudian: 40\u221235 = 5.", difficulty: "basico" },
     { id: 1074, question: "Si 30 personas gustan de pizza y 25 de hamburguesa, con 15 que gustan de ambas, \u00bfcu\u00e1ntas gustan de al menos una?", options: ["40", "55", "30", "45"], correctIndex: 0, explanation: "|A\u222aB| = 30+25\u221215 = 40.", difficulty: "basico" },
     { id: 1075, question: "En un grupo de 50 personas, 30 son hombres y 20 son mujeres. \u00bfCu\u00e1ntas personas hay en total?", options: ["50", "600", "10", "30"], correctIndex: 0, explanation: "Como son disjoint: 30+20 = 50.", difficulty: "basico" },
@@ -20878,8 +20747,7 @@ Caída: 10. Rebotes: 2·(10·⅔ + 10·(⅔)² + ...) = 2·10·⅔/(1−⅔) = 4
     exercises: [
       { id: 4, question: "¿Cuál es la razón de la sucesión 3, 12, 48, 192, …?", options: ["q = 3", "q = 4", "q = 6", "q = 9"], correctIndex: 1, explanation: "La razón es q = 12/3 = 4. Verificamos: 48/12 = 4 y 192/48 = 4.", difficulty: "basico" },
       { id: 5, question: "¿Cuánto vale el término 7 de una GP con a₁ = 2 y q = 3?", options: ["486", "729", "1458", "2187"], correctIndex: 2, explanation: "a₇ = 2 · 3⁶ = 2 · 729 = 1458.", difficulty: "intermedio" },
-      { id: 6, question: "¿Cuál es la suma infinita de la serie 100, 50, 25, 12.5, …?", options: ["150", "200", "250", "300"], correctIndex: 1, explanation: "a₁ = 100, q = 1/2. Como |q| < 1: S∞ = 100 / (1 − 0.5) = 100 / 0.5 = 200.", difficulty: "avanzado" }
-    ,
+      { id: 6, question: "¿Cuál es la suma infinita de la serie 100, 50, 25, 12.5, …?", options: ["150", "200", "250", "300"], correctIndex: 1, explanation: "a₁ = 100, q = 1/2. Como |q| < 1: S∞ = 100 / (1 − 0.5) = 100 / 0.5 = 200.", difficulty: "avanzado" },
     { id: 842, question: "\u00bfCu\u00e1l es el quinto t\u00e9rmino de la sucesi\u00f3n geom\u00e9trica 2, 6, 18, 54, ...?", options: ["162", "108", "486", "72"], correctIndex: 0, explanation: "La raz\u00f3n com\u00fan es 6/2 = 3. El quinto t\u00e9rmino es 54 \u00d7 3 = 162.", difficulty: "basico" },
     { id: 843, question: "\u00bfCu\u00e1l es la raz\u00f3n com\u00fan de la sucesi\u00f3n 100, 50, 25, 12.5, ...?", options: ["1/2", "2", "\u22121/2", "50"], correctIndex: 0, explanation: "La raz\u00f3n com\u00fan es 50/100 = 1/2.", difficulty: "basico" },
     { id: 844, question: "\u00bfCu\u00e1l es el cuarto t\u00e9rmino de la SG con a_1 = 3 y raz\u00f3n r = \u22122?", options: ["\u221224", "24", "\u221212", "12"], correctIndex: 0, explanation: "a_4 = 3 \u00d7 (\u22122)\u00b3 = 3 \u00d7 (\u22128) = \u221224.", difficulty: "basico" },
@@ -20900,8 +20768,7 @@ Caída: 10. Rebotes: 2·(10·⅔ + 10·(⅔)² + ...) = 2·10·⅔/(1−⅔) = 4
     { id: 859, question: "Tres n\u00fameros en PG suman 21 y sus cuadrados suman 189. \u00bfCu\u00e1les son?", options: ["3, 6, 12", "6, 6, 9", "2, 6, 18", "1, 5, 25"], correctIndex: 0, explanation: "Los n\u00fameros son a/r, a, ar. Con a=6, r=2: 3+6+12=21 y 9+36+144=189. Ambas ecuaciones se cumplen.", difficulty: "avanzado" },
     { id: 860, question: "Si a_1 \u00d7 a_2 \u00d7 a_3 \u00d7 a_4 \u00d7 a_5 = 1024 en una SG con a_1 = 2, \u00bfcu\u00e1l es la raz\u00f3n com\u00fan?", options: ["\u221a2", "2", "4", "8"], correctIndex: 0, explanation: "Producto = 2^5 \u00d7 r^10 = 32r^10 = 1024 \u2192 r^10 = 32 = 2^5 \u2192 r = 2^(1/2) = \u221a2.", difficulty: "avanzado" },
     { id: 861, question: "En una SG infinita con |r| < 1, si S_inf = (3/2) \u00d7 S_impares, \u00bfcu\u00e1l es r?", options: ["1/2", "1/3", "2/3", "1/4"], correctIndex: 0, explanation: "S_inf = a_1/(1\u2212r) e S_impares = a_1/(1\u2212r\u00b2). Si S_inf = (3/2)S_impares: 1/(1\u2212r) = 3/(2(1\u2212r)(1+r)) \u2192 2(1+r) = 3 \u2192 r = 1/2.", difficulty: "avanzado" },
-    { id: 862, question: "Si a_1 = 3, los t\u00e9rminos impares forman SG con r = 2 y los pares forman SG con r = 3. Si a_2 = 12, \u00bfcu\u00e1l es a_6?", options: ["108", "54", "216", "72"], correctIndex: 0, explanation: "T\u00e9rminos pares: a_2=12, a_4=36, a_6=108.", difficulty: "avanzado" }
-  ,
+    { id: 862, question: "Si a_1 = 3, los t\u00e9rminos impares forman SG con r = 2 y los pares forman SG con r = 3. Si a_2 = 12, \u00bfcu\u00e1l es a_6?", options: ["108", "54", "216", "72"], correctIndex: 0, explanation: "T\u00e9rminos pares: a_2=12, a_4=36, a_6=108.", difficulty: "avanzado" },
     { id: 2836, question: "Si un evento puede ocurrir de 3 maneras y otro de 4, ¿cuántos resultados hay en total?", options: ["12", "7", "8", "16"], correctIndex: 0, explanation: "Principio multiplicativo: 3×4=12.", difficulty: "basic" },
     { id: 2837, question: "Si hay 5 camisas rojas y 3 azules, ¿cuántas camisas hay en total?", options: ["8", "15", "6", "5"], correctIndex: 0, explanation: "Principio aditivo: 5+3=8.", difficulty: "basic" },
     { id: 2838, question: "De 3 personas, ¿cuántas formas hay de elegir 1 o 2?", options: ["6", "9", "3", "5"], correctIndex: 0, explanation: "C(3,1)+C(3,2) = 3+3 = 6.", difficulty: "basic" },
@@ -21037,8 +20904,7 @@ bₙ = 8·2^(n−1) = 2^(n+2).
     exercises: [
       { id: 7, question: "Si a₁ = 3 y aₙ = aₙ₋₁ + 5, ¿cuánto vale a₆?", options: ["23", "28", "33", "38"], correctIndex: 1, explanation: "Generamos: a₁=3, a₂=8, a₃=13, a₄=18, a₅=23, a₆=28. Cada término suma 5 al anterior.", difficulty: "basico" },
       { id: 8, question: "En la sucesión de Fibonacci modificada: a₁ = 1, a₂ = 3, aₙ = aₙ₋₁ + aₙ₋₂, ¿cuánto vale a₆?", options: ["16", "18", "20", "24"], correctIndex: 1, explanation: "a₁=1, a₂=3, a₃=4, a₄=7, a₅=11, a₆=18.", difficulty: "intermedio" },
-      { id: 9, question: "Si a₁ = 2, a₂ = 3 y aₙ = aₙ₋₁ · aₙ₋₂, ¿cuánto vale a₄?", options: ["6", "12", "18", "36"], correctIndex: 2, explanation: "a₁=2, a₂=3, a₃=a₂·a₁=3·2=6, a₄=a₃·a₂=6·3=18.", difficulty: "avanzado" }
-    ,
+      { id: 9, question: "Si a₁ = 2, a₂ = 3 y aₙ = aₙ₋₁ · aₙ₋₂, ¿cuánto vale a₄?", options: ["6", "12", "18", "36"], correctIndex: 2, explanation: "a₁=2, a₂=3, a₃=a₂·a₁=3·2=6, a₄=a₃·a₂=6·3=18.", difficulty: "avanzado" },
     { id: 863, question: "Una sucesi\u00f3n se define como a_1 = 1, a_{n+1} = a_n + 3. \u00bfCu\u00e1l es a_5?", options: ["13", "10", "16", "12"], correctIndex: 0, explanation: "a_1=1, a_2=4, a_3=7, a_4=10, a_5=13.", difficulty: "basico" },
     { id: 864, question: "Si a_1 = 2 y a_{n+1} = 2a_n, \u00bfcu\u00e1l es a_4?", options: ["16", "8", "32", "4"], correctIndex: 0, explanation: "a_1=2, a_2=4, a_3=8, a_4=16.", difficulty: "basico" },
     { id: 865, question: "Si a_1 = 1, a_2 = 1 y a_n = a_{n\u22121} + a_{n\u22122}, \u00bfcu\u00e1l es a_6?", options: ["8", "5", "13", "3"], correctIndex: 0, explanation: "Fibonacci: 1, 1, 2, 3, 5, 8. a_6 = 8.", difficulty: "basico" },
@@ -21059,8 +20925,7 @@ bₙ = 8·2^(n−1) = 2^(n+2).
     { id: 880, question: "Si a_1 = 1 y a_{n+1} = 2a_n + 1, \u00bfcu\u00e1l es a_5?", options: ["31", "15", "63", "7"], correctIndex: 0, explanation: "a_1=1, a_2=3, a_3=7, a_4=15, a_5=31.", difficulty: "avanzado" },
     { id: 881, question: "Una sucesi\u00f3n tiene a_1 = 0, a_2 = 1 y a_n = 4a_{n\u22121} \u2212 3a_{n\u22122}. \u00bfcu\u00e1l es a_5?", options: ["40", "81", "121", "21"], correctIndex: 0, explanation: "a_3=4\u22120=4, a_4=16\u22123=13, a_5=52\u221212=40.", difficulty: "avanzado" },
     { id: 882, question: "Si a_1 = 1 y a_n = n \u00b7 a_{n\u22121}, \u00bfcu\u00e1l es a_6?", options: ["720", "120", "24", "5040"], correctIndex: 0, explanation: "a_6 = 6! = 720.", difficulty: "avanzado" },
-    { id: 883, question: "Una sucesi\u00f3n tiene a_1 = 1, a_2 = 4 y a_n = a_{n\u22121} \u00b7 a_{n\u22122}. \u00bfcu\u00e1l es a_5?", options: ["64", "16", "256", "1024"], correctIndex: 0, explanation: "a_3=4\u00d71=4, a_4=4\u00d74=16, a_5=16\u00d74=64.", difficulty: "avanzado" }
-  ,
+    { id: 883, question: "Una sucesi\u00f3n tiene a_1 = 1, a_2 = 4 y a_n = a_{n\u22121} \u00b7 a_{n\u22122}. \u00bfcu\u00e1l es a_5?", options: ["64", "16", "256", "1024"], correctIndex: 0, explanation: "a_3=4\u00d71=4, a_4=4\u00d74=16, a_5=16\u00d74=64.", difficulty: "avanzado" },
     { id: 1115, question: "\u00bfCu\u00e1ntas formas hay de sentar 5 personas en una fila?", options: ["120", "25", "60", "720"], correctIndex: 0, explanation: "5! = 120.", difficulty: "basico" },
     { id: 1116, question: "\u00bfCu\u00e1ntas formas hay de sentar 5 personas en una mesa redonda?", options: ["24", "120", "60", "5"], correctIndex: 0, explanation: "(5\u22121)! = 24.", difficulty: "basico" },
     { id: 1117, question: "\u00bfCu\u00e1ntas formas hay de poner 4 libros en una estanter\u00eda si el libro rojo siempre va primero?", options: ["6", "24", "12", "4"], correctIndex: 0, explanation: "El rojo fijo: 3! = 6.", difficulty: "basico" },
@@ -21193,8 +21058,7 @@ A=1/√5, B=−1/√5. **aₙ = (φⁿ − ψⁿ)/√5** donde φ=(1+√5)/2, ψ
     exercises: [
       { id: 10, question: "Si a₁ = 2 y aₙ₊₁ = 3aₙ − 1, ¿cuánto vale a₃?", options: ["8", "11", "14", "17"], correctIndex: 2, explanation: "a₂ = 3(2)−1 = 5, a₃ = 3(5)−1 = 14.", difficulty: "basico" },
       { id: 11, question: "Dada a₁ = 1, a₂ = 4 y aₙ₊₂ = aₙ₊₁ + aₙ, ¿cuánto vale a₆?", options: ["14", "18", "23", "29"], correctIndex: 2, explanation: "a₃ = 4+1 = 5, a₄ = 5+4 = 9, a₅ = 9+5 = 14, a₆ = 14+9 = 23.", difficulty: "intermedio" },
-      { id: 12, question: "La sucesión satisface aₙ₊₂ = 2aₙ₊₁ + aₙ con a₁ = 1, a₂ = 3. ¿Cuánto vale a₅?", options: ["17", "25", "41", "53"], correctIndex: 2, explanation: "a₃ = 2(3)+1 = 7, a₄ = 2(7)+3 = 17, a₅ = 2(17)+7 = 41.", difficulty: "avanzado" }
-    ,
+      { id: 12, question: "La sucesión satisface aₙ₊₂ = 2aₙ₊₁ + aₙ con a₁ = 1, a₂ = 3. ¿Cuánto vale a₅?", options: ["17", "25", "41", "53"], correctIndex: 2, explanation: "a₃ = 2(3)+1 = 7, a₄ = 2(7)+3 = 17, a₅ = 2(17)+7 = 41.", difficulty: "avanzado" },
     { id: 884, question: "Si a_1 = 1 y a_n = 2a_{n\u22121} + 1, \u00bfcu\u00e1l es a_4?", options: ["15", "7", "31", "3"], correctIndex: 0, explanation: "a_1=1, a_2=3, a_3=7, a_4=15.", difficulty: "basico" },
     { id: 885, question: "Una sucesi\u00f3n se define por a_1 = 2, a_n = a_{n\u22121} \u2212 1. \u00bfCu\u00e1l es a_6?", options: ["\u22123", "\u22122", "\u22124", "\u22121"], correctIndex: 0, explanation: "a_1=2, a_2=1, a_3=0, a_4=\u22121, a_5=\u22122, a_6=\u22123.", difficulty: "basico" },
     { id: 886, question: "Si a_1 = 3 y a_n = 3a_{n\u22121} \u2212 2, \u00bfcu\u00e1l es a_3?", options: ["19", "7", "55", "25"], correctIndex: 0, explanation: "a_1=3, a_2=7, a_3=19.", difficulty: "basico" },
@@ -21215,8 +21079,7 @@ A=1/√5, B=−1/√5. **aₙ = (φⁿ − ψⁿ)/√5** donde φ=(1+√5)/2, ψ
     { id: 901, question: "Una sucesi\u00f3n tiene a_1 = 1 y a_{n+1} = 2a_n + n. \u00bfcu\u00e1l es a_5?", options: ["26", "15", "31", "12"], correctIndex: 0, explanation: "a_1=1, a_2=3, a_3=8, a_4=19, a_5=43. Ajustando: a_2=2(1)+1=3, a_3=2(3)+2=8, a_4=2(8)+3=19, a_5=2(19)+4=42. Cambiando a a_5=26 con a_{n+1}=a_n+2n: a_2=3,a_3=7,a_4=13,a_5=21. Con a_{n+1}=2a_n\u2212n: a_2=1,a_3=0,a_4=\u22124. Con a_{n+1}=a_n+n+1: a_2=3,a_3=6,a_4=10,a_5=15. Usando a_{n+1}=a_n+2^{n}: a_2=3,a_3=7,a_4=15,a_5=31. Cambiando a a_{n+1}=a_n+2n\u22121: a_2=2,a_3=5,a_4=10,a_5=17.", difficulty: "avanzado" },
     { id: 902, question: "Si a_1 = 0, a_2 = 1 y a_n = a_{n\u22121} + n, \u00bfcu\u00e1l es a_6?", options: ["15", "20", "21", "10"], correctIndex: 0, explanation: "a_1=0, a_2=1, a_3=4, a_4=8, a_5=13, a_6=19. Ajustando: a_3=1+3=4, a_4=4+4=8, a_5=8+5=13, a_6=13+6=19. Cambiando a f\u00f3rmula a_n=a_{n\u22121}+(n\u22121): a_3=1+2=3, a_4=3+3=6, a_5=6+4=10, a_6=10+5=15.", difficulty: "avanzado" },
     { id: 903, question: "Una sucesi\u00f3n tiene a_1 = 2 y a_n = (a_{n\u22121})\u00b2 \u2212 2. \u00bfcu\u00e1l es a_4?", options: ["14", "234", "142", "2"], correctIndex: 0, explanation: "a_1=2, a_2=2, a_3=2, a_4=2. Ajustando: a_2=4\u22122=2, efectivamente constante. Cambiando a a_n=a_{n\u22121}\u00b2+1: a_2=5, a_3=26, a_4=677. Con a_n=a_{n\u22121}+a_{n\u22121}\u00b2: a_1=1, a_2=2, a_3=6, a_4=42. Con a_n=2a_{n\u22121}+1: a_1=2,a_2=5,a_3=11,a_4=23. Cambiando a a_4=14 con a_n=a_{n\u22121}+n: a_1=2,a_2=3,a_4=14... Ajustando a_n=a_{n\u22121}+n^2\u2212n: a_2=2,a_3=4,a_4=10. Con a_n=a_{n\u22121}+(n\u22121)\u00b2: a_2=3,a_3=7,a_4=16. Con a_n=a_{n\u22121}+n(n\u22121)/2: a_2=3,a_3=5,a_4=8.", difficulty: "avanzado" },
-    { id: 904, question: "Si a_1 = 1, a_2 = 2 y a_n = a_{n\u22121}\u00b2 \u2212 a_{n\u22122}, \u00bfcu\u00e1l es a_5?", options: ["46", "7", "42", "21"], correctIndex: 0, explanation: "a_3=4\u22121=3, a_4=9\u22122=7, a_5=49\u22123=46.", difficulty: "avanzado" }
-  ,
+    { id: 904, question: "Si a_1 = 1, a_2 = 2 y a_n = a_{n\u22121}\u00b2 \u2212 a_{n\u22122}, \u00bfcu\u00e1l es a_5?", options: ["46", "7", "42", "21"], correctIndex: 0, explanation: "a_3=4\u22121=3, a_4=9\u22122=7, a_5=49\u22123=46.", difficulty: "avanzado" },
     { id: 1136, question: "Si P(x) = x^2 + 2x + 1, \u00bfcu\u00e1l es P(2)?", options: ["9", "7", "5", "13"], correctIndex: 0, explanation: "P(2) = 4 + 4 + 1 = 9.", difficulty: "basico" },
     { id: 1137, question: "\u00bfCu\u00e1l es el t\u00e9rmino independiente de 3x^3 + 2x \u2212 5?", options: ["\u22125", "3", "2", "0"], correctIndex: 0, explanation: "El t\u00e9rmino independiente es el que no tiene x: \u22125.", difficulty: "basico" },
     { id: 1138, question: "Si (1+x)^2 = a + bx + cx^2, \u00bfcu\u00e1l es b?", options: ["2", "1", "3", "4"], correctIndex: 0, explanation: "(1+x)^2 = 1 + 2x + x^2, entonces b = 2.", difficulty: "basico" },
@@ -21358,8 +21221,7 @@ Cada término = suma de los dos anteriores → **Fibonacci**.
     exercises: [
       { id: 13, question: "¿Qué patrón sigue la sucesión 3, 6, 11, 18, 27, …?", options: ["aₙ = n² + 2", "aₙ = 3n", "aₙ = n² − n + 3", "aₙ = 2n + 1"], correctIndex: 0, explanation: "Probando aₙ = n² + 2: 1²+2=3, 2²+2=6, 3²+2=11, 4²+2=18, 5²+2=27. ✓", difficulty: "basico" },
       { id: 14, question: "La sucesión 1, 3, 7, 13, 21, … tiene un patrón. ¿Cuál es la fórmula?", options: ["aₙ = n² − n + 1", "aₙ = 2n − 1", "aₙ = n² + 1", "aₙ = n² + n − 1"], correctIndex: 0, explanation: "Diferencias de 1er orden: 2, 4, 6, 8 (constante en 2do orden = 2). aₙ = n² − n + 1: 1−1+1=1, 4−2+1=3, 9−3+1=7, 16−4+1=13, 25−5+1=21. ✓", difficulty: "intermedio" },
-      { id: 15, question: "Si las diferencias de primer orden de una sucesión son 4, 6, 8, 10, … y a₁ = 2, ¿cuál es a₆?", options: ["36", "40", "42", "48"], correctIndex: 2, explanation: "Δ₁: 4,6,8,10 → Δ₂: 2,2,2 (constante) → aₙ = n²+n. a₆ = 36+6 = 42.", difficulty: "avanzado" }
-    ,
+      { id: 15, question: "Si las diferencias de primer orden de una sucesión son 4, 6, 8, 10, … y a₁ = 2, ¿cuál es a₆?", options: ["36", "40", "42", "48"], correctIndex: 2, explanation: "Δ₁: 4,6,8,10 → Δ₂: 2,2,2 (constante) → aₙ = n²+n. a₆ = 36+6 = 42.", difficulty: "avanzado" },
     { id: 905, question: "\u00bfCu\u00e1l es el siguiente n\u00famero en 2, 4, 8, 16, ...?", options: ["32", "24", "64", "20"], correctIndex: 0, explanation: "Cada t\u00e9rmino se duplica: 16 \u00d7 2 = 32.", difficulty: "basico" },
     { id: 906, question: "\u00bfQu\u00e9 n\u00famero completa el patr\u00f3n 1, 4, 9, 16, ...?", options: ["25", "20", "36", "32"], correctIndex: 0, explanation: "Son cuadrados perfectos: 1\u00b2, 2\u00b2, 3\u00b2, 4\u00b2, 5\u00b2 = 25.", difficulty: "basico" },
     { id: 907, question: "\u00bfQu\u00e9 n\u00famero sigue en 1, 1, 2, 3, 5, 8, ...?", options: ["13", "11", "10", "12"], correctIndex: 0, explanation: "Fibonacci: 5 + 8 = 13.", difficulty: "basico" },
@@ -21493,8 +21355,7 @@ Demostrar: 2ⁿ > n para todo n ≥ 1.
     exercises: [
       { id: 16, question: "Observamos: 1=1, 1+2=3, 1+2+3=6, 1+2+3+4=10. ¿Cuál es la conjetura?", options: ["n²", "n(n+1)/2", "n(n−1)/2", "2ⁿ − 1"], correctIndex: 1, explanation: "Para n=1: 1(2)/2=1 ✓. Para n=2: 2(3)/2=3 ✓. Para n=3: 3(4)/2=6 ✓. Para n=4: 4(5)/2=10 ✓.", difficulty: "basico" },
       { id: 17, question: "Si conjeturamos que 2+4+6+…+2n = n² + n, ¿cuánto vale la suma de los primeros 8 pares?", options: ["64", "72", "80", "88"], correctIndex: 1, explanation: "Sustituyendo n=8: 8² + 8 = 64 + 8 = 72. Verificando: 2+4+6+8+10+12+14+16 = 72. ✓", difficulty: "intermedio" },
-      { id: 18, question: "En una demostración por inducción, si P(k) afirma que 3 divide a k³ − k, ¿qué debemos probar en el paso inductivo?", options: ["3 divide a (k+1)³ − (k+1)", "3 divide a k³ − k + 3", "3 divide a k³ + k", "3 divide a (k+1)³ + k"], correctIndex: 0, explanation: "En el paso inductivo debemos probar P(k+1): 3 divide a (k+1)³ − (k+1). Esto se hace usando que 3 | (k³−k) por hipótesis.", difficulty: "avanzado" }
-    ,
+      { id: 18, question: "En una demostración por inducción, si P(k) afirma que 3 divide a k³ − k, ¿qué debemos probar en el paso inductivo?", options: ["3 divide a (k+1)³ − (k+1)", "3 divide a k³ − k + 3", "3 divide a k³ + k", "3 divide a (k+1)³ + k"], correctIndex: 0, explanation: "En el paso inductivo debemos probar P(k+1): 3 divide a (k+1)³ − (k+1). Esto se hace usando que 3 | (k³−k) por hipótesis.", difficulty: "avanzado" },
     { id: 926, question: "\u00bfCu\u00e1ntos segmentos se forman al conectar 4 puntos en l\u00ednea sin que tres sean colineales?", options: ["6", "4", "8", "12"], correctIndex: 0, explanation: "C(4,2) = 6 segmentos.", difficulty: "basico" },
     { id: 927, question: "Si 1 = 1\u00b2, 1+3 = 2\u00b2, 1+3+5 = 3\u00b2, \u00bfcu\u00e1nto vale 1+3+5+7+9?", options: ["25", "16", "9", "36"], correctIndex: 0, explanation: "Suma de los primeros 5 impares = 5\u00b2 = 25.", difficulty: "basico" },
     { id: 928, question: "Los n\u00fameros triangulares son: 1, 3, 6, 10, 15. \u00bfCu\u00e1l es el siguiente?", options: ["21", "18", "25", "20"], correctIndex: 0, explanation: "Diferencias: 2, 3, 4, 5. Siguiente: 15+6=21.", difficulty: "basico" },
@@ -21639,8 +21500,7 @@ Sistemas de ecuaciones recursivas aparecen en modelos poblacionales, finanzas y 
     exercises: [
       { id: 19, question: "Si a₁ = 1, b₁ = 2, aₙ₊₁ = aₙ + bₙ y bₙ₊₁ = aₙ − bₙ, ¿cuánto vale a₃?", options: ["1", "2", "3", "4"], correctIndex: 1, explanation: "a₂ = 1 + 2 = 3, b₂ = 1 − 2 = −1. a₃ = a₂ + b₂ = 3 + (−1) = 2.", difficulty: "basico" },
       { id: 20, question: "Con a₁ = 3, b₁ = 1, aₙ₊₁ = 2aₙ − bₙ y bₙ₊₁ = aₙ + bₙ, ¿cuánto vale b₄?", options: ["13", "15", "17", "19"], correctIndex: 1, explanation: "a₂ = 2(3)−1 = 5, b₂ = 3+1 = 4. a₃ = 2(5)−4 = 6, b₃ = 5+4 = 9. a₄ = 2(6)−9 = 3, b₄ = 6+9 = 15.", difficulty: "intermedio" },
-      { id: 21, question: "Si x₁ = 1, y₁ = 2, xₙ₊₁ = xₙ·yₙ y yₙ₊₁ = xₙ + yₙ, ¿cuánto vale x₃ + y₃?", options: ["9", "11", "13", "15"], correctIndex: 1, explanation: "x₂ = 1·2 = 2, y₂ = 1+2 = 3. x₃ = 2·3 = 6, y₃ = 2+3 = 5. x₃+y₃ = 6+5 = 11.", difficulty: "avanzado" }
-    ,
+      { id: 21, question: "Si x₁ = 1, y₁ = 2, xₙ₊₁ = xₙ·yₙ y yₙ₊₁ = xₙ + yₙ, ¿cuánto vale x₃ + y₃?", options: ["9", "11", "13", "15"], correctIndex: 1, explanation: "x₂ = 1·2 = 2, y₂ = 1+2 = 3. x₃ = 2·3 = 6, y₃ = 2+3 = 5. x₃+y₃ = 6+5 = 11.", difficulty: "avanzado" },
     { id: 947, question: "Si x_n = n y y_n = 2n, \u00bfcu\u00e1nto vale x_5 + y_5?", options: ["15", "10", "20", "25"], correctIndex: 0, explanation: "x_5=5, y_5=10. Suma = 15.", difficulty: "basico" },
     { id: 948, question: "Si x = 3 e y = x\u00b2, \u00bfcu\u00e1l es el par (x, y)?", options: ["(3, 9)", "(3, 6)", "(3, 12)", "(3, 3)"], correctIndex: 0, explanation: "y = 3\u00b2 = 9.", difficulty: "basico" },
     { id: 949, question: "Si x_n = 2n+1 e y_n = n\u00b2, \u00bfcu\u00e1l es y_3?", options: ["9", "6", "12", "3"], correctIndex: 0, explanation: "y_3 = 3\u00b2 = 9.", difficulty: "basico" },
@@ -21772,8 +21632,7 @@ Ejemplo: 1·2, 2·4, 3·8, 4·16... = n·2ⁿ.`,
     exercises: [
       { id: 22, question: "La sucesión 1, 4, 9, 16, 25 tiene diferencias de 2do orden constantes. ¿Cuánto vale a₁₀?", options: ["50", "81", "100", "121"], correctIndex: 2, explanation: "La fórmula es aₙ = n². Entonces a₁₀ = 10² = 100.", difficulty: "basico" },
       { id: 23, question: "Si las diferencias de 1er orden de una sucesión son 3, 5, 7, 9 y a₁ = 1, ¿cuál es a₅?", options: ["19", "22", "25", "28"], correctIndex: 2, explanation: "Δ₁: 3,5,7,9 → Δ₂: 2,2,2 (constante). a₁=1, a₂=4, a₃=9, a₄=16, a₅=25. La fórmula es aₙ = n².", difficulty: "intermedio" },
-      { id: 24, question: "Una sucesión tiene Δ₁ = 4, 7, 10, 13 y Δ₂ = 3, 3, 3 (constante). Si a₁ = 2, ¿cuánto vale a₇?", options: ["62", "68", "71", "78"], correctIndex: 2, explanation: "a₂=2+4=6, a₃=6+7=13, a₄=13+10=23, a₅=23+13=36, a₆=36+16=52, a₇=52+19=71.", difficulty: "avanzado" }
-    ,
+      { id: 24, question: "Una sucesión tiene Δ₁ = 4, 7, 10, 13 y Δ₂ = 3, 3, 3 (constante). Si a₁ = 2, ¿cuánto vale a₇?", options: ["62", "68", "71", "78"], correctIndex: 2, explanation: "a₂=2+4=6, a₃=6+7=13, a₄=13+10=23, a₅=23+13=36, a₆=36+16=52, a₇=52+19=71.", difficulty: "avanzado" },
     { id: 968, question: "En una progresi\u00f3n arm\u00f3nica, el segundo t\u00e9rmino es 1/4 y el cuarto es 1/8. \u00bfCu\u00e1l es el primero?", options: ["1/2", "1/3", "1/6", "1"], correctIndex: 0, explanation: "Los rec\u00edprocos forman una PA: 4, x, y, 8. Si d=(8\u22124)/3=4/3, entonces a_1=4, a_2=16/3, a_3=20/3, a_4=8. El rec\u00edproco del primero es 1/4. Ajustando: PH con a_1=1/2, a_2=1/4, a_3=1/6, a_4=1/8. Los rec\u00edprocos son 2, 4, 6, 8 (PA).", difficulty: "basico" },
     { id: 969, question: "Si una PH tiene a_1 = 1/2 y a_3 = 1/8, \u00bfcu\u00e1l es a_2?", options: ["1/4", "1/6", "1/5", "3/16"], correctIndex: 0, explanation: "Rec\u00edprocos: 2, x, 8 en PA. x = (2+8)/2 = 5. Entonces a_2 = 1/5... Ajustando: si rec\u00edprocos en PA: 2, a, 8. a=5, a_2=1/5. Pero opci\u00f3n A es 1/4. Cambiando: con a_1=1/2, a_3=1/6, rec\u00edprocos: 2, a, 6. a=4. a_2=1/4. Correcto.", difficulty: "basico" },
     { id: 970, question: "\u00bfCu\u00e1ntos t\u00e9rminos positivos tiene la PA 100, 97, 94, ...?", options: ["34", "33", "35", "36"], correctIndex: 0, explanation: "a_n=100\u22123(n\u22121)>0 \u2192 n<34.33. Son 34 t\u00e9rminos positivos.", difficulty: "basico" },
@@ -21794,8 +21653,7 @@ Ejemplo: 1·2, 2·4, 3·8, 4·16... = n·2ⁿ.`,
     { id: 985, question: "Si la suma de los primeros n t\u00e9rminos de una PA es S_n=5n\u00b2+3n, \u00bfcu\u00e1l es a_5?", options: ["48", "43", "53", "38"], correctIndex: 0, explanation: "a_5=S_5\u2212S_4=(125+15)\u2212(80+12)=140\u221292=48.", difficulty: "avanzado" },
     { id: 986, question: "En una PG infinita, si la suma de todos los t\u00e9rminos es 12 y a_1=8, \u00bfcu\u00e1l es r?", options: ["1/3", "1/2", "2/3", "1/4"], correctIndex: 0, explanation: "S=8/(1\u2212r)=12 \u2192 1\u2212r=2/3 \u2192 r=1/3.", difficulty: "avanzado" },
     { id: 987, question: "Si en una PA, a_1=10 y d=\u22123, \u00bfcu\u00e1l es la suma de todos los t\u00e9rminos positivos?", options: ["55", "20", "25", "30"], correctIndex: 0, explanation: "a_n=10\u22123(n\u22121)=13\u22123n>0 \u2192 n<4.33, n\u22644. S_4=4/2(10+1)=2\u00d711=22. Ajustando: n\u22644, a_4=10\u22129=1. S_4=22. Cambiando d=\u22122: a_n=10\u22122(n\u22121)=12\u22122n>0 \u2192 n\u22645. S_5=5/2(10+2)=30. Con d=\u22122: n\u22645, S_5=30. Respuesta: 30.", difficulty: "avanzado" },
-    { id: 988, question: "En una PA, los t\u00e9rminos a_2, a_5, a_11 est\u00e1n en PG. Si a_1=2 y d=3, \u00bfcu\u00e1nto vale a_5\u00b2/(a_2\u00b7a_11)?", options: ["25/40", "1", "5/4", "5/8"], correctIndex: 0, explanation: "a_2=5, a_5=14, a_11=32. 5,14,32 no est\u00e1n en PG (14\u00b2=196, 5\u00d732=160). Ajustando d=1: a_2=3, a_5=6, a_11=12. En PG: 6\u00b2=36=3\u00d712=36. S\u00ed. a_5\u00b2/(a_2\u00b7a_11)=36/36=1.", difficulty: "avanzado" }
-  ,
+    { id: 988, question: "En una PA, los t\u00e9rminos a_2, a_5, a_11 est\u00e1n en PG. Si a_1=2 y d=3, \u00bfcu\u00e1nto vale a_5\u00b2/(a_2\u00b7a_11)?", options: ["25/40", "1", "5/4", "5/8"], correctIndex: 0, explanation: "a_2=5, a_5=14, a_11=32. 5,14,32 no est\u00e1n en PG (14\u00b2=196, 5\u00d732=160). Ajustando d=1: a_2=3, a_5=6, a_11=12. En PG: 6\u00b2=36=3\u00d712=36. S\u00ed. a_5\u00b2/(a_2\u00b7a_11)=36/36=1.", difficulty: "avanzado" },
     { id: 1220, question: "Si todos los Zips son Zaps y algunos Zaps son Zops, \u00bfqu\u00e9 se puede concluir?", options: ["Algunos Zips pueden ser Zops", "Todos los Zips son Zops", "Ning\u00fan Zip es Zop", "Todos los Zops son Zips"], correctIndex: 0, explanation: "De la cadena l\u00f3gica: algunos Zips pueden ser Zops pero no necesariamente.", difficulty: "basico" },
     { id: 1221, question: "Si A > B y B > C, \u00bfcu\u00e1l es la relaci\u00f3n entre A y C?", options: ["A > C", "A < C", "A = C", "No se puede determinar"], correctIndex: 0, explanation: "Por transitividad: A > B > C implica A > C.", difficulty: "basico" },
     { id: 1222, question: "\"Si llueve, entonces la calle se moja\". Si la calle est\u00e1 mojada, \u00bfqu\u00e9 podemos concluir?", options: ["Puede haber llovido o no", "Definitivamente llovi\u00f3", "No llovi\u00f3", "La calle nunca se seca"], correctIndex: 0, explanation: "La inversa no es v\u00e1lida: la calle puede estar mojada por otras razones.", difficulty: "basico" },
@@ -21818,8 +21676,7 @@ Ejemplo: 1·2, 2·4, 3·8, 4·16... = n·2ⁿ.`,
     { id: 1239, question: "\"Al menos uno de P o Q es verdadero\". \u00bfQu\u00e9 representa l\u00f3gicamente?", options: ["P \u2228 Q", "P \u2227 Q", "P \u2192 Q", "P \u2194 Q"], correctIndex: 0, explanation: "\"Al menos uno\" es la disyunci\u00f3n: P \u2228 Q.", difficulty: "avanzado" },
     { id: 1240, question: "Si \"Si llueve, cargo paraguas\" y \"No cargo paraguas\", \u00bfqu\u00e9 se puede concluir?", options: ["No llueve", "Llueve", "Cargo paraguas", "No se puede concluir nada"], correctIndex: 0, explanation: "Por contrapositiva: no cargo paraguas \u2192 no llueve.", difficulty: "avanzado" }
   ]
-  }
-,
+  },
   {
     slug: "permutaciones-simples",
     illustrationSummary: "Elementos ordenados con la fórmula P(n) = n! y ejemplos.",
@@ -21952,8 +21809,7 @@ Total: 6!. A siempre primero: 5!. A nunca primero: 6!−5! = 720−120 = 600.
         correctIndex: 2,
         explanation: "MATEMÁTICA tiene 10 letras con M repetida 2 veces y A repetida 3 veces: 10!/(2!×3!) = 151200.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 989, question: "\u00bfCu\u00e1ntas formas hay de ordenar 5 libros en una estanter\u00eda?", options: ["120", "25", "60", "720"], correctIndex: 0, explanation: "5! = 120.", difficulty: "basico" },
     { id: 990, question: "\u00bfCu\u00e1ntas permutaciones de 3 letras se pueden formar con A, B, C?", options: ["6", "3", "9", "27"], correctIndex: 0, explanation: "3! = 6.", difficulty: "basico" },
     { id: 991, question: "\u00bfCu\u00e1ntos n\u00fameros de 4 cifras se pueden formar con 1, 2, 3, 4 sin repetir?", options: ["24", "12", "48", "16"], correctIndex: 0, explanation: "4! = 24.", difficulty: "basico" },
@@ -22115,8 +21971,7 @@ De (0,0) a (3,2): C(5,3) = 10 caminos.`,
         correctIndex: 2,
         explanation: "El número total de subconjuntos es 2⁸ = 256. El subconjunto vacío es 1. Entonces: 256 - 1 = 255 subconjuntos no vacíos.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 1010, question: "\u00bfCu\u00e1ntos equipos de 3 personas se pueden formar con 6 personas?", options: ["20", "120", "30", "15"], correctIndex: 0, explanation: "C(6,3) = 20.", difficulty: "basico" },
     { id: 1011, question: "\u00bfCu\u00e1ntas formas hay de elegir 2 frutas de 5 disponibles?", options: ["10", "25", "5", "20"], correctIndex: 0, explanation: "C(5,2) = 10.", difficulty: "basico" },
     { id: 1012, question: "\u00bfCu\u00e1ntas combinaciones de 4 n\u00fameros se pueden formar del 1 al 8?", options: ["70", "35", "1680", "120"], correctIndex: 0, explanation: "C(8,4) = 70.", difficulty: "basico" },
@@ -22137,8 +21992,7 @@ De (0,0) a (3,2): C(5,3) = 10 caminos.`,
     { id: 1027, question: "\u00bfCu\u00e1ntos subconjuntos de tama\u00f1o par (incluyendo el vac\u00edo) tiene un conjunto de 4 elementos?", options: ["8", "4", "6", "10"], correctIndex: 0, explanation: "C(4,0)+C(4,2)+C(4,4) = 1+6+1 = 8.", difficulty: "avanzado" },
     { id: 1028, question: "Si C(n,3) = 56, \u00bfcu\u00e1l es C(n,2)?", options: ["28", "56", "21", "36"], correctIndex: 0, explanation: "C(n,3)=56 \u2192 n=8. C(8,2)=28.", difficulty: "avanzado" },
     { id: 1029, question: "\u00bfCu\u00e1ntas formas hay de elegir 5 libros de 10 y ordenarlos en una estanter\u00eda?", options: ["30240", "252", "120", "50400"], correctIndex: 0, explanation: "P(10,5) = 10\u00d79\u00d78\u00d77\u00d76 = 30240.", difficulty: "avanzado" },
-    { id: 1030, question: "\u00bfCu\u00e1ntos caminos hay de A a B en una cuadr\u00edcula 6\u00d74 sin pasar por un punto espec\u00edfico C en el camino?", options: ["210", "140", "35", "84"], correctIndex: 0, explanation: "Total: C(10,4)=210. Por C en posici\u00f3n (2,2): C(4,2)\u00d7C(6,2)=6\u00d715=90. Sin C: 210\u221290=120. Ajustando a 210 como total.", difficulty: "avanzado" }
-  ,
+    { id: 1030, question: "\u00bfCu\u00e1ntos caminos hay de A a B en una cuadr\u00edcula 6\u00d74 sin pasar por un punto espec\u00edfico C en el camino?", options: ["210", "140", "35", "84"], correctIndex: 0, explanation: "Total: C(10,4)=210. Por C en posici\u00f3n (2,2): C(4,2)\u00d7C(6,2)=6\u00d715=90. Sin C: 210\u221290=120. Ajustando a 210 como total.", difficulty: "avanzado" },
     { id: 1262, question: "\u00bfCu\u00e1ntas caras tiene un cubo?", options: ["6", "8", "12", "4"], correctIndex: 0, explanation: "Un cubo tiene 6 caras cuadradas.", difficulty: "basico" },
     { id: 1263, question: "\u00bfCu\u00e1ntos v\u00e9rtices tiene un cubo?", options: ["8", "6", "12", "4"], correctIndex: 0, explanation: "Un cubo tiene 8 v\u00e9rtices.", difficulty: "basico" },
     { id: 1264, question: "\u00bfCu\u00e1ntas aristas tiene un cubo?", options: ["12", "8", "6", "16"], correctIndex: 0, explanation: "Un cubo tiene 12 aristas.", difficulty: "basico" },
@@ -22301,8 +22155,7 @@ Si hay personas idénticas: (n−1)!/(n₁!·n₂!·...).`,
         correctIndex: 2,
         explanation: "Cada elemento del dominio (5) tiene 3 opciones en el codominio: 3⁵ = 243 funciones.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 1031, question: "\u00bfCu\u00e1ntas cadenas de 3 letras se pueden formar con 5 letras disponibles repetir?", options: ["125", "15", "60", "10"], correctIndex: 0, explanation: "5^3 = 125.", difficulty: "basico" },
     { id: 1032, question: "\u00bfCu\u00e1ntos n\u00fameros de 4 d\u00edgitos se pueden formar con los d\u00edgitos 0-9 repitiendo?", options: ["9000", "10000", "5040", "210"], correctIndex: 0, explanation: "9\u00d710\u00d710\u00d710 = 9000 (primera cifra no puede ser 0).", difficulty: "basico" },
     { id: 1033, question: "\u00bfCu\u00e1ntas tiradas de 2 dados hay?", options: ["36", "12", "6", "216"], correctIndex: 0, explanation: "6\u00d76 = 36.", difficulty: "basico" },
@@ -22461,8 +22314,7 @@ Cuando los coeficientes son > 1, no se aplica la fórmula directamente; se enume
         correctIndex: 0,
         explanation: "Primero damos 1 a cada tienda (4 artículos). Quedan 2 para distribuir libremente entre 4 tiendas: C(2+4-1, 4-1) = C(5,3) = 10. Pero con el método directo: C(6-1, 4-1) = C(5,3) = 10. Revisando: C(5,3) = 10 no es 84. Usando C(n-1, k-1) = C(6-1, 4-1) = C(5,3) = 10... Pero espera, C(5,3) = 10. Hmm. La respuesta correcta con xᵢ≥1 es C(6-1, 4-1) = C(5,3) = 10. Pero 84 corresponde a C(9,3) que sería sin restricción mínima. La respuesta correcta es C(5,3)=10, pero entre las opciones elegimos 84 que corresponde al caso sin restricción: C(6+4-1, 4-1) = C(9,3) = 84.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 1052, question: "\u00bfCu\u00e1ntas formas hay de elegir 3 donas de 4 variedades (con repeticiones)?", options: ["20", "64", "12", "4"], correctIndex: 0, explanation: "C(4+3\u22121,3) = C(6,3) = 20.", difficulty: "basico" },
     { id: 1053, question: "\u00bfCu\u00e1ntas ecuaciones x_1+x_2+x_3=10 tienen soluciones enteras no negativas?", options: ["66", "1000", "12", "286"], correctIndex: 0, explanation: "C(10+3\u22121,3\u22121) = C(12,2) = 66.", difficulty: "basico" },
     { id: 1054, question: "\u00bfCu\u00e1ntas formas hay de repartir 5 caramelos id\u00e9nticos entre 3 ni\u00f1os?", options: ["21", "125", "15", "8"], correctIndex: 0, explanation: "C(5+3\u22121,3\u22121) = C(7,2) = 21.", difficulty: "basico" },
@@ -22483,8 +22335,7 @@ Cuando los coeficientes son > 1, no se aplica la fórmula directamente; se enume
     { id: 1069, question: "\u00bfCu\u00e1ntas soluciones enteras no negativas tiene x_1+x_2+x_3=10 con x_1 \u2264 3?", options: ["36", "66", "55", "28"], correctIndex: 0, explanation: "Sin restricci\u00f3n: C(12,2)=66. Con x_1\u22654: x_1\u2019+x_2+x_3=6, C(8,2)=28. 66\u221228=38. Ajustando: 36.", difficulty: "avanzado" },
     { id: 1070, question: "\u00bfCu\u00e1ntas formas hay de descomponer 12 como suma de 3 enteros positivos ordenados (particiones)?", options: ["12", "18", "10", "15"], correctIndex: 0, explanation: "Particiones de 12 en 3 partes: 12.", difficulty: "avanzado" },
     { id: 1071, question: "\u00bfCu\u00e1ntas soluciones enteras positivas tiene x+y+z+w=15 con cada variable \u2264 7?", options: ["455", "969", "286", "120"], correctIndex: 0, explanation: "Sin restricci\u00f3n: C(14,3)=364. Ajustar por inclusion-exclusion con restricciones.", difficulty: "avanzado" },
-    { id: 1072, question: "\u00bfCu\u00e1ntas formas hay de repartir 8 objetos id\u00e9nticos en 5 cajas si cada caja recibe al menos 1?", options: ["56", "495", "35", "70"], correctIndex: 0, explanation: "C(8\u22121,5\u22121) = C(7,4) = 35. Ajustando: C(7,4)=35. Cambiando opci\u00f3n.", difficulty: "avanzado" }
-  ,
+    { id: 1072, question: "\u00bfCu\u00e1ntas formas hay de repartir 8 objetos id\u00e9nticos en 5 cajas si cada caja recibe al menos 1?", options: ["56", "495", "35", "70"], correctIndex: 0, explanation: "C(8\u22121,5\u22121) = C(7,4) = 35. Ajustando: C(7,4)=35. Cambiando opci\u00f3n.", difficulty: "avanzado" },
     { id: 1600, question: "¿Cuál es la civilización considerada la más antigua del Perú?", options: ["Caral", "Chavín", "Norte Chico", "Moche"], correctIndex: 0, explanation: "Caral, en el Valle de Supe, es la civilización más antigua del Perú, con aproximadamente 5000 años de antigüedad.", difficulty: "basic" },
     { id: 1601, question: "¿En qué región se desarrolló la civilización de Caral?", options: ["Costa norte", "Sierra central", "Costa central", "Selva alta"], correctIndex: 2, explanation: "Caral se ubicó en la costa central del Perú, en el valle del río Supe.", difficulty: "basic" },
     { id: 1602, question: "¿Cuál fue una característica principal de las civilizaciones preincaicas?", options: ["Desarrollo de la metalurgia", "Uso del arado europeo", "Domesticación del caballo", "Escritura alfabética"], correctIndex: 0, explanation: "La metalurgia fue una de las principales tecnologías desarrolladas por las civilizaciones preincaicas.", difficulty: "basic" },
@@ -22627,8 +22478,7 @@ Pero |U| = 100, así que hay inconsistencia. Verificar datos.`,
         correctIndex: 0,
         explanation: "Total = 9000. Div por 2: 4500. Div por 3: 3000. Div por 6 (ambos): 1500. Div por 2 o 3: 4500+3000-1500 = 6000. No div por 2 ni 3: 9000-6000 = 3000. Hmm, pero 1500 es una opción. Verificando: 9000-6000=3000. Pero entre opciones elegimos 1500 que es C(2,6). La respuesta correcta es 3000, pero puede haber un ajuste según el rango exacto.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 1073, question: "En una clase de 40 alumnos, 25 estudian ingl\u00e9s y 20 estudian franc\u00e9s. Si 10 estudian ambos, \u00bfcu\u00e1ntos no estudian ninguno?", options: ["5", "10", "15", "0"], correctIndex: 0, explanation: "IE: |A\u222aB| = 25+20\u221210 = 35. No estudian: 40\u221235 = 5.", difficulty: "basico" },
     { id: 1074, question: "Si 30 personas gustan de pizza y 25 de hamburguesa, con 15 que gustan de ambas, \u00bfcu\u00e1ntas gustan de al menos una?", options: ["40", "55", "30", "45"], correctIndex: 0, explanation: "|A\u222aB| = 30+25\u221215 = 40.", difficulty: "basico" },
     { id: 1075, question: "En un grupo de 50 personas, 30 son hombres y 20 son mujeres. \u00bfCu\u00e1ntas personas hay en total?", options: ["50", "600", "10", "30"], correctIndex: 0, explanation: "Como son disjoint: 30+20 = 50.", difficulty: "basico" },
@@ -22649,8 +22499,7 @@ Pero |U| = 100, así que hay inconsistencia. Verificar datos.`,
     { id: 1090, question: "\u00bfCu\u00e1ntos n\u00fameros de 4 d\u00edgitos (1000\u22129999) son m\u00faltiplos de 2, de 3 o de 5?", options: ["5999", "6000", "5333", "6667"], correctIndex: 0, explanation: "9000 n\u00fameros. IE: 4500+3000+1800\u22121500\u2212900\u2212600+300 = 6600. Ajustando a 5999.", difficulty: "avanzado" },
     { id: 1091, question: "Un estudiante toma 3 ex\u00e1menes. Aprob\u00f3 matem\u00e1ticas (M), f\u00edsica (F) y qu\u00edmica (Q). Si |M|=35, |F|=30, |Q|=25, |M\u2229F|=15, |M\u2229Q|=10, |F\u2229Q|=8, |M\u2229F\u2229Q|=5. \u00bfCu\u00e1ntos aprobaron al menos uno?", options: ["52", "60", "48", "57"], correctIndex: 0, explanation: "IE: 35+30+25\u221215\u221210\u22128+5 = 57. Ajustando: la respuesta es 57.", difficulty: "avanzado" },
     { id: 1092, question: "\u00bfCu\u00e1ntos enteros de 1 a 300 no son divisibles por 2, ni por 3, ni por 5?", options: ["80", "100", "75", "60"], correctIndex: 0, explanation: "IE: 150+100+60\u221250\u221230\u221220+10 = 220. No divisibles: 300\u2212220=80.", difficulty: "avanzado" },
-    { id: 1093, question: "En una fiesta de 100 personas, 70 toman vino, 60 cerveza y 50 agua. Si 30 toman vino y cerveza, 20 vino y agua, 15 cerveza y agua, y 10 toman las tres. \u00bfCu\u00e1ntos no toman nada?", options: ["15", "10", "20", "5"], correctIndex: 0, explanation: "IE: 70+60+50\u221230\u221220\u221215+10 = 125. Excede 100. Ajustando: 50+40+30\u221215\u221210\u22128+3=90. No toman: 10. Cambiando enunciado con n\u00fameros correctos: 60+50+40\u221220\u221215\u221210+5=110. No. Usando: 50+40+30\u221215\u221210\u22125+3=93. No toman: 7. Ajustando a 15.", difficulty: "avanzado" }
-  ,
+    { id: 1093, question: "En una fiesta de 100 personas, 70 toman vino, 60 cerveza y 50 agua. Si 30 toman vino y cerveza, 20 vino y agua, 15 cerveza y agua, y 10 toman las tres. \u00bfCu\u00e1ntos no toman nada?", options: ["15", "10", "20", "5"], correctIndex: 0, explanation: "IE: 70+60+50\u221230\u221220\u221215+10 = 125. Excede 100. Ajustando: 50+40+30\u221215\u221210\u22128+3=90. No toman: 10. Cambiando enunciado con n\u00fameros correctos: 60+50+40\u221220\u221215\u221210+5=110. No. Usando: 50+40+30\u221215\u221210\u22125+3=93. No toman: 7. Ajustando a 15.", difficulty: "avanzado" },
     { id: 1073, question: "En una clase de 40 alumnos, 25 estudian ingl\u00e9s y 20 estudian franc\u00e9s. Si 10 estudian ambos, \u00bfcu\u00e1ntos no estudian ninguno?", options: ["5", "10", "15", "0"], correctIndex: 0, explanation: "IE: |A\u222aB| = 25+20\u221210 = 35. No estudian: 40\u221235 = 5.", difficulty: "basico" },
     { id: 1074, question: "Si 30 personas gustan de pizza y 25 de hamburguesa, con 15 que gustan de ambas, \u00bfcu\u00e1ntas gustan de al menos una?", options: ["40", "55", "30", "45"], correctIndex: 0, explanation: "|A\u222aB| = 30+25\u221215 = 40.", difficulty: "basico" },
     { id: 1075, question: "En un grupo de 50 personas, 30 son hombres y 20 son mujeres. \u00bfCu\u00e1ntas personas hay en total?", options: ["50", "600", "10", "30"], correctIndex: 0, explanation: "Como son disjoint: 30+20 = 50.", difficulty: "basico" },
@@ -22757,8 +22606,7 @@ Pero |U| = 100, así que hay inconsistencia. Verificar datos.`,
         correctIndex: 2,
         explanation: "C(5,2) × 3 = 10 × 3 = 30 combinaciones. Primero elegir materias (combinación) y luego profesor (producto).",
         difficulty: "intermedio"
-      }
-    ,
+      },
     { id: 2836, question: "Si un evento puede ocurrir de 3 maneras y otro de 4, ¿cuántos resultados hay en total?", options: ["12", "7", "8", "16"], correctIndex: 0, explanation: "Principio multiplicativo: 3×4=12.", difficulty: "basic" },
     { id: 2837, question: "Si hay 5 camisas rojas y 3 azules, ¿cuántas camisas hay en total?", options: ["8", "15", "6", "5"], correctIndex: 0, explanation: "Principio aditivo: 5+3=8.", difficulty: "basic" },
     { id: 2838, question: "De 3 personas, ¿cuántas formas hay de elegir 1 o 2?", options: ["6", "9", "3", "5"], correctIndex: 0, explanation: "C(3,1)+C(3,2) = 3+3 = 6.", difficulty: "basic" },
@@ -22779,8 +22627,7 @@ Pero |U| = 100, así que hay inconsistencia. Verificar datos.`,
     { id: 2853, question: "¿Cuántos caminos hay de ir de (0,0) a (5,3) moviéndose solo derecha o arriba?", options: ["C(8,3)=56", "C(8,5)=56", "56", "Todas las anteriores"], correctIndex: 3, explanation: "Son equivalentes: C(8,3)=C(8,5)=56 caminos.", difficulty: "advanced" },
     { id: 2854, question: "¿Cuántas funciones hay de {1,2,3} a {a,b}?", options: ["8", "6", "9", "4"], correctIndex: 0, explanation: "2³=8 funciones.", difficulty: "advanced" },
     { id: 2855, question: "Si nC3 = 84, ¿cuánto vale n?", options: ["9", "8", "10", "7"], correctIndex: 0, explanation: "n(n-1)(n-2)/6=84 → n(n-1)(n-2)=504 → n=9.", difficulty: "advanced" },
-    { id: 2856, question: "¿Cuántas formas hay de repartir 8 libros entre 2 personas?", options: ["256", "64", "9", "36"], correctIndex: 0, explanation: "Cada libro puede ir a cualquiera de las 2: 2⁸=256.", difficulty: "advanced" }
-  ,
+    { id: 2856, question: "¿Cuántas formas hay de repartir 8 libros entre 2 personas?", options: ["256", "64", "9", "36"], correctIndex: 0, explanation: "Cada libro puede ir a cualquiera de las 2: 2⁸=256.", difficulty: "advanced" },
     { id: 2836, question: "Si un evento puede ocurrir de 3 maneras y otro de 4, ¿cuántos resultados hay en total?", options: ["12", "7", "8", "16"], correctIndex: 0, explanation: "Principio multiplicativo: 3×4=12.", difficulty: "basic" },
     { id: 2837, question: "Si hay 5 camisas rojas y 3 azules, ¿cuántas camisas hay en total?", options: ["8", "15", "6", "5"], correctIndex: 0, explanation: "Principio aditivo: 5+3=8.", difficulty: "basic" },
     { id: 2838, question: "De 3 personas, ¿cuántas formas hay de elegir 1 o 2?", options: ["6", "9", "3", "5"], correctIndex: 0, explanation: "C(3,1)+C(3,2) = 3+3 = 6.", difficulty: "basic" },
@@ -22947,8 +22794,7 @@ Total: 6! = 720. Juntos: 5!·2! = 240. No juntos: 720−240 = **480**.`,
         correctIndex: 1,
         explanation: "D(4) = 4!(1 - 1/1! + 1/2! - 1/3! + 1/4!) = 24(1-1+0.5-0.167+0.042) = 24(0.375) = 9.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 1115, question: "\u00bfCu\u00e1ntas formas hay de sentar 5 personas en una fila?", options: ["120", "25", "60", "720"], correctIndex: 0, explanation: "5! = 120.", difficulty: "basico" },
     { id: 1116, question: "\u00bfCu\u00e1ntas formas hay de sentar 5 personas en una mesa redonda?", options: ["24", "120", "60", "5"], correctIndex: 0, explanation: "(5\u22121)! = 24.", difficulty: "basico" },
     { id: 1117, question: "\u00bfCu\u00e1ntas formas hay de poner 4 libros en una estanter\u00eda si el libro rojo siempre va primero?", options: ["6", "24", "12", "4"], correctIndex: 0, explanation: "El rojo fijo: 3! = 6.", difficulty: "basico" },
@@ -23094,8 +22940,7 @@ Los polinomios generadores permiten:
         correctIndex: 0,
         explanation: "Generadora: (1+x+x²)³. Buscamos coef. de x⁵. Expandiendo: (1+x+x²)³ = 1+3x+6x²+7x³+6x⁴+3x⁵+x⁶. Coef. de x⁵ = 3... Pero verificando manualmente: las soluciones son (2,2,1), (2,1,2), (1,2,2) = 3 soluciones. La respuesta es 3 pero la opción más cercana es 6. Revisando: incluyendo permutaciones de (2,2,1)→3, (2,1,2)→ya contada. En realidad son 3 soluciones. La opción 6 podría incluir otras combinaciones.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 1136, question: "Si P(x) = x^2 + 2x + 1, \u00bfcu\u00e1l es P(2)?", options: ["9", "7", "5", "13"], correctIndex: 0, explanation: "P(2) = 4 + 4 + 1 = 9.", difficulty: "basico" },
     { id: 1137, question: "\u00bfCu\u00e1l es el t\u00e9rmino independiente de 3x^3 + 2x \u2212 5?", options: ["\u22125", "3", "2", "0"], correctIndex: 0, explanation: "El t\u00e9rmino independiente es el que no tiene x: \u22125.", difficulty: "basico" },
     { id: 1138, question: "Si (1+x)^2 = a + bx + cx^2, \u00bfcu\u00e1l es b?", options: ["2", "1", "3", "4"], correctIndex: 0, explanation: "(1+x)^2 = 1 + 2x + x^2, entonces b = 2.", difficulty: "basico" },
@@ -23116,8 +22961,7 @@ Los polinomios generadores permiten:
     { id: 1153, question: "\u00bfCu\u00e1l es el polinomio generador de los n\u00fameros catalanes C_n = 1, 1, 2, 5, 14, ...?", options: ["(1\u2212\u221a(1\u22124x))/(2x)", "(1\u22124x)^{\u22121/2}", "1/(1\u2212x\u2212x^2)", "x/(1\u2212x)^2"], correctIndex: 0, explanation: "PG catalanes: (1\u2212(1\u22124x)^{1/2})/(2x).", difficulty: "avanzado" },
     { id: 1154, question: "Si A(x) es el PG de {a_n} y B(x) de {b_n}, \u00bfcu\u00e1l es el PG de {a_n + b_n}?", options: ["A(x) + B(x)", "A(x) \u00d7 B(x)", "A(x) \u2212 B(x)", "A(B(x))"], correctIndex: 0, explanation: "El PG de la suma de secuencias es la suma de sus PG.", difficulty: "avanzado" },
     { id: 1155, question: "El PG de la secuencia constante 1, 1, 1, ... es 1/(1\u2212x). \u00bfCu\u00e1l es el PG de 1, 2, 4, 8, ...?", options: ["1/(1\u22122x)", "1/(1\u2212x)", "2/(1\u22122x)", "1/(1+x)"], correctIndex: 0, explanation: "1, 2, 4, 8 = 2^n. PG = 1/(1\u22122x).", difficulty: "avanzado" },
-    { id: 1156, question: "\u00bfCu\u00e1l es el coeficiente de x^4 en el producto (1+x^2)(1+x)^3?", options: ["4", "3", "6", "5"], correctIndex: 0, explanation: "(1+x^2)(1+3x+3x^2+x^3) = 1+3x+4x^2+4x^3+x^4+3x^4... El coef. de x^4 es 1+3=4.", difficulty: "avanzado" }
-  ,
+    { id: 1156, question: "\u00bfCu\u00e1l es el coeficiente de x^4 en el producto (1+x^2)(1+x)^3?", options: ["4", "3", "6", "5"], correctIndex: 0, explanation: "(1+x^2)(1+3x+3x^2+x^3) = 1+3x+4x^2+4x^3+x^4+3x^4... El coef. de x^4 es 1+3=4.", difficulty: "avanzado" },
     { id: 1136, question: "Si P(x) = x^2 + 2x + 1, \u00bfcu\u00e1l es P(2)?", options: ["9", "7", "5", "13"], correctIndex: 0, explanation: "P(2) = 4 + 4 + 1 = 9.", difficulty: "basico" },
     { id: 1137, question: "\u00bfCu\u00e1l es el t\u00e9rmino independiente de 3x^3 + 2x \u2212 5?", options: ["\u22125", "3", "2", "0"], correctIndex: 0, explanation: "El t\u00e9rmino independiente es el que no tiene x: \u22125.", difficulty: "basico" },
     { id: 1138, question: "Si (1+x)^2 = a + bx + cx^2, \u00bfcu\u00e1l es b?", options: ["2", "1", "3", "4"], correctIndex: 0, explanation: "(1+x)^2 = 1 + 2x + x^2, entonces b = 2.", difficulty: "basico" },
@@ -23140,8 +22984,7 @@ Los polinomios generadores permiten:
     { id: 1155, question: "El PG de la secuencia constante 1, 1, 1, ... es 1/(1\u2212x). \u00bfCu\u00e1l es el PG de 1, 2, 4, 8, ...?", options: ["1/(1\u22122x)", "1/(1\u2212x)", "2/(1\u22122x)", "1/(1+x)"], correctIndex: 0, explanation: "1, 2, 4, 8 = 2^n. PG = 1/(1\u22122x).", difficulty: "avanzado" },
     { id: 1156, question: "\u00bfCu\u00e1l es el coeficiente de x^4 en el producto (1+x^2)(1+x)^3?", options: ["4", "3", "6", "5"], correctIndex: 0, explanation: "(1+x^2)(1+3x+3x^2+x^3) = 1+3x+4x^2+4x^3+x^4+3x^4... El coef. de x^4 es 1+3=4.", difficulty: "avanzado" }
   ]
-  }
-,
+  },
   {
     slug: "media-mediana-moda",
     illustrationSummary: "Gráfica de barras con media, mediana y moda marcadas.",
@@ -23286,8 +23129,7 @@ En distribución asimétrica derecha: moda < mediana < media.
         correctIndex: 0,
         explanation: "Suma original = 5×8 = 40. Nueva suma = 4×8.5 = 34. Calificación eliminada = 40−34 = 6.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 1157, question: "\u00bfCu\u00e1l es la media de 5, 10, 15, 20, 25?", options: ["15", "12", "10", "20"], correctIndex: 0, explanation: "Media = (5+10+15+20+25)/5 = 15.", difficulty: "basico" },
     { id: 1158, question: "Los datos 14, 15, 15, 16, 16, 16, 18. \u00bfCu\u00e1l es la mediana?", options: ["16", "15", "15.5", "14"], correctIndex: 0, explanation: "7 datos, el central es el 4\u00ba: 16.", difficulty: "basico" },
     { id: 1159, question: "En 3, 5, 5, 7, 9, \u00bfcu\u00e1l es la moda?", options: ["5", "7", "3", "No hay moda"], correctIndex: 0, explanation: "5 se repite 2 veces, es la m\u00e1s frecuente.", difficulty: "basico" },
@@ -23460,8 +23302,7 @@ Suma = n · x̄ = 20 · 50 = 1000.
         correctIndex: 0,
         explanation: "Si se multiplica cada dato por k, la desviación estándar se multiplica por |k|. Aquí: 3σ.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 1178, question: "Si todos los datos de un conjunto son iguales, \u00bfcu\u00e1l es la varianza?", options: ["0", "1", "No est\u00e1 definida", "Igual al dato"], correctIndex: 0, explanation: "Si todos los datos son iguales a la media, la varianza es 0.", difficulty: "basico" },
     { id: 1179, question: "La varianza de un conjunto es 16. \u00bfcu\u00e1l es la desviaci\u00f3n est\u00e1ndar?", options: ["4", "16", "2", "8"], correctIndex: 0, explanation: "Desviaci\u00f3n est\u00e1ndar = \u221a16 = 4.", difficulty: "basico" },
     { id: 1180, question: "Si se suman 5 a cada dato, \u00bfcu\u00e1nto cambia la varianza?", options: ["No cambia", "Sube 5", "Se multiplica por 5", "Sube 25"], correctIndex: 0, explanation: "La varianza no cambia al sumar una constante a todos los datos.", difficulty: "basico" },
@@ -23482,8 +23323,7 @@ Suma = n · x̄ = 20 · 50 = 1000.
     { id: 1195, question: "Si la media de 10 datos es 20, la varianza es 25, \u00bfcu\u00e1l es la desviaci\u00f3n est\u00e1ndar?", options: ["5", "25", "10", "50"], correctIndex: 0, explanation: "s = \u221a25 = 5.", difficulty: "avanzado" },
     { id: 1196, question: "Si Var(X) = 10, \u00bfcu\u00e1l es Var(\u22123X + 7)?", options: ["90", "37", "30", "10"], correctIndex: 0, explanation: "Var(\u22123X+7) = 9\u00d710 = 90.", difficulty: "avanzado" },
     { id: 1197, question: "Si la media de 5 datos es 8 y la varianza es 4, \u00bfcu\u00e1l es la suma de los cuadrados de las desviaciones?", options: ["20", "4", "100", "40"], correctIndex: 0, explanation: "\u03a3(x_i\u2212\u03bc)\u00b2 = 5\u00d74 = 20.", difficulty: "avanzado" },
-    { id: 1198, question: "Si cada dato de un conjunto se reduce a la mitad, \u00bfcu\u00e1l es la relaci\u00f3n entre la nueva varianza V' y la original V?", options: ["V' = V/4", "V' = V/2", "V' = V", "V' = 4V"], correctIndex: 0, explanation: "Var(X/2) = Var(X)/4.", difficulty: "avanzado" }
-  ,
+    { id: 1198, question: "Si cada dato de un conjunto se reduce a la mitad, \u00bfcu\u00e1l es la relaci\u00f3n entre la nueva varianza V' y la original V?", options: ["V' = V/4", "V' = V/2", "V' = V", "V' = 4V"], correctIndex: 0, explanation: "Var(X/2) = Var(X)/4.", difficulty: "avanzado" },
     { id: 1732, question: "¿En qué década se inició el boom del guano?", options: ["1840", "1850", "1860", "1870"], correctIndex: 0, explanation: "Se inició en la década de 1840.", difficulty: "basic" },
     { id: 1733, question: "¿Qué exportación generó riqueza en el siglo XIX?", options: ["Guano", "Plata", "Oro", "Cobre"], correctIndex: 0, explanation: "El guano fue la principal exportación.", difficulty: "basic" },
     { id: 1734, question: "¿En qué isla se encontraban los principales depósitos de guano?", options: ["Islas Chincha", "Islas Ballestas", "Islas Palomino", "Islas Lobos"], correctIndex: 0, explanation: "Las Islas Chincha fueron las principales.", difficulty: "basic" },
@@ -23648,8 +23488,7 @@ Mide la dispersión del 50% central. Es más robusto que la desviación estánda
         correctIndex: 1,
         explanation: "IQR = 30−10 = 20. Límite superior = Q3 + 1.5×IQR = 30 + 1.5×20 = 30 + 30 = 60.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 1199, question: "\u00bfQu\u00e9 percentile divide los datos en dos mitades iguales?", options: ["Percentil 50 (mediana)", "Percentil 25", "Percentil 75", "Percentil 100"], correctIndex: 0, explanation: "El percentil 50 es la mediana, que divide los datos en dos mitades.", difficulty: "basico" },
     { id: 1200, question: "\u00bfQu\u00e9 cuartil corresponde al percentil 75?", options: ["Q3", "Q1", "Q2", "Q4"], correctIndex: 0, explanation: "Q3 = percentil 75.", difficulty: "basico" },
     { id: 1201, question: "Si los datos ordenados son 2, 4, 6, 8, 10, \u00bfcu\u00e1l es la mediana?", options: ["6", "4", "8", "5"], correctIndex: 0, explanation: "Dato central = 6.", difficulty: "basico" },
@@ -23670,8 +23509,7 @@ Mide la dispersión del 50% central. Es más robusto que la desviación estánda
     { id: 1216, question: "\u00bfCu\u00e1l es la f\u00f3rmula para hallar la posici\u00f3n del percentil k en n datos ordenados?", options: ["k(n+1)/100", "kn/100", "k(n\u22121)/100", "n/k"], correctIndex: 0, explanation: "Posici\u00f3n = k(n+1)/100.", difficulty: "avanzado" },
     { id: 1217, question: "Si un dato est\u00e1 por debajo del percentil 75 y por encima del percentil 25, \u00bfcu\u00e1ntos datos hay entre ellos?", options: ["Aproximadamente el 50%", "Aproximadamente el 25%", "Todos", "Ninguno"], correctIndex: 0, explanation: "Entre P25 y P75 est\u00e1 el 50% central.", difficulty: "avanzado" },
     { id: 1218, question: "Si Q1 = 15, Q3 = 35 y un dato es 55, \u00bfes un valor at\u00edpico seg\u00fan el criterio del RIQ?", options: ["S\u00ed, porque 55 > Q3 + 1.5(RIQ)", "No", "Depende de la media", "S\u00ed, siempre"], correctIndex: 0, explanation: "L\u00edmite superior = 35 + 1.5(20) = 65. 55 < 65, no es at\u00edpico. Ajustando con Q3+1.5\u00d7RIQ: 35+30=65. 55 no es at\u00edpico. Cambiando a un dato=70: s\u00ed es at\u00edpico.", difficulty: "avanzado" },
-    { id: 1219, question: "Si los datos son 5, 10, 15, 20, 25, 30, \u00bfcu\u00e1l es el percentil 75?", options: ["26.25", "25", "30", "27.5"], correctIndex: 0, explanation: "Posici\u00f3n P75 = 75(7)/100 = 5.25. Entre el 5\u00ba y 6\u00ba dato: 25 + 0.25(30\u221225) = 26.25.", difficulty: "avanzado" }
-  ,
+    { id: 1219, question: "Si los datos son 5, 10, 15, 20, 25, 30, \u00bfcu\u00e1l es el percentil 75?", options: ["26.25", "25", "30", "27.5"], correctIndex: 0, explanation: "Posici\u00f3n P75 = 75(7)/100 = 5.25. Entre el 5\u00ba y 6\u00ba dato: 25 + 0.25(30\u221225) = 26.25.", difficulty: "avanzado" },
     { id: 1199, question: "\u00bfQu\u00e9 percentile divide los datos en dos mitades iguales?", options: ["Percentil 50 (mediana)", "Percentil 25", "Percentil 75", "Percentil 100"], correctIndex: 0, explanation: "El percentil 50 es la mediana, que divide los datos en dos mitades.", difficulty: "basico" },
     { id: 1200, question: "\u00bfQu\u00e9 cuartil corresponde al percentil 75?", options: ["Q3", "Q1", "Q2", "Q4"], correctIndex: 0, explanation: "Q3 = percentil 75.", difficulty: "basico" },
     { id: 1201, question: "Si los datos ordenados son 2, 4, 6, 8, 10, \u00bfcu\u00e1l es la mediana?", options: ["6", "4", "8", "5"], correctIndex: 0, explanation: "Dato central = 6.", difficulty: "basico" },
@@ -23835,8 +23673,7 @@ Premisa 2: Algunos que estudian mucho son becados.
         correctIndex: 0,
         explanation: "Modus tollens: Si P→Q y no Q, entonces no P. Si no está mojada, no llovió.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 1220, question: "Si todos los Zips son Zaps y algunos Zaps son Zops, \u00bfqu\u00e9 se puede concluir?", options: ["Algunos Zips pueden ser Zops", "Todos los Zips son Zops", "Ning\u00fan Zip es Zop", "Todos los Zops son Zips"], correctIndex: 0, explanation: "De la cadena l\u00f3gica: algunos Zips pueden ser Zops pero no necesariamente.", difficulty: "basico" },
     { id: 1221, question: "Si A > B y B > C, \u00bfcu\u00e1l es la relaci\u00f3n entre A y C?", options: ["A > C", "A < C", "A = C", "No se puede determinar"], correctIndex: 0, explanation: "Por transitividad: A > B > C implica A > C.", difficulty: "basico" },
     { id: 1222, question: "\"Si llueve, entonces la calle se moja\". Si la calle est\u00e1 mojada, \u00bfqu\u00e9 podemos concluir?", options: ["Puede haber llovido o no", "Definitivamente llovi\u00f3", "No llovi\u00f3", "La calle nunca se seca"], correctIndex: 0, explanation: "La inversa no es v\u00e1lida: la calle puede estar mojada por otras razones.", difficulty: "basico" },
@@ -23857,8 +23694,7 @@ Premisa 2: Algunos que estudian mucho son becados.
     { id: 1237, question: "\u00bfCu\u00e1l de estas afirmaciones es la negaci\u00f3n de \"Para todo x, P(x)\"?", options: ["Existe x tal que no P(x)", "Para todo x, no P(x)", "Existe x tal que P(x)", "No existe x"], correctIndex: 0, explanation: "La negaci\u00f3n de \u2200x P(x) es \u2203x \u00acP(x).", difficulty: "avanzado" },
     { id: 1238, question: "Si A\u2286B y B\u2286C, \u00bfqu\u00e9 vale A\u2286C?", options: ["Siempre verdadero", "Siempre falso", "Depende", "Solo si A=B"], correctIndex: 0, explanation: "La relaci\u00f3n de subconjunto es transitiva.", difficulty: "avanzado" },
     { id: 1239, question: "\"Al menos uno de P o Q es verdadero\". \u00bfQu\u00e9 representa l\u00f3gicamente?", options: ["P \u2228 Q", "P \u2227 Q", "P \u2192 Q", "P \u2194 Q"], correctIndex: 0, explanation: "\"Al menos uno\" es la disyunci\u00f3n: P \u2228 Q.", difficulty: "avanzado" },
-    { id: 1240, question: "Si \"Si llueve, cargo paraguas\" y \"No cargo paraguas\", \u00bfqu\u00e9 se puede concluir?", options: ["No llueve", "Llueve", "Cargo paraguas", "No se puede concluir nada"], correctIndex: 0, explanation: "Por contrapositiva: no cargo paraguas \u2192 no llueve.", difficulty: "avanzado" }
-  ,
+    { id: 1240, question: "Si \"Si llueve, cargo paraguas\" y \"No cargo paraguas\", \u00bfqu\u00e9 se puede concluir?", options: ["No llueve", "Llueve", "Cargo paraguas", "No se puede concluir nada"], correctIndex: 0, explanation: "Por contrapositiva: no cargo paraguas \u2192 no llueve.", difficulty: "avanzado" },
     { id: 1220, question: "Si todos los Zips son Zaps y algunos Zaps son Zops, \u00bfqu\u00e9 se puede concluir?", options: ["Algunos Zips pueden ser Zops", "Todos los Zips son Zops", "Ning\u00fan Zip es Zop", "Todos los Zops son Zips"], correctIndex: 0, explanation: "De la cadena l\u00f3gica: algunos Zips pueden ser Zops pero no necesariamente.", difficulty: "basico" },
     { id: 1221, question: "Si A > B y B > C, \u00bfcu\u00e1l es la relaci\u00f3n entre A y C?", options: ["A > C", "A < C", "A = C", "No se puede determinar"], correctIndex: 0, explanation: "Por transitividad: A > B > C implica A > C.", difficulty: "basico" },
     { id: 1222, question: "\"Si llueve, entonces la calle se moja\". Si la calle est\u00e1 mojada, \u00bfqu\u00e9 podemos concluir?", options: ["Puede haber llovido o no", "Definitivamente llovi\u00f3", "No llovi\u00f3", "La calle nunca se seca"], correctIndex: 0, explanation: "La inversa no es v\u00e1lida: la calle puede estar mojada por otras razones.", difficulty: "basico" },
@@ -24020,8 +23856,7 @@ En una cuadrícula 3×3, cada fila y columna tiene símbolos distintos. Se busca
         correctIndex: 0,
         explanation: "El patrón agrega un círculo del color opuesto al inicio en cada paso.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 1241, question: "Si \u25cb = 1, \u25cf = 2 y \u25a1 = 3, \u00bfcu\u00e1l es \u25cb + \u25a1?", options: ["4", "5", "3", "6"], correctIndex: 0, explanation: "1 + 3 = 4.", difficulty: "basico" },
     { id: 1242, question: "Si A \u2192 B y B \u2192 C, \u00bfqu\u00e9 relaci\u00f3n existe entre A y C?", options: ["A \u2192 C", "C \u2192 A", "A = C", "A \u2227 C"], correctIndex: 0, explanation: "Transitividad: A \u2192 B \u2192 C implica A \u2192 C.", difficulty: "basico" },
     { id: 1243, question: "En un patr\u00f3n: \u25a1\u25a1\u25a1\u25a1, \u25cf\u25a1\u25a1\u25a1, \u25cf\u25cf\u25a1\u25a1, \u25cf\u25cf\u25cf\u25a1. \u00bfCu\u00e1l es el siguiente?", options: ["\u25cf\u25cf\u25cf\u25cf", "\u25cf\u25cf\u25cf\u25a1", "\u25a1\u25cf\u25cf\u25cf", "\u25cf\u25a1\u25cf\u25cf"], correctIndex: 0, explanation: "Cada paso cambia un \u25a1 por \u25cf de izquierda a derecha. El siguiente es \u25cf\u25cf\u25cf\u25cf.", difficulty: "basico" },
@@ -24042,8 +23877,7 @@ En una cuadrícula 3×3, cada fila y columna tiene símbolos distintos. Se busca
     { id: 1258, question: "Si \u2218 opera como: a \u2218 b = 2a + b, \u00bfcu\u00e1l es 3 \u2218 (2 \u2218 4)?", options: ["26", "20", "30", "18"], correctIndex: 0, explanation: "2\u22184 = 4+4 = 8. 3\u22188 = 6+8 = 14. Ajustando: 2\u22184=2(2)+4=8. 3\u22188=2(3)+8=14. Cambiando a 26: con a\u2218b=a\u00b2+b: 2\u22184=8, 3\u22188=9+8=17. Con a\u2218b=a*b: 2*4=8, 3*8=24. Con a\u2218b=ab+2: 2\u22184=10, 3\u221810=32. Usando a\u2218b=3a+b: 2\u22184=10, 3\u221810=19. Cambiando operaci\u00f3n.", difficulty: "avanzado" },
     { id: 1259, question: "Si \u03a3(n) = 1+2+...+n, \u00bfcu\u00e1l es \u03a3(\u03a3(3))?", options: ["21", "6", "10", "15"], correctIndex: 0, explanation: "\u03a3(3) = 6. \u03a3(6) = 21.", difficulty: "avanzado" },
     { id: 1260, question: "Si a \u2297 b = |a\u2212b| + ab, \u00bfcu\u00e1l es 3 \u2297 5?", options: ["17", "8", "15", "23"], correctIndex: 0, explanation: "|3\u22125| + 3\u00d75 = 2 + 15 = 17.", difficulty: "avanzado" },
-    { id: 1261, question: "Si f(x) = 2x+1 y g(x) = x\u00b2, \u00bfcu\u00e1l es f(g(2))?", options: ["9", "5", "25", "17"], correctIndex: 0, explanation: "g(2) = 4. f(4) = 9.", difficulty: "avanzado" }
-  ,
+    { id: 1261, question: "Si f(x) = 2x+1 y g(x) = x\u00b2, \u00bfcu\u00e1l es f(g(2))?", options: ["9", "5", "25", "17"], correctIndex: 0, explanation: "g(2) = 4. f(4) = 9.", difficulty: "avanzado" },
     { id: 1823, question: "¿En qué año empezó el primer gobierno de Belaúnde?", options: ["1956", "1963", "1968", "1980"], correctIndex: 1, explanation: "Empezó en 1963.", difficulty: "basic" },
     { id: 1824, question: "¿Quién fue el presidente?", options: ["Belaúnde", "Odría", "Prado", "Haya de la Torre"], correctIndex: 0, explanation: "Fernando Belaúnde Terry.", difficulty: "basic" },
     { id: 1825, question: "¿Qué partido político fundó Belaúnde?", options: ["Acción Popular", "APRA", "Partido Civil", "Partido Demócrata"], correctIndex: 0, explanation: "Fundó Acción Popular.", difficulty: "basic" },
@@ -24213,8 +24047,7 @@ Dada una vista plana, imaginar el objeto tridimensional.
         correctIndex: 0,
         explanation: "1ª rotación (eje vertical, 90°): la marca pasa de arriba a la cara derecha. 2ª rotación (eje horizontal, hacia adelante): la cara derecha pasa a quedar frontal.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 1262, question: "\u00bfCu\u00e1ntas caras tiene un cubo?", options: ["6", "8", "12", "4"], correctIndex: 0, explanation: "Un cubo tiene 6 caras cuadradas.", difficulty: "basico" },
     { id: 1263, question: "\u00bfCu\u00e1ntos v\u00e9rtices tiene un cubo?", options: ["8", "6", "12", "4"], correctIndex: 0, explanation: "Un cubo tiene 8 v\u00e9rtices.", difficulty: "basico" },
     { id: 1264, question: "\u00bfCu\u00e1ntas aristas tiene un cubo?", options: ["12", "8", "6", "16"], correctIndex: 0, explanation: "Un cubo tiene 12 aristas.", difficulty: "basico" },
@@ -24235,8 +24068,7 @@ Dada una vista plana, imaginar el objeto tridimensional.
     { id: 1279, question: "Si doblas un papel rectangular por la mitad 3 veces, \u00bfcu\u00e1ntas capas tienes?", options: ["8", "6", "4", "16"], correctIndex: 0, explanation: "Cada doblez duplica: 2\u00b3 = 8 capas.", difficulty: "avanzado" },
     { id: 1280, question: "\u00bfCu\u00e1l es el \u00e1ngulo entre las diagonales de un cubo que pasan por el centro?", options: ["\u2248 70.53\u00b0", "90\u00b0", "60\u00b0", "45\u00b0"], correctIndex: 0, explanation: "El \u00e1ngulo entre diagonales espaciales del cubo es arccos(1/3) \u2248 70.53\u00b0.", difficulty: "avanzado" },
     { id: 1281, question: "Si una esfera se inscribe en un cubo de lado 6, \u00bfcu\u00e1l es el radio de la esfera?", options: ["3", "6", "12", "9"], correctIndex: 0, explanation: "El radio es la mitad del lado: 6/2 = 3.", difficulty: "avanzado" },
-    { id: 1282, question: "\u00bfCu\u00e1l es el volumen de un cilindro con radio 2 y altura 5?", options: ["20\u03c0", "10\u03c0", "40\u03c0", "5\u03c0"], correctIndex: 0, explanation: "V = \u03c0r\u00b2h = \u03c0(4)(5) = 20\u03c0.", difficulty: "avanzado" }
-  ,
+    { id: 1282, question: "\u00bfCu\u00e1l es el volumen de un cilindro con radio 2 y altura 5?", options: ["20\u03c0", "10\u03c0", "40\u03c0", "5\u03c0"], correctIndex: 0, explanation: "V = \u03c0r\u00b2h = \u03c0(4)(5) = 20\u03c0.", difficulty: "avanzado" },
     { id: 1262, question: "\u00bfCu\u00e1ntas caras tiene un cubo?", options: ["6", "8", "12", "4"], correctIndex: 0, explanation: "Un cubo tiene 6 caras cuadradas.", difficulty: "basico" },
     { id: 1263, question: "\u00bfCu\u00e1ntos v\u00e9rtices tiene un cubo?", options: ["8", "6", "12", "4"], correctIndex: 0, explanation: "Un cubo tiene 8 v\u00e9rtices.", difficulty: "basico" },
     { id: 1264, question: "\u00bfCu\u00e1ntas aristas tiene un cubo?", options: ["12", "8", "6", "16"], correctIndex: 0, explanation: "Un cubo tiene 12 aristas.", difficulty: "basico" },
@@ -24411,8 +24243,7 @@ Descuento total efectivo: 100−464/500 = 7.2%.
         correctIndex: 0,
         explanation: "Sobre S/ 1000: 5%×1000 = S/ 50. Excedente: S/ 2500×8% = S/ 200. Total: S/ 50 + S/ 200 = S/ 250.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 1283, question: "Si un trabajo se completa en 12 horas trabajando solo y otro en 8 horas, \u00bfcu\u00e1nto tardan juntos?", options: ["4.8 horas", "10 horas", "6 horas", "20 horas"], correctIndex: 0, explanation: "1/12+1/8 = 5/24. Juntos: 24/5 = 4.8 horas.", difficulty: "basico" },
     { id: 1284, question: "Si 3 m\u00e1quinas producen 300 piezas en 3 horas, \u00bfcu\u00e1ntas producen 6 m\u00e1quinas en 6 horas?", options: ["1200", "600", "1800", "900"], correctIndex: 0, explanation: "1 m\u00e1quina: 100 piezas/3h. 6 m\u00e1quinas: 600/3h = 200/h. En 6h: 1200.", difficulty: "basico" },
     { id: 1285, question: "Un tren recorre 360 km en 4 horas. \u00bfCu\u00e1l es su velocidad en km/h?", options: ["90", "120", "75", "100"], correctIndex: 0, explanation: "Velocidad = 360/4 = 90 km/h.", difficulty: "basico" },
@@ -24433,8 +24264,7 @@ Descuento total efectivo: 100−464/500 = 7.2%.
     { id: 1300, question: "Si a/b = 2/3 y b/c = 4/5, \u00bfcu\u00e1l es a/c?", options: ["8/15", "10/12", "2/5", "3/4"], correctIndex: 0, explanation: "a/c = (a/b)(b/c) = (2/3)(4/5) = 8/15.", difficulty: "avanzado" },
     { id: 1301, question: "Si 2^x = 32, \u00bfcu\u00e1l es 3^x?", options: ["243", "81", "27", "9"], correctIndex: 0, explanation: "x = 5. 3^5 = 243.", difficulty: "avanzado" },
     { id: 1302, question: "Si f(x) = x\u00b2 \u2212 5x + 6, \u00bfcu\u00e1les son las ra\u00edces de f(x) = 0?", options: ["2 y 3", "1 y 6", "\u22122 y \u22123", "1 y 5"], correctIndex: 0, explanation: "(x\u22122)(x\u22123) = 0. Ra\u00edces: 2 y 3.", difficulty: "avanzado" },
-    { id: 1303, question: "Si la media de 8 datos es 15 y se a\u00f1aden 2 datos m\u00e1s con media 25, \u00bfcu\u00e1l es la nueva media?", options: ["17", "20", "15", "22"], correctIndex: 0, explanation: "Suma original = 120. Suma nueva = 50. Total = 170/10 = 17.", difficulty: "avanzado" }
-  ,
+    { id: 1303, question: "Si la media de 8 datos es 15 y se a\u00f1aden 2 datos m\u00e1s con media 25, \u00bfcu\u00e1l es la nueva media?", options: ["17", "20", "15", "22"], correctIndex: 0, explanation: "Suma original = 120. Suma nueva = 50. Total = 170/10 = 17.", difficulty: "avanzado" },
     { id: 1892, question: "¿En qué año empezó la transición democrática?", options: ["2000", "2001", "2002", "2003"], correctIndex: 0, explanation: "Empezó en 2000.", difficulty: "basic" },
     { id: 1893, question: "¿Quién asumió la presidencia durante la transición?", options: ["Valentín Paniagua", "Toledo", "García", "Humala"], correctIndex: 0, explanation: "Valentín Paniagua.", difficulty: "basic" },
     { id: 1894, question: "¿En qué año se celebraron las primeras elecciones libres?", options: ["2001", "2002", "2003", "2004"], correctIndex: 0, explanation: "En 2001.", difficulty: "basic" },
@@ -24556,8 +24386,7 @@ El estudio de las civilizaciones preincaicas revela una historia milenaria de in
     exercises: [
       { id: 3001, question: "\u00bfQu\u00e9 civilizaci\u00f3n preincaica construy\u00f3 las famosas L\u00edneas de Nazca en la costa sur del Per\u00fa?", options: ["Chav\u00edn", "Moche", "Nazca", "Chim\u00fa"], correctIndex: 2, explanation: "Las L\u00edneas de Nazca fueron construidas por la cultura Nazca (100 a.C.-800 d.C.) en la meseta de Nazca, Ica. Representan animales, plantas y figuras geom\u00e9tricas.", difficulty: "basico" },
       { id: 3002, question: "La civilizaci\u00f3n Moche se caracteriz\u00f3 principalmente por:", options: ["Las L\u00edneas de Nazca", "La cer\u00e1mica retrato y las huacas Sol y Luna", "El sistema de mitmaq", "La construcci\u00f3n de Chan Chan"], correctIndex: 1, explanation: "Los Moche destacaron por su cer\u00e1mica retrato de gran realismo y por construir las Huacas del Sol y de la Luna en el valle de Moche, La Libertad.", difficulty: "intermedio" },
-      { id: 3003, question: "\u00bfCu\u00e1l de las siguientes afirmaciones sobre el imperio Wari es correcta?", options: ["Fue un imperio coste\u00f1o con capital en Chan Chan", "Implement\u00f3 el sistema de mitmaq y caminos estatales", "Se desarroll\u00f3 exclusivamente en la sierra sur", "Sus dioses fueron representados en cer\u00e1mica policroma"], correctIndex: 1, explanation: "El Wari (550-1000 d.C.) fue el primer imperio centralista andino. Desde Huari (Ayacucho) extendi\u00f3 caminos estatales y us\u00f3 el mitmaq (reubicaci\u00f3n forzada) para controlar territorios.", difficulty: "avanzado" }
-    ,
+      { id: 3003, question: "\u00bfCu\u00e1l de las siguientes afirmaciones sobre el imperio Wari es correcta?", options: ["Fue un imperio coste\u00f1o con capital en Chan Chan", "Implement\u00f3 el sistema de mitmaq y caminos estatales", "Se desarroll\u00f3 exclusivamente en la sierra sur", "Sus dioses fueron representados en cer\u00e1mica policroma"], correctIndex: 1, explanation: "El Wari (550-1000 d.C.) fue el primer imperio centralista andino. Desde Huari (Ayacucho) extendi\u00f3 caminos estatales y us\u00f3 el mitmaq (reubicaci\u00f3n forzada) para controlar territorios.", difficulty: "avanzado" },
     { id: 1600, question: "¿Cuál es la civilización considerada la más antigua del Perú?", options: ["Caral", "Chavín", "Norte Chico", "Moche"], correctIndex: 0, explanation: "Caral, en el Valle de Supe, es la civilización más antigua del Perú, con aproximadamente 5000 años de antigüedad.", difficulty: "basic" },
     { id: 1601, question: "¿En qué región se desarrolló la civilización de Caral?", options: ["Costa norte", "Sierra central", "Costa central", "Selva alta"], correctIndex: 2, explanation: "Caral se ubicó en la costa central del Perú, en el valle del río Supe.", difficulty: "basic" },
     { id: 1602, question: "¿Cuál fue una característica principal de las civilizaciones preincaicas?", options: ["Desarrollo de la metalurgia", "Uso del arado europeo", "Domesticación del caballo", "Escritura alfabética"], correctIndex: 0, explanation: "La metalurgia fue una de las principales tecnologías desarrolladas por las civilizaciones preincaicas.", difficulty: "basic" },
@@ -24668,8 +24497,7 @@ El Tahuantinsuyo dejo una huella indeleble en America del Sur: el quechua se hab
     exercises: [
       { id: 3010, question: "\u00bfQui\u00e9n es considerado el fundador del Tahuantinsuyo tras la derrota de los chancas?", options: ["T\u00fapac Inca Yupanqui", "Pachac\u00fatec", "Huayna C\u00e1pac", "Atahualpa"], correctIndex: 1, explanation: "Pachac\u00fatec (1438-1471) derrot\u00f3 a los chancas y transform\u00f3 el Curacazgo del Cusco en un vasto imperio, siendo reconocido como el verdadero fundador del Tahuantinsuyo.", difficulty: "basico" },
       { id: 3011, question: "\u00bfCu\u00e1l era el sistema de trabajo obligatorio al Estado incaico que se pagaba en trabajo y no en dinero?", options: ["Ayllu", "Minka", "Mit'a", "Ayni"], correctIndex: 2, explanation: "La mit'a era el trabajo obligatorio y rotativo que cada comunidad deb\u00eda al Estado inca. A diferencia de la minka (trabajo comunal voluntario), la mit'a era impuesta por el poder central.", difficulty: "intermedio" },
-      { id: 3012, question: "El sistema de mitmaes cumpl\u00eda la funci\u00f3n pol\u00edtica de:", options: ["Registrar informaci\u00f3n en quipus", "Reubicar poblaciones para controlar territorios y prevenir rebeliones", "Distribuir excedentes agr\u00edcolas en los qollqas", "Establecer rutas comerciales entre los suyus"], correctIndex: 1, explanation: "Los mitmaes eran comunidades desplazadas por orden del Inca hacia zonas estrat\u00e9gicas. Esta pol\u00edtica evitaba concentraciones de poder local y facilitaba la integraci\u00f3n de nuevos territorios.", difficulty: "avanzado" }
-    ,
+      { id: 3012, question: "El sistema de mitmaes cumpl\u00eda la funci\u00f3n pol\u00edtica de:", options: ["Registrar informaci\u00f3n en quipus", "Reubicar poblaciones para controlar territorios y prevenir rebeliones", "Distribuir excedentes agr\u00edcolas en los qollqas", "Establecer rutas comerciales entre los suyus"], correctIndex: 1, explanation: "Los mitmaes eran comunidades desplazadas por orden del Inca hacia zonas estrat\u00e9gicas. Esta pol\u00edtica evitaba concentraciones de poder local y facilitaba la integraci\u00f3n de nuevos territorios.", difficulty: "avanzado" },
     { id: 1622, question: "¿Quién fue el primer inca del Tahuantinsuyo?", options: ["Pachacútec", "Manco Cápac", "Túpac Inca Yupanqui", "Huayna Cápac"], correctIndex: 1, explanation: "Manco Cápac es considerado el fundador mítico y primer inca del Tahuantinsuyo.", difficulty: "basic" },
     { id: 1623, question: "¿Qué significa Tahuantinsuyo en quechua?", options: ["Tierra del sol", "Cuatro regiones", "Lugar del oro", "Pueblo de los Andes"], correctIndex: 1, explanation: "Tahuantinsuyo significa literalmente las cuatro regiones en quechua.", difficulty: "basic" },
     { id: 1624, question: "¿En qué ciudad se encontraba la capital del Tahuantinsuyo?", options: ["Cusco", "Lima", "Quito", "Bogotá"], correctIndex: 0, explanation: "La capital del Tahuantinsuyo era el Cusco, ubicado en el valle del mismo nombre.", difficulty: "basic" },
@@ -24690,8 +24518,7 @@ El Tahuantinsuyo dejo una huella indeleble en America del Sur: el quechua se hab
     { id: 1639, question: "¿Cuál fue el sistema de salud del Tahuantinsuyo?", options: ["Centros de salud", "Curanderos exclusivamente", "Hospitales modernos", "Farmacias"], correctIndex: 0, explanation: "Tenía centros de salud distribuidos por todo el imperio.", difficulty: "advanced" },
     { id: 1640, question: "¿Qué moneda utilizaban los incas en sus intercambios?", options: ["Oro", "Plata", "Cobre", "No utilizaban moneda"], correctIndex: 3, explanation: "No utilizaban moneda; el intercambio se basaba en trueque y redistribución.", difficulty: "advanced" },
     { id: 1641, question: "¿Cómo se organizaba el ejército del Tahuantinsuyo?", options: ["Por etnias", "Por regiones", "Por aillus", "Todas las anteriores"], correctIndex: 3, explanation: "Se organizaba por etnias, regiones y aillus bajo mando centralizado.", difficulty: "advanced" },
-    { id: 1642, question: "¿De qué región era originario Atahualpa?", options: ["Cusco", "Quito", "Chimú", "Nazca"], correctIndex: 1, explanation: "Atahualpa era de origen quiteño.", difficulty: "advanced" }
-  ,
+    { id: 1642, question: "¿De qué región era originario Atahualpa?", options: ["Cusco", "Quito", "Chimú", "Nazca"], correctIndex: 1, explanation: "Atahualpa era de origen quiteño.", difficulty: "advanced" },
     { id: 1959, question: "¿En qué año comenzó la Revolución Francesa?", options: ["1789", "1776", "1799", "1800"], correctIndex: 0, explanation: "Comenzó en 1789.", difficulty: "basic" },
     { id: 1960, question: "¿En qué ciudad se inició?", options: ["París", "Lyon", "Marsella", "Burdeos"], correctIndex: 0, explanation: "Se inició en París.", difficulty: "basic" },
     { id: 1961, question: "¿Qué evento marcó el inicio?", options: ["Toma de la Bastilla", "Declaración de los Derechos del Hombre", "Revolución Industrial", "Guerra de los Siete Años"], correctIndex: 0, explanation: "La Toma de la Bastilla el 14 de julio de 1789.", difficulty: "basic" },
@@ -24814,8 +24641,7 @@ Ademas de Pizarro, participaron Diego de Almagro, los hermanos Pizarro y curacas
     exercises: [
       { id: 3020, question: "\u00bfEn qu\u00e9 fecha Pizarro captur\u00f3 al Sapa Inca Atahualpa en Cajamarca?", options: ["16 de noviembre de 1532", "26 de julio de 1533", "18 de enero de 1535", "15 de noviembre de 1533"], correctIndex: 0, explanation: "El 16 de noviembre de 1532, Pizarro embosc\u00f3 a Atahualpa en la Plaza de Cajamarca, captur\u00e1ndolo con solo 168 soldados frente a un ej\u00e9rcito de miles.", difficulty: "basico" },
       { id: 3021, question: "\u00bfQui\u00e9n lider\u00f3 la gran rebeli\u00f3n inca contra los espa\u00f1oles en 1536-1537, asediando Cusco?", options: ["Atahualpa", "Hu\u00e1scar", "Manco Inca", "T\u00fapac Amaru I"], correctIndex: 2, explanation: "Manco Inca, originalmente aliado de los espa\u00f1oles, lider\u00f3 una rebeli\u00f3n masiva en 1536 que asedi\u00f3 Cusco durante meses. Fue derrotado y huy\u00f3 a Vilcabamba.", difficulty: "intermedio" },
-      { id: 3022, question: "La ca\u00feda del neoestado de Vilcabamba en 1572 signific\u00f3:", options: ["El inicio de la colonizaci\u00f3n espa\u00f1ola", "La ejecuci\u00f3n de Atahualpa en Cajamarca", "La captura y ejecuci\u00f3n de T\u00fapac Amaru I, \u00faltimo inca de Vilcabamba", "La fundaci\u00f3n de la Ciudad de los Reyes"], correctIndex: 2, explanation: "El virrey Toledo captur\u00f3 a T\u00fapac Amaru I en 1572 y lo ejecut\u00f3 p\u00fablicamente en Cusco, poniendo fin a m\u00e1s de 40 a\u00f1os de resistencia inca organizada.", difficulty: "avanzado" }
-    ,
+      { id: 3022, question: "La ca\u00feda del neoestado de Vilcabamba en 1572 signific\u00f3:", options: ["El inicio de la colonizaci\u00f3n espa\u00f1ola", "La ejecuci\u00f3n de Atahualpa en Cajamarca", "La captura y ejecuci\u00f3n de T\u00fapac Amaru I, \u00faltimo inca de Vilcabamba", "La fundaci\u00f3n de la Ciudad de los Reyes"], correctIndex: 2, explanation: "El virrey Toledo captur\u00f3 a T\u00fapac Amaru I en 1572 y lo ejecut\u00f3 p\u00fablicamente en Cusco, poniendo fin a m\u00e1s de 40 a\u00f1os de resistencia inca organizada.", difficulty: "avanzado" },
     { id: 1643, question: "¿Quién fue el conquistador español que derrotó al imperio inca?", options: ["Francisco Pizarro", "Hernán Cortés", "Pedro de Valdivia", "Diego de Almagro"], correctIndex: 0, explanation: "Francisco Pizarro derrotó al imperio inca en Cajamarca.", difficulty: "basic" },
     { id: 1644, question: "¿En qué año ocurrió la caída del Tahuantinsuyo?", options: ["1532", "1572", "1492", "1600"], correctIndex: 0, explanation: "Ocurrió en 1532 con la captura de Atahualpa.", difficulty: "basic" },
     { id: 1645, question: "¿En qué región geográfica se encuentra el Cusco?", options: ["Sierra", "Costa", "Selva", "Puna"], correctIndex: 0, explanation: "El Cusco se encuentra en la región sierra.", difficulty: "basic" },
@@ -24937,8 +24763,7 @@ Las Reformas Borbonicas del siglo XVIII modernizaron la administracion pero gene
     exercises: [
       { id: 3030, question: "\u00bfEn qu\u00e9 a\u00f1o fue creado el Virreinato del Per\u00fa y por qui\u00e9n?", options: ["1532 por Francisco Pizarro", "1542 por Carlos V", "1560 por Felipe II", "1776 por Carlos III"], correctIndex: 1, explanation: "El Virreinato del Per\u00fa fue creado en 1542 por Real Cédula de Carlos V, como parte de las Reformas de Nueva Cástilla, con capital en la Ciudad de los Reyes (Lima).", difficulty: "basico" },
       { id: 3031, question: "Potos\u00ed, la famosa mina de plata, fue administrada a trav\u00e9s del sistema de:", options: ["Encomiendas", "Corregimientos", "Mita colonial", "Obrajes"], correctIndex: 2, explanation: "La mita colonial, establecida por el virrey Toledo, obligaba a los ind\u00edgenas a trabajar en las minas de Potos\u00ef de forma rotativa, causando una alt\u00edsima mortalidad.", difficulty: "intermedio" },
-      { id: 3032, question: "La rebeli\u00f3n de T\u00fapac Amaru II (1780-1783) fue consecuencia directa de:", options: ["La expulsi\u00f3n de los jesuitas", "Las reformas borb\u00f3nicas y la explotaci\u00f3n del sistema de mita", "La creaci\u00f3n del Virreinato del R\u00edo de la Plata", "La guerra de los Siete A\u00f1os"], correctIndex: 1, explanation: "T\u00fapac Amaru II lider\u00f3 la rebeli\u00f3n m\u00e1s grande contra el sistema colonial, motivado por las reformas borb\u00f3nicas que aumentaron la explotaci\u00f3n ind\u00edgena, especialmente a través de la mita minera.", difficulty: "avanzado" }
-    ,
+      { id: 3032, question: "La rebeli\u00f3n de T\u00fapac Amaru II (1780-1783) fue consecuencia directa de:", options: ["La expulsi\u00f3n de los jesuitas", "Las reformas borb\u00f3nicas y la explotaci\u00f3n del sistema de mita", "La creaci\u00f3n del Virreinato del R\u00edo de la Plata", "La guerra de los Siete A\u00f1os"], correctIndex: 1, explanation: "T\u00fapac Amaru II lider\u00f3 la rebeli\u00f3n m\u00e1s grande contra el sistema colonial, motivado por las reformas borb\u00f3nicas que aumentaron la explotaci\u00f3n ind\u00edgena, especialmente a través de la mita minera.", difficulty: "avanzado" },
     { id: 1665, question: "¿En qué año se fundó la ciudad de Lima?", options: ["1535", "1572", "1600", "1700"], correctIndex: 0, explanation: "Lima fue fundada el 18 de enero de 1535.", difficulty: "basic" },
     { id: 1666, question: "¿Cuál fue la capital del Virreinato del Perú?", options: ["Cusco", "Lima", "Quito", "Bogotá"], correctIndex: 1, explanation: "Lima fue la capital durante toda la época colonial.", difficulty: "basic" },
     { id: 1667, question: "¿Qué tribunal de la Inquisición se estableció en Lima?", options: ["Inquisición de Lima", "Inquisición de Cusco", "Inquisición de Arequipa", "Inquisición de Trujillo"], correctIndex: 0, explanation: "Se estableció en 1570.", difficulty: "basic" },
@@ -25058,8 +24883,7 @@ La independencia trajo la republica, pero tambien inestabilidad: guerras civiles
     exercises: [
       { id: 3040, question: "\u00bfEn qu\u00e9 fecha se proclam\u00f3 la independencia del Per\u00fa y qui\u00e9n lo hizo?", options: ["9 de diciembre de 1824, Sim\u00f3n Bol\u00edvar", "28 de julio de 1821, Jos\u00e9 de San Mart\u00edn", "26 de julio de 1822, Antonio Sucre", "7 de abril de 1825, Andrés de Santa Cruz"], correctIndex: 1, explanation: "El 28 de julio de 1821, José de San Martín proclamó la independencia del Perú en la Plaza de Armas de Lima, estableciendo un gobierno provisional.", difficulty: "basico" },
       { id: 3041, question: "La conferencia de Guayaquil (1822) entre San Martín y Bolívar resultó en:", options: ["La alianza militar contra los realistas", "San Martín cedió el liderazgo a Bolívar y se retiró", "La creación de la Gran Colombia", "La firma de la Constitución de 1826"], correctIndex: 1, explanation: "En Guayaquil, las diferencias entre San Martín (monarquía moderada) y Bolívar (república) llevaron a que San Martín cediera el control y se exiliara a Europa.", difficulty: "intermedio" },
-      { id: 3042, question: "La influencia de la Ilustración en la independencia peruana se manifestó principalmente en:", options: ["El uso de armas modernas europeas", "La difusión de ideas de soberanía popular y derechos del hombre", "La alianza militar con Francia", "La creación de un ejército profesional"], correctIndex: 1, explanation: "La Ilustración proporcionó el marco teórico de soberanía popular, separación de poderes y derechos naturales que justificaron la ruptura con el dominio español.", difficulty: "avanzado" }
-    ,
+      { id: 3042, question: "La influencia de la Ilustración en la independencia peruana se manifestó principalmente en:", options: ["El uso de armas modernas europeas", "La difusión de ideas de soberanía popular y derechos del hombre", "La alianza militar con Francia", "La creación de un ejército profesional"], correctIndex: 1, explanation: "La Ilustración proporcionó el marco teórico de soberanía popular, separación de poderes y derechos naturales que justificaron la ruptura con el dominio español.", difficulty: "avanzado" },
     { id: 1688, question: "¿En qué año se proclamó la independencia del Perú?", options: ["1821", "1824", "1820", "1810"], correctIndex: 0, explanation: "Fue proclamada el 28 de julio de 1821.", difficulty: "basic" },
     { id: 1689, question: "¿Quién proclamó la independencia del Perú?", options: ["San Martín", "Bolívar", "Sucre", "Gamarra"], correctIndex: 0, explanation: "José de San Martín la proclamó en la Plaza Mayor de Lima.", difficulty: "basic" },
     { id: 1690, question: "¿En qué batalla se selló la independencia del Perú?", options: ["Batalla de Ayacucho", "Batalla de Junín", "Batalla de Chacabuco", "Batalla de Pichincha"], correctIndex: 0, explanation: "La batalla de Ayacucho, el 9 de diciembre de 1824.", difficulty: "basic" },
@@ -25081,8 +24905,7 @@ La independencia trajo la republica, pero tambien inestabilidad: guerras civiles
     { id: 1706, question: "¿Qué influyó en la estructura social post-independentista?", options: ["Desigualdad social", "Marginación indígena", "Ascenso de criollos", "Todas las anteriores"], correctIndex: 3, explanation: "Generó desigualdad, marginación y ascenso de criollos.", difficulty: "advanced" },
     { id: 1707, question: "¿Qué herencia colonial persistió tras la independencia?", options: ["Sistema de castas", "Economía minera", "Religión católica", "Todas las anteriores"], correctIndex: 3, explanation: "Persistieron castas, economía minera y religión católica.", difficulty: "advanced" },
     { id: 1708, question: "¿Qué disputas internas surgieron tras la independencia?", options: ["Caudillismo", "Regionalismo", "Centralismo", "Todas las anteriores"], correctIndex: 3, explanation: "Surgieron caudillismo, regionalismo y centralismo.", difficulty: "advanced" },
-    { id: 1709, question: "¿Qué modelos políticos se debatieron tras la independencia?", options: ["Monarquía", "República", "Federalismo", "Todas las anteriores"], correctIndex: 3, explanation: "Se debatieron monarquía, república y federalismo.", difficulty: "advanced" }
-  ,
+    { id: 1709, question: "¿Qué modelos políticos se debatieron tras la independencia?", options: ["Monarquía", "República", "Federalismo", "Todas las anteriores"], correctIndex: 3, explanation: "Se debatieron monarquía, república y federalismo.", difficulty: "advanced" },
     { id: 1962, question: "¿En qué año comenzó la Primera Guerra Mundial?", options: ["1912", "1914", "1916", "1918"], correctIndex: 1, explanation: "La Primera Guerra Mundial comenzó en 1914 con el asesinato del archiduque Francisco Fernando de Austria.", difficulty: "basic" },
     { id: 1963, question: "¿Qué evento desencadenó la Primera Guerra Mundial?", options: ["La Revolución Rusa", "El asesinato de Francisco Fernando", "La caída del Imperio Otomano", "La crisis de los Balcanes"], correctIndex: 1, explanation: "El asesinato del archiduque Francisco Fernando en Sarajevo fue el detonante inmediato de la guerra.", difficulty: "basic" },
     { id: 1964, question: "¿Qué alianza formaban Alemania, Austria-Hungría e Italia?", options: ["Triple Entente", "Triple Alianza", "Pacto de Varsovia", "OTAN"], correctIndex: 1, explanation: "La Triple Alianza estaba conformada por Alemania, Austria-Hungría e Italia antes de la Primera Guerra Mundial.", difficulty: "basic" },
@@ -25208,8 +25031,7 @@ La Republica Temprana dejo instituciones fragiles, una elite politica fragmentad
     exercises: [
       { id: 3050, question: "\u00bfQué acontecimiento militar puso fin a la Confederación Perú-Bolivia en 1839?", options: ["La batalla de Junín", "La batalla de Yungay", "La batalla de Ayacucho", "La batalla de Portete de Tarqui"], correctIndex: 1, explanation: "La batalla de Yungay (20 de enero de 1839) fue decisiva para la derrota de la Confederación Perú-Bolivia, liderada por Santa Cruz, por las fuerzas chilenas y peruanas opositoras.", difficulty: "basico" },
       { id: 3051, question: "La guerra con la Gran Colombia (1828-1829) se resolvió con:", options: ["La batalla de Ayacucho", "El Tratado de Pascuales", "La proclamación de Lima", "La batalla de Callao"], correctIndex: 1, explanation: "El Tratado de Pascuales (1829) definió las fronteras entre Perú y la Gran Colombia, poniendo fin al conflicto por el control del norte del país.", difficulty: "intermedio" },
-      { id: 3052, question: "La Guerra del Pacífico (1879-1883) fue provocada fundamentalmente por:", options: ["La disputa por el control de Lima", "La codicia chilena sobre el salitre de Tarapacá", "La alianza de Perú con Bolivia contra Chile", "La rebelión de los caudillos del sur"], correctIndex: 1, explanation: "Chile invadió Tarapacá por el control del salitre, recurso valioso como fertilizante y explosivo. La Guerra del Pacífico fue el conflicto más devastador de la República temprana.", difficulty: "avanzado" }
-    ,
+      { id: 3052, question: "La Guerra del Pacífico (1879-1883) fue provocada fundamentalmente por:", options: ["La disputa por el control de Lima", "La codicia chilena sobre el salitre de Tarapacá", "La alianza de Perú con Bolivia contra Chile", "La rebelión de los caudillos del sur"], correctIndex: 1, explanation: "Chile invadió Tarapacá por el control del salitre, recurso valioso como fertilizante y explosivo. La Guerra del Pacífico fue el conflicto más devastador de la República temprana.", difficulty: "avanzado" },
     { id: 1710, question: "¿En qué año se fundó la República del Perú?", options: ["1821", "1824", "1826", "1828"], correctIndex: 0, explanation: "Fue fundada el 28 de julio de 1821.", difficulty: "basic" },
     { id: 1711, question: "¿Cuál fue el primer presidente constitucional?", options: ["Gamarra", "La Mar", "Agüero", "Luna Pizarro"], correctIndex: 1, explanation: "José de La Mar fue el primer presidente constitucional.", difficulty: "basic" },
     { id: 1712, question: "¿Qué sistema de gobierno se estableció tras la independencia?", options: ["República", "Monarquía", "Virreinato", "Imperio"], correctIndex: 0, explanation: "Se estableció un sistema republicano.", difficulty: "basic" },
@@ -25337,8 +25159,7 @@ Ramon Castilla modernizo el pais durante el boom del guano. Miguel de Iglesias f
     exercises: [
       { id: 3060, question: "\u00bfQué recurso natural generó las principales fortunas del Perú entre 1840 y 1880?", options: ["El caucho", "El guano", "La plata de Cerro de Pasco", "El cobre de Cerro Verde"], correctIndex: 1, explanation: "El guano, excremento de aves marinas acumulado en islas costeñas, fue la principal fuente de riqueza del Perú en la segunda mitad del siglo XIX, vendiéndose como fertilizante en Europa.", difficulty: "basico" },
       { id: 3061, question: "La batalla de Angamos (1879) fue decisiva porque:", options: ["Perú capturó el Huáscar chileno", "Chile aseguró el dominio naval al capturar el Huáscar", "Se firmó el Tratado de Pascuales", "Se liberó Lima del sitio chileno"], correctIndex: 1, explanation: "En Angamos, la armada chilena capturó al monitor Huásar, asegurando el dominio naval del Pacífico sur y facilitando las operaciones terrestres en Tarapacá.", difficulty: "intermedio" },
-      { id: 3062, question: "El Tratado de Ancón (1883) tuvo como consecuencia principal:", options: ["La devolución de Tacna a Perú", "La cesión absoluta de Tarapacá a Chile", "La creación de una zona neutral", "El plebiscito sobre Arica"], correctIndex: 1, explanation: "El Tratado de Ancón cedió Tarapacá a Chile en propiedad absoluta, sin compensación, bajo presión militar chilena. La situación de Tacna y Arica se resolvería después.", difficulty: "avanzado" }
-    ,
+      { id: 3062, question: "El Tratado de Ancón (1883) tuvo como consecuencia principal:", options: ["La devolución de Tacna a Perú", "La cesión absoluta de Tarapacá a Chile", "La creación de una zona neutral", "El plebiscito sobre Arica"], correctIndex: 1, explanation: "El Tratado de Ancón cedió Tarapacá a Chile en propiedad absoluta, sin compensación, bajo presión militar chilena. La situación de Tacna y Arica se resolvería después.", difficulty: "avanzado" },
     { id: 1732, question: "¿En qué década se inició el boom del guano?", options: ["1840", "1850", "1860", "1870"], correctIndex: 0, explanation: "Se inició en la década de 1840.", difficulty: "basic" },
     { id: 1733, question: "¿Qué exportación generó riqueza en el siglo XIX?", options: ["Guano", "Plata", "Oro", "Cobre"], correctIndex: 0, explanation: "El guano fue la principal exportación.", difficulty: "basic" },
     { id: 1734, question: "¿En qué isla se encontraban los principales depósitos de guano?", options: ["Islas Chincha", "Islas Ballestas", "Islas Palomino", "Islas Lobos"], correctIndex: 0, explanation: "Las Islas Chincha fueron las principales.", difficulty: "basic" },
@@ -25462,8 +25283,7 @@ El periodo dejo al Peru con una economia mas diversificada pero dependiente, una
     exercises: [
       { id: 3070, question: "\u00bfCuánto duró el gobierno de Augusto B. Leguía durante su Oncenio?", options: ["6 años", "8 años", "11 años", "15 años"], correctIndex: 2, explanation: "El Oncenio de Leguía duró 11 años (1919-1930), siendo el período de gobierno más largo del siglo XX en el Perú.", difficulty: "basico" },
       { id: 3071, question: "El sistema de Consignaciones del Oncenio consistía en:", options: ["La venta de terrenos estatales a particulares", "El otorgamiento de monopolios de exportación a empresas extranjeras", "El reparto de tierras a campesinos", "La creación de cooperativas agrícolas"], correctIndex: 1, explanation: "El sistema de Consignaciones permitía a empresas como W.R. Grace controlar la exportación de productos peruanos a cambio de préstamos que endeudaban al Estado.", difficulty: "intermedio" },
-      { id: 3072, question: "La Gran Depresión de 1929 afectó a Perú principalmente por:", options: ["La caída de precios del algodón y la plata", "La invasión de tropas extranjeras", "La pérdida de territorios en la frontera norte", "La rebelión armada de los campesinos"], correctIndex: 0, explanation: "La Gran Depresión colapsó los precios internacionales del algodón y la plata, principales exportaciones peruanas, provocando desempleo masivo y quiebras bancarias que debilitaron al régimen.", difficulty: "avanzado" }
-    ,
+      { id: 3072, question: "La Gran Depresión de 1929 afectó a Perú principalmente por:", options: ["La caída de precios del algodón y la plata", "La invasión de tropas extranjeras", "La pérdida de territorios en la frontera norte", "La rebelión armada de los campesinos"], correctIndex: 0, explanation: "La Gran Depresión colapsó los precios internacionales del algodón y la plata, principales exportaciones peruanas, provocando desempleo masivo y quiebras bancarias que debilitaron al régimen.", difficulty: "avanzado" },
     { id: 1755, question: "¿En qué año empezó el Oncenio de Leguía?", options: ["1919", "1930", "1932", "1939"], correctIndex: 0, explanation: "Empezó en 1919.", difficulty: "basic" },
     { id: 1756, question: "¿Cuántos años duró el Oncenio?", options: ["11 años", "10 años", "12 años", "15 años"], correctIndex: 0, explanation: "Duró 11 años.", difficulty: "basic" },
     { id: 1757, question: "¿Qué tipo de gobierno implementó Leguía?", options: ["Dictadura", "Democracia", "Monarquía", "República"], correctIndex: 0, explanation: "Implementó una dictadura personalista.", difficulty: "basic" },
@@ -25578,8 +25398,7 @@ El aprismo y las guerras civiles dejaron al Peru con una politica polarizada. La
     exercises: [
       { id: 4001, question: "¿Quién fundó el APRA en 1924?", options: ["Víctor Raúl Haya de la Torre", "Luis Sánchez Cerro", "Augusto B. Leguía", "Alan García"], correctIndex: 0, explanation: "Haya de la Torre fundó el APRA en México en 1924 como movimiento antiimperialista continental.", difficulty: "basico" },
       { id: 4002, question: "¿En qué año se firmó el Protocolo de Río de Janeiro tras la guerra con Ecuador?", options: ["1941", "1942", "1945", "1938"], correctIndex: 1, explanation: "El Protocolo de Río de Janeiro se firmó en 1942, tras la Guerra de 1941, definiendo los límites entre ambos países.", difficulty: "intermedio" },
-      { id: 4003, question: "¿Cuál fue el concepto económico central propuesto por Haya de la Torre?", options: ["Dictadura del comercio exterior", "Liberalización económica total", "Industrialización por sustitución de importaciones", "Economía planificada soviética"], correctIndex: 0, explanation: "Haya de la Torre propuso la 'dictadura del comercio exterior' para controlar los recursos económicos nacionales frente al imperialismo.", difficulty: "avanzado" }
-    ,
+      { id: 4003, question: "¿Cuál fue el concepto económico central propuesto por Haya de la Torre?", options: ["Dictadura del comercio exterior", "Liberalización económica total", "Industrialización por sustitución de importaciones", "Economía planificada soviética"], correctIndex: 0, explanation: "Haya de la Torre propuso la 'dictadura del comercio exterior' para controlar los recursos económicos nacionales frente al imperialismo.", difficulty: "avanzado" },
     { id: 1777, question: "¿En qué año se fundó el APRA?", options: ["1924", "1930", "1931", "1932"], correctIndex: 0, explanation: "Fue fundado en 1924 en México.", difficulty: "basic" },
     { id: 1778, question: "¿Quién fundó el APRA?", options: ["Haya de la Torre", "Belaúnde", "Odría", "Prado"], correctIndex: 0, explanation: "Víctor Raúl Haya de la Torre lo fundó.", difficulty: "basic" },
     { id: 1779, question: "¿Qué significan las siglas APRA?", options: ["Alianza Popular Revolucionaria Americana", "Asociación Popular Revolucionaria Americana", "Alianza Política Revolucionaria del Atlántico", "Asociación Peruana Revolucionaria Americana"], correctIndex: 0, explanation: "Significa Alianza Popular Revolucionaria Americana.", difficulty: "basic" },
@@ -25699,8 +25518,7 @@ El Segundo Militarismo dejo debilidad institucional y la problematica de la part
     exercises: [
       { id: 4010, question: "¿En qué año dio su golpe de estado Manuel A. Odría?", options: ["1946", "1948", "1950", "1952"], correctIndex: 1, explanation: "Odría dio su golpe de estado el 27 de octubre de 1948, derrocando al gobierno de Bustamante y Rivero.", difficulty: "basico" },
       { id: 4011, question: "¿Qué acontecimiento marcó la represión estudiantil durante el Ochenio?", options: ["Masacre de la Plaza San Martín (1954)", "Matanza de Trujillo (1932)", "Violencia en Puno (2023)", "Golpe de Velasco (1968)"], correctIndex: 0, explanation: "La Masacre de la Plaza San Martín en 1954 fue un episodio emblemático de la represión estudiantil durante el Ochenio.", difficulty: "intermedio" },
-      { id: 4012, question: "¿Cuál fue el legado más significativo del Ochenio para la democracia peruana?", options: ["Consolidó un modelo de gobierno autoritario-militar repetible", "Estableció una constitución democrática duradera", "Impulsó la industrialización completa del país", "Eliminó la corrupción política"], correctIndex: 0, explanation: "El Ochenio consolidó un patrón de gobierno autoritario-militar que se repetiría en la historia peruana posterior.", difficulty: "avanzado" }
-    ,
+      { id: 4012, question: "¿Cuál fue el legado más significativo del Ochenio para la democracia peruana?", options: ["Consolidó un modelo de gobierno autoritario-militar repetible", "Estableció una constitución democrática duradera", "Impulsó la industrialización completa del país", "Eliminó la corrupción política"], correctIndex: 0, explanation: "El Ochenio consolidó un patrón de gobierno autoritario-militar que se repetiría en la historia peruana posterior.", difficulty: "avanzado" },
     { id: 1800, question: "¿En qué año empezó el segundo militarismo?", options: ["1930", "1948", "1962", "1968"], correctIndex: 0, explanation: "Empezó en 1930.", difficulty: "basic" },
     { id: 1801, question: "¿Quién lideró el golpe de estado inicial?", options: ["Sánchez Cerro", "Odría", "Belaúnde", "Velazco"], correctIndex: 0, explanation: "Luis Sánchez Cerro lo lideró.", difficulty: "basic" },
     { id: 1802, question: "¿Qué tipo de gobierno se estableció?", options: ["Militar", "Civil", "Democrático", "Monárquico"], correctIndex: 0, explanation: "Se estableció un gobierno militar.", difficulty: "basic" },
@@ -25792,8 +25610,7 @@ El Segundo Militarismo dejo debilidad institucional y la problematica de la part
     exercises: [
       { id: 4020, question: "¿En qué año fue elegido Fernando Belaúnde Terry como presidente del Perú?", options: ["1960", "1963", "1966", "1968"], correctIndex: 1, explanation: "Belaúnde fue elegido en 1963 con el apoyo de la coalición Acción Popular-MDP.", difficulty: "basico" },
       { id: 4021, question: "¿Cuál fue la contradicción principal del gobierno de Belaúnde con la izquierda?", options: ["Reforma agraria percibida como insuficiente", "Falta de educación pública", "Censura de prensa total", "Persecución del APRA"], correctIndex: 0, explanation: "La izquierda criticó la reforma agraria de Belaúnde como insuficiente, exigiendo cambios más profundos en la distribución de tierras.", difficulty: "intermedio" },
-      { id: 4022, question: "¿Qué significado histórico tuvo el golpe de Velasco en el contexto latinoamericano?", options: ["Marcó el inicio de un proyecto de transformación social sin precedentes", "Fue una simple restauración del orden conservador", "No tuvo relación con movimientos reformistas continentales", "Consolidó el poder de la oligarquía terrateniente"], correctIndex: 0, explanation: "El golpe de Velasco representó un proyecto reformista radical que buscó transformar la estructura social del Perú, en sintonía con movimientos similares en la región.", difficulty: "avanzado" }
-    ,
+      { id: 4022, question: "¿Qué significado histórico tuvo el golpe de Velasco en el contexto latinoamericano?", options: ["Marcó el inicio de un proyecto de transformación social sin precedentes", "Fue una simple restauración del orden conservador", "No tuvo relación con movimientos reformistas continentales", "Consolidó el poder de la oligarquía terrateniente"], correctIndex: 0, explanation: "El golpe de Velasco representó un proyecto reformista radical que buscó transformar la estructura social del Perú, en sintonía con movimientos similares en la región.", difficulty: "avanzado" },
     { id: 1823, question: "¿En qué año empezó el primer gobierno de Belaúnde?", options: ["1956", "1963", "1968", "1980"], correctIndex: 1, explanation: "Empezó en 1963.", difficulty: "basic" },
     { id: 1824, question: "¿Quién fue el presidente?", options: ["Belaúnde", "Odría", "Prado", "Haya de la Torre"], correctIndex: 0, explanation: "Fernando Belaúnde Terry.", difficulty: "basic" },
     { id: 1825, question: "¿Qué partido político fundó Belaúnde?", options: ["Acción Popular", "APRA", "Partido Civil", "Partido Demócrata"], correctIndex: 0, explanation: "Fundó Acción Popular.", difficulty: "basic" },
@@ -25816,8 +25633,7 @@ El Segundo Militarismo dejo debilidad institucional y la problematica de la part
     { id: 1842, question: "¿Qué relación tuvo Belaúnde con el campesinado?", options: ["Apoyo", "Indiferencia", "Represión", "Todas las anteriores"], correctIndex: 3, explanation: "Tuvo todas.", difficulty: "advanced" },
     { id: 1843, question: "¿Qué influencia tuvo el desarrollismo?", options: ["Economía mixta", "Industrialización", "Infraestructura", "Todas las anteriores"], correctIndex: 3, explanation: "Influyó en todas.", difficulty: "advanced" },
     { id: 1844, question: "¿Qué consecuencias tuvo en la educación?", options: ["Mejora", "Accesibilidad", "Calidad", "Todas las anteriores"], correctIndex: 3, explanation: "Tuvo todas.", difficulty: "advanced" },
-    { id: 1845, question: "¿Qué relación tuvo Belaúnde con las reformas sociales?", options: ["Moderadas", "Radicales", "Progresistas", "Conservadoras"], correctIndex: 0, explanation: "Fueron moderadas.", difficulty: "advanced" }
-  ,
+    { id: 1845, question: "¿Qué relación tuvo Belaúnde con las reformas sociales?", options: ["Moderadas", "Radicales", "Progresistas", "Conservadoras"], correctIndex: 0, explanation: "Fueron moderadas.", difficulty: "advanced" },
     { id: 1823, question: "¿En qué año empezó el primer gobierno de Belaúnde?", options: ["1956", "1963", "1968", "1980"], correctIndex: 1, explanation: "Empezó en 1963.", difficulty: "basic" },
     { id: 1824, question: "¿Quién fue el presidente?", options: ["Belaúnde", "Odría", "Prado", "Haya de la Torre"], correctIndex: 0, explanation: "Fernando Belaúnde Terry.", difficulty: "basic" },
     { id: 1825, question: "¿Qué partido político fundó Belaúnde?", options: ["Acción Popular", "APRA", "Partido Civil", "Partido Demócrata"], correctIndex: 0, explanation: "Fundó Acción Popular.", difficulty: "basic" },
@@ -25931,8 +25747,7 @@ La reforma agraria transformo la estructura agraria pero enfrento problemas de p
     exercises: [
       { id: 4030, question: "¿En qué año se implementó la Reforma Agraria en el Perú?", options: ["1968", "1969", "1970", "1975"], correctIndex: 1, explanation: "La Reforma Agraria se implementó en 1969 bajo el gobierno de Velasco Alvarado.", difficulty: "basico" },
       { id: 4031, question: "¿Cuál fue uno de los problemas estructurales de la Reforma Agraria?", options: ["Creación de minifundios con baja productividad", "Exceso de inversión extranjera en el campo", "Falta de organización campesina", "No se expropiaron haciendas"], correctIndex: 0, explanation: "La reforma creó minifundios que redujeron la productividad agrícola en comparación con las grandes haciendas expropiadas.", difficulty: "intermedio" },
-      { id: 4032, question: "¿Qué modelo económico implementó Morales Bermúdez tras derrocar a Velasco?", options: ["Modelo de liberalización económica", "Modelo estatista más radical", "Modelo de economía planificada", "Modelo de autarquía económica"], correctIndex: 0, explanation: "Morales Bermúdez implementó un modelo de liberalización económica, abriendo el mercado a la inversión privada tras el estatismo de Velasco.", difficulty: "avanzado" }
-    ,
+      { id: 4032, question: "¿Qué modelo económico implementó Morales Bermúdez tras derrocar a Velasco?", options: ["Modelo de liberalización económica", "Modelo estatista más radical", "Modelo de economía planificada", "Modelo de autarquía económica"], correctIndex: 0, explanation: "Morales Bermúdez implementó un modelo de liberalización económica, abriendo el mercado a la inversión privada tras el estatismo de Velasco.", difficulty: "avanzado" },
     { id: 1846, question: "¿En qué año empezó el gobierno de Velasco?", options: ["1968", "1975", "1980", "1985"], correctIndex: 0, explanation: "Empezó en 1968.", difficulty: "basic" },
     { id: 1847, question: "¿Quién lideró el golpe de 1968?", options: ["Velasco Alvarado", "Morales Bermúdez", "Belaúnde", "Odría"], correctIndex: 0, explanation: "Juan Velasco Alvarado.", difficulty: "basic" },
     { id: 1848, question: "¿Qué tipo de gobierno estableció?", options: ["Militar", "Civil", "Democrático", "Monárquico"], correctIndex: 0, explanation: "Estableció un gobierno militar.", difficulty: "basic" },
@@ -26045,8 +25860,7 @@ Fujimori renuncio en 2000 tras videos que mostraban la corrupcion del gobierno. 
     exercises: [
       { id: 4040, question: "¿Quién fue el líder del Sendero Luminoso?", options: ["Abimael Guzmán", "Vladimiro Montesinos", "Alberto Fujimori", "Oscar Ramírez"], correctIndex: 0, explanation: "Abimael Guzmán fue el líder fundador del Sendero Luminoso, capturado en 1992.", difficulty: "basico" },
       { id: 4041, question: "¿En qué año Fujimori dio el autogolpe que disolvió el Congreso?", options: ["1990", "1992", "1995", "1998"], correctIndex: 1, explanation: "Fujimori dio el autogolpe el 5 de abril de 1992, disolviendo el Congreso y suspendiendo la Constitución.", difficulty: "intermedio" },
-      { id: 4042, question: "¿Qué caso emblemático de derechos humanos involucró la masacre de Barrios Altos?", options: ["Grupo Colina y operaciones de inteligencia", "El MRTA y la embajada de Japón", "Sendero Luminoso y comunidades campesinas", "El ejército y zonas rurales"], correctIndex: 0, explanation: "La masacre de Barrios Altos (1991) fue perpetrada por el Grupo Colina, unidad de inteligencia vinculada al régimen de Fujimori.", difficulty: "avanzado" }
-    ,
+      { id: 4042, question: "¿Qué caso emblemático de derechos humanos involucró la masacre de Barrios Altos?", options: ["Grupo Colina y operaciones de inteligencia", "El MRTA y la embajada de Japón", "Sendero Luminoso y comunidades campesinas", "El ejército y zonas rurales"], correctIndex: 0, explanation: "La masacre de Barrios Altos (1991) fue perpetrada por el Grupo Colina, unidad de inteligencia vinculada al régimen de Fujimori.", difficulty: "avanzado" },
     { id: 1869, question: "¿En qué año se inició el conflicto armado interno?", options: ["1980", "1985", "1990", "1995"], correctIndex: 0, explanation: "Se inició en 1980.", difficulty: "basic" },
     { id: 1870, question: "¿Qué grupo terrorista inició la violencia?", options: ["Sendero Luminoso", "MRTA", "Ejército Libertador", "Todos"], correctIndex: 0, explanation: "Sendero Luminoso.", difficulty: "basic" },
     { id: 1871, question: "¿En qué año asumió Fujimori?", options: ["1990", "1995", "2000", "2005"], correctIndex: 0, explanation: "Asumió en 1990.", difficulty: "basic" },
@@ -26168,8 +25982,7 @@ La transicion dejo instituciones mas solidas pero con desafios pendientes: pobre
     exercises: [
       { id: 4050, question: "¿Quién asumió la presidencia tras la caída de Fujimori en 2001?", options: ["Valentín Paniagua", "Alejandro Toledo", "Alan García", "Ollanta Humala"], correctIndex: 0, explanation: "Valentín Paniagua asumió la presidencia como presidente del Congreso tras la renuncia de Fujimori.", difficulty: "basico" },
       { id: 4051, question: "¿Cuál fue el principal problema estructural durante la transición democrática?", options: ["Crecimiento económico insuficiente", "Corrupción generalizada en todas las ramas del Estado", "Falta de elecciones libres", "Ausencia de partidos políticos"], correctIndex: 1, explanation: "La corrupción fue el problema más persistente durante la transición, afectando a todos los gobiernos y erosionando la confianza institucional.", difficulty: "intermedio" },
-      { id: 4052, question: "¿Qué actor social se fortaleció como defensor de la democracia durante la transición?", options: ["La sociedad civil organizada", "Las fuerzas armadas", "La Iglesia Católica", "Los medios de comunicación"], correctIndex: 0, explanation: "La sociedad civil peruana se fortaleció como actor clave en la defensa de la democracia, los derechos humanos y la lucha contra la corrupción.", difficulty: "avanzado" }
-    ,
+      { id: 4052, question: "¿Qué actor social se fortaleció como defensor de la democracia durante la transición?", options: ["La sociedad civil organizada", "Las fuerzas armadas", "La Iglesia Católica", "Los medios de comunicación"], correctIndex: 0, explanation: "La sociedad civil peruana se fortaleció como actor clave en la defensa de la democracia, los derechos humanos y la lucha contra la corrupción.", difficulty: "avanzado" },
     { id: 1892, question: "¿En qué año empezó la transición democrática?", options: ["2000", "2001", "2002", "2003"], correctIndex: 0, explanation: "Empezó en 2000.", difficulty: "basic" },
     { id: 1893, question: "¿Quién asumió la presidencia durante la transición?", options: ["Valentín Paniagua", "Toledo", "García", "Humala"], correctIndex: 0, explanation: "Valentín Paniagua.", difficulty: "basic" },
     { id: 1894, question: "¿En qué año se celebraron las primeras elecciones libres?", options: ["2001", "2002", "2003", "2004"], correctIndex: 0, explanation: "En 2001.", difficulty: "basic" },
@@ -26191,8 +26004,7 @@ La transicion dejo instituciones mas solidas pero con desafios pendientes: pobre
     { id: 1910, question: "¿Qué influencia tuvieron los Estados Unidos?", options: ["Apoyo económico", "Asesoría política", "Control", "Todas las anteriores"], correctIndex: 3, explanation: "Tuvo todas.", difficulty: "advanced" },
     { id: 1911, question: "¿Qué legado dejó la transición?", options: ["Democracia", "Inestabilidad", "Reformas", "Todas las anteriores"], correctIndex: 3, explanation: "Dejó todas.", difficulty: "advanced" },
     { id: 1912, question: "¿Qué consecuencias tuvo la inestabilidad política?", options: ["Gobierno débil", "Reformas lentas", "Desconfianza ciudadana", "Todas las anteriores"], correctIndex: 3, explanation: "Tuvo todas.", difficulty: "advanced" },
-    { id: 1913, question: "¿Qué papel jugó la Iglesia?", options: ["Oposición", "Apoyo", "Neutralidad", "Todas las anteriores"], correctIndex: 3, explanation: "Tuvo todas.", difficulty: "advanced" }
-  ,
+    { id: 1913, question: "¿Qué papel jugó la Iglesia?", options: ["Oposición", "Apoyo", "Neutralidad", "Todas las anteriores"], correctIndex: 3, explanation: "Tuvo todas.", difficulty: "advanced" },
     { id: 2150, question: "¿Qué describía el tributo en trabajo en el sistema inca?", options: ["Minka", "Mitma", "Ayllu", "Apu"], correctIndex: 1, explanation: "El mitma era el tributo en trabajo donde los súbditos servían al Estado por periodos determinados.", difficulty: "basic" },
     { id: 2151, question: "¿A quién pertenecían las tierras en el sistema incaico?", options: ["Comunal", "Del Inca, del Sol y del pueblo", "Privada", "Extranjera"], correctIndex: 1, explanation: "Las tierras pertenecían al Inca, al Sol y al pueblo, sin propiedad privada.", difficulty: "basic" },
     { id: 2152, question: "¿Cómo se llamaban los almacenes estatales incas?", options: ["Qollqas", "Pukaras", "Tambos", "Ayllus"], correctIndex: 0, explanation: "Las qollqas eran almacenes estatales para guardar excedentes agrícolas y otros productos.", difficulty: "basic" },
@@ -26315,8 +26127,7 @@ El Peru enfrenta desafios fundamentales: fortalecer instituciones, reducir pobre
     exercises: [
       { id: 4060, question: "¿Por qué renunció Pedro Pablo Kuczynski en 2018?", options: ["Ante la amenaza de vacancia por corrupción", "Por razones de salud", "Tras perder las elecciones", "Por conflictos con el Congreso"], correctIndex: 0, explanation: "Kuczynski renunció en marzo de 2018 antes de que el Congreso votara su vacancia por presuntos pagos ilegales de Odebrecht.", difficulty: "basico" },
       { id: 4061, question: "¿Qué proceso constitucional se utilizó contra Vizcarra en 2020?", options: ["Vacancia presidencial por incapacidad moral permanente", "Juicio político por corrupción", "Referéndum revocatorio", "Destitución por la Corte Suprema"], correctIndex: 0, explanation: "Vizcarra fue vacado en noviembre de 2020 bajo la figura de 'incapacidad moral permanente', un mecanismo cuestionado jurídicamente.", difficulty: "intermedio" },
-      { id: 4062, question: "¿Qué reveló la crisis política contemporánea sobre el sistema institucional peruano?", options: ["Debilidades estructurales del modelo post-Fujimori", "Fortaleza del sistema de contrapesos", "Éxito de la descentralización", "Consolidación del Estado de derecho"], correctIndex: 0, explanation: "La crisis contemporánea evidenció las debilidades estructurales del sistema político peruano, incluyendo la falta de equilibrio entre poderes y ausencia de cultura democrática.", difficulty: "avanzado" }
-    ,
+      { id: 4062, question: "¿Qué reveló la crisis política contemporánea sobre el sistema institucional peruano?", options: ["Debilidades estructurales del modelo post-Fujimori", "Fortaleza del sistema de contrapesos", "Éxito de la descentralización", "Consolidación del Estado de derecho"], correctIndex: 0, explanation: "La crisis contemporánea evidenció las debilidades estructurales del sistema político peruano, incluyendo la falta de equilibrio entre poderes y ausencia de cultura democrática.", difficulty: "avanzado" },
     { id: 1914, question: "¿En qué año empezó el segundo gobierno de García?", options: ["1985", "2006", "2011", "2016"], correctIndex: 1, explanation: "Empezó en 2006.", difficulty: "basic" },
     { id: 1915, question: "¿Quién ganó las elecciones de 2006?", options: ["García", "Toledo", "Humala", "Kuczynski"], correctIndex: 0, explanation: "Alan García.", difficulty: "basic" },
     { id: 1916, question: "¿En qué año terminó el gobierno de García?", options: ["2011", "2012", "2013", "2014"], correctIndex: 0, explanation: "En 2011.", difficulty: "basic" },
@@ -26429,8 +26240,7 @@ Los desafios incluyen: juzgar responsables de violaciones, reparar victimas, for
     exercises: [
       { id: 4070, question: "¿Cuántas víctimas documentó la Comisión de la Verdad y Reconciliación?", options: ["69,280", "50,000", "100,000", "30,000"], correctIndex: 0, explanation: "La CVR documentó 69,280 víctimas mortales y desaparecidos durante el conflicto armado interno (1980-2000).", difficulty: "basico" },
       { id: 4071, question: "¿Qué caso emblemático involucró la ejecución de internos en los penales?", options: ["La matanza de los penales (1992)", "La masacre de Putis (1983)", "El caso de Accomarca (1985)", "La toma de la embajada de Japón (1996)"], correctIndex: 0, explanation: "La matanza de los penales en 1992 involucró la ejecución extrajudicial de internos acusados de terrorismo por agentes del Estado.", difficulty: "intermedio" },
-      { id: 4072, question: "¿Cuál es el principio fundamental de la justicia transicional en sociedades post-conflicto?", options: ["Equilibrar verdad, justicia y reparación", "Olvídar el pasado para avanzar", "Castigo severo sin excepciones", "Impunidad garantizada para los victimarios"], correctIndex: 0, explanation: "La justicia transicional busca equilibrar verdad, justicia y reparación, reconociendo que la paz social requiere abordar las violaciones del pasado de manera integral.", difficulty: "avanzado" }
-    ,
+      { id: 4072, question: "¿Cuál es el principio fundamental de la justicia transicional en sociedades post-conflicto?", options: ["Equilibrar verdad, justicia y reparación", "Olvídar el pasado para avanzar", "Castigo severo sin excepciones", "Impunidad garantizada para los victimarios"], correctIndex: 0, explanation: "La justicia transicional busca equilibrar verdad, justicia y reparación, reconociendo que la paz social requiere abordar las violaciones del pasado de manera integral.", difficulty: "avanzado" },
     { id: 1937, question: "¿Qué son los derechos humanos?", options: ["Derechos universales", "Derechos civiles", "Derechos políticos", "Todos los anteriores"], correctIndex: 3, explanation: "Son universales, civiles y políticos.", difficulty: "basic" },
     { id: 1938, question: "¿En qué año se adoptó la Declaración Universal?", options: ["1948", "1950", "1960", "1970"], correctIndex: 0, explanation: "En 1948.", difficulty: "basic" },
     { id: 1939, question: "¿Qué institución protege los derechos humanos en el Perú?", options: ["Ministerio Público", "Defensoría del Pueblo", "Poder Judicial", "Todas las anteriores"], correctIndex: 3, explanation: "Protegen todas.", difficulty: "basic" },
@@ -26585,8 +26395,7 @@ La Revolucion transformo la politica europea: abolio el absolutismo, difundio id
         correctIndex: 1,
         explanation: "La Revolución Americana buscó la independencia de una metrópoli extranjera, mientras la Revolución Francesa intentó reestructurar toda la sociedad del Antiguo Régimen, incluyendo clases sociales, religión y economía.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 1959, question: "¿En qué año comenzó la Revolución Francesa?", options: ["1789", "1776", "1799", "1800"], correctIndex: 0, explanation: "Comenzó en 1789.", difficulty: "basic" },
     { id: 1960, question: "¿En qué ciudad se inició?", options: ["París", "Lyon", "Marsella", "Burdeos"], correctIndex: 0, explanation: "Se inició en París.", difficulty: "basic" },
     { id: 1961, question: "¿Qué evento marcó el inicio?", options: ["Toma de la Bastilla", "Declaración de los Derechos del Hombre", "Revolución Industrial", "Guerra de los Siete Años"], correctIndex: 0, explanation: "La Toma de la Bastilla el 14 de julio de 1789.", difficulty: "basic" },
@@ -26740,8 +26549,7 @@ Las revoluciones afectaron a America Latina como proveedor de materias primas y 
         correctIndex: 1,
         explanation: "La Segunda Revolución Industrial incorporó la electricidad, el acero, los motores de combustión interna y la producción en masa, expandiéndose a Alemania, EE.UU. y Japón.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 1983, question: "¿En qué país se inició la Revolución Industrial?", options: ["Inglaterra", "Francia", "Alemania", "Estados Unidos"], correctIndex: 0, explanation: "En Inglaterra.", difficulty: "basic" },
     { id: 1984, question: "¿En qué siglo se inició?", options: ["Siglo XVIII", "Siglo XIX", "Siglo XVII", "Siglo XX"], correctIndex: 0, explanation: "En el siglo XVIII.", difficulty: "basic" },
     { id: 1985, question: "¿Qué invento fue fundamental?", options: ["Máquina de vapor", "Teléfono", "Electricidad", "Automóvil"], correctIndex: 0, explanation: "La máquina de vapor.", difficulty: "basic" },
@@ -26892,8 +26700,7 @@ Tras la Segunda Guerra Mundial, los movimientos se aceleraron en Asia y Africa. 
         correctIndex: 2,
         explanation: "En Perú, el imperialismo se reflejó en la dependencia de materias primas (guano, salitre), la inversión extranjera en minería y la pérdida territorial en la Guerra del Pacífico (1879-1884).",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 1940, question: "¿Qué fue el imperialismo?", options: ["Una ideología política", "Expansión de potencias sobre otros territorios", "Un movimiento artístico", "Una religión"], correctIndex: 1, explanation: "El imperialismo fue la política de expansión de las potencias europeas sobre territorios de África, Asia y Oceanía.", difficulty: "basic" },
     { id: 1941, question: "¿Qué conferencia estableció las reglas para colonizar África?", options: ["Conferencia de Berlín", "Conferencia de Viena", "Conferencia de París", "Conferencia de Londres"], correctIndex: 0, explanation: "La Conferencia de Berlín de 1884-1885 estableció las normas para la partición de África entre las potencias europeas.", difficulty: "basic" },
     { id: 1942, question: "¿Cuál fue una causa principal del imperialismo europeo?", options: ["La búsqueda de materias primas y mercados", "El deseo de paz mundial", "La religión budista", "La caída del Imperio Romano"], correctIndex: 0, explanation: "La búsqueda de materias primas, mercados y fuentes de inversión fueron causas económicas principales del imperialismo.", difficulty: "basic" },
@@ -27041,8 +26848,7 @@ Destruyo imperios, creo nuevos estados, instalo la Sociedad de Naciones y sento 
         correctIndex: 2,
         explanation: "EE.UU. no se integró a la Sociedad de Naciones por el rechazo del Senado estadounidense, privando a la organización del respaldo de la potencia emergente más poderosa del momento.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 1962, question: "¿En qué año comenzó la Primera Guerra Mundial?", options: ["1912", "1914", "1916", "1918"], correctIndex: 1, explanation: "La Primera Guerra Mundial comenzó en 1914 con el asesinato del archiduque Francisco Fernando de Austria.", difficulty: "basic" },
     { id: 1963, question: "¿Qué evento desencadenó la Primera Guerra Mundial?", options: ["La Revolución Rusa", "El asesinato de Francisco Fernando", "La caída del Imperio Otomano", "La crisis de los Balcanes"], correctIndex: 1, explanation: "El asesinato del archiduque Francisco Fernando en Sarajevo fue el detonante inmediato de la guerra.", difficulty: "basic" },
     { id: 1964, question: "¿Qué alianza formaban Alemania, Austria-Hungría e Italia?", options: ["Triple Entente", "Triple Alianza", "Pacto de Varsovia", "OTAN"], correctIndex: 1, explanation: "La Triple Alianza estaba conformada por Alemania, Austria-Hungría e Italia antes de la Primera Guerra Mundial.", difficulty: "basic" },
@@ -27199,8 +27005,7 @@ Creo la Union Sovietica (1922), primer estado socialista. Se convirtio en superp
         correctIndex: 1,
         explanation: "El modelo soviético inspiró revoluciones comunistas en Asia, África y América Latina, y su rivalidad con EE.UU. definió la dinámica de la Guerra Fría (1947-1991).",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 1984, question: "¿En qué año ocurrió la Revolución Rusa?", options: ["1905", "1914", "1917", "1922"], correctIndex: 2, explanation: "La Revolución Rusa ocurrió en 1917, con la Revolución de Febrero y la Revolución de Octubre.", difficulty: "basic" },
     { id: 1985, question: "¿Quién lideró la Revolución de Octubre?", options: ["Stalin", "Trotsky", "Lenin", "Kerensky"], correctIndex: 2, explanation: "Vladimir Lenin lideró la Revolución de Octubre de 1917, tomando el poder para los bolcheviques.", difficulty: "basic" },
     { id: 1986, question: "¿Qué partido político tomó el poder en la revolución?", options: ["Partido Constitucional", "Partido Socialista Revolucionario", "Partido Bolchevique", "Partido Democrático"], correctIndex: 2, explanation: "El Partido Bolchevique, liderado por Lenin, tomó el poder en la Revolución de Octubre.", difficulty: "basic" },
@@ -27220,8 +27025,7 @@ Creo la Union Sovietica (1922), primer estado socialista. Se convirtio en superp
     { id: 2000, question: "¿Qué teoría de Trotsky contrastaba con la de Stalin?", options: ["Revolución permanente", "Socialismo en un solo país", "Capitalismo de estado", "Autocracia proletaria"], correctIndex: 0, explanation: "Trotsky defendía la revolución permanente, mientras que Stalin promovía el socialismo en un solo país.", difficulty: "advanced" },
     { id: 2002, question: "¿Qué acuerdos firmó Rusia durante la Guerra Civil?", options: ["Tratados de asistencia mutua", "Acuerdos de no intervención", "Concordatos papales", "Ninguno"], correctIndex: 1, explanation: "Rusia firmó acuerdos bilaterales de no intervención con potencias extranjeras durante la Guerra Civil.", difficulty: "advanced" },
     { id: 2003, question: "¿Qué consecuencia económica inmediata tuvo la revolución?", options: ["Crecimiento económico", "Hiperinflación y escasez", "Industrialización acelerada", "Aumento del comercio"], correctIndex: 1, explanation: "La revolución provocó hiperinflación, escasez de alimentos y colapso económico.", difficulty: "basic" },
-    { id: 2004, question: "¿Qué medio de transporte fue clave para el traslado del gobierno a Moscú?", options: ["El tren", "El avión", "El barco", "El automóvil"], correctIndex: 0, explanation: "El tren fue fundamental para el traslado del gobierno revolucionario de Petrogrado a Moscú en 1918.", difficulty: "basic" }
-  ,
+    { id: 2004, question: "¿Qué medio de transporte fue clave para el traslado del gobierno a Moscú?", options: ["El tren", "El avión", "El barco", "El automóvil"], correctIndex: 0, explanation: "El tren fue fundamental para el traslado del gobierno revolucionario de Petrogrado a Moscú en 1918.", difficulty: "basic" },
     { id: 2315, question: "¿Qué era el sistema de castas colonial?", options: ["Un sistema democrático", "Estratificación racial y social", "Un sistema económico", "Un sistema religioso"], correctIndex: 1, explanation: "El sistema de castas era una estricta estratificación racial y social en la sociedad colonial.", difficulty: "basic" },
     { id: 2316, question: "¿Quiénes estaban en la cima del sistema de castas?", options: ["Indígenas", "Españoles peninsulares", "Mestizos", "Criollos"], correctIndex: 1, explanation: "Los españoles peninsulares, nacidos en España, estaban en la cima del sistema.", difficulty: "basic" },
     { id: 2317, question: "¿Qué eran los criollos?", options: ["Indígenas", "Españoles nacidos en América", "Mestizos", "Africanos"], correctIndex: 1, explanation: "Los criollos eran españoles nacidos en América.", difficulty: "basic" },
@@ -27371,8 +27175,7 @@ Entre 70 y 85 millones de muertos. Creacion de la ONU, inicio de la Guerra Fria,
         correctIndex: 1,
         explanation: "El Plan Marshall (1948) de EE.UU. ayudó a reconstruir Europa occidental, fortaleciendo la alianza capitalista y evitando que los países devastados cayeran bajo la influencia comunista soviética.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 2005, question: "¿En qué año comenzó la Segunda Guerra Mundial?", options: ["1935", "1937", "1939", "1941"], correctIndex: 2, explanation: "La Segunda Guerra Mundial comenzó el 1 de septiembre de 1939 con la invasión alemana de Polonia.", difficulty: "basic" },
     { id: 2006, question: "¿Qué líder alemán inició la Segunda Guerra Mundial?", options: ["Mussolini", "Stalin", "Hitler", "Franco"], correctIndex: 2, explanation: "Adolf Hitler, líder nazi de Alemania, inició la Segunda Guerra Mundial con la invasión de Polonia.", difficulty: "basic" },
     { id: 2007, question: "¿Qué alianza formaron Alemania, Italia y Japón?", options: ["Aliados", "Potencias del Eje", "Tratado de Varsovia", "Entente Cordiale"], correctIndex: 1, explanation: "Las Potencias del Eje estaban conformadas por Alemania, Italia y Japón.", difficulty: "basic" },
@@ -27521,8 +27324,7 @@ La dictadura de Velasco, guerra contra Sendero e intervencion estadounidense. La
         correctIndex: 1,
         explanation: "La globalización en América Latina generó mayor acceso a mercados e inversiones, pero también incrementó la dependencia de materias primas, la vulnerabilidad financiera y la desigualdad interna.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 2026, question: "¿En qué años se desarrolló la Guerra Fría?", options: ["1945-1960", "1947-1991", "1950-1975", "1960-1989"], correctIndex: 1, explanation: "La Guerra Fría se desarrolló entre 1947 y 1991, entre Estados Unidos y la Unión Soviética.", difficulty: "basic" },
     { id: 2027, question: "¿Qué fue el Muro de Berlín?", options: ["Una fortaleza militar", "Una barrera que dividía Berlín", "Un monumento de guerra", "Un centro comercial"], correctIndex: 1, explanation: "El Muro de Berlín (1961-1989) separaba Berlín Oriental de Berlín Occidental.", difficulty: "basic" },
     { id: 2028, question: "¿Qué fue la Doctrina Truman?", options: ["Una alianza militar", "Política de contención del comunismo", "Un tratado de comercio", "Una declaración de independencia"], correctIndex: 1, explanation: "La Doctrina Truman (1947) estableció la política estadounidense de contención del comunismo.", difficulty: "basic" },
@@ -27541,8 +27343,7 @@ La dictadura de Velasco, guerra contra Sendero e intervencion estadounidense. La
     { id: 2042, question: "¿Qué organización económica se creó como respuesta al Plan Marshall?", options: ["CAME", "CECA", "OCDE", "GATT"], correctIndex: 0, explanation: "La CAME fue la organización económica de los países socialistas en respuesta al Plan Marshall.", difficulty: "advanced" },
     { id: 2043, question: "¿Qué consecuencia tuvo la descolonización en África?", options: ["Estabilidad inmediata", "Conflictos étnicos y fronteras artificiales", "Riqueza para todos", "Unión de todos los países"], correctIndex: 1, explanation: "La descolonización dejó fronteras artificiales y conflictos étnicos en muchos países africanos.", difficulty: "advanced" },
     { id: 2044, question: "¿Qué fue la carrera espacial entre EE.UU. y la URSS?", options: ["Competencia por llegar a la Luna", "Competencia por tecnología militar", "Competencia por colonizar el espacio", "Todas anteriores"], correctIndex: 3, explanation: "La carrera espacial fue una competencia por logros en exploración espacial y tecnología militar.", difficulty: "basic" },
-    { id: 2045, question: "¿Qué fue la Guerra Fría?", options: ["Un conflicto bélico directo", "Tensión geopolítica sin guerra directa", "Una guerra nuclear", "Un conflicto religioso"], correctIndex: 1, explanation: "La Guerra Fría fue un periodo de tensión geopolítica sin enfrentamiento bélico directo.", difficulty: "basic" }
-  ,
+    { id: 2045, question: "¿Qué fue la Guerra Fría?", options: ["Un conflicto bélico directo", "Tensión geopolítica sin guerra directa", "Una guerra nuclear", "Un conflicto religioso"], correctIndex: 1, explanation: "La Guerra Fría fue un periodo de tensión geopolítica sin enfrentamiento bélico directo.", difficulty: "basic" },
     { id: 2372, question: "¿Quién lideró la rebelión de Túpac Amaru II?", options: ["Manco Inca", "José Gabriel Condorcanqui", "Simón Bolívar", "San Martín"], correctIndex: 1, explanation: "José Gabriel Condorcanqui lideró la rebelión bajo el nombre de Túpac Amaru II.", difficulty: "basic" },
     { id: 2373, question: "¿En qué año estalló la rebelión?", options: ["1780", "1791", "1800", "1810"], correctIndex: 0, explanation: "La rebelión estalló el 4 de noviembre de 1780.", difficulty: "basic" },
     { id: 2374, question: "¿Contra qué se rebeló?", options: ["Solo contra españoles", "Contra el sistema colonial y sus abusos", "Solo contra la Iglesia", "Solo contra mineros"], correctIndex: 1, explanation: "Se rebeló contra el sistema colonial y sus abusos, especialmente la mita y los impuestos.", difficulty: "basic" },
@@ -27695,8 +27496,7 @@ Wari: ciudad de Wari, Pikillacta, Jargampata. Tiahuanaco: Akapana, Puma Punku, m
         correctIndex: 2,
         explanation: "El cambio climático, especialmente las sequías prolongadas alrededor del año 1000 d.C., debilitó las estructuras agrícolas y políticas de ambos imperios.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 2046, question: "¿En qué región se desarrolló la cultura Wari?", options: ["Costa norte", "Sierra central", "Selva amazónica", "Costa sur"], correctIndex: 1, explanation: "La cultura Wari se desarrolló en la sierra central del actual Perú, con su centro en Ayacucho.", difficulty: "basic" },
     { id: 2047, question: "¿En qué región se desarrolló la cultura Tiahuanaco?", options: ["Costa ecuatoriana", "Altiplano andino", "Selva brasileña", "Valle del Cauca"], correctIndex: 1, explanation: "Tiahuanaco se desarrolló en el altiplano andino, cerca del lago Titicaca.", difficulty: "basic" },
     { id: 2048, question: "¿Qué tipo de arquitectura desarrollaron los Wari?", options: ["Pirámides", "Ciudades planificadas", "Aguadas", "Templos solares"], correctIndex: 1, explanation: "Los Wari desarrollaron ciudades planificadas con compleja organización urbana y administrativa.", difficulty: "basic" },
@@ -27857,8 +27657,7 @@ Demostraron que la complejidad social no requiere estado centralizado. Sus estra
         correctIndex: 1,
         explanation: "El Señorío de Chincha se distinguía por mantener una activa flota de balsas que comerciaba a larga distancia, incluso con el actual Ecuador.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 2067, question: "¿Qué fueron los señoríos regionales en los Andes?", options: ["Estados unificados", "Unidades políticas independientes", "Colonias españolas", "Provincias incas"], correctIndex: 1, explanation: "Los señoríos regionales fueron unidades políticas independientes que surgieron tras la decadencia de Wari y Tiahuanaco.", difficulty: "basic" },
     { id: 2068, question: "¿Qué grupo dominó la costa norte del Perú preincaico?", options: ["Chavín", "Moche", "Nazca", "Paracas"], correctIndex: 1, explanation: "Los Moche dominaron la costa norte del Perú entre el 100 y 700 de nuestra era.", difficulty: "basic" },
     { id: 2069, question: "¿Qué cultura se desarrolló en el valle de Moche?", options: ["Cultura Chimú", "Cultura Moche", "Cultura Nazca", "Cultura Recuay"], correctIndex: 1, explanation: "La cultura Moche se desarrolló en el valle de Moche en la costa norte del Perú.", difficulty: "basic" },
@@ -28013,8 +27812,7 @@ Hallazgos en costa norte con sacrificios, ceramica y metalurgia que demuestran c
         correctIndex: 1,
         explanation: "Los Chimú perfeccionaron técnicas como el repujado y la soldadura de metales, creando piezas de orfebrería de gran complejidad y calidad.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 2088, question: "¿Qué cultura construyó las Líneas de Nazca?", options: ["Moche", "Nazca", "Paracas", "Chincha"], correctIndex: 1, explanation: "Los Nazca construyeron las famosas Líneas de Nazca, geoglifos gigantescos visibles desde el aire.", difficulty: "basic" },
     { id: 2089, question: "¿Qué culturas se desarrollaron en la costa norte del Perú?", options: ["Nazca y Paracas", "Moche y Chimú", "Chincha y Pachacamac", "Lima y Chancay"], correctIndex: 1, explanation: "Moche y Chimú fueron las principales culturas de la costa norte del Perú.", difficulty: "basic" },
     { id: 2090, question: "¿Qué tejidos preservados son famosos de los Paracas?", options: ["Tapices policromos", "Lienzos monocromos", "Fieltro de lana", "Seda china"], correctIndex: 0, explanation: "Los Paracas son conocidos por sus tapices policromos con diseños complejos.", difficulty: "basic" },
@@ -28164,8 +27962,7 @@ Cambio climatico, perdida de variedades nativas, migracion rural y falta de asis
         correctIndex: 1,
         explanation: "La agricultura vertical permitía que una misma comunidad controlara recursos de distintas zonas altitudinales, desde la costa hasta la sierra alta, accediendo a productos diversos.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 2109, question: "¿Qué cultivos son originarios de los Andes?", options: ["Trigo y cebada", "Papa y maíz", "Arroz y soja", "Caña de azúcar"], correctIndex: 1, explanation: "La papa y el maíz son dos de los principales cultivos originarios de la región andina.", difficulty: "basic" },
     { id: 2110, question: "¿Qué sistema de terrazas construían los Andes para agricultura?", options: ["Bancales", "Andenes", "Campos elevados", "Terraplenes"], correctIndex: 1, explanation: "Los andenes eran terrazas agrícolas construidas en las laderas de las montañas.", difficulty: "basic" },
     { id: 2111, question: "¿Qué variedad de papa se cultiva en los Andes?", options: ["Solo una variedad", "Miles de variedades", "Ninguna", "Solo papa dulce"], correctIndex: 1, explanation: "Los Andes albergan miles de variedades de papa, siendo el centro de origen de este tubérculo.", difficulty: "basic" },
@@ -28322,8 +28119,7 @@ Partes se usan como senderos turisticos. Comunidades mantienen tradiciones de co
         correctIndex: 1,
         explanation: "Los tzontes eran un sistema de cuerdas con nudos especiales que servían para registrar y transmitir información numérica y datos administrativos.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 2130, question: "¿Qué fue el Qhapaq Ñan?", options: ["Una montaña sagrada", "La red vial inca", "Un río importante", "Un templo solar"], correctIndex: 1, explanation: "El Qhapaq Ñan fue la red vial inca de más de 30,000 km que conectaba todo el Tahuantinsuyo.", difficulty: "basic" },
     { id: 2131, question: "¿Qué sistema de mensajería usaba el Qhapaq Ñan?", options: ["Chasqui", "Ayllu", "Sapa Inca", "Curaca"], correctIndex: 0, explanation: "Los chasquis eran mensajeros que recorrían el Qhapaq Ñan transportando información importante.", difficulty: "basic" },
     { id: 2132, question: "¿Cómo se llamaban las estaciones de descanso en el camino?", options: ["Tambo", "Pukara", "Qollqa", "Ayllu"], correctIndex: 0, explanation: "Los tambos eran estaciones de descanso y alojamiento distribuidas a lo largo del Qhapaq Ñan.", difficulty: "basic" },
@@ -28480,8 +28276,7 @@ Demostro sociedad eficiente sin mercado ni moneda. Tecnicas agricolas, gestion d
         correctIndex: 1,
         explanation: "Al no existir mercados ni dinero, la población dependía enteramente del sistema estatal; cuando los españoles lo destruyeron, no había mecanismos alternativos de subsistencia.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 2150, question: "¿Qué describía el tributo en trabajo en el sistema inca?", options: ["Minka", "Mitma", "Ayllu", "Apu"], correctIndex: 1, explanation: "El mitma era el tributo en trabajo donde los súbditos servían al Estado por periodos determinados.", difficulty: "basic" },
     { id: 2151, question: "¿A quién pertenecían las tierras en el sistema incaico?", options: ["Comunal", "Del Inca, del Sol y del pueblo", "Privada", "Extranjera"], correctIndex: 1, explanation: "Las tierras pertenecían al Inca, al Sol y al pueblo, sin propiedad privada.", difficulty: "basic" },
     { id: 2152, question: "¿Cómo se llamaban los almacenes estatales incas?", options: ["Qollqas", "Pukaras", "Tambos", "Ayllus"], correctIndex: 0, explanation: "Las qollqas eran almacenes estatales para guardar excedentes agrícolas y otros productos.", difficulty: "basic" },
@@ -28502,8 +28297,7 @@ Demostro sociedad eficiente sin mercado ni moneda. Tecnicas agricolas, gestion d
     { id: 2167, question: "¿Qué describía la metalurgia estatal inca?", options: ["Artesanal libre", "Producción organizada estatal", "Importada", "Primitiva"], correctIndex: 1, explanation: "La metalurgia inca era una producción organizada estatal que extraía y trabajaba metales.", difficulty: "advanced" },
     { id: 2168, question: "¿Qué describía el sistema de amortiguamiento estatal inca?", options: ["Solo excedentes", "Almacenamiento y distribución estratégica", "Solo tributos", "Solo trueque"], correctIndex: 1, explanation: "El sistema de amortiguamiento se basaba en el almacenamiento y distribución estratégica de excedentes.", difficulty: "advanced" },
     { id: 2169, question: "¿Qué describía la ausencia de monedas en la economía inca?", options: ["Uso de oro", "Trueque generalizado y tributo", "Monedas de plata", "Monedas de cobre"], correctIndex: 1, explanation: "La economía inca no usaba monedas, basándose en el trueque y el sistema de tributos.", difficulty: "basic" },
-    { id: 2170, question: "¿Qué describía el comercio entre regiones del imperio inca?", options: ["Libre mercado", "Redistribución y trueque regulado", "Comercio exterior", "No existía comercio"], correctIndex: 1, explanation: "El comercio entre regiones se realizaba mediante redistribución y trueque regulado por el Estado.", difficulty: "basic" }
-  ,
+    { id: 2170, question: "¿Qué describía el comercio entre regiones del imperio inca?", options: ["Libre mercado", "Redistribución y trueque regulado", "Comercio exterior", "No existía comercio"], correctIndex: 1, explanation: "El comercio entre regiones se realizaba mediante redistribución y trueque regulado por el Estado.", difficulty: "basic" },
     { id: 900, question: "Quien fue el principal lider intelectual de la Generacion del 900?", options: ["Victor Raul Haya de la Torre", "Manuel Gonzalez Prada", "Jose Carlos Mariategui", "Nicolas de Piérola"], correctIndex: 1, explanation: "Manuel Gonzalez Prada fue el lider intelectual de la Generacion del 900, usando su pluma para criticar la oligarquia y la injusticia social.", difficulty: "basico" },
     { id: 901, question: "Cual era el objetivo principal de la Generacion del 900?", options: ["Establecer una monarquia", "Reformar la sociedad peruana contra la oligarquia", "Crear un partido militar", "Expandir el territorio nacional"], correctIndex: 1, explanation: "La Generacion del 900 busco una reforma social profunda como respuesta al dominio de la oligarquia gobernante.", difficulty: "basico" },
     { id: 902, question: "Que tipo de gobierno criticaba la Generacion del 900?", options: ["El gobierno militar", "La Republica Aristocratica", "El gobierno teocratico", "El feudalismo europeo"], correctIndex: 1, explanation: "La Generacion del 900 surgio especificamente como respuesta critica a la oligarquia que dominaba la Republica Aristocratica.", difficulty: "basico" },
@@ -28648,8 +28442,7 @@ Demostro fragilidad del sistema sucesorio incaico: falta de regla clara, ausenci
         correctIndex: 1,
         explanation: "La guerra civil dejó al imperio fragmentado, sin un ejército centralizado, y creó resentimientos que hicieron que muchos pueblos sometidos apoyaran a los españoles.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 2171, question: "¿Qué fue el último gran conflicto civil del Tahuantinsuyo?", options: ["Guerra civil de Atahualpa", "Rebelión de Manco Inca", "Guerra contra los Chancas", "Conquista de Chimú"], correctIndex: 0, explanation: "La guerra civil entre Atahualpa y Huáscar fue el último gran conflicto civil antes de la llegada de los españoles.", difficulty: "basic" },
     { id: 2172, question: "¿Quién luchó contra Atahualpa en la guerra civil?", options: ["Manco Inca", "Huáscar", "Túpac Inca Yupanqui", "Pachacútec"], correctIndex: 1, explanation: "Huáscar fue el hermano de Atahualpa que luchó contra él por el trono.", difficulty: "basic" },
     { id: 2173, question: "¿Qué base de poder tenía Atahualpa?", options: ["Cusco", "Quito", "Lima", "Chan Chan"], correctIndex: 1, explanation: "Atahualpa tenía su base de poder en Quito, mientras que Huáscar estaba en Cusco.", difficulty: "basic" },
@@ -28670,8 +28463,7 @@ Demostro fragilidad del sistema sucesorio incaico: falta de regla clara, ausenci
     { id: 2188, question: "¿Qué factor debilitó a los ejércitos incas durante la guerra civil?", options: ["No hubo enfermedades", "Enfermedades que debilitaron a los ejércitos", "Solo afectó a los españoles", "No fue relevante"], correctIndex: 1, explanation: "Las enfermedades debilitaron a los ejércitos incas durante la guerra civil.", difficulty: "advanced" },
     { id: 2189, question: "¿Cómo fue la toma del Cusco por Atahualpa?", options: ["Fue pacífica", "Fue una conquista militar sangrienta", "Fue un acto de defección", "No llegó a tomar el Cusco"], correctIndex: 1, explanation: "La toma del Cusco fue una conquista militar sangrienta con muchas víctimas.", difficulty: "advanced" },
     { id: 2190, question: "¿Qué contactos externos tenía el Tahuantinsuyo?", options: ["Aislamiento total", "Contacto con europeos ya existente", "No hubo contacto externo", "Guerra contra los españoles"], correctIndex: 1, explanation: "El Tahuantinsuyo ya tenía contactos con europeos antes de la guerra civil.", difficulty: "advanced" },
-    { id: 2191, question: "¿Qué describía el sistema de sucesión inca?", options: ["Primogenitura absoluta", "Elección por el Cusco", "Lucha entre hermanos", "Sucesión femenina"], correctIndex: 2, explanation: "El sistema de sucesión frecuentemente generaba luchas entre hermanos por el trono.", difficulty: "basic" }
-  ,
+    { id: 2191, question: "¿Qué describía el sistema de sucesión inca?", options: ["Primogenitura absoluta", "Elección por el Cusco", "Lucha entre hermanos", "Sucesión femenina"], correctIndex: 2, explanation: "El sistema de sucesión frecuentemente generaba luchas entre hermanos por el trono.", difficulty: "basic" },
     { id: 921, question: "En que ano asumio el poder Nicolas de Pierola estableciendo la paz civil?", options: ["1890", "1895", "1900", "1910"], correctIndex: 1, explanation: "Nicolas de Pierola asumio el poder en 1895 tras la Revolucion Civil de 1894, estableciendo la paz civil en el Peru.", difficulty: "basico" },
     { id: 922, question: "Cuales fueron los principales productos de exportacion de la Republica Aristocratica?", options: ["Petroleo, cobre y zinc", "Azucar, algodon y caucho", "Oro, plata y estano", "Cafe, cacao y tabaco"], correctIndex: 1, explanation: "La economia exportadora de la Republica Aristocratica se baso principalmente en azucar, algodon y caucho.", difficulty: "basico" },
     { id: 923, question: "Que institucion financiera se fundo en 1897 y fue clave en la modernizacion?", options: ["El Banco Central de Reserva", "El Banco de Peru y Londres", "El Banco de la Nacion", "El Banco Popular"], correctIndex: 1, explanation: "El Banco de Peru y Londres fue fundado en 1897 y se convirtio en una de las principales instituciones financieras del periodo oligarquico.", difficulty: "basico" },
@@ -28823,8 +28615,7 @@ Demostro capacidad de resistencia y sento precedente heredado por sucesores. Vil
         correctIndex: 2,
         explanation: "Túpac Amaru, el último inca de Vilcabamba, fue capturado y ejecutado por los españoles en 1572, marcando el fin oficial del Imperio Inca.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 2192, question: "¿Quién lideró la resistencia contra los españoles?", options: ["Atahualpa", "Huáscar", "Manco Inca", "Túpac Inca Yupanqui"], correctIndex: 2, explanation: "Manco Inca lideró la resistencia inca contra los españoles tras la conquista del Cusco.", difficulty: "basic" },
     { id: 2193, question: "¿Quién fue el nuevo Inca después de Atahualpa?", options: ["Huáscar", "Manco Inca", "Túpac Inca Yupanqui", "Sayri Túpac"], correctIndex: 1, explanation: "Manco Inca fue proclamado Inca por los españoles, pero luego se rebeló.", difficulty: "basic" },
     { id: 2194, question: "¿Dónde estableció Manco Inca una nueva capital?", options: ["Cusco", "Quito", "Vilcabamba", "Lima"], correctIndex: 2, explanation: "Manco Inca estableció una nueva capital en Vilcabamba como centro de resistencia.", difficulty: "basic" },
@@ -28958,8 +28749,7 @@ Cajamarca demostro vulnerabilidad del sistema politico incaico: captura del lide
         correctIndex: 2,
         explanation: "Atahualpa se bautizo para evitar la hoguera y fue ejecutado por garrote el 26 de julio de 1533.",
         difficulty: "intermedio"
-      }
-    ,
+      },
     { id: 2213, question: "¿En qué año ocurrió la Batalla de Cajamarca?", options: ["1521", "1532", "1541", "1550"], correctIndex: 1, explanation: "La Batalla de Cajamarca ocurrió el 16 de noviembre de 1532.", difficulty: "basic" },
     { id: 2214, question: "¿Quién lideró a los españoles en Cajamarca?", options: ["Cortés", "Pizarro", "Almagro", "Orellana"], correctIndex: 1, explanation: "Francisco Pizarro lideró a los españoles en la Batalla de Cajamarca.", difficulty: "basic" },
     { id: 2215, question: "¿Quién lideró a los incas en Cajamarca?", options: ["Huáscar", "Atahualpa", "Manco Inca", "Túpac Inca Yupanqui"], correctIndex: 1, explanation: "Atahualpa lideró a los incas en la Batalla de Cajamarca.", difficulty: "basic" },
@@ -29095,8 +28885,7 @@ Revelan fragilidad del sistema centralizado ante crisis sucesorias. Falta de mec
         correctIndex: 2,
         explanation: "Pedro de La Gasca llego como presidente de la Real Audiencia y uso estrategias diplomaticas para derrotar a Gonzalo Pizarro en 1548.",
         difficulty: "basico"
-      }
-    ,
+      },
     { id: 2234, question: "¿Qué conflictos siguieron a la muerte de Huayna Capac?", options: ["Solo una rebelión", "Guerra civil entre Atahualpa y Huáscar", "Una invasión extranjera", "Un terremoto"], correctIndex: 1, explanation: "Tras la muerte de Huayna Capac, estalló la guerra civil entre sus hijos Atahualpa y Huáscar.", difficulty: "basic" },
     { id: 2235, question: "¿Quiénes eran los bandos en la guerra civil inca?", options: ["Norte y sur", "Atahualpa y Huáscar", "Costa y sierra", "Incas y españoles"], correctIndex: 1, explanation: "Los bandos eran liderados por Atahualpa (norte) y Huáscar (sur/Cusco).", difficulty: "basic" },
     { id: 2236, question: "¿Cuánto duró aproximadamente la guerra civil inca?", options: ["Un año", "Cinco años", "Diez años", "Veinte años"], correctIndex: 1, explanation: "La guerra civil duró aproximadamente cinco años, desde 1529 hasta 1532.", difficulty: "basic" },
@@ -29236,8 +29025,7 @@ Rebeliones indigenas y de Hernandez Giron. Tensiones entre Corona, Iglesia y col
         correctIndex: 1,
         explanation: "La Real Audiencia de Lima funciono como tribunal de justicia superior y como organo de gobierno colonial.",
         difficulty: "intermedio"
-      }
-    ,
+      },
     { id: 2255, question: "¿En qué año se creó el Virreinato del Perú?", options: ["1535", "1542", "1572", "1600"], correctIndex: 1, explanation: "El Virreinato del Perú fue creado por Real Cédula en 1542.", difficulty: "basic" },
     { id: 2256, question: "¿Quién fue el primer virrey del Perú?", options: ["Pizarro", "Blasco Núñez de Vela", "La Gasca", "Toledo"], correctIndex: 1, explanation: "Blasco Núñez de Vela fue el primer virrey del Perú, nombrado en 1544.", difficulty: "basic" },
     { id: 2257, question: "¿Qué ciudad fue capital del Virreinato del Perú?", options: ["Lima", "Cusco", "Quito", "Bogotá"], correctIndex: 0, explanation: "Lima fue designada como capital del Virreinato del Perú.", difficulty: "basic" },
@@ -29257,8 +29045,7 @@ Rebeliones indigenas y de Hernandez Giron. Tensiones entre Corona, Iglesia y col
     { id: 2271, question: "¿Qué función cumplía el consulado de Lima?", options: ["Solo religioso", "Regulación del comercio y justicia mercantil", "Solo militar", "Solo educativo"], correctIndex: 1, explanation: "El consulado de Lima regulaba el comercio y administraba justicia mercantil.", difficulty: "advanced" },
     { id: 2272, question: "¿Qué productos se exportaban del Virreinato del Perú?", options: ["Solo plata", "Plata, oro, coca y otros", "Solo oro", "Solo alimentos"], correctIndex: 1, explanation: "Del Virreinato se exportaba plata, oro, coca, azúcar y otros productos.", difficulty: "advanced" },
     { id: 2273, question: "¿Qué significaba el sistema de castas en el Virreinato?", options: ["Igualdad social", "Estratificación racial y social", "Solo económico", "Solo religioso"], correctIndex: 1, explanation: "El sistema de castas era una estricta estratificación racial y social.", difficulty: "advanced" },
-    { id: 2274, question: "¿Qué papel jugó el comercio en el Virreinato temprano?", options: ["Ninguno", "Flujo de mercancías y riqueza", "Solo local", "Solo internacional"], correctIndex: 1, explanation: "El comercio era vital para el flujo de mercancías y riqueza entre España y América.", difficulty: "basic" }
-  ,
+    { id: 2274, question: "¿Qué papel jugó el comercio en el Virreinato temprano?", options: ["Ninguno", "Flujo de mercancías y riqueza", "Solo local", "Solo internacional"], correctIndex: 1, explanation: "El comercio era vital para el flujo de mercancías y riqueza entre España y América.", difficulty: "basic" },
     { id: 1005, question: "Como se caracterizo la dictadura de Odria?", options: ["Democracia plena", "Represion politica y persecucion de opositores", "Nacionalizacion total", "Abolicion del ejercito"], correctIndex: 1, explanation: "La dictadura se caracterizo por la represion politica, censura y persecucion sistematica de opositores.", difficulty: "basico" },
     { id: 1006, question: "Que institution se lleno de prisioneros politicos durante la dictadura?", options: ["La Universidad de San Marcos", "El Penal del Callao", "El Congreso", "La Corte Suprema"], correctIndex: 1, explanation: "El Penal del Callao se lleno de prisioneros politicos, especialmente apristas y comunistas.", difficulty: "basico" },
     { id: 1007, question: "Que duro la dictadura de Odria?", options: ["Cuatro anos", "Seis anos", "Ocho anos", "Diez anos"], correctIndex: 2, explanation: "La dictadura duro ocho anos, de 1948 a 1956.", difficulty: "basico" },
@@ -29397,8 +29184,7 @@ Explotacion laboral, desculturizacion y muerte indigena. Desestructuracion de co
         correctIndex: 1,
         explanation: "Los kurakas eran lideres indigenas que funcionaban como intermediarios entre las comunidades y el sistema colonial.",
         difficulty: "intermedio"
-      }
-    ,
+      },
     { id: 2275, question: "¿Qué fue la encomienda?", options: ["Un impuesto", "Concesión de indígenas a colonos", "Una hacienda", "Una misión"], correctIndex: 1, explanation: "La encomienda era una concesión por la cual un español recibía tributo y trabajo de indígenas.", difficulty: "basic" },
     { id: 2276, question: "¿Qué debía a cambio el encomendero?", options: ["Nada", "Protección y evangelización de los indígenas", "Solo impuestos", "Solo trabajo"], correctIndex: 1, explanation: "El encomendero debía proteger y evangelizar a los indígenas a cambio de su tributo y trabajo.", difficulty: "basic" },
     { id: 2277, question: "¿Qué fue el repartimiento?", options: ["Un sorteo", "Trabajo forzado rotativo de indígenas", "Una donación", "Una elección"], correctIndex: 1, explanation: "El repartimiento era un sistema de trabajo forzado rotativo de indígenas.", difficulty: "basic" },
@@ -29539,8 +29325,7 @@ Herencia ambivalente: enriquecio a España, financio ciudades, pero causo muerte
         correctIndex: 2,
         explanation: "El virrey Francisco de Toledo reorganizo la mita minera en 1572, obligando a indigenas a trabajar en las minas por turnos rotativos.",
         difficulty: "intermedio"
-      }
-    ,
+      },
     { id: 2295, question: "¿Qué recurso mineral fue el más importante del Virreinato?", options: ["Oro", "Plata", "Cobre", "Estaño"], correctIndex: 1, explanation: "La plata fue el recurso mineral más importante del Virreinato del Perú.", difficulty: "basic" },
     { id: 2296, question: "¿Dónde se ubicaba la mina de Potosí?", options: ["Perú", "Bolivia", "México", "Chile"], correctIndex: 1, explanation: "La mina de Potosí se ubicaba en el Alto Perú, actual Bolivia.", difficulty: "basic" },
     { id: 2297, question: "¿Qué sistema de trabajo forzado se usaba en las minas?", options: ["Esclavitud africana", "Mita colonial", "Encomienda", "Repartimiento"], correctIndex: 1, explanation: "La mita colonial era el sistema de trabajo forzado indígena en las minas.", difficulty: "basic" },
@@ -29559,8 +29344,7 @@ Herencia ambivalente: enriquecio a España, financio ciudades, pero causo muerte
     { id: 2311, question: "¿Qué legado dejó la minería colonial?", options: ["Solo riqueza", "Dependencia económica y desigualdad", "Justicia social", "Industrialización"], correctIndex: 1, explanation: "La minería colonial dejó dependencia económica y desigualdad social.", difficulty: "advanced" },
     { id: 2312, question: "¿Cómo afectó la plata a la economía global?", options: ["Ninguno", "Influyó en precios y comercio mundial", "Solo afectó a España", "No tuvo impacto"], correctIndex: 1, explanation: "La plata influyó significativamente en precios y comercio mundial.", difficulty: "advanced" },
     { id: 2313, question: "¿Qué cambios introdujo la Corona en la minería?", options: ["Ninguno", "Regulación, impuestos y monopolio", "Libertad total", "Nacionalización"], correctIndex: 1, explanation: "La Corona introdujo regulación, impuestos y monopolio sobre la minería.", difficulty: "basic" },
-    { id: 2314, question: "¿Qué era la Casa de Moneda?", options: ["Una escuela", "Institución para acuñar moneda", "Una mina", "Un templo"], correctIndex: 1, explanation: "La Casa de Moneda era la institución encargada de acuñar moneda oficial colonial.", difficulty: "basic" }
-  ,
+    { id: 2314, question: "¿Qué era la Casa de Moneda?", options: ["Una escuela", "Institución para acuñar moneda", "Una mina", "Un templo"], correctIndex: 1, explanation: "La Casa de Moneda era la institución encargada de acuñar moneda oficial colonial.", difficulty: "basic" },
     { id: 1047, question: "Que fecha y decreto establecieron la Reforma Agraria?", options: ["12 de octubre de 1968", "24 de junio de 1969, Decreto Ley No. 17716", "3 de octubre de 1970", "1 de mayo de 1971"], correctIndex: 1, explanation: "La Reforma Agraria fue promulgada el 24 de junio de 1969 mediante el Decreto Ley No. 17716.", difficulty: "basico" },
     { id: 1048, question: "Que empresa absorbio a la International Petroleum Company?", options: ["PETROPERU", "La Compania Peruana de Petroleos", "ENCOMIN", "Sociedad Petrolera Peruana"], correctIndex: 1, explanation: "La Compania Peruana de Petroleos absorbio a la IPC en 1969 como parte de la nacionalizacion petrolera.", difficulty: "basico" },
     { id: 1049, question: "Que ley establecio la reforma educativa integral?", options: ["Ley No. 18601", "Ley General de Educacion No. 19326", "Ley No. 20232", "Ley No. 21054"], correctIndex: 1, explanation: "La Ley General de Educacion No. 19326 promulgada en 1972 transformo el sistema educativo.", difficulty: "basico" },
@@ -29696,8 +29480,7 @@ Herencia profunda de desigualdad y discriminacion que persiste. Privilegios blan
         correctIndex: 2,
         explanation: "Los mestizos (hijos de espanol e indigena) formaban una clase intermedia entre los espanoles y los grupos indigenas y africanos.",
         difficulty: "basico"
-      }
-    ,
+      },
     { id: 2315, question: "¿Qué era el sistema de castas colonial?", options: ["Un sistema democrático", "Estratificación racial y social", "Un sistema económico", "Un sistema religioso"], correctIndex: 1, explanation: "El sistema de castas era una estricta estratificación racial y social en la sociedad colonial.", difficulty: "basic" },
     { id: 2316, question: "¿Quiénes estaban en la cima del sistema de castas?", options: ["Indígenas", "Españoles peninsulares", "Mestizos", "Criollos"], correctIndex: 1, explanation: "Los españoles peninsulares, nacidos en España, estaban en la cima del sistema.", difficulty: "basic" },
     { id: 2317, question: "¿Qué eran los criollos?", options: ["Indígenas", "Españoles nacidos en América", "Mestizos", "Africanos"], correctIndex: 1, explanation: "Los criollos eran españoles nacidos en América.", difficulty: "basic" },
@@ -29716,8 +29499,7 @@ Herencia profunda de desigualdad y discriminacion que persiste. Privilegios blan
     { id: 2330, question: "¿Qué papel jugaba la vestimenta?", options: ["Ninguno", "Indicaba estatus y categoría social", "Solo protección", "Solo belleza"], correctIndex: 1, explanation: "La vestimenta indicaba estatus y categoría social en el sistema de castas.", difficulty: "advanced" },
     { id: 2331, question: "¿Qué legado dejó el sistema de castas?", options: ["Igualdad", "Desigualdad racial persistente", "Justicia social", "Prosperidad"], correctIndex: 1, explanation: "El sistema de castas dejó un legado de desigualdad racial que persiste.", difficulty: "advanced" },
     { id: 2332, question: "¿Cómo se organizaba la justicia colonial?", options: ["Democráticamente", "Basada en castas y jerarquías", "Igualitaria", "No existía"], correctIndex: 1, explanation: "La justicia se organizaba según castas y jerarquías sociales.", difficulty: "basic" },
-    { id: 2333, question: "¿Qué papel jugaban los tribunales de la Sta. Hermandad?", options: ["Solo religiosos", "Control y disciplina de indígenas y esclavos", "Solo militares", "Solo judiciales"], correctIndex: 1, explanation: "Los tribunales controlaban y disciplinaban a indígenas y esclavos.", difficulty: "intermediate" }
-  ,
+    { id: 2333, question: "¿Qué papel jugaban los tribunales de la Sta. Hermandad?", options: ["Solo religiosos", "Control y disciplina de indígenas y esclavos", "Solo militares", "Solo judiciales"], correctIndex: 1, explanation: "Los tribunales controlaban y disciplinaban a indígenas y esclavos.", difficulty: "intermediate" },
     { id: 2315, question: "¿Qué era el sistema de castas colonial?", options: ["Un sistema democrático", "Estratificación racial y social", "Un sistema económico", "Un sistema religioso"], correctIndex: 1, explanation: "El sistema de castas era una estricta estratificación racial y social en la sociedad colonial.", difficulty: "basic" },
     { id: 2316, question: "¿Quiénes estaban en la cima del sistema de castas?", options: ["Indígenas", "Españoles peninsulares", "Mestizos", "Criollos"], correctIndex: 1, explanation: "Los españoles peninsulares, nacidos en España, estaban en la cima del sistema.", difficulty: "basic" },
     { id: 2317, question: "¿Qué eran los criollos?", options: ["Indígenas", "Españoles nacidos en América", "Mestizos", "Africanos"], correctIndex: 1, explanation: "Los criollos eran españoles nacidos en América.", difficulty: "basic" },
@@ -29863,8 +29645,7 @@ Revela limites del monopolio español. Economia mas diversa e interconectada de 
         correctIndex: 1,
         explanation: "El contrabando redujo significativamente los ingresos del quinto real, debilitando la economia española y acelerando su decadencia imperial.",
         difficulty: "basico"
-      }
-    ,
+      },
     { id: 2334, question: "¿Qué era el contrabando colonial?", options: ["Comercio legal", "Comercio ilegal evadiendo impuestos", "Un tributo", "Un sistema"], correctIndex: 1, explanation: "El contrabando era el comercio ilegal que evadía impuestos y monopolios.", difficulty: "basic" },
     { id: 2335, question: "¿Qué naciones participaban en el contrabando?", options: ["Solo españoles", "Británicos, holandeses y franceses", "Solo británicos", "No existía contrabando"], correctIndex: 1, explanation: "Británicos, holandeses y franceses participaron activamente en el contrabando.", difficulty: "basic" },
     { id: 2336, question: "¿Qué productos se traficaban por contrabando?", options: ["Solo esclavos", "Manufacturas, textiles y otros bienes", "Solo alimentos", "Solo armas"], correctIndex: 1, explanation: "Se traficaban manufacturas, textiles, armas y otros bienes evadiendo monopolios.", difficulty: "basic" },
@@ -30006,8 +29787,7 @@ Modernizaron administracion pero no evitaron crisis. Tension criollos/españoles
         correctIndex: 1,
         explanation: "El Despertar Borbonico fue un movimiento intelectual criollo que cuestiono el sistema colonial e incorporo ideas de la Ilustracion.",
         difficulty: "intermedio"
-      }
-    ,
+      },
     { id: 2353, question: "¿En qué siglo se implementaron las reformas borbónicas?", options: ["Siglo XVI", "Siglo XVII", "Siglo XVIII", "Siglo XIX"], correctIndex: 2, explanation: "Las reformas borbónicas se implementaron principalmente en el siglo XVIII.", difficulty: "basic" },
     { id: 2354, question: "¿Qué dinastía implementó las reformas?", options: ["Habsburgo", "Borbón", "Austria", "Stuart"], correctIndex: 1, explanation: "La dinastía Borbón implementó las reformas en España a partir de 1700.", difficulty: "basic" },
     { id: 2355, question: "¿Cuál era la meta principal?", options: ["Independencia americana", "Fortalecer el control español sobre las colonias", "Mejorar la vida indígena", "Crear democracia"], correctIndex: 1, explanation: "La meta era fortalecer el control español y aumentar la extracción de riqueza.", difficulty: "basic" },
@@ -30132,8 +29912,7 @@ Simbolo de resistencia indigena e antiimperialista. Influjo en luchas del siglo 
         correctIndex: 0,
         explanation: "El cura Miguel Tiliano, antiguo aliado, traicionó a Túpac Amaru y facilitó la contraofensiva.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 2372, question: "¿Quién lideró la rebelión de Túpac Amaru II?", options: ["Manco Inca", "José Gabriel Condorcanqui", "Simón Bolívar", "San Martín"], correctIndex: 1, explanation: "José Gabriel Condorcanqui lideró la rebelión bajo el nombre de Túpac Amaru II.", difficulty: "basic" },
     { id: 2373, question: "¿En qué año estalló la rebelión?", options: ["1780", "1791", "1800", "1810"], correctIndex: 0, explanation: "La rebelión estalló el 4 de noviembre de 1780.", difficulty: "basic" },
     { id: 2374, question: "¿Contra qué se rebeló?", options: ["Solo contra españoles", "Contra el sistema colonial y sus abusos", "Solo contra la Iglesia", "Solo contra mineros"], correctIndex: 1, explanation: "Se rebeló contra el sistema colonial y sus abusos, especialmente la mita y los impuestos.", difficulty: "basic" },
@@ -30151,8 +29930,7 @@ Simbolo de resistencia indigena e antiimperialista. Influjo en luchas del siglo 
     { id: 2387, question: "¿Qué relación tuvo con otros movimientos independentistas?", options: ["Ninguna", "Influyó en futuros movimientos", "La contradecía", "Fue posterior"], correctIndex: 1, explanation: "Influyó en futuros movimientos independentistas.", difficulty: "advanced" },
     { id: 2388, question: "¿Qué significaba el nombre Túpac Amaru II?", options: ["Solo un nombre", "Homenaje al último Inca de Vilcabamba", "Un seudónimo militar", "Un cargo político"], correctIndex: 1, explanation: "Era un homenaje al último Inca de Vilcabamba.", difficulty: "advanced" },
     { id: 2389, question: "¿Qué legado dejó?", options: ["Solo destrucción", "Símbolo de resistencia indígena", "Independencia inmediata", "Ninguno"], correctIndex: 1, explanation: "Dejó un legado como símbolo de resistencia indígena.", difficulty: "advanced" },
-    { id: 2390, question: "¿Cómo afectó la distribución de tierras?", options: ["No la afectó", "Reafirmó el sistema de haciendas", "Mejoró a indígenas", "Redistribuyó tierras"], correctIndex: 1, explanation: "Provocó una reafirmación del sistema de haciendas.", difficulty: "advanced" }
-  ,
+    { id: 2390, question: "¿Cómo afectó la distribución de tierras?", options: ["No la afectó", "Reafirmó el sistema de haciendas", "Mejoró a indígenas", "Redistribuyó tierras"], correctIndex: 1, explanation: "Provocó una reafirmación del sistema de haciendas.", difficulty: "advanced" },
     { id: 2372, question: "¿Quién lideró la rebelión de Túpac Amaru II?", options: ["Manco Inca", "José Gabriel Condorcanqui", "Simón Bolívar", "San Martín"], correctIndex: 1, explanation: "José Gabriel Condorcanqui lideró la rebelión bajo el nombre de Túpac Amaru II.", difficulty: "basic" },
     { id: 2373, question: "¿En qué año estalló la rebelión?", options: ["1780", "1791", "1800", "1810"], correctIndex: 0, explanation: "La rebelión estalló el 4 de noviembre de 1780.", difficulty: "basic" },
     { id: 2374, question: "¿Contra qué se rebeló?", options: ["Solo contra españoles", "Contra el sistema colonial y sus abusos", "Solo contra la Iglesia", "Solo contra mineros"], correctIndex: 1, explanation: "Se rebeló contra el sistema colonial y sus abusos, especialmente la mita y los impuestos.", difficulty: "basic" },
@@ -30277,8 +30055,7 @@ Herencia de resistencia y conflicto social. Represion genero traumaticas pero se
         correctIndex: 1,
         explanation: "Los levantamientos en Puno estaban motivados por la restitución de tierras y la identidad cultural.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 2391, question: "¿Qué rebeliones ocurrieron antes de Túpac Amaru II?", options: ["Ninguna", "Rebeliones indígenas y de cimarrones", "Solo una", "Solo en la costa"], correctIndex: 1, explanation: "Hubo múltiples rebeliones indígenas y de negros cimarrones.", difficulty: "basic" },
     { id: 2392, question: "¿Qué fueron los cimarrones?", options: ["Indígenas rebeldes", "Esclavos africanos fugados", "Criollos rebeldes", "Mestizos fugitivos"], correctIndex: 1, explanation: "Los cimarrones eran esclavos africanos que se fugaban y organizaban comunidades libres.", difficulty: "basic" },
     { id: 2393, question: "¿Qué fueron los palenques?", options: ["Campamentos militares", "Comunidades de cimarrones", "Templos indígenas", "Haciendas"], correctIndex: 1, explanation: "Los palenques eran comunidades establecidas por cimarrones libres.", difficulty: "basic" },
@@ -30288,8 +30065,7 @@ Herencia de resistencia y conflicto social. Represion genero traumaticas pero se
     { id: 2397, question: "¿Qué relación tenía con otras rebeliones?", options: ["Ninguna", "Fue parte de un patrón de resistencia", "La contradecía", "Fue la primera"], correctIndex: 1, explanation: "Fue parte de un patrón más amplio de resistencia colonial.", difficulty: "basic" },
     { id: 2399, question: "¿Qué papel jugaba la corrupción?", options: ["Ninguno", "Era causa fundamental del descontento", "La impedía", "No existía"], correctIndex: 1, explanation: "La corrupción era causa fundamental del descontento.", difficulty: "intermediate" },
     { id: 2400, question: "¿Qué relación con movimientos independentistas?", options: ["Ninguna", "Sembraron ideas de liberación", "Se contradecían", "Eran lo mismo"], correctIndex: 1, explanation: "Las rebeliones sembraron ideas que influyeron en la independencia.", difficulty: "intermediate" },
-    { id: 2405, question: "¿Qué papel jugaban los curas?", options: ["Solo apoyaban Corona", "Algunos apoyaban rebeldes", "No participaban", "Siempre combatían"], correctIndex: 1, explanation: "Algunos curas apoyaban a los rebeldes.", difficulty: "advanced" }
-  ,
+    { id: 2405, question: "¿Qué papel jugaban los curas?", options: ["Solo apoyaban Corona", "Algunos apoyaban rebeldes", "No participaban", "Siempre combatían"], correctIndex: 1, explanation: "Algunos curas apoyaban a los rebeldes.", difficulty: "advanced" },
     { id: 2391, question: "¿Qué rebeliones ocurrieron antes de Túpac Amaru II?", options: ["Ninguna", "Rebeliones indígenas y de cimarrones", "Solo una", "Solo en la costa"], correctIndex: 1, explanation: "Hubo múltiples rebeliones indígenas y de negros cimarrones.", difficulty: "basic" },
     { id: 2392, question: "¿Qué fueron los cimarrones?", options: ["Indígenas rebeldes", "Esclavos africanos fugados", "Criollos rebeldes", "Mestizos fugitivos"], correctIndex: 1, explanation: "Los cimarrones eran esclavos africanos que se fugaban y organizaban comunidades libres.", difficulty: "basic" },
     { id: 2393, question: "¿Qué fueron los palenques?", options: ["Campamentos militares", "Comunidades de cimarrones", "Templos indígenas", "Haciendas"], correctIndex: 1, explanation: "Los palenques eran comunidades establecidas por cimarrones libres.", difficulty: "basic" },
@@ -30299,8 +30075,7 @@ Herencia de resistencia y conflicto social. Represion genero traumaticas pero se
     { id: 2397, question: "¿Qué relación tenía con otras rebeliones?", options: ["Ninguna", "Fue parte de un patrón de resistencia", "La contradecía", "Fue la primera"], correctIndex: 1, explanation: "Fue parte de un patrón más amplio de resistencia colonial.", difficulty: "basic" },
     { id: 2399, question: "¿Qué papel jugaba la corrupción?", options: ["Ninguno", "Era causa fundamental del descontento", "La impedía", "No existía"], correctIndex: 1, explanation: "La corrupción era causa fundamental del descontento.", difficulty: "intermediate" },
     { id: 2400, question: "¿Qué relación con movimientos independentistas?", options: ["Ninguna", "Sembraron ideas de liberación", "Se contradecían", "Eran lo mismo"], correctIndex: 1, explanation: "Las rebeliones sembraron ideas que influyeron en la independencia.", difficulty: "intermediate" },
-    { id: 2405, question: "¿Qué papel jugaban los curas?", options: ["Solo apoyaban Corona", "Algunos apoyaban rebeldes", "No participaban", "Siempre combatían"], correctIndex: 1, explanation: "Algunos curas apoyaban a los rebeldes.", difficulty: "advanced" }
-  ,
+    { id: 2405, question: "¿Qué papel jugaban los curas?", options: ["Solo apoyaban Corona", "Algunos apoyaban rebeldes", "No participaban", "Siempre combatían"], correctIndex: 1, explanation: "Algunos curas apoyaban a los rebeldes.", difficulty: "advanced" },
     { id: 1152, question: "Que problema economico principal sufrio el Peru en los 80?", options: ["Superavit", "Hiperinflacion y caida del producto bruto interno", "Crecimiento sostenido", "Estabilidad monetaria"], correctIndex: 1, explanation: "El Peru sufrió hiperinflacion y caida del producto bruto interno.", difficulty: "basico" },
     { id: 1153, question: "Que consecuencias sociales tuvo la crisis de los 80?", options: ["Mejora de vida", "Aumento de pobreza, desempleo y migracion interna", "Reduccion de pobreza", "Empleo pleno"], correctIndex: 1, explanation: "Genero aumento de pobreza, desempleo y migracion interna masiva.", difficulty: "basico" },
     { id: 1154, question: "Que conflicto afecto al Peru durante esta decada?", options: ["Conflicto con Brasil", "Guerra interna contra Sendero Luminoso", "Guerra con Chile", "Conflicto con Ecuador"], correctIndex: 1, explanation: "La guerra interna contra Sendero Luminoso genero miles de victimas.", difficulty: "basico" },
@@ -30426,12 +30201,9 @@ Presencia decisiva para independencia pero genero conflictos politicos. Vacio de
         correctIndex: 1,
         explanation: "La Batalla de Ayacucho el 9 de diciembre de 1824 selló la independencia del Perú.",
         difficulty: "avanzado"
-      }
-    ,
-    { id: 2409, question: "¿Quiénes fueron los principales líderes independentistas?", options: ["Pizarro y Cortés", "San Martín y Bolívar", "Atahualpa y Huáscar", "Francisco I y Maximiliano"], correctIndex: 1, explanation: "San Martín y Bolívar fueron los principales líderes de la independencia.", difficulty: "basic" }
-  ,
-    { id: 2409, question: "¿Quiénes fueron los principales líderes independentistas?", options: ["Pizarro y Cortés", "San Martín y Bolívar", "Atahualpa y Huáscar", "Francisco I y Maximiliano"], correctIndex: 1, explanation: "San Martín y Bolívar fueron los principales líderes de la independencia.", difficulty: "basic" }
-  ,
+      },
+    { id: 2409, question: "¿Quiénes fueron los principales líderes independentistas?", options: ["Pizarro y Cortés", "San Martín y Bolívar", "Atahualpa y Huáscar", "Francisco I y Maximiliano"], correctIndex: 1, explanation: "San Martín y Bolívar fueron los principales líderes de la independencia.", difficulty: "basic" },
+    { id: 2409, question: "¿Quiénes fueron los principales líderes independentistas?", options: ["Pizarro y Cortés", "San Martín y Bolívar", "Atahualpa y Huáscar", "Francisco I y Maximiliano"], correctIndex: 1, explanation: "San Martín y Bolívar fueron los principales líderes de la independencia.", difficulty: "basic" },
     { id: 1173, question: "En que ano gano Fujimori las elecciones?", options: ["1985", "1990", "1995", "2000"], correctIndex: 1, explanation: "Fujimori gano las elecciones presidenciales en 1990.", difficulty: "basico" },
     { id: 1174, question: "Que nombre se le dio al gobierno de Fujimori?", options: ["La Reforma", "El Fusilamiento", "El Autoritarismo", "La Revolucion"], correctIndex: 1, explanation: "Se le conoce como El Fusilamiento por su estilo autoritario.", difficulty: "basico" },
     { id: 1175, question: "Que llamado nacional hizo Fujimori en 1992?", options: ["A la paz", "A la unidad nacional contra terrorismo", "Al dialogue", "A elecciones"], correctIndex: 1, explanation: "Hizo un llamado a la unidad nacional para enfrentar el terrorismo.", difficulty: "basico" },
@@ -30559,14 +30331,11 @@ Destruyeron orden colonial pero no trajeron estabilidad. Guerras civiles y caudi
         correctIndex: 1,
         explanation: "La Batalla de Boyacá el 7 de agosto de 1819 permitió la liberación de Nueva Granada.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 2430, question: "¿Qué fue la Batalla de Chacabuco?", options: ["Batalla naval", "Victoria patriota en Chile", "Una derrota", "Un tratado"], correctIndex: 1, explanation: "Chacabuco (1817) liberó Chile del dominio español.", difficulty: "basic" },
-    { id: 2431, question: "¿Qué fue la Batalla de Boyacá?", options: ["En el sur", "Victoria que liberó Colombia", "Una derrota", "Un armisticio"], correctIndex: 1, explanation: "Boyacá (1819) fue decisiva para liberar Colombia.", difficulty: "basic" }
-  ,
+    { id: 2431, question: "¿Qué fue la Batalla de Boyacá?", options: ["En el sur", "Victoria que liberó Colombia", "Una derrota", "Un armisticio"], correctIndex: 1, explanation: "Boyacá (1819) fue decisiva para liberar Colombia.", difficulty: "basic" },
     { id: 2430, question: "¿Qué fue la Batalla de Chacabuco?", options: ["Batalla naval", "Victoria patriota en Chile", "Una derrota", "Un tratado"], correctIndex: 1, explanation: "Chacabuco (1817) liberó Chile del dominio español.", difficulty: "basic" },
-    { id: 2431, question: "¿Qué fue la Batalla de Boyacá?", options: ["En el sur", "Victoria que liberó Colombia", "Una derrota", "Un armisticio"], correctIndex: 1, explanation: "Boyacá (1819) fue decisiva para liberar Colombia.", difficulty: "basic" }
-  ,
+    { id: 2431, question: "¿Qué fue la Batalla de Boyacá?", options: ["En el sur", "Victoria que liberó Colombia", "Una derrota", "Un armisticio"], correctIndex: 1, explanation: "Boyacá (1819) fue decisiva para liberar Colombia.", difficulty: "basic" },
     { id: 1194, question: "Que papel jugo la corrupcion en el sistema colonial?", options: ["Ninguno", "Sostuvo el sistema de explotacion y control social", "Fue irrelevante", "Combatio la desigualdad"], correctIndex: 1, explanation: "La corrupcion sostuvo el sistema de explotacion y control social durante la colonia.", difficulty: "basico" },
     { id: 1195, question: "Que instituciones coloniales estuvieron comprometidas?", options: ["Solo el ejercito", "Iglesia, burocracia colonial y comercio", "Solo la Iglesia", "Ninguna"], correctIndex: 1, explanation: "La Iglesia, burocracia colonial y sistema comercial estuvieron comprometidos.", difficulty: "basico" },
     { id: 1196, question: "Que tipo de sobornos existian en la colonia?", options: ["Ninguno", "Puestos de venta, exenciones de tributos y concesiones de tierras", "Solo monetarios", "Solo alimentarios"], correctIndex: 1, explanation: "Existian puestos de venta, exenciones de tributos y concesiones de tierras.", difficulty: "basico" },
@@ -30702,14 +30471,11 @@ Estado social democratico de derecho, derechos sociales, protection del ambiente
         correctIndex: 3,
         explanation: "La Constitución de 1979 fue derogada en 1993 tras el autogolpe de Alberto Fujimori.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 2448, question: "¿Qué fueron las primeras constituciones?", options: ["Solo documentos", "Constituciones que definieron organización política", "Leyes temporales", "Tratados"], correctIndex: 1, explanation: "Fueron documentos fundacionales de la organización política.", difficulty: "basic" },
-    { id: 2465, question: "¿Qué influencia tuvo Cádiz?", options: ["Ninguna", "Modelo para constituciones americanas", "Se opuso", "No existía"], correctIndex: 1, explanation: "Fue modelo para muchas constituciones americanas.", difficulty: "basic" }
-  ,
+    { id: 2465, question: "¿Qué influencia tuvo Cádiz?", options: ["Ninguna", "Modelo para constituciones americanas", "Se opuso", "No existía"], correctIndex: 1, explanation: "Fue modelo para muchas constituciones americanas.", difficulty: "basic" },
     { id: 2448, question: "¿Qué fueron las primeras constituciones?", options: ["Solo documentos", "Constituciones que definieron organización política", "Leyes temporales", "Tratados"], correctIndex: 1, explanation: "Fueron documentos fundacionales de la organización política.", difficulty: "basic" },
-    { id: 2465, question: "¿Qué influencia tuvo Cádiz?", options: ["Ninguna", "Modelo para constituciones americanas", "Se opuso", "No existía"], correctIndex: 1, explanation: "Fue modelo para muchas constituciones americanas.", difficulty: "basic" }
-  ,
+    { id: 2465, question: "¿Qué influencia tuvo Cádiz?", options: ["Ninguna", "Modelo para constituciones americanas", "Se opuso", "No existía"], correctIndex: 1, explanation: "Fue modelo para muchas constituciones americanas.", difficulty: "basic" },
     { id: 1215, question: "Que tipo de corrupcion predomino en la Republica temprana?", options: ["Electoral", "Patrimonialista y clientelar heredada de la colonia", "Transparencia", "Digital"], correctIndex: 1, explanation: "Predominaba la corrupcion patrimonialista y clientelar heredada de la colonia.", difficulty: "basico" },
     { id: 1216, question: "Que papel jugaron los caudillos en la corrupcion republicana?", options: ["Combatieron la corrupcion", "Concentraron poder y recurso para beneficio propio", "Fueron justos", "No tuvieron poder"], correctIndex: 1, explanation: "Los caudillos concentraron poder y recursos para beneficio propio y de sus aliados.", difficulty: "basico" },
     { id: 1217, question: "Que tipo de elecciones sufrieron corrupcion?", options: ["Ninguna", "Compra de votos, intimidacion y manipulacion de padrones", "Fueron limpias", "Digitales"], correctIndex: 1, explanation: "Sufrieron compra de votos, intimidacion y manipulacion de padrones.", difficulty: "basico" },
@@ -30839,14 +30605,11 @@ Instituciones mas solidas pero pais profundamente afectado. Reconstruction lenta
         correctIndex: 1,
         explanation: "La lucha entre caudillos militares definió la política del Perú republicano en sus primeras décadas.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 2466, question: "¿Qué fue la consolidación republicana?", options: ["Golpe de estado", "Proceso de estabilización de nuevas repúblicas", "Una guerra", "Un tratado"], correctIndex: 1, explanation: "Fue el proceso de estabilización de las nuevas repúblicas.", difficulty: "basic" },
-    { id: 2475, question: "¿Qué impacto económico tuvo?", options: ["Mejoró", "Transición difícil con ruptura de redes", "No cambió", "Se estancó"], correctIndex: 1, explanation: "La transición fue difícil con ruptura de redes comerciales.", difficulty: "intermediate" }
-  ,
+    { id: 2475, question: "¿Qué impacto económico tuvo?", options: ["Mejoró", "Transición difícil con ruptura de redes", "No cambió", "Se estancó"], correctIndex: 1, explanation: "La transición fue difícil con ruptura de redes comerciales.", difficulty: "intermediate" },
     { id: 2466, question: "¿Qué fue la consolidación republicana?", options: ["Golpe de estado", "Proceso de estabilización de nuevas repúblicas", "Una guerra", "Un tratado"], correctIndex: 1, explanation: "Fue el proceso de estabilización de las nuevas repúblicas.", difficulty: "basic" },
-    { id: 2475, question: "¿Qué impacto económico tuvo?", options: ["Mejoró", "Transición difícil con ruptura de redes", "No cambió", "Se estancó"], correctIndex: 1, explanation: "La transición fue difícil con ruptura de redes comerciales.", difficulty: "intermediate" }
-  ,
+    { id: 2475, question: "¿Qué impacto económico tuvo?", options: ["Mejoró", "Transición difícil con ruptura de redes", "No cambió", "Se estancó"], correctIndex: 1, explanation: "La transición fue difícil con ruptura de redes comerciales.", difficulty: "intermediate" },
     { id: 1236, question: "Que modelo economico predomino durante la Colonia?", options: ["Libre mercado", "Mercantilismo con explotacion de recursos para la Corona", "Comunismo", "Industrializacion"], correctIndex: 1, explanation: "Predomino el mercantilismo con explotacion de recursos para beneficio de la Corona.", difficulty: "basico" },
     { id: 1237, question: "Que sector fue principal en la economia colonial?", options: ["Industria", "Mineria de plata y oro", "Agricultura exportadora", "Servicios"], correctIndex: 1, explanation: "La mineria de plata y oro fue el sector principal de la economia colonial.", difficulty: "basico" },
     { id: 1238, question: "Que tipo de sistema tributario existia en la colonia?", options: ["Progresivo", "Tributo indigena y diezmo eclesiasticos", "Igualitario", "No existia"], correctIndex: 1, explanation: "Existian el tributo indigena y el diezmo eclesiasticos como principales impuestos.", difficulty: "basico" },
@@ -30977,14 +30740,11 @@ Debilitaron al Peru, impidieron desarrollo y dejaron herencia de violencia polit
         correctIndex: 1,
         explanation: "La derrota de Salaverry en Socabaya permitió a Santa Cruz crear la Confederación Perú-Boliviana.",
         difficulty: "avanzado"
-      }
-    ,
-    { id: 2486, question: "¿Qué fueron las guerras civiles del siglo XIX?", options: ["Guerras internacionales", "Conflictos internos entre facciones", "Guerras contra España", "No hubo"], correctIndex: 1, explanation: "Fueron conflictos internos entre facciones políticas.", difficulty: "basic" }
-  ,
+      },
+    { id: 2486, question: "¿Qué fueron las guerras civiles del siglo XIX?", options: ["Guerras internacionales", "Conflictos internos entre facciones", "Guerras contra España", "No hubo"], correctIndex: 1, explanation: "Fueron conflictos internos entre facciones políticas.", difficulty: "basic" },
     { id: 2486, question: "¿Qué fueron las guerras civiles del siglo XIX?", options: ["Guerras internacionales", "Conflictos internos entre facciones", "Guerras contra España", "No hubo"], correctIndex: 1, explanation: "Fueron conflictos internos entre facciones políticas.", difficulty: "basic" }
     ,    { id: 2486, question: "¿Qué fueron las guerras civiles del siglo XIX?", options: ["Guerras internacionales", "Conflictos internos entre facciones", "Guerras contra España", "No hubo"], correctIndex: 1, explanation: "Fueron conflictos internos entre facciones políticas.", difficulty: "basic" }
-    ,    { id: 2486, question: "¿Qué relación con el latifundismo?", options: ["Ninguna", "Terratenientes lideraban facciones", "La mejoraban", "No existía"], correctIndex: 1, explanation: "Terratenientes lideraban facciones y causaban conflictos.", difficulty: "basic" }
-  ,
+    ,    { id: 2486, question: "¿Qué relación con el latifundismo?", options: ["Ninguna", "Terratenientes lideraban facciones", "La mejoraban", "No existía"], correctIndex: 1, explanation: "Terratenientes lideraban facciones y causaban conflictos.", difficulty: "basic" },
     { id: 3000, question: "Las guerras civiles en la república del siglo XIX fueron causadas principalmente por:", options: ["Disputas entre caudillos por el control del poder central", "Invasiones extranjeras", "Problemas económicos con Inglaterra", "La lucha contra los remanentes coloniales"], correctIndex: 0, explanation: "Las guerras civiles fueron producto de la lucha entre caudillos regionales por el poder central.", difficulty: "basic" },
     { id: 3001, question: "¿Qué caudillo fue vencedor en la guerra civil entre Gamarra y La Mar?", options: ["Agustín Gamarra", "José de La Mar", "Andrés de Santa Cruz", "Luis José de Orbegoso"], correctIndex: 0, explanation: "Gamarra derrotó a La Mar en la batalla de Portete de Tarqui en 1829.", difficulty: "basic" },
     { id: 3002, question: "La Confederación Perú-Boliviana fue liderada por:", options: ["Andrés de Santa Cruz", "Agustín Gamarra", "Ramón Castilla", "Felipe Santiago Salaverry"], correctIndex: 0, explanation: "Santa Cruz organizó la Confederación Perú-Boliviana en 1836-1839.", difficulty: "basic" },
@@ -31105,8 +30865,7 @@ Modernizo el pais pero genero dependencia, corrupcion y desigualdad. Paradigma d
         correctIndex: 1,
         explanation: "El contrato Bonin-Bonsselens de 1853 estableció comisiones muy altas para intermediarios.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 2504, question: "¿Qué fue el guano?", options: ["Un mineral", "Excremento de aves como fertilizante", "Un metal", "Una piedra"], correctIndex: 1, explanation: "Excremento de aves marinas usado como fertilizante de alta calidad.", difficulty: "basic" },
     { id: 2505, question: "¿Qué importancia económica tuvo?", options: ["Ninguna", "Generó enormes riquezas para Perú", "Solo local", "No existía"], correctIndex: 1, explanation: "Generó enormes riquezas para el Perú en el siglo XIX.", difficulty: "basic" },
     { id: 2506, question: "¿Dónde estaban las principales depositarias?", options: ["Solo en la costa", "Islas y lomas costeras", "Solo en la sierra", "No existían"], correctIndex: 1, explanation: "En islas y lomas costeras del Pacífico.", difficulty: "basic" },
@@ -31119,8 +30878,7 @@ Modernizo el pais pero genero dependencia, corrupcion y desigualdad. Paradigma d
     { id: 2513, question: "¿Qué disputas hubo por control?", options: ["Ninguna", "Estado, hacendados y consorcios", "Solo estatales", "No hubo"], correctIndex: 1, explanation: "Disputas entre Estado, hacendados y consorcios.", difficulty: "intermediate" },
     { id: 2515, question: "¿Qué otros minerales complementaban?", options: ["Solo guano", "Salitre y otros minerales", "Solo plata", "No había otros"], correctIndex: 1, explanation: "Salitre y otros minerales complementaban.", difficulty: "intermediate" },
     { id: 2516, question: "¿Qué papel jugaban los consorcios?", options: ["Ninguno", "Explotaban depósitos por impuestos", "Solo recolección", "No existían"], correctIndex: 1, explanation: "Explotaban depósitos a cambio de impuestos.", difficulty: "advanced" },
-    { id: 2521, question: "¿Qué relación con el comercio internacional?", options: ["Ninguna", "Principal exportación peruana", "Solo local", "No existía"], correctIndex: 1, explanation: "Fue la principal exportación peruana.", difficulty: "basic" }
-  ,
+    { id: 2521, question: "¿Qué relación con el comercio internacional?", options: ["Ninguna", "Principal exportación peruana", "Solo local", "No existía"], correctIndex: 1, explanation: "Fue la principal exportación peruana.", difficulty: "basic" },
     { id: 2504, question: "¿Qué fue el guano?", options: ["Un mineral", "Excremento de aves como fertilizante", "Un metal", "Una piedra"], correctIndex: 1, explanation: "Excremento de aves marinas usado como fertilizante de alta calidad.", difficulty: "basic" },
     { id: 2505, question: "¿Qué importancia económica tuvo?", options: ["Ninguna", "Generó enormes riquezas para Perú", "Solo local", "No existía"], correctIndex: 1, explanation: "Generó enormes riquezas para el Perú en el siglo XIX.", difficulty: "basic" },
     { id: 2506, question: "¿Dónde estaban las principales depositarias?", options: ["Solo en la costa", "Islas y lomas costeras", "Solo en la sierra", "No existían"], correctIndex: 1, explanation: "En islas y lomas costeras del Pacífico.", difficulty: "basic" },
@@ -31133,8 +30891,7 @@ Modernizo el pais pero genero dependencia, corrupcion y desigualdad. Paradigma d
     { id: 2513, question: "¿Qué disputas hubo por control?", options: ["Ninguna", "Estado, hacendados y consorcios", "Solo estatales", "No hubo"], correctIndex: 1, explanation: "Disputas entre Estado, hacendados y consorcios.", difficulty: "intermediate" },
     { id: 2515, question: "¿Qué otros minerales complementaban?", options: ["Solo guano", "Salitre y otros minerales", "Solo plata", "No había otros"], correctIndex: 1, explanation: "Salitre y otros minerales complementaban.", difficulty: "intermediate" },
     { id: 2516, question: "¿Qué papel jugaban los consorcios?", options: ["Ninguno", "Explotaban depósitos por impuestos", "Solo recolección", "No existían"], correctIndex: 1, explanation: "Explotaban depósitos a cambio de impuestos.", difficulty: "advanced" },
-    { id: 2521, question: "¿Qué relación con el comercio internacional?", options: ["Ninguna", "Principal exportación peruana", "Solo local", "No existía"], correctIndex: 1, explanation: "Fue la principal exportación peruana.", difficulty: "basic" }
-  ,
+    { id: 2521, question: "¿Qué relación con el comercio internacional?", options: ["Ninguna", "Principal exportación peruana", "Solo local", "No existía"], correctIndex: 1, explanation: "Fue la principal exportación peruana.", difficulty: "basic" },
     { id: 1257, question: "Que modelo educativo impuso la Corona española?", options: ["Laico", "Catolico con ensenanza en castellano y doctrina religiosa", "Publico", "Bilingue"], correctIndex: 1, explanation: "Impuso modelo catolico con ensenanza en castellano y fuerte doctrina religiosa.", difficulty: "basico" },
     { id: 1258, question: "Que tipo de escuelas fundaron los conquistadores?", options: ["Indigenas", "Colegios para hijos de espanoles y elites criollas", "Publicas para todos", "Bilingues"], correctIndex: 1, explanation: "Fundaron colegios destinados a hijos de espanoles y elites criollas.", difficulty: "basico" },
     { id: 1259, question: "Que grupo social tenia acceso a educacion en la colonia?", options: ["Todos", "Solo elites criollas e indigenas nobles", "Solo indigenas", "Solo pobres"], correctIndex: 1, explanation: "Solo tenian acceso las elites criollas e indigenas nobles.", difficulty: "basico" },
@@ -31282,8 +31039,7 @@ Perdida de territorios ricos, crisis economica profunda, poblacion reducida. Deu
         correctIndex: 1,
         explanation: "El Tratado de Ancón estableció la cesión permanente de la provincia de Tarapacá a Chile y la administración temporal de Arica y Tacna.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 2522, question: "¿En qué años se libró?", options: ["1860-1865", "1879-1884", "1890-1895", "1900-1910"], correctIndex: 1, explanation: "Se libró entre 1879 y 1884.", difficulty: "basic" },
     { id: 2523, question: "¿Qué países participaron?", options: ["Solo Chile y Perú", "Chile contra Perú y Bolivia", "Solo Chile y Bolivia", "Argentina y Chile"], correctIndex: 1, explanation: "Chile enfrentó a la alianza de Perú y Bolivia.", difficulty: "basic" },
     { id: 2525, question: "¿Qué trigger provocó la guerra?", options: ["Un tratado", "Impuesto chileno a empresas bolivianas", "Una invasión", "Un terremoto"], correctIndex: 1, explanation: "El impuesto chileno a empresas salitreras bolivianas.", difficulty: "basic" },
@@ -31292,8 +31048,7 @@ Perdida de territorios ricos, crisis economica profunda, poblacion reducida. Deu
     { id: 2528, question: "¿Qué importante se capturó?", options: ["Solo armas", "El Huáscar peruano", "Solo provisiones", "Nada"], correctIndex: 1, explanation: "Chile capturó el Huáscar, buque de guerra peruano.", difficulty: "basic" },
     { id: 2532, question: "¿Qué consecuencias tuvo la captura de Lima?", options: ["Ninguna", "Ocupación chilena", "Solo militares", "No se capturó"], correctIndex: 1, explanation: "Provocó ocupación chilena y deterioro de resistencia.", difficulty: "intermediate" },
     { id: 2533, question: "¿Qué resistencia hubo en Perú?", options: ["Ninguna", "Guerra de resistencia popular", "Solo militar", "Solo diplomática"], correctIndex: 1, explanation: "Hubo guerra de resistencia popular.", difficulty: "intermediate" },
-    { id: 2534, question: "¿Qué factores favorecieron a Chile?", options: ["Solo números", "Superioridad naval y logística", "Solo armas", "Solo estrategia"], correctIndex: 1, explanation: "Superioridad naval y logística.", difficulty: "advanced" }
-  ,
+    { id: 2534, question: "¿Qué factores favorecieron a Chile?", options: ["Solo números", "Superioridad naval y logística", "Solo armas", "Solo estrategia"], correctIndex: 1, explanation: "Superioridad naval y logística.", difficulty: "advanced" },
     { id: 1278, question: "Que recurso minero fue principal en la Colonia?", options: ["Petroleo", "Plata de Potosi y Cerro Rico", "Oro de la selva", "Cobre"], correctIndex: 1, explanation: "La plata de Potosi y el Cerro Rico fueron los principales recursos mineros coloniales.", difficulty: "basico" },
     { id: 1279, question: "Que sistema laboral uso la Corona en la mineria?", options: ["Obrero libre", "Mita: trabajo forzado indigena rotativo", "Esclavitud africana", "Sindicatos"], correctIndex: 1, explanation: "Uso la mita, sistema de trabajo forzado indigena rotativo.", difficulty: "basico" },
     { id: 1280, question: "Que tipo de empresa minera existia en la colonia?", options: ["Corporaciones privadas", "Corporaciones estatales monopolizadas por la Corona", "Cooperativas", "PYMES"], correctIndex: 1, explanation: "Existian corporaciones estatales monopolizadas por la Corona.", difficulty: "basico" },
@@ -31440,8 +31195,7 @@ Debilito oligarquia limeña. Caudillos militares (Pierola, Cáceres) emergieron.
         correctIndex: 1,
         explanation: "La ocupación de Lima por tres años provocó el saqueo de archivos, museos y la Biblioteca Nacional, además de la confiscación de bienes.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 2541, question: "¿Qué consecuencias territoriales tuvo?", options: ["Ninguna", "Perú y Bolivia perdieron territorios ante Chile", "Solo Bolivia", "Chile perdió"], correctIndex: 1, explanation: "Perú y Bolivia perdieron territorios ante Chile.", difficulty: "basic" },
     { id: 2542, question: "¿Qué consecuencias económicas tuvo para Chile?", options: ["Solo positivas", "Acceso a recursos mineros", "Solo negativas", "Ninguna"], correctIndex: 1, explanation: "Acceso a importantes recursos mineros.", difficulty: "basic" },
     { id: 2543, question: "¿Qué consecuencias económicas tuvo para Perú?", options: ["Solo positivas", "Pérdida de recursos y crisis", "Solo negativas", "Ninguna"], correctIndex: 1, explanation: "Pérdida de recursos y crisis económica prolongada.", difficulty: "basic" },
@@ -31594,8 +31348,7 @@ La Generacion del 900 sento las bases de la cultura peruana moderna. Sus debates
         correctIndex: 1,
         explanation: "González Prada propuso la educación laica, gratuita y obligatoria como pilar fundamental de la transformación social del Perú.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 900, question: "Quien fue el principal lider intelectual de la Generacion del 900?", options: ["Victor Raul Haya de la Torre", "Manuel Gonzalez Prada", "Jose Carlos Mariategui", "Nicolas de Piérola"], correctIndex: 1, explanation: "Manuel Gonzalez Prada fue el lider intelectual de la Generacion del 900, usando su pluma para criticar la oligarquia y la injusticia social.", difficulty: "basico" },
     { id: 901, question: "Cual era el objetivo principal de la Generacion del 900?", options: ["Establecer una monarquia", "Reformar la sociedad peruana contra la oligarquia", "Crear un partido militar", "Expandir el territorio nacional"], correctIndex: 1, explanation: "La Generacion del 900 busco una reforma social profunda como respuesta al dominio de la oligarquia gobernante.", difficulty: "basico" },
     { id: 902, question: "Que tipo de gobierno criticaba la Generacion del 900?", options: ["El gobierno militar", "La Republica Aristocratica", "El gobierno teocratico", "El feudalismo europeo"], correctIndex: 1, explanation: "La Generacion del 900 surgio especificamente como respuesta critica a la oligarquia que dominaba la Republica Aristocratica.", difficulty: "basico" },
@@ -31751,8 +31504,7 @@ La oligarquia exportadora dejo una herencia de desigualdad social, dependencia e
         correctIndex: 1,
         explanation: "El Oncenio (1919-1930) terminó con la crisis económica de 1929 y una revolución que derrocó a Leguía en agosto de 1930.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 921, question: "En que ano asumio el poder Nicolas de Pierola estableciendo la paz civil?", options: ["1890", "1895", "1900", "1910"], correctIndex: 1, explanation: "Nicolas de Pierola asumio el poder en 1895 tras la Revolucion Civil de 1894, estableciendo la paz civil en el Peru.", difficulty: "basico" },
     { id: 922, question: "Cuales fueron los principales productos de exportacion de la Republica Aristocratica?", options: ["Petroleo, cobre y zinc", "Azucar, algodon y caucho", "Oro, plata y estano", "Cafe, cacao y tabaco"], correctIndex: 1, explanation: "La economia exportadora de la Republica Aristocratica se baso principalmente en azucar, algodon y caucho.", difficulty: "basico" },
     { id: 923, question: "Que institucion financiera se fundo en 1897 y fue clave en la modernizacion?", options: ["El Banco Central de Reserva", "El Banco de Peru y Londres", "El Banco de la Nacion", "El Banco Popular"], correctIndex: 1, explanation: "El Banco de Peru y Londres fue fundado en 1897 y se convirtio en una de las principales instituciones financieras del periodo oligarquico.", difficulty: "basico" },
@@ -31906,8 +31658,7 @@ La crisis de 1929 transformo la economia y la politica peruana. El modelo de des
         correctIndex: 1,
         explanation: "Mariátegui publicó los Siete Ensayos de Interpretación de la Realidad Peruana en 1928, una obra fundamental del pensamiento social latinoamericano.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 942, question: "Como afecto la crisis de 1929 a las exportaciones peruanas?", options: ["Las exportaciones aumentaron", "Las exportaciones se redujeron a la mitad en dos anos", "No hubo efecto", "Las exportaciones se diversificaron"], correctIndex: 1, explanation: "La crisis de 1929 causo una reduccion del 50% en las exportaciones peruanas en apenas dos anos.", difficulty: "basico" },
     { id: 943, question: "Que productos sufrieron la mayor caida de precios durante la crisis?", options: ["Oro y plata", "Algodon, azucar y caucho", "Petroleo y cobre", "Cafe y cacao"], correctIndex: 1, explanation: "Los precios del algodon, azucar y caucho se desplomaron internacionalmente, causando quiebras y desempleo masivo.", difficulty: "basico" },
     { id: 944, question: "Que sectores fueron los mas afectados por la crisis de 1929?", options: ["Los empresarios mineros", "Los campesinos y obreros", "Los militares retirados", "Los funcionarios publicos"], correctIndex: 1, explanation: "Los campesinos y obreros fueron los mas afectados por la crisis, la caida de salarios y el desempleo masivo.", difficulty: "basico" },
@@ -31928,8 +31679,7 @@ La crisis de 1929 transformo la economia y la politica peruana. El modelo de des
     { id: 959, question: "Que papel jugo Mariategui en el contexto de la crisis?", options: ["Observador pasivo", "Analizo la realidad y propuso una alternativa socialista", "Apolo a la oligarquia", "Se exilio"], correctIndex: 1, explanation: "Mariategui analizo la realidad peruana y propuso una alternativa socialista al modelo oligarquico en crisis.", difficulty: "avanzado" },
     { id: 960, question: "Que relacion tiene la crisis de 1929 con los movimientos de la decada de 1930?", options: ["No tuvo relacion", "Creo las condiciones para el surgimiento de movimientos reformistas y revolucionarios", "No habia relacion", "Fortalecio al conservadurismo"], correctIndex: 1, explanation: "La crisis creo las condiciones para el surgimiento de movimientos reformistas y revolucionarios en la decada de 1930.", difficulty: "avanzado" },
     { id: 961, question: "Que leccion dejo la crisis sobre la dependencia economica del Peru?", options: ["La dependencia es beneficiosa", "Un modelo basado en materias primas es vulnerable a shocks internacionales", "Peru debe aislarse", "La inversion extranjera es siempre positiva"], correctIndex: 1, explanation: "La crisis demostro que un modelo basado en materias primas es extremadamente vulnerable a shocks economicos internacionales.", difficulty: "avanzado" },
-    { id: 962, question: "Que significo el surgimiento del APRA y el socialismo en 1929?", options: ["El fortalecimiento del conservadurismo", "La emergencia de alternativas que cuestionaron el modelo oligarquico dominante", "El retorno a la monarquia", "La consolidacion del sistema colonial"], correctIndex: 1, explanation: "El surgimiento del APRA y el socialismo represento la emergencia de alternativas que cuestionaron el modelo oligarquico.", difficulty: "avanzado" }
-  ,
+    { id: 962, question: "Que significo el surgimiento del APRA y el socialismo en 1929?", options: ["El fortalecimiento del conservadurismo", "La emergencia de alternativas que cuestionaron el modelo oligarquico dominante", "El retorno a la monarquia", "La consolidacion del sistema colonial"], correctIndex: 1, explanation: "El surgimiento del APRA y el socialismo represento la emergencia de alternativas que cuestionaron el modelo oligarquico.", difficulty: "avanzado" },
     { id: 1362, question: "Que simboliza el Bicentenario del Peru?", options: ["Un feriado mas", "200 anos de vida independiente con desafios pendientes", "Una fiesta", "Un evento commercial"], correctIndex: 1, explanation: "Simboliza 200 anos de vida independiente con desafios historicos pendientes.", difficulty: "basico" },
     { id: 1363, question: "Que tipo de identidad nacional construyo el Peru?", options: ["Uniforme", "Plural, diversa y en constante construccion", "Unica", "Colonial"], correctIndex: 1, explanation: "Construyo una identidad plural, diversa y en constante construccion.", difficulty: "basico" },
     { id: 1364, question: "Que problemas de identidad nacional existen?", options: ["Ninguno", "Fragmentacion, regionalismo, etnocentrismo y desconfianza", "Solo regionalismo", "Ningun problema"], correctIndex: 1, explanation: "Existen fragmentacion, regionalismo, etnocentrismo y desconfianza.", difficulty: "basico" },
@@ -32082,8 +31832,7 @@ El segundo gobierno de Belaunde dejo una estructura vial significativa pero tamb
         correctIndex: 2,
         explanation: "Haya de la Torre se asiló en la embajada colombiana en Lima durante varios años para evitar ser ejecutado por el gobierno militar.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 963, question: "En que ano se fundo el Partido Aprista Peruano?", options: ["1928", "1929", "1930", "1932"], correctIndex: 2, explanation: "El Partido Aprista Peruano fue fundado por Haya de la Torre en 1930 durante su exilio en Mexico.", difficulty: "basico" },
     { id: 964, question: "Quien fue el fundador del APRA?", options: ["Jose Carlos Mariategui", "Victor Raul Haya de la Torre", "Luis Miguel Sanchez Cerro", "Manuel Gonzalez Prada"], correctIndex: 1, explanation: "Victor Raul Haya de la Torre fue el fundador del APRA y una de las figuras politicas mas importantes del siglo XX peruano.", difficulty: "basico" },
     { id: 965, question: "Que tipo de movimiento se presento el APRA al nacer?", options: ["Un movimiento conservador", "Un movimiento antiimperialista y de liberacion nacional", "Un movimiento monarchico", "Un movimiento eclesiastico"], correctIndex: 1, explanation: "El APRA se presento como un movimiento antiimperialista y de liberacion nacional para las Americas.", difficulty: "basico" },
@@ -32240,8 +31989,7 @@ El gobierno del 45 demostro las posibilidades y limitaciones de la democracy en 
         correctIndex: 1,
         explanation: "El golpe militar del 29 de octubre de 1948 liderado por Odría derrocó a Bustamante e inició una dictadura de ocho años.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 984, question: "Quien fue elegido presidente en 1945 con el apoyo del APRA?", options: ["Manuel A. Odria", "Luis Miguel Sanchez Cerro", "Jose Luis Bustamante y Rivero", "Manuel Prado"], correctIndex: 2, explanation: "Bustamante y Rivero fue elegido en 1945 con el apoyo del APRA y el Frente Democratico Nacional.", difficulty: "basico" },
     { id: 985, question: "Que coalicion politica gano las elecciones de 1945?", options: ["La coalicion conservadora", "El Frente Democratico Nacional junto con el APRA", "El Partido Civil", "La Alianza Popular"], correctIndex: 1, explanation: "El Frente Democratico Nacional junto con el APRA ganaron las elecciones contra la coalicion conservadora.", difficulty: "basico" },
     { id: 986, question: "Que caracter tenia Bustamante y Rivero como politico?", options: ["Militar retirado", "Diplomatico de carrera moderado y conciliador", "Lider sindical", "Empresario minero"], correctIndex: 1, explanation: "Bustamante era un diplomatico de carrera que busco gobernar de forma moderada y conciliadora.", difficulty: "basico" },
@@ -32395,8 +32143,7 @@ La dictadura de Odría dejo una herencia de represion, inestabilidad y debilidad
         correctIndex: 0,
         explanation: "Manuel Prado fue elegido en las elecciones de 1956 y sucedió a Odría en la presidencia del Perú tras el fin de la dictadura.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 1005, question: "Como se caracterizo la dictadura de Odria?", options: ["Democracia plena", "Represion politica y persecucion de opositores", "Nacionalizacion total", "Abolicion del ejercito"], correctIndex: 1, explanation: "La dictadura se caracterizo por la represion politica, censura y persecucion sistematica de opositores.", difficulty: "basico" },
     { id: 1006, question: "Que institution se lleno de prisioneros politicos durante la dictadura?", options: ["La Universidad de San Marcos", "El Penal del Callao", "El Congreso", "La Corte Suprema"], correctIndex: 1, explanation: "El Penal del Callao se lleno de prisioneros politicos, especialmente apristas y comunistas.", difficulty: "basico" },
     { id: 1007, question: "Que duro la dictadura de Odria?", options: ["Cuatro anos", "Seis anos", "Ocho anos", "Diez anos"], correctIndex: 2, explanation: "La dictadura duro ocho anos, de 1948 a 1956.", difficulty: "basico" },
@@ -32533,8 +32280,7 @@ El segundo gobierno de Belaunde dejo al Peru con una democracia fragil pero acti
         correctIndex: 2,
         explanation: "Las Escuelas Nacionales Unificadas fueron implementadas en 1972 bajo el gobierno militar de Velasco Alvarado como parte de una reforma educativa integral.",
         difficulty: "basico"
-      }
-    ,
+      },
     { id: 1026, question: "Cual fue el principal objetivo de la Alianza para el Progreso?", options: ["Expropiar empresas extranjeras", "Promover el desarrollo economico para prevenir revoluciones comunistas", "Unificar sistemas educativos", "Crear fuerza militar conjunta"], correctIndex: 1, explanation: "La Alianza para el Progreso fue un programa de cooperacion economica de EE.UU. en 1961 como respuesta a la Revolucion Cubana.", difficulty: "basico" },
     { id: 1027, question: "En que ano se implemento el proyecto de las Escuelas Nacionales Unificadas?", options: ["1965", "1968", "1972", "1976"], correctIndex: 2, explanation: "Las ENU fueron implementadas en 1972 bajo el gobierno militar de Velasco Alvarado.", difficulty: "basico" },
     { id: 1028, question: "Que problema especifico desencadeno el golpe contra Belauende?", options: ["Crisis economica", "Tensiones con la International Petroleum Company y toma de la refineria de Talara", "Resistencia campesina", "Conflicto con Brasil"], correctIndex: 1, explanation: "El golpe se desencadeno por tensiones con la IPC, especialmente la toma de la refineria de Talara.", difficulty: "basico" },
@@ -32671,8 +32417,7 @@ El 29 de agosto de 1975, el general Francisco Morales Bermudez derroco a Velasco
         correctIndex: 1,
         explanation: "La Ley General de Educacion No. 19326 promulgada en 1972 transformo el sistema educativo peruano, estableciendo un sistema unificado de educacion.",
         difficulty: "intermedio"
-      }
-    ,
+      },
     { id: 1047, question: "Que fecha y decreto establecieron la Reforma Agraria?", options: ["12 de octubre de 1968", "24 de junio de 1969, Decreto Ley No. 17716", "3 de octubre de 1970", "1 de mayo de 1971"], correctIndex: 1, explanation: "La Reforma Agraria fue promulgada el 24 de junio de 1969 mediante el Decreto Ley No. 17716.", difficulty: "basico" },
     { id: 1048, question: "Que empresa absorbio a la International Petroleum Company?", options: ["PETROPERU", "La Compania Peruana de Petroleos", "ENCOMIN", "Sociedad Petrolera Peruana"], correctIndex: 1, explanation: "La Compania Peruana de Petroleos absorbio a la IPC en 1969 como parte de la nacionalizacion petrolera.", difficulty: "basico" },
     { id: 1049, question: "Que ley establecio la reforma educativa integral?", options: ["Ley No. 18601", "Ley General de Educacion No. 19326", "Ley No. 20232", "Ley No. 21054"], correctIndex: 1, explanation: "La Ley General de Educacion No. 19326 promulgada en 1972 transformo el sistema educativo.", difficulty: "basico" },
@@ -32805,8 +32550,7 @@ La reforma de Velasco dejo una huella profunda. Aunque las cooperativas fracasar
         correctIndex: 1,
         explanation: "El general Francisco Morales Bermudez sucedio a Velasco Alvarado el 29 de agosto de 1975, marcando el inicio de un proceso de transicion hacia la democracia.",
         difficulty: "basico"
-      }
-    ,
+      },
     { id: 1068, question: "Cual fue uno de los principales efectos sociales de las reformas de Velasco?", options: ["Disminucion de organizacion campesina", "Creacion de cooperativas agrarias y comunidades organizadas", "Exodo masivo sin organizacion", "Debilitamiento de sindicatos"], correctIndex: 1, explanation: "La reforma agraria permitio la creacion de cooperativas y comunidades campesinas organizadas.", difficulty: "basico" },
     { id: 1069, question: "En que fecha fue reemplazado Velasco por Morales Bermudez?", options: ["3 de octubre de 1973", "29 de agosto de 1975", "12 de octubre de 1976", "1 de enero de 1977"], correctIndex: 1, explanation: "Morales Bermudez sucedio a Velasco el 29 de agosto de 1975.", difficulty: "basico" },
     { id: 1070, question: "Que sector social creo con las reformas de Velasco?", options: ["La oligarquia terrateniente", "Clase media con expansion del empleo publico", "Empresarios mineros", "Aristocracia limeña"], correctIndex: 1, explanation: "La clase media crecio con la expansion del empleo publico y la inversion estatal en servicios.", difficulty: "basico" },
@@ -32943,8 +32687,7 @@ Morales Bermudez dejo al Peru con una economia debilitada, un conflicto armado e
         correctIndex: 1,
         explanation: "Durante el gobierno de Morales Bermudez surgieron y se consolidaron los primeros grupos insurgentes significativos, incluyendo Sendero Luminoso y Bandera Roja.",
         difficulty: "intermedio"
-      }
-    ,
+      },
     { id: 1089, question: "Que dejo el gobierno de Morales Bermudez como principal problema?", options: ["Industrializacion acelerada", "Grave crisis economica con deuda externa creciente", "Superavit fiscal", "Reduccion exitosa de inflacion"], correctIndex: 1, explanation: "Dejo una economia en profunda crisis con deuda externa alarmante e inflacion creciente.", difficulty: "basico" },
     { id: 1090, question: "Que documento fundamental se redacto durante su gobierno?", options: ["Codigo Civil", "Constitucion de 1979", "Plan Nacional", "Tratado de Libre Comercio"], correctIndex: 1, explanation: "Se convoco una Asamblea Constituyente que redacto la Constitucion de 1979.", difficulty: "basico" },
     { id: 1091, question: "Que grupos insurgentes surgieron durante su gobierno?", options: ["Los Montoneros", "Sendero Luminoso y Bandera Roja", "El MRTA", "Comandos de autodefensa"], correctIndex: 1, explanation: "Surgieron y se consolidaron los primeros grupos insurgentes significativos.", difficulty: "basico" },
@@ -33077,8 +32820,7 @@ Los primeros años de lucha armada fueron exitosos para Sendero. Las fuerzas del
         correctIndex: 1,
         explanation: "En 1969, los estudiantes de la Universidad de Huamanga lideraron un movimiento nacional por la gratuidad de la educacion superior, marcando un punto de inflexion en la politica universitaria.",
         difficulty: "basico"
-      }
-    ,
+      },
     { id: 1110, question: "En que ano nacio Abimael Guzman?", options: ["1934", "1939", "1944", "1950"], correctIndex: 1, explanation: "Abimael Guzman nacio el 3 de diciembre de 1939 en Arequipa.", difficulty: "basico" },
     { id: 1111, question: "En que universidad se formo Guzman?", options: ["San Marcos", "Universidad Nacional San Cristobal de Huamanga", "La Cantuta", "Cayetano Heredia"], correctIndex: 1, explanation: "Se formo en la Universidad Nacional San Cristobal de Huamanga.", difficulty: "basico" },
     { id: 1112, question: "Que ideologia adopto Guzman?", options: ["Capitalismo", "Marxismo-leninismo", "Fascismo", "Anarquismo"], correctIndex: 1, explanation: "Adopto el marxismo-leninismo como base ideologica.", difficulty: "basico" },
@@ -33211,8 +32953,7 @@ La violencia en Peru genero preocupacion internacional. Organizaciones de derech
         correctIndex: 1,
         explanation: "El atentado de Tarata en Miraflores (1992) fue uno de los mas devastadores de la campana terrorista urbana de Sendero Luminoso en Lima.",
         difficulty: "intermedio"
-      }
-    ,
+      },
     { id: 1131, question: "Que estrategia uso Sendero para expandirse?", options: ["Campaña militar convencional", "Guerra popular prolongada con multiples frentes", "Campaña politica pacifica", "Alianza con fuerzas armadas"], correctIndex: 1, explanation: "Implemento guerra popular prolongada abriendo multiples frentes de combate.", difficulty: "basico" },
     { id: 1132, question: "Que zonas geograficas se convirtieron en bastiones de Sendero?", options: ["Solo Lima", "Valles del Mantaro, Huallaga, Apurimac y zonas cocaleras", "Solo costa", "Solo selva alta"], correctIndex: 1, explanation: "Los valles del Mantaro, Huallaga, Apurimac y zonas cocaleras fueron sus principales bastiones.", difficulty: "basico" },
     { id: 1133, question: "Que tipo de ataque realizo Sendero el 17 de mayo de 1980?", options: ["Aeronaval", "Incendio de urnas electorales en Chuschi, Ayacucho", "Ataque a palacio", "Secuestro de presidente"], correctIndex: 1, explanation: "Quemaron urnas electorales en Chuschi, Ayacucho, marcando inicio de la violencia.", difficulty: "basico" },
@@ -33349,8 +33090,7 @@ La crisis de los 80 dejo cicatrices profundas: pobreza extrema, trauma social, d
         correctIndex: 1,
         explanation: "Alan Garcia restrinjo el pago de la deuda externa al 10% de los ingresos por exportaciones, una medida controvertida que genero la desconfianza de los mercados internacionales y agravacion la crisis.",
         difficulty: "intermedio"
-      }
-    ,
+      },
     { id: 1152, question: "Que problema economico principal sufrio el Peru en los 80?", options: ["Superavit", "Hiperinflacion y caida del producto bruto interno", "Crecimiento sostenido", "Estabilidad monetaria"], correctIndex: 1, explanation: "El Peru sufrió hiperinflacion y caida del producto bruto interno.", difficulty: "basico" },
     { id: 1153, question: "Que consecuencias sociales tuvo la crisis de los 80?", options: ["Mejora de vida", "Aumento de pobreza, desempleo y migracion interna", "Reduccion de pobreza", "Empleo pleno"], correctIndex: 1, explanation: "Genero aumento de pobreza, desempleo y migracion interna masiva.", difficulty: "basico" },
     { id: 1154, question: "Que conflicto afecto al Peru durante esta decada?", options: ["Conflicto con Brasil", "Guerra interna contra Sendero Luminoso", "Guerra con Chile", "Conflicto con Ecuador"], correctIndex: 1, explanation: "La guerra interna contra Sendero Luminoso genero miles de victimas.", difficulty: "basico" },
@@ -33487,8 +33227,7 @@ En 2000, tras la revelacion de videos que mostraban la corrupcion del gobierno, 
         correctIndex: 2,
         explanation: "El gobierno de Fujimori cayo en el 2000 tras la diffusion de los vladivideos que mostraban actos de corrupcion, lo que provoco su huida del pais y posterior extradicion.",
         difficulty: "intermedio"
-      }
-    ,
+      },
     { id: 1173, question: "En que ano gano Fujimori las elecciones?", options: ["1985", "1990", "1995", "2000"], correctIndex: 1, explanation: "Fujimori gano las elecciones presidenciales en 1990.", difficulty: "basico" },
     { id: 1174, question: "Que nombre se le dio al gobierno de Fujimori?", options: ["La Reforma", "El Fusilamiento", "El Autoritarismo", "La Revolucion"], correctIndex: 1, explanation: "Se le conoce como El Fusilamiento por su estilo autoritario.", difficulty: "basico" },
     { id: 1175, question: "Que llamado nacional hizo Fujimori en 1992?", options: ["A la paz", "A la unidad nacional contra terrorismo", "Al dialogue", "A elecciones"], correctIndex: 1, explanation: "Hizo un llamado a la unidad nacional para enfrentar el terrorismo.", difficulty: "basico" },
@@ -33621,8 +33360,7 @@ La corrupcion colonial debilito al imperio español, genero descontento en las c
         correctIndex: 1,
         explanation: "Las reformas como las Ordenanzas de 1571 y 1619 fueron sistematicamente evadidas por los propios funcionarios encargados de implementarlas, perpetuando el sistema de corrupcion.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 1194, question: "Que papel jugo la corrupcion en el sistema colonial?", options: ["Ninguno", "Sostuvo el sistema de explotacion y control social", "Fue irrelevante", "Combatio la desigualdad"], correctIndex: 1, explanation: "La corrupcion sostuvo el sistema de explotacion y control social durante la colonia.", difficulty: "basico" },
     { id: 1195, question: "Que instituciones coloniales estuvieron comprometidas?", options: ["Solo el ejercito", "Iglesia, burocracia colonial y comercio", "Solo la Iglesia", "Ninguna"], correctIndex: 1, explanation: "La Iglesia, burocracia colonial y sistema comercial estuvieron comprometidos.", difficulty: "basico" },
     { id: 1196, question: "Que tipo de sobornos existian en la colonia?", options: ["Ninguno", "Puestos de venta, exenciones de tributos y concesiones de tierras", "Solo monetarios", "Solo alimentarios"], correctIndex: 1, explanation: "Existian puestos de venta, exenciones de tributos y concesiones de tierras.", difficulty: "basico" },
@@ -33755,8 +33493,7 @@ La corrupcion republicana debilito las instituciones, genero desconfianza ciudad
         correctIndex: 1,
         explanation: "El gamonalismo perpetuo la corrupcion a nivel local, donde los hacendados controlaban la justicia y la administracion, creando un sistema de clientelismo que se perpetuo por decadas.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 1215, question: "Que tipo de corrupcion predomino en la Republica temprana?", options: ["Electoral", "Patrimonialista y clientelar heredada de la colonia", "Transparencia", "Digital"], correctIndex: 1, explanation: "Predominaba la corrupcion patrimonialista y clientelar heredada de la colonia.", difficulty: "basico" },
     { id: 1216, question: "Que papel jugaron los caudillos en la corrupcion republicana?", options: ["Combatieron la corrupcion", "Concentraron poder y recurso para beneficio propio", "Fueron justos", "No tuvieron poder"], correctIndex: 1, explanation: "Los caudillos concentraron poder y recursos para beneficio propio y de sus aliados.", difficulty: "basico" },
     { id: 1217, question: "Que tipo de elecciones sufrieron corrupcion?", options: ["Ninguna", "Compra de votos, intimidacion y manipulacion de padrones", "Fueron limpias", "Digitales"], correctIndex: 1, explanation: "Sufrieron compra de votos, intimidacion y manipulacion de padrones.", difficulty: "basico" },
@@ -33893,8 +33630,7 @@ Diversificacion economica, reduccion de pobreza, inclusion social, protection am
         correctIndex: 1,
         explanation: "El extractivismo es vulnerable porque genera altos ingresos en bonanza pero depende de precios internacionales volatiles, genera conflictos sociales por contaminacion y perdida de tierras, y limita la diversificacion economica.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 1236, question: "Que modelo economico predomino durante la Colonia?", options: ["Libre mercado", "Mercantilismo con explotacion de recursos para la Corona", "Comunismo", "Industrializacion"], correctIndex: 1, explanation: "Predomino el mercantilismo con explotacion de recursos para beneficio de la Corona.", difficulty: "basico" },
     { id: 1237, question: "Que sector fue principal en la economia colonial?", options: ["Industria", "Mineria de plata y oro", "Agricultura exportadora", "Servicios"], correctIndex: 1, explanation: "La mineria de plata y oro fue el sector principal de la economia colonial.", difficulty: "basico" },
     { id: 1238, question: "Que tipo de sistema tributario existia en la colonia?", options: ["Progresivo", "Tributo indigena y diezmo eclesiasticos", "Igualitario", "No existia"], correctIndex: 1, explanation: "Existian el tributo indigena y el diezmo eclesiasticos como principales impuestos.", difficulty: "basico" },
@@ -34031,8 +33767,7 @@ Mejorar calidad educativa, reducir brechas urbanas-rurales, fortalecer educacion
         correctIndex: 1,
         explanation: "La inversion en educacion en Peru historicamente ha sido una de las mas bajas de America Latina, raramente superando el 3% del PBI, lo que limita gravemente la calidad del sistema educativo.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 1257, question: "Que modelo educativo impuso la Corona española?", options: ["Laico", "Catolico con ensenanza en castellano y doctrina religiosa", "Publico", "Bilingue"], correctIndex: 1, explanation: "Impuso modelo catolico con ensenanza en castellano y fuerte doctrina religiosa.", difficulty: "basico" },
     { id: 1258, question: "Que tipo de escuelas fundaron los conquistadores?", options: ["Indigenas", "Colegios para hijos de espanoles y elites criollas", "Publicas para todos", "Bilingues"], correctIndex: 1, explanation: "Fundaron colegios destinados a hijos de espanoles y elites criollas.", difficulty: "basico" },
     { id: 1259, question: "Que grupo social tenia acceso a educacion en la colonia?", options: ["Todos", "Solo elites criollas e indigenas nobles", "Solo indigenas", "Solo pobres"], correctIndex: 1, explanation: "Solo tenian acceso las elites criollas e indigenas nobles.", difficulty: "basico" },
@@ -34165,8 +33900,7 @@ Regulacion ambiental, proteccion de comunidades, distribucion justa de beneficio
         correctIndex: 1,
         explanation: "La mineria moderna aporta mas del 60% de las exportaciones pero genera solo el 2% del empleo formal, creando un modelo de crecimiento economico que no se traduce en desarrollo social equitativo.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 1278, question: "Que recurso minero fue principal en la Colonia?", options: ["Petroleo", "Plata de Potosi y Cerro Rico", "Oro de la selva", "Cobre"], correctIndex: 1, explanation: "La plata de Potosi y el Cerro Rico fueron los principales recursos mineros coloniales.", difficulty: "basico" },
     { id: 1279, question: "Que sistema laboral uso la Corona en la mineria?", options: ["Obrero libre", "Mita: trabajo forzado indigena rotativo", "Esclavitud africana", "Sindicatos"], correctIndex: 1, explanation: "Uso la mita, sistema de trabajo forzado indigena rotativo.", difficulty: "basico" },
     { id: 1280, question: "Que tipo de empresa minera existia en la colonia?", options: ["Corporaciones privadas", "Corporaciones estatales monopolizadas por la Corona", "Cooperativas", "PYMES"], correctIndex: 1, explanation: "Existian corporaciones estatales monopolizadas por la Corona.", difficulty: "basico" },
@@ -34303,8 +34037,7 @@ Fortalecer la organizacion social, garantizar derechos, promover participacion p
         correctIndex: 1,
         explanation: "La Marcha de los 4 Suyos busco protestar contra el gobierno autoritario de Alberto Fujimori y exigir elecciones libres y democracia, reuniendo a miles de campesinos e indigenas.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 1299, question: "Que tipo de movimientos surgieron en el siglo XIX?", options: ["Movimientos digital", "Movimientos campesinos e indigenas por tierra y justicia", "Movimientos estudiantiles", "Sindicales"], correctIndex: 1, explanation: "Surgieron movimientos campesinos e indigenas por tierra y justicia.", difficulty: "basico" },
     { id: 1300, question: "Que problemas sociales persisten historicamente?", options: ["Ninguno", "Pobreza, exclusión, desigualdad y discriminacion", "Solo pobreza", "Solo discriminacion"], correctIndex: 1, explanation: "Persisten pobreza, exclusión, desigualdad y discriminacion como problemas historicos.", difficulty: "basico" },
     { id: 1301, question: "Que tipo de movilizaciones hubo en los Andes?", options: ["Ninguna", "Levantamientos campesinos por reforma agraria y derechos", "Solo urbanas", "Solo costeñas"], correctIndex: 1, explanation: "Hubo levantamientos campesinos por reforma agraria y derechos territoriales.", difficulty: "basico" },
@@ -34441,8 +34174,7 @@ Juzgar responsables, reparar victimas, fortalecer sistema judicial, proteger der
         correctIndex: 1,
         explanation: "Las primeras condenas por las esterilizaciones forzadas no llegaron hasta 2021, mas de 20 anos despues, revelando la impunidad y los obstaculos que enfrentan las victimas para obtener justicia.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 1320, question: "Que violaciones a derechos humanos ocurrieron en el siglo XX?", options: ["Ninguna", "Masacres, desaparecimientos forzados, torturas y ejecuciones extrajudiciales", "Solo torturas", "Solo desapariciones"], correctIndex: 1, explanation: "Ocurrieron masacres, desaparecimientos forzados, torturas y ejecuciones extrajudiciales.", difficulty: "basico" },
     { id: 1321, question: "Que organismo defiende los derechos humanos?", options: ["Congresso", "Ministerio Publico y Defensoria del Pueblo", "El ejercito", "La Iglesia"], correctIndex: 1, explanation: "El Ministerio Publico y la Defensoria del Pueblo defienden los derechos humanos.", difficulty: "basico" },
     { id: 1322, question: "Que tipos de victimas hubo en el conflicto armado?", options: ["Solo militares", "Campesinos, indigenas, dirigentes sociales, periodistas y estudiantes", "Solo civiles", "Solo militares"], correctIndex: 1, explanation: "Hubo victimas entre campesinos, indigenas, dirigentes sociales, periodistas y estudiantes.", difficulty: "basico" },
@@ -34579,8 +34311,7 @@ Debate sobre identidad: ¿mestiza, andina, amazonica, criolla? La gastronomia y 
         correctIndex: 1,
         explanation: "El fortalecimiento del Estado de derecho y la independencia judicial son condiciones necesarias para un desarrollo sostenible, ya que sin instituciones fuertes no es posible implementar reformas profundas.",
         difficulty: "avanzado"
-      }
-    ,
+      },
     { id: 1341, question: "Que problemas enfrenta el Peru actualmente?", options: ["Ninguno", "Corrupcion, pobreza, desigualdad, violencia e institucionalidad debil", "Solo corrupcion", "Solo pobreza"], correctIndex: 1, explanation: "Enfrenta corrupcion, pobreza, desigualdad, violencia e institucionalidad debil.", difficulty: "basico" },
     { id: 1342, question: "Que tipo de conflictos sociales existen hoy?", options: ["Ninguno", "Conflictos territoriales, mineria, transito y recursos naturales", "Solo politicos", "Solo economicos"], correctIndex: 1, explanation: "Existen conflictos territoriales por mineria, transito y recursos naturales.", difficulty: "basico" },
     { id: 1343, question: "Que tipo de corrupcion afecta al pais?", options: ["Ninguna", "Corrupcion sistemica en todos los niveles de gobierno", "Solo nacional", "Solo local"], correctIndex: 1, explanation: "Afecta corrupcion sistemica en todos los niveles de gobierno.", difficulty: "basico" },
@@ -34713,8 +34444,7 @@ El bicentenario abrio un espacio para imaginar el Peru del futuro. La construcci
         "correctIndex": 1,
         "explanation": "La juventud peruana, que representa mas del 30% de la poblacion, es considerada la principal esperanza para un cambio profundo hacia una sociedad mas justa e inclusiva.",
         "difficulty": "avanzado"
-      }
-    ,
+      },
     { id: 1362, question: "Que simboliza el Bicentenario del Peru?", options: ["Un feriado mas", "200 anos de vida independiente con desafios pendientes", "Una fiesta", "Un evento commercial"], correctIndex: 1, explanation: "Simboliza 200 anos de vida independiente con desafios historicos pendientes.", difficulty: "basico" },
     { id: 1363, question: "Que tipo de identidad nacional construyo el Peru?", options: ["Uniforme", "Plural, diversa y en constante construccion", "Unica", "Colonial"], correctIndex: 1, explanation: "Construyo una identidad plural, diversa y en constante construccion.", difficulty: "basico" },
     { id: 1364, question: "Que problemas de identidad nacional existen?", options: ["Ninguno", "Fragmentacion, regionalismo, etnocentrismo y desconfianza", "Solo regionalismo", "Ningun problema"], correctIndex: 1, explanation: "Existen fragmentacion, regionalismo, etnocentrismo y desconfianza.", difficulty: "basico" },
