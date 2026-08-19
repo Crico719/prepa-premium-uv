@@ -8749,9 +8749,7 @@ export const courseContent: CourseContent = {
         difficulty: "avanzado"
       }
     ]
-  }
-  ]
-,
+  },
   {
     slug: "teoria-de-conjuntos",
     tip: "En el examen, identifica primero los conjuntos dados antes de calcular operaciones. Dibuja un diagrama para verificar tu respuesta.",
