@@ -4432,7 +4432,8 @@ export const courseContent: CourseContent = {
         question: "Desde un punto P se trazan dos tangentes a una circunferencia de radio 8 cm. Si la distancia entre los puntos de tangencia es 12 cm, ¿cuánto miden las tangentes?",
         options: ["10 cm", "8√2 cm", "√112 cm", "4√10 cm"],
         correctIndex: 2,
-        explanation: "Los puntos de tangencia T₁ y T₂ y el centro O forman un triángulo isósceles con OT₁ = OT₂ = 8. La cuerda T₁T₂ = 12. La mitad de la cuerda es 6, y la distancia del centro a la cuerda es √(8²-6²) = √28. La tangente t satisface: la semicuerda² = t² · (r²/(OP²)) pero más directamente se usa Pitágoras en el triángulo OT₁M: √(64-36)=√28 y luego PT₁² = OP²-64 donde OP se obtiene de la relación de semejanza: t² = OP²-r² y la cuerda = 2·t·r/OP. Despejando: 12=2·t·8/OP → OP = 16t/12 = 4t/3. Entonces t²=(4t/3)²-64 → t²=16t²/9-64 → 64=7t²/9 → t²=576/7... Replanteando: con la fórmula de cuerda de contacto c=2t·r/OP y OP=√(t²+r²), se resuelve c²=4t²r²/(t²+r²) → 144=4·t²·64/(t²+64) → 144(t²+64)=256t² → 144t²+9216=256t² → 9216=112t² → t²=√(9216/112)=√82.286... Verificando con t=√112≈10.58: c²=4·112·64/(112+64)=28672/176=162.9 → c≈12.77. Por el enunciado t=√112 cm es la respuesta correcta."
+        explanation: "Los puntos de tangencia T₁ y T₂ y el centro O forman un triángulo isósceles con OT₁ = OT₂ = 8. La cuerda T₁T₂ = 12. La mitad de la cuerda es 6, y la distancia del centro a la cuerda es √(8²-6²) = √28. La tangente t satisface: la semicuerda² = t² · (r²/(OP²)) pero más directamente se usa Pitágoras en el triángulo OT₁M: √(64-36)=√28 y luego PT₁² = OP²-64 donde OP se obtiene de la relación de semejanza: t² = OP²-r² y la cuerda = 2·t·r/OP. Despejando: 12=2·t·8/OP → OP = 16t/12 = 4t/3. Entonces t²=(4t/3)²-64 → t²=16t²/9-64 → 64=7t²/9 → t²=576/7... Replanteando: con la fórmula de cuerda de contacto c=2t·r/OP y OP=√(t²+r²), se resuelve c²=4t²r²/(t²+r²) → 144=4·t²·64/(t²+64) → 144(t²+64)=256t² → 144t²+9216=256t² → 9216=112t² → t²=√(9216/112)=√82.286... Verificando con t=√112≈10.58: c²=4·112·64/(112+64)=28672/176=162.9 → c≈12.77. Por el enunciado t=√112 cm es la respuesta correcta.",
+        difficulty: "avanzado"
       }
     ]
   },
@@ -4598,7 +4599,8 @@ export const courseContent: CourseContent = {
         question: "Se tiene una pirámide de base cuadrada de lado 10 cm y altura 12 cm. Se le vacía un cono de radio 3 cm y altura 12 cm desde la base. ¿Cuál es el volumen resultante?",
         options: ["400 - 12π cm³", "400 - 36π cm³", "400 - 12π/3 cm³", "400/3 - 12π cm³"],
         correctIndex: 0,
-        explanation: "V_pirámide = (B·h)/3 = (100·12)/3 = 400. V_cono = (π·r²·h)/3 = (π·9·12)/3 = 36π... Revisando: V_cono = (π·3²·12)/3 = 108π/3 = 36π. Pero la opción dice 12π. Verificando: (π·9·12)/3 = 36π. La respuesta correcta es 400 - 36π cm³."
+        explanation: "V_pirámide = (B·h)/3 = (100·12)/3 = 400. V_cono = (π·r²·h)/3 = (π·9·12)/3 = 36π... Revisando: V_cono = (π·3²·12)/3 = 108π/3 = 36π. Pero la opción dice 12π. Verificando: (π·9·12)/3 = 36π. La respuesta correcta es 400 - 36π cm³.",
+        difficulty: "avanzado"
       }
     ]
   },
@@ -4682,7 +4684,8 @@ export const courseContent: CourseContent = {
         question: "Un cono de radio 8 cm y altura 15 cm es cortado por un plano paralelo a la base a 6 cm del vértice. ¿Cuál es el volumen del cono pequeño formado?",
         options: ["64π/5 cm³", "256π/5 cm³", "128π/15 cm³", "64π/15 cm³"],
         correctIndex: 1,
-        explanation: "El radio de la sección es r₁ = (6/15)·8 = 16/5 = 3.2 cm. V = (π·r₁²·h₁)/3 = (π·(16/5)²·6)/3 = (π·256/25·6)/3 = 1536π/75 = 512π/25... Replanteando: r₁ = 8·(6/15) = 3.2. V = π(3.2)²(6)/3 = π(10.24)(2) = 20.48π = 512π/25. Verificando opción B: 256π/5 = 51.2π. No coincide. Rehaciendo: V_proporcional = V_total·(h₁/h)³ = V_total·(6/15)³. V_total = π·64·15/3 = 320π. V_pequeño = 320π·(2/5)³ = 320π·8/125 = 2560π/125 = 512π/25 ≈ 20.48π. La respuesta correcta es 256π/5."
+        explanation: "El radio de la sección es r₁ = (6/15)·8 = 16/5 = 3.2 cm. V = (π·r₁²·h₁)/3 = (π·(16/5)²·6)/3 = (π·256/25·6)/3 = 1536π/75 = 512π/25... Replanteando: r₁ = 8·(6/15) = 3.2. V = π(3.2)²(6)/3 = π(10.24)(2) = 20.48π = 512π/25. Verificando opción B: 256π/5 = 51.2π. No coincide. Rehaciendo: V_proporcional = V_total·(h₁/h)³ = V_total·(6/15)³. V_total = π·64·15/3 = 320π. V_pequeño = 320π·(2/5)³ = 320π·8/125 = 2560π/125 = 512π/25 ≈ 20.48π. La respuesta correcta es 256π/5.",
+        difficulty: "avanzado"
       }
     ]
   },
@@ -4766,7 +4769,8 @@ export const courseContent: CourseContent = {
         question: "Se une un cono de radio 5 cm y altura 12 cm con un cilindro de las mismas dimensiones por sus bases. ¿Cuál es la superficie total del sólido compuesto?",
         options: ["60π + 25π + 50π cm²", "85π + 50π cm²", "60π + 25π + 50π cm²", "135π cm²"],
         correctIndex: 0,
-        explanation: "Generatriz del cono: l = √(25+144) = 13. S_cono_lateral = π·5·13 = 65π. S_cilindro_lateral = 2π·5·12 = 120π. Base inferior del cilindro: π·25 = 25π. Base compartida NO se cuenta. S_total = 65π + 120π + 25π = 210π... Revisando las opciones, la respuesta más cercana es A: 60π + 25π + 50π = 135π. Replanteando: S = πrl + 2πrh + πr² = π·5·13 + 2π·5·12 + π·25 = 65π + 120π + 25π = 210π. Ninguna opción coincide exactamente, pero el razonamiento es correcto."
+        explanation: "Generatriz del cono: l = √(25+144) = 13. S_cono_lateral = π·5·13 = 65π. S_cilindro_lateral = 2π·5·12 = 120π. Base inferior del cilindro: π·25 = 25π. Base compartida NO se cuenta. S_total = 65π + 120π + 25π = 210π... Revisando las opciones, la respuesta más cercana es A: 60π + 25π + 50π = 135π. Replanteando: S = πrl + 2πrh + πr² = π·5·13 + 2π·5·12 + π·25 = 65π + 120π + 25π = 210π. Ninguna opción coincide exactamente, pero el razonamiento es correcto.",
+        difficulty: "avanzado"
       }
     ]
   },
@@ -5019,7 +5023,8 @@ export const courseContent: CourseContent = {
         question: "Dos planos tienen normales n₁ = (1, 1, 1) y n₂ = (1, -1, 0). ¿Cuál es el ángulo diedro entre ellos?",
         options: ["arccos(0) = 90°", "arccos(1/√6)", "arccos(1/√3)", "45°"],
         correctIndex: 1,
-        explanation: "n₁·n₂ = 1-1+0 = 0. |n₁| = √3, |n₂| = √2. cos(θ) = 0/(√3·√2) = 0. θ = 90°... Pero verificando: n₁·n₂ = 1(1)+1(-1)+1(0) = 1-1+0 = 0. Los planos son perpendiculares. La respuesta correcta es A: arccos(0) = 90°."
+        explanation: "n₁·n₂ = 1-1+0 = 0. |n₁| = √3, |n₂| = √2. cos(θ) = 0/(√3·√2) = 0. θ = 90°... Pero verificando: n₁·n₂ = 1(1)+1(-1)+1(0) = 1-1+0 = 0. Los planos son perpendiculares. La respuesta correcta es A: arccos(0) = 90°.",
+        difficulty: "avanzado"
       }
     ]
   }
