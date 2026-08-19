@@ -2498,7 +2498,6 @@ export const courseContent: CourseContent = {
     ]
   }
 ,
-] = [
   {
     slug: "transformaciones-isometricas",
     tip: "En isometrías el área y las distancias se conservan. Verifica que la orientación se invierta en reflexiones pero no en traslaciones ni rotaciones.",
@@ -2912,7 +2911,6 @@ export const courseContent: CourseContent = {
     ]
   }
 ,
-] = [
   {
     slug: "razones-trigonometricas",
     tip: "En triángulos rectángulos, memoriza SOH-CAH-TOA: Seno = Opuesto/Hipotenusa, Coseno = Adyacente/Hipotenusa, Tangente = Opuesto/Adyacente.",
@@ -3602,7 +3600,6 @@ export const courseContent: CourseContent = {
     ]
   }
 ,
-] = [
   {
     slug: "vectores-en-el-plano",
     tip: "Un vector se define por su magnitud y dirección. Siempre representa desplazamiento, no posición.",
@@ -4352,7 +4349,6 @@ export const courseContent: CourseContent = {
     ]
   }
 ,
-] = [
   {
     slug: "tangentes-circunferencia",
     tip: "En todo problema de tangente desde punto exterior, recuerda que el radio es perpendicular a la tangente, formando un triángulo rectángulo donde la hipotenusa es la distancia del punto al centro.",
@@ -5029,7 +5025,6 @@ export const courseContent: CourseContent = {
     ]
   }
 ,
-] = [
   {
     slug: "teorema-ptolomeo",
     tip: "En un cuadrilátero cíclico, el producto de las diagonales es igual a la suma de los productos de los lados opuestos: AC·BD = AB·CD + BC·AD.",
@@ -5889,7 +5884,6 @@ export const courseContent: CourseContent = {
     ]
   }
 ,
-] = [
   {
     slug: "metodos-resolucion-geometrica",
     tip: "En el examen de admisión, identifica primero el método más eficiente: coordenadas para figuras en el plano, vectores para paralelismo y perpendicularidad, y trigonometría para ángulos y distancias no convencionales.",
@@ -8760,7 +8754,6 @@ export const courseContent: CourseContent = {
   }
   ]
 ,
-] = [
   {
     slug: "teoria-de-conjuntos",
     tip: "En el examen, identifica primero los conjuntos dados antes de calcular operaciones. Dibuja un diagrama para verificar tu respuesta.",
@@ -9502,7 +9495,6 @@ export const courseContent: CourseContent = {
     ]
   }
 ,
-] = [
   {
     slug: "divisibilidad-residuos",
     tip: "Si un número es divisible por 2 y por 3, también es divisible por 6. Aprende a identificar patrones de residuos para resolver divisiones sin calcular directamente.",
@@ -10236,7 +10228,6 @@ export const courseContent: CourseContent = {
     ]
   }
 ,
-] = [
   {
     slug: "problemas-mezclas",
     tip: "En problemas de mezclas, identifica siempre las cantidades de soluto y solvente. La concentración es soluto/total × 100%. Al mezclar, el soluto total se conserva: usa la ecuación C₁V₁ + C₂V₂ = C_fV_f.",
@@ -10967,7 +10958,6 @@ export const courseContent: CourseContent = {
     ]
   }
 ,
-] = [
   {
     slug: "sucesiones-aritmeticas",
     tip: "Identifica rápidamente la razón restando dos términos consecutivos; luego usa aₙ = a₁ + (n−1)d para cualquier término.",
@@ -11540,7 +11530,6 @@ export const courseContent: CourseContent = {
     ]
   }
 ,
-] = [
   {
     slug: "permutaciones-simples",
     tip: "Memoriza P(n)=n! y verifica si hay restricciones: elementos fijos, prohibidos o junto. En exámenes, si un elemento NO puede ir en cierta posición, usa restas o el principio de inclusión-exclusión.",
@@ -12257,7 +12246,6 @@ export const courseContent: CourseContent = {
     ]
   }
 ,
-] = [
   {
     slug: "media-mediana-moda",
     tip: "La media se afecta por valores extremos; la mediana y la moda son más robustas ante datos atípicos.",
