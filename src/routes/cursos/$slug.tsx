@@ -5,6 +5,7 @@ import {
   CheckCircle2,
   ChevronLeft,
   ChevronRight,
+  ChevronDown,
   CirclePlay,
   Lightbulb,
   Lock,
@@ -14,6 +15,10 @@ import {
   BookOpen,
   Zap,
   Trophy,
+  ImageIcon,
+  Calculator,
+  Target,
+  Info,
 } from "lucide-react";
 import { IconTile, ProgressBar, Surface } from "@/components/kit";
 import { courses, lessons, courseLessons } from "@/lib/data";
@@ -63,6 +68,118 @@ function TheorySectionBlock({ section }: { section: TheorySection }) {
   );
 }
 
+type IllustrationPanelProps = {
+  svg: string;
+  index: number;
+  summary?: string;
+  theory: TheorySection[];
+  tip: string;
+  isOpen: boolean;
+  onToggle: () => void;
+};
+
+function IllustrationPanel({ svg, index, summary, theory, tip, isOpen, onToggle }: IllustrationPanelProps) {
+  const basicoLines = theory.find(s => s.level === "basico")?.lines || [];
+  const intermedioLines = theory.find(s => s.level === "intermedio")?.lines || [];
+  const avanzadoLines = theory.find(s => s.level === "avanzado")?.lines || [];
+
+  const formulas = [...basicoLines, ...intermedioLines, ...avanzadoLines]
+    .filter(l => l.includes("**") && (l.includes("=") || l.includes("²") || l.includes("×") || l.includes("÷") || l.includes("√")))
+    .slice(0, 4);
+
+  return (
+    <div className={`rounded-[16px] border overflow-hidden transition-all duration-300 ${isOpen ? "border-primary shadow-lg" : "border-border hover:border-primary/50"}`}>
+      <button
+        type="button"
+        onClick={onToggle}
+        className={`flex w-full items-center gap-3 p-4 text-left transition-colors ${isOpen ? "bg-primary/5" : "hover:bg-muted"}`}
+      >
+        <div
+          className="size-12 shrink-0 rounded-xl bg-gradient-to-br from-primary-deep/90 to-primary/90 flex items-center justify-center overflow-hidden"
+          dangerouslySetInnerHTML={{ __html: svg }}
+        />
+        <div className="min-w-0 flex-1">
+          <p className="text-sm font-semibold">Ilustración {index + 1}</p>
+          <p className="text-xs text-muted-foreground truncate">{summary || "Ver detalles"}</p>
+        </div>
+        <ChevronDown className={`size-5 shrink-0 text-muted-foreground transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`} />
+      </button>
+
+      {isOpen && (
+        <div className="border-t border-border bg-gradient-to-b from-card to-background">
+          <div className="p-4">
+            <div
+              className="flex aspect-video items-center justify-center rounded-xl bg-gradient-to-br from-primary-deep/90 to-primary/90 p-4 mb-4"
+              style={{ perspective: "1200px" }}
+            >
+              <div
+                className="w-full h-full flex items-center justify-center"
+                style={{
+                  transform: "rotateX(2deg) rotateY(-1deg)",
+                  transformStyle: "preserve-3d",
+                  transition: "transform 0.4s ease"
+                }}
+                dangerouslySetInnerHTML={{ __html: svg }}
+              />
+            </div>
+
+            {summary && (
+              <div className="mb-4 p-3 rounded-xl bg-blue-50 dark:bg-blue-950/50 border border-blue-100 dark:border-blue-900">
+                <div className="flex items-start gap-2">
+                  <Info className="size-4 mt-0.5 shrink-0 text-blue-600" />
+                  <p className="text-xs text-blue-700 dark:text-blue-300 leading-relaxed">{summary}</p>
+                </div>
+              </div>
+            )}
+
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <div className="rounded-xl border border-green-200 dark:border-green-800 bg-green-50 dark:bg-green-950/50 p-3">
+                <div className="flex items-center gap-1.5 mb-2">
+                  <BookOpen className="size-3.5 text-green-600" />
+                  <p className="text-xs font-bold text-green-700 dark:text-green-300">Conceptos Básicos</p>
+                </div>
+                <ul className="space-y-1">
+                  {basicoLines.slice(0, 3).map((line, i) => (
+                    <li key={i} className="text-[10px] text-green-600 dark:text-green-400 leading-tight"
+                      dangerouslySetInnerHTML={{ __html: line.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>").substring(0, 80) + (line.length > 80 ? "..." : "") }}
+                    />
+                  ))}
+                </ul>
+              </div>
+
+              <div className="rounded-xl border border-amber-200 dark:border-amber-800 bg-amber-50 dark:bg-amber-950/50 p-3">
+                <div className="flex items-center gap-1.5 mb-2">
+                  <Zap className="size-3.5 text-amber-600" />
+                  <p className="text-xs font-bold text-amber-700 dark:text-amber-300">Fórmulas Clave</p>
+                </div>
+                <ul className="space-y-1">
+                  {formulas.length > 0 ? formulas.map((line, i) => (
+                    <li key={i} className="text-[10px] text-amber-600 dark:text-amber-400 leading-tight"
+                      dangerouslySetInnerHTML={{ __html: line.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>").substring(0, 80) + (line.length > 80 ? "..." : "") }}
+                    />
+                  )) : intermedioLines.slice(0, 3).map((line, i) => (
+                    <li key={i} className="text-[10px] text-amber-600 dark:text-amber-400 leading-tight"
+                      dangerouslySetInnerHTML={{ __html: line.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>").substring(0, 80) + (line.length > 80 ? "..." : "") }}
+                    />
+                  ))}
+                </ul>
+              </div>
+
+              <div className="rounded-xl border border-red-200 dark:border-red-800 bg-red-50 dark:bg-red-950/50 p-3">
+                <div className="flex items-center gap-1.5 mb-2">
+                  <Target className="size-3.5 text-red-600" />
+                  <p className="text-xs font-bold text-red-700 dark:text-red-300">Tip de Examen</p>
+                </div>
+                <p className="text-[10px] text-red-600 dark:text-red-400 leading-tight">{tip.substring(0, 120)}{tip.length > 120 ? "..." : ""}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
 export const Route = createFileRoute("/cursos/$slug")({
   loader: ({ params }) => {
     const course = courses.find((c) => c.slug === params.slug);
@@ -89,6 +206,7 @@ function Leccion() {
 
   const [activeLesson, setActiveLesson] = useState(0);
   const [activeIllustration, setActiveIllustration] = useState(0);
+  const [openPanel, setOpenPanel] = useState<number | null>(0);
   const [exerciseState, setExerciseState] = useState<Record<number, number | null>>({});
   const [difficultyFilter, setDifficultyFilter] = useState<DifficultyLevel | "all">("all");
 
@@ -147,45 +265,24 @@ function Leccion() {
             <>
               <Surface className="p-0 overflow-hidden">
                 {illustrations.length > 0 && (
-                  <div className="relative">
-                    <div
-                      className="flex aspect-video items-center justify-center rounded-t-[24px] bg-gradient-to-br from-primary-deep/90 to-primary/90 p-6"
-                      style={{ perspective: "1200px" }}
-                    >
-                      <div
-                        className="w-full h-full flex items-center justify-center"
-                        style={{
-                          transform: "rotateX(2deg) rotateY(-1deg)",
-                          transformStyle: "preserve-3d",
-                          transition: "transform 0.4s ease"
-                        }}
-                        dangerouslySetInnerHTML={{ __html: illustrations[activeIllustration] || illustrations[0]! }}
+                  <div className="p-4 space-y-3">
+                    <div className="flex items-center gap-2 px-2">
+                      <ImageIcon className="size-4 text-primary" />
+                      <p className="text-sm font-semibold">Ilustraciones del Tema</p>
+                      <span className="text-xs text-muted-foreground">({illustrations.length})</span>
+                    </div>
+                    {illustrations.map((svg, i) => (
+                      <IllustrationPanel
+                        key={`${currentContent?.slug}-ill-${i}`}
+                        svg={svg}
+                        index={i}
+                        summary={i === 0 ? currentContent?.illustrationSummary : undefined}
+                        theory={theorySections}
+                        tip={currentContent?.tip || ""}
+                        isOpen={openPanel === i}
+                        onToggle={() => setOpenPanel(openPanel === i ? null : i)}
                       />
-                    </div>
-                    {illustrations.length > 1 && (
-                      <div className="absolute bottom-3 left-1/2 flex -translate-x-1/2 gap-2">
-                        {illustrations.map((_, i) => (
-                          <button
-                            key={i}
-                            type="button"
-                            onClick={() => setActiveIllustration(i)}
-                            className={`size-2.5 rounded-full transition-colors ${i === activeIllustration ? "bg-white" : "bg-white/40 hover:bg-white/60"}`}
-                          />
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                )}
-                {currentContent?.illustrationSummary && (
-                  <div className="px-6 py-3 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-950/50 dark:to-indigo-950/50 border-t border-blue-100 dark:border-blue-900">
-                    <div className="flex items-start gap-2">
-                      <svg className="size-4 mt-0.5 shrink-0 text-blue-600" viewBox="0 0 20 20" fill="currentColor">
-                        <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
-                      </svg>
-                      <p className="text-xs text-blue-700 dark:text-blue-300 leading-relaxed">
-                        {currentContent.illustrationSummary}
-                      </p>
-                    </div>
+                    ))}
                   </div>
                 )}
                 <Tabs defaultValue="teoria" className="p-6">
@@ -335,7 +432,7 @@ function Leccion() {
               <div className="flex items-center justify-between">
                 <button
                   type="button"
-                  onClick={() => { setActiveLesson(Math.max(0, activeLesson - 1)); resetExercises(); setActiveIllustration(0); setDifficultyFilter("all"); }}
+                  onClick={() => { setActiveLesson(Math.max(0, activeLesson - 1)); resetExercises(); setActiveIllustration(0); setOpenPanel(0); setDifficultyFilter("all"); }}
                   disabled={activeLesson === 0}
                   className="press flex min-h-10 items-center gap-1 rounded-[18px] border border-border px-4 text-sm font-semibold disabled:opacity-40"
                 >
@@ -343,7 +440,7 @@ function Leccion() {
                 </button>
                 <button
                   type="button"
-                  onClick={() => { setActiveLesson(Math.min(courseSpecificLessons.length - 1, activeLesson + 1)); resetExercises(); setActiveIllustration(0); setDifficultyFilter("all"); }}
+                  onClick={() => { setActiveLesson(Math.min(courseSpecificLessons.length - 1, activeLesson + 1)); resetExercises(); setActiveIllustration(0); setOpenPanel(0); setDifficultyFilter("all"); }}
                   disabled={activeLesson === courseSpecificLessons.length - 1}
                   className="press flex min-h-10 items-center gap-1 rounded-[18px] bg-primary px-4 text-sm font-semibold text-primary-foreground hover:bg-primary/90 disabled:opacity-40"
                 >
@@ -389,7 +486,7 @@ function Leccion() {
                 <li key={l.title}>
                   <button
                     type="button"
-                    onClick={() => { setActiveLesson(i); resetExercises(); setActiveIllustration(0); setDifficultyFilter("all"); }}
+                    onClick={() => { setActiveLesson(i); resetExercises(); setActiveIllustration(0); setOpenPanel(0); setDifficultyFilter("all"); }}
                     className={`flex w-full items-center gap-3 p-4 text-left transition-colors hover:bg-muted ${i === activeLesson ? "bg-primary/5" : ""}`}
                   >
                     <IconTile
