@@ -12931,7 +12931,7 @@ export const courseContent: CourseContent = {
       }
     ]
   }
-,
+  ]
 };
 
 const historiaModulesPart1: CourseModule[] = [
