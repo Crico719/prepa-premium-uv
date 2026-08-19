@@ -91,7 +91,7 @@ function IllustrationPanel({ svg, index, summary, isOpen, onToggle }: Illustrati
         className={`flex w-full items-center gap-3 p-4 text-left transition-colors ${isOpen ? "bg-primary/5" : "hover:bg-muted"}`}
       >
         <div
-          className="size-12 shrink-0 rounded-xl bg-gradient-to-br from-primary-deep/90 to-primary/90 flex items-center justify-center overflow-hidden"
+          className="size-12 shrink-0 rounded-xl bg-gradient-to-br from-primary-deep/90 to-primary/90 flex items-center justify-center overflow-hidden [&>svg]:w-full [&>svg]:h-full [&>svg]:max-w-full [&>svg]:max-h-full"
           dangerouslySetInnerHTML={{ __html: svg }}
         />
         <div className="min-w-0 flex-1">
@@ -105,7 +105,7 @@ function IllustrationPanel({ svg, index, summary, isOpen, onToggle }: Illustrati
         <div className="border-t border-border bg-gradient-to-b from-card to-background">
           <div className="p-4">
             <div
-              className="flex aspect-video items-center justify-center rounded-xl bg-gradient-to-br from-primary-deep/90 to-primary/90 p-4"
+              className="flex aspect-video items-center justify-center rounded-xl bg-gradient-to-br from-primary-deep/90 to-primary/90 p-4 [&>svg]:w-full [&>svg]:h-full [&>svg]:max-w-full [&>svg]:max-h-full"
               style={{ perspective: "1200px" }}
             >
               <div
