@@ -96,6 +96,9 @@ function Home() {
     .slice(0, 3);
   const tip = getDailyTip();
 
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+
   const today = new Date();
   const monthMap: Record<string, number> = {
     Ene: 0, Feb: 1, Mar: 2, Abr: 3, May: 4, Jun: 5,
@@ -111,6 +114,7 @@ function Home() {
     })
     .filter((u) => u.daysLeft > 0)
     .sort((a, b) => a.daysLeft - b.daysLeft);
+
 
   const maxHours = Math.max(...weeklyStudy.map((d) => d.horas));
 
