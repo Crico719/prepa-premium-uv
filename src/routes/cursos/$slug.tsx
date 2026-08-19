@@ -19,6 +19,9 @@ import {
   Calculator,
   Target,
   Info,
+  Download,
+  FileText,
+  ExternalLink,
 } from "lucide-react";
 import { IconTile, ProgressBar, Surface } from "@/components/kit";
 import { courses, lessons, courseLessons } from "@/lib/data";
@@ -26,12 +29,15 @@ import { courseContent, type DifficultyLevel, type TheorySection, type CourseExe
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const difficultyConfig: Record<DifficultyLevel, { label: string; color: string; bg: string; border: string; icon: typeof BookOpen }> = {
-  basico: { label: "Básico", color: "text-green-700 dark:text-green-300", bg: "bg-green-50 dark:bg-green-950/50", border: "border-green-200 dark:border-green-800", icon: BookOpen },
-  intermedio: { label: "Intermedio", color: "text-amber-700 dark:text-amber-300", bg: "bg-amber-50 dark:bg-amber-950/50", border: "border-amber-200 dark:border-amber-800", icon: Zap },
-  avanzado: { label: "Avanzado", color: "text-red-700 dark:text-red-300", bg: "bg-red-50 dark:bg-red-950/50", border: "border-red-200 dark:border-red-800", icon: Trophy },
+  basico: { label: "Básico", color: "text-emerald-600 dark:text-emerald-400", bg: "bg-emerald-50 dark:bg-emerald-950/50", border: "border-emerald-200 dark:border-emerald-800", icon: BookOpen },
+  basic: { label: "Básico", color: "text-emerald-600 dark:text-emerald-400", bg: "bg-emerald-50 dark:bg-emerald-950/50", border: "border-emerald-200 dark:border-emerald-800", icon: BookOpen },
+  intermedio: { label: "Intermedio", color: "text-amber-600 dark:text-amber-400", bg: "bg-amber-50 dark:bg-amber-950/50", border: "border-amber-200 dark:border-amber-800", icon: Zap },
+  intermediate: { label: "Intermedio", color: "text-amber-600 dark:text-amber-400", bg: "bg-amber-50 dark:bg-amber-950/50", border: "border-amber-200 dark:border-amber-800", icon: Zap },
+  avanzado: { label: "Avanzado", color: "text-red-600 dark:text-red-400", bg: "bg-red-50 dark:bg-red-950/50", border: "border-red-200 dark:border-red-800", icon: Trophy },
+  advanced: { label: "Avanzado", color: "text-red-600 dark:text-red-400", bg: "bg-red-50 dark:bg-red-950/50", border: "border-red-200 dark:border-red-800", icon: Trophy },
 };
 
-const difficultyOrder: DifficultyLevel[] = ["basico", "intermedio", "avanzado"];
+const difficultyOrder: DifficultyLevel[] = ["basico", "basic", "intermedio", "intermediate", "avanzado", "advanced"];
 
 function DifficultyBadge({ level }: { level: DifficultyLevel }) {
   const cfg = difficultyConfig[level];
@@ -212,7 +218,13 @@ function Leccion() {
 
   const currentContent = content[activeLesson] || null;
   const allExercises = currentContent?.exercises || [];
-  const exercises = difficultyFilter === "all" ? allExercises : allExercises.filter((e) => e.difficulty === difficultyFilter);
+  const exercises = difficultyFilter === "all" ? allExercises : allExercises.filter((e) => {
+    const d = e.difficulty;
+    if (difficultyFilter === "basico" || difficultyFilter === "basic") return d === "basico" || d === "basic";
+    if (difficultyFilter === "intermedio" || difficultyFilter === "intermediate") return d === "intermedio" || d === "intermediate";
+    if (difficultyFilter === "avanzado" || difficultyFilter === "advanced") return d === "avanzado" || d === "advanced";
+    return d === difficultyFilter;
+  });
   const illustrations = currentContent?.illustrations || [];
   const theorySections = currentContent?.theory || [];
 
@@ -289,6 +301,7 @@ function Leccion() {
                   <TabsList className="rounded-[16px]">
                     <TabsTrigger value="teoria">Teoría</TabsTrigger>
                     <TabsTrigger value="ejercicios">Ejercicios</TabsTrigger>
+                    <TabsTrigger value="descargas">Descargas</TabsTrigger>
                     <TabsTrigger value="notas">Notas</TabsTrigger>
                   </TabsList>
 
@@ -334,17 +347,16 @@ function Leccion() {
                           >
                             Todos ({allExercises.length})
                           </button>
-                          {difficultyOrder.map((level) => {
-                            const count = allExercises.filter((e) => e.difficulty === level).length;
-                            const cfg = difficultyConfig[level];
+                          {([["basico", "Básico", "text-emerald-600", "bg-emerald-50 dark:bg-emerald-950/50", "border-emerald-200 dark:border-emerald-800"], ["intermedio", "Intermedio", "text-amber-600", "bg-amber-50 dark:bg-amber-950/50", "border-amber-200 dark:border-amber-800"], ["avanzado", "Avanzado", "text-red-600", "bg-red-50 dark:bg-red-950/50", "border-red-200 dark:border-red-800"]] as const).map(([key, label, color, bg, border]) => {
+                            const count = allExercises.filter((e) => (key === "basico" && (e.difficulty === "basico" || e.difficulty === "basic")) || (key === "intermedio" && (e.difficulty === "intermedio" || e.difficulty === "intermediate")) || (key === "avanzado" && (e.difficulty === "avanzado" || e.difficulty === "advanced"))).length;
                             return (
                               <button
-                                key={level}
+                                key={key}
                                 type="button"
-                                onClick={() => setDifficultyFilter(level)}
-                                className={`rounded-full px-3 py-1 text-xs font-semibold transition-colors ${difficultyFilter === level ? `${cfg.bg} ${cfg.color} border ${cfg.border}` : "bg-muted text-muted-foreground hover:bg-muted/80"}`}
+                                onClick={() => setDifficultyFilter(key)}
+                                className={`rounded-full px-3 py-1 text-xs font-semibold transition-colors ${(difficultyFilter === key || (key === "basico" && difficultyFilter === "basic") || (key === "intermedio" && difficultyFilter === "intermediate") || (key === "avanzado" && difficultyFilter === "advanced")) ? `${bg} ${color} border ${border}` : "bg-muted text-muted-foreground hover:bg-muted/80"}`}
                               >
-                                {cfg.label} ({count})
+                                {label} ({count})
                               </button>
                             );
                           })}
@@ -412,6 +424,60 @@ function Leccion() {
                           </button>
                         )}
                       </>
+                    )}
+                  </TabsContent>
+
+                  <TabsContent value="descargas" className="pt-4 space-y-4">
+                    {currentContent?.studyGuide ? (
+                      <div className="space-y-4">
+                        <div className="rounded-[16px] border border-emerald-200 dark:border-emerald-800 bg-emerald-50 dark:bg-emerald-950/50 p-4">
+                          <div className="flex items-center gap-2 mb-3">
+                            <FileText className="size-5 text-emerald-600" />
+                            <h3 className="text-sm font-bold text-emerald-700 dark:text-emerald-300">Guía de Estudio Avanzada</h3>
+                          </div>
+                          <div className="prose prose-sm dark:prose-invert max-w-none text-sm leading-relaxed space-y-3">
+                            {currentContent.studyGuide.split("\n").map((paragraph, i) => {
+                              if (paragraph.startsWith("## ")) {
+                                return <h4 key={i} className="text-base font-bold text-emerald-800 dark:text-emerald-200 mt-4 mb-2">{paragraph.replace("## ", "")}</h4>;
+                              }
+                              if (paragraph.startsWith("### ")) {
+                                return <h5 key={i} className="text-sm font-bold text-emerald-700 dark:text-emerald-300 mt-3 mb-1">{paragraph.replace("### ", "")}</h5>;
+                              }
+                              if (paragraph.startsWith("- ")) {
+                                return <li key={i} className="text-emerald-700 dark:text-emerald-300 ml-4">{paragraph.slice(2)}</li>;
+                              }
+                              if (paragraph.startsWith("**")) {
+                                return <p key={i} className="font-semibold text-emerald-800 dark:text-emerald-200" dangerouslySetInnerHTML={{ __html: paragraph.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>") }} />;
+                              }
+                              if (paragraph.trim() === "") return <div key={i} className="h-2" />;
+                              return <p key={i} className="text-emerald-700 dark:text-emerald-300" dangerouslySetInnerHTML={{ __html: paragraph.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>") }} />;
+                            })}
+                          </div>
+                        </div>
+                        <button
+                          type="button"
+                          onClick={() => {
+                            const content = currentContent.studyGuide || "";
+                            const blob = new Blob([content], { type: "text/plain;charset=utf-8" });
+                            const url = URL.createObjectURL(blob);
+                            const a = document.createElement("a");
+                            a.href = url;
+                            a.download = `${currentContent.slug}-guia-avanzada.txt`;
+                            a.click();
+                            URL.revokeObjectURL(url);
+                          }}
+                          className="flex min-h-11 w-full items-center justify-center gap-2 rounded-[18px] bg-emerald-600 px-4 text-sm font-semibold text-white hover:bg-emerald-700 transition-colors"
+                        >
+                          <Download className="size-4" />
+                          Descargar Guía de Estudio (.txt)
+                        </button>
+                      </div>
+                    ) : (
+                      <div className="rounded-[16px] bg-muted p-6 text-center text-sm text-muted-foreground">
+                        <Download className="mx-auto mb-2 size-8 text-primary" />
+                        <p className="font-semibold">Guía de estudio no disponible</p>
+                        <p className="mt-1">La guía avanzada para este tema próximamente estará disponible.</p>
+                      </div>
                     )}
                   </TabsContent>
 
