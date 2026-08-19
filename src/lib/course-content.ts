@@ -6320,8 +6320,7 @@ export const courseContent: CourseContent = {
       }
     ]
   }
-,
-,
+  ],
   "cokito-rm": [
   {
     slug: "relaciones-de-parentesco",
@@ -12196,7 +12195,7 @@ export const courseContent: CourseContent = {
       {
         level: "avanzado",
         title: "Aplicaciones avanzadas",
-        lines: "**Combinaciones con restricción superior**: si un tipo puede elegirse 0, 1 o 2 veces, su factor es (1+x+x²).", "Para distribuir n objetos idénticos en k cajas, cada una con capacidad ≤ m: G(x) = (1+x+...+xᵐ)^k.", "**Serie formal de potencias**: no se evalúa x, solo se extraen coeficientes algebraicamente.", "Las funciones generadoras ordinarias (OGF) manejan conteo con restricciones de suma.", "Las funciones generadoras exponenciales (EGF) manejan permutaciones y derangements.", "En exámenes: reconoce el patrón de factor (1+x+x²+...) y reduce a combinación con repetición."]
+        lines: ["**Combinaciones con restricción superior**: si un tipo puede elegirse 0, 1 o 2 veces, su factor es (1+x+x²).", "Para distribuir n objetos idénticos en k cajas, cada una con capacidad ≤ m: G(x) = (1+x+...+xᵐ)^k.", "**Serie formal de potencias**: no se evalúa x, solo se extraen coeficientes algebraicamente.", "Las funciones generadoras ordinarias (OGF) manejan conteo con restricciones de suma.", "Las funciones generadoras exponenciales (EGF) manejan permutaciones y derangements.", "En exámenes: reconoce el patrón de factor (1+x+x²+...) y reduce a combinación con repetición."]
       }
     ],
     illustrations: [
