@@ -37,8 +37,6 @@ const difficultyConfig: Record<DifficultyLevel, { label: string; color: string; 
   advanced: { label: "Avanzado", color: "text-red-600 dark:text-red-400", bg: "bg-red-50 dark:bg-red-950/50", border: "border-red-200 dark:border-red-800", icon: Trophy },
 };
 
-const difficultyOrder: DifficultyLevel[] = ["basico", "basic", "intermedio", "intermediate", "avanzado", "advanced"];
-
 function DifficultyBadge({ level }: { level: DifficultyLevel }) {
   const cfg = difficultyConfig[level];
   const Icon = cfg.icon;
@@ -193,32 +191,65 @@ function Leccion() {
   const [activeIllustration, setActiveIllustration] = useState(0);
   const [openPanel, setOpenPanel] = useState<number | null>(0);
   const [exerciseState, setExerciseState] = useState<Record<number, number | null>>({});
-  const [difficultyFilter, setDifficultyFilter] = useState<DifficultyLevel | "all">("all");
+  const [shuffledExercises, setShuffledExercises] = useState<CourseExercise[]>([]);
+  const [currentExerciseIndex, setCurrentExerciseIndex] = useState(0);
+  const [showScore, setShowScore] = useState(false);
 
   const currentContent = content[activeLesson] || null;
   const allExercises = currentContent?.exercises || [];
-  const exercises = difficultyFilter === "all" ? allExercises : allExercises.filter((e) => {
-    const d = e.difficulty;
-    if (difficultyFilter === "basico" || difficultyFilter === "basic") return d === "basico" || d === "basic";
-    if (difficultyFilter === "intermedio" || difficultyFilter === "intermediate") return d === "intermedio" || d === "intermediate";
-    if (difficultyFilter === "avanzado" || difficultyFilter === "advanced") return d === "avanzado" || d === "advanced";
-    return d === difficultyFilter;
-  });
   const illustrations = currentContent?.illustrations || [];
   const theorySections = currentContent?.theory || [];
 
-  const handleAnswer = (exerciseId: number, optionIndex: number) => {
-    if (exerciseState[exerciseId] !== undefined) return;
-    setExerciseState({ ...exerciseState, [exerciseId]: optionIndex });
+  const shuffleArray = (arr: CourseExercise[]) => {
+    const shuffled = [...arr];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j]!, shuffled[i]!];
+    }
+    return shuffled;
   };
 
-  const resetExercises = () => setExerciseState({});
+  const startExercises = (filter?: DifficultyLevel | "all") => {
+    const f = filter || "all";
+    const pool = f === "all" ? allExercises : allExercises.filter((e) => {
+      const d = e.difficulty;
+      if (f === "basico" || f === "basic") return d === "basico" || d === "basic";
+      if (f === "intermedio" || f === "intermediate") return d === "intermedio" || d === "intermediate";
+      if (f === "avanzado" || f === "advanced") return d === "avanzado" || d === "advanced";
+      return d === f;
+    });
+    setShuffledExercises(shuffleArray(pool));
+    setCurrentExerciseIndex(0);
+    setExerciseState({});
+    setShowScore(false);
+  };
 
-  const correctCount = allExercises.filter((e) => exerciseState[e.id] === e.correctIndex).length;
-  const answeredCount = allExercises.filter((e) => exerciseState[e.id] !== undefined).length;
-  const allDone = answeredCount === allExercises.length && allExercises.length > 0;
+  if (shuffledExercises.length === 0 && allExercises.length > 0 && !showScore) {
+    startExercises();
+  }
 
-  const sortedExercises = [...exercises].sort((a, b) => difficultyOrder.indexOf(a.difficulty) - difficultyOrder.indexOf(b.difficulty));
+  const exercises = shuffledExercises;
+  const currentQ = exercises[currentExerciseIndex] || null;
+  const totalQuestions = exercises.length;
+  const answeredCount = Object.keys(exerciseState).length;
+  const correctCount = exercises.filter((e) => exerciseState[e.id] === e.correctIndex).length;
+  const progressPct = totalQuestions > 0 ? (answeredCount / totalQuestions) * 100 : 0;
+
+  const handleAnswer = (optionIndex: number) => {
+    if (!currentQ || exerciseState[currentQ.id] !== undefined) return;
+    setExerciseState({ ...exerciseState, [currentQ.id]: optionIndex });
+    setTimeout(() => {
+      if (currentExerciseIndex < totalQuestions - 1) {
+        setCurrentExerciseIndex(currentExerciseIndex + 1);
+      } else {
+        setShowScore(true);
+      }
+    }, 800);
+  };
+
+  const resetExercises = (filter?: DifficultyLevel | "all") => {
+    startExercises(filter);
+  };
 
   return (
     <div className="space-y-6">
@@ -315,102 +346,137 @@ function Leccion() {
                         <Sparkles className="mx-auto mb-2 size-8 text-primary" />
                         Próximamente habrá ejercicios para este tema.
                       </div>
+                    ) : showScore ? (
+                      <div className="rounded-[16px] border border-primary/20 bg-gradient-to-b from-primary/5 to-background p-6 space-y-6 text-center">
+                        <div className="size-16 mx-auto rounded-full bg-primary/10 flex items-center justify-center">
+                          <Trophy className="size-8 text-primary" />
+                        </div>
+                        <div>
+                          <h3 className="text-2xl font-bold">¡Completado!</h3>
+                          <p className="text-muted-foreground mt-1">Has terminado los ejercicios de este tema</p>
+                        </div>
+                        <div className="flex justify-center gap-8">
+                          <div>
+                            <p className="text-3xl font-bold text-green-600">{correctCount}</p>
+                            <p className="text-xs text-muted-foreground">Correctas</p>
+                          </div>
+                          <div>
+                            <p className="text-3xl font-bold text-red-500">{totalQuestions - correctCount}</p>
+                            <p className="text-xs text-muted-foreground">Incorrectas</p>
+                          </div>
+                          <div>
+                            <p className="text-3xl font-bold text-primary">{Math.round((correctCount / totalQuestions) * 100)}%</p>
+                            <p className="text-xs text-muted-foreground">Score</p>
+                          </div>
+                        </div>
+                        <div className="flex flex-wrap gap-2 justify-center">
+                          {(["basico", "intermedio", "avanzado"] as const).map((level) => {
+                            const levelExercises = exercises.filter((e) => e.difficulty === level || (level === "basico" && e.difficulty === "basic") || (level === "intermedio" && e.difficulty === "intermediate") || (level === "avanzado" && e.difficulty === "advanced"));
+                            const levelCorrect = levelExercises.filter((e) => exerciseState[e.id] === e.correctIndex).length;
+                            if (levelExercises.length === 0) return null;
+                            const labels: Record<string, string> = { basico: "Básico", intermedio: "Intermedio", avanzado: "Avanzado" };
+                            return (
+                              <div key={level} className="rounded-xl border border-border px-4 py-2 text-sm">
+                                <span className="font-semibold">{labels[level]}:</span> {levelCorrect}/{levelExercises.length}
+                              </div>
+                            );
+                          })}
+                        </div>
+                        <button
+                          type="button"
+                          onClick={() => resetExercises()}
+                          className="press flex min-h-11 mx-auto w-full max-w-xs items-center justify-center gap-2 rounded-[18px] bg-primary px-6 text-sm font-semibold text-primary-foreground hover:bg-primary/90"
+                        >
+                          <Sparkles className="size-4" /> Volver a intentar
+                        </button>
+                      </div>
                     ) : (
                       <>
-                        <div className="flex items-center justify-between text-sm">
-                          <span className="text-muted-foreground">
-                            {answeredCount}/{allExercises.length} respondidas
-                          </span>
-                          {allDone && (
-                            <span className={correctCount === allExercises.length ? "font-semibold text-green-600" : "text-muted-foreground"}>
-                              {correctCount}/{allExercises.length} correctas
+                        <div className="space-y-2">
+                          <div className="flex items-center justify-between text-sm">
+                            <span className="text-muted-foreground">
+                              Pregunta {currentExerciseIndex + 1} de {totalQuestions}
                             </span>
-                          )}
+                            {answeredCount > 0 && (
+                              <span className={correctCount === answeredCount ? "font-semibold text-green-600" : "text-muted-foreground"}>
+                                {correctCount}/{answeredCount} correctas
+                              </span>
+                            )}
+                          </div>
+                          <div className="h-2 overflow-hidden rounded-full bg-muted">
+                            <div
+                              className="h-full rounded-full bg-primary transition-all duration-500"
+                              style={{ width: `${progressPct}%` }}
+                            />
+                          </div>
                         </div>
 
                         <div className="flex flex-wrap gap-2">
-                          <button
-                            type="button"
-                            onClick={() => setDifficultyFilter("all")}
-                            className={`rounded-full px-3 py-1 text-xs font-semibold transition-colors ${difficultyFilter === "all" ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground hover:bg-muted/80"}`}
-                          >
-                            Todos ({allExercises.length})
-                          </button>
-                          {([["basico", "Básico", "text-emerald-600", "bg-emerald-50 dark:bg-emerald-950/50", "border-emerald-200 dark:border-emerald-800"], ["intermedio", "Intermedio", "text-amber-600", "bg-amber-50 dark:bg-amber-950/50", "border-amber-200 dark:border-amber-800"], ["avanzado", "Avanzado", "text-red-600", "bg-red-50 dark:bg-red-950/50", "border-red-200 dark:border-red-800"]] as const).map(([key, label, color, bg, border]) => {
-                            const count = allExercises.filter((e) => (key === "basico" && (e.difficulty === "basico" || e.difficulty === "basic")) || (key === "intermedio" && (e.difficulty === "intermedio" || e.difficulty === "intermediate")) || (key === "avanzado" && (e.difficulty === "avanzado" || e.difficulty === "advanced"))).length;
+                          {(["basico", "intermedio", "avanzado"] as const).map((level) => {
+                            const labels: Record<string, string> = { basico: "Básico", intermedio: "Intermedio", avanzado: "Avanzado" };
+                            const colors: Record<string, string> = { basico: "bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-300 border-emerald-200 dark:border-emerald-800", intermedio: "bg-amber-50 dark:bg-amber-950/50 text-amber-700 dark:text-amber-300 border-amber-200 dark:border-amber-800", avanzado: "bg-red-50 dark:bg-red-950/50 text-red-700 dark:text-red-300 border-red-200 dark:border-red-800" };
+                            const d = level === "basico" ? "basic" : level === "intermedio" ? "intermediate" : "advanced";
                             return (
                               <button
-                                key={key}
+                                key={level}
                                 type="button"
-                                onClick={() => setDifficultyFilter(key)}
-                                className={`rounded-full px-3 py-1 text-xs font-semibold transition-colors ${(difficultyFilter === key || (key === "basico" && difficultyFilter === "basic") || (key === "intermedio" && difficultyFilter === "intermediate") || (key === "avanzado" && difficultyFilter === "advanced")) ? `${bg} ${color} border ${border}` : "bg-muted text-muted-foreground hover:bg-muted/80"}`}
+                                onClick={() => resetExercises(level)}
+                                className={`rounded-full px-3 py-1 text-xs font-semibold border transition-colors ${colors[level]}`}
                               >
-                                {label} ({count})
+                                {labels[level]} (mezclar)
                               </button>
                             );
                           })}
                         </div>
 
-                        {sortedExercises.map((ex) => {
-                          const selected = exerciseState[ex.id];
-                          const answered = selected !== undefined;
-                          const isCorrect = answered && selected === ex.correctIndex;
-                          return (
-                            <div key={ex.id} className="rounded-[16px] border border-border p-4 space-y-3">
-                              <div className="flex items-start justify-between gap-2">
-                                <p className="font-medium">{ex.question}</p>
-                                <DifficultyBadge level={ex.difficulty} />
-                              </div>
-                              <div className="space-y-2">
-                                {ex.options.map((opt, oi) => {
-                                  const isSelected = selected === oi;
-                                  const isCorrectOpt = oi === ex.correctIndex;
-                                  let borderClass = "border-border";
-                                  let bgClass = "";
-                                  if (answered) {
-                                    if (isCorrectOpt) {
-                                      borderClass = "border-green-500";
-                                      bgClass = "bg-green-50 dark:bg-green-950/50";
-                                    } else if (isSelected && !isCorrectOpt) {
-                                      borderClass = "border-red-400";
-                                      bgClass = "bg-red-50 dark:bg-red-950/50";
-                                    }
-                                  }
-                                  return (
-                                    <button
-                                      key={oi}
-                                      type="button"
-                                      onClick={() => handleAnswer(ex.id, oi)}
-                                      disabled={answered}
-                                      className={`w-full rounded-xl border p-3 text-left text-sm transition-colors ${borderClass} ${bgClass} ${answered ? "cursor-default" : "hover:bg-muted cursor-pointer"}`}
-                                    >
-                                      <span className="mr-2 font-semibold text-muted-foreground">
-                                        {String.fromCharCode(65 + oi)}.
-                                      </span>
-                                      {opt}
-                                    </button>
-                                  );
-                                })}
-                              </div>
-                              {answered && (
-                                <div className={`rounded-xl p-3 text-xs ${isCorrect ? "bg-green-50 dark:bg-green-950/50" : "bg-red-50 dark:bg-red-950/50"}`}>
-                                  <p className={`font-semibold ${isCorrect ? "text-green-700 dark:text-green-300" : "text-red-600 dark:text-red-400"}`}>
-                                    {isCorrect ? "Correcto" : "Incorrecto"}
-                                  </p>
-                                  <p className="mt-1 text-muted-foreground">{ex.explanation}</p>
-                                </div>
-                              )}
+                        {currentQ && (
+                          <div className="rounded-[16px] border border-border p-4 space-y-3">
+                            <div className="flex items-start justify-between gap-2">
+                              <p className="font-medium">{currentQ.question}</p>
+                              <DifficultyBadge level={currentQ.difficulty} />
                             </div>
-                          );
-                        })}
-                        {allDone && (
-                          <button
-                            type="button"
-                            onClick={resetExercises}
-                            className="press flex min-h-11 w-full items-center justify-center gap-2 rounded-[18px] border border-border text-sm font-semibold hover:bg-muted"
-                          >
-                            Repetir ejercicios
-                          </button>
+                            <div className="space-y-2">
+                              {currentQ.options.map((opt, oi) => {
+                                const selected = exerciseState[currentQ.id];
+                                const answered = selected !== undefined;
+                                const isSelected = answered && selected === oi;
+                                const isCorrectOpt = oi === currentQ.correctIndex;
+                                let borderClass = "border-border";
+                                let bgClass = "";
+                                if (answered) {
+                                  if (isCorrectOpt) {
+                                    borderClass = "border-green-500";
+                                    bgClass = "bg-green-50 dark:bg-green-950/50";
+                                  } else if (isSelected && !isCorrectOpt) {
+                                    borderClass = "border-red-400";
+                                    bgClass = "bg-red-50 dark:bg-red-950/50";
+                                  }
+                                }
+                                return (
+                                  <button
+                                    key={oi}
+                                    type="button"
+                                    onClick={() => handleAnswer(oi)}
+                                    disabled={answered}
+                                    className={`w-full rounded-xl border p-3 text-left text-sm transition-colors ${borderClass} ${bgClass} ${answered ? "cursor-default" : "hover:bg-muted cursor-pointer"}`}
+                                  >
+                                    <span className="mr-2 font-semibold text-muted-foreground">
+                                      {String.fromCharCode(65 + oi)}.
+                                    </span>
+                                    {opt}
+                                  </button>
+                                );
+                              })}
+                            </div>
+                            {answered && (
+                              <div className={`rounded-xl p-3 text-xs ${(exerciseState[currentQ.id] === currentQ.correctIndex) ? "bg-green-50 dark:bg-green-950/50" : "bg-red-50 dark:bg-red-950/50"}`}>
+                                <p className={`font-semibold ${(exerciseState[currentQ.id] === currentQ.correctIndex) ? "text-green-700 dark:text-green-300" : "text-red-600 dark:text-red-400"}`}>
+                                  {(exerciseState[currentQ.id] === currentQ.correctIndex) ? "Correcto" : "Incorrecto"}
+                                </p>
+                                <p className="mt-1 text-muted-foreground">{currentQ.explanation}</p>
+                              </div>
+                            )}
+                          </div>
                         )}
                       </>
                     )}
@@ -487,7 +553,7 @@ function Leccion() {
               <div className="flex items-center justify-between">
                 <button
                   type="button"
-                  onClick={() => { setActiveLesson(Math.max(0, activeLesson - 1)); resetExercises(); setActiveIllustration(0); setOpenPanel(0); setDifficultyFilter("all"); }}
+                  onClick={() => { setActiveLesson(Math.max(0, activeLesson - 1)); resetExercises(); setActiveIllustration(0); setOpenPanel(0);; }}
                   disabled={activeLesson === 0}
                   className="press flex min-h-10 items-center gap-1 rounded-[18px] border border-border px-4 text-sm font-semibold disabled:opacity-40"
                 >
@@ -495,7 +561,7 @@ function Leccion() {
                 </button>
                 <button
                   type="button"
-                  onClick={() => { setActiveLesson(Math.min(courseSpecificLessons.length - 1, activeLesson + 1)); resetExercises(); setActiveIllustration(0); setOpenPanel(0); setDifficultyFilter("all"); }}
+                  onClick={() => { setActiveLesson(Math.min(courseSpecificLessons.length - 1, activeLesson + 1)); resetExercises(); setActiveIllustration(0); setOpenPanel(0);; }}
                   disabled={activeLesson === courseSpecificLessons.length - 1}
                   className="press flex min-h-10 items-center gap-1 rounded-[18px] bg-primary px-4 text-sm font-semibold text-primary-foreground hover:bg-primary/90 disabled:opacity-40"
                 >
@@ -541,7 +607,7 @@ function Leccion() {
                 <li key={l.title}>
                   <button
                     type="button"
-                    onClick={() => { setActiveLesson(i); resetExercises(); setActiveIllustration(0); setOpenPanel(0); setDifficultyFilter("all"); }}
+                    onClick={() => { setActiveLesson(i); resetExercises(); setActiveIllustration(0); setOpenPanel(0);; }}
                     className={`flex w-full items-center gap-3 p-4 text-left transition-colors hover:bg-muted ${i === activeLesson ? "bg-primary/5" : ""}`}
                   >
                     <IconTile
