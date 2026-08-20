@@ -1,5 +1,5 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { useState } from "react";
+import React, { useState } from "react";
 import {
   ArrowLeft,
   CheckCircle2,
@@ -83,8 +83,39 @@ type IllustrationPanelProps = {
 };
 
 function IllustrationPanel({ svg, index, summary, isOpen, onToggle }: IllustrationPanelProps) {
+  const containerRef = React.useRef<HTMLDivElement>(null);
+  const innerRef = React.useRef<HTMLDivElement>(null);
+
+  React.useEffect(() => {
+    if (!isOpen || !containerRef.current) return;
+    const el = containerRef.current;
+
+    function handleMove(e: MouseEvent) {
+      if (!innerRef.current || !el) return;
+      const rect = el.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      innerRef.current.style.transform = `rotateY(${x * 12}deg) rotateX(${-y * 8}deg) scale(1.02)`;
+    }
+
+    function handleLeave() {
+      if (!innerRef.current) return;
+      innerRef.current.style.transform = "rotateY(0deg) rotateX(0deg) scale(1)";
+    }
+
+    el.addEventListener("mousemove", handleMove);
+    el.addEventListener("mouseleave", handleLeave);
+    return () => {
+      el.removeEventListener("mousemove", handleMove);
+      el.removeEventListener("mouseleave", handleLeave);
+    };
+  }, [isOpen]);
+
   return (
-    <div className={`rounded-[16px] border overflow-hidden transition-all duration-300 ${isOpen ? "border-primary shadow-lg" : "border-border hover:border-primary/50"}`}>
+    <div
+      ref={containerRef}
+      className={`rounded-[16px] border overflow-hidden transition-all duration-300 ${isOpen ? "border-primary shadow-lg shadow-primary/10" : "border-border hover:border-primary/50"}`}
+    >
       <button
         type="button"
         onClick={onToggle}
@@ -102,18 +133,27 @@ function IllustrationPanel({ svg, index, summary, isOpen, onToggle }: Illustrati
       </button>
 
       {isOpen && (
-        <div className="border-t border-border bg-gradient-to-b from-card to-background">
+        <div className="border-t border-border bg-gradient-to-b from-card to-background animate-in fade-in slide-in-from-top-2 duration-500">
           <div className="p-4">
             <div
-              className="flex aspect-video items-center justify-center rounded-xl bg-gradient-to-br from-primary-deep/90 to-primary/90 p-4 [&>svg]:w-full [&>svg]:h-full [&>svg]:max-w-full [&>svg]:max-h-full"
+              className="relative flex aspect-video items-center justify-center rounded-xl bg-gradient-to-br from-primary-deep/90 to-primary/90 p-4 overflow-hidden"
               style={{ perspective: "1200px" }}
             >
               <div
-                className="w-full h-full flex items-center justify-center"
+                className="absolute inset-0 opacity-10"
                 style={{
-                  transform: "rotateX(2deg) rotateY(-1deg)",
+                  background: "linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent)",
+                  backgroundSize: "200% 100%",
+                  animation: "shimmer 3s ease-in-out infinite",
+                }}
+              />
+              <div
+                ref={innerRef}
+                className="relative z-10 w-full h-full flex items-center justify-center [&>svg]:w-full [&>svg]:h-full [&>svg]:max-w-full [&>svg]:max-h-full"
+                style={{
                   transformStyle: "preserve-3d",
-                  transition: "transform 0.4s ease"
+                  transition: "transform 0.15s ease-out",
+                  animation: "float 4s ease-in-out infinite",
                 }}
                 dangerouslySetInnerHTML={{ __html: svg }}
               />
@@ -182,6 +222,18 @@ function Leccion() {
 
   return (
     <div className="space-y-6">
+      <style>{`
+        @keyframes float {
+          0%, 100% { transform: translateY(0px) rotateX(0deg) rotateY(0deg); }
+          25% { transform: translateY(-4px) rotateX(1deg) rotateY(0.5deg); }
+          50% { transform: translateY(-2px) rotateX(-0.5deg) rotateY(-0.5deg); }
+          75% { transform: translateY(-6px) rotateX(0.5deg) rotateY(0.3deg); }
+        }
+        @keyframes shimmer {
+          0% { background-position: -200% 0; }
+          100% { background-position: 200% 0; }
+        }
+      `}</style>
       <Link
         to="/cursos"
         className="press inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-muted-foreground hover:text-foreground"
