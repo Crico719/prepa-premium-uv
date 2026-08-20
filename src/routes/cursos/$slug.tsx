@@ -199,6 +199,16 @@ function Leccion() {
   const allExercises = currentContent?.exercises || [];
   const illustrations = currentContent?.illustrations || [];
   const theorySections = currentContent?.theory || [];
+  const QUESTIONS_PER_SESSION = 10;
+
+  const pickRandom = (arr: CourseExercise[], count: number) => {
+    const shuffled = [...arr];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j]!, shuffled[i]!];
+    }
+    return shuffled.slice(0, Math.min(count, shuffled.length));
+  };
 
   const startExercises = (filter?: DifficultyLevel | "all") => {
     const f = filter || "all";
@@ -209,7 +219,8 @@ function Leccion() {
       if (f === "avanzado" || f === "advanced") return d === "avanzado" || d === "advanced";
       return d === f;
     });
-    setExerciseQueue([...pool]);
+    const selected = pickRandom(pool, QUESTIONS_PER_SESSION);
+    setExerciseQueue([...selected]);
     setCurrentExerciseIndex(0);
     setExerciseState({});
     setShowScore(false);
@@ -221,7 +232,7 @@ function Leccion() {
 
   const queue = exerciseQueue;
   const currentQ = queue[currentExerciseIndex] || null;
-  const totalOriginal = allExercises.length;
+  const totalOriginal = Math.min(QUESTIONS_PER_SESSION, allExercises.length);
   const totalQueue = queue.length;
   const answeredCount = Object.keys(exerciseState).length;
   const correctCount = queue.filter((e) => exerciseState[e.id] === e.correctIndex).length;
@@ -239,8 +250,8 @@ function Leccion() {
         newQueue.push(currentQ);
         setExerciseQueue(newQueue);
       }
+      const retryCount = queue.length - totalOriginal;
       if (currentExerciseIndex >= totalOriginal - 1 && isCorrect) {
-        const retryCount = queue.length - totalOriginal;
         const allRetryAnswered = queue.slice(totalOriginal).every((e) => newExerciseState[e.id] !== undefined);
         if (retryCount === 0 || allRetryAnswered) {
           setShowScore(true);
@@ -357,7 +368,12 @@ function Leccion() {
                         </div>
                         <div>
                           <h3 className="text-2xl font-bold">¡Completado!</h3>
-                          <p className="text-muted-foreground mt-1">Has terminado los ejercicios de este tema</p>
+                          <p className="text-muted-foreground mt-1">
+                            Respondiste {totalOriginal} preguntas de este tema
+                            {allExercises.length > totalOriginal && (
+                              <span className="block text-xs mt-1">Hay {allExercises.length} preguntas en total — la próxima vez serán diferentes</span>
+                            )}
+                          </p>
                         </div>
                         <div className="flex justify-center gap-8">
                           <div>
