@@ -191,7 +191,7 @@ function Leccion() {
   const [activeIllustration, setActiveIllustration] = useState(0);
   const [openPanel, setOpenPanel] = useState<number | null>(0);
   const [exerciseState, setExerciseState] = useState<Record<number, number | null>>({});
-  const [shuffledExercises, setShuffledExercises] = useState<CourseExercise[]>([]);
+  const [exerciseQueue, setExerciseQueue] = useState<CourseExercise[]>([]);
   const [currentExerciseIndex, setCurrentExerciseIndex] = useState(0);
   const [showScore, setShowScore] = useState(false);
 
@@ -199,15 +199,6 @@ function Leccion() {
   const allExercises = currentContent?.exercises || [];
   const illustrations = currentContent?.illustrations || [];
   const theorySections = currentContent?.theory || [];
-
-  const shuffleArray = (arr: CourseExercise[]) => {
-    const shuffled = [...arr];
-    for (let i = shuffled.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [shuffled[i], shuffled[j]] = [shuffled[j]!, shuffled[i]!];
-    }
-    return shuffled;
-  };
 
   const startExercises = (filter?: DifficultyLevel | "all") => {
     const f = filter || "all";
@@ -218,32 +209,45 @@ function Leccion() {
       if (f === "avanzado" || f === "advanced") return d === "avanzado" || d === "advanced";
       return d === f;
     });
-    setShuffledExercises(shuffleArray(pool));
+    setExerciseQueue([...pool]);
     setCurrentExerciseIndex(0);
     setExerciseState({});
     setShowScore(false);
   };
 
-  if (shuffledExercises.length === 0 && allExercises.length > 0 && !showScore) {
+  if (exerciseQueue.length === 0 && allExercises.length > 0 && !showScore) {
     startExercises();
   }
 
-  const exercises = shuffledExercises;
-  const currentQ = exercises[currentExerciseIndex] || null;
-  const totalQuestions = exercises.length;
+  const queue = exerciseQueue;
+  const currentQ = queue[currentExerciseIndex] || null;
+  const totalOriginal = allExercises.length;
+  const totalQueue = queue.length;
   const answeredCount = Object.keys(exerciseState).length;
-  const correctCount = exercises.filter((e) => exerciseState[e.id] === e.correctIndex).length;
-  const progressPct = totalQuestions > 0 ? (answeredCount / totalQuestions) * 100 : 0;
+  const correctCount = queue.filter((e) => exerciseState[e.id] === e.correctIndex).length;
+  const progressPct = totalOriginal > 0 ? (Math.min(currentExerciseIndex + 1, totalOriginal) / totalOriginal) * 100 : 0;
 
   const handleAnswer = (optionIndex: number) => {
     if (!currentQ || exerciseState[currentQ.id] !== undefined) return;
-    setExerciseState({ ...exerciseState, [currentQ.id]: optionIndex });
+    const isCorrect = optionIndex === currentQ.correctIndex;
+    const newExerciseState = { ...exerciseState, [currentQ.id]: optionIndex };
+    setExerciseState(newExerciseState);
+
     setTimeout(() => {
-      if (currentExerciseIndex < totalQuestions - 1) {
-        setCurrentExerciseIndex(currentExerciseIndex + 1);
-      } else {
-        setShowScore(true);
+      if (!isCorrect) {
+        const newQueue = [...queue];
+        newQueue.push(currentQ);
+        setExerciseQueue(newQueue);
       }
+      if (currentExerciseIndex >= totalOriginal - 1 && isCorrect) {
+        const retryCount = queue.length - totalOriginal;
+        const allRetryAnswered = queue.slice(totalOriginal).every((e) => newExerciseState[e.id] !== undefined);
+        if (retryCount === 0 || allRetryAnswered) {
+          setShowScore(true);
+          return;
+        }
+      }
+      setCurrentExerciseIndex(currentExerciseIndex + 1);
     }, 800);
   };
 
@@ -361,17 +365,17 @@ function Leccion() {
                             <p className="text-xs text-muted-foreground">Correctas</p>
                           </div>
                           <div>
-                            <p className="text-3xl font-bold text-red-500">{totalQuestions - correctCount}</p>
+                            <p className="text-3xl font-bold text-red-500">{totalQueue - correctCount}</p>
                             <p className="text-xs text-muted-foreground">Incorrectas</p>
                           </div>
                           <div>
-                            <p className="text-3xl font-bold text-primary">{Math.round((correctCount / totalQuestions) * 100)}%</p>
+                            <p className="text-3xl font-bold text-primary">{Math.round((correctCount / totalOriginal) * 100)}%</p>
                             <p className="text-xs text-muted-foreground">Score</p>
                           </div>
                         </div>
                         <div className="flex flex-wrap gap-2 justify-center">
                           {(["basico", "intermedio", "avanzado"] as const).map((level) => {
-                            const levelExercises = exercises.filter((e) => e.difficulty === level || (level === "basico" && e.difficulty === "basic") || (level === "intermedio" && e.difficulty === "intermediate") || (level === "avanzado" && e.difficulty === "advanced"));
+                            const levelExercises = allExercises.filter((e) => e.difficulty === level || (level === "basico" && e.difficulty === "basic") || (level === "intermedio" && e.difficulty === "intermediate") || (level === "avanzado" && e.difficulty === "advanced"));
                             const levelCorrect = levelExercises.filter((e) => exerciseState[e.id] === e.correctIndex).length;
                             if (levelExercises.length === 0) return null;
                             const labels: Record<string, string> = { basico: "Básico", intermedio: "Intermedio", avanzado: "Avanzado" };
@@ -395,7 +399,10 @@ function Leccion() {
                         <div className="space-y-2">
                           <div className="flex items-center justify-between text-sm">
                             <span className="text-muted-foreground">
-                              Pregunta {currentExerciseIndex + 1} de {totalQuestions}
+                              Pregunta {currentExerciseIndex + 1} de {totalOriginal}
+                              {totalQueue > totalOriginal && (
+                                <span className="text-amber-600 ml-1">(+{totalQueue - totalOriginal} repeticiones)</span>
+                              )}
                             </span>
                             {answeredCount > 0 && (
                               <span className={correctCount === answeredCount ? "font-semibold text-green-600" : "text-muted-foreground"}>
@@ -423,7 +430,7 @@ function Leccion() {
                                 onClick={() => resetExercises(level)}
                                 className={`rounded-full px-3 py-1 text-xs font-semibold border transition-colors ${colors[level]}`}
                               >
-                                {labels[level]} (mezclar)
+                                {labels[level]}
                               </button>
                             );
                           })}
