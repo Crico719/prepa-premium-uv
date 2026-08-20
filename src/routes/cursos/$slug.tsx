@@ -199,7 +199,7 @@ function Leccion() {
   const allExercises = currentContent?.exercises || [];
   const illustrations = currentContent?.illustrations || [];
   const theorySections = currentContent?.theory || [];
-  const QUESTIONS_PER_SESSION = 15;
+  const QUESTIONS_PER_SESSION = 21;
 
   const pickRandom = (arr: CourseExercise[], count: number) => {
     const shuffled = [...arr];
