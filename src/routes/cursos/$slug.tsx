@@ -199,7 +199,7 @@ function Leccion() {
   const allExercises = currentContent?.exercises || [];
   const illustrations = currentContent?.illustrations || [];
   const theorySections = currentContent?.theory || [];
-  const QUESTIONS_PER_SESSION = 10;
+  const QUESTIONS_PER_SESSION = 15;
 
   const pickRandom = (arr: CourseExercise[], count: number) => {
     const shuffled = [...arr];
@@ -250,15 +250,20 @@ function Leccion() {
         newQueue.push(currentQ);
         setExerciseQueue(newQueue);
       }
-      const retryCount = queue.length - totalOriginal;
-      if (currentExerciseIndex >= totalOriginal - 1 && isCorrect) {
-        const allRetryAnswered = queue.slice(totalOriginal).every((e) => newExerciseState[e.id] !== undefined);
-        if (retryCount === 0 || allRetryAnswered) {
+      setCurrentExerciseIndex(currentExerciseIndex + 1);
+
+      const newQueueLen = isCorrect ? queue.length : queue.length + 1;
+      const retryCount = newQueueLen - totalOriginal;
+      if (currentExerciseIndex >= totalOriginal - 1 && retryCount > 0) {
+        const totalAnswered = Object.keys(newExerciseState).length;
+        if (totalAnswered >= newQueueLen) {
           setShowScore(true);
           return;
         }
+      } else if (currentExerciseIndex >= totalOriginal - 1 && isCorrect && retryCount === 0) {
+        setShowScore(true);
+        return;
       }
-      setCurrentExerciseIndex(currentExerciseIndex + 1);
     }, 800);
   };
 
