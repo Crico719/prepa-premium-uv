@@ -21,6 +21,35 @@ import { cienciaBatch5 } from "./data/ciencia-batch--5"
 import { cienciaBatch6 } from "./data/ciencia-batch--6"
 import { cienciaBatch7 } from "./data/ciencia-batch--7"
 
+import { clBatch1 } from './data/cl-batch-1';
+import { clBatch2 } from './data/cl-batch-2';
+import { clBatch3 } from './data/cl-batch-3';
+import { clBatch4 } from './data/cl-batch-4';
+import { clBatch5 } from './data/cl-batch-5';
+import { clBatch6 } from './data/cl-batch-6';
+import { clBatch7 } from './data/cl-batch-7';
+import { clBatch8 } from './data/cl-batch-8';
+import { dcBatch1 } from './data/dc-batch-1';
+import { dcBatch2 } from './data/dc-batch-2';
+import { dcBatch3 } from './data/dc-batch-3';
+import { dcBatch4 } from './data/dc-batch-4';
+import { dcBatch5 } from './data/dc-batch-5';
+import { dcBatch6 } from './data/dc-batch-6';
+import { dcBatch7 } from './data/dc-batch-7';
+import { ecBatch1 } from './data/ec-batch-1';
+import { ecBatch2 } from './data/ec-batch-2';
+import { ecBatch3 } from './data/ec-batch-3';
+import { ecBatch4 } from './data/ec-batch-4';
+import { ecBatch5 } from './data/ec-batch-5';
+import { ecBatch6 } from './data/ec-batch-6';
+import { ecBatch7 } from './data/ec-batch-7';
+import { enBatch1 } from './data/en-batch-1';
+import { enBatch2 } from './data/en-batch-2';
+import { enBatch3 } from './data/en-batch-3';
+import { enBatch4 } from './data/en-batch-4';
+import { enBatch5 } from './data/en-batch-5';
+import { enBatch6 } from './data/en-batch-6';
+import { enBatch7 } from './data/en-batch-7';
 
 
 ﻿export type DifficultyLevel = "basico" | "intermedio" | "avanzado" | "basic" | "intermediate" | "advanced";
@@ -34502,3 +34531,8 @@ courseContent["aritmetica"] = [...aritBatch1, ...aritBatch2, ...aritBatch3, ...a
 courseContent["algebra"] = [...algebraBatch1, ...algebraBatch2, ...algebraBatch3, ...algebraBatch4, ...algebraBatch5, ...algebraBatch6, ...algebraBatch7];
 
 courseContent["ciencia"] = [...cienciaBatch1, ...cienciaBatch2, ...cienciaBatch3, ...cienciaBatch4, ...cienciaBatch5, ...cienciaBatch6, ...cienciaBatch7];
+
+courseContent['comprension-lectora'] = [...clBatch1, clBatch2, clBatch3, clBatch4, clBatch5, clBatch6, clBatch7, clBatch8];
+courseContent['derecho-ciudadania'] = [...dcBatch1, dcBatch2, dcBatch3, dcBatch4, dcBatch5, dcBatch6, dcBatch7];
+courseContent['economia-basica'] = [...ecBatch1, ecBatch2, ecBatch3, ecBatch4, ecBatch5, ecBatch6, ecBatch7];
+courseContent['ingles'] = [...enBatch1, enBatch2, enBatch3, enBatch4, enBatch5, enBatch6, enBatch7];
