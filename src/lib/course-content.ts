@@ -1,3 +1,28 @@
+
+import { aritBatch1 } from "./data/arit-batch-1";
+import { aritBatch2 } from "./data/arit-batch-2";
+import { aritBatch3 } from "./data/arit-batch-3";
+import { aritBatch4 } from "./data/arit-batch-4";
+import { aritBatch5 } from "./data/arit-batch-5";
+import { aritBatch6 } from "./data/arit-batch-6";
+import { aritBatch7 } from "./data/arit-batch-7";
+import { algebraBatch1 } from "./data/algebra-batch--1"
+import { algebraBatch2 } from "./data/algebra-batch--2"
+import { algebraBatch3 } from "./data/algebra-batch--3"
+import { algebraBatch4 } from "./data/algebra-batch--4"
+import { algebraBatch5 } from "./data/algebra-batch--5"
+import { algebraBatch6 } from "./data/algebra-batch--6"
+import { algebraBatch7 } from "./data/algebra-batch--7"
+import { cienciaBatch1 } from "./data/ciencia-batch--1"
+import { cienciaBatch2 } from "./data/ciencia-batch--2"
+import { cienciaBatch3 } from "./data/ciencia-batch--3"
+import { cienciaBatch4 } from "./data/ciencia-batch--4"
+import { cienciaBatch5 } from "./data/ciencia-batch--5"
+import { cienciaBatch6 } from "./data/ciencia-batch--6"
+import { cienciaBatch7 } from "./data/ciencia-batch--7"
+
+
+
 ﻿export type DifficultyLevel = "basico" | "intermedio" | "avanzado" | "basic" | "intermediate" | "advanced";
 
 export type TheorySection = {
@@ -34471,3 +34496,9 @@ El bicentenario abrio un espacio para imaginar el Peru del futuro. La construcci
 ];
 
 courseContent["historia"] = [...historiaModulesPart1, ...historiaModulesPart2, ...historiaModulesPart3, ...historiaModulesPart4];
+
+courseContent["aritmetica"] = [...aritBatch1, ...aritBatch2, ...aritBatch3, ...aritBatch4, ...aritBatch5, ...aritBatch6, ...aritBatch7];
+
+courseContent["algebra"] = [...algebraBatch1, ...algebraBatch2, ...algebraBatch3, ...algebraBatch4, ...algebraBatch5, ...algebraBatch6, ...algebraBatch7];
+
+courseContent["ciencia"] = [...cienciaBatch1, ...cienciaBatch2, ...cienciaBatch3, ...cienciaBatch4, ...cienciaBatch5, ...cienciaBatch6, ...cienciaBatch7];
