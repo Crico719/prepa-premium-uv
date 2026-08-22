@@ -50,25 +50,88 @@ function DifficultyBadge({ level }: { level: DifficultyLevel }) {
 }
 
 function TheorySectionBlock({ section }: { section: TheorySection }) {
+  const [isOpen, setIsOpen] = useState(true);
   const cfg = difficultyConfig[section.level];
   const Icon = cfg.icon;
+
+  const isFormulaLine = (line: string) => {
+    const cleaned = line.replace(/\*\*/g, "");
+    const mathSymbols = /[αβγδεθλμπσφω∞≈≠≤≥±∑∫√∏∠△□⊂⊃∈∀∃∧∨¬→↔↑↓↔ℵℙℝℂ∇∂⊕⊗⊥∥∝]/;
+    const greek = /[αβγδεθλμπσφω]/;
+    if (greek.test(cleaned)) return true;
+    const mathOps = cleaned.match(/[=<>]=?/g) || [];
+    if (mathOps.length >= 1 && /[\+\-×÷√^₀₁₂₃₄₅₆₇₈₉²³]/.test(cleaned)) return true;
+    if (/\d+\s*[°″'′]\b/.test(cleaned) && mathOps.length > 0) return true;
+    if (mathSymbols.test(cleaned) && mathOps.length > 0) return true;
+    return false;
+  };
+
+  const renderFormattedText = (text: string) => {
+    const cleaned = text.startsWith("- ") ? text.slice(2) : text;
+    const parts = cleaned.split(/(\*\*[^*]+\*\*)/g);
+    return parts.map((part, i) => {
+      if (part.startsWith("**") && part.endsWith("**")) {
+        return (
+          <span key={i} className={`font-semibold ${cfg.color}`}>
+            {part.slice(2, -2)}
+          </span>
+        );
+      }
+      return <span key={i}>{part}</span>;
+    });
+  };
+
+  const getLineIcon = (line: string) => {
+    if (line.startsWith("- ")) return <CheckCircle2 className="size-3.5 mt-0.5 shrink-0 text-emerald-500" />;
+    if (isFormulaLine(line)) return <Calculator className="size-3.5 mt-0.5 shrink-0 text-blue-500" />;
+    return null;
+  };
+
   return (
-    <div className={`rounded-[16px] border p-4 space-y-2 ${cfg.border} ${cfg.bg}`}>
-      <div className="flex items-center gap-2">
-        <Icon className={`size-4 ${cfg.color}`} />
-        <h3 className={`text-sm font-bold ${cfg.color}`}>{section.title}</h3>
-      </div>
-      <div className="space-y-1.5">
-        {section.lines.map((line, i) => (
-          <p key={i} className="text-sm">
-            {line.startsWith("- ") ? (
-              <span className="ml-4 block text-muted-foreground">{line.slice(2)}</span>
-            ) : (
-              <span dangerouslySetInnerHTML={{ __html: line.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>") }} />
-            )}
-          </p>
-        ))}
-      </div>
+    <div className={`rounded-[16px] border-l-[3px] ${cfg.border} bg-background overflow-hidden shadow-sm`}>
+      <button
+        type="button"
+        onClick={() => setIsOpen(!isOpen)}
+        className={`flex w-full items-center gap-3 px-4 py-3 text-left transition-colors hover:bg-muted/50`}
+      >
+        <div className={`flex size-8 shrink-0 items-center justify-center rounded-lg ${cfg.bg}`}>
+          <Icon className={`size-4 ${cfg.color}`} />
+        </div>
+        <span className={`flex-1 text-sm font-bold ${cfg.color}`}>{section.title}</span>
+        <span className={`text-xs font-medium px-2 py-0.5 rounded-full ${cfg.bg} ${cfg.color}`}>
+          {section.lines.length} puntos
+        </span>
+        <ChevronDown className={`size-4 shrink-0 text-muted-foreground transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`} />
+      </button>
+
+      {isOpen && (
+        <div className="px-4 pb-4 space-y-1.5 border-t border-border/50">
+          <div className="pt-3 space-y-1.5">
+            {section.lines.map((line, i) => {
+              const isBullet = line.startsWith("- ");
+              const isFormula = isFormulaLine(line) && !isBullet;
+              if (isFormula) {
+                return (
+                  <div key={i} className="flex items-start gap-2 rounded-xl bg-blue-50 dark:bg-blue-950/30 border border-blue-200/50 dark:border-blue-800/30 px-3 py-2">
+                    <Calculator className="size-3.5 mt-0.5 shrink-0 text-blue-500" />
+                    <p className="text-sm font-mono text-blue-700 dark:text-blue-300 leading-relaxed">
+                      {renderFormattedText(line)}
+                    </p>
+                  </div>
+                );
+              }
+              return (
+                <div key={i} className={`flex items-start gap-2 ${isBullet ? "pl-1" : ""}`}>
+                  {getLineIcon(line)}
+                  <p className="text-sm leading-relaxed text-foreground">
+                    {renderFormattedText(line)}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      )}
     </div>
   );
 }
@@ -349,11 +412,13 @@ function Leccion() {
                   </TabsList>
 
                   <TabsContent value="teoria" className="pt-4 text-sm leading-relaxed space-y-4">
-                    <div className="flex items-start gap-3 rounded-[16px] bg-yellow-50 p-4 dark:bg-yellow-950/50">
-                      <Lightbulb className="mt-0.5 size-5 shrink-0 text-yellow-600" />
-                      <div>
-                        <p className="font-semibold text-yellow-700 dark:text-yellow-300">Tip del profesor</p>
-                        <p className="mt-1 text-yellow-600 dark:text-yellow-400">{currentContent.tip}</p>
+                    <div className="flex items-start gap-3 rounded-[16px] border border-yellow-200 dark:border-yellow-800 bg-gradient-to-r from-yellow-50 to-amber-50 p-4 dark:from-yellow-950/50 dark:to-amber-950/50 shadow-sm">
+                      <div className="flex size-9 shrink-0 items-center justify-center rounded-xl bg-yellow-100 dark:bg-yellow-900/50">
+                        <Lightbulb className="size-5 text-yellow-600 dark:text-yellow-400" />
+                      </div>
+                      <div className="flex-1">
+                        <p className="font-bold text-yellow-700 dark:text-yellow-300 text-sm">Tip del profesor</p>
+                        <p className="mt-1.5 text-sm leading-relaxed text-yellow-700/80 dark:text-yellow-400/80">{currentContent.tip}</p>
                       </div>
                     </div>
                     <div className="space-y-4">
