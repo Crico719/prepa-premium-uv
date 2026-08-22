@@ -26,6 +26,7 @@ import {
 import { IconTile, ProgressBar, Surface } from "@/components/kit";
 import { courses, lessons, courseLessons } from "@/lib/data";
 import { courseContent, type DifficultyLevel, type TheorySection, type CourseExercise } from "@/lib/course-content";
+import { extraExercises } from "@/lib/extra-exercises";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const difficultyConfig: Record<DifficultyLevel, { label: string; color: string; bg: string; border: string; icon: typeof BookOpen }> = {
@@ -196,7 +197,9 @@ function Leccion() {
   const [showScore, setShowScore] = useState(false);
 
   const currentContent = content[activeLesson] || null;
-  const allExercises = currentContent?.exercises || [];
+  const baseExercises = currentContent?.exercises || [];
+  const extraPool = currentContent ? (extraExercises[currentContent.slug] || []) : [];
+  const allExercises = [...baseExercises, ...extraPool];
   const illustrations = currentContent?.illustrations || [];
   const theorySections = currentContent?.theory || [];
   const QUESTIONS_PER_SESSION = 21;
