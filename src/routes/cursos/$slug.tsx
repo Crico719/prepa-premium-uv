@@ -333,7 +333,7 @@ function Leccion() {
                         key={`${currentContent?.slug}-ill-${i}`}
                         svg={svg}
                         index={i}
-                        summary={i === 0 ? currentContent?.illustrationSummary : undefined}
+                        {...(i === 0 && currentContent?.illustrationSummary ? { summary: currentContent.illustrationSummary } : {})}
                         isOpen={openPanel === i}
                         onToggle={() => setOpenPanel(openPanel === i ? null : i)}
                       />
@@ -499,7 +499,7 @@ function Leccion() {
                                 );
                               })}
                             </div>
-                            {answered && (
+                            {exerciseState[currentQ.id] !== undefined && (
                               <div className={`rounded-xl p-3 text-xs ${(exerciseState[currentQ.id] === currentQ.correctIndex) ? "bg-green-50 dark:bg-green-950/50" : "bg-red-50 dark:bg-red-950/50"}`}>
                                 <p className={`font-semibold ${(exerciseState[currentQ.id] === currentQ.correctIndex) ? "text-green-700 dark:text-green-300" : "text-red-600 dark:text-red-400"}`}>
                                   {(exerciseState[currentQ.id] === currentQ.correctIndex) ? "Correcto" : "Incorrecto"}
