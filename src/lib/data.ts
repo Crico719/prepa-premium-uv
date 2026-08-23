@@ -1173,38 +1173,185 @@ export const mocks = [
   { name: "Simulacro Ordinario", questions: 60, minutes: 120, level: "Fácil", score: 90 },
 ];
 
-export const universities = [
-  {
-    name: "UNI",
-    full: "Universidad Nacional de Ingeniería",
-    score: 13.5,
-    vacancies: 1200,
-    date: "24 Sep",
-    cost: "S/ 550",
-  },
+export type UniversityArea = {
+  name: string;
+  careers: string[];
+};
+
+export type University = {
+  name: string;
+  full: string;
+  score: number;
+  vacancies: number;
+  date: string;
+  cost: string;
+  url?: string;
+  location?: string;
+  examDate?: string;
+  inscriptionDate?: string;
+  inscriptionCost?: string;
+  examFormat?: string;
+  scoring?: string;
+  areas?: UniversityArea[];
+};
+
+export const universities: University[] = [
   {
     name: "UNMSM",
     full: "Universidad Nacional Mayor de San Marcos",
     score: 12.8,
-    vacancies: 1450,
-    date: "18 Sep",
-    cost: "S/ 480",
+    vacancies: 3500,
+    date: "15 Mar",
+    cost: "S/ 400 - 800",
+    url: "https://admision.unmsm.edu.pe",
+    location: "Lima",
+    examDate: "7, 8, 14 y 15 de marzo 2026",
+    inscriptionDate: "5 ene - 26 feb 2026",
+    inscriptionCost: "Pública S/400 · Privada S/800 · Reglamento S/70",
+    examFormat: "100 preguntas: 10 actitudinales + 20 habilidades (comprensión lectora + lógico-matemática) + 70 conocimientos según área",
+    scoring: "Correcta +20 pts · Incorrecta -1.125 pts · Sin responder 0 pts",
+    areas: [
+      { name: "A – Ciencias de la Salud", careers: ["Medicina Humana (55 vacantes)", "Odontología (25)", "Enfermería (46)", "Obstetricia (44)", "Psicología (48)", "Nutrición (24)", "Farmacia y Bioquímica (29)"] },
+      { name: "B – Ciencias Básicas", careers: ["Biología (15)", "Química (15)", "Física (15)", "Matemática (15)"] },
+      { name: "C – Ingenierías", careers: ["Ingeniería de Sistemas (32)", "Ingeniería Industrial (73)", "Ingeniería Civil (27)", "Ingeniería Electrónica (45)", "Arquitectura (20)", "Ingeniería de Minas (15)"] },
+      { name: "D – Económicas y de la Gestión", careers: ["Administración (103)", "Contabilidad (139)", "Economía (77)", "Marketing (12)", "Criminalística Financiera (40)"] },
+      { name: "E – Humanidades y Ciencias Jurídicas", careers: ["Derecho (135)", "Ciencia Política (40)", "Comunicación Social (18)", "Educación Secundaria (60)", "Sociología (22)"] },
+    ],
+  },
+  {
+    name: "UNI",
+    full: "Universidad Nacional de Ingeniería",
+    score: 13.5,
+    vacancies: 1800,
+    date: "20 Feb",
+    cost: "S/ 410 - 780",
+    url: "https://admision.uni.edu.pe",
+    location: "Lima",
+    examDate: "16, 18 y 20 de febrero 2026",
+    inscriptionDate: "5 - 31 enero 2026",
+    inscriptionCost: "Pública S/410 · Privada S/780 · Prospecto S/90",
+    examFormat: "3 días: 1) Aptitud académica y Humanidades · 2) Matemática · 3) Física y Química",
+    scoring: "Examen presencial, 3 pruebas en 3 días",
+    areas: [
+      { name: "Ingenierías", careers: ["Ingeniería de Sistemas", "Ingeniería Civil", "Ingeniería Mecánica", "Ingeniería Eléctrica", "Ingeniería Electrónica", "Ingeniería Química", "Ingeniería Ambiental", "Ingeniería Industrial"] },
+      { name: "Ciencias", careers: ["Arquitectura", "Física", "Matemática Aplicada"] },
+    ],
   },
   {
     name: "PUCP",
     full: "Pontificia Universidad Católica del Perú",
     score: 14.2,
-    vacancies: 900,
-    date: "02 Oct",
-    cost: "S/ 620",
+    vacancies: 2200,
+    date: "5 Jul",
+    cost: "S/ 400 - 550",
+    url: "https://admision.pucp.edu.pe",
+    location: "Lima",
+    examDate: "5 de julio 2026 (2026-2)",
+    inscriptionDate: "18 may - 24 jun 2026",
+    inscriptionCost: "Pública S/400 · Privada S/550",
+    examFormat: "Evaluación académica: Comprensión lectora (28 preguntas) + Matemática (40-48 preguntas). Notas escolares (20%) + Pruebas (80%)",
+    scoring: "80% pruebas + 20% notas escolares · Ponderación varía por carrera",
+    areas: [
+      { name: "Ciencias", careers: ["Ingeniería de Sistemas", "Ingeniería Civil", "Ingeniería Industrial", "Física", "Matemática Aplicada", "Biología"] },
+      { name: "Letras y Humanidades", careers: ["Derecho", "Letras", "Filosofía", "Historia", "Ciencia Política"] },
+      { name: "Economía", careers: ["Administración", "Economía", "Contabilidad"] },
+      { name: "Educación", careers: ["Educación Inicial", "Educación Primaria", "Educación Secundaria"] },
+    ],
+  },
+  {
+    name: "UTEC",
+    full: "Universidad de Ingeniería y Tecnología",
+    score: 13.0,
+    vacancies: 800,
+    date: "19 Sep",
+    cost: "S/ 610",
+    url: "https://utec.edu.pe/admision",
+    location: "Lima",
+    examDate: "19 de septiembre 2026",
+    inscriptionDate: "Abril - Agosto 2026",
+    inscriptionCost: "S/ 610",
+    examFormat: "Evaluación integral de conocimientos y aptitudes",
+    scoring: "Examen de admisión + rendimiento escolar",
+    areas: [
+      { name: "Ingeniería y Computación", careers: ["Ingeniería de Sistemas", "Ciencia de la Computación", "Ciencia de Datos e IA", "Ingeniería Civil", "Ingeniería Industrial", "Ingeniería Mecatrónica", "Ciberseguridad", "Bioingeniería"] },
+      { name: "Negocios", careers: ["Administración y Negocios Digitales", "Business Analytics"] },
+    ],
   },
   {
     name: "UNSA",
     full: "Universidad Nacional de San Agustín",
     score: 12.1,
-    vacancies: 1100,
-    date: "11 Oct",
-    cost: "S/ 400",
+    vacancies: 1500,
+    date: "Jul",
+    cost: "S/ 350",
+    url: "https://admision.unsa.edu.pe",
+    location: "Arequipa",
+    examDate: "Julio 2026 (I Fase)",
+    inscriptionDate: "Enero - Marzo 2026",
+    inscriptionCost: "S/ 350",
+    examFormat: "Examen de conocimientos según área de postulación",
+    scoring: "Puntaje de corte varía por carrera y año",
+    areas: [
+      { name: "Ingenierías", careers: ["Ingeniería de Sistemas", "Ingeniería Civil", "Ingeniería de Minas", "Ingeniería Química", "Arquitectura"] },
+      { name: "Ciencias de la Salud", careers: ["Medicina Humana", "Enfermería", "Odontología"] },
+      { name: "Ciencias Sociales", careers: ["Derecho", "Economía", "Administración", "Contabilidad"] },
+    ],
+  },
+  {
+    name: "UNCP",
+    full: "Universidad Nacional del Centro del Perú",
+    score: 11.5,
+    vacancies: 900,
+    date: "14 Mar",
+    cost: "S/ 300",
+    url: "https://uncp.edu.pe/admision",
+    location: "Huancayo",
+    examDate: "14 y 15 de marzo 2026",
+    inscriptionDate: "19 ene - 4 mar 2026",
+    inscriptionCost: "S/ 300",
+    examFormat: "Examen ordinario presencial",
+    scoring: "Según cuadro de méritos",
+    areas: [
+      { name: "Ingenierías", careers: ["Ingeniería de Sistemas", "Ingeniería Civil", "Ingeniería Agrícola"] },
+      { name: "Ciencias", careers: ["Medicina Humana", "Enfermería", "Biología"] },
+      { name: "Humanidades", careers: ["Derecho", "Administración", "Contabilidad", "Educación"] },
+    ],
+  },
+  {
+    name: "UNH",
+    full: "Universidad Nacional de Huancavelica",
+    score: 11.0,
+    vacancies: 516,
+    date: "22 Mar",
+    cost: "S/ 250",
+    url: "https://admisionunh.edu.pe",
+    location: "Huancavelica",
+    examDate: "22 de marzo 2026",
+    inscriptionDate: "9 feb - 17 mar 2026",
+    inscriptionCost: "S/ 250",
+    examFormat: "Examen ordinario presencial",
+    scoring: "Según cuadro de méritos",
+    areas: [
+      { name: "20 carreras", careers: ["Ingeniería de Sistemas", "Ingeniería Civil", "Medicina Humana", "Enfermería", "Derecho", "Administración", "Contabilidad"] },
+    ],
+  },
+  {
+    name: "UNCA",
+    full: "Universidad Nacional Ciro Alegría",
+    score: 10.8,
+    vacancies: 600,
+    date: "29 Mar",
+    cost: "S/ 250",
+    url: "https://admision.unca.edu.pe",
+    location: "Huari (Ancash)",
+    examDate: "29 de marzo 2026",
+    inscriptionDate: "Enero - Marzo 2026",
+    inscriptionCost: "S/ 250",
+    examFormat: "Examen ordinario presencial",
+    scoring: "Según cuadro de méritos",
+    areas: [
+      { name: "15+ carreras", careers: ["Ingeniería de Sistemas", "Ingeniería Civil", "Medicina Humana", "Enfermería", "Derecho", "Administración", "Educación"] },
+    ],
   },
 ];
 
