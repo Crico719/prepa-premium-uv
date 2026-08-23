@@ -51,6 +51,29 @@ import { enBatch5 } from './data/en-batch-5';
 import { enBatch6 } from './data/en-batch-6';
 import { enBatch7 } from './data/en-batch-7';
 
+import { fiBatch1 } from './data/fi-batch-1';
+import { fiBatch2 } from './data/fi-batch-2';
+import { fiBatch3 } from './data/fi-batch-3';
+import { fiBatch4 } from './data/fi-batch-4';
+import { fiBatch5 } from './data/fi-batch-5';
+import { fiBatch6 } from './data/fi-batch-6';
+import { fiBatch7 } from './data/fi-batch-7';
+import { quBatch1 } from './data/qu-batch-1';
+import { quBatch2 } from './data/qu-batch-2';
+import { quBatch3 } from './data/qu-batch-3';
+import { quBatch4 } from './data/qu-batch-4';
+import { quBatch5 } from './data/qu-batch-5';
+import { biBatch1 } from './data/bi-batch-1';
+import { biBatch2 } from './data/bi-batch-2';
+import { biBatch3 } from './data/bi-batch-3';
+import { biBatch4 } from './data/bi-batch-4';
+import { biBatch5 } from './data/bi-batch-5';
+import { leBatch1 } from './data/le-batch-1';
+import { leBatch2 } from './data/le-batch-2';
+import { leBatch3 } from './data/le-batch-3';
+import { leBatch4 } from './data/le-batch-4';
+import { leBatch5 } from './data/le-batch-5';
+import { leBatch6 } from './data/le-batch-6';
 
 ﻿export type DifficultyLevel = "basico" | "intermedio" | "avanzado" | "basic" | "intermediate" | "advanced";
 
@@ -34532,7 +34555,12 @@ courseContent["algebra"] = [...algebraBatch1, ...algebraBatch2, ...algebraBatch3
 
 courseContent["ciencia"] = [...cienciaBatch1, ...cienciaBatch2, ...cienciaBatch3, ...cienciaBatch4, ...cienciaBatch5, ...cienciaBatch6, ...cienciaBatch7];
 
-courseContent['comprension-lectora'] = [...clBatch1, clBatch2, clBatch3, clBatch4, clBatch5, clBatch6, clBatch7, clBatch8];
-courseContent['derecho-ciudadania'] = [...dcBatch1, dcBatch2, dcBatch3, dcBatch4, dcBatch5, dcBatch6, dcBatch7];
-courseContent['economia-basica'] = [...ecBatch1, ecBatch2, ecBatch3, ecBatch4, ecBatch5, ecBatch6, ecBatch7];
-courseContent['ingles'] = [...enBatch1, enBatch2, enBatch3, enBatch4, enBatch5, enBatch6, enBatch7];
+courseContent['comprension-lectora'] = [...clBatch1, ...clBatch2, ...clBatch3, ...clBatch4, ...clBatch5, ...clBatch6, ...clBatch7, ...clBatch8];
+courseContent['derecho-ciudadania'] = [...dcBatch1, ...dcBatch2, ...dcBatch3, ...dcBatch4, ...dcBatch5, ...dcBatch6, ...dcBatch7];
+courseContent['economia-basica'] = [...ecBatch1, ...ecBatch2, ...ecBatch3, ...ecBatch4, ...ecBatch5, ...ecBatch6, ...ecBatch7];
+courseContent['ingles'] = [...enBatch1, ...enBatch2, ...enBatch3, ...enBatch4, ...enBatch5, ...enBatch6, ...enBatch7];
+
+courseContent['fisica'] = [...fiBatch1, ...fiBatch2, ...fiBatch3, ...fiBatch4, ...fiBatch5, ...fiBatch6, ...fiBatch7];
+courseContent['quimica'] = [...quBatch1, ...quBatch2, ...quBatch3, ...quBatch4, ...quBatch5];
+courseContent['biologia'] = [...biBatch1, ...biBatch2, ...biBatch3, ...biBatch4, ...biBatch5];
+courseContent['letras'] = [...leBatch1, ...leBatch2, ...leBatch3, ...leBatch4, ...leBatch5, ...leBatch6];
