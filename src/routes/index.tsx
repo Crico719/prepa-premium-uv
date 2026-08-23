@@ -5,6 +5,7 @@ import {
   BookOpen,
   Bot,
   CalendarDays,
+  Compass,
   Flame,
   Landmark,
   Medal,
@@ -418,7 +419,7 @@ function Home() {
                 { to: "/simulacros", label: "Simulacro", icon: Target },
                 { to: "/estrategias", label: "Pomodoro", icon: Timer },
                 { to: "/cursos", label: "Cursos", icon: BookOpen },
-                { to: "/comunidad", label: "Foro", icon: Newspaper },
+                { to: "/test-vocacional", label: "Test vocacional", icon: Compass },
               ].map((q) => (
                 <Link
                   key={q.label}

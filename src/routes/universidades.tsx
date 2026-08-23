@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import {
   CalendarDays,
@@ -191,12 +191,12 @@ function Universidades() {
             Responde 15 preguntas y descubre qué carreras encajan con tus intereses y fortalezas.
           </p>
         </div>
-        <button
-          type="button"
+        <Link
+          to="/test-vocacional"
           className="press min-h-11 w-full rounded-[18px] bg-primary px-6 text-sm font-semibold text-primary-foreground hover:bg-primary/90 sm:w-auto"
         >
           Empezar test
-        </button>
+        </Link>
       </Surface>
     </div>
   );
