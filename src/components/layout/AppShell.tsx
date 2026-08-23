@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import { useEffect, useState, type ReactNode } from "react";
 import { cn } from "@/lib/utils";
+import { useStudyTimer } from "@/hooks/useStudyTimer";
 
 const nav = [
   { to: "/", label: "Inicio", icon: Home },
@@ -50,6 +51,7 @@ function useTheme() {
 export function AppShell({ children }: { children: ReactNode }) {
   const { dark, toggle } = useTheme();
   const path = useRouterState({ select: (s) => s.location.pathname });
+  useStudyTimer();
 
   return (
     <div className="min-h-dvh bg-background">

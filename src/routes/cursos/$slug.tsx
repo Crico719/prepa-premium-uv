@@ -1,5 +1,5 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   ArrowLeft,
   CheckCircle2,
@@ -27,6 +27,7 @@ import { IconTile, ProgressBar, Surface } from "@/components/kit";
 import { courses, lessons, courseLessons } from "@/lib/data";
 import { courseContent, type DifficultyLevel, type TheorySection, type CourseExercise } from "@/lib/course-content";
 import { extraExercises } from "@/lib/extra-exercises";
+import { recordQuizResult } from "@/lib/gamification";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const difficultyConfig: Record<DifficultyLevel, { label: string; color: string; bg: string; border: string; icon: typeof BookOpen }> = {
@@ -258,6 +259,24 @@ function Leccion() {
   const [exerciseQueue, setExerciseQueue] = useState<CourseExercise[]>([]);
   const [currentExerciseIndex, setCurrentExerciseIndex] = useState(0);
   const [showScore, setShowScore] = useState(false);
+  const [xpEarned, setXpEarned] = useState(0);
+  const [recorded, setRecorded] = useState(false);
+
+  useEffect(() => {
+    if (showScore && !recorded && totalOriginal > 0) {
+      const score = Math.round((correctCount / totalOriginal) * 100);
+      const xp = recordQuizResult({
+        course: slug,
+        score,
+        correct: correctCount,
+        total: totalOriginal,
+        date: new Date().toISOString().slice(0, 10),
+        type: "curso",
+      });
+      setXpEarned(xp);
+      setRecorded(true);
+    }
+  }, [showScore, recorded, correctCount, totalOriginal, slug]);
 
   const currentContent = content[activeLesson] || null;
   const baseExercises = currentContent?.exercises || [];
@@ -334,6 +353,8 @@ function Leccion() {
   };
 
   const resetExercises = (filter?: DifficultyLevel | "all") => {
+    setRecorded(false);
+    setXpEarned(0);
     startExercises(filter);
   };
 
@@ -462,6 +483,11 @@ function Leccion() {
                             <p className="text-xs text-muted-foreground">Score</p>
                           </div>
                         </div>
+                        {xpEarned > 0 && (
+                          <div className="rounded-xl border border-primary/30 bg-primary/5 px-4 py-2 text-sm font-semibold text-primary">
+                            +{xpEarned} XP ganados
+                          </div>
+                        )}
                         <div className="flex flex-wrap gap-2 justify-center">
                           {(["basico", "intermedio", "avanzado"] as const).map((level) => {
                             const levelExercises = allExercises.filter((e) => e.difficulty === level || (level === "basico" && e.difficulty === "basic") || (level === "intermedio" && e.difficulty === "intermediate") || (level === "avanzado" && e.difficulty === "advanced"));

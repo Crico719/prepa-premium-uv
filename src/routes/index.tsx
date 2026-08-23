@@ -24,10 +24,19 @@ import {
   Surface,
 } from "@/components/kit";
 import { AvatarSelector } from "@/components/kit/AvatarSelector";
-import { courses, student, upcoming, weeklyStudy, universities } from "@/lib/data";
+import { courses, student, upcoming, universities } from "@/lib/data";
 import { checkIn, getLast7Days } from "@/lib/streak";
 import { getAvatarById, type AvatarId } from "@/lib/avatars";
 import { getSelectedAvatar, setSelectedAvatar } from "@/lib/avatar-store";
+import {
+  getGamification,
+  getAverageScore,
+  getWeeklyHours,
+  getWeeklyMinutesByDay,
+  getXPForNextLevel,
+  getRanking,
+  getUserRank,
+} from "@/lib/gamification";
 
 const dailyTips = [
   "No estudies más de 2 horas seguidas. Tu cerebro necesita descansar para consolidar la memoria.",
@@ -99,6 +108,14 @@ function Home() {
   const [mounted, setMounted] = useState(false);
   useEffect(() => setMounted(true), []);
 
+  const gamification = getGamification();
+  const averageScore = getAverageScore();
+  const weeklyHoursStr = getWeeklyHours();
+  const weeklyStudy = getWeeklyMinutesByDay();
+  const userRank = getUserRank();
+  const ranking = getRanking();
+  const maxHours = Math.max(...weeklyStudy.map((d) => d.horas), 1);
+
   const today = new Date();
   const monthMap: Record<string, number> = {
     Ene: 0, Feb: 1, Mar: 2, Abr: 3, May: 4, Jun: 5,
@@ -114,9 +131,6 @@ function Home() {
     })
     .filter((u) => u.daysLeft > 0)
     .sort((a, b) => a.daysLeft - b.daysLeft);
-
-
-  const maxHours = Math.max(...weeklyStudy.map((d) => d.horas));
 
   return (
     <div className="space-y-8">
@@ -216,22 +230,22 @@ function Home() {
       </Surface>
 
       <section className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
-        <StatCard icon={Timer} label="Tiempo estudiado" value="23 h" hint="Esta semana" />
+        <StatCard icon={Timer} label="Tiempo estudiado" value={weeklyHoursStr} hint="Esta semana" />
         <StatCard
           icon={Target}
           label="Puntaje promedio"
-          value="86 / 100"
+          value={`${averageScore}%`}
           tone="success"
-          hint="Últimos 4 simulacros"
+          hint="Últimos simulacros"
         />
         <StatCard
           icon={Trophy}
           label="Ranking"
-          value="#2"
+          value={`#${userRank}`}
           tone="warning"
           hint="Entre 1 240 estudiantes"
         />
-        <StatCard icon={Medal} label="Nivel" value={`Nivel ${student.level}`} tone="deep" hint={`${student.xp} / ${student.xpGoal} XP`} />
+        <StatCard icon={Medal} label="Nivel" value={`Nivel ${gamification.level}`} tone="deep" hint={`${gamification.xp} / ${getXPForNextLevel(gamification.level)} XP`} />
       </section>
 
       <div className="grid gap-8 lg:grid-cols-[minmax(0,1.6fr)_minmax(0,1fr)]">

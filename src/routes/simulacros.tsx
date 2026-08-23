@@ -1,8 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { AlertTriangle, CheckCircle2, ChevronLeft, ChevronRight, Clock, History, Trophy, XCircle } from "lucide-react";
 import { SectionHeader, Surface } from "@/components/kit";
 import { exams, type Exam, type ExamQuestion } from "@/lib/exam-data";
+import { recordQuizResult } from "@/lib/gamification";
 
 export const Route = createFileRoute("/simulacros")({
   head: () => ({
@@ -26,12 +27,30 @@ function Simulacros() {
   const [answers, setAnswers] = useState<AnswerState[]>([]);
   const [showResult, setShowResult] = useState(false);
   const [timer, setTimer] = useState(0);
+  const [xpEarned, setXpEarned] = useState(0);
+  const [recorded, setRecorded] = useState(false);
 
   const exam = selectedExam || exams[0]!;
   const questions = exam.questions;
   const question = questions[currentQ]!;
   const totalCorrect = answers.filter((a) => a.isCorrect).length;
   const totalAnswered = answers.length;
+  const percentage = totalAnswered > 0 ? Math.round((totalCorrect / questions.length) * 100) : 0;
+
+  useEffect(() => {
+    if (showResult && !recorded && totalAnswered > 0) {
+      const xp = recordQuizResult({
+        course: exam.name,
+        score: percentage,
+        correct: totalCorrect,
+        total: questions.length,
+        date: new Date().toISOString().slice(0, 10),
+        type: "simulacro",
+      });
+      setXpEarned(xp);
+      setRecorded(true);
+    }
+  }, [showResult, recorded, totalCorrect, totalAnswered, percentage, exam.name, questions.length]);
 
   const startExam = (e: Exam) => {
     setSelectedExam(e);
@@ -67,10 +86,11 @@ function Simulacros() {
     setCurrentQ(0);
     setAnswers([]);
     setShowResult(false);
+    setRecorded(false);
+    setXpEarned(0);
   };
 
   const answered = answers.find((a) => a.questionId === question.id);
-  const percentage = totalAnswered > 0 ? Math.round((totalCorrect / questions.length) * 100) : 0;
 
   if (showResult) {
     return (
@@ -85,6 +105,11 @@ function Simulacros() {
           <p className="text-muted-foreground">
             {totalCorrect} de {questions.length} correctas
           </p>
+          {xpEarned > 0 && (
+            <div className="rounded-xl border border-primary/30 bg-primary/5 px-4 py-2 text-sm font-semibold text-primary">
+              +{xpEarned} XP ganados
+            </div>
+          )}
           <div className="flex gap-6 text-sm">
             <div className="flex items-center gap-1 text-green-600">
               <CheckCircle2 className="h-4 w-4" />

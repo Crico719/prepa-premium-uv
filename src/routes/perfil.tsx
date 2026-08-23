@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useMemo } from "react";
 import {
   Award,
   Bell,
@@ -21,7 +22,18 @@ import {
   StatCard,
   Surface,
 } from "@/components/kit";
-import { student, weeklyStudy } from "@/lib/data";
+import {
+  getGamification,
+  getAverageScore,
+  getTotalHours,
+  getWeeklyMinutesByDay,
+  getXPForCurrentLevel,
+  getXPForNextLevel,
+  getRanking,
+  getUserRank,
+  getSimulacroCount,
+} from "@/lib/gamification";
+import { getStreak } from "@/lib/streak";
 
 export const Route = createFileRoute("/perfil")({
   head: () => ({
@@ -43,7 +55,21 @@ export const Route = createFileRoute("/perfil")({
 });
 
 function Perfil() {
-  const xpPct = Math.round((student.xp / student.xpGoal) * 100);
+  const gamification = useMemo(() => getGamification(), []);
+  const streak = useMemo(() => getStreak(), []);
+  const averageScore = useMemo(() => getAverageScore(), []);
+  const totalHours = useMemo(() => getTotalHours(), []);
+  const weeklyStudy = useMemo(() => getWeeklyMinutesByDay(), []);
+  const ranking = useMemo(() => getRanking(), []);
+  const userRank = useMemo(() => getUserRank(), []);
+  const simulacroCount = useMemo(() => getSimulacroCount(), []);
+
+  const xpPct = Math.round(
+    ((gamification.xp - getXPForCurrentLevel(gamification.level)) /
+      (getXPForNextLevel(gamification.level) - getXPForCurrentLevel(gamification.level))) *
+      100
+  );
+  const maxHours = Math.max(...weeklyStudy.map((d) => d.horas), 1);
 
   return (
     <div className="space-y-8">
@@ -53,9 +79,9 @@ function Perfil() {
             DA
           </span>
           <div className="min-w-0">
-            <h1 className="truncate text-xl font-bold sm:text-2xl">{student.fullName}</h1>
+            <h1 className="truncate text-xl font-bold sm:text-2xl">Daniel Asturrizaga</h1>
             <p className="text-sm opacity-90">
-              Nivel {student.level} · {student.target}
+              Nivel {gamification.level} · UNMSM · Ingeniería de Sistemas
             </p>
           </div>
         </div>
@@ -63,7 +89,7 @@ function Perfil() {
           <div className="mb-1 flex justify-between text-xs font-semibold opacity-90">
             <span>XP</span>
             <span>
-              {student.xp} / {student.xpGoal}
+              {gamification.xp} / {getXPForNextLevel(gamification.level)}
             </span>
           </div>
           <div className="h-2 overflow-hidden rounded-full bg-white/25">
@@ -73,10 +99,10 @@ function Perfil() {
       </Surface>
 
       <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
-        <StatCard icon={Flame} label="Racha" value={`${student.streak} días`} tone="warning" />
-        <StatCard icon={Target} label="Simulacros" value="15" />
-        <StatCard icon={Star} label="Puntaje promedio" value="82%" tone="success" />
-        <StatCard icon={Timer} label="Tiempo total" value="148 h" tone="deep" />
+        <StatCard icon={Flame} label="Racha" value={`${streak.count} días`} tone="warning" />
+        <StatCard icon={Target} label="Simulacros" value={`${simulacroCount}`} />
+        <StatCard icon={Star} label="Puntaje promedio" value={`${averageScore}%`} tone="success" />
+        <StatCard icon={Timer} label="Tiempo total" value={totalHours} tone="deep" />
       </div>
 
       <div className="grid gap-6 lg:grid-cols-[minmax(0,1.5fr)_minmax(0,1fr)]">
@@ -115,8 +141,11 @@ function Perfil() {
 
         <Surface className="flex flex-col items-center gap-4 text-center">
           <SectionHeader title="Progreso general" />
-          <ProgressRing value={student.overall} caption="del plan" />
-          <ProgressBar value={student.overall} />
+          <ProgressRing
+            value={Math.min(Math.round((gamification.xp / getXPForNextLevel(gamification.level)) * 100), 100)}
+            caption="del plan"
+          />
+          <ProgressBar value={Math.min(Math.round((gamification.xp / getXPForNextLevel(gamification.level)) * 100), 100)} />
           <p className="text-sm text-muted-foreground">
             Mantén 3 horas diarias para llegar al 90% antes del examen.
           </p>
@@ -124,15 +153,50 @@ function Perfil() {
       </div>
 
       <Surface>
+        <SectionHeader title="Ranking semanal" subtitle="Top estudiantes" />
+        <ol className="space-y-2">
+          {ranking.map((r, i) => (
+            <li
+              key={r.name}
+              className={`flex items-center gap-3 rounded-[14px] border px-4 py-3 text-sm font-medium ${
+                r.isUser
+                  ? "border-primary/40 bg-primary/5"
+                  : "border-border"
+              }`}
+            >
+              <span className={`grid size-8 shrink-0 place-items-center rounded-full text-xs font-bold ${
+                i === 0 ? "bg-warning text-warning-foreground" :
+                i === 1 ? "bg-muted text-muted-foreground" :
+                i === 2 ? "bg-orange-100 text-orange-700 dark:bg-orange-900 dark:text-orange-300" :
+                "bg-muted text-muted-foreground"
+              }`}>
+                {i + 1}
+              </span>
+              <span className="min-w-0 flex-1 truncate">{r.name}</span>
+              <span className="shrink-0 text-xs font-semibold text-primary">{r.xp} XP</span>
+            </li>
+          ))}
+        </ol>
+        <div className="mt-3 text-center text-xs text-muted-foreground">
+          Tu posición: #{userRank}
+        </div>
+      </Surface>
+
+      <Surface>
         <SectionHeader title="Logros e insignias" subtitle="Lo que has conquistado" />
         <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
           {[
-            { icon: Trophy, label: "Top 10 nacional", tone: "warning" as const },
-            { icon: Medal, label: "30 días de racha", tone: "success" as const },
-            { icon: Award, label: "100 lecciones", tone: "primary" as const },
-            { icon: Star, label: "Simulacro 90+", tone: "deep" as const },
+            { icon: Trophy, label: "Top 10 nacional", tone: "warning" as const, unlocked: userRank <= 10 },
+            { icon: Medal, label: "30 días de racha", tone: "success" as const, unlocked: streak.count >= 30 },
+            { icon: Award, label: "100 lecciones", tone: "primary" as const, unlocked: gamification.totalQuizzes >= 5 },
+            { icon: Star, label: "Simulacro 90+", tone: "deep" as const, unlocked: averageScore >= 90 },
           ].map((a) => (
-            <div key={a.label} className="flex items-center gap-3 rounded-[18px] border border-border p-4">
+            <div
+              key={a.label}
+              className={`flex items-center gap-3 rounded-[18px] border p-4 ${
+                a.unlocked ? "border-border" : "border-border opacity-40"
+              }`}
+            >
               <IconTile icon={a.icon} tone={a.tone} className="size-10 rounded-[14px]" />
               <span className="min-w-0 truncate text-sm font-semibold">{a.label}</span>
             </div>
