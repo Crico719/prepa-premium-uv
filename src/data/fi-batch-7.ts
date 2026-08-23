@@ -1,975 +1,323 @@
 import type { CourseModule } from '../lib/course-content';
 export const fiBatch7: CourseModule[] = [
   {
-    "slug": "fi-electroquimica",
-    "title": "Electroquimica",
-    "tip": "Reacciones redox.",
-    "theory": {
-      "basico": [
-        "Pila.",
-        ".",
-        ".",
-        ".",
-        "."
-      ],
-      "intermedio": [
-        "Electrolisis.",
-        ".",
-        ".",
-        ".",
-        "."
-      ],
-      "avanzado": [
-        "Nernst.",
-        ".",
-        ".",
-        ".",
-        "."
-      ]
-    },
-    "questions": [
-      {
-        "id": "fi-electroquimica-b1",
-        "type": "multiple-choice",
-        "difficulty": "basico",
-        "question": "Resume \"Electroquimica\".",
-        "options": [
-          "30 + 30 = 60",
-          "30 + 30 = 65",
-          "30 + 30 = 57",
-          "30 + 30 = 70"
-        ],
-        "correct": 0,
-        "explanation": "Resume \"Electroquimica\"."
-      },
-      {
-        "id": "fi-electroquimica-b2",
-        "type": "multiple-choice",
-        "difficulty": "basico",
-        "question": "Reacciones redox.",
-        "options": [
-          "10 + 30 = 40",
-          "10 + 30 = 45",
-          "10 + 30 = 37",
-          "10 + 30 = 50"
-        ],
-        "correct": 0,
-        "explanation": "Reacciones redox."
-      },
-      {
-        "id": "fi-electroquimica-b3",
-        "type": "multiple-choice",
-        "difficulty": "basico",
-        "question": "Idea principal.",
-        "options": [
-          "30 + 30 = 60",
-          "30 + 30 = 65",
-          "30 + 30 = 57",
-          "30 + 30 = 70"
-        ],
-        "correct": 0,
-        "explanation": "Idea principal."
-      },
-      {
-        "id": "fi-electroquimica-b4",
-        "type": "multiple-choice",
-        "difficulty": "basico",
-        "question": "Detalles.",
-        "options": [
-          "10 + 20 = 30",
-          "10 + 20 = 35",
-          "10 + 20 = 27",
-          "10 + 20 = 40"
-        ],
-        "correct": 0,
-        "explanation": "Detalles."
-      },
-      {
-        "id": "fi-electroquimica-b5",
-        "type": "multiple-choice",
-        "difficulty": "basico",
-        "question": "Sintesis.",
-        "options": [
-          "20 + 30 = 50",
-          "20 + 30 = 55",
-          "20 + 30 = 47",
-          "20 + 30 = 60"
-        ],
-        "correct": 0,
-        "explanation": "Sintesis."
-      },
-      {
-        "id": "fi-electroquimica-b6",
-        "type": "multiple-choice",
-        "difficulty": "basico",
-        "question": "Reacciones redox. - Ejercicio 6",
-        "options": [
-          "20 + 25 = 45",
-          "20 + 25 = 50",
-          "20 + 25 = 42",
-          "20 + 25 = 55"
-        ],
-        "correct": 0,
-        "explanation": "Reacciones redox.: respuesta correcta"
-      },
-      {
-        "id": "fi-electroquimica-b7",
-        "type": "multiple-choice",
-        "difficulty": "basico",
-        "question": "Reacciones redox. - Ejercicio 7",
-        "options": [
-          "20 + 30 = 50",
-          "20 + 30 = 55",
-          "20 + 30 = 47",
-          "20 + 30 = 60"
-        ],
-        "correct": 0,
-        "explanation": "Reacciones redox.: respuesta correcta"
-      },
-      {
-        "id": "fi-electroquimica-i1",
-        "type": "multiple-choice",
-        "difficulty": "intermedio",
-        "question": "Resume \"Electroquimica\".",
-        "options": [
-          "15 × 25 = 375",
-          "15 × 25 = 385",
-          "15 × 25 = 370",
-          "15 × 25 = 395"
-        ],
-        "correct": 0,
-        "explanation": "Resume \"Electroquimica\"."
-      },
-      {
-        "id": "fi-electroquimica-i2",
-        "type": "multiple-choice",
-        "difficulty": "intermedio",
-        "question": "Reacciones redox.",
-        "options": [
-          "30 × 30 = 900",
-          "30 × 30 = 910",
-          "30 × 30 = 895",
-          "30 × 30 = 920"
-        ],
-        "correct": 0,
-        "explanation": "Reacciones redox."
-      },
-      {
-        "id": "fi-electroquimica-i3",
-        "type": "multiple-choice",
-        "difficulty": "intermedio",
-        "question": "Idea principal.",
-        "options": [
-          "20 × 20 = 400",
-          "20 × 20 = 410",
-          "20 × 20 = 395",
-          "20 × 20 = 420"
-        ],
-        "correct": 0,
-        "explanation": "Idea principal."
-      },
-      {
-        "id": "fi-electroquimica-i4",
-        "type": "multiple-choice",
-        "difficulty": "intermedio",
-        "question": "Detalles.",
-        "options": [
-          "25 × 25 = 625",
-          "25 × 25 = 635",
-          "25 × 25 = 620",
-          "25 × 25 = 645"
-        ],
-        "correct": 0,
-        "explanation": "Detalles."
-      },
-      {
-        "id": "fi-electroquimica-i5",
-        "type": "multiple-choice",
-        "difficulty": "intermedio",
-        "question": "Sintesis.",
-        "options": [
-          "20 × 25 = 500",
-          "20 × 25 = 510",
-          "20 × 25 = 495",
-          "20 × 25 = 520"
-        ],
-        "correct": 0,
-        "explanation": "Sintesis."
-      },
-      {
-        "id": "fi-electroquimica-i6",
-        "type": "multiple-choice",
-        "difficulty": "intermedio",
-        "question": "Reacciones redox. - Ejercicio 6",
-        "options": [
-          "10 × 25 = 250",
-          "10 × 25 = 260",
-          "10 × 25 = 245",
-          "10 × 25 = 270"
-        ],
-        "correct": 0,
-        "explanation": "Reacciones redox.: respuesta correcta"
-      },
-      {
-        "id": "fi-electroquimica-i7",
-        "type": "multiple-choice",
-        "difficulty": "intermedio",
-        "question": "Reacciones redox. - Ejercicio 7",
-        "options": [
-          "15 × 25 = 375",
-          "15 × 25 = 385",
-          "15 × 25 = 370",
-          "15 × 25 = 395"
-        ],
-        "correct": 0,
-        "explanation": "Reacciones redox.: respuesta correcta"
-      },
-      {
-        "id": "fi-electroquimica-a1",
-        "type": "multiple-choice",
-        "difficulty": "avanzado",
-        "question": "Resume \"Electroquimica\".",
-        "options": [
-          "15 × 30 = 450",
-          "15 × 30 = 460",
-          "15 × 30 = 445",
-          "15 × 30 = 470"
-        ],
-        "correct": 0,
-        "explanation": "Resume \"Electroquimica\"."
-      },
-      {
-        "id": "fi-electroquimica-a2",
-        "type": "multiple-choice",
-        "difficulty": "avanzado",
-        "question": "Reacciones redox.",
-        "options": [
-          "20 × 20 = 400",
-          "20 × 20 = 410",
-          "20 × 20 = 395",
-          "20 × 20 = 420"
-        ],
-        "correct": 0,
-        "explanation": "Reacciones redox."
-      },
-      {
-        "id": "fi-electroquimica-a3",
-        "type": "multiple-choice",
-        "difficulty": "avanzado",
-        "question": "Idea principal.",
-        "options": [
-          "15 × 25 = 375",
-          "15 × 25 = 385",
-          "15 × 25 = 370",
-          "15 × 25 = 395"
-        ],
-        "correct": 0,
-        "explanation": "Idea principal."
-      },
-      {
-        "id": "fi-electroquimica-a4",
-        "type": "multiple-choice",
-        "difficulty": "avanzado",
-        "question": "Detalles.",
-        "options": [
-          "15 × 15 = 225",
-          "15 × 15 = 235",
-          "15 × 15 = 220",
-          "15 × 15 = 245"
-        ],
-        "correct": 0,
-        "explanation": "Detalles."
-      },
-      {
-        "id": "fi-electroquimica-a5",
-        "type": "multiple-choice",
-        "difficulty": "avanzado",
-        "question": "Sintesis.",
-        "options": [
-          "15 × 25 = 375",
-          "15 × 25 = 385",
-          "15 × 25 = 370",
-          "15 × 25 = 395"
-        ],
-        "correct": 0,
-        "explanation": "Sintesis."
-      },
-      {
-        "id": "fi-electroquimica-a6",
-        "type": "multiple-choice",
-        "difficulty": "avanzado",
-        "question": "Reacciones redox. - Ejercicio 6",
-        "options": [
-          "10 × 15 = 150",
-          "10 × 15 = 160",
-          "10 × 15 = 145",
-          "10 × 15 = 170"
-        ],
-        "correct": 0,
-        "explanation": "Reacciones redox.: respuesta correcta"
-      },
-      {
-        "id": "fi-electroquimica-a7",
-        "type": "multiple-choice",
-        "difficulty": "avanzado",
-        "question": "Reacciones redox. - Ejercicio 7",
-        "options": [
-          "10 × 20 = 200",
-          "10 × 20 = 210",
-          "10 × 20 = 195",
-          "10 × 20 = 220"
-        ],
-        "correct": 0,
-        "explanation": "Reacciones redox.: respuesta correcta"
-      }
-    ]
+    slug: "fi-transistor",
+    tip: "El MOSFET se controla por voltaje en una puerta aislada.",
+    theory: [
+      { level: "basico", title: "Qué es un transistor", lines: ["Dispositivo semiconductor de 3 terminales que conmuta o amplifica.", "BJT: emisor, base y colector.", "Funciona como interruptor electrónico controlado por señal pequeña.", "También amplifica señales débiles.", "NPN y PNP son sus dos tipos; inventado en 1947 en Bell Labs."] },
+      { level: "intermedio", title: "Operación del BJT", lines: ["Ganancia β = Ic/Ib, típicamente entre 50 y 300.", "Región de corte: sin corriente de base, transistor abierto.", "Saturación: totalmente conducido, actúa como interruptor cerrado.", "Región activa: amplificación lineal de la señal.", "La polarización fija el punto de operación en la recta de carga."] },
+      { level: "avanzado", title: "MOSFET e integración", lines: ["El MOSFET se controla por voltaje en una puerta aislada.", "CMOS consume casi nula potencia estática: base de los chips digitales.", "Las compuertas lógicas (AND, OR, NOT) se construyen con transistores.", "Procesadores modernos integran decenas de miles de millones de transistores.", "En electrónica de potencia conmutan motores e inversores a alta frecuencia."] },
+    ],
+    illustrations: [],
+    exercises: [
+      { id: 1, question: "Un transistor es esencialmente:", options: ["Una resistencia fija", "Interruptor/amplificador semiconductor", "Una batería", "Un motor pequeño"], correctIndex: 1, explanation: "Controla corrientes grandes con señales pequeñas.", difficulty: "basico" },
+      { id: 2, question: "Los terminales del BJT son:", options: ["Ánodo, cátodo, puerta", "Emisor, base, colector", "Fuente, drenaje, tierra", "Positivo, negativo, neutro"], correctIndex: 1, explanation: "Terminología estándar del transistor bipolar.", difficulty: "basico" },
+      { id: 3, question: "Como interruptor electrónico, el transistor:", options: ["Abre y cierra circuitos con una señal de control", "Genera energía", "Almacena datos magnéticos", "Convierte AC en DC siempre"], correctIndex: 0, explanation: "Base del funcionamiento digital.", difficulty: "basico" },
+      { id: 4, question: "Además de conmutar, el transistor puede:", options: ["Amplificar señales", "Congelar circuitos", "Medir temperatura directa", "Reemplazar antenas"], correctIndex: 1, explanation: "Señal pequeña de entrada controla salida mayor fielmente.", difficulty: "basico" },
+      { id: 5, question: "Una corriente pequeña de base controla:", options: ["La tensión de red", "Una corriente grande de colector", "Solo ruido", "El voltaje doméstico"], correctIndex: 1, explanation: "Principio del BJT como amplificador de corriente.", difficulty: "basico" },
+      { id: 6, question: "Los dos tipos de BJT son:", options: ["NPN y PNP", "PN y NP", "LED y Zener", "CMOS y TTL"], correctIndex: 0, explanation: "Difieren en dopado y polaridades.", difficulty: "basico" },
+      { id: 7, question: "El transistor fue inventado en:", options: ["1904 en Londres", "1947 en Bell Labs", "1969 en NASA", "1981 en IBM"], correctIndex: 1, explanation: "Bardeen, Brattain y Shockley, Nobel 1956.", difficulty: "basico" },
+      { id: 8, question: "β = Ic/Ib típicamente vale:", options: ["0.01-0.1", "50-300", "100000-10⁶", "Cero"], correctIndex: 1, explanation: "Ganancia de corriente del transistor bipolar.", difficulty: "intermedio" },
+      { id: 9, question: "Región de corte significa:", options: ["Máxima conducción", "Transistor abierto, sin conducción", "Quemado", "En cortocircuito"], correctIndex: 1, explanation: "Sin corriente de base no pasa nada por el colector.", difficulty: "intermedio" },
+      { id: 10, question: "En saturación, el transistor actúa como:", options: ["Interruptor cerrado", "Circuito abierto", "Amplificador lineal", "Capacitor"], correctIndex: 1, explanation: "Conducción máxima con caída mínima V_CE.", difficulty: "intermedio" },
+      { id: 11, question: "La región activa permite:", options: ["Amplificación lineal de señales", "Bloqueo total", "Comportamiento de fusible", "Operación térmica"], correctIndex: 0, explanation: "Ic proporcional a Ib en esa zona.", difficulty: "intermedio" },
+      { id: 12, question: "Si Ib = 20 μA y β = 100, entonces Ic =", options: ["2 μA", "2 mA", "200 mA", "20 A"], correctIndex: 1, explanation: "Ic = 100×20 μA = 2 mA.", difficulty: "intermedio" },
+      { id: 13, question: "La polarización del transistor busca:", options: ["Fijar el punto de operación adecuado", "Calentarlo", "Reducir su vida útil", "Eliminar la señal"], correctIndex: 0, explanation: "Garantiza funcionamiento estable en la zona deseada.", difficulty: "intermedio" },
+      { id: 14, question: "La configuración de emisor común:", options: ["Amplifica tensión y corriente", "Solo atenúa", "No usa base", "Es solo digital"], correctIndex: 0, explanation: "La más usada en etapas amplificadoras.", difficulty: "intermedio" },
+      { id: 15, question: "El MOSFET se controla mediante:", options: ["Corriente de puerta alta", "Voltaje en puerta aislada", "Temperatura", "Presión mecánica"], correctIndex: 1, explanation: "Capa de óxido aísla la compuerta: consumo casi cero de control.", difficulty: "avanzado" },
+      { id: 16, question: "La tecnología CMOS destaca por:", options: ["Gran consumo estático", "Consumo prácticamente nulo en reposo", "Ser analógica pura", "No integrarse"], correctIndex: 1, explanation: "Compuertas complementarias que solo gastan al conmutar.", difficulty: "avanzado" },
+      { id: 17, question: "Las compuertas lógicas digitales se implementan con:", options: ["Transistores en serie/paralelo", "Resistencias únicamente", "Relés electromecánicos solo", "Válvulas de vacío hoy"], correctIndex: 0, explanation: "Millones de ellas forman procesadores completos.", difficulty: "avanzado" },
+      { id: 18, question: "Un procesador moderno integra aproximadamente:", options: ["Miles", "Millones", "Decenas de miles de millones de transistores", "Diez"], correctIndex: 2, explanation: "Escala actual de fabricación avanzada.", difficulty: "avanzado" },
+      { id: 19, question: "La ley de Moore observa que la densidad de transistores se duplica cada:", options: ["~2 años", "10 años", "6 meses", "50 años"], correctIndex: 0, explanation: "Motor histórico del avance computacional.", difficulty: "avanzado" },
+      { id: 20, question: "En conversores de potencia, los transistores sufren pérdidas:", options: ["Estáticas solo", "Dinámicas por conmutación rápida", "Nulas", "Solo térmicas pasivas"], correctIndex: 1, explanation: "Cada cambio de estado disipa energía en la transición.", difficulty: "avanzado" },
+    ],
   },
   {
-    "slug": "fi-fisica-ambiente",
-    "title": "Fisica Ambiental",
-    "tip": "Aplicaciones verdes.",
-    "theory": {
-      "basico": [
-        "Energia.",
-        ".",
-        ".",
-        ".",
-        "."
-      ],
-      "intermedio": [
-        "Contaminacion.",
-        ".",
-        ".",
-        ".",
-        "."
-      ],
-      "avanzado": [
-        "Clima.",
-        ".",
-        ".",
-        ".",
-        "."
-      ]
-    },
-    "questions": [
-      {
-        "id": "fi-fisica-ambiente-b1",
-        "type": "multiple-choice",
-        "difficulty": "basico",
-        "question": "Identifica los temas secundarios de \"Fisica Ambiental\".",
-        "options": [
-          "15 + 30 = 45",
-          "15 + 30 = 50",
-          "15 + 30 = 42",
-          "15 + 30 = 55"
-        ],
-        "correct": 0,
-        "explanation": "Identifica los temas secundarios de \"Fisica Ambiental\"."
-      },
-      {
-        "id": "fi-fisica-ambiente-b2",
-        "type": "multiple-choice",
-        "difficulty": "basico",
-        "question": "Aplicaciones verdes.",
-        "options": [
-          "10 + 30 = 40",
-          "10 + 30 = 45",
-          "10 + 30 = 37",
-          "10 + 30 = 50"
-        ],
-        "correct": 0,
-        "explanation": "Aplicaciones verdes."
-      },
-      {
-        "id": "fi-fisica-ambiente-b3",
-        "type": "multiple-choice",
-        "difficulty": "basico",
-        "question": "Son ideas que complementan.",
-        "options": [
-          "10 + 30 = 40",
-          "10 + 30 = 45",
-          "10 + 30 = 37",
-          "10 + 30 = 50"
-        ],
-        "correct": 0,
-        "explanation": "Son ideas que complementan."
-      },
-      {
-        "id": "fi-fisica-ambiente-b4",
-        "type": "multiple-choice",
-        "difficulty": "basico",
-        "question": "Aportan contexto.",
-        "options": [
-          "10 + 25 = 35",
-          "10 + 25 = 40",
-          "10 + 25 = 32",
-          "10 + 25 = 45"
-        ],
-        "correct": 0,
-        "explanation": "Aportan contexto."
-      },
-      {
-        "id": "fi-fisica-ambiente-b5",
-        "type": "multiple-choice",
-        "difficulty": "basico",
-        "question": "No son la idea principal.",
-        "options": [
-          "20 + 30 = 50",
-          "20 + 30 = 55",
-          "20 + 30 = 47",
-          "20 + 30 = 60"
-        ],
-        "correct": 0,
-        "explanation": "No son la idea principal."
-      },
-      {
-        "id": "fi-fisica-ambiente-b6",
-        "type": "multiple-choice",
-        "difficulty": "basico",
-        "question": "Aplicaciones verdes. - Ejercicio 6",
-        "options": [
-          "10 + 10 = 20",
-          "10 + 10 = 25",
-          "10 + 10 = 17",
-          "10 + 10 = 30"
-        ],
-        "correct": 0,
-        "explanation": "Aplicaciones verdes.: respuesta correcta"
-      },
-      {
-        "id": "fi-fisica-ambiente-b7",
-        "type": "multiple-choice",
-        "difficulty": "basico",
-        "question": "Aplicaciones verdes. - Ejercicio 7",
-        "options": [
-          "10 + 15 = 25",
-          "10 + 15 = 30",
-          "10 + 15 = 22",
-          "10 + 15 = 35"
-        ],
-        "correct": 0,
-        "explanation": "Aplicaciones verdes.: respuesta correcta"
-      },
-      {
-        "id": "fi-fisica-ambiente-i1",
-        "type": "multiple-choice",
-        "difficulty": "intermedio",
-        "question": "Identifica los temas secundarios de \"Fisica Ambiental\".",
-        "options": [
-          "10 × 30 = 300",
-          "10 × 30 = 310",
-          "10 × 30 = 295",
-          "10 × 30 = 320"
-        ],
-        "correct": 0,
-        "explanation": "Identifica los temas secundarios de \"Fisica Ambiental\"."
-      },
-      {
-        "id": "fi-fisica-ambiente-i2",
-        "type": "multiple-choice",
-        "difficulty": "intermedio",
-        "question": "Aplicaciones verdes.",
-        "options": [
-          "15 × 25 = 375",
-          "15 × 25 = 385",
-          "15 × 25 = 370",
-          "15 × 25 = 395"
-        ],
-        "correct": 0,
-        "explanation": "Aplicaciones verdes."
-      },
-      {
-        "id": "fi-fisica-ambiente-i3",
-        "type": "multiple-choice",
-        "difficulty": "intermedio",
-        "question": "Son ideas que complementan.",
-        "options": [
-          "30 × 30 = 900",
-          "30 × 30 = 910",
-          "30 × 30 = 895",
-          "30 × 30 = 920"
-        ],
-        "correct": 0,
-        "explanation": "Son ideas que complementan."
-      },
-      {
-        "id": "fi-fisica-ambiente-i4",
-        "type": "multiple-choice",
-        "difficulty": "intermedio",
-        "question": "Aportan contexto.",
-        "options": [
-          "10 × 20 = 200",
-          "10 × 20 = 210",
-          "10 × 20 = 195",
-          "10 × 20 = 220"
-        ],
-        "correct": 0,
-        "explanation": "Aportan contexto."
-      },
-      {
-        "id": "fi-fisica-ambiente-i5",
-        "type": "multiple-choice",
-        "difficulty": "intermedio",
-        "question": "No son la idea principal.",
-        "options": [
-          "25 × 30 = 750",
-          "25 × 30 = 760",
-          "25 × 30 = 745",
-          "25 × 30 = 770"
-        ],
-        "correct": 0,
-        "explanation": "No son la idea principal."
-      },
-      {
-        "id": "fi-fisica-ambiente-i6",
-        "type": "multiple-choice",
-        "difficulty": "intermedio",
-        "question": "Aplicaciones verdes. - Ejercicio 6",
-        "options": [
-          "25 × 30 = 750",
-          "25 × 30 = 760",
-          "25 × 30 = 745",
-          "25 × 30 = 770"
-        ],
-        "correct": 0,
-        "explanation": "Aplicaciones verdes.: respuesta correcta"
-      },
-      {
-        "id": "fi-fisica-ambiente-i7",
-        "type": "multiple-choice",
-        "difficulty": "intermedio",
-        "question": "Aplicaciones verdes. - Ejercicio 7",
-        "options": [
-          "25 × 30 = 750",
-          "25 × 30 = 760",
-          "25 × 30 = 745",
-          "25 × 30 = 770"
-        ],
-        "correct": 0,
-        "explanation": "Aplicaciones verdes.: respuesta correcta"
-      },
-      {
-        "id": "fi-fisica-ambiente-a1",
-        "type": "multiple-choice",
-        "difficulty": "avanzado",
-        "question": "Identifica los temas secundarios de \"Fisica Ambiental\".",
-        "options": [
-          "30 × 30 = 900",
-          "30 × 30 = 910",
-          "30 × 30 = 895",
-          "30 × 30 = 920"
-        ],
-        "correct": 0,
-        "explanation": "Identifica los temas secundarios de \"Fisica Ambiental\"."
-      },
-      {
-        "id": "fi-fisica-ambiente-a2",
-        "type": "multiple-choice",
-        "difficulty": "avanzado",
-        "question": "Aplicaciones verdes.",
-        "options": [
-          "20 × 25 = 500",
-          "20 × 25 = 510",
-          "20 × 25 = 495",
-          "20 × 25 = 520"
-        ],
-        "correct": 0,
-        "explanation": "Aplicaciones verdes."
-      },
-      {
-        "id": "fi-fisica-ambiente-a3",
-        "type": "multiple-choice",
-        "difficulty": "avanzado",
-        "question": "Son ideas que complementan.",
-        "options": [
-          "20 × 25 = 500",
-          "20 × 25 = 510",
-          "20 × 25 = 495",
-          "20 × 25 = 520"
-        ],
-        "correct": 0,
-        "explanation": "Son ideas que complementan."
-      },
-      {
-        "id": "fi-fisica-ambiente-a4",
-        "type": "multiple-choice",
-        "difficulty": "avanzado",
-        "question": "Aportan contexto.",
-        "options": [
-          "30 × 30 = 900",
-          "30 × 30 = 910",
-          "30 × 30 = 895",
-          "30 × 30 = 920"
-        ],
-        "correct": 0,
-        "explanation": "Aportan contexto."
-      },
-      {
-        "id": "fi-fisica-ambiente-a5",
-        "type": "multiple-choice",
-        "difficulty": "avanzado",
-        "question": "No son la idea principal.",
-        "options": [
-          "10 × 10 = 100",
-          "10 × 10 = 110",
-          "10 × 10 = 95",
-          "10 × 10 = 120"
-        ],
-        "correct": 0,
-        "explanation": "No son la idea principal."
-      },
-      {
-        "id": "fi-fisica-ambiente-a6",
-        "type": "multiple-choice",
-        "difficulty": "avanzado",
-        "question": "Aplicaciones verdes. - Ejercicio 6",
-        "options": [
-          "20 × 30 = 600",
-          "20 × 30 = 610",
-          "20 × 30 = 595",
-          "20 × 30 = 620"
-        ],
-        "correct": 0,
-        "explanation": "Aplicaciones verdes.: respuesta correcta"
-      },
-      {
-        "id": "fi-fisica-ambiente-a7",
-        "type": "multiple-choice",
-        "difficulty": "avanzado",
-        "question": "Aplicaciones verdes. - Ejercicio 7",
-        "options": [
-          "15 × 25 = 375",
-          "15 × 25 = 385",
-          "15 × 25 = 370",
-          "15 × 25 = 395"
-        ],
-        "correct": 0,
-        "explanation": "Aplicaciones verdes.: respuesta correcta"
-      }
-    ]
+    slug: "fi-fisica-plasmas",
+    tip: "Tokamaks confinan plasma con campos helicoidales para fusión.",
+    theory: [
+      { level: "basico", title: "El cuarto estado", lines: ["Plasma: gas ionizado con electrones e iones libres.", "Es el cuarto estado de la materia.", "Conduce electricidad y responde a campos magnéticos.", "Estado más abundante del universo visible: las estrellas son plasma.", "Ejemplos terrestres: rayos, tubos de neón, lámparas fluorescentes."] },
+      { level: "intermedio", title: "Plasma en la Tierra y el espacio", lines: ["Las auroras nacen de partículas solares que excitan gases polares.", "Verde auroral: oxígeno; azul/violeta: nitrógeno.", "La ionosfera refleja ondas de radio y permite enlaces lejanos.", "El corte por plasma industrial corta metales con precisión.", "Grado de ionización: fracción de átomos que perdió electrones."] },
+      { level: "avanzado", title: "Física avanzada del plasma", lines: ["Tokamaks confinan plasma con campos helicoidales para fusión.", "La fusión requiere ~100 millones K: mayor que el núcleo solar por su menor densidad.", "Blindaje de Debye: el plasma apantalla campos eléctricos externos.", "La magnetosfera desvía el viento solar y protege la vida.", "Los motores iónicos usan plasma acelerado para sondas espaciales."] },
+    ],
+    illustrations: [],
+    exercises: [
+      { id: 1, question: "Un plasma es:", options: ["Líquido viscoso", "Gas ionizado con cargas libres", "Sólido cristalino", "Vacío perfecto"], correctIndex: 1, explanation: "Iones positivos y electrones negativos moviéndose libremente.", difficulty: "basico" },
+      { id: 2, question: "El cuarto estado de la materia es el:", options: ["Gas", "Plasma", "Coloide", "Cristal"], correctIndex: 1, explanation: "Después del sólido, líquido y gas.", difficulty: "basico" },
+      { id: 3, question: "El plasma puede ser guiado por:", options: ["Campos magnéticos", "Solo gravedad", "Presión atmosférica única", "Nada"], correctIndex: 0, explanation: "Sus cargas móviles responden a B y E.", difficulty: "basico" },
+      { id: 4, question: "El estado más abundante del universo visible es:", options: ["Sólido", "Líquido", "Gas neutro", "Plasma"], correctIndex: 1, explanation: "Estrellas, nebulosas y medio interestelar.", difficulty: "basico" },
+      { id: 5, question: "Se forma plasma a partir de un gas mediante:", options: ["Enfriamiento fuerte", "Ionización por calor o campos intensos", "Congelación", "Compresión leve"], correctIndex: 1, explanation: "Hay que arrancar electrones a los átomos.", difficulty: "basico" },
+      { id: 6, question: "Un ejemplo cotidiano de plasma es:", options: ["Hielo", "Tubo de neón", "Agua salada", "Vidrio"], correctIndex: 1, explanation: "Gas noble ionizado que emite luz característica.", difficulty: "basico" },
+      { id: 7, question: "Globalmente, el plasma es:", options: ["Positivo siempre", "Negativo siempre", "Neutro: igualdad de cargas opuestas", "Sin carga definida nunca"], correctIndex: 2, explanation: "Mismas cantidades de iones y electrones.", difficulty: "basico" },
+      { id: 8, question: "Las auroras se producen cuando:", options: ["Partículas solares excitan gases sobre los polos", "La Luna ilumina hielo", "Se quema oxígeno puro", "Llueve sobre nieve"], correctIndex: 0, explanation: "Guiadas por el campo magnético hacia latitudes altas.", difficulty: "intermedio" },
+      { id: 9, question: "El color verde dominante de las auroras proviene del:", options: ["Nitrógeno", "Oxígeno atómico", "Argón", "Helio"], correctIndex: 1, explanation: "Emisión característica a ~557 nm.", difficulty: "intermedio" },
+      { id: 10, question: "La ionosfera permite comunicaciones AM lejanas porque:", options: ["Refleja ondas de radio de ciertas frecuencias", "Amplifica la señal", "Genera electricidad", "Absorbe todo"], correctIndex: 0, explanation: "Actúa como espejo radioeléctrico natural.", difficulty: "intermedio" },
+      { id: 11, question: "El corte por plasma se usa en industria para:", options: ["Cortar metales conductores con precisión", "Pintar superficies", "Congelar alimentos", "Tejer telas"], correctIndex: 0, explanation: "Chorro de plasma a miles de grados.", difficulty: "intermedio" },
+      { id: 12, question: "El grado de ionización indica:", options: ["Fracción de partículas ionizadas", "Temperatura ambiente", "Densidad del recipiente", "Color del plasma"], correctIndex: 0, explanation: "De parcial (neón) a totalmente ionizado (fusión).", difficulty: "intermedio" },
+      { id: 13, question: "En el Sol, el estado del material es:", options: ["Gas neutro frío", "Plasma a millones de grados", "Hierro fundido", "Hielo denso"], correctIndex: 1, explanation: "Fusión nuclear continua en su núcleo.", difficulty: "intermedio" },
+      { id: 14, question: "Las pantallas de plasma antiguas usaban:", options: ["Pequeñas celdas de gas ionizado con fósforo", "Cristales líquidos solo", "LED orgánicos", "Tubos catódicos únicos"], correctIndex: 0, explanation: "Cada píxel era una mini descarga ultravioleta.", difficulty: "intermedio" },
+      { id: 15, question: "Un tokamak confina plasma mediante:", options: ["Campos magnéticos helicoidales", "Paredes físicas refrigeradas solo", "Gravedad artificial", "Aislamiento térmico simple"], correctIndex: 0, explanation: "Partículas cargadas orbitando atrapadas.", difficulty: "avanzado" },
+      { id: 16, question: "La fusión necesita temperaturas mayores que el núcleo solar porque la densidad del plasma terrestre es:", options: ["Mayor", "Mucho menor", "Igual", "Nula"], correctIndex: 1, explanation: "Menor densidad exige compensar con más temperatura.", difficulty: "avanzado" },
+      { id: 17, question: "El blindaje de Debye describe cómo el plasma:", options: ["Apantalla campos eléctricos redistribuyendo cargas", "Refleja luz visible", "Se solidifica", "Genera vacío"], correctIndex: 0, explanation: "Longitud de Debye: escala característica del efecto.", difficulty: "avanzado" },
+      { id: 18, question: "La magnetosfera terrestre protege la vida al:", options: ["Desviar el viento solar cargado", "Bloquear meteoritos", "Filtrar luz visible", "Generar lluvia"], correctIndex: 0, explanation: "Sin ella la radiación erosionaría la atmósfera.", difficulty: "avanzado" },
+      { id: 19, question: "Una dificultad central del confinamiento son las:", options: ["Instabilidades del plasma", "Corrientes de aire", "Fugas de aceite", "Interferencias WiFi"], correctIndex: 0, explanation: "Pequeños trastornos pueden expulsar el plasma del confinamiento.", difficulty: "avanzado" },
+      { id: 20, question: "Los motores iónicos destacan por:", options: ["Empuje enorme instantáneo", "Eficiencia alta con empuje pequeño sostenido", "Usar combustible sólido", "No necesitar energía"], correctIndex: 1, explanation: "Ideales para largas trayectorias espaciales.", difficulty: "avanzado" },
+    ],
   },
   {
-    "slug": "fi-repaso-fisica",
-    "title": "Repaso General",
-    "tip": "Todos los temas.",
-    "theory": {
-      "basico": [
-        "Mecanica.",
-        ".",
-        ".",
-        ".",
-        "."
-      ],
-      "intermedio": [
-        "Electricidad.",
-        ".",
-        ".",
-        ".",
-        "."
-      ],
-      "avanzado": [
-        "Optica.",
-        ".",
-        ".",
-        ".",
-        "."
-      ]
-    },
-    "questions": [
-      {
-        "id": "fi-repaso-fisica-b1",
-        "type": "multiple-choice",
-        "difficulty": "basico",
-        "question": "Repasa \"Repaso General\".",
-        "options": [
-          "30 + 30 = 60",
-          "30 + 30 = 65",
-          "30 + 30 = 57",
-          "30 + 30 = 70"
-        ],
-        "correct": 0,
-        "explanation": "Repasa \"Repaso General\"."
-      },
-      {
-        "id": "fi-repaso-fisica-b2",
-        "type": "multiple-choice",
-        "difficulty": "basico",
-        "question": "Todos los temas.",
-        "options": [
-          "10 + 20 = 30",
-          "10 + 20 = 35",
-          "10 + 20 = 27",
-          "10 + 20 = 40"
-        ],
-        "correct": 0,
-        "explanation": "Todos los temas."
-      },
-      {
-        "id": "fi-repaso-fisica-b3",
-        "type": "multiple-choice",
-        "difficulty": "basico",
-        "question": "Conceptos clave.",
-        "options": [
-          "15 + 30 = 45",
-          "15 + 30 = 50",
-          "15 + 30 = 42",
-          "15 + 30 = 55"
-        ],
-        "correct": 0,
-        "explanation": "Conceptos clave."
-      },
-      {
-        "id": "fi-repaso-fisica-b4",
-        "type": "multiple-choice",
-        "difficulty": "basico",
-        "question": "Ejercicios.",
-        "options": [
-          "20 + 25 = 45",
-          "20 + 25 = 50",
-          "20 + 25 = 42",
-          "20 + 25 = 55"
-        ],
-        "correct": 0,
-        "explanation": "Ejercicios."
-      },
-      {
-        "id": "fi-repaso-fisica-b5",
-        "type": "multiple-choice",
-        "difficulty": "basico",
-        "question": "Aplicar.",
-        "options": [
-          "10 + 30 = 40",
-          "10 + 30 = 45",
-          "10 + 30 = 37",
-          "10 + 30 = 50"
-        ],
-        "correct": 0,
-        "explanation": "Aplicar."
-      },
-      {
-        "id": "fi-repaso-fisica-b6",
-        "type": "multiple-choice",
-        "difficulty": "basico",
-        "question": "Todos los temas. - Ejercicio 6",
-        "options": [
-          "15 + 25 = 40",
-          "15 + 25 = 45",
-          "15 + 25 = 37",
-          "15 + 25 = 50"
-        ],
-        "correct": 0,
-        "explanation": "Todos los temas.: respuesta correcta"
-      },
-      {
-        "id": "fi-repaso-fisica-b7",
-        "type": "multiple-choice",
-        "difficulty": "basico",
-        "question": "Todos los temas. - Ejercicio 7",
-        "options": [
-          "15 + 20 = 35",
-          "15 + 20 = 40",
-          "15 + 20 = 32",
-          "15 + 20 = 45"
-        ],
-        "correct": 0,
-        "explanation": "Todos los temas.: respuesta correcta"
-      },
-      {
-        "id": "fi-repaso-fisica-i1",
-        "type": "multiple-choice",
-        "difficulty": "intermedio",
-        "question": "Repasa \"Repaso General\".",
-        "options": [
-          "10 × 30 = 300",
-          "10 × 30 = 310",
-          "10 × 30 = 295",
-          "10 × 30 = 320"
-        ],
-        "correct": 0,
-        "explanation": "Repasa \"Repaso General\"."
-      },
-      {
-        "id": "fi-repaso-fisica-i2",
-        "type": "multiple-choice",
-        "difficulty": "intermedio",
-        "question": "Todos los temas.",
-        "options": [
-          "20 × 30 = 600",
-          "20 × 30 = 610",
-          "20 × 30 = 595",
-          "20 × 30 = 620"
-        ],
-        "correct": 0,
-        "explanation": "Todos los temas."
-      },
-      {
-        "id": "fi-repaso-fisica-i3",
-        "type": "multiple-choice",
-        "difficulty": "intermedio",
-        "question": "Conceptos clave.",
-        "options": [
-          "25 × 30 = 750",
-          "25 × 30 = 760",
-          "25 × 30 = 745",
-          "25 × 30 = 770"
-        ],
-        "correct": 0,
-        "explanation": "Conceptos clave."
-      },
-      {
-        "id": "fi-repaso-fisica-i4",
-        "type": "multiple-choice",
-        "difficulty": "intermedio",
-        "question": "Ejercicios.",
-        "options": [
-          "15 × 20 = 300",
-          "15 × 20 = 310",
-          "15 × 20 = 295",
-          "15 × 20 = 320"
-        ],
-        "correct": 0,
-        "explanation": "Ejercicios."
-      },
-      {
-        "id": "fi-repaso-fisica-i5",
-        "type": "multiple-choice",
-        "difficulty": "intermedio",
-        "question": "Aplicar.",
-        "options": [
-          "10 × 25 = 250",
-          "10 × 25 = 260",
-          "10 × 25 = 245",
-          "10 × 25 = 270"
-        ],
-        "correct": 0,
-        "explanation": "Aplicar."
-      },
-      {
-        "id": "fi-repaso-fisica-i6",
-        "type": "multiple-choice",
-        "difficulty": "intermedio",
-        "question": "Todos los temas. - Ejercicio 6",
-        "options": [
-          "15 × 25 = 375",
-          "15 × 25 = 385",
-          "15 × 25 = 370",
-          "15 × 25 = 395"
-        ],
-        "correct": 0,
-        "explanation": "Todos los temas.: respuesta correcta"
-      },
-      {
-        "id": "fi-repaso-fisica-i7",
-        "type": "multiple-choice",
-        "difficulty": "intermedio",
-        "question": "Todos los temas. - Ejercicio 7",
-        "options": [
-          "10 × 25 = 250",
-          "10 × 25 = 260",
-          "10 × 25 = 245",
-          "10 × 25 = 270"
-        ],
-        "correct": 0,
-        "explanation": "Todos los temas.: respuesta correcta"
-      },
-      {
-        "id": "fi-repaso-fisica-a1",
-        "type": "multiple-choice",
-        "difficulty": "avanzado",
-        "question": "Repasa \"Repaso General\".",
-        "options": [
-          "10 × 15 = 150",
-          "10 × 15 = 160",
-          "10 × 15 = 145",
-          "10 × 15 = 170"
-        ],
-        "correct": 0,
-        "explanation": "Repasa \"Repaso General\"."
-      },
-      {
-        "id": "fi-repaso-fisica-a2",
-        "type": "multiple-choice",
-        "difficulty": "avanzado",
-        "question": "Todos los temas.",
-        "options": [
-          "10 × 10 = 100",
-          "10 × 10 = 110",
-          "10 × 10 = 95",
-          "10 × 10 = 120"
-        ],
-        "correct": 0,
-        "explanation": "Todos los temas."
-      },
-      {
-        "id": "fi-repaso-fisica-a3",
-        "type": "multiple-choice",
-        "difficulty": "avanzado",
-        "question": "Conceptos clave.",
-        "options": [
-          "10 × 20 = 200",
-          "10 × 20 = 210",
-          "10 × 20 = 195",
-          "10 × 20 = 220"
-        ],
-        "correct": 0,
-        "explanation": "Conceptos clave."
-      },
-      {
-        "id": "fi-repaso-fisica-a4",
-        "type": "multiple-choice",
-        "difficulty": "avanzado",
-        "question": "Ejercicios.",
-        "options": [
-          "10 × 20 = 200",
-          "10 × 20 = 210",
-          "10 × 20 = 195",
-          "10 × 20 = 220"
-        ],
-        "correct": 0,
-        "explanation": "Ejercicios."
-      },
-      {
-        "id": "fi-repaso-fisica-a5",
-        "type": "multiple-choice",
-        "difficulty": "avanzado",
-        "question": "Aplicar.",
-        "options": [
-          "10 × 15 = 150",
-          "10 × 15 = 160",
-          "10 × 15 = 145",
-          "10 × 15 = 170"
-        ],
-        "correct": 0,
-        "explanation": "Aplicar."
-      },
-      {
-        "id": "fi-repaso-fisica-a6",
-        "type": "multiple-choice",
-        "difficulty": "avanzado",
-        "question": "Todos los temas. - Ejercicio 6",
-        "options": [
-          "10 × 30 = 300",
-          "10 × 30 = 310",
-          "10 × 30 = 295",
-          "10 × 30 = 320"
-        ],
-        "correct": 0,
-        "explanation": "Todos los temas.: respuesta correcta"
-      },
-      {
-        "id": "fi-repaso-fisica-a7",
-        "type": "multiple-choice",
-        "difficulty": "avanzado",
-        "question": "Todos los temas. - Ejercicio 7",
-        "options": [
-          "10 × 15 = 150",
-          "10 × 15 = 160",
-          "10 × 15 = 145",
-          "10 × 15 = 170"
-        ],
-        "correct": 0,
-        "explanation": "Todos los temas.: respuesta correcta"
-      }
-    ]
-  }
+    slug: "fi-fisica-superficies",
+    tip: "Al conectar dos burbujas, la pequeña vacía su aire hacia la grande.",
+    theory: [
+      { level: "basico", title: "Tensión superficial", lines: ["La tensión superficial actúa como una película elástica en la superficie.", "Las moléculas superficiales tienen vecinas solo hacia adentro.", "Las gotas son esféricas: mínima superficie para su volumen.", "Insectos zapateros caminan sobre el agua gracias a ella.", "La capilaridad hace subir líquidos en tubos muy finos."] },
+      { level: "intermedio", title: "Coeficientes y ángulos", lines: ["Coeficiente γ: fuerza por unidad de longitud, en N/m.", "Agua ≈ 0.072 N/m; con jabón baja notablemente.", "Laplace: gota ΔP = 2γ/r; burbuja de jabón ΔP = 4γ/r (dos superficies).", "Ángulo de contacto menor a 90°: moja (agua-vidrio); mayor: no moja (mercurio).", "Jurin: altura capilar h = 2γcosθ/(ρgr)."] },
+      { level: "avanzado", title: "Fenómenos avanzados", lines: ["Al conectar dos burbujas, la pequeña vacía su aire hacia la grande.", "Los detergentes forman micelas que envuelven la grasa.", "Las emulsiones se estabilizan reduciendo la tensión interfacial.", "El anillo de du Noüy mide γ por fuerza de desprendimiento.", "Superficies superhidrofóbicas (efecto loto): ángulos de contacto mayores a 150°."] },
+    ],
+    illustrations: [],
+    exercises: [
+      { id: 1, question: "La tensión superficial actúa como:", options: ["Una película elástica superficial", "Presión interna", "Viscosidad total", "Densidad extra"], correctIndex: 0, explanation: "Tiende a minimizar el área de superficie libre.", difficulty: "basico" },
+      { id: 2, question: "Las moléculas de la superficie sufren fuerza neta:", options: ["Equilibrada", "Hacia adentro del líquido", "Hacia afuera", "Nula"], correctIndex: 1, explanation: "Faltan vecinos arriba y resulta atracción interior.", difficulty: "basico" },
+      { id: 3, question: "Las gotas pequeñas tienden a ser:", options: ["Cúbicas", "Esféricas", "Planas", "Irregulares siempre"], correctIndex: 1, explanation: "La esfera minimiza el área para un volumen dado.", difficulty: "basico" },
+      { id: 4, question: "El insecto zapatero camina sobre el agua por:", options: ["Su peso mínimo", "Tensión superficial", "Flotación pura de Arquímedes", "Velocidad extrema"], correctIndex: 1, explanation: "La película lo sostiene si sus patas no mojan.", difficulty: "basico" },
+      { id: 5, question: "La capilaridad es:", options: ["Subida o bajada en tubos finos", "Evaporación rápida", "Condensación", "Turbulencia"], correctIndex: 0, explanation: "Combinación de cohesión y adhesión.", difficulty: "basico" },
+      { id: 6, question: "El jabón añadido al agua:", options: ["Aumenta la tensión superficial", "Reduce la tensión superficial", "No cambia nada", "Congela el agua"], correctIndex: 1, explanation: "Por eso moja mejor telas y vajillas.", difficulty: "basico" },
+      { id: 7, question: "El agua tiene alta tensión superficial debido a:", options: ["Puentes de hidrógeno entre moléculas", "Su color", "Su temperatura alta", "Sales disueltas"], correctIndex: 0, explanation: "Fuertes atracciones intermoleculares.", difficulty: "basico" },
+      { id: 8, question: "El coeficiente γ se mide en:", options: ["N/m", "N·m", "J/s", "Pa"], correctIndex: 0, explanation: "Fuerza por longitud de línea de contacto.", difficulty: "intermedio" },
+      { id: 9, question: "El valor típico de γ para agua limpia es:", options: ["0.072 N/m", "0.5 N/m", "72 N/m", "0.007 N/m"], correctIndex: 0, explanation: "Baja con detergentes y con la temperatura.", difficulty: "intermedio" },
+      { id: 10, question: "La presión interna de una gota sigue:", options: ["ΔP = 2γ/r", "ΔP = γ/r²", "ΔP = r/γ", "ΔP = 4γr"], correctIndex: 0, explanation: "Menor radio implica mayor presión interna.", difficulty: "intermedio" },
+      { id: 11, question: "La burbuja de jabón tiene ΔP =", options: ["2γ/r", "4γ/r", "γ/r", "8γ/r"], correctIndex: 1, explanation: "Posee dos superficies: interna y externa.", difficulty: "intermedio" },
+      { id: 12, question: "El agua moja el vidrio limpio porque su ángulo de contacto es:", options: ["Mayor a 90°", "Menor a 90°", "180°", "Siempre 0° exacto"], correctIndex: 1, explanation: "La adhesión al vidrio supera la cohesión del agua.", difficulty: "intermedio" },
+      { id: 13, question: "El mercurio sobre vidrio forma menisco:", options: ["Cóncavo ascendente", "Convexo descendente", "Plano", "Espiral"], correctIndex: 1, explanation: "No moja: se cohesiona consigo mismo más que con el vidrio.", difficulty: "intermedio" },
+      { id: 14, question: "Según Jurin, si el tubo capilar es más fino, el líquido sube:", options: ["Menos alto", "Más alto", "Igual", "No sube nunca"], correctIndex: 1, explanation: "h es inversamente proporcional al radio.", difficulty: "intermedio" },
+      { id: 15, question: "Al conectar burbujas de distinto tamaño:", options: ["La grande infla más a la pequeña", "La pequeña se vacía dentro de la grande", "Ambas quedan iguales ya", "Estallan ambas"], correctIndex: 1, explanation: "La pequeña tiene mayor presión interna por Laplace.", difficulty: "avanzado" },
+      { id: 16, question: "Los detergentes eliminan grasa formando:", options: ["Micelas que envuelven la suciedad", "Cristales de sal", "Vacíos", "Capas metálicas"], correctIndex: 0, explanation: "Extremos hidrofóbicos atrapan la grasa; los hidrofílicos la llevan al agua.", difficulty: "avanzado" },
+      { id: 17, question: "Una emulsión estable requiere:", options: ["Reducir la tensión interfacial entre fases", "Aumentarla mucho", "Separar por decantación", "Congelar"], correctIndex: 0, explanation: "Los emulsionantes logran esa reducción.", difficulty: "avanzado" },
+      { id: 18, question: "El método del anillo de du Noüy mide γ mediante:", options: ["La fuerza para despegar el anillo del líquido", "Temperatura de ebullición", "Densidad relativa", "Viscosidad dinámica"], correctIndex: 0, explanation: "Torque máximo al desprenderse relacionado con γ.", difficulty: "avanzado" },
+      { id: 19, question: "Una aguja puede flotar sobre agua si:", options: ["No moja y la tensión superficial soporta su peso", "Es muy densa igual", "El agua está caliente", "Hay sal abundante"], correctIndex: 0, explanation: "Deprime la película sin romperla.", difficulty: "avanzado" },
+      { id: 20, question: "El efecto loto corresponde a superficies:", options: ["Superhidrofóbicas autolimpiantes", "Superhidrofílicas", "Metálicas pulidas solo", "Magnéticas"], correctIndex: 0, explanation: "Ángulos > 150° hacen rodar las gotas arrastrando suciedad.", difficulty: "avanzado" },
+    ],
+  },
+  {
+    slug: "fi-calor-especifico-med",
+    tip: "Corrección de enfriamiento según ley de Newton compensa pérdidas.",
+    theory: [
+      { level: "basico", title: "Calor específico", lines: ["Calor específico c: energía para elevar 1 °C a 1 kg de sustancia.", "Fórmula fundamental: Q = m·c·ΔT.", "El agua tiene c = 4186 J/(kg·K), muy alto.", "Los metales tienen c pequeños: se calientan rápido.", "En un calorímetro aislado, la suma de calores es cero."] },
+      { level: "intermedio", title: "Mezclas térmicas", lines: ["Equilibrio: calor cedido = calor absorbido entre componentes.", "m₁c₁(Ti₁-Tf) = m₂c₂(Tf-Ti₂) para agua caliente y fría.", "Capacidad calorífica total de un objeto: C = m·c.", "El equivalente de agua del calorímetro se suma al cálculo.", "Método de mezclas: metal caliente en agua permite hallar c del metal."] },
+      { level: "avanzado", title: "Calorimetría precisa", lines: ["Corrección de enfriamiento según ley de Newton compensa pérdidas.", "Bomba calorimétrica a volumen constante: poder calorífico de combustibles.", "Regla de Dulong-Petit: capacidad atómica de sólidos ≈ 25 J/(mol·K).", "Método eléctrico: VIΔt = mcΔT con resistencia calefactora.", "La agitación insuficiente o evaporación introducen errores sistemáticos."] },
+    ],
+    illustrations: [],
+    exercises: [
+      { id: 1, question: "El calor específico indica:", options: ["Energía para elevar 1 °C a 1 kg de sustancia", "Temperatura máxima", "Calor total del cuerpo", "Presión interna"], correctIndex: 0, explanation: "Propiedad intensiva característica de cada material.", difficulty: "basico" },
+      { id: 2, question: "La ecuación del calor sensible es:", options: ["Q = m·c·ΔT", "Q = m·L", "Q = m·g·h", "Q = P·V"], correctIndex: 0, explanation: "Sin cambio de fase, solo variación de temperatura.", difficulty: "basico" },
+      { id: 3, question: "El calor específico del agua vale:", options: ["4186 J/(kg·K)", "100 J/(kg·K)", "900 J/(kg·K)", "2400 J/(kg·K)"], correctIndex: 0, explanation: "De los más altos conocidos entre sustancias comunes.", difficulty: "basico" },
+      { id: 4, question: "Los metales se calientan rápido porque su c es:", options: ["Grande", "Pequeño", "Inexistente", "Negativo"], correctIndex: 1, explanation: "Poca energía basta para subir mucho su temperatura.", difficulty: "basico" },
+      { id: 5, question: "Un calorímetro es:", options: ["Recipiente aislado para mediciones térmicas", "Termómetro especial", "Fuente de frío", "Balanza fina"], correctIndex: 0, explanation: "Minimiza intercambio con el ambiente durante el experimento.", difficulty: "basico" },
+      { id: 6, question: "Al final de una mezcla térmica se alcanza:", options: ["Equilibrio de presiones", "Equilibrio térmico: misma temperatura final", "Cero absoluto", "Ebullición"], correctIndex: 1, explanation: "Ya no fluye calor neto entre componentes.", difficulty: "basico" },
+      { id: 7, question: "En un sistema aislado, la suma algebraica de calores es:", options: ["Positiva", "Negativa", "Igual a cero", "Infinita"], correctIndex: 2, explanation: "Lo que uno cede, lo otro absorbe.", difficulty: "basico" },
+      { id: 8, question: "200 g de agua a 80 °C mezclados con 200 g a 20 °C dan Tf =", options: ["40 °C", "50 °C", "60 °C", "70 °C"], correctIndex: 1, explanation: "Masas iguales: promedio simple = 50 °C.", difficulty: "intermedio" },
+      { id: 9, question: "En una mezcla, calor cedido =", options: ["Calor absorbido por los demás componentes", "Doble del absorbido", "Cero siempre", "Temperatura inicial"], correctIndex: 0, explanation: "Balance energético del sistema aislado.", difficulty: "intermedio" },
+      { id: 10, question: "La capacidad calorífica C de un objeto completo es:", options: ["m·c", "c/m", "mc²", "L/m"], correctIndex: 0, explanation: "Cuánto calor eleva en conjunto 1 K todo el objeto.", difficulty: "intermedio" },
+      { id: 11, question: "El equivalente en agua del calorímetro:", options: ["Se ignora siempre", "Se suma a la masa efectiva de agua", "Se resta", "Se duplica"], correctIndex: 1, explanation: "El recipiente también participa absorbiendo calor.", difficulty: "intermedio" },
+      { id: 12, question: "El método de mezclas sirve para:", options: ["Determinar c de un metal desconocido", "Medir presión atmosférica", "Calibrar reglas", "Medir densidad de gases"], correctIndex: 0, explanation: "Metal caliente en agua y balance térmico resuelven c.", difficulty: "intermedio" },
+      { id: 13, question: "Metal de 200 g a 100 °C en 200 g de agua a 20 °C, Tf = 25 °C. c_metal ≈", options: ["279 J/(kg·K)", "4186 J/(kg·K)", "1000 J/(kg·K)", "50 J/(kg·K)"], correctIndex: 0, explanation: "200·c·75 = 200·4186·5 ⇒ c ≈ 279 J/(kg·K).", difficulty: "intermedio" },
+      { id: 14, question: "Las ciudades costeras tienen climas templados gracias al:", options: ["Alto calor específico del agua", "Viento constante", "Sal del mar", "Color del océano"], correctIndex: 0, explanation: "El mar amortigua los cambios bruscos de temperatura.", difficulty: "intermedio" },
+      { id: 15, question: "El agua circula en radiadores porque transporta:", options: ["Mucho calor por grado de cambio", "Poca energía", "Solo vapor", "Electricidad"], correctIndex: 0, explanation: "Su alto c la hace excelente fluido térmico.", difficulty: "avanzado" },
+      { id: 16, question: "La corrección de enfriamiento compensa:", options: ["Pérdidas de calor hacia el ambiente usando la ley de Newton", "Errores de lectura únicamente", "Cambios de presión", "Vibraciones"], correctIndex: 0, explanation: "Extrapola la temperatura corregida sin pérdidas.", difficulty: "avanzado" },
+      { id: 17, question: "La bomba calorimétrica mide:", options: ["Poder calorífico de combustibles a volumen constante", "Densidad líquidos", "Tensión superficial", "Índice refractivo"], correctIndex: 0, explanation: "Combustión completa dentro de un recipiente sellado sumergido en agua.", difficulty: "avanzado" },
+      { id: 18, question: "Según Dulong-Petit, la capacidad atómica molar de muchos sólidos es ≈", options: ["25 J/(mol·K)", "4186 J/(mol·K)", "100 J/(mol·K)", "8.3 J/(mol·K)"], correctIndex: 0, explanation: "Aproximación clásica a temperatura ambiente.", difficulty: "avanzado" },
+      { id: 19, question: "En el método eléctrico, el calor aportado es:", options: ["V·I·Δt", "V/I", "I/V", "R·t"], correctIndex: 0, explanation: "Joule: potencia eléctrica integrada en el tiempo.", difficulty: "avanzado" },
+      { id: 20, question: "Agitar mal el contenido del calorímetro genera:", options: ["Error sistemático por gradiente térmico", "Mejora automática", "Nada", "Sobrepresión"], correctIndex: 0, explanation: "El termómetro no vería la temperatura media real.", difficulty: "avanzado" },
+    ],
+  },
+  {
+    slug: "fi-potencial-gravitatorio",
+    tip: "V = -GM/r es el potencial por unidad de masa; g = -∇V.",
+    theory: [
+      { level: "basico", title: "Energía potencial gravitatoria", lines: ["Cerca de la superficie: Ep = m·g·h.", "Forma general: U = -G·M·m/r, con cero en el infinito.", "Es negativa: el cuerpo está ligado al astro.", "Escapar requiere aportar energía positiva suficiente.", "Analogía del pozo: más profundo significa más ligado."] },
+      { level: "intermedio", title: "Energía y mareas", lines: ["Conservación: intercambio entre energía cinética y potencial.", "La velocidad de impacto desde el infinito equivale a la de escape.", "Subir a órbitas mayores exige energía neta positiva.", "Las mareas nacen del gradiente de gravedad entre lados de la Tierra.", "Dos pleamares diarias: lado cercano y lado lejano al astro."] },
+      { level: "avanzado", title: "Órbitas y transferencias", lines: ["V = -GM/r es el potencial por unidad de masa; g = -∇V.", "Órbita elíptica: E = -G·M·m/(2a), con a semieje mayor.", "Transferencia de Hohmann: elipse tangente a dos órbitas circulares.", "Asistencia gravitatoria roba momento angular al planeta para acelerar la nave.", "Llevar 1 kg al infinito desde la Tierra cuesta G·M/R ≈ 62.6 MJ."] },
+    ],
+    illustrations: [],
+    exercises: [
+      { id: 1, question: "Cerca de la Tierra, Ep =", options: ["m·g·h", "-GMm/r", "½mv²", "mc²"], correctIndex: 0, explanation: "Aproximación válida cuando h << R terrestre.", difficulty: "basico" },
+      { id: 2, question: "La forma general de la energía potencial gravitatoria es:", options: ["U = -GMm/r", "U = +GMm/r", "U = GMm/r²", "U = mgr"], correctIndex: 0, explanation: "Negativa por convención con cero en infinito.", difficulty: "basico" },
+      { id: 3, question: "Que U sea negativa significa que el cuerpo:", options: ["Está libre", "Está ligado gravitatoriamente", "No tiene masa", "Se mueve rápido"], correctIndex: 1, explanation: "Habría que aportar energía para liberarlo.", difficulty: "basico" },
+      { id: 4, question: "Para escapar del campo gravitatorio hay que aportar:", options: ["Energía negativa", "Energía positiva igual al déficit", "Nada", "Solo tiempo"], correctIndex: 1, explanation: "Alcanzar U = 0 con Ec ≥ 0 en el infinito.", difficulty: "basico" },
+      { id: 5, question: "El pozo gravitatorio representa:", options: ["Profundidad energética de estar ligado", "Un cráter lunar", "El núcleo terrestre", "La atmósfera"], correctIndex: 1, explanation: "Cuanto más profundo, más energía falta para salir.", difficulty: "basico" },
+      { id: 6, question: "En ausencia de fricción, Ec + Ep:", options: ["Crece", "Disminuye", "Se conserva", "Oscila siempre"], correctIndex: 2, explanation: "Conservación de la energía mecánica.", difficulty: "basico" },
+      { id: 7, question: "Un meteoro cayendo hacia un planeta:", options: ["Pierde velocidad", "Gana velocidad cinética perdiendo potencial", "Mantiene todo constante", "Se detiene"], correctIndex: 1, explanation: "Convierte Ep negativa creciente en Ec positiva.", difficulty: "basico" },
+      { id: 8, question: "Impactar desde el reposo en el infinito produce una velocidad final:", options: ["Menor que la de escape", "Igual a la de escape", "Mayor que cualquier límite", "Cero"], correctIndex: 1, explanation: "½mv² = GMm/R ⇒ v = √(2GM/R).", difficulty: "intermedio" },
+      { id: 9, question: "Pasar de una órbita baja a otra alta requiere:", options: ["Energía neta positiva", "Energía negativa", "Nada", "Frenar siempre"], correctIndex: 0, explanation: "E total menos negativa implica aportar trabajo.", difficulty: "intermedio" },
+      { id: 10, question: "Las mareas surgen porque la gravedad lunar:", options: ["Es uniforme sobre toda la Tierra", "Varía entre el lado cercano y lejano", "Solo actúa de noche", "Empuja horizontalmente"], correctIndex: 1, explanation: "Diferencias de atracción estiran los océanos.", difficulty: "intermedio" },
+      { id: 11, question: "¿Cuántas pleamares hay típicamente al día?", options: ["Una", "Dos", "Tres", "Ninguna"], correctIndex: 1, explanation: "Bulto oceánico hacia la Luna y opuesto por inercia.", difficulty: "intermedio" },
+      { id: 12, question: "El Sol también genera mareas, pero:", options: ["Mayores que las lunares", "Menores que las lunares", "Nulas", "Constantes sin ciclo"], correctIndex: 1, explanation: "Su lejanía reduce el gradiente pese a su enorme masa.", difficulty: "intermedio" },
+      { id: 13, question: "El potencial V = -GM/r cumple que el campo g es:", options: ["+∇V", "-∇V", "⊥∇V", "Independiente de V"], correctIndex: 1, explanation: "El campo apunta hacia potenciales menores (más negativos).", difficulty: "avanzado" },
+      { id: 14, question: "La energía total de una órbita elíptica ligada es:", options: ["E = -GMm/(2a)", "E = +GMm/a", "E = 0", "E = mv²/2"], correctIndex: 0, explanation: "Depende solo del semieje mayor.", difficulty: "avanzado" },
+      { id: 15, question: "La transferencia de Hohmann es:", options: ["La elipse tangente a dos órbitas circulares de mínima energía", "Un salto directo radial", "Una espiral infinita", "Un rebote planetario"], correctIndex: 0, explanation: "Estándar para mover satélites entre altitudes.", difficulty: "avanzado" },
+      { id: 16, question: "La asistencia gravitatoria funciona porque la nave:", options: ["Roba momento angular al planeta en su movimiento orbital", "Choca contra la atmósfera", "Enciende motores extra", "Pierde masa"], correctIndex: 0, explanation: "Pequeño Δv heliocéntrico grande gracias al movimiento planetario.", difficulty: "avanzado" },
+      { id: 17, question: "Los puntos de Lagrange son posiciones donde:", options: ["Gravedad y fuerza centrífuga se equilibran en el sistema rotante", "No existe gravedad", "Todo cae", "La luz se detiene"], correctIndex: 0, explanation: "Ideales para telescopios y estaciones espaciales estables.", difficulty: "avanzado" },
+      { id: 18, question: "La energía de enlace orbital negativa indica que el sistema:", options: ["Requiere aporte para separarse", "Expulsa cuerpos solos", "No tiene energía", "Es inestable"], correctIndex: 0, explanation: "Estados ligados tienen E < 0.", difficulty: "avanzado" },
+      { id: 19, question: "Llevar 1 kg desde la superficie terrestre hasta el infinito cuesta aproximadamente:", options: ["6.3 kJ", "6.3 MJ", "62.6 MJ", "100 GJ"], correctIndex: 2, explanation: "G·M/R = 3.986e14/6.37e6 ≈ 6.26×10⁷ J.", difficulty: "avanzado" },
+      { id: 20, question: "La ISS (420 t) en órbita r ≈ 6771 km tiene energía total ≈", options: ["-1.2×10¹³ J", "+1.2×10¹³ J", "Cero", "-1.2×10⁷ J"], correctIndex: 0, explanation: "E = -GMm/(2r) ≈ -1.24×10¹³ J.", difficulty: "avanzado" },
+    ],
+  },
+  {
+    slug: "fi-presion-altitud",
+    tip: "Equilibrio hidrostático: dP = -ρ·g·dh.",
+    theory: [
+      { level: "basico", title: "Presión atmosférica", lines: ["La presión atmosférica es el peso del aire sobre nosotros.", "Al nivel del mar: 101325 Pa = 1 atm.", "Disminuye al ascender sobre el nivel del mar.", "Torricelli inventó el barómetro de mercurio en 1643.", "760 mmHg equivalen exactamente a 1 atmósfera."] },
+      { level: "intermedio", title: "Modelo barométrico", lines: ["Aproximación exponencial: P = P₀·e^(-h/8000).", "Cada ~5.5 km la presión se reduce aproximadamente a la mitad.", "Ciudad de México (2240 m): presión ≈ 0.78 atm.", "En altura hay menos oxígeno por volumen de aire.", "El agua hierve a menor temperatura: ~93 °C a 2200 m."] },
+      { level: "avanzado", title: "Física de la atmósfera", lines: ["Equilibrio hidrostático: dP = -ρ·g·dh.", "Con gas ideal isoterma sale la ley P = P₀e^(-Mgh/RT).", "En la troposfera T baja ~6.5 K/km y modifica el perfil.", "El mal de montaña aparece típicamente sobre 2500-3500 m.", "Altura de escala H = RT/(Mg) ≈ 8.4 km a 288 K."] },
+    ],
+    illustrations: [],
+    exercises: [
+      { id: 1, question: "La presión atmosférica se debe a:", options: ["El peso del aire", "La rotación terrestre solo", "Las mareas", "El magnetismo"], correctIndex: 0, explanation: "Columna de aire presionando cada superficie.", difficulty: "basico" },
+      { id: 2, question: "Un atmósfera equivale a:", options: ["101325 Pa", "100 Pa", "50000 Pa", "200000 Pa"], correctIndex: 0, explanation: "Presión estándar al nivel del mar.", difficulty: "basico" },
+      { id: 3, question: "Al subir una montaña, la presión atmosférica:", options: ["Aumenta", "Disminuye", "No cambia", "Se duplica"], correctIndex: 1, explanation: "Queda menos columna de aire encima.", difficulty: "basico" },
+      { id: 4, question: "El barómetro fue inventado por:", options: ["Newton", "Torricelli", "Galileo", "Pascal"], correctIndex: 1, explanation: "Con una columna de mercurio en 1643.", difficulty: "basico" },
+      { id: 5, question: "760 mmHg corresponden a:", options: ["2 atm", "0.5 atm", "1 atm", "10 atm"], correctIndex: 2, explanation: "Equivalencia clásica del barómetro.", difficulty: "basico" },
+      { id: 6, question: "Los aviones miden altitud con:", options: ["GPS únicamente", "Barómetros (presión)", "Termómetros", "Brújulas"], correctIndex: 0, explanation: "Menor presión implica mayor altura.", difficulty: "basico" },
+      { id: 7, question: "La olla a presión compensa en altura:", options: ["La baja presión ambiente que impide hervir fuerte", "El frío extremo", "La humedad", "La gravedad menor"], correctIndex: 0, explanation: "Eleva el punto de ebullición del agua.", difficulty: "basico" },
+      { id: 8, question: "El modelo barométrico aproximado es:", options: ["P = P₀e^(-h/8000)", "P = P₀h", "P = P₀/h²", "P lineal siempre"], correctIndex: 0, explanation: "Decaimiento exponencial con la altura.", difficulty: "intermedio" },
+      { id: 9, question: "La presión se reduce a la mitad aproximadamente cada:", options: ["1.5 km", "5.5 km", "20 km", "50 km"], correctIndex: 1, explanation: "Regla práctica del perfil exponencial.", difficulty: "intermedio" },
+      { id: 10, question: "La presión en Ciudad de México (~2240 m) ronda:", options: ["0.78 atm", "0.98 atm", "0.3 atm", "1.5 atm"], correctIndex: 0, explanation: "Menos aire disponible que al nivel del mar.", difficulty: "intermedio" },
+      { id: 11, question: "En gran altura, el rendimiento deportivo baja porque:", options: ["Hay menos oxígeno por volumen", "El aire pesa más", "La gravedad desaparece", "El CO₂ sube"], correctIndex: 0, explanation: "Presión parcial de O₂ reducida.", difficulty: "intermedio" },
+      { id: 12, question: "A 2200 m el agua hierve alrededor de:", options: ["93 °C", "100 °C", "80 °C", "110 °C"], correctIndex: 0, explanation: "Menor presión externa facilita la ebullición.", difficulty: "intermedio" },
+      { id: 13, question: "Las cabinas de avión se presurizan a presión equivalente a unos:", options: ["2400 m", "0 m", "9000 m", "12000 m"], correctIndex: 0, explanation: "Compromiso entre confort y resistencia estructural.", difficulty: "intermedio" },
+      { id: 14, question: "A 5500 m la presión es aproximadamente:", options: ["0.25 atm", "0.5 atm", "0.8 atm", "1 atm"], correctIndex: 1, explanation: "Mitad de la presión al nivel del mar.", difficulty: "intermedio" },
+      { id: 15, question: "El equilibrio hidrostático atmosférico establece:", options: ["dP = -ρg dh", "dP = ρg dh", "P constante", "ρ constante siempre"], correctIndex: 0, explanation: "Gradiente negativo: presión baja con la altura.", difficulty: "avanzado" },
+      { id: 16, question: "Para gas ideal isotermo, la solución es:", options: ["P = P₀e^(-Mgh/RT)", "P = P₀(1-h)", "P = P₀/h", "P = P₀T/h"], correctIndex: 0, explanation: "Exponencial con altura de escala RT/Mg.", difficulty: "avanzado" },
+      { id: 17, question: "El gradiente térmico troposférico medio es:", options: ["+6.5 K/km", "-6.5 K/km", "+65 K/km", "0"], correctIndex: 1, explanation: "La temperatura cae unos 6.5 K cada kilómetro.", difficulty: "avanzado" },
+      { id: 18, question: "El mal de montaña suele aparecer sobre:", options: ["2500-3500 m", "100 m", "7000 m", "Nunca"], correctIndex: 0, explanation: "Hipoxia aguda si no hay aclimatación gradual.", difficulty: "avanzado" },
+      { id: 19, question: "Sobre 8000 m (zona de la muerte) la presión ronda:", options: ["0.31 atm", "0.7 atm", "0.05 atm", "1 atm"], correctIndex: 0, explanation: "Oxígeno insuficiente para sobrevivir largo tiempo.", difficulty: "avanzado" },
+      { id: 20, question: "La altura de escala H a 288 K vale ≈", options: ["8.4 km", "84 km", "0.84 km", "1.4 km"], correctIndex: 0, explanation: "RT/Mg con M ≈ 0.029 kg/mol.", difficulty: "avanzado" },
+    ],
+  },
+  {
+    slug: "fi-fisica-molecular",
+    tip: "Camino libre medio: λ = kT/(√2·π·d²·P).",
+    theory: [
+      { level: "basico", title: "Teoría cinética", lines: ["Un gas está formado por moléculas en movimiento caótico permanente.", "La presión nace de los choques contra las paredes.", "La temperatura mide la energía cinética promedio.", "Forma microscópica: PV = N·k·T.", "k (Boltzmann) = 1.38×10⁻²³ J/K; Avogadro: 6.02×10²³/mol."] },
+      { level: "intermedio", title: "Velocidades y mezclas", lines: ["Energía por molécula: (3/2)kT para gas monoatómico.", "Rapidez cuadrática media: v_rms = √(3RT/M).", "A 300 K, el O₂ alcanza v_rms ≈ 483 m/s.", "Ley de Dalton: presión total = suma de presiones parciales.", "El aire es ~78% N₂ y ~21% O₂ en volumen."] },
+      { level: "avanzado", title: "Camino libre y efusión", lines: ["Camino libre medio: λ = kT/(√2·π·d²·P).", "Para el aire a condiciones normales λ ≈ 68 nm.", "Menor presión implica mayor camino libre: base del vacío.", "Ley de Graham: la velocidad de efusión ∝ 1/√M separa isótopos.", "Equipartición: (1/2)kT por grado de libertad activo."] },
+    ],
+    illustrations: [],
+    exercises: [
+      { id: 1, question: "Según la teoría cinética, un gas está formado por:", options: ["Partículas fijas", "Moléculas en movimiento aleatorio permanente", "Cristales", "Plasma ionizado"], correctIndex: 0, explanation: "Choques elásticos entre sí y con las paredes.", difficulty: "basico" },
+      { id: 2, question: "La presión de un gas se origina por:", options: ["Choques moleculares contra las paredes", "Peso de las moléculas solo", "Gravedad interna", "Radiación"], correctIndex: 0, explanation: "Millones de impactos por segundo generan fuerza media constante.", difficulty: "basico" },
+      { id: 3, question: "La temperatura de un gas mide:", options: ["Su masa", "Energía cinética promedio molecular", "Su color", "Presión externa"], correctIndex: 1, explanation: "Más calor significa moléculas más rápidas.", difficulty: "basico" },
+      { id: 4, question: "La forma microscópica de los gases es:", options: ["PV = NkT", "PV = nRT solo", "V/T = kN", "P/V = kT"], correctIndex: 0, explanation: "Con N número de moléculas y k de Boltzmann.", difficulty: "basico" },
+      { id: 5, question: "La constante de Boltzmann vale:", options: ["1.38×10⁻²³ J/K", "6.02×10²³", "8.314 J/(mol·K)", "9.8 J/K"], correctIndex: 0, explanation: "R dividido entre el número de Avogadro.", difficulty: "basico" },
+      { id: 6, question: "Los gases se comprimen porque:", options: ["Sus moléculas ocupan espacio despreciable comparado con el volumen", "Son blandos", "Se disuelven", "Se rompen"], correctIndex: 0, explanation: "Predominan los espacios vacíos intermoleculares.", difficulty: "basico" },
+      { id: 7, question: "El número de Avogadro es:", options: ["6.02×10²³ por mol", "1.38×10⁻¹¹", "3.14", "9.8×10³"], correctIndex: 0, explanation: "Puente entre escala microscópica y molar.", difficulty: "basico" },
+      { id: 8, question: "La energía cinética media por molécula monoatómica es:", options: ["(3/2)kT", "kT", "2kT", "5kT/2"], correctIndex: 0, explanation: "Tres grados translacionales aportan ½kT cada uno.", difficulty: "intermedio" },
+      { id: 9, question: "v_rms =", options: ["√(3RT/M)", "3RT/M", "RT/3M", "√(RT/M)"], correctIndex: 0, explanation: "Raíz de la media cuadrática de velocidades.", difficulty: "intermedio" },
+      { id: 10, question: "A 300 K, v_rms del O₂ ≈", options: ["48 m/s", "483 m/s", "3000 m/s", "30 m/s"], correctIndex: 1, explanation: "√(3×8.314×300/0.032) ≈ 484 m/s.", difficulty: "intermedio" },
+      { id: 11, question: "La ley de Dalton establece que la presión total es:", options: ["La suma de presiones parciales", "El producto de parciales", "La mínima parcial", "Independiente de composición"], correctIndex: 0, explanation: "Cada componente actúa como si estuviera solo.", difficulty: "intermedio" },
+      { id: 12, question: "La composición volumétrica del aire es aproximadamente:", options: ["78% N₂ y 21% O₂", "50% O₂ y 50% CO₂", "21% N₂ y 78% Ar", "99% CO₂"], correctIndex: 0, explanation: "Con trazas de argón, CO₂ y otros.", difficulty: "intermedio" },
+      { id: 13, question: "Duplicar la temperatura absoluta hace v_rms:", options: ["Se duplica", "Sube factor √2", "Baja a la mitad", "No cambia"], correctIndex: 1, explanation: "v ∝ √T.", difficulty: "intermedio" },
+      { id: 14, question: "La distribución de Maxwell describe:", options: ["Velocidades moleculares con pico en valores medios", "Cargas eléctricas", "Órbitas planetarias", "Corrientes"], correctIndex: 0, explanation: "Pocas muy lentas, pocas muy rápidas, muchas medias.", difficulty: "avanzado" },
+      { id: 15, question: "El camino libre medio vale:", options: ["λ = kT/(√2πd²P)", "λ = Pd²/kT", "λ = d/P", "λ = πd²P"], correctIndex: 0, explanation: "Distancia típica entre colisiones.", difficulty: "avanzado" },
+      { id: 16, question: "Para el aire a condiciones normales, λ ≈", options: ["68 nm", "68 μm", "6.8 cm", "68 mm"], correctIndex: 0, explanation: "Centenares de colisiones por nanómetro recorrido... es decir, muy frecuentes.", difficulty: "avanzado" },
+      { id: 17, question: "Al reducir la presión, el camino libre medio:", options: ["Disminuye", "Aumenta", "No varía", "Se anula"], correctIndex: 1, explanation: "Menos moléculas implican trayectorias más largas libres.", difficulty: "avanzado" },
+      { id: 18, question: "La efusión según Graham procede como:", options: ["1/√M", "√M", "M", "M²"], correctIndex: 0, explanation: "Gases ligeros escapan más rápido: separación isotópica de uranio.", difficulty: "avanzado" },
+      { id: 19, question: "La equipartición asigna a cada grado de libertad:", options: ["½kT", "kT", "2kT", "3/2 kT"], correctIndex: 0, explanation: "Base para capacidades caloríficas de gases.", difficulty: "avanzado" },
+      { id: 20, question: "Al duplicar la presión manteniendo T, λ queda:", options: ["Duplicada", "Reducida a la mitad", "Cuadruplicada", "Igual"], correctIndex: 1, explanation: "λ ∝ 1/P a temperatura fija.", difficulty: "avanzado" },
+    ],
+  },
+  {
+    slug: "fi-fisica-deportes",
+    tip: "En ciclismo, 80-90% de la resistencia total es aerodinámica.",
+    theory: [
+      { level: "basico", title: "Física en cada jugada", lines: ["Todo deporte obedece las leyes de Newton.", "Baloncesto: tiros parabólicos hacia el aro.", "Las zapatillas usan fricción para acelerar y frenar.", "Arcos y trampolines almacenan energía elástica.", "Los guantes de boxeo alargan el tiempo de impacto reduciendo la fuerza."] },
+      { level: "intermedio", title: "Efectos y técnica", lines: ["Efecto Magnus: la pelota con rotación curva su trayectoria.", "Salto Fosbury: pasar la barra con el centro de masa por debajo.", "Piruetas de patinaje: conservación del momento angular.", "Rebote caracterizado por coeficiente e = v'/v menor que 1.", "El tiro libre combina Magnus y geometría para superar la barrera."] },
+      { level: "avanzado", title: "Optimización deportiva", lines: ["En ciclismo, 80-90% de la resistencia total es aerodinámica.", "Rodar a rueda (drafting) ahorra hasta ~30% de energía.", "Trajes y piscinas regulados buscan reducir resistencia hidrodinámica.", "Las pistas sintéticas devuelven energía elástica y mejoran marcas.", "La biomecánica con sensores optimiza técnica y previene lesiones."] },
+    ],
+    illustrations: [],
+    exercises: [
+      { id: 1, question: "Todos los movimientos deportivos obedecen:", options: ["Leyes de Newton", "Magia", "Azar", "Reglas arbitrales"], correctIndex: 0, explanation: "Inercia, fuerza y acción-reacción gobiernan cada jugada.", difficulty: "basico" },
+      { id: 2, question: "Un tiro al aro en baloncesto describe:", options: ["Recta", "Parábola", "Círculo", "Zigzag"], correctIndex: 1, explanation: "Composición de avance horizontal y caída vertical.", difficulty: "basico" },
+      { id: 3, question: "Las zapatillas clavadas aumentan:", options: ["Fricción con la pista", "Peso corporal", "Altura del atleta", "Temperatura"], correctIndex: 0, explanation: "Mejor agarre permite mayores aceleraciones.", difficulty: "basico" },
+      { id: 4, question: "Un arco dispara flechas gracias a:", options: ["Energía elástica acumulada", "Gas comprimido", "Electricidad", "Gravedad"], correctIndex: 0, explanation: "La cuerda tensa libera Ep almacenada en los brazos.", difficulty: "basico" },
+      { id: 5, question: "Los guantes de boxeo reducen el pico de fuerza porque:", options: ["Alargan el tiempo de contacto del golpe", "Aumentan la masa del puño", "Bajan la velocidad legal", "Absorben oxígeno"], correctIndex: 0, explanation: "Mismo impulso repartido en mayor Δt implica menor F media.", difficulty: "basico" },
+      { id: 6, question: "Los gimnastas agrupan el cuerpo para:", options: ["Rotar más rápido conservando momento angular", "Verse compactos", "Perder peso", "Respirar mejor"], correctIndex: 0, explanation: "Menor I implica mayor ω durante el vuelo.", difficulty: "basico" },
+      { id: 7, question: "Los corredores se inclinan al arrancar para:", options: ["Dirigir la fuerza hacia adelante", "Ver mejor", "Ahorrar zapatillas", "Reducir fricción"], correctIndex: 0, explanation: "Componente horizontal de la reacción impulsa hacia delante.", difficulty: "basico" },
+      { id: 8, question: "El efecto Magnus curva la trayectoria cuando la pelota:", options: ["Gira sobre su eje", "Va sin rotación", "Está quieta", "Pierde aire"], correctIndex: 0, explanation: "Diferencia de presión entre lados por la capa límite asimétrica.", difficulty: "intermedio" },
+      { id: 9, question: "La técnica Fosbury logra pasar la barra con el centro de masa:", options: ["Sobre ella siempre", "Por debajo de ella", "En el suelo", "Fuera del cuerpo"], correctIndex: 1, explanation: "Arqueando la espalda se supera la barra con menos energía.", difficulty: "intermedio" },
+      { id: 10, question: "En pirueta de patinaje, juntar brazos hace girar:", options: ["Más lento", "Más rápido", "Igual", "Hacia atrás"], correctIndex: 1, explanation: "Conservación de L: baja I, sube ω.", difficulty: "intermedio" },
+      { id: 11, question: "El coeficiente de restitución e =", options: ["v'/v tras rebote", "v·v'", "m/v", "e = 1 siempre real"], correctIndex: 0, explanation: "1 sería rebote perfecto; balones reales tienen e < 1.", difficulty: "intermedio" },
+      { id: 12, question: "Una pelota reglamentaria de tenis tiene e aproximadamente:", options: ["0.7", "1.2", "0.1", "0.99"], correctIndex: 0, explanation: "Normas exigen rebote entre ~53% y 58% de altura.", difficulty: "intermedio" },
+      { id: 13, question: "Superar una barrera con tiro curvo aprovecha:", options: ["Magnus + trayectoria parabólica", "Solo potencia pura", "Viento constante", "Suerte estadística"], correctIndex: 0, explanation: "La combinación engaña a porteros y muro defensivo.", difficulty: "intermedio" },
+      { id: 14, question: "En ciclismo de ruta, la resistencia dominante es:", options: ["La aerodinámica", "La rodadura", "La gravedad en llano", "El ruido"], correctIndex: 0, explanation: "De ahí cascos, posiciones y ropa ajustada.", difficulty: "avanzado" },
+      { id: 15, question: "Rodar a rueda detrás de otro ciclista ahorra ≈", options: ["5%", "30%", "70%", "Nada"], correctIndex: 1, explanation: "Se oculta dentro de la estela de presión del líder.", difficulty: "avanzado" },
+      { id: 16, question: "Los trajes de natación modernos buscan:", options: ["Reducir fricción y forma de arrastre", "Flotar más", "Calentar", "Pesar menos al nadador"], correctIndex: 0, explanation: "Su uso está regulado por la FINA desde 2010.", difficulty: "avanzado" },
+      { id: 17, question: "Las pistas sintéticas mejoran marcas porque:", options: ["Devuelven parte de la energía elástica del paso", "Son más blandas", "Tienen cuestas", "Miden distancias cortas"], correctIndex: 0, explanation: "Menor pérdida que el tartán antiguo o la tierra.", difficulty: "avanzado" },
+      { id: 18, question: "La biomecánica deportiva usa:", options: ["Sensores y captura de movimiento para optimizar técnica", "Solo videos caseros", "Intuición exclusiva", "Termómetros"], correctIndex: 0, explanation: "Previene lesiones y mejora rendimiento medible.", difficulty: "avanzado" },
+      { id: 19, question: "El salto con pértiga convierte:", options: ["Energía elástica de la vara en potencial gravitatoria", "Química en sonido", "Térmica en luz", "Cinética en química"], correctIndex: 0, explanation: "Flexión almacena Ep elástica que eleva al atleta.", difficulty: "avanzado" },
+      { id: 20, question: "El ángulo óptimo real en lanzamiento de bala es menor que 45° debido a:", options: ["Altura de salida y resistencia del aire", "Reglas arbitrales", "Peso del atleta solo", "Viento lateral único"], correctIndex: 0, explanation: "~41° maximiza alcance con condiciones reales.", difficulty: "avanzado" },
+    ],
+  },
+  {
+    slug: "fi-fisica-musica",
+    tip: "Fourier: todo sonido es suma de senoidales puras.",
+    theory: [
+      { level: "basico", title: "Sonido y música", lines: ["La música organiza sonidos por frecuencia y amplitud.", "Tono: frecuencia (agudo = Hz altos, grave = Hz bajos).", "Volumen: amplitud de la onda sonora.", "Timbre: mezcla de armónicos que distingue instrumentos.", "Rango audible humano: 20 Hz a 20 kHz."] },
+      { level: "intermedio", title: "Instrumentos y afinación", lines: ["Cuerdas: f = v/(2L); trastes acortan la parte vibrante.", "Más tensión en la cuerda produce notas más agudas.", "Tubo cerrado: solo armónicos impares (clarinete).", "Afinación estándar: LA4 = 440 Hz; octava superior 880 Hz.", "Resonancia simpática: una cuerda vibra con otra de igual frecuencia."] },
+      { level: "avanzado", title: "Análisis del sonido", lines: ["Fourier: todo sonido es suma de senoidales puras.", "Consonancia ligada a razones simples: 2:1, 3:2, 4:3.", "Batimientos: |f₁-f₂| pulsaciones al sonar juntas dos tonos desafinados.", "Temperamento igual: semitono = factor 2^(1/12) ≈ 1.0595.", "Los espectrogramas visualizan armónicos evolucionando en el tiempo."] },
+    ],
+    illustrations: [],
+    exercises: [
+      { id: 1, question: "La música organiza el sonido según:", options: ["Frecuencia y amplitud", "Color y peso", "Temperatura", "Presión"], correctIndex: 0, explanation: "Tonos, volúmenes y timbres combinados con ritmo.", difficulty: "basico" },
+      { id: 2, question: "El tono agudo corresponde a:", options: ["Frecuencia baja", "Frecuencia alta", "Amplitud grande", "Duración larga"], correctIndex: 1, explanation: "Más vibraciones por segundo.", difficulty: "basico" },
+      { id: 3, question: "El volumen depende de:", options: ["La frecuencia", "La amplitud", "El timbre", "El tempo"], correctIndex: 1, explanation: "Mayor amplitud implica mayor intensidad percibida.", difficulty: "basico" },
+      { id: 4, question: "El timbre permite:", options: ["Distinguir instrumentos con igual nota", "Medir distancia", "Cambiar volumen", "Silenciar"], correctIndex: 0, explanation: "Mezcla característica de armónicos de cada fuente.", difficulty: "basico" },
+      { id: 5, question: "El oído humano capta aproximadamente:", options: ["2-20000 Hz", "200-500 Hz", "0-10 Hz", "50-500 kHz"], correctIndex: 0, explanation: "Se estrecha con la edad hacia agudos.", difficulty: "basico" },
+      { id: 6, question: "Un instrumento genera sonido al:", options: ["Vibrar cuerdas, columnas de aire o membranas", "Calentarse", "Iluminarse", "Magnetizarse"], correctIndex: 0, explanation: "La vibración se transmite al aire como onda longitudinal.", difficulty: "basico" },
+      { id: 7, question: "La caja de resonancia sirve para:", options: ["Amplificar y colorear el sonido", "Decorar", "Pesar más", "Sostener cuerdas solo"], correctIndex: 0, explanation: "Acopla eficientemente la vibración con el aire ambiente.", difficulty: "basico" },
+      { id: 8, question: "En una cuerda, la fundamental vale:", options: ["f = v/2L", "f = vL/2", "f = 2v/L", "f = v/L²"], correctIndex: 0, explanation: "Ondas estacionarias con nodos en los extremos.", difficulty: "intermedio" },
+      { id: 9, question: "Aumentar la tensión de la cuerda produce:", options: ["Notas más graves", "Notas más agudas", "Sin cambio", "Silencio"], correctIndex: 1, explanation: "Mayor velocidad de onda eleva todas las frecuencias.", difficulty: "intermedio" },
+      { id: 10, question: "Un tubo cerrado emite solo armónicos:", options: ["Pares", "Impares", "Todos", "Nulos"], correctIndex: 1, explanation: "Nodo en el extremo cerrado restringe los modos.", difficulty: "intermedio" },
+      { id: 11, question: "El clarinete suena hueco porque carece de:", options: ["Armónicos pares", "Fundamental", "Boquilla", "Tubo"], correctIndex: 0, explanation: "Comportamiento de tubo cerrado-cerrado acústicamente.", difficulty: "intermedio" },
+      { id: 12, question: "La afinación estándar fija LA4 en:", options: ["432 Hz", "440 Hz", "442 Hz", "400 Hz"], correctIndex: 1, explanation: "Referencia internacional ISO 16.", difficulty: "intermedio" },
+      { id: 13, question: "Una octava sobre 440 Hz vibra a:", options: ["460 Hz", "660 Hz", "880 Hz", "1320 Hz"], correctIndex: 2, explanation: "Relación exacta 2:1 entre octavas.", difficulty: "intermedio" },
+      { id: 14, question: "La resonancia simpática ocurre cuando una cuerda vibra impulsada por:", options: ["Otra cuerda de igual frecuencia", "Viento fuerte", "Calor", "Luz"], correctIndex: 0, explanation: "Absorbe energía de la onda externa a su frecuencia natural.", difficulty: "avanzado" },
+      { id: 15, question: "El teorema de Fourier permite descomponer cualquier sonido en:", options: ["Senoidales puras sumadas", "Cuadradas únicas", "Ruido blanco", "Silencios"], correctIndex: 0, explanation: "Base del análisis espectral y síntesis digital.", difficulty: "avanzado" },
+      { id: 16, question: "Las intervalos consonantes corresponden a razones:", options: ["Simples como 3:2", "Irracionales complejas", "Aleatorias", "Negativas"], correctIndex: 0, explanation: "Octava 2:1, quinta 3:2, cuarta 4:3 suenan agradables.", difficulty: "avanzado" },
+      { id: 17, question: "Dos tonos desafinados juntos producen:", options: ["Batimientos a |f₁-f₂|", "Silencio", "Una sola nota", "Eco"], correctIndex: 0, explanation: "Interferencia temporal perceptible como ondulación de volumen.", difficulty: "avanzado" },
+      { id: 18, question: "En temperamento igual, cada semitono multiplica la frecuencia por:", options: ["2^(1/12)", "1.02", "2^(1/24)", "e"], correctIndex: 0, explanation: "Doce pasos idénticos completan la octava exacta.", difficulty: "avanzado" },
+      { id: 19, question: "La quinta temperada (7 semitonos) respecto a la justa 3:2 es:", options: ["Ligeramente menor", "Exactamente igual", "Doble", "Mitad"], correctIndex: 0, explanation: "2^(7/12) ≈ 1.4983 frente a 1.5.", difficulty: "avanzado" },
+      { id: 20, question: "Los espectrogramas muestran:", options: ["Armónicos variando en el tiempo", "Solo volumen medio", "Partituras", "Voltajes"], correctIndex: 0, explanation: "Eje tiempo-frecuencia con intensidad codificada.", difficulty: "avanzado" },
+    ],
+  },
+  {
+    slug: "fi-fisica-tecno",
+    tip: "Qubit: superposición de |0⟩ y |1⟩ simultáneas.",
+    theory: [
+      { level: "basico", title: "Física detrás de la tecnología", lines: ["La física moderna sostiene la tecnología diaria.", "Fibra óptica: la luz transporta datos por vidrio ultrapuro.", "Semiconductores: base de chips, computadoras y celulares.", "LED: diodo emisor de luz altamente eficiente.", "Paneles solares convierten luz en electricidad por efecto fotovoltaico."] },
+      { level: "intermedio", title: "Principios clave", lines: ["En fibra ocurre reflexión total interna si el ángulo supera el crítico.", "El núcleo tiene mayor índice de refracción que el revestimiento.", "Dopar silicio con fósforo o boro crea tipos N y P.", "Unión P-N: fundamento de diodos y transistores.", "GPS: los satélites requieren correcciones relativistas del tiempo."] },
+      { level: "avanzado", title: "Tecnologías emergentes", lines: ["Qubit: superposición de |0⟩ y |1⟩ simultáneas.", "El entrelazamiento correlaciona qubits más allá de lo clásico.", "Decoherencia y errores exigen corrección con múltiples qubits físicos.", "Fibra moderna: atenuación ~0.2 dB/km con amplificadores de erbio.", "Criptografía cuántica BB84 detecta espías por colapso de estados."] },
+    ],
+    illustrations: [],
+    exercises: [
+      { id: 1, question: "La fibra óptica transmite información mediante:", options: ["Luz guiada por vidrio", "Corriente eléctrica", "Sonido", "Agua"], correctIndex: 0, explanation: "Pulsos luminosos codifican datos digitales.", difficulty: "basico" },
+      { id: 2, question: "Los chips de computadora se fabrican sobre:", options: ["Silicio semiconductor", "Madera", "Cobre puro", "Vidrio"], correctIndex: 0, explanation: "Su conductividad controlable permite transistores.", difficulty: "basico" },
+      { id: 3, question: "Un LED es:", options: ["Un diodo que emite luz al conducir", "Una resistencia", "Una batería", "Un motor"], correctIndex: 0, explanation: "Recombinación electrón-hueco libera fotones.", difficulty: "basico" },
+      { id: 4, question: "Los paneles solares funcionan por:", options: ["Efecto fotovoltaico", "Combustión", "Fricción", "Magnetismo terrestre"], correctIndex: 0, explanation: "Fotones liberan electrones generando corriente.", difficulty: "basico" },
+      { id: 5, question: "La resonancia magnética médica usa:", options: ["Imanes potentes y ondas de radio", "Rayos X", "Ultrasonido solo", "Láser quirúrgico"], correctIndex: 0, explanation: "Alinea espines nucleares para formar imágenes.", difficulty: "basico" },
+      { id: 6, question: "El teléfono celular integra:", options: ["Principios físicos de óptica, radio y semiconductores", "Solo mecánica", "Solo química", "Nada físico"], correctIndex: 0, explanation: "Cámara, GPS, pantalla y chips: física aplicada concentrada.", difficulty: "basico" },
+      { id: 7, question: "En la fibra ocurre reflexión total interna cuando el ángulo:", options: ["Supera el ángulo crítico", "Es cero", "Baja del crítico", "Es 180°"], correctIndex: 1, explanation: "La luz rebota internamente sin escapar.", difficulty: "intermedio" },
+      { id: 8, question: "Para guiar la luz, el núcleo debe tener índice:", options: ["Menor que el revestimiento", "Mayor que el revestimiento", "Igual", "Negativo"], correctIndex: 1, explanation: "La condición n1 > n2 habilita TIR.", difficulty: "intermedio" },
+      { id: 9, question: "Dopar silicio con fósforo produce semiconductor tipo:", options: ["P", "N", "I", "X"], correctIndex: 0, explanation: "Fósforo aporta electrones libres (donador).", difficulty: "intermedio" },
+      { id: 10, question: "La unión P-N es la base de:", options: ["Diodos y transistores", "Motores", "Turbinas", "Antenas parabólicas"], correctIndex: 0, explanation: "Rectificación y amplificación nacen allí.", difficulty: "intermedio" },
+      { id: 11, question: "Los semiconductores tienen banda prohibida:", options: ["Grande como aislantes", "Pequeña entre valencia y conducción", "Inexistente", "Negativa"], correctIndex: 1, explanation: "Energía moderada permite excitar portadores.", difficulty: "intermedio" },
+      { id: 12, question: "En un LED, el color depende de:", options: ["La energía de la banda prohibida", "El tamaño del encapsulado", "La corriente doméstica", "La temperatura ambiente"], correctIndex: 0, explanation: "E = hf: mayor gap implica fotones más energéticos (azules).", difficulty: "intermedio" },
+      { id: 13, question: "El GPS requiere relatividad porque los relojes satelitales:", options: ["Se adelantan/atrasan respecto a tierra según GR y SR", "Van lentos siempre", "No existen", "Marcan horas locales"], correctIndex: 0, explanation: "~38 μs/día netos corregidos constantemente.", difficulty: "intermedio" },
+      { id: 14, question: "Un qubit puede estar en:", options: ["Superposición de |0⟩ y |1⟩", "Solo 0 o solo 1 clásicos", "Tres estados fijos", "Reposo absoluto"], correctIndex: 0, explanation: "α|0⟩ + β|1⟩ hasta que se mide.", difficulty: "avanzado" },
+      { id: 15, question: "El entrelazamiento genera correlaciones:", options: ["Más fuertes que cualquier estrategia clásica", "Nulas", "Solo visuales", "Aleatorias puras"], correctIndex: 0, explanation: "Recurso central para computación y teleportación cuántica.", difficulty: "avanzado" },
+      { id: 16, question: "La decoherencia destruye estados cuánticos, por eso los equipos operan:", options: ["A temperatura criogénica y aislados", "Al aire libre", "A 100 °C", "Con vibraciones fuertes"], correctIndex: 0, explanation: "Minimizar interacción térmica preserva coherencia.", difficulty: "avanzado" },
+      { id: 17, question: "La corrección cuántica de errores usa:", options: ["Muchos qubits físicos por cada lógico", "Uno solo perfecto", "Bits normales", "Analogías clásicas únicas"], correctIndex: 0, explanation: "Redundancia detecta y corrige errores sin medir el dato.", difficulty: "avanzado" },
+      { id: 18, question: "Las fibras modernas pierden ≈", options: ["0.2 dB/km", "20 dB/km", "0.2 dB/m", "2 dB/km"], correctIndex: 0, explanation: "Amplificadores de erbio dopado extienden el enlace.", difficulty: "avanzado" },
+      { id: 19, question: "La litografía EUV fabrica transistores con características de pocos:", options: ["nanómetros", "milímetros", "centímetros", "micras grandes"], correctIndex: 0, explanation: "Luz ultravioleta extrema graba circuitos minúsculos.", difficulty: "avanzado" },
+      { id: 20, question: "BB84 garantiza seguridad porque:", options: ["Medir un estado cuántico lo perturba revelando espías", "Usa contraseñas largas", "Esconde el cable", "Cifra con AES"], correctIndex: 0, explanation: "Cualquier interceptación introduce errores detectables.", difficulty: "avanzado" },
+    ],
+  },
 ];
